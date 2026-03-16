@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauté — Makyaj Karşılaştırma</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Beauté — Türkiye'nin en kapsamlı makyaj karşılaştırma platformu. Fondöten, ruj, maskara ve daha fazlasını karşılaştırın, en iyi fiyatları bulun.">
+  <meta name="keywords" content="makyaj, kozmetik, fondöten karşılaştırma, ruj, maskara, güzellik, fiyat karşılaştırma, Türkiye, beauté, en iyi makyaj ürünleri">
+  <meta name="author" content="Beauté Türkiye">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.beaute.com.tr/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Beauté — Makyaj Karşılaştırma Platformu">
+  <meta property="og:description" content="Türkiye'nin güzellik rehberi. Makyaj ürünlerini karşılaştırın, en iyi fiyatları bulun.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.beaute.com.tr/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Beauté — Makyaj Karşılaştırma Platformu">
+  <meta name="twitter:description" content="Türkiye'nin güzellik rehberi. Makyaj ürünlerini karşılaştırın, en iyi fiyatları bulun.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #faf9f7; --bg2: #f3f1ed; --bg3: #ffffff;
+      --text: #1a1814; --text2: #6b6660; --text3: #a8a49f;
+      --border: rgba(26,24,20,0.1); --border2: rgba(26,24,20,0.2); --gold: #C9A96E;
+    }
+    html.dark {
+      --bg: #111010; --bg2: #1a1918; --bg3: #1f1e1c;
+      --text: #f0ece6; --text2: #a8a49f; --text3: #6b6660;
+      --border: rgba(240,236,230,0.08); --border2: rgba(240,236,230,0.15); --gold: #C9A96E;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.6; transition: background 0.3s, color 0.3s; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 2.5rem; border-bottom: 0.5px solid var(--border2);
+      background: var(--bg3); position: sticky; top: 0; z-index: 100;
+    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; letter-spacing: 5px; text-transform: uppercase; color: var(--text); text-decoration: none; }
+    .logo em { font-style: italic; font-weight: 300; }
+    .nav-center { display: flex; gap: 2rem; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+    .nav-center a { text-decoration: none; color: inherit; transition: color 0.2s; cursor: pointer; }
+    .nav-center a:hover { color: var(--text); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .dark-btn { background: none; border: none; cursor: pointer; font-size: 18px; color: var(--text3); transition: color 0.2s; padding: 2px; line-height: 1; }
+    .dark-btn:hover { color: var(--text); }
+    .fav-nav-btn { position: relative; background: none; border: none; cursor: pointer; font-size: 20px; color: var(--text3); transition: color 0.2s; padding: 2px; line-height: 1; }
+    .fav-nav-btn:hover, .fav-nav-btn.active { color: #e74c3c; }
+    .fav-badge { position: absolute; top: -3px; right: -5px; background: var(--gold); color: var(--bg3); font-size: 8px; width: 14px; height: 14px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text); }
+    .mobile-menu { display: none; background: var(--bg3); border-bottom: 0.5px solid var(--border); padding: 1rem 1.5rem; flex-direction: column; gap: 1.2rem; }
+    .mobile-menu a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text2); text-decoration: none; cursor: pointer; }
+
+    /* ── BRAND OVERLAY ── */
+    .brand-overlay { display: none; background: var(--bg3); border-bottom: 0.5px solid var(--border2); padding: 1rem 2.5rem; }
+    .brand-overlay.open { display: block; }
+    .brand-overlay-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
+    .brand-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+
+    /* ── HERO ── */
+    .hero { text-align: center; padding: 3.5rem 2rem 2rem; border-bottom: 0.5px solid var(--border); background: var(--bg3); }
+    .hero-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--text3); margin-bottom: 1rem; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; line-height: 1.15; margin-bottom: 0.8rem; color: var(--text); animation: heroFadeIn 0.8s ease-out 0.1s both; }
+    .hero-title em { font-style: italic; }
+    .hero-sub { font-size: 13px; color: var(--text2); letter-spacing: 1.5px; animation: heroFadeIn 0.8s ease-out 0.25s both; }
+    .hero-eyebrow { animation: heroFadeIn 0.8s ease-out both; }
+    @keyframes heroFadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── TRENDING ── */
+    .trending-section { padding: 1.4rem 2.5rem; background: var(--bg3); border-bottom: 0.5px solid var(--border); }
+    .trending-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--text3); margin-bottom: 1rem; }
+    .trending-scroll { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+    .trending-scroll::-webkit-scrollbar { display: none; }
+    .trending-chip { flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 10px 16px; border: 0.5px solid var(--border2); border-radius: 2px; background: var(--bg2); cursor: pointer; transition: all 0.2s; }
+    .trending-chip:hover { background: var(--text); }
+    .trending-chip:hover .tc-name { color: var(--bg3); }
+    .trending-chip:hover .tc-brand, .trending-chip:hover .tc-price { color: rgba(255,255,255,0.5); }
+    .tc-emoji { font-size: 22px; }
+    .tc-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: var(--text); transition: color 0.2s; }
+    .tc-brand { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); transition: color 0.2s; }
+    .tc-price { font-size: 13px; color: var(--gold); font-family: 'Cormorant Garamond', serif; transition: color 0.2s; }
+
+    /* ── FILTERS ── */
+    .filters-wrap { background: var(--bg3); border-bottom: 0.5px solid var(--border); position: sticky; top: 61px; z-index: 90; }
+    .filters { display: flex; gap: 8px; padding: 0.85rem 2.5rem; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .filters::-webkit-scrollbar { display: none; }
+    .filter-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-right: 4px; white-space: nowrap; flex-shrink: 0; }
+    .filter-btn { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border: 0.5px solid var(--border2); background: transparent; color: var(--text2); cursor: pointer; border-radius: 2px; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; }
+    .filter-btn:hover { background: var(--bg2); color: var(--text); }
+    .filter-btn.active { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .filter-divider { width: 0.5px; height: 20px; background: var(--border2); flex-shrink: 0; margin: 0 4px; }
+    .search-bar { margin-left: auto; font-family: 'Jost', sans-serif; font-size: 12px; padding: 6px 14px; border: 0.5px solid var(--border2); background: transparent; color: var(--text); border-radius: 2px; width: 180px; outline: none; flex-shrink: 0; }
+    .search-bar::placeholder { color: var(--text3); letter-spacing: 1px; }
+    .search-bar:focus { border-color: var(--text); }
+
+    /* ── SORT ROW ── */
+    .sort-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 0.55rem 2.5rem; font-size: 11px; color: var(--text3); background: var(--bg); border-bottom: 0.5px solid var(--border); }
+    .sort-row-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .price-btns { display: flex; gap: 5px; }
+    .price-btn { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border: 0.5px solid var(--border2); background: transparent; color: var(--text3); cursor: pointer; border-radius: 2px; transition: all 0.2s; }
+    .price-btn:hover { color: var(--text); border-color: var(--text2); }
+    .price-btn.active { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .sort-select { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 1px; background: transparent; border: 0.5px solid var(--border2); color: var(--text2); padding: 4px 10px; border-radius: 2px; cursor: pointer; outline: none; }
+
+    /* ── PRODUCT GRID ── */
+    .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--border); }
+    .product-card { background: var(--bg3); cursor: pointer; transition: background 0.15s, transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
+    .product-card:hover { background: var(--bg2); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .product-card.selected { outline: 1.5px solid var(--text); outline-offset: -1.5px; }
+    .card-image { height: 155px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .card-image-emoji { font-size: 54px; filter: drop-shadow(0 4px 16px rgba(0,0,0,0.12)); pointer-events: none; }
+    .fav-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; color: var(--text3); line-height: 1; }
+    .fav-btn:hover { background: white; color: #e74c3c; }
+    .fav-btn.active { color: #e74c3c; background: rgba(231,76,60,0.1); }
+    .compare-toggle { position: absolute; top: 8px; left: 8px; width: 22px; height: 22px; border: 0.5px solid rgba(255,255,255,0.9); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 11px; background: rgba(255,255,255,0.9); color: var(--text); transition: all 0.15s; cursor: pointer; }
+    .compare-toggle.checked { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .card-body { padding: 1.2rem 1.4rem 1.4rem; display: flex; flex-direction: column; gap: 9px; flex: 1; }
+    .card-brand { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); }
+    .card-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; line-height: 1.3; color: var(--text); }
+    .card-category { display: inline-block; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); border: 0.5px solid var(--border); padding: 2px 7px; border-radius: 2px; }
+    .card-stars { display: flex; align-items: center; gap: 2px; }
+    .star { color: var(--gold); font-size: 12px; }
+    .star.empty { color: var(--border2); }
+    .star-count { font-size: 10px; color: var(--text3); margin-left: 4px; }
+    .card-bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto; padding-top: 8px; border-top: 0.5px solid var(--border); }
+    .card-price { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; color: var(--text); }
+    .card-price-sub { font-size: 9px; color: var(--text3); letter-spacing: 1px; margin-top: 1px; }
+
+    /* ── BADGES ── */
+    .card-badges { display: flex; gap: 4px; flex-wrap: wrap; }
+    .badge { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 6px; border-radius: 2px; font-family: 'Jost', sans-serif; }
+    .badge-vegan { background: rgba(46,125,50,0.1); color: #2e7d32; border: 0.5px solid rgba(46,125,50,0.3); }
+    .badge-cf { background: rgba(156,39,176,0.08); color: #9c27b0; border: 0.5px solid rgba(156,39,176,0.25); }
+    .badge-spf { background: rgba(255,152,0,0.1); color: #e65100; border: 0.5px solid rgba(255,152,0,0.3); }
+    .badge-dupe { background: rgba(201,169,110,0.15); color: var(--gold); border: 0.5px solid rgba(201,169,110,0.4); }
+    .badge-dupe-card { position: absolute; bottom: 8px; left: 8px; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; background: rgba(201,169,110,0.9); color: #fff; font-family: 'Jost', sans-serif; }
+
+    /* ── COMPARE BAR ── */
+    .compare-bar { position: sticky; bottom: 0; background: var(--text); color: var(--bg3); padding: 1rem 2.5rem; display: flex; align-items: center; gap: 1rem; font-size: 12px; letter-spacing: 1px; transform: translateY(100%); transition: transform 0.3s ease; }
+    .compare-bar.visible { transform: translateY(0); }
+    .compare-info { flex: 1; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .compare-info strong { color: var(--gold); }
+    .compare-btn { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 10px 28px; background: var(--bg3); color: var(--text); border: none; cursor: pointer; border-radius: 2px; transition: opacity 0.2s; }
+    .compare-btn:hover { opacity: 0.85; }
+    .clear-btn { font-size: 10px; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); background: none; border: none; cursor: pointer; text-transform: uppercase; transition: color 0.2s; }
+    .clear-btn:hover { color: rgba(255,255,255,0.9); }
+
+    /* ── MODAL BASE ── */
+    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(15,14,12,0.75); z-index: 200; align-items: flex-start; justify-content: center; padding: 2rem; overflow-y: auto; }
+    .modal-backdrop.open { display: flex; }
+    .modal { background: var(--bg3); width: 100%; max-width: 820px; border-radius: 3px; overflow: hidden; }
+    .modal-head { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; border-bottom: 0.5px solid var(--border); }
+    .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--text); }
+    .modal-subtitle { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-top: 3px; }
+    .modal-close { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text2); padding: 4px; transition: color 0.2s; }
+    .modal-close:hover { color: var(--text); }
+
+    /* ── DETAIL MODAL ── */
+    .detail-modal { max-width: 620px; }
+    .detail-image { height: 200px; display: flex; align-items: center; justify-content: center; }
+    .detail-image-emoji { font-size: 76px; filter: drop-shadow(0 6px 20px rgba(0,0,0,0.1)); }
+    .detail-body { padding: 1.8rem 2rem; }
+    .detail-desc { font-size: 16px; color: var(--text2); line-height: 1.7; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; }
+    .detail-section-title { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
+    .shades-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
+    .shade-chip { font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border: 0.5px solid var(--border2); border-radius: 2px; color: var(--text2); cursor: pointer; transition: all 0.15s; background: transparent; font-family: 'Jost', sans-serif; }
+    .shade-chip:hover, .shade-chip.active { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .prices-table { width: 100%; margin-bottom: 1.5rem; border: 0.5px solid var(--border); border-radius: 2px; overflow: hidden; }
+    .price-row { display: flex; align-items: center; padding: 10px 16px; border-bottom: 0.5px solid var(--border); }
+    .price-row:last-child { border-bottom: none; }
+    .price-row.best-price { background: rgba(201,169,110,0.06); }
+    .price-row-site { flex: 1; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text2); }
+    .price-row-badge { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); border: 0.5px solid var(--gold); padding: 2px 6px; border-radius: 2px; margin-right: 12px; }
+    .price-row-amount { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--text); margin-right: 14px; }
+    .price-row.best-price .price-row-amount { color: #2a7a3b; }
+    .buy-btn { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px; cursor: pointer; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .buy-btn:hover { opacity: 0.8; }
+    .detail-meta { display: flex; gap: 2rem; padding-top: 1rem; border-top: 0.5px solid var(--border); flex-wrap: wrap; }
+    .detail-meta-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
+    .detail-meta-value { font-size: 13px; color: var(--text); }
+    .skin-type-tag { display: inline-block; font-size: 9px; letter-spacing: 1px; padding: 3px 8px; border: 0.5px solid var(--border2); border-radius: 2px; color: var(--text2); text-transform: uppercase; margin: 2px 3px 2px 0; }
+
+    /* ── DUPE SECTION ── */
+    .dupe-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
+    .dupe-cards { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+    .dupe-cards::-webkit-scrollbar { display: none; }
+    .dupe-card { flex-shrink: 0; width: 180px; padding: 12px; border: 0.5px solid var(--border2); border-radius: 2px; cursor: pointer; transition: all 0.2s; background: var(--bg2); }
+    .dupe-card:hover { background: var(--text); }
+    .dupe-card:hover .dupe-card-name, .dupe-card:hover .dupe-card-price { color: var(--bg3); }
+    .dupe-card:hover .dupe-card-brand, .dupe-card:hover .dupe-card-save { color: rgba(255,255,255,0.5); }
+    .dupe-card-emoji { font-size: 24px; margin-bottom: 6px; }
+    .dupe-card-brand { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); transition: color 0.2s; }
+    .dupe-card-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--text); margin: 2px 0 6px; transition: color 0.2s; }
+    .dupe-card-price { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #2a7a3b; font-weight: 500; transition: color 0.2s; }
+    .dupe-card-save { font-size: 9px; color: var(--text3); letter-spacing: 1px; margin-top: 2px; transition: color 0.2s; }
+
+    /* ── SHARE BUTTONS ── */
+    .share-section { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 0.5px solid var(--border); }
+    .share-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .share-btn { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 14px; border: 0.5px solid var(--border2); background: transparent; color: var(--text2); border-radius: 2px; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .share-btn:hover { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .share-btn svg { width: 14px; height: 14px; }
+
+    /* ── PRICE ALERT ── */
+    .price-alert-section { margin-top: 1.5rem; padding: 1rem 1.2rem; border: 0.5px solid var(--gold); border-radius: 2px; background: rgba(201,169,110,0.04); }
+    .price-alert-title { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .price-alert-form { display: flex; gap: 8px; }
+    .price-alert-input { flex: 1; font-family: 'Jost', sans-serif; font-size: 12px; padding: 8px 12px; border: 0.5px solid var(--border2); background: var(--bg3); color: var(--text); border-radius: 2px; outline: none; }
+    .price-alert-input::placeholder { color: var(--text3); }
+    .price-alert-input:focus { border-color: var(--gold); }
+    .price-alert-btn { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 16px; background: var(--gold); color: #fff; border: none; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
+    .price-alert-btn:hover { opacity: 0.85; }
+    .price-alert-set { font-size: 11px; color: #2a7a3b; display: flex; align-items: center; gap: 6px; }
+
+    /* ── INGREDIENTS ── */
+    .ingredients-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
+    .ingredient-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .ingredient-chip { font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border: 0.5px solid var(--border2); border-radius: 2px; color: var(--text2); font-family: 'Jost', sans-serif; }
+    .ingredient-chip.safe { border-color: rgba(46,125,50,0.3); color: #2e7d32; background: rgba(46,125,50,0.06); }
+    .ingredient-chip.warn { border-color: rgba(211,47,47,0.3); color: #d32f2f; background: rgba(211,47,47,0.06); }
+    .ingredient-score { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+    .ingredient-bar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+    .ingredient-bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s; }
+    .ingredient-score-label { font-size: 11px; font-weight: 500; letter-spacing: 1px; }
+
+    /* ── SKIN TONE TEST ── */
+    .skin-test-modal { max-width: 520px; }
+    .skin-test-body { padding: 2rem; }
+    .skin-test-step { display: none; }
+    .skin-test-step.active { display: block; }
+    .skin-test-question { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); margin-bottom: 1.2rem; line-height: 1.4; }
+    .skin-test-options { display: flex; flex-direction: column; gap: 8px; }
+    .skin-test-opt { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 12px 16px; border: 0.5px solid var(--border2); background: transparent; color: var(--text2); border-radius: 2px; cursor: pointer; transition: all 0.2s; text-align: left; }
+    .skin-test-opt:hover { background: var(--bg2); color: var(--text); }
+    .skin-test-opt.selected { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .skin-test-progress { display: flex; gap: 4px; margin-bottom: 1.5rem; }
+    .skin-test-dot { width: 100%; height: 3px; background: var(--border); border-radius: 2px; }
+    .skin-test-dot.done { background: var(--gold); }
+    .skin-test-dot.current { background: var(--text); }
+    .skin-test-result { text-align: center; padding: 1rem 0; }
+    .skin-test-result-tone { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--text); margin: 0.5rem 0; }
+    .skin-test-result-desc { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 1.5rem; }
+    .skin-test-recommended { margin-top: 1rem; }
+
+    /* ── WISHLIST MODAL ── */
+    .wishlist-modal { max-width: 680px; }
+    .wishlist-body { padding: 1.5rem 2rem; }
+    .wishlist-empty { text-align: center; padding: 3rem 1rem; color: var(--text3); font-size: 13px; letter-spacing: 1px; }
+    .wishlist-item { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 0.5px solid var(--border); }
+    .wishlist-item:last-child { border-bottom: none; }
+    .wishlist-item-emoji { font-size: 28px; flex-shrink: 0; }
+    .wishlist-item-info { flex: 1; }
+    .wishlist-item-brand { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+    .wishlist-item-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--text); }
+    .wishlist-item-price { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--text); font-weight: 500; flex-shrink: 0; }
+    .wishlist-item-remove { background: none; border: none; color: var(--text3); cursor: pointer; font-size: 16px; padding: 4px; transition: color 0.2s; }
+    .wishlist-item-remove:hover { color: #d32f2f; }
+    .wishlist-summary { margin-top: 1.2rem; padding: 1.2rem; border: 0.5px solid var(--gold); border-radius: 2px; background: rgba(201,169,110,0.04); }
+    .wishlist-total { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .wishlist-total-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+    .wishlist-total-amount { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; color: var(--text); }
+    .wishlist-budget { margin-top: 10px; }
+    .wishlist-budget-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 6px; }
+    .wishlist-budget-input { font-family: 'Jost', sans-serif; font-size: 13px; padding: 8px 12px; border: 0.5px solid var(--border2); background: var(--bg3); color: var(--text); border-radius: 2px; outline: none; width: 140px; }
+    .wishlist-budget-input:focus { border-color: var(--gold); }
+    .wishlist-budget-result { font-size: 12px; margin-top: 8px; color: var(--text2); }
+    .wishlist-budget-ok { color: #2a7a3b; }
+    .wishlist-budget-over { color: #d32f2f; }
+
+    /* ── RECOMMENDATIONS ── */
+    .reco-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
+    .reco-cards { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+    .reco-cards::-webkit-scrollbar { display: none; }
+    .reco-card { flex-shrink: 0; width: 160px; padding: 12px; border: 0.5px solid var(--border2); border-radius: 2px; cursor: pointer; transition: all 0.2s; background: var(--bg2); }
+    .reco-card:hover { background: var(--text); }
+    .reco-card:hover .reco-card-name, .reco-card:hover .reco-card-price { color: var(--bg3); }
+    .reco-card:hover .reco-card-brand { color: rgba(255,255,255,0.5); }
+    .reco-card-emoji { font-size: 22px; margin-bottom: 4px; }
+    .reco-card-brand { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); transition: color 0.2s; }
+    .reco-card-name { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--text); margin: 2px 0 4px; transition: color 0.2s; }
+    .reco-card-price { font-size: 14px; font-family: 'Cormorant Garamond', serif; color: var(--text); transition: color 0.2s; }
+
+    /* ── COMPARE TABLE ── */
+    .modal-body { overflow-x: auto; }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 500px; }
+    .compare-table th { padding: 1.2rem 1.5rem; text-align: left; font-weight: 400; font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--text); border-bottom: 0.5px solid var(--border); background: var(--bg2); }
+    .compare-table th .th-brand { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); display: block; margin-top: 3px; }
+    .compare-table td { padding: 0.9rem 1.5rem; border-bottom: 0.5px solid var(--border); vertical-align: top; color: var(--text); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .row-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); font-weight: 400; background: var(--bg2); width: 100px; }
+    .best-val { color: #2a7a3b; font-weight: 500; }
+    .worst-val { color: #c0392b; }
+
+    /* ── REVIEWS ── */
+    .reviews-section { padding: 1.5rem 2rem; border-top: 0.5px solid var(--border); }
+    .reviews-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; margin-bottom: 1.2rem; color: var(--text); }
+    .review-card { padding: 1rem 0; border-bottom: 0.5px solid var(--border); }
+    .review-card:last-child { border-bottom: none; }
+    .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+    .reviewer { font-size: 13px; font-weight: 500; color: var(--text); }
+    .review-meta { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
+    .review-text { font-size: 15px; color: var(--text2); line-height: 1.7; font-family: 'Cormorant Garamond', serif; font-style: italic; margin-top: 5px; }
+
+    /* ── TOAST ── */
+    .toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(12px); background: var(--text); color: var(--bg3); padding: 10px 22px; border-radius: 2px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0; transition: all 0.3s; z-index: 400; pointer-events: none; white-space: nowrap; }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── NO RESULTS ── */
+    .no-results { padding: 4rem 2rem; text-align: center; color: var(--text3); font-size: 14px; letter-spacing: 1px; grid-column: 1/-1; background: var(--bg3); }
+
+    /* ── FOOTER ── */
+    .site-footer { border-top: 0.5px solid var(--border); background: var(--bg3); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; padding: 3rem 2.5rem 2rem; }
+    .footer-brand-col .logo { display: inline-block; margin-bottom: 0.8rem; }
+    .footer-brand-desc { font-size: 12px; color: var(--text3); line-height: 1.7; max-width: 280px; margin-bottom: 1.2rem; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a { width: 32px; height: 32px; border: 0.5px solid var(--border2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text3); text-decoration: none; transition: all 0.2s; }
+    .footer-social a:hover { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .footer-social a svg { width: 14px; height: 14px; }
+    .footer-col-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 12px; color: var(--text2); text-decoration: none; padding: 4px 0; transition: color 0.2s; cursor: pointer; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { text-align: center; padding: 1.2rem 2.5rem; border-top: 0.5px solid var(--border); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+
+    /* ── COOKIE BANNER ── */
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg3); border-top: 0.5px solid var(--border2); padding: 1.2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; z-index: 300; box-shadow: 0 -4px 20px rgba(0,0,0,0.08); }
+    .cookie-banner.hidden { display: none; }
+    .cookie-banner-text { font-size: 12px; color: var(--text2); line-height: 1.6; flex: 1; }
+    .cookie-banner-text strong { color: var(--text); font-weight: 500; }
+    .cookie-banner-btns { display: flex; gap: 8px; flex-shrink: 0; }
+    .cookie-accept-btn { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 20px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; }
+    .cookie-accept-btn:hover { opacity: 0.85; }
+    .cookie-settings-btn { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 20px; background: transparent; color: var(--text2); border: 0.5px solid var(--border2); border-radius: 2px; cursor: pointer; transition: all 0.2s; }
+    .cookie-settings-btn:hover { color: var(--text); border-color: var(--text); }
+
+    /* ── LEGAL CONTENT ── */
+    .legal-content { padding: 2rem; }
+    .legal-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); margin: 1.5rem 0 0.8rem; }
+    .legal-content h2:first-child { margin-top: 0; }
+    .legal-content p { font-size: 13px; color: var(--text2); line-height: 1.8; margin-bottom: 1rem; }
+    .legal-content ul { font-size: 13px; color: var(--text2); line-height: 1.8; margin: 0.5rem 0 1rem 1.5rem; }
+    .legal-content li { margin-bottom: 0.3rem; }
+    .legal-content .contact-form { display: flex; flex-direction: column; gap: 10px; margin-top: 1rem; }
+    .legal-content .contact-form input,
+    .legal-content .contact-form textarea { font-family: 'Jost', sans-serif; font-size: 12px; padding: 10px 14px; border: 0.5px solid var(--border2); background: var(--bg3); color: var(--text); border-radius: 2px; outline: none; }
+    .legal-content .contact-form input:focus,
+    .legal-content .contact-form textarea:focus { border-color: var(--gold); }
+    .legal-content .contact-form textarea { min-height: 120px; resize: vertical; }
+    .legal-content .contact-form button { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 24px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; align-self: flex-start; }
+    .legal-content .contact-form button:hover { opacity: 0.85; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-center { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero { padding: 2.5rem 1.2rem 1.5rem; }
+      .hero-title { font-size: 32px; }
+      .trending-section { padding: 1.2rem; }
+      .filters { padding: 0.8rem 1.2rem; }
+      .sort-row { padding: 0.5rem 1.2rem; }
+      .products { grid-template-columns: repeat(2, 1fr); }
+      .compare-bar { padding: 0.8rem 1.2rem; flex-wrap: wrap; }
+      .modal-backdrop { padding: 0.5rem; }
+      .detail-body { padding: 1.2rem; }
+      .modal-head { padding: 1.2rem; }
+      .brand-overlay { padding: 1rem 1.2rem; }
+      .cookie-banner { flex-direction: column; padding: 1rem 1.2rem; text-align: center; }
+      .cookie-banner-btns { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 2rem 1.2rem 1.5rem; }
+      .footer-brand-desc { max-width: 100%; }
+      .legal-content { padding: 1.2rem; }
+    }
+    @media (max-width: 420px) {
+      .products { grid-template-columns: 1fr; }
+      .hero-title { font-size: 26px; }
+      .price-btns { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Beau<em>té</em></a>
+  <div class="nav-center">
+    <a onclick="resetFilters()">Koleksiyon</a>
+    <a onclick="toggleBrandOverlay()">Markalar</a>
+    <a onclick="openCompare()">Karşılaştır</a>
+    <a onclick="openSkinTest()">Cilt Testi</a>
+  </div>
+  <div class="nav-right">
+    <button class="dark-btn" id="darkBtn" onclick="toggleDark()" title="Karanlık mod">
+      <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="fav-nav-btn" id="favNavBtn" onclick="toggleFavMode()" title="Favorilerim">♡</button>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="resetFilters();toggleMobileMenu()">Koleksiyon</a>
+  <a onclick="toggleBrandOverlay();toggleMobileMenu()">Markalar</a>
+  <a onclick="openSkinTest();toggleMobileMenu()">Cilt Testi</a>
+</div>
+
+<div class="brand-overlay" id="brandOverlay">
+  <div class="brand-overlay-title">Markaya Göre Filtrele</div>
+  <div class="brand-chips" id="brandChips"></div>
+</div>
+
+<div class="hero">
+  <div class="hero-eyebrow">Türkiye'nin güzellik rehberi</div>
+  <h1 class="hero-title">Makyaj <em>dünyasını</em><br>keşfedin & karşılaştırın</h1>
+  <p class="hero-sub">Fiyat · Kalite · Marka — hepsi bir arada</p>
+</div>
+
+<div class="trending-section" id="trendingSection"></div>
+
+<div class="filters-wrap">
+  <div class="filters">
+    <span class="filter-label">Kategori</span>
+    <button class="filter-btn active" data-cat="all">Tümü</button>
+    <button class="filter-btn" data-cat="fondoten">Fondöten</button>
+    <button class="filter-btn" data-cat="ruj">Ruj</button>
+    <button class="filter-btn" data-cat="maskara">Maskara</button>
+    <button class="filter-btn" data-cat="far">Göz Farı</button>
+    <button class="filter-btn" data-cat="aydınlatıcı">Aydınlatıcı</button>
+    <button class="filter-btn" data-cat="allık">Allık</button>
+    <button class="filter-btn" data-cat="bronzer">Bronzer</button>
+    <button class="filter-btn" data-cat="kapatıcı">Kapatıcı</button>
+    <button class="filter-btn" data-cat="primer">Primer</button>
+    <div class="filter-divider"></div>
+    <span class="filter-label">Cilt</span>
+    <button class="filter-btn" data-skin="yağlı">Yağlı</button>
+    <button class="filter-btn" data-skin="kuru">Kuru</button>
+    <button class="filter-btn" data-skin="karma">Karma</button>
+    <button class="filter-btn" data-skin="hassas">Hassas</button>
+    <div class="filter-divider"></div>
+    <button class="filter-btn" data-tag="vegan">🌿 Vegan</button>
+    <button class="filter-btn" data-tag="crueltyFree">🐰 Cruelty-Free</button>
+    <button class="filter-btn" data-tag="spf">☀️ SPF</button>
+    <input class="search-bar" type="text" id="searchInput" placeholder="Ürün veya marka ara...">
+  </div>
+</div>
+
+<div class="sort-row">
+  <div class="sort-row-left">
+    <span id="countLabel">— ürün</span>
+    <div class="filter-divider" style="height:16px"></div>
+    <span style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3)">Bütçe</span>
+    <div class="price-btns">
+      <button class="price-btn active" data-price="all">Tümü</button>
+      <button class="price-btn" data-price="0-300">₺0–300</button>
+      <button class="price-btn" data-price="300-800">₺300–800</button>
+      <button class="price-btn" data-price="800-1500">₺800–1500</button>
+      <button class="price-btn" data-price="1500+">₺1500+</button>
+    </div>
+  </div>
+  <select class="sort-select" id="sortSelect">
+    <option value="default">Sıralama: Önerilen</option>
+    <option value="price-asc">Fiyat: Düşükten Yükseğe</option>
+    <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
+    <option value="rating">Puan: En Yüksek</option>
+    <option value="reviews">Yorum: En Fazla</option>
+  </select>
+</div>
+
+<div class="products" id="productGrid"></div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <a href="#" class="logo">Beau<em>té</em></a>
+      <p class="footer-brand-desc">Türkiye'nin en kapsamlı makyaj ve kozmetik karşılaştırma platformu. En iyi ürünleri, en uygun fiyatlarla keşfedin.</p>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" title="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/></svg></a>
+        <a href="#" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Keşfet</div>
+      <a onclick="resetFilters()">Tüm Ürünler</a>
+      <a onclick="document.querySelector('[data-cat=fondoten]').click()">Fondöten</a>
+      <a onclick="document.querySelector('[data-cat=ruj]').click()">Ruj</a>
+      <a onclick="document.querySelector('[data-cat=maskara]').click()">Maskara</a>
+      <a onclick="document.querySelector('[data-cat=far]').click()">Göz Farı</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Araçlar</div>
+      <a onclick="openSkinTest()">Cilt Testi</a>
+      <a onclick="openWishlist()">Favorilerim</a>
+      <a onclick="toggleBrandOverlay()">Markalar</a>
+      <a onclick="openCompare()">Karşılaştır</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Yasal</div>
+      <a onclick="openAbout()">Hakkımızda</a>
+      <a onclick="openContact()">İletişim</a>
+      <a onclick="openPrivacy()">Gizlilik Politikası</a>
+      <a onclick="openTerms()">Kullanım Şartları</a>
+      <a onclick="openCookiePolicy()">Çerez Politikası</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Beauté — Makyaj Karşılaştırma Platformu</div>
+</footer>
+
+<div class="compare-bar" id="compareBar">
+  <div class="compare-info"><strong id="compareCount">0</strong> ürün seçildi — karşılaştırmaya hazır</div>
+  <button class="clear-btn" id="clearBtn">Temizle</button>
+  <button class="compare-btn" id="compareBtn">Karşılaştır →</button>
+</div>
+
+<!-- Detail Modal -->
+<div class="modal-backdrop" id="detailModal">
+  <div class="modal detail-modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title" id="detailTitle"></div>
+        <div class="modal-subtitle" id="detailSub"></div>
+      </div>
+      <button class="modal-close" id="detailClose">✕</button>
+    </div>
+    <div id="detailBody"></div>
+  </div>
+</div>
+
+<!-- Compare Modal -->
+<div class="modal-backdrop" id="compareModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Ürün karşılaştırması</div>
+        <div class="modal-subtitle">Seçilen ürünler yan yana</div>
+      </div>
+      <button class="modal-close" id="compareModalClose">✕</button>
+    </div>
+    <div class="modal-body" id="compareBody"></div>
+  </div>
+</div>
+
+<!-- Skin Tone Test Modal -->
+<div class="modal-backdrop" id="skinTestModal">
+  <div class="modal skin-test-modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Cilt Tonuma Uyar Mı?</div>
+        <div class="modal-subtitle">3 soruda cilt tonunuzu belirleyelim</div>
+      </div>
+      <button class="modal-close" onclick="document.getElementById('skinTestModal').classList.remove('open')">✕</button>
+    </div>
+    <div class="skin-test-body" id="skinTestBody"></div>
+  </div>
+</div>
+
+<!-- Wishlist Modal -->
+<div class="modal-backdrop" id="wishlistModal">
+  <div class="modal wishlist-modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Favorilerim</div>
+        <div class="modal-subtitle" id="wishlistSubtitle">Alışveriş listeniz</div>
+      </div>
+      <button class="modal-close" onclick="document.getElementById('wishlistModal').classList.remove('open')">✕</button>
+    </div>
+    <div class="wishlist-body" id="wishlistBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner hidden" id="cookieBanner">
+  <div class="cookie-banner-text">
+    <strong>Bu site çerezleri kullanır.</strong> Deneyiminizi iyileştirmek, tercihlerinizi hatırlamak ve site trafiğini analiz etmek için çerezler kullanıyoruz.
+  </div>
+  <div class="cookie-banner-btns">
+    <button class="cookie-accept-btn" onclick="acceptCookies()">Kabul Et</button>
+    <button class="cookie-settings-btn" onclick="openCookiePolicy()">Ayarlar</button>
+  </div>
+</div>
+
+<!-- About Modal -->
+<div class="modal-backdrop" id="aboutModal">
+  <div class="modal detail-modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Hakkımızda</div>
+        <div class="modal-subtitle">Beauté — Türkiye'nin güzellik rehberi</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('aboutModal')">✕</button>
+    </div>
+    <div class="legal-content">
+      <h2>Beauté Nedir?</h2>
+      <p>Beauté, Türkiye'nin en kapsamlı makyaj ve kozmetik karşılaştırma platformudur. Amacımız, kullanıcılarımızın en iyi ürünleri en uygun fiyatlarla bulmalarına yardımcı olmaktır.</p>
+      <p>Farklı markalardan yüzlerce ürünü bir araya getirerek fiyat, içerik, kullanıcı yorumları ve cilt uyumu gibi pek çok kriterde karşılaştırma imkanı sunuyoruz.</p>
+
+      <h2>Misyonumuz</h2>
+      <p>Güzellik sektöründe şeffaflığı ve bilinçli tüketimi teşvik etmek. Her bütçeye uygun kaliteli alternatifleri keşfetmenizi sağlamak ve doğru ürünü bulma sürecinizi kolaylaştırmak temel hedefimizdir.</p>
+
+      <h2>Değerlerimiz</h2>
+      <ul>
+        <li><strong>Şeffaflık:</strong> Tüm fiyat bilgileri ve değerlendirmeler tarafsız olarak sunulur.</li>
+        <li><strong>Bağımsızlık:</strong> Ürün önerilerimiz herhangi bir markanın sponsorluğuna bağlı değildir.</li>
+        <li><strong>Kullanıcı Odaklılık:</strong> Platformu sizin ihtiyaçlarınız doğrultusunda geliştiriyoruz.</li>
+        <li><strong>Güvenilirlik:</strong> Fiyat verilerini düzenli olarak günceller, doğru bilgi sunarız.</li>
+      </ul>
+
+      <h2>Ekibimiz</h2>
+      <p>Beauté, güzellik tutkunlarından oluşan bağımsız bir ekip tarafından geliştirilmektedir. Sektör deneyimimiz ve teknoloji altyapımız ile kullanıcılarımıza en iyi deneyimi sunmayı hedefliyoruz.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div class="modal-backdrop" id="contactModal">
+  <div class="modal detail-modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">İletişim</div>
+        <div class="modal-subtitle">Bize ulaşın</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('contactModal')">✕</button>
+    </div>
+    <div class="legal-content">
+      <h2>Bize Yazın</h2>
+      <p>Sorularınız, önerileriniz veya geri bildirimleriniz için aşağıdaki formu kullanabilir ya da doğrudan e-posta gönderebilirsiniz.</p>
+      <p><strong>E-posta:</strong> iletisim@beaute.com.tr</p>
+
+      <div class="contact-form" id="contactForm">
+        <input type="text" id="contactName" placeholder="Adınız Soyadınız">
+        <input type="email" id="contactEmail" placeholder="E-posta adresiniz">
+        <textarea id="contactMessage" placeholder="Mesajınız..."></textarea>
+        <button onclick="submitContact()">Gönder</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Privacy Modal -->
+<div class="modal-backdrop" id="privacyModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Gizlilik Politikası</div>
+        <div class="modal-subtitle">KVKK uyumlu kişisel veri koruma politikası</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('privacyModal')">✕</button>
+    </div>
+    <div class="legal-content">
+      <h2>Kişisel Verilerin Korunması</h2>
+      <p>Beauté olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında kişisel verilerinizin güvenliğine büyük önem veriyoruz. Bu politika, hangi verilerin toplandığını, nasıl kullanıldığını ve haklarınızı açıklamaktadır.</p>
+
+      <h2>Hangi Veriler Toplanır?</h2>
+      <ul>
+        <li><strong>Çerez verileri:</strong> Tema tercihi (açık/koyu mod), favori ürünler listesi ve çerez onay durumu tarayıcınızda saklanır.</li>
+        <li><strong>E-posta adresi:</strong> Fiyat alarmı özelliğini kullandığınızda, bildirim göndermek amacıyla e-posta adresiniz toplanır.</li>
+        <li><strong>İletişim bilgileri:</strong> İletişim formu aracılığıyla gönderdiğiniz ad, e-posta ve mesaj içeriği.</li>
+        <li><strong>Kullanım verileri:</strong> Site trafiği ve kullanım istatistikleri anonim olarak toplanabilir.</li>
+      </ul>
+
+      <h2>Verilerin Nasıl Kullanılır?</h2>
+      <ul>
+        <li>Site deneyiminizi kişiselleştirmek (tema, favoriler)</li>
+        <li>Fiyat düşüşlerinde sizi bilgilendirmek</li>
+        <li>İletişim taleplerinize yanıt vermek</li>
+        <li>Platformu geliştirmek ve iyileştirmek</li>
+        <li>Anonim kullanım istatistikleri oluşturmak</li>
+      </ul>
+
+      <h2>Üçüncü Taraf Paylaşımı</h2>
+      <p>Kişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylaşılmaz. Sitemizdeki satıcı bağlantıları affiliate (ortaklık) programları aracılığıyla çalışabilir; ancak bu süreçte kişisel verileriniz satıcılarla tarafımızca paylaşılmaz.</p>
+
+      <h2>Kullanıcı Hakları (KVKK Madde 11)</h2>
+      <p>KVKK'nın 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:</p>
+      <ul>
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+        <li>Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
+        <li>Kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+        <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme</li>
+        <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+        <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
+        <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
+        <li>Kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+      </ul>
+
+      <h2>İletişim</h2>
+      <p>Kişisel verilerinizle ilgili tüm soru ve talepleriniz için <strong>iletisim@beaute.com.tr</strong> adresine e-posta gönderebilirsiniz.</p>
+      <p><em>Son güncelleme: Mart 2026</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- Terms Modal -->
+<div class="modal-backdrop" id="termsModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Kullanım Şartları</div>
+        <div class="modal-subtitle">Hizmet koşulları ve sorumluluklar</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('termsModal')">✕</button>
+    </div>
+    <div class="legal-content">
+      <h2>Hizmet Tanımı</h2>
+      <p>Beauté, makyaj ve kozmetik ürünlerinin fiyat, içerik ve özelliklerini karşılaştırmanızı sağlayan bir bilgi platformudur. Beauté doğrudan ürün satışı yapmaz; farklı satıcıların sunduğu fiyat bilgilerini bir araya getirir.</p>
+
+      <h2>Sorumluluk Reddi</h2>
+      <p>Platformumuzda gösterilen fiyatlar ve ürün bilgileri çeşitli kaynaklardan derlenmektedir. Fiyatlar satıcılara aittir ve anlık değişiklik gösterebilir. Beauté, fiyatların doğruluğu veya güncelliği konusunda garanti vermez. Satın alma işlemleri doğrudan ilgili satıcıyla gerçekleştirilir.</p>
+      <p>Ürün açıklamaları, içerik listeleri ve kullanıcı yorumları bilgilendirme amaçlıdır. Herhangi bir tıbbi veya dermatolojik tavsiye niteliği taşımaz.</p>
+
+      <h2>Fikri Mülkiyet</h2>
+      <p>Beauté platformunun tasarımı, logosu, içerikleri ve yazılımı fikri mülkiyet hakları kapsamında korunmaktadır. Platformdaki içerikler izinsiz kopyalanamaz, çoğaltılamaz veya ticari amaçla kullanılamaz.</p>
+      <p>Platformda yer alan marka adları ve ürün isimleri ilgili marka sahiplerine aittir.</p>
+
+      <h2>Affiliate Bağlantılar</h2>
+      <p>Beauté, satıcı sitelerine yönlendirme bağlantılarında affiliate (ortaklık) programlarını kullanabilir. Bu bağlantılar aracılığıyla yapılan satın alımlardan komisyon geliri elde edilebilir. Bu durum, ürün sıralamasını veya önerilerimizi etkilemez; tarafsızlık ilkemize bağlıyız.</p>
+
+      <h2>Değişiklik Hakkı</h2>
+      <p>Beauté, bu kullanım şartlarını önceden bildirmeksizin güncelleme hakkını saklı tutar. Güncel şartlar her zaman bu sayfada yayımlanır. Platformu kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</p>
+      <p><em>Son güncelleme: Mart 2026</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie Policy Modal -->
+<div class="modal-backdrop" id="cookiePolicyModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Çerez Politikası</div>
+        <div class="modal-subtitle">Çerez kullanımı hakkında bilgilendirme</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('cookiePolicyModal')">✕</button>
+    </div>
+    <div class="legal-content">
+      <h2>Çerez Nedir?</h2>
+      <p>Çerezler, web siteleri tarafından tarayıcınıza yerleştirilen küçük metin dosyalarıdır. Tercihlerinizi hatırlamak ve size daha iyi bir deneyim sunmak için kullanılır.</p>
+
+      <h2>Hangi Çerezler Kullanılır?</h2>
+
+      <h2>Zorunlu Çerezler</h2>
+      <p>Bu çerezler sitenin temel işlevleri için gereklidir ve devre dışı bırakılamaz.</p>
+      <ul>
+        <li><strong>Tema tercihi:</strong> Açık veya koyu mod seçiminizi hatırlar (localStorage).</li>
+        <li><strong>Favoriler:</strong> Favori ürün listenizi tarayıcınızda saklar.</li>
+        <li><strong>Çerez onayı:</strong> Çerez tercihlerinizin durumunu kaydeder.</li>
+      </ul>
+
+      <h2>Analitik Çerezler</h2>
+      <p>Site trafiğini ve kullanım kalıplarını anlamamıza yardımcı olan çerezlerdir. Toplanan veriler anonimdir ve kişisel olarak sizi tanımlamak için kullanılmaz.</p>
+      <ul>
+        <li>Ziyaret edilen sayfa sayısı ve süreleri</li>
+        <li>En çok görüntülenen ürün kategorileri</li>
+        <li>Genel kullanım istatistikleri</li>
+      </ul>
+
+      <h2>Çerezleri Nasıl Kontrol Edebilirsiniz?</h2>
+      <p>Tarayıcınızın ayarlarından çerezleri silebilir veya engelleyebilirsiniz. Ancak zorunlu çerezlerin engellenmesi, sitenin bazı özelliklerinin düzgün çalışmamasına neden olabilir.</p>
+      <ul>
+        <li><strong>Chrome:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
+        <li><strong>Firefox:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
+        <li><strong>Safari:</strong> Tercihler → Gizlilik → Çerezler</li>
+      </ul>
+      <p>Daha fazla bilgi için <strong>iletisim@beaute.com.tr</strong> adresinden bize ulaşabilirsiniz.</p>
+      <p><em>Son güncelleme: Mart 2026</em></p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const products = [
+  // FONDÖTEN
+  { id:1, brand:"Charlotte Tilbury", name:"Flawless Filter", category:"fondoten", skinType:["normal","kuru","karma"], shades:["1 Fair","2 Light","3 Medium","4 Medium Dark","5 Dark"], prices:[{site:"Sephora",price:1850,url:"#"},{site:"Trendyol",price:1790,url:"#"},{site:"Hepsiburada",price:1920,url:"#"}], rating:4.8, reviews:1240, emoji:"✨", color:"linear-gradient(135deg,#f8e4d0,#e8c4a0)", desc:"Işıltılı, doğal bitişli serum fondöten. SPF 20 koruma. Hyaluronik asit ve bakır peptit içerikli.", trending:true, vegan:false, crueltyFree:true, spf:20, dupeFor:[4,6], ingredients:["Hyaluronik Asit","Bakır Peptit","Niacinamide","Vitamin E","Titanium Dioxide","Dimethicone","Glycerin"], ingredientWarnings:[] },
+  { id:2, brand:"MAC", name:"Studio Fix Fluid", category:"fondoten", skinType:["yağlı","karma"], shades:["NC15","NC20","NC25","NC30","NC35","NC40","NC45","NW25","NW35"], prices:[{site:"MAC",price:1250,url:"#"},{site:"Hepsiburada",price:1190,url:"#"},{site:"Trendyol",price:1210,url:"#"}], rating:4.6, reviews:980, emoji:"💎", color:"linear-gradient(135deg,#e8d8c8,#d0b898)", desc:"Tam kapatıcı, mat bitişli fondöten. 24 saate kadar kalıcılık. SPF 15.", trending:false, vegan:false, crueltyFree:false, spf:15, dupeFor:[4,6], ingredients:["Dimethicone","Titanium Dioxide","Silica","Talc","Nylon-12","Glycerin","Paraben"], ingredientWarnings:["Paraben","Talc"] },
+  { id:3, brand:"Estée Lauder", name:"Double Wear", category:"fondoten", skinType:["yağlı","karma","normal"], shades:["1N1 Ivory Nude","2C2 Pale Almond","3W1 Tawny","4N1 Shell Beige","5W2 Rich Caramel"], prices:[{site:"Sephora",price:1650,url:"#"},{site:"Beymen",price:1800,url:"#"},{site:"Trendyol",price:1580,url:"#"}], rating:4.9, reviews:2100, emoji:"👑", color:"linear-gradient(135deg,#f0dcc8,#d8b898)", desc:"Efsanevi kalıcılık formülü. 24 saat mat bitişli, su ve ter geçirmez. SPF 10.", trending:true, vegan:false, crueltyFree:false, spf:10, dupeFor:[4,6], ingredients:["Trimethylsiloxysilicate","Dimethicone","Titanium Dioxide","Iron Oxides","Silica","Niacinamide","Glycerin"], ingredientWarnings:[] },
+  { id:4, brand:"Maybelline", name:"Fit Me Matte", category:"fondoten", skinType:["yağlı","karma"], shades:["110 Porcelain","120 Classic Ivory","128 Warm Nude","220 Natural Beige","310 Sun Beige"], prices:[{site:"Trendyol",price:280,url:"#"},{site:"Watsons",price:295,url:"#"},{site:"Gratis",price:289,url:"#"}], rating:4.3, reviews:3200, emoji:"🎀", color:"linear-gradient(135deg,#f5e0cc,#e0c4a8)", desc:"Gözenek kapatıcı, hafif formül. 40+ ton seçeneği. Günlük kullanım için ideal.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[1,2,3,5], ingredients:["Aqua","Cyclopentasiloxane","Glycerin","Dimethicone","Titanium Dioxide","Paraben","Alkol"], ingredientWarnings:["Paraben","Alkol"] },
+  { id:5, brand:"Dior", name:"Forever Skin Glow", category:"fondoten", skinType:["kuru","normal"], shades:["0N Neutral","1N","1W","2N","2W","3N"], prices:[{site:"Beymen",price:2200,url:"#"},{site:"Sephora",price:2150,url:"#"}], rating:4.7, reviews:760, emoji:"🌟", color:"linear-gradient(135deg,#f8e8d8,#e8c8a8)", desc:"Uzun ömürlü parlaklık veren fondöten. Hyaluronik asit içerikli, cilde ışıltı katar.", trending:false, vegan:false, crueltyFree:false, spf:15, dupeFor:[4,6], ingredients:["Hyaluronik Asit","Gül Yağı","Vitamin E","Niacinamide","Dimethicone","Titanium Dioxide","Glycerin"], ingredientWarnings:[] },
+  { id:6, brand:"Golden Rose", name:"Longstay Matte", category:"fondoten", skinType:["yağlı","karma"], shades:["05 Ivory","09 Natural","13 Beige","17 Warm Beige","21 Caramel"], prices:[{site:"Gratis",price:195,url:"#"},{site:"Trendyol",price:185,url:"#"}], rating:4.1, reviews:890, emoji:"🌹", color:"linear-gradient(135deg,#f0d8c0,#d8b890)", desc:"Türk markası. Ekonomik, mat bitişli fondöten. 12 saat kalıcılık.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[1,2,3,5], ingredients:["Aqua","Dimethicone","Glycerin","Silica","Titanium Dioxide","Paraben","Mineral Yağ"], ingredientWarnings:["Paraben","Mineral Yağ"] },
+
+  // RUJ
+  { id:7, brand:"NARS", name:"Powermatte Lip Pigment", category:"ruj", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["Don't Stop","American Woman","Give Me More","Starwoman","Ride Or Die"], prices:[{site:"Sephora",price:890,url:"#"},{site:"Hepsiburada",price:860,url:"#"}], rating:4.7, reviews:640, emoji:"💋", color:"linear-gradient(135deg,#f4b0c0,#e07090)", desc:"Ultra mat, yoğun pigmentli sıvı ruj. 12 saat kalıcılık. Feather-proof formül.", trending:true, vegan:false, crueltyFree:true, spf:0, dupeFor:[10,12], ingredients:["Dimethicone","Isododecane","Trimethylsiloxysilicate","Vitamin E","Shea Butter"], ingredientWarnings:[] },
+  { id:8, brand:"Charlotte Tilbury", name:"Matte Revolution", category:"ruj", skinType:["normal","kuru","karma","yağlı"], shades:["Pillow Talk","Very Victoria","Bond Girl","Amazing Grace","Kiss & Tell"], prices:[{site:"Sephora",price:1350,url:"#"},{site:"Trendyol",price:1290,url:"#"}], rating:4.8, reviews:1100, emoji:"🌹", color:"linear-gradient(135deg,#f8c8d4,#e8a0b4)", desc:"Besleyici, nemlendirici mat ruj. Charlotte'ın ikonik formülü.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[9,10,12], ingredients:["Orchid Kompleksi","Shea Butter","Vitamin E","Hyaluronik Asit","Balmumu"], ingredientWarnings:[] },
+  { id:9, brand:"MAC", name:"Matte Lipstick", category:"ruj", skinType:["normal","kuru","karma","yağlı"], shades:["Velvet Teddy","Whirl","Ruby Woo","Mehr","Lady Danger","Chili"], prices:[{site:"MAC",price:650,url:"#"},{site:"Sephora",price:680,url:"#"},{site:"Trendyol",price:620,url:"#"}], rating:4.6, reviews:2800, emoji:"💄", color:"linear-gradient(135deg,#f0b8c8,#d88098)", desc:"Klasik MAC mat ruj. 60+ renk seçeneği. Vitamin E içerikli.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[8,11], ingredients:["Vitamin E","Balmumu","Lanolin","Mineral Yağ","Paraben"], ingredientWarnings:["Lanolin","Paraben","Mineral Yağ"] },
+  { id:10, brand:"Flormar", name:"Pretty Matt Mousse", category:"ruj", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["M301 Nude Bliss","M302 Pink Petal","M305 Red Pop","M308 Berry Bomb"], prices:[{site:"Watsons",price:125,url:"#"},{site:"Gratis",price:119,url:"#"},{site:"Trendyol",price:115,url:"#"}], rating:4.0, reviews:560, emoji:"🎭", color:"linear-gradient(135deg,#f8d0d8,#e8a8b8)", desc:"Türk markası. Mousse tekstürlü ultra mat ruj.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[7,8,11], ingredients:["Dimethicone","Silica","Glycerin","Paraben","Sentetik Parfüm"], ingredientWarnings:["Paraben","Sentetik Parfüm"] },
+  { id:11, brand:"YSL", name:"Rouge Pur Couture", category:"ruj", skinType:["normal","kuru","karma"], shades:["1 Le Rouge","13 Rose Vif","52 Rouge Rose","74 Rose Barère"], prices:[{site:"Beymen",price:1750,url:"#"},{site:"Sephora",price:1720,url:"#"}], rating:4.9, reviews:430, emoji:"🖤", color:"linear-gradient(135deg,#f8c0cc,#e89090)", desc:"Lüks içerik, altın kasa. Saten bitişli yoğun renk pigmenti.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeFor:[9,10,12], ingredients:["Mango Yağı","Vitamin E","Hyaluronik Asit","Shea Butter","Balmumu"], ingredientWarnings:[] },
+  { id:12, brand:"L'Oréal", name:"Color Riche", category:"ruj", skinType:["normal","kuru","karma","hassas"], shades:["297 Red Passion","630 Beige à Nu","302 Bois de Rose","124 S'il Vous Plait"], prices:[{site:"Trendyol",price:220,url:"#"},{site:"Watsons",price:235,url:"#"},{site:"Gratis",price:229,url:"#"}], rating:4.2, reviews:1700, emoji:"💝", color:"linear-gradient(135deg,#f4c0c8,#e09098)", desc:"Klasik formül, argan yağı ile zenginleştirilmiş. 60+ ton.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[7,8,11], ingredients:["Argan Yağı","Vitamin E","Balmumu","Paraben","Mineral Yağ"], ingredientWarnings:["Paraben","Mineral Yağ"] },
+
+  // MASKARA
+  { id:13, brand:"Benefit", name:"Badgal Bang Mascara", category:"maskara", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["Jet Black","Brown"], prices:[{site:"Sephora",price:980,url:"#"},{site:"Hepsiburada",price:950,url:"#"}], rating:4.5, reviews:890, emoji:"👁️", color:"linear-gradient(135deg,#c8c8e0,#8888b0)", desc:"36 saate kadar hacim ve uzama. Su geçirmez formül.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeFor:[15,16], ingredients:["Aero Teknolojisi Partikülleri","Provitamin B5","Balmumu","Carnauba Mumu"], ingredientWarnings:[] },
+  { id:14, brand:"Charlotte Tilbury", name:"Pillow Talk Mascara", category:"maskara", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["Black","Brown Black"], prices:[{site:"Sephora",price:1150,url:"#"},{site:"Trendyol",price:1100,url:"#"}], rating:4.7, reviews:670, emoji:"🌸", color:"linear-gradient(135deg,#d0c8e0,#9090b8)", desc:"Doğal, besleyici formül. İpek tozu içerikli, kirpikleri kalınlaştırır.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[15,16], ingredients:["İpek Tozu","Biotin","Vitamin E","Balmumu","Carnauba Mumu"], ingredientWarnings:[] },
+  { id:15, brand:"Maybelline", name:"Sky High Mascara", category:"maskara", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["Blackest Black","Brownish Black","Burgundy"], prices:[{site:"Trendyol",price:320,url:"#"},{site:"Watsons",price:335,url:"#"},{site:"Gratis",price:328,url:"#"}], rating:4.6, reviews:4500, emoji:"🚀", color:"linear-gradient(135deg,#c0c0d8,#8080a8)", desc:"Viral maskara. Sonsuz uzama etkisi. Su geçirmez, bambu özlü.", trending:true, vegan:false, crueltyFree:false, spf:0, dupeOf:[13,14,17], ingredients:["Bambu Özü","Balmumu","Paraben","Sentetik Parfüm","Glycerin"], ingredientWarnings:["Paraben","Sentetik Parfüm"] },
+  { id:16, brand:"L'Oréal", name:"Panorama Mascara", category:"maskara", skinType:["normal","karma","yağlı"], shades:["Black"], prices:[{site:"Watsons",price:285,url:"#"},{site:"Trendyol",price:275,url:"#"}], rating:4.3, reviews:1200, emoji:"✨", color:"linear-gradient(135deg,#c8c8dc,#9090ac)", desc:"360° fırça teknolojisi. Hacim + uzama kombinasyonu.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[13,14,17], ingredients:["Balmumu","Carnauba Mumu","Paraben","Glycerin","Silica"], ingredientWarnings:["Paraben"] },
+  { id:17, brand:"Urban Decay", name:"Perversion Mascara", category:"maskara", skinType:["normal","karma","yağlı"], shades:["Perversion Black"], prices:[{site:"Sephora",price:870,url:"#"},{site:"Hepsiburada",price:840,url:"#"}], rating:4.4, reviews:540, emoji:"🖤", color:"linear-gradient(135deg,#c0b8d4,#8878a4)", desc:"Yoğun siyah, dramatik hacim. Vegan ve cruelty-free formül.", trending:false, vegan:true, crueltyFree:true, spf:0, dupeFor:[15,16], ingredients:["Hint Yağı","Balmumu","Vitamin E","Biotin","Panthenol"], ingredientWarnings:[] },
+
+  // GÖZ FARI
+  { id:18, brand:"Anastasia Beverly Hills", name:"Norvina Pro", category:"far", skinType:["normal","kuru","karma","yağlı"], shades:["Vol. 1","Vol. 2","Vol. 3","Vol. 4","Vol. 5"], prices:[{site:"Sephora",price:2100,url:"#"},{site:"Trendyol",price:2050,url:"#"}], rating:4.9, reviews:320, emoji:"🎨", color:"linear-gradient(135deg,#e0d0f0,#b8a0d8)", desc:"45 renk mega palet. Matte + shimmer + glitter. Profesyonel kalite.", trending:true, vegan:false, crueltyFree:true, spf:0, dupeFor:[20,21], ingredients:["Mica","Dimethicone","Vitamin E","Jojoba Yağı","Niacinamide"], ingredientWarnings:[] },
+  { id:19, brand:"Charlotte Tilbury", name:"Luxury Palette", category:"far", skinType:["normal","kuru","karma","yağlı"], shades:["The Dolce Vita","The Golden Goddess","The Vintage Vamp","Pillow Talk"], prices:[{site:"Sephora",price:1800,url:"#"},{site:"Beymen",price:1850,url:"#"}], rating:4.8, reviews:480, emoji:"🌟", color:"linear-gradient(135deg,#e8d8f0,#c0a8d8)", desc:"Beş ikonik göz makyajı paleti. Hazır tonlama sistemi.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[20,21], ingredients:["Mica","Dimethicone","Vitamin E","Shea Butter","İpek Tozu"], ingredientWarnings:[] },
+  { id:20, brand:"Golden Rose", name:"Nude Look Eye", category:"far", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["Nude","Pink Nude","Peachy Nude","Brown Nude"], prices:[{site:"Gratis",price:150,url:"#"},{site:"Trendyol",price:140,url:"#"}], rating:4.0, reviews:720, emoji:"🌿", color:"linear-gradient(135deg,#f0e0d0,#d8c0a8)", desc:"Nude tonlar, 12'li palet. Uygun fiyatlı günlük kullanım.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[18,19], ingredients:["Talc","Mica","Paraben","Mineral Yağ","Silica"], ingredientWarnings:["Talc","Paraben","Mineral Yağ"] },
+  { id:21, brand:"MAC", name:"Eye Shadow x 9", category:"far", skinType:["normal","kuru","karma","yağlı"], shades:["Warm Neutrals","Cool Neutrals","Burgundy Times Nine","Naked Honey"], prices:[{site:"MAC",price:1400,url:"#"},{site:"Sephora",price:1450,url:"#"}], rating:4.7, reviews:610, emoji:"💎", color:"linear-gradient(135deg,#dcd0e8,#b0a0c8)", desc:"9'lu palet, yoğun pigmentler. Mat ve simli seçenekler.", trending:false, vegan:false, crueltyFree:false, spf:0, ingredients:["Mica","Dimethicone","Talc","Iron Oxides","Glycerin"], ingredientWarnings:["Talc"] },
+
+  // AYDINLATICI
+  { id:22, brand:"Charlotte Tilbury", name:"Flawless Highlighter", category:"aydınlatıcı", skinType:["normal","kuru","karma","yağlı"], shades:["Pillow Talk","Goldgasm","Moon Beach","Walk of No Shame"], prices:[{site:"Sephora",price:1650,url:"#"},{site:"Trendyol",price:1590,url:"#"}], rating:4.9, reviews:580, emoji:"✨", color:"linear-gradient(135deg,#fde8c0,#f0c870)", desc:"Elmas tozu içerikli. Doğal ve kalıcı ışıltı efekti.", trending:true, vegan:false, crueltyFree:true, spf:0, dupeFor:[24], ingredients:["Elmas Tozu","Mica","Vitamin E","Jojoba Yağı","Glycerin"], ingredientWarnings:[] },
+  { id:23, brand:"Fenty Beauty", name:"Killawatt Foil", category:"aydınlatıcı", skinType:["normal","kuru","karma","yağlı"], shades:["Mean Money","Trophy Wife","Lightning Dust","Girl Next Door"], prices:[{site:"Sephora",price:1200,url:"#"},{site:"Hepsiburada",price:1180,url:"#"}], rating:4.8, reviews:440, emoji:"💡", color:"linear-gradient(135deg,#fce8c0,#f0d070)", desc:"Metalik, yoğun ışıltı. Her cilt tonuna uygun. Vegan formül.", trending:false, vegan:true, crueltyFree:true, spf:0, dupeFor:[24], ingredients:["Mica","Dimethicone","Vitamin E","Hyaluronik Asit","Niacinamide"], ingredientWarnings:[] },
+  { id:24, brand:"Flormar", name:"Highlighter", category:"aydınlatıcı", skinType:["normal","karma","kuru"], shades:["01 Champagne","02 Golden Pink","03 Rose Gold"], prices:[{site:"Gratis",price:145,url:"#"},{site:"Trendyol",price:138,url:"#"}], rating:3.9, reviews:310, emoji:"🌙", color:"linear-gradient(135deg,#f8e8c8,#e8d088)", desc:"Ekonomik aydınlatıcı. Toz formül, doğal ışıltı.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[22,23], ingredients:["Talc","Mica","Paraben","Mineral Yağ","Silica"], ingredientWarnings:["Talc","Paraben","Mineral Yağ"] },
+
+  // ALLIK
+  { id:25, brand:"NARS", name:"Orgasm Blush", category:"allık", skinType:["normal","kuru","karma","yağlı"], shades:["Orgasm","Deep Throat","Desire","Sex Appeal"], prices:[{site:"Sephora",price:980,url:"#"},{site:"Hepsiburada",price:950,url:"#"}], rating:4.9, reviews:3200, emoji:"🌸", color:"linear-gradient(135deg,#fac8d8,#e898b8)", desc:"Dünyanın en çok satan allığı. Şeftali-altın simli pembesiyle canlı görünüm.", trending:true, vegan:false, crueltyFree:true, spf:0, dupeFor:[28], ingredients:["Mica","Vitamin E","Jojoba Yağı","Dimethicone","Glycerin"], ingredientWarnings:[] },
+  { id:26, brand:"Charlotte Tilbury", name:"Cheek to Chic", category:"allık", skinType:["normal","kuru","karma","yağlı"], shades:["Love is the Drug","First Love","Swish & Pop","The Climax"], prices:[{site:"Sephora",price:1450,url:"#"},{site:"Beymen",price:1500,url:"#"}], rating:4.7, reviews:680, emoji:"💗", color:"linear-gradient(135deg,#f8c0d0,#e898b0)", desc:"İki tonlu yanaklık. Merkezden dışa doğru uygulama için özel tasarım.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[27,28], ingredients:["Mica","Vitamin E","Shea Butter","Glycerin","İpek Tozu"], ingredientWarnings:[] },
+  { id:27, brand:"Benefit", name:"Dandelion Blush", category:"allık", skinType:["normal","kuru","karma","hassas"], shades:["Dandelion","Gold Rush","Shellie","Rockateur"], prices:[{site:"Sephora",price:850,url:"#"},{site:"Hepsiburada",price:820,url:"#"}], rating:4.6, reviews:920, emoji:"🌼", color:"linear-gradient(135deg,#fdd8e8,#f0a8c8)", desc:"Şeffaf pudra allık. Doğal, sağlıklı görünüm. Hafif sim efekti.", trending:false, vegan:false, crueltyFree:false, spf:0, ingredients:["Mica","Dimethicone","Talc","Vitamin E","Glycerin"], ingredientWarnings:["Talc"] },
+  { id:28, brand:"Flormar", name:"Blush-On", category:"allık", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["401 Nude Peach","407 Rosy Pink","411 Coral","415 Mauve"], prices:[{site:"Gratis",price:115,url:"#"},{site:"Trendyol",price:109,url:"#"},{site:"Watsons",price:119,url:"#"}], rating:4.0, reviews:480, emoji:"🎀", color:"linear-gradient(135deg,#fcc8d8,#ec98b8)", desc:"Türk markası. Uygun fiyatlı toz allık. Uzun ömürlü, doğal renk.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[25,26], ingredients:["Talc","Mica","Paraben","Mineral Yağ","Sentetik Parfüm"], ingredientWarnings:["Talc","Paraben","Mineral Yağ","Sentetik Parfüm"] },
+
+  // BRONZER
+  { id:29, brand:"Charlotte Tilbury", name:"Filmstar Bronze & Glow", category:"bronzer", skinType:["normal","kuru","karma","yağlı"], shades:["Fair to Medium","Medium to Dark","Dark"], prices:[{site:"Sephora",price:1850,url:"#"},{site:"Beymen",price:1900,url:"#"}], rating:4.9, reviews:740, emoji:"☀️", color:"linear-gradient(135deg,#e8c080,#c89050)", desc:"Çift taraflı bronzlaştırıcı ve aydınlatıcı. Profesyonel kontür tekniği.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[31], ingredients:["Mica","Vitamin E","Jojoba Yağı","Shea Butter","Glycerin"], ingredientWarnings:[] },
+  { id:30, brand:"Too Faced", name:"Chocolate Soleil", category:"bronzer", skinType:["normal","kuru","karma","yağlı"], shades:["Light/Medium","Medium/Deep","Deep"], prices:[{site:"Sephora",price:1100,url:"#"},{site:"Hepsiburada",price:1050,url:"#"}], rating:4.7, reviews:1100, emoji:"🍫", color:"linear-gradient(135deg,#d8a870,#b87840)", desc:"Kakao aromalı bronzlaştırıcı. Kumlu-mat bitmez. Çikolata tozu içerikli.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[31], ingredients:["Kakao Tozu","Mica","Vitamin E","Shea Butter","Dimethicone"], ingredientWarnings:[] },
+  { id:31, brand:"Golden Rose", name:"Terra Bronzer", category:"bronzer", skinType:["normal","karma","yağlı"], shades:["Natural Tan","Sun Kissed","Deep Bronze"], prices:[{site:"Gratis",price:165,url:"#"},{site:"Trendyol",price:155,url:"#"}], rating:4.1, reviews:390, emoji:"🌞", color:"linear-gradient(135deg,#d4a068,#b07838)", desc:"Türk markası. Ekonomik bronzlaştırıcı. Doğal bronz görünüm.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[29,30], ingredients:["Talc","Mica","Paraben","Mineral Yağ","Silica"], ingredientWarnings:["Talc","Paraben","Mineral Yağ"] },
+
+  // KAPATICI
+  { id:32, brand:"Tarte", name:"Shape Tape", category:"kapatıcı", skinType:["normal","kuru","karma","yağlı"], shades:["12N Fair","16N Light","22N Light Medium","27H Medium","35N Medium"], prices:[{site:"Sephora",price:780,url:"#"},{site:"Hepsiburada",price:750,url:"#"}], rating:4.8, reviews:5600, emoji:"🎯", color:"linear-gradient(135deg,#f0dcc8,#d8b898)", desc:"Dünyanın 1 numaralı kapatıcısı. Yüksek kapatıcılık, uzun ömürlü formül.", trending:true, vegan:true, crueltyFree:true, spf:0, dupeFor:[34], ingredients:["Shea Butter","Mango Yağı","Vitamin E","Hyaluronik Asit","Glycerin"], ingredientWarnings:[] },
+  { id:33, brand:"NARS", name:"Radiant Creamy Concealer", category:"kapatıcı", skinType:["normal","kuru","karma"], shades:["Chantilly","Vanilla","Custard","Sand","Caramel","Truffle"], prices:[{site:"Sephora",price:890,url:"#"},{site:"Hepsiburada",price:860,url:"#"}], rating:4.7, reviews:2800, emoji:"💧", color:"linear-gradient(135deg,#f4e4cc,#e0c4a0)", desc:"Işıltılı krem kapatıcı. Halka altı morlukları gizler, nemlendirme sağlar.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[34], ingredients:["Vitamin E","Hyaluronik Asit","Glycerin","Dimethicone","Jojoba Yağı"], ingredientWarnings:[] },
+  { id:34, brand:"Maybelline", name:"Age Rewind", category:"kapatıcı", skinType:["normal","kuru","karma","yağlı","hassas"], shades:["110 Fair","120 Light","130 Light/Medium","140 Warm Light","220 Natural"], prices:[{site:"Trendyol",price:210,url:"#"},{site:"Watsons",price:219,url:"#"},{site:"Gratis",price:215,url:"#"}], rating:4.4, reviews:4200, emoji:"⭐", color:"linear-gradient(135deg,#f8e8d4,#e8c8a4)", desc:"Eraser uçlu kapatıcı. Kolay uygulama, yüksek kapatıcılık.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[32,33], ingredients:["Glycerin","Dimethicone","Paraben","Mineral Yağ","Haloxyl"], ingredientWarnings:["Paraben","Mineral Yağ"] },
+
+  // PRIMER
+  { id:35, brand:"Charlotte Tilbury", name:"Pore Filter", category:"primer", skinType:["yağlı","karma","normal"], shades:["Universal"], prices:[{site:"Sephora",price:1350,url:"#"},{site:"Trendyol",price:1290,url:"#"}], rating:4.7, reviews:860, emoji:"🔮", color:"linear-gradient(135deg,#e0d4f4,#c0a8e4)", desc:"Gözenek minimize edici primer. Makyajın 24 saat kalmasını sağlar.", trending:false, vegan:false, crueltyFree:true, spf:0, dupeFor:[36,37], ingredients:["Niacinamide","Hyaluronik Asit","Dimethicone","Vitamin E","Glycerin"], ingredientWarnings:[] },
+  { id:36, brand:"NYX", name:"Angel Veil Primer", category:"primer", skinType:["normal","kuru","karma","hassas"], shades:["Universal"], prices:[{site:"Trendyol",price:380,url:"#"},{site:"Watsons",price:395,url:"#"},{site:"Gratis",price:388,url:"#"}], rating:4.5, reviews:1400, emoji:"👼", color:"linear-gradient(135deg,#dcd0f0,#b4a0d8)", desc:"Hafif, nemlendirici primer. İpeksi bitmez. Makyaj tabanı için mükemmel.", trending:false, vegan:true, crueltyFree:true, spf:0, dupeOf:[35], ingredients:["Dimethicone","Vitamin E","Glycerin","Aloe Vera","Panthenol"], ingredientWarnings:[] },
+  { id:37, brand:"Flormar", name:"Perfecting Primer", category:"primer", skinType:["normal","karma","yağlı","hassas"], shades:["Universal"], prices:[{site:"Gratis",price:145,url:"#"},{site:"Trendyol",price:138,url:"#"}], rating:3.8, reviews:290, emoji:"🌸", color:"linear-gradient(135deg,#e4d0ec,#c0a0d4)", desc:"Türk markası. Ekonomik primer. Makyajı uzun süre tutar, pürüzsüz bitmez.", trending:false, vegan:false, crueltyFree:false, spf:0, dupeOf:[35], ingredients:["Dimethicone","Silica","Paraben","Mineral Yağ","Glycerin"], ingredientWarnings:["Paraben","Mineral Yağ"] },
+];
+
+const reviews = [
+  { name:"Selin K.", brand:"Charlotte Tilbury", product:"Flawless Filter", rating:5, text:"Yıllardır kullandığım en güzel fondöten. Cildimi sanki photoshop gibi yapıyor ama son derece doğal." },
+  { name:"Merve A.", brand:"Maybelline", product:"Sky High Mascara", rating:5, text:"Bu maskarayı duyduğumda inanmamıştım ama gerçekten mucize etkisi yapıyor. Fiyatı da çok uygun." },
+  { name:"Ayşe T.", brand:"Estée Lauder", product:"Double Wear", rating:5, text:"10 yıldır kullanıyorum. Yüzmeye bile girdim kalktı. Başka fondötene bakmam mümkün değil." },
+  { name:"Dilan B.", brand:"NARS", product:"Orgasm Blush", rating:5, text:"NARS Orgasm olmadan evden çıkamıyorum. O ışıltısı başka hiçbir allıkta yok. Klasikler klasik kalır." },
+  { name:"Ceren Ö.", brand:"Anastasia Beverly Hills", product:"Norvina Pro", rating:5, text:"Bu palet gerçekten bir yatırım. Bir yıldır kullanıyorum, hâlâ bitmedi. Her renk mükemmel." },
+  { name:"Naz S.", brand:"YSL", product:"Rouge Pur Couture", rating:5, text:"Kutusu kadar içi de lüks. Renk kalıcılığı diğer rujlara taş çıkartıyor." },
+  { name:"Buse K.", brand:"MAC", product:"Studio Fix Fluid", rating:4, text:"10+ yıldır kullanıyorum. Güneşli havalarda bile duruyor. Kapatıcılığı rakipsiz." },
+  { name:"İpek D.", brand:"Tarte", product:"Shape Tape", rating:5, text:"Halka altı morluklarım için mucize. Diğer tüm kapatıcıları kapıya koydum." },
+  { name:"Zeynep A.", brand:"Charlotte Tilbury", product:"Filmstar Bronze & Glow", rating:5, text:"Kontür yapmayı bilmiyordum ama bu palet ile çok kolay. Charlotte gerçekten düşünmüş." },
+];
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let selected = new Set();
+let favorites = new Set(JSON.parse(localStorage.getItem('beaute-favs') || '[]'));
+let priceAlerts = JSON.parse(localStorage.getItem('beaute-alerts') || '{}');
+let activeCategory = 'all';
+let activeSkin = null;
+let activePriceRange = 'all';
+let activeTag = null;
+let searchQ = '';
+let sortMode = 'default';
+let favMode = false;
+let activeBrand = null;
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+function stars(n) {
+  return Array.from({length:5}, (_,i) =>
+    `<span class="star${i < Math.round(n) ? '' : ' empty'}">${i < Math.round(n) ? '★' : '☆'}</span>`
+  ).join('');
+}
+function minPrice(p) { return Math.min(...p.prices.map(x => x.price)); }
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+function saveFavs() { localStorage.setItem('beaute-favs', JSON.stringify([...favorites])); }
+function saveAlerts() { localStorage.setItem('beaute-alerts', JSON.stringify(priceAlerts)); }
+
+// ── TRENDING ──────────────────────────────────────────────────────────────────
+function renderTrending() {
+  const sec = document.getElementById('trendingSection');
+  sec.innerHTML = `
+    <div class="trending-label">Trending şu an</div>
+    <div class="trending-scroll">
+      ${products.filter(p => p.trending).map(p => `
+        <div class="trending-chip" onclick="openDetail(${p.id})">
+          <span class="tc-emoji">${p.emoji}</span>
+          <div>
+            <div class="tc-name">${p.name}</div>
+            <div class="tc-brand">${p.brand}</div>
+            <div class="tc-price">₺${minPrice(p).toLocaleString('tr-TR')}'den başlayan</div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// ── BRAND OVERLAY ─────────────────────────────────────────────────────────────
+function initBrandChips() {
+  const brands = [...new Set(products.map(p => p.brand))].sort();
+  document.getElementById('brandChips').innerHTML =
+    ['Tümü', ...brands].map(b => `
+      <button class="filter-btn${(b === 'Tümü' ? !activeBrand : activeBrand === b) ? ' active' : ''}"
+        onclick="filterBrand('${b === 'Tümü' ? '' : b}')">${b}</button>
+    `).join('');
+}
+function toggleBrandOverlay() {
+  const el = document.getElementById('brandOverlay');
+  el.classList.toggle('open');
+  if (el.classList.contains('open')) initBrandChips();
+}
+function filterBrand(brand) {
+  activeBrand = brand || null;
+  initBrandChips();
+  render();
+}
+
+// ── FILTER ────────────────────────────────────────────────────────────────────
+function getFiltered() {
+  let arr = products.filter(p => {
+    if (favMode && !favorites.has(p.id)) return false;
+    if (activeBrand && p.brand !== activeBrand) return false;
+    if (activeCategory !== 'all' && p.category !== activeCategory) return false;
+    if (activeSkin && !p.skinType.includes(activeSkin)) return false;
+    if (activeTag === 'vegan' && !p.vegan) return false;
+    if (activeTag === 'crueltyFree' && !p.crueltyFree) return false;
+    if (activeTag === 'spf' && !p.spf) return false;
+    if (searchQ && !p.name.toLowerCase().includes(searchQ) && !p.brand.toLowerCase().includes(searchQ)) return false;
+    const mp = minPrice(p);
+    if (activePriceRange === '0-300'    && mp > 300)   return false;
+    if (activePriceRange === '300-800'  && (mp < 300 || mp > 800))  return false;
+    if (activePriceRange === '800-1500' && (mp < 800 || mp > 1500)) return false;
+    if (activePriceRange === '1500+'    && mp < 1500)  return false;
+    return true;
+  });
+  if (sortMode === 'price-asc')  arr.sort((a,b) => minPrice(a) - minPrice(b));
+  if (sortMode === 'price-desc') arr.sort((a,b) => minPrice(b) - minPrice(a));
+  if (sortMode === 'rating')     arr.sort((a,b) => b.rating - a.rating);
+  if (sortMode === 'reviews')    arr.sort((a,b) => b.reviews - a.reviews);
+  return arr;
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+function render() {
+  const filtered = getFiltered();
+  document.getElementById('countLabel').textContent = filtered.length + ' ürün';
+
+  // fav nav button
+  const favBtn = document.getElementById('favNavBtn');
+  favBtn.innerHTML = (favMode ? '♥' : '♡') +
+    (favorites.size > 0 ? `<span class="fav-badge">${favorites.size}</span>` : '');
+  favBtn.classList.toggle('active', favMode);
+
+  const grid = document.getElementById('productGrid');
+  if (!filtered.length) {
+    grid.innerHTML = '<div class="no-results">Aradığınız kriterlere uygun ürün bulunamadı.</div>';
+    return;
+  }
+  grid.innerHTML = filtered.map(p => {
+    const mp = minPrice(p);
+    const isFav = favorites.has(p.id);
+    const isSel = selected.has(p.id);
+    const badges = [];
+    if (p.vegan) badges.push('<span class="badge badge-vegan">Vegan</span>');
+    if (p.crueltyFree) badges.push('<span class="badge badge-cf">Cruelty-Free</span>');
+    if (p.spf) badges.push('<span class="badge badge-spf">SPF ' + p.spf + '</span>');
+    const isDupe = p.dupeOf && p.dupeOf.length > 0;
+
+    return `
+      <div class="product-card${isSel ? ' selected' : ''}" onclick="openDetail(${p.id})">
+        <div class="card-image" style="background:${p.color}">
+          <span class="card-image-emoji">${p.emoji}</span>
+          <button class="fav-btn${isFav ? ' active' : ''}"
+            onclick="event.stopPropagation();toggleFav(${p.id})"
+            title="${isFav ? 'Favorilerden çıkar' : 'Favorilere ekle'}">${isFav ? '♥' : '♡'}</button>
+          <div class="compare-toggle${isSel ? ' checked' : ''}"
+            onclick="event.stopPropagation();toggleSelect(${p.id})"
+            title="Karşılaştırmaya ekle">${isSel ? '✓' : ''}</div>
+          ${isDupe ? '<span class="badge-dupe-card">Dupe</span>' : ''}
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-brand">${p.brand}</div>
+            <div class="card-name">${p.name}</div>
+          </div>
+          ${badges.length ? '<div class="card-badges">' + badges.join('') + '</div>' : ''}
+          <span class="card-category">${p.category}</span>
+          <div class="card-stars">${stars(p.rating)}<span class="star-count">${p.rating} · ${p.reviews.toLocaleString('tr-TR')} yorum</span></div>
+          <div class="card-bottom">
+            <div>
+              <div class="card-price">₺${mp.toLocaleString('tr-TR')}</div>
+              <div class="card-price-sub">${p.prices.length > 1 ? p.prices.length + ' satıcıda' : p.prices[0].site}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ── FAVORITES ─────────────────────────────────────────────────────────────────
+function toggleFav(id) {
+  if (favorites.has(id)) { favorites.delete(id); showToast('Favorilerden kaldırıldı'); }
+  else { favorites.add(id); showToast('Favorilere eklendi ♥'); }
+  saveFavs(); render();
+}
+function toggleFavMode() {
+  if (favorites.size > 0) { openWishlist(); }
+  else { favMode = !favMode; render(); }
+}
+
+// ── COMPARE ───────────────────────────────────────────────────────────────────
+function updateBar() {
+  document.getElementById('compareCount').textContent = selected.size;
+  document.getElementById('compareBar').classList.toggle('visible', selected.size >= 2);
+}
+function toggleSelect(id) {
+  if (selected.has(id)) { selected.delete(id); }
+  else {
+    if (selected.size >= 4) { showToast('En fazla 4 ürün karşılaştırabilirsiniz'); return; }
+    selected.add(id);
+  }
+  render(); updateBar();
+}
+
+// ── RECOMMENDATIONS ──────────────────────────────────────────────────────────
+function getRecommendations(product, count) {
+  return products
+    .filter(p => p.id !== product.id && p.category === product.category)
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, count);
+}
+
+// ── DUPES ────────────────────────────────────────────────────────────────────
+function getDupes(product) {
+  if (product.dupeFor && product.dupeFor.length) {
+    return product.dupeFor.map(id => products.find(p => p.id === id)).filter(Boolean);
+  }
+  return [];
+}
+
+function getDupeOriginals(product) {
+  if (product.dupeOf && product.dupeOf.length) {
+    return product.dupeOf.map(id => products.find(p => p.id === id)).filter(Boolean);
+  }
+  return [];
+}
+
+// ── PRICE ALERT ──────────────────────────────────────────────────────────────
+function setPriceAlert(productId) {
+  const input = document.getElementById('alertEmail_' + productId);
+  if (!input) return;
+  const email = input.value.trim();
+  if (!email || !email.includes('@')) {
+    showToast('Geçerli bir e-posta girin');
+    return;
+  }
+  priceAlerts[productId] = email;
+  saveAlerts();
+  showToast('Fiyat alarmı kuruldu ✓');
+  // Update the alert section in the modal
+  const section = document.getElementById('alertSection_' + productId);
+  if (section) {
+    section.innerHTML = `
+      <div class="price-alert-title">🔔 Fiyat Alarmı</div>
+      <div class="price-alert-set">✓ Alarm kuruldu — ${email} adresine bildirilecek
+        <button onclick="removePriceAlert(${productId})" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:10px;text-decoration:underline;margin-left:8px">Kaldır</button>
+      </div>
+    `;
+  }
+}
+
+function removePriceAlert(productId) {
+  delete priceAlerts[productId];
+  saveAlerts();
+  showToast('Fiyat alarmı kaldırıldı');
+  openDetail(productId);
+}
+
+// ── SHARE ────────────────────────────────────────────────────────────────────
+function shareProduct(platform, product) {
+  const text = `${product.brand} ${product.name} — ₺${minPrice(product).toLocaleString('tr-TR')}'den başlayan fiyatlarla! Beauté'de karşılaştır.`;
+  const url = window.location.href;
+  let shareUrl = '';
+
+  switch(platform) {
+    case 'whatsapp':
+      shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
+      break;
+    case 'twitter':
+      shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+      break;
+    case 'copy':
+      navigator.clipboard.writeText(text + ' ' + url).then(() => showToast('Link kopyalandı ✓'));
+      return;
+  }
+  if (shareUrl) window.open(shareUrl, '_blank', 'width=600,height=400');
+}
+
+// ── DETAIL MODAL ──────────────────────────────────────────────────────────────
+function openDetail(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+
+  document.getElementById('detailTitle').textContent = p.name;
+  document.getElementById('detailSub').textContent = p.brand + ' · ' + p.category;
+  const sorted = [...p.prices].sort((a,b) => a.price - b.price);
+  const best = sorted[0].price;
+
+  // Dupes
+  const dupes = getDupes(p);
+  const originals = getDupeOriginals(p);
+
+  // Recommendations
+  const recos = getRecommendations(p, 4);
+
+  // Price alert state
+  const hasAlert = priceAlerts[p.id];
+
+  // Badges HTML
+  const badgeHtml = [];
+  if (p.vegan) badgeHtml.push('<span class="badge badge-vegan">Vegan</span>');
+  if (p.crueltyFree) badgeHtml.push('<span class="badge badge-cf">Cruelty-Free</span>');
+  if (p.spf) badgeHtml.push('<span class="badge badge-spf">SPF ' + p.spf + '</span>');
+
+  document.getElementById('detailBody').innerHTML = `
+    <div class="detail-image" style="background:${p.color}">
+      <span class="detail-image-emoji">${p.emoji}</span>
+    </div>
+    <div class="detail-body">
+      ${badgeHtml.length ? '<div class="card-badges" style="margin-bottom:12px">' + badgeHtml.join(' ') + '</div>' : ''}
+      <p class="detail-desc">"${p.desc}"</p>
+
+      ${p.shades.length > 1 ? `
+        <div class="detail-section-title">Renk / Ton Seçenekleri (${p.shades.length})</div>
+        <div class="shades-list">
+          ${p.shades.map((s,i) => `
+            <button class="shade-chip${i===0?' active':''}"
+              onclick="this.closest('.shades-list').querySelectorAll('.shade-chip').forEach(c=>c.classList.remove('active'));this.classList.add('active')">${s}</button>
+          `).join('')}
+        </div>
+      ` : ''}
+
+      <div class="detail-section-title">Fiyat Karşılaştırması</div>
+      <div class="prices-table">
+        ${sorted.map(pr => `
+          <div class="price-row${pr.price === best ? ' best-price' : ''}">
+            <span class="price-row-site">${pr.site}</span>
+            ${pr.price === best ? '<span class="price-row-badge">En Ucuz</span>' : ''}
+            <span class="price-row-amount">₺${pr.price.toLocaleString('tr-TR')}</span>
+            <a href="${pr.url}" class="buy-btn">Satın Al →</a>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Price Alert -->
+      <div class="price-alert-section" id="alertSection_${p.id}">
+        <div class="price-alert-title">🔔 Fiyat Alarmı</div>
+        ${hasAlert
+          ? `<div class="price-alert-set">✓ Alarm kuruldu — ${hasAlert} adresine bildirilecek
+              <button onclick="removePriceAlert(${p.id})" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:10px;text-decoration:underline;margin-left:8px">Kaldır</button>
+            </div>`
+          : `<div class="price-alert-form">
+              <input class="price-alert-input" type="email" id="alertEmail_${p.id}" placeholder="E-posta adresinizi girin...">
+              <button class="price-alert-btn" onclick="setPriceAlert(${p.id})">Bildir</button>
+            </div>`
+        }
+      </div>
+
+      <div class="detail-meta">
+        <div>
+          <div class="detail-meta-label">Değerlendirme</div>
+          <div class="detail-meta-value" style="display:flex;align-items:center;gap:5px;margin-top:2px">${stars(p.rating)} ${p.rating}</div>
+        </div>
+        <div>
+          <div class="detail-meta-label">Yorum</div>
+          <div class="detail-meta-value">${p.reviews.toLocaleString('tr-TR')}</div>
+        </div>
+        <div>
+          <div class="detail-meta-label">Uygun Cilt Tipi</div>
+          <div style="margin-top:4px">${p.skinType.map(s => '<span class="skin-type-tag">' + s + '</span>').join('')}</div>
+        </div>
+        ${p.spf ? `<div>
+          <div class="detail-meta-label">Güneş Koruması</div>
+          <div class="detail-meta-value">SPF ${p.spf}</div>
+        </div>` : ''}
+      </div>
+
+      ${dupes.length ? `
+        <div class="dupe-section">
+          <div class="detail-section-title">💰 Bütçe Dostu Alternatifleri (Dupe)</div>
+          <div class="dupe-cards">
+            ${dupes.map(d => {
+              const dp = minPrice(d);
+              const save = minPrice(p) - dp;
+              return `
+                <div class="dupe-card" onclick="openDetail(${d.id})">
+                  <div class="dupe-card-emoji">${d.emoji}</div>
+                  <div class="dupe-card-brand">${d.brand}</div>
+                  <div class="dupe-card-name">${d.name}</div>
+                  <div class="dupe-card-price">₺${dp.toLocaleString('tr-TR')}</div>
+                  <div class="dupe-card-save">₺${save.toLocaleString('tr-TR')} tasarruf</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      ${originals.length ? `
+        <div class="dupe-section">
+          <div class="detail-section-title">✨ Bunun Lüks Versiyonu</div>
+          <div class="dupe-cards">
+            ${originals.map(o => `
+              <div class="dupe-card" onclick="openDetail(${o.id})">
+                <div class="dupe-card-emoji">${o.emoji}</div>
+                <div class="dupe-card-brand">${o.brand}</div>
+                <div class="dupe-card-name">${o.name}</div>
+                <div class="dupe-card-price" style="color:var(--text)">₺${minPrice(o).toLocaleString('tr-TR')}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      ${recos.length ? `
+        <div class="reco-section">
+          <div class="detail-section-title">🎯 Bunu Beğenenler Şunu da Beğendi</div>
+          <div class="reco-cards">
+            ${recos.map(r => `
+              <div class="reco-card" onclick="openDetail(${r.id})">
+                <div class="reco-card-emoji">${r.emoji}</div>
+                <div class="reco-card-brand">${r.brand}</div>
+                <div class="reco-card-name">${r.name}</div>
+                <div class="reco-card-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Ingredients -->
+      ${p.ingredients && p.ingredients.length ? `
+        <div class="ingredients-section">
+          <div class="detail-section-title">🧪 İçerik Analizi</div>
+          <div class="ingredient-list">
+            ${p.ingredients.map(ing => {
+              const isWarn = p.ingredientWarnings && p.ingredientWarnings.includes(ing);
+              return '<span class="ingredient-chip ' + (isWarn ? 'warn' : 'safe') + '">' + (isWarn ? '⚠ ' : '✓ ') + ing + '</span>';
+            }).join('')}
+          </div>
+          ${(() => {
+            const total = p.ingredients.length;
+            const warns = (p.ingredientWarnings || []).length;
+            const score = Math.round(((total - warns) / total) * 100);
+            const barColor = score >= 80 ? '#2a7a3b' : score >= 50 ? '#e67e00' : '#d32f2f';
+            const label = score >= 80 ? 'Temiz Formül' : score >= 50 ? 'Orta Seviye' : 'Dikkatli Ol';
+            return '<div class="ingredient-score">' +
+              '<div class="ingredient-bar"><div class="ingredient-bar-fill" style="width:' + score + '%;background:' + barColor + '"></div></div>' +
+              '<span class="ingredient-score-label" style="color:' + barColor + '">' + score + '/100 — ' + label + '</span>' +
+            '</div>' +
+            (warns > 0 ? '<div style="margin-top:8px;font-size:11px;color:var(--text3)">⚠ ' + warns + ' potansiyel hassasiyet yaratan içerik tespit edildi</div>' : '');
+          })()}
+        </div>
+      ` : ''}
+
+      <!-- Share -->
+      <div class="share-section">
+        <div class="detail-section-title">Paylaş</div>
+        <div class="share-btns">
+          <button class="share-btn" onclick="event.stopPropagation();shareProduct('whatsapp', products.find(x=>x.id===${p.id}))">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.11.547 4.093 1.504 5.818L0 24l6.335-1.463A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.918 0-3.753-.5-5.37-1.452l-.385-.228-3.988.922.983-3.822-.262-.416A9.786 9.786 0 012.18 12c0-5.424 4.396-9.82 9.82-9.82 5.424 0 9.82 4.396 9.82 9.82 0 5.424-4.396 9.82-9.82 9.82z"/></svg>
+            WhatsApp
+          </button>
+          <button class="share-btn" onclick="event.stopPropagation();shareProduct('twitter', products.find(x=>x.id===${p.id}))">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X (Twitter)
+          </button>
+          <button class="share-btn" onclick="event.stopPropagation();shareProduct('copy', products.find(x=>x.id===${p.id}))">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            Link Kopyala
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById('detailModal').classList.add('open');
+}
+
+// ── COMPARE MODAL ─────────────────────────────────────────────────────────────
+function openCompare() {
+  if (selected.size < 2) { showToast('En az 2 ürün seçin'); return; }
+  const items = [...selected].map(id => products.find(p => p.id === id));
+  const bestPrice  = Math.min(...items.map(p => minPrice(p)));
+  const worstPrice = Math.max(...items.map(p => minPrice(p)));
+  const bestRating = Math.max(...items.map(p => p.rating));
+  const rows = [
+    { label:'Marka',     fn: p => p.brand },
+    { label:'Kategori',  fn: p => p.category },
+    { label:'Fiyat',     fn: p => {
+      const mp = minPrice(p);
+      const cl = mp===bestPrice ? 'best-val' : mp===worstPrice ? 'worst-val' : '';
+      return `<div><span class="${cl}">₺${mp.toLocaleString('tr-TR')}</span><div style="font-size:10px;color:var(--text3);margin-top:2px">${p.prices.length} satıcı</div></div>`;
+    }},
+    { label:'Puan',      fn: p => `<span class="${p.rating===bestRating?'best-val':''}">${p.rating} ★</span>` },
+    { label:'Yorumlar',  fn: p => p.reviews.toLocaleString('tr-TR') },
+    { label:'Cilt Tipi', fn: p => p.skinType.join(', ') },
+    { label:'Tonlar',    fn: p => p.shades.length > 1 ? p.shades.length + ' seçenek' : '—' },
+    { label:'Vegan',     fn: p => p.vegan ? '<span class="best-val">Evet ✓</span>' : 'Hayır' },
+    { label:'Cruelty-Free', fn: p => p.crueltyFree ? '<span class="best-val">Evet ✓</span>' : 'Hayır' },
+    { label:'SPF',       fn: p => p.spf ? 'SPF ' + p.spf : '—' },
+    { label:'Açıklama',  fn: p => `<span style="font-size:12px;color:var(--text2)">${p.desc}</span>` },
+    { label:'Satın Al',  fn: p => {
+      const ch = [...p.prices].sort((a,b)=>a.price-b.price)[0];
+      return `<a href="${ch.url}" class="buy-btn">${ch.site} →</a>`;
+    }},
+  ];
+  const relReviews = reviews.filter(r => items.some(p => p.brand === r.brand));
+  document.getElementById('compareBody').innerHTML = `
+    <table class="compare-table">
+      <thead><tr>
+        <th class="row-label" style="font-family:'Jost',sans-serif;font-size:9px"></th>
+        ${items.map(p => `<th>${p.emoji} ${p.name}<span class="th-brand">${p.brand}</span></th>`).join('')}
+      </tr></thead>
+      <tbody>
+        ${rows.map(r => `
+          <tr>
+            <td class="row-label">${r.label}</td>
+            ${items.map(p => `<td>${r.fn(p)}</td>`).join('')}
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+    ${relReviews.length ? `
+    <div class="reviews-section">
+      <div class="reviews-title">Kullanıcı yorumları</div>
+      ${relReviews.map(r => `
+        <div class="review-card">
+          <div class="review-header">
+            <span class="reviewer">${r.name}</span>
+            <span class="review-meta">${r.brand} · ${r.product}</span>
+          </div>
+          <div class="card-stars" style="margin:4px 0">${stars(r.rating)}</div>
+          <div class="review-text">"${r.text}"</div>
+        </div>
+      `).join('')}
+    </div>` : ''}
+  `;
+  document.getElementById('compareModal').classList.add('open');
+}
+
+// ── NAV ───────────────────────────────────────────────────────────────────────
+function toggleMobileMenu() {
+  const m = document.getElementById('mobileMenu');
+  m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+}
+function resetFilters() {
+  activeCategory = 'all'; activeSkin = null; activeBrand = null;
+  activePriceRange = 'all'; activeTag = null; searchQ = ''; favMode = false;
+  document.querySelectorAll('.filter-btn[data-cat]').forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-cat="all"]').classList.add('active');
+  document.querySelectorAll('.filter-btn[data-skin]').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter-btn[data-tag]').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.price-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-price="all"]').classList.add('active');
+  document.getElementById('searchInput').value = '';
+  render();
+}
+
+// ── EVENT LISTENERS ───────────────────────────────────────────────────────────
+document.querySelectorAll('.filter-btn[data-cat]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn[data-cat]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCategory = btn.dataset.cat;
+    activeBrand = null;
+    render();
+  });
+});
+document.querySelectorAll('.filter-btn[data-skin]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (activeSkin === btn.dataset.skin) {
+      activeSkin = null; btn.classList.remove('active');
+    } else {
+      document.querySelectorAll('.filter-btn[data-skin]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active'); activeSkin = btn.dataset.skin;
+    }
+    render();
+  });
+});
+document.querySelectorAll('.filter-btn[data-tag]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (activeTag === btn.dataset.tag) {
+      activeTag = null; btn.classList.remove('active');
+    } else {
+      document.querySelectorAll('.filter-btn[data-tag]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active'); activeTag = btn.dataset.tag;
+    }
+    render();
+  });
+});
+document.querySelectorAll('.price-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.price-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activePriceRange = btn.dataset.price;
+    render();
+  });
+});
+document.getElementById('searchInput').addEventListener('input', e => {
+  searchQ = e.target.value.toLowerCase().trim(); render();
+});
+document.getElementById('sortSelect').addEventListener('change', e => {
+  sortMode = e.target.value; render();
+});
+document.getElementById('clearBtn').addEventListener('click', () => {
+  selected.clear(); render(); updateBar();
+});
+document.getElementById('compareBtn').addEventListener('click', openCompare);
+
+// Modals
+document.getElementById('detailClose').addEventListener('click', () => document.getElementById('detailModal').classList.remove('open'));
+document.getElementById('detailModal').addEventListener('click', e => { if (e.target === document.getElementById('detailModal')) document.getElementById('detailModal').classList.remove('open'); });
+document.getElementById('compareModalClose').addEventListener('click', () => document.getElementById('compareModal').classList.remove('open'));
+document.getElementById('compareModal').addEventListener('click', e => { if (e.target === document.getElementById('compareModal')) document.getElementById('compareModal').classList.remove('open'); });
+
+// Hamburger visibility
+window.addEventListener('resize', () => {
+  document.getElementById('hamburger').style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+});
+if (window.innerWidth <= 768) document.getElementById('hamburger').style.display = 'flex';
+
+// ── DARK MODE ─────────────────────────────────────────────────────────────────
+const moonSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+const sunSVG  = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+function toggleDark() {
+  const isDark = document.documentElement.classList.toggle('dark');
+  document.getElementById('darkBtn').innerHTML = isDark ? sunSVG : moonSVG;
+  localStorage.setItem('beaute-dark', isDark ? '1' : '');
+}
+if (localStorage.getItem('beaute-dark')) {
+  document.documentElement.classList.add('dark');
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('darkBtn').innerHTML = sunSVG;
+  });
+}
+
+// ── SKIN TONE TEST ──────────────────────────────────────────────────────────
+const skinTestQuestions = [
+  {
+    question: "Güneşte uzun süre kaldığınızda cildiniz nasıl tepki verir?",
+    options: [
+      { text: "Hemen yanarım, bronzlaşamam", value: "fair" },
+      { text: "Önce yanarım, sonra hafif bronzlaşırım", value: "light" },
+      { text: "Nadiren yanarım, kolayca bronzlaşırım", value: "medium" },
+      { text: "Hiç yanmam, her zaman bronzlaşırım", value: "dark" }
+    ]
+  },
+  {
+    question: "Bileğinizin iç kısmındaki damarlarınız hangi renkte görünür?",
+    options: [
+      { text: "Mavi / Mor tonlarında (Soğuk alt ton)", value: "cool" },
+      { text: "Yeşil tonlarında (Sıcak alt ton)", value: "warm" },
+      { text: "Hem mavi hem yeşil (Nötr alt ton)", value: "neutral" }
+    ]
+  },
+  {
+    question: "Altın mı gümüş mü takı size daha çok yakışır?",
+    options: [
+      { text: "Gümüş ve platin daha çok yakışır", value: "cool" },
+      { text: "Altın ve rose gold daha çok yakışır", value: "warm" },
+      { text: "İkisi de eşit güzel durur", value: "neutral" }
+    ]
+  }
+];
+
+let skinTestStep = 0;
+let skinTestAnswers = [];
+
+function openSkinTest() {
+  skinTestStep = 0;
+  skinTestAnswers = [];
+  renderSkinTest();
+  document.getElementById('skinTestModal').classList.add('open');
+}
+
+function renderSkinTest() {
+  const body = document.getElementById('skinTestBody');
+  const totalSteps = skinTestQuestions.length;
+
+  if (skinTestStep >= totalSteps) {
+    showSkinTestResult();
+    return;
+  }
+
+  const q = skinTestQuestions[skinTestStep];
+  body.innerHTML = `
+    <div class="skin-test-progress">
+      ${Array.from({length: totalSteps}, (_, i) =>
+        '<div class="skin-test-dot ' + (i < skinTestStep ? 'done' : i === skinTestStep ? 'current' : '') + '"></div>'
+      ).join('')}
+    </div>
+    <div class="skin-test-step active">
+      <div class="skin-test-question">${q.question}</div>
+      <div class="skin-test-options">
+        ${q.options.map((opt, i) =>
+          '<button class="skin-test-opt" onclick="answerSkinTest(' + i + ')">' + opt.text + '</button>'
+        ).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function answerSkinTest(optIndex) {
+  const q = skinTestQuestions[skinTestStep];
+  skinTestAnswers.push(q.options[optIndex].value);
+  skinTestStep++;
+  renderSkinTest();
+}
+
+function showSkinTestResult() {
+  const body = document.getElementById('skinTestBody');
+  const depth = skinTestAnswers[0];
+  const tones = skinTestAnswers.slice(1);
+  const warmCount = tones.filter(t => t === 'warm').length;
+  const coolCount = tones.filter(t => t === 'cool').length;
+  const undertone = warmCount > coolCount ? 'warm' : coolCount > warmCount ? 'cool' : 'neutral';
+
+  const toneMap = {
+    'fair-cool': { name: 'Fair Cool', desc: 'Açık, soğuk alt tonlu cilt. Pembe alt tonlar baskın.', shadeHints: ['Porcelain','Ivory','Fair','1N1','NC15'] },
+    'fair-warm': { name: 'Fair Warm', desc: 'Açık, sıcak alt tonlu cilt. Sarımsı-şeftali alt tonlar.', shadeHints: ['Ivory Nude','Warm Nude','1W','NC20'] },
+    'fair-neutral': { name: 'Fair Neutral', desc: 'Açık, nötr alt tonlu cilt. Dengeli alt tonlar.', shadeHints: ['Ivory','Fair','0N Neutral','NC15','NW25'] },
+    'light-cool': { name: 'Light Cool', desc: 'Açık-orta, soğuk alt tonlu cilt. Pembe-kırmızı alt tonlar.', shadeHints: ['Pale Almond','Light','2C2','NC20'] },
+    'light-warm': { name: 'Light Warm', desc: 'Açık-orta, sıcak alt tonlu cilt. Altın-şeftali alt tonlar.', shadeHints: ['Classic Ivory','Light','2W','NC25'] },
+    'light-neutral': { name: 'Light Neutral', desc: 'Açık-orta, nötr cilt. Her iki alt ton da mevcut.', shadeHints: ['Natural Beige','Light','2N','NC25','NW25'] },
+    'medium-cool': { name: 'Medium Cool', desc: 'Orta, soğuk alt tonlu cilt. Pembe-bej alt tonlar.', shadeHints: ['Shell Beige','Natural Beige','4N1','NC30'] },
+    'medium-warm': { name: 'Medium Warm', desc: 'Orta, sıcak alt tonlu cilt. Altın-bal tonları.', shadeHints: ['Tawny','Warm Beige','3W1','NC35'] },
+    'medium-neutral': { name: 'Medium Neutral', desc: 'Orta, nötr cilt. Çok yönlü ton uyumu.', shadeHints: ['Natural Beige','Medium','NC30','NW35'] },
+    'dark-cool': { name: 'Dark Cool', desc: 'Koyu, soğuk alt tonlu cilt. Kırmızı-mavi alt tonlar.', shadeHints: ['Rich Caramel','Deep','NC45','5W2'] },
+    'dark-warm': { name: 'Dark Warm', desc: 'Koyu, sıcak alt tonlu cilt. Altın-bakır alt tonlar.', shadeHints: ['Caramel','Deep','NC45','Sun Beige'] },
+    'dark-neutral': { name: 'Dark Neutral', desc: 'Koyu, nötr cilt. Dengeli ve derin tonlar.', shadeHints: ['Caramel','Dark','NC45','5W2'] }
+  };
+
+  const key = depth + '-' + undertone;
+  const result = toneMap[key] || toneMap['medium-neutral'];
+
+  // Find matching products (fondoten category)
+  const matchingProducts = products.filter(p => {
+    if (p.category !== 'fondoten') return false;
+    return p.shades.some(s => result.shadeHints.some(h => s.toLowerCase().includes(h.toLowerCase())));
+  });
+
+  body.innerHTML = `
+    <div class="skin-test-progress">
+      ${Array.from({length: skinTestQuestions.length}, () => '<div class="skin-test-dot done"></div>').join('')}
+    </div>
+    <div class="skin-test-result">
+      <div style="font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3)">Cilt Tonunuz</div>
+      <div class="skin-test-result-tone">${result.name}</div>
+      <div class="skin-test-result-desc">${result.desc}</div>
+      ${matchingProducts.length ? `
+        <div class="skin-test-recommended">
+          <div class="detail-section-title" style="text-align:left">🎯 Size Uygun Fondötenler</div>
+          <div class="reco-cards">
+            ${matchingProducts.map(r => `
+              <div class="reco-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
+                <div class="reco-card-emoji">${r.emoji}</div>
+                <div class="reco-card-brand">${r.brand}</div>
+                <div class="reco-card-name">${r.name}</div>
+                <div class="reco-card-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+      <button class="share-btn" style="margin-top:1.2rem" onclick="openSkinTest()">Testi Tekrarla</button>
+    </div>
+  `;
+}
+
+// ── WISHLIST ─────────────────────────────────────────────────────────────────
+function openWishlist() {
+  const body = document.getElementById('wishlistBody');
+  const favProducts = products.filter(p => favorites.has(p.id));
+
+  document.getElementById('wishlistSubtitle').textContent = favProducts.length + ' ürün favorilerde';
+
+  if (!favProducts.length) {
+    body.innerHTML = '<div class="wishlist-empty">Henüz favori ürününüz yok.<br>Ürün kartlarındaki ♡ butonuna tıklayarak favorilere ekleyin.</div>';
+    document.getElementById('wishlistModal').classList.add('open');
+    return;
+  }
+
+  const total = favProducts.reduce((sum, p) => sum + minPrice(p), 0);
+
+  body.innerHTML = `
+    ${favProducts.map(p => `
+      <div class="wishlist-item">
+        <span class="wishlist-item-emoji">${p.emoji}</span>
+        <div class="wishlist-item-info">
+          <div class="wishlist-item-brand">${p.brand}</div>
+          <div class="wishlist-item-name">${p.name}</div>
+        </div>
+        <div class="wishlist-item-price">₺${minPrice(p).toLocaleString('tr-TR')}</div>
+        <button class="wishlist-item-remove" onclick="toggleFav(${p.id});openWishlist()" title="Kaldır">✕</button>
+      </div>
+    `).join('')}
+    <div class="wishlist-summary">
+      <div class="wishlist-total">
+        <span class="wishlist-total-label">Toplam Tahmini Fiyat</span>
+        <span class="wishlist-total-amount">₺${total.toLocaleString('tr-TR')}</span>
+      </div>
+      <div class="wishlist-budget">
+        <div class="wishlist-budget-label">Bütçe Hesaplama</div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <input class="wishlist-budget-input" type="number" id="budgetInput" placeholder="Bütçenizi girin..." oninput="calcBudget(${total})">
+          <span style="font-size:11px;color:var(--text3)">₺</span>
+        </div>
+        <div class="wishlist-budget-result" id="budgetResult"></div>
+      </div>
+    </div>
+  `;
+  document.getElementById('wishlistModal').classList.add('open');
+}
+
+function calcBudget(total) {
+  const input = document.getElementById('budgetInput');
+  const result = document.getElementById('budgetResult');
+  const budget = parseInt(input.value) || 0;
+  if (!budget) { result.innerHTML = ''; return; }
+
+  const diff = budget - total;
+  if (diff >= 0) {
+    result.innerHTML = '<span class="wishlist-budget-ok">✓ Bütçeniz yeterli! ₺' + diff.toLocaleString('tr-TR') + ' artıyor.</span>';
+  } else {
+    result.innerHTML = '<span class="wishlist-budget-over">✗ Bütçeniz ₺' + Math.abs(diff).toLocaleString('tr-TR') + ' yetersiz.</span>';
+  }
+}
+
+// ── LEGAL MODALS & COOKIE BANNER ──────────────────────────────────────────────
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+}
+function openAbout() {
+  document.getElementById('aboutModal').classList.add('open');
+}
+function openContact() {
+  document.getElementById('contactModal').classList.add('open');
+}
+function openPrivacy() {
+  document.getElementById('privacyModal').classList.add('open');
+}
+function openTerms() {
+  document.getElementById('termsModal').classList.add('open');
+}
+function openCookiePolicy() {
+  document.getElementById('cookiePolicyModal').classList.add('open');
+}
+
+function submitContact() {
+  const name = document.getElementById('contactName').value.trim();
+  const email = document.getElementById('contactEmail').value.trim();
+  const message = document.getElementById('contactMessage').value.trim();
+  if (!name || !email || !message) {
+    showToast('Lütfen tüm alanları doldurun');
+    return;
+  }
+  document.getElementById('contactName').value = '';
+  document.getElementById('contactEmail').value = '';
+  document.getElementById('contactMessage').value = '';
+  showToast('Mesajınız gönderildi \u2713');
+}
+
+function acceptCookies() {
+  localStorage.setItem('beaute-cookies', 'accepted');
+  document.getElementById('cookieBanner').classList.add('hidden');
+}
+
+function initCookieBanner() {
+  if (localStorage.getItem('beaute-cookies') !== 'accepted') {
+    document.getElementById('cookieBanner').classList.remove('hidden');
+  }
+}
+
+// Legal modal backdrop click-to-close
+['aboutModal','contactModal','privacyModal','termsModal','cookiePolicyModal'].forEach(function(id) {
+  document.getElementById(id).addEventListener('click', function(e) {
+    if (e.target === document.getElementById(id)) closeModal(id);
+  });
+});
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+// Modal close listeners for new modals
+document.getElementById('skinTestModal').addEventListener('click', e => { if (e.target === document.getElementById('skinTestModal')) document.getElementById('skinTestModal').classList.remove('open'); });
+document.getElementById('wishlistModal').addEventListener('click', e => { if (e.target === document.getElementById('wishlistModal')) document.getElementById('wishlistModal').classList.remove('open'); });
+
+renderTrending();
+render();
+initCookieBanner();
+</script>
+</body>
+</html>
