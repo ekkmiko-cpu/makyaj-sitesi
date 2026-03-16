@@ -33,8 +33,8 @@
     }
     html.dark {
       --bg: #111010; --bg2: #1a1918; --bg3: #1f1e1c;
-      --text: #f0ece6; --text2: #a8a49f; --text3: #6b6660;
-      --border: rgba(240,236,230,0.08); --border2: rgba(240,236,230,0.15); --gold: #C9A96E;
+      --text: #f0ece6; --text2: #c4c0ba; --text3: #8a8580;
+      --border: rgba(240,236,230,0.08); --border2: rgba(240,236,230,0.15); --gold: #d4b578;
     }
     body { background: var(--bg); color: var(--text); font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.6; transition: background 0.3s, color 0.3s; overflow-x: hidden; }
 
@@ -86,10 +86,7 @@
     @keyframes rippleOut { to { transform: scale(4); opacity: 0; } }
 
     /* ── 3D TILT ── */
-    .tilt-card { transform-style: preserve-3d; transition: transform 0.15s ease-out; }
-    .tilt-card .card-body { transform: translateZ(20px); }
-    .tilt-card .card-image-emoji { transition: transform 0.3s ease; }
-    .tilt-card:hover .card-image-emoji { transform: scale(1.1) translateZ(30px); }
+    .product-card { transform-style: preserve-3d; }
 
     /* ── NAV ── */
     nav {
@@ -100,8 +97,8 @@
       position: sticky; top: 0; z-index: 100; transition: background 0.3s, box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 1px 30px rgba(0,0,0,0.06); }
-    html.dark nav { background: rgba(17,16,16,0.78); }
-    html.dark nav.scrolled { box-shadow: 0 1px 30px rgba(0,0,0,0.3); }
+    html.dark nav { background: rgba(17,16,16,0.88); }
+    html.dark nav.scrolled { box-shadow: 0 1px 30px rgba(0,0,0,0.4); }
     .logo {
       font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400;
       letter-spacing: 5px; text-transform: uppercase; text-decoration: none;
@@ -133,7 +130,7 @@
     /* ── HERO ── */
     .hero { text-align: center; padding: 3.5rem 2rem 2rem; border-bottom: 0.5px solid var(--border); background: var(--bg3); position: relative; overflow: hidden; }
     .hero-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--text3); margin-bottom: 1rem; }
-    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; line-height: 1.15; margin-bottom: 0.8rem; color: var(--text); animation: heroFadeIn 0.8s ease-out 0.1s both; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; line-height: 1.15; margin-bottom: 0.8rem; color: var(--text); animation: heroFadeIn 0.8s ease-out 0.1s both; position: relative; z-index: 1; }
     .hero-title em { font-style: italic; }
     .hero-sub { font-size: 13px; color: var(--text2); letter-spacing: 1.5px; animation: heroFadeIn 0.8s ease-out 0.25s both; }
     .hero-eyebrow { animation: heroFadeIn 0.8s ease-out both; }
@@ -154,7 +151,7 @@
     .tc-price { font-size: 13px; color: var(--gold); font-family: 'Cormorant Garamond', serif; transition: color 0.2s; }
 
     /* ── FILTERS ── */
-    .filters-wrap { background: var(--bg3); border-bottom: 0.5px solid var(--border); position: sticky; top: 61px; z-index: 90; }
+    .filters-wrap { background: var(--bg3); border-bottom: 0.5px solid var(--border); position: sticky; top: 61px; z-index: 90; transition: background 0.3s; }
     .filters { display: flex; gap: 8px; padding: 0.85rem 2.5rem; align-items: center; overflow-x: auto; scrollbar-width: none; }
     .filters::-webkit-scrollbar { display: none; }
     .filter-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-right: 4px; white-space: nowrap; flex-shrink: 0; }
@@ -183,7 +180,7 @@
       position: relative;
     }
     .product-card::before {
-      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      content: ''; position: absolute; inset: 0; z-index: 4; pointer-events: none;
       border: 1.5px solid transparent; opacity: 0; transition: opacity 0.4s ease;
       background: linear-gradient(135deg, var(--gold), #e8c878, var(--gold)) border-box;
       -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
@@ -194,24 +191,25 @@
     .product-card.selected { outline: 1.5px solid var(--text); outline-offset: -1.5px; }
     .card-image { height: 155px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
     .card-image::after {
-      content: ''; position: absolute; inset: 0; opacity: 0;
+      content: ''; position: absolute; inset: 0; opacity: 0; pointer-events: none;
       background: linear-gradient(135deg, rgba(201,169,110,0.08), transparent 60%);
       transition: opacity 0.4s ease;
     }
     .product-card:hover .card-image::after { opacity: 1; }
     .card-image-emoji { font-size: 54px; filter: drop-shadow(0 4px 16px rgba(0,0,0,0.12)); pointer-events: none; transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
     .product-card:hover .card-image-emoji { transform: scale(1.12) rotate(-2deg); }
-    .fav-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); color: var(--text3); line-height: 1; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .fav-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); color: var(--text3); line-height: 1; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 3; }
     .fav-btn:hover { background: white; color: #e74c3c; transform: scale(1.15); }
     .fav-btn.active { color: #e74c3c; background: rgba(231,76,60,0.1); }
     .fav-btn.pop { animation: heartPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
     @keyframes heartPop { 0% { transform: scale(1); } 50% { transform: scale(1.4); } 100% { transform: scale(1); } }
-    .compare-toggle { position: absolute; top: 8px; left: 8px; width: 22px; height: 22px; border: 0.5px solid rgba(255,255,255,0.9); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 11px; background: rgba(255,255,255,0.9); color: var(--text); transition: all 0.15s; cursor: pointer; }
+    .compare-toggle { position: absolute; top: 8px; left: 8px; width: 22px; height: 22px; border: 0.5px solid rgba(255,255,255,0.9); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 11px; background: rgba(255,255,255,0.9); color: var(--text); transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); cursor: pointer; z-index: 3; }
+    .compare-toggle:hover { transform: scale(1.1); }
     .compare-toggle.checked { background: var(--text); color: var(--bg3); border-color: var(--text); }
     .card-body { padding: 1.2rem 1.4rem 1.4rem; display: flex; flex-direction: column; gap: 9px; flex: 1; }
-    .card-brand { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); }
+    .card-brand { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text2); }
     .card-name { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; line-height: 1.3; color: var(--text); }
-    .card-category { display: inline-block; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); border: 0.5px solid var(--border); padding: 2px 7px; border-radius: 2px; }
+    .card-category { display: inline-block; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text2); border: 0.5px solid var(--border2); padding: 2px 7px; border-radius: 2px; }
     .card-stars { display: flex; align-items: center; gap: 2px; }
     .star { color: var(--gold); font-size: 12px; }
     .star.empty { color: var(--border2); }
@@ -227,7 +225,7 @@
     .badge-cf { background: rgba(156,39,176,0.08); color: #9c27b0; border: 0.5px solid rgba(156,39,176,0.25); }
     .badge-spf { background: rgba(255,152,0,0.1); color: #e65100; border: 0.5px solid rgba(255,152,0,0.3); }
     .badge-dupe { background: rgba(201,169,110,0.15); color: var(--gold); border: 0.5px solid rgba(201,169,110,0.4); }
-    .badge-dupe-card { position: absolute; bottom: 8px; left: 8px; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; background: rgba(201,169,110,0.9); color: #fff; font-family: 'Jost', sans-serif; }
+    .badge-dupe-card { position: absolute; bottom: 8px; left: 8px; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; background: rgba(201,169,110,0.9); color: #fff; font-family: 'Jost', sans-serif; z-index: 2; pointer-events: none; }
 
     /* ── COMPARE BAR ── */
     .compare-bar { position: sticky; bottom: 0; background: var(--text); color: var(--bg3); padding: 1rem 2.5rem; display: flex; align-items: center; gap: 1rem; font-size: 12px; letter-spacing: 1px; transform: translateY(100%); transition: transform 0.3s ease; }
@@ -461,7 +459,9 @@
       transform: translateY(100%); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .cookie-banner:not(.hidden) { transform: translateY(0); }
-    html.dark .cookie-banner { background: rgba(17,16,16,0.85); }
+    html.dark .cookie-banner { background: rgba(17,16,16,0.92); }
+    html.dark .cookie-banner-text { color: var(--text2); }
+    html.dark .cookie-banner-text strong { color: var(--text); }
     .cookie-banner.hidden { display: none; }
     .cookie-banner-text { font-size: 12px; color: var(--text2); line-height: 1.6; flex: 1; }
     .cookie-banner-text strong { color: var(--text); font-weight: 500; }
@@ -486,6 +486,36 @@
     .legal-content .contact-form textarea { min-height: 120px; resize: vertical; }
     .legal-content .contact-form button { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 24px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px; cursor: pointer; transition: opacity 0.2s; align-self: flex-start; }
     .legal-content .contact-form button:hover { opacity: 0.85; }
+
+    /* ── DARK MODE FIXES ── */
+    html.dark .filter-label { color: var(--text2); }
+    html.dark .sort-row { color: var(--text2); }
+    html.dark .star-count { color: var(--text2); }
+    html.dark .card-price-sub { color: var(--text2); }
+    html.dark .hero-eyebrow { color: var(--text2); }
+    html.dark .hero-sub { color: var(--text2); }
+    html.dark .trending-label { color: var(--text2); }
+    html.dark .detail-section-title { color: var(--text2); }
+    html.dark .detail-meta-label { color: var(--text2); }
+    html.dark .modal-subtitle { color: var(--text2); }
+    html.dark .footer-col-title { color: var(--text2); }
+    html.dark .footer-bottom { color: var(--text2); }
+    html.dark .fav-btn { background: rgba(31,30,28,0.9); color: var(--text2); }
+    html.dark .fav-btn:hover { background: rgba(31,30,28,1); color: #e74c3c; }
+    html.dark .fav-btn.active { color: #e74c3c; background: rgba(231,76,60,0.15); }
+    html.dark .compare-toggle { background: rgba(31,30,28,0.9); border-color: rgba(240,236,230,0.2); color: var(--text); }
+    html.dark .compare-toggle.checked { background: var(--gold); color: #1a1814; border-color: var(--gold); }
+    html.dark .badge-dupe-card { background: rgba(212,181,120,0.9); }
+    html.dark .price-row.best-price { background: rgba(42,122,59,0.1); }
+    html.dark .price-row.best-price .price-row-amount { color: #5cb85c; }
+    html.dark .best-val { color: #5cb85c; }
+    html.dark .worst-val { color: #e74c3c; }
+    html.dark .dupe-card-price { color: #5cb85c; }
+    html.dark .ingredient-chip.safe { color: #5cb85c; border-color: rgba(92,184,92,0.3); background: rgba(92,184,92,0.08); }
+    html.dark .ingredient-chip.warn { color: #e74c3c; border-color: rgba(231,76,60,0.3); background: rgba(231,76,60,0.08); }
+    html.dark .wishlist-budget-ok { color: #5cb85c; }
+    html.dark .wishlist-budget-over { color: #e74c3c; }
+    html.dark .price-alert-set { color: #5cb85c; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -1857,10 +1887,11 @@ initCookieBanner();
 
 // 2. Scroll Reveal (IntersectionObserver)
 (function initScrollReveal() {
+  let isFirstRender = true;
+
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Stagger animation for cards in grid
         const delay = entry.target.dataset.revealDelay || 0;
         setTimeout(() => entry.target.classList.add('visible'), delay);
         observer.unobserve(entry.target);
@@ -1874,21 +1905,24 @@ initCookieBanner();
     origRender();
     requestAnimationFrame(() => {
       document.querySelectorAll('.product-card').forEach((card, i) => {
-        if (!card.classList.contains('reveal')) {
+        if (isFirstRender) {
+          // First load: animate with stagger
           card.classList.add('reveal');
-          card.dataset.revealDelay = (i % 8) * 60; // stagger by column position
+          card.dataset.revealDelay = (i % 8) * 60;
           observer.observe(card);
+        } else {
+          // Re-renders (filter/fav): show immediately, no animation
+          card.classList.add('reveal', 'visible');
         }
       });
+      if (isFirstRender) isFirstRender = false;
     });
   };
-  // Replace global render
   window.render = patchedRender;
-  // Initial call for cards
   patchedRender();
 
-  // Observe other sections
-  document.querySelectorAll('.trending-section, .site-footer, .hero').forEach(el => {
+  // Observe static sections
+  document.querySelectorAll('.trending-section, .site-footer').forEach(el => {
     el.classList.add('reveal');
     observer.observe(el);
   });
@@ -1912,43 +1946,52 @@ initCookieBanner();
 (function patchFavToggle() {
   const origToggleFav = window.toggleFav;
   window.toggleFav = function(id) {
+    // Find button BEFORE render (render replaces DOM)
     origToggleFav(id);
-    // Find and animate the fav button
-    document.querySelectorAll('.fav-btn').forEach(btn => {
-      const onclick = btn.getAttribute('onclick') || '';
-      if (onclick.includes('toggleFav(' + id + ')')) {
-        btn.classList.remove('pop');
-        void btn.offsetWidth; // force reflow
-        btn.classList.add('pop');
-      }
+    // After render, find the new button and animate
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.fav-btn').forEach(btn => {
+        const onclick = btn.getAttribute('onclick') || '';
+        if (onclick.includes('toggleFav(' + id + ')')) {
+          btn.classList.add('pop');
+          setTimeout(() => btn.classList.remove('pop'), 400);
+        }
+      });
     });
   };
 })();
 
 // 5. 3D Tilt on Product Cards
 (function init3DTilt() {
-  document.getElementById('productGrid').addEventListener('mousemove', (e) => {
+  const grid = document.getElementById('productGrid');
+  let activeCard = null;
+
+  grid.addEventListener('mousemove', (e) => {
     const card = e.target.closest('.product-card');
-    if (!card) return;
+    if (!card) {
+      if (activeCard) { activeCard.style.transform = ''; activeCard = null; }
+      return;
+    }
+    activeCard = card;
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
-    const tiltX = (y - 0.5) * -8; // degrees
-    const tiltY = (x - 0.5) * 8;
-    card.style.transform = `perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-4px)`;
+    const tiltX = (y - 0.5) * -6;
+    const tiltY = (x - 0.5) * 6;
+    card.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-4px)`;
   });
-  document.getElementById('productGrid').addEventListener('mouseleave', (e) => {
-    const card = e.target.closest('.product-card');
-    if (card) card.style.transform = '';
+
+  grid.addEventListener('mouseleave', () => {
+    if (activeCard) { activeCard.style.transform = ''; activeCard = null; }
+    // Reset ALL cards as safety net
+    grid.querySelectorAll('.product-card').forEach(c => c.style.transform = '');
   });
-  // Reset on leaving individual cards
-  document.getElementById('productGrid').addEventListener('mouseout', (e) => {
-    if (e.target.classList && e.target.classList.contains('product-card')) {
-      e.target.style.transform = '';
-    }
+
+  // Reset when leaving individual card to another card
+  grid.addEventListener('mouseover', (e) => {
     const card = e.target.closest('.product-card');
-    if (card && !card.contains(e.relatedTarget)) {
-      card.style.transform = '';
+    if (activeCard && activeCard !== card) {
+      activeCard.style.transform = '';
     }
   });
 })();
