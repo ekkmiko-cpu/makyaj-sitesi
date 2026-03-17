@@ -1,0 +1,12 @@
+{
+  "name": "sephora-scraper",
+  "version": "1.0.0",
+  "description": "Sephora TR ürün verisi scraper",
+  "main": "sephora-scraper.js",
+  "scripts": {
+    "scrape": "node sephora-scraper.js"
+  },
+  "dependencies": {
+    "playwright": "^1.42.0"
+  }
+}
