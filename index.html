@@ -144,7 +144,7 @@
     .trending-chip { flex-shrink: 0; display: flex; align-items: center; gap: 12px; padding: 10px 16px; border: 0.5px solid var(--border2); border-radius: 2px; background: var(--bg2); cursor: pointer; transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
     .trending-chip:hover { background: var(--text); transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     .trending-chip:hover .tc-name { color: var(--bg3); }
-    .trending-chip:hover .tc-brand, .trending-chip:hover .tc-price { color: rgba(0,0,0,0.4); }
+    .trending-chip:hover .tc-brand, .trending-chip:hover .tc-price { color: rgba(255,255,255,0.5); }
     html.dark .trending-chip:hover { background: #2a2826; }
     html.dark .trending-chip:hover .tc-name { color: var(--text); }
     html.dark .trending-chip:hover .tc-brand { color: var(--text3); }
@@ -203,7 +203,7 @@
     .card-image-emoji { font-size: 54px; filter: drop-shadow(0 4px 16px rgba(0,0,0,0.12)); pointer-events: none; transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
     .product-card:hover .card-image-emoji { transform: scale(1.12) rotate(-2deg); }
     .fav-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.9); border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); color: var(--text3); line-height: 1; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 3; }
-    .fav-btn:hover { background: white; color: #e74c3c; transform: scale(1.15); }
+    .fav-btn:hover { background: var(--bg3); color: #e74c3c; transform: scale(1.15); }
     .fav-btn.active { color: #e74c3c; background: rgba(231,76,60,0.1); }
     .fav-btn.pop { animation: heartPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
     @keyframes heartPop { 0% { transform: scale(1); } 50% { transform: scale(1.4); } 100% { transform: scale(1); } }
@@ -305,7 +305,7 @@
     .dupe-card { flex-shrink: 0; width: 180px; padding: 12px; border: 0.5px solid var(--border2); border-radius: 2px; cursor: pointer; transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); background: var(--bg2); }
     .dupe-card:hover { background: var(--text); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     .dupe-card:hover .dupe-card-name, .dupe-card:hover .dupe-card-price { color: var(--bg3) !important; }
-    .dupe-card:hover .dupe-card-brand, .dupe-card:hover .dupe-card-save { color: rgba(0,0,0,0.4); }
+    .dupe-card:hover .dupe-card-brand, .dupe-card:hover .dupe-card-save { color: rgba(255,255,255,0.5); }
     html.dark .dupe-card:hover { background: #2a2826; }
     html.dark .dupe-card:hover .dupe-card-name, html.dark .dupe-card:hover .dupe-card-price { color: var(--text) !important; }
     html.dark .dupe-card:hover .dupe-card-brand, html.dark .dupe-card:hover .dupe-card-save { color: var(--text3); }
@@ -314,6 +314,7 @@
     .dupe-card-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--text); margin: 2px 0 6px; transition: color 0.2s; }
     .dupe-card-price { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #2a7a3b; font-weight: 500; transition: color 0.2s; }
     .dupe-card-save { font-size: 9px; color: var(--text3); letter-spacing: 1px; margin-top: 2px; transition: color 0.2s; }
+    .dupe-card-price-luxury { color: var(--text) !important; }
 
     /* ── SHARE BUTTONS ── */
     .share-section { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 0.5px solid var(--border); }
@@ -402,7 +403,7 @@
     .reco-card { flex-shrink: 0; width: 160px; padding: 12px; border: 0.5px solid var(--border2); border-radius: 2px; cursor: pointer; transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); background: var(--bg2); }
     .reco-card:hover { background: var(--text); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     .reco-card:hover .reco-card-name, .reco-card:hover .reco-card-price { color: var(--bg3); }
-    .reco-card:hover .reco-card-brand { color: rgba(0,0,0,0.4); }
+    .reco-card:hover .reco-card-brand { color: rgba(255,255,255,0.5); }
     html.dark .reco-card:hover { background: #2a2826; }
     html.dark .reco-card:hover .reco-card-name, html.dark .reco-card:hover .reco-card-price { color: var(--text); }
     html.dark .reco-card:hover .reco-card-brand { color: var(--text3); }
@@ -517,6 +518,9 @@
     html.dark .compare-toggle { background: rgba(31,30,28,0.9); border-color: rgba(240,236,230,0.2); color: var(--text); }
     html.dark .compare-toggle.checked { background: var(--gold); color: #1a1814; border-color: var(--gold); }
     html.dark .badge-dupe-card { background: rgba(212,181,120,0.9); }
+    html.dark .card-image { background: var(--bg2) !important; }
+    html.dark .dupe-card { background: var(--bg3); }
+    html.dark .reco-card { background: var(--bg3); }
     html.dark .price-row.best-price { background: rgba(42,122,59,0.1); }
     html.dark .price-row.best-price .price-row-amount { color: #5cb85c; }
     html.dark .best-val { color: #5cb85c; }
@@ -527,6 +531,15 @@
     html.dark .wishlist-budget-ok { color: #5cb85c; }
     html.dark .wishlist-budget-over { color: #e74c3c; }
     html.dark .price-alert-set { color: #5cb85c; }
+    html.dark .badge-vegan { color: #66bb6a; border-color: rgba(102,187,106,0.4); background: rgba(102,187,106,0.1); }
+    html.dark .badge-cf { color: #ce93d8; border-color: rgba(206,147,216,0.3); background: rgba(206,147,216,0.08); }
+    html.dark .badge-spf { color: #ffb74d; border-color: rgba(255,183,77,0.4); background: rgba(255,183,77,0.1); }
+    html.dark .ingredient-score-label.score-good { color: #5cb85c !important; }
+    html.dark .ingredient-score-label.score-mid { color: #f0ad4e !important; }
+    html.dark .ingredient-score-label.score-bad { color: #e74c3c !important; }
+    html.dark .ingredient-bar-fill.bar-good { background: #5cb85c !important; }
+    html.dark .ingredient-bar-fill.bar-mid { background: #f0ad4e !important; }
+    html.dark .ingredient-bar-fill.bar-bad { background: #e74c3c !important; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
@@ -630,7 +643,7 @@
   <div class="sort-row-left">
     <span id="countLabel">— ürün</span>
     <div class="filter-divider" style="height:16px"></div>
-    <span style="font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3)">Bütçe</span>
+    <span class="filter-label">Bütçe</span>
     <div class="price-btns">
       <button class="price-btn active" data-price="all">Tümü</button>
       <button class="price-btn" data-price="0-300">₺0–300</button>
@@ -1394,7 +1407,7 @@ function openDetail(id) {
                 <div class="dupe-card-emoji">${o.emoji}</div>
                 <div class="dupe-card-brand">${o.brand}</div>
                 <div class="dupe-card-name">${o.name}</div>
-                <div class="dupe-card-price" style="color:var(--text)">₺${minPrice(o).toLocaleString('tr-TR')}</div>
+                <div class="dupe-card-price dupe-card-price-luxury">₺${minPrice(o).toLocaleString('tr-TR')}</div>
               </div>
             `).join('')}
           </div>
@@ -1431,11 +1444,12 @@ function openDetail(id) {
             const total = p.ingredients.length;
             const warns = (p.ingredientWarnings || []).length;
             const score = Math.round(((total - warns) / total) * 100);
+            const scoreClass = score >= 80 ? 'good' : score >= 50 ? 'mid' : 'bad';
             const barColor = score >= 80 ? '#2a7a3b' : score >= 50 ? '#e67e00' : '#d32f2f';
             const label = score >= 80 ? 'Temiz Formül' : score >= 50 ? 'Orta Seviye' : 'Dikkatli Ol';
             return '<div class="ingredient-score">' +
-              '<div class="ingredient-bar"><div class="ingredient-bar-fill" style="width:' + score + '%;background:' + barColor + '"></div></div>' +
-              '<span class="ingredient-score-label" style="color:' + barColor + '">' + score + '/100 — ' + label + '</span>' +
+              '<div class="ingredient-bar"><div class="ingredient-bar-fill bar-' + scoreClass + '" style="width:' + score + '%;background:' + barColor + '"></div></div>' +
+              '<span class="ingredient-score-label score-' + scoreClass + '" style="color:' + barColor + '">' + score + '/100 — ' + label + '</span>' +
             '</div>' +
             (warns > 0 ? '<div style="margin-top:8px;font-size:11px;color:var(--text3)">⚠ ' + warns + ' potansiyel hassasiyet yaratan içerik tespit edildi</div>' : '');
           })()}
