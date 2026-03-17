@@ -1032,7 +1032,9 @@ function renderTrending() {
     <div class="trending-scroll">
       ${products.filter(p => p.trending).map(p => `
         <div class="trending-chip" onclick="openDetail(${p.id})">
-          <span class="tc-emoji">${p.emoji}</span>
+          ${p.imageUrl
+            ? `<img src="${p.imageUrl}" style="width:44px;height:44px;object-fit:contain;border-radius:2px;flex-shrink:0" onerror="this.outerHTML='<span class=tc-emoji>💄</span>'">`
+            : `<span class="tc-emoji">${p.emoji || '💄'}</span>`}
           <div>
             <div class="tc-name">${p.name}</div>
             <div class="tc-brand">${p.brand}</div>
@@ -1350,7 +1352,7 @@ function openDetail(id) {
               const save = minPrice(p) - dp;
               return `
                 <div class="dupe-card" onclick="openDetail(${d.id})">
-                  <div class="dupe-card-emoji">${d.emoji}</div>
+                  <div class="dupe-card-emoji">${d.emoji || '💄'}</div>
                   <div class="dupe-card-brand">${d.brand}</div>
                   <div class="dupe-card-name">${d.name}</div>
                   <div class="dupe-card-price">₺${dp.toLocaleString('tr-TR')}</div>
@@ -1368,7 +1370,7 @@ function openDetail(id) {
           <div class="dupe-cards">
             ${originals.map(o => `
               <div class="dupe-card" onclick="openDetail(${o.id})">
-                <div class="dupe-card-emoji">${o.emoji}</div>
+                <div class="dupe-card-emoji">${o.emoji || '💄'}</div>
                 <div class="dupe-card-brand">${o.brand}</div>
                 <div class="dupe-card-name">${o.name}</div>
                 <div class="dupe-card-price dupe-card-price-luxury">₺${minPrice(o).toLocaleString('tr-TR')}</div>
@@ -1384,7 +1386,7 @@ function openDetail(id) {
           <div class="reco-cards">
             ${recos.map(r => `
               <div class="reco-card" onclick="openDetail(${r.id})">
-                <div class="reco-card-emoji">${r.emoji}</div>
+                <div class="reco-card-emoji">${r.emoji || '💄'}</div>
                 <div class="reco-card-brand">${r.brand}</div>
                 <div class="reco-card-name">${r.name}</div>
                 <div class="reco-card-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
@@ -1476,7 +1478,7 @@ function openCompare() {
     <table class="compare-table">
       <thead><tr>
         <th class="row-label" style="font-family:'Jost',sans-serif;font-size:9px"></th>
-        ${items.map(p => `<th>${p.emoji} ${p.name}<span class="th-brand">${p.brand}</span></th>`).join('')}
+        ${items.map(p => `<th>${p.emoji || '💄'} ${p.name}<span class="th-brand">${p.brand}</span></th>`).join('')}
       </tr></thead>
       <tbody>
         ${rows.map(r => `
@@ -1720,7 +1722,7 @@ function showSkinTestResult() {
           <div class="reco-cards">
             ${matchingProducts.map(r => `
               <div class="reco-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
-                <div class="reco-card-emoji">${r.emoji}</div>
+                <div class="reco-card-emoji">${r.emoji || '💄'}</div>
                 <div class="reco-card-brand">${r.brand}</div>
                 <div class="reco-card-name">${r.name}</div>
                 <div class="reco-card-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
@@ -1752,7 +1754,9 @@ function openWishlist() {
   body.innerHTML = `
     ${favProducts.map(p => `
       <div class="wishlist-item">
-        <span class="wishlist-item-emoji">${p.emoji}</span>
+        ${p.imageUrl
+          ? `<img src="${p.imageUrl}" class="wishlist-item-emoji" style="object-fit:contain;border-radius:2px" onerror="this.outerHTML='<span class=wishlist-item-emoji>💄</span>'">`
+          : `<span class="wishlist-item-emoji">${p.emoji || '💄'}</span>`}
         <div class="wishlist-item-info">
           <div class="wishlist-item-brand">${p.brand}</div>
           <div class="wishlist-item-name">${p.name}</div>
