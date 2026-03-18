@@ -163,7 +163,10 @@ async function main() {
   console.log('⚠️  Açılan tarayıcıyı KAPATMAYIN!\n');
 
   const isCI = !!process.env.CI;
-  const browser = await chromium.launch({
+
+  // CI ortaminda system Chrome kullan (GitHub Actions'ta pre-installed)
+  // Lokal ortamda Playwright Chromium kullan
+  const launchOptions = {
     headless: true,
     slowMo: isCI ? 0 : 80,
     args: [
@@ -171,13 +174,14 @@ async function main() {
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
       '--disable-gpu',
-      '--no-first-run',
       '--disable-blink-features=AutomationControlled',
-      // Linux headless icin kritik: Ozone platformunu headless yap
-      '--ozone-platform=headless',
-      '--headless=new',
-    ]
-  });
+    ],
+  };
+  if (isCI) {
+    launchOptions.channel = 'chrome'; // GitHub Actions ubuntu-latest'te Chrome kurulu
+  }
+
+  const browser = await chromium.launch(launchOptions);
 
   const context = await browser.newContext({
     userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',

@@ -3,7 +3,7 @@ name: Fiyat Güncelle — Sephora TR
 on:
   schedule:
     - cron: '0 3 * * 1'   # Her Pazartesi gece 03:00 UTC (sabah 06:00 TR)
-  workflow_dispatch:        # Elle de tetiklenebilir
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -23,20 +23,25 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Xvfb kur (sanal ekran)
-        run: sudo apt-get install -y xvfb
+      - name: Google Chrome kur
+        run: |
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-chrome-keyring.gpg
+          echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable
+          google-chrome-stable --version
 
       - name: Scraper bağımlılıklarını yükle
         working-directory: scraper
-        run: npm install
+        run: npm ci
 
-      - name: Playwright tarayıcısını yükle
+      - name: Playwright Chrome driver kur
         working-directory: scraper
-        run: npx playwright install chromium --with-deps
+        run: npx playwright install chrome --with-deps
 
       - name: Sephora TR scrape et
         working-directory: scraper
-        run: xvfb-run --auto-servernum node sephora-scraper.js
+        run: node sephora-scraper.js
         timeout-minutes: 20
 
       - name: Scraper sonucu kontrol et
@@ -45,7 +50,7 @@ jobs:
             COUNT=$(node -e "console.log(require('./scraper/sephora-products.json').length)")
             echo "Bulunan ürün: $COUNT"
             if [ "$COUNT" -lt "10" ]; then
-              echo "HATA: Çok az ürün ($COUNT). Sephora engelliyor olabilir."
+              echo "HATA: Çok az ürün ($COUNT)."
               exit 1
             fi
           else
@@ -62,10 +67,8 @@ jobs:
         run: |
           if git diff --quiet products-data.js; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "Fiyatlarda değişiklik yok."
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Değişiklik tespit edildi!"
           fi
 
       - name: Commit ve push
