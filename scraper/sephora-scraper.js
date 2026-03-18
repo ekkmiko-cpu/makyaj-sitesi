@@ -173,7 +173,9 @@ async function main() {
       '--disable-gpu',
       '--no-first-run',
       '--disable-blink-features=AutomationControlled',
-      ...(isCI ? ['--headless', '--virtual-time-budget=0'] : []),
+      // Linux headless icin kritik: Ozone platformunu headless yap
+      '--ozone-platform=headless',
+      '--headless=new',
     ]
   });
 
