@@ -162,10 +162,19 @@ async function main() {
   console.log('🚀 Sephora TR Scraper v2 başlıyor...');
   console.log('⚠️  Açılan tarayıcıyı KAPATMAYIN!\n');
 
+  const isCI = !!process.env.CI;
   const browser = await chromium.launch({
     headless: true,
-    slowMo: process.env.CI ? 0 : 80,
-    args: ['--no-sandbox', '--disable-blink-features=AutomationControlled']
+    slowMo: isCI ? 0 : 80,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+      '--no-first-run',
+      '--disable-blink-features=AutomationControlled',
+      ...(isCI ? ['--headless', '--virtual-time-budget=0'] : []),
+    ]
   });
 
   const context = await browser.newContext({
