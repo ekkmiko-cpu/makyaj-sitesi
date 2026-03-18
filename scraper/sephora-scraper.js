@@ -77,6 +77,22 @@ async function extractProducts(page, catName, catLabel) {
   }, { catName, catLabel });
 }
 
+async function loadAndExtract(page, url, category) {
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await sleep(2500);
+  await sleep(DELAY_MS);
+
+  // Sayfayı kaydır (lazy load için)
+  for (let i = 0; i < 4; i++) {
+    await page.evaluate(() => window.scrollBy(0, window.innerHeight * 0.8));
+    await sleep(400);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await sleep(500);
+
+  return extractProducts(page, category.name, category.label);
+}
+
 async function scrapeCategory(page, category) {
   console.log(`\n📦 ${category.label} — taranıyor...`);
   const allProducts = [];
@@ -88,19 +104,18 @@ async function scrapeCategory(page, category) {
     console.log(`   📄 ${startIdx === 0 ? 'Sayfa 1' : `${startIdx+1}-${startIdx+48} arası`} yükleniyor...`);
 
     try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await sleep(2500); // Ürünlerin render olması için bekle
-      await sleep(DELAY_MS);
+      let products = await loadAndExtract(page, url, category);
 
-      // Sayfayı kaydır (lazy load için)
-      for (let i = 0; i < 4; i++) {
-        await page.evaluate(() => window.scrollBy(0, window.innerHeight * 0.8));
-        await sleep(400);
+      // İlk sayfada 0 ürün dönerse, 2 kez daha dene (bot koruması/geç yüklenme)
+      if (products.length === 0 && startIdx === 0) {
+        for (let retry = 1; retry <= 2; retry++) {
+          console.log(`   🔄 Tekrar deneniyor (${retry}/2)...`);
+          await sleep(3000 * retry);
+          products = await loadAndExtract(page, url, category);
+          if (products.length > 0) break;
+        }
       }
-      await page.evaluate(() => window.scrollTo(0, 0));
-      await sleep(500);
 
-      const products = await extractProducts(page, category.name, category.label);
       console.log(`   ✅ ${products.length} ürün bulundu`);
       allProducts.push(...products);
 

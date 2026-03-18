@@ -306,6 +306,25 @@ async function scrapeCategory(page, category) {
         products = await extractFromDOM(page, category.name, category.label);
       }
 
+      // Ilk sayfada 0 urun donerse, 2 kez daha dene
+      if (products.length === 0 && pageNum === 1) {
+        for (let retry = 1; retry <= 2; retry++) {
+          console.log(`  Tekrar deneniyor (${retry}/2)...`);
+          await sleep(3000 * retry);
+          await page.reload({ waitUntil: 'domcontentloaded', timeout: 30000 });
+          await sleep(2000);
+          for (let i = 0; i < 5; i++) {
+            await page.evaluate(() => window.scrollBy(0, window.innerHeight * 0.8));
+            await sleep(400);
+          }
+          products = await extractFromNextData(page, category.name, category.label);
+          if (products.length === 0) {
+            products = await extractFromDOM(page, category.name, category.label);
+          }
+          if (products.length > 0) break;
+        }
+      }
+
       console.log(`  ${products.length} urun bulundu`);
 
       if (products.length === 0) {

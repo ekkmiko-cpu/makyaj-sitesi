@@ -175,6 +175,21 @@ async function extractProducts(page, catName, catLabel) {
   }, { catName, catLabel, baseUrl: BASE_URL });
 }
 
+async function scrapePage(page, url, category) {
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await sleep(2500);
+
+  // Sayfayi kaydir (lazy load icin)
+  for (let i = 0; i < 5; i++) {
+    await page.evaluate(() => window.scrollBy(0, window.innerHeight * 0.8));
+    await sleep(400);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await sleep(500);
+
+  return extractProducts(page, category.name, category.label);
+}
+
 async function scrapeCategory(page, category) {
   console.log(`\n[KATEGORI] ${category.label} -- taraniyor...`);
   const allProducts = [];
@@ -184,18 +199,18 @@ async function scrapeCategory(page, category) {
     console.log(`   Sayfa ${pageNum} yukleniyor...`);
 
     try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await sleep(2500);
+      let products = await scrapePage(page, url, category);
 
-      // Sayfayi kaydir (lazy load icin)
-      for (let i = 0; i < 5; i++) {
-        await page.evaluate(() => window.scrollBy(0, window.innerHeight * 0.8));
-        await sleep(400);
+      // Ilk sayfada 0 urun donerse, 2 kez daha dene (bot koruması/gec yuklenme)
+      if (products.length === 0 && pageNum === 1) {
+        for (let retry = 1; retry <= 2; retry++) {
+          console.log(`   Tekrar deneniyor (${retry}/2)...`);
+          await sleep(3000 * retry);
+          products = await scrapePage(page, url, category);
+          if (products.length > 0) break;
+        }
       }
-      await page.evaluate(() => window.scrollTo(0, 0));
-      await sleep(500);
 
-      const products = await extractProducts(page, category.name, category.label);
       console.log(`   ${products.length} urun bulundu`);
 
       if (products.length === 0) {
