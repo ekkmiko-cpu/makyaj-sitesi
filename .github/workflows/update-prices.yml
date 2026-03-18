@@ -5,6 +5,9 @@ on:
     - cron: '0 3 * * 1'   # Her Pazartesi gece 03:00 UTC (sabah 06:00 TR)
   workflow_dispatch:        # Elle de tetiklenebilir (GitHub UI'dan "Run workflow")
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
@@ -28,9 +31,26 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Sephora TR scrape et
+        id: scrape
         working-directory: scraper
-        run: node sephora-scraper.js
+        run: |
+          echo "Scraper başlıyor..."
+          node sephora-scraper.js && echo "scrape_ok=true" >> $GITHUB_OUTPUT || echo "scrape_ok=false" >> $GITHUB_OUTPUT
         timeout-minutes: 20
+
+      - name: Scraper sonucu kontrol et
+        run: |
+          if [ -f scraper/sephora-products.json ]; then
+            COUNT=$(node -e "const d=require('./scraper/sephora-products.json'); console.log(d.length)")
+            echo "Bulunan ürün sayısı: $COUNT"
+            if [ "$COUNT" -lt "10" ]; then
+              echo "HATA: Çok az ürün bulundu ($COUNT). Sephora engelliyor olabilir."
+              exit 1
+            fi
+          else
+            echo "HATA: sephora-products.json oluşturulamadı!"
+            exit 1
+          fi
 
       - name: products-data.js oluştur
         working-directory: scraper
@@ -41,7 +61,11 @@ jobs:
         run: |
           if git diff --quiet products-data.js; then
             echo "changed=false" >> $GITHUB_OUTPUT
+            echo "Fiyatlarda değişiklik yok."
           else
+            DEGISIM=$(git diff --stat products-data.js)
+            echo "Değişiklik tespit edildi:"
+            echo "$DEGISIM"
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
@@ -51,10 +75,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           TARIH=$(date +'%d.%m.%Y')
-          git add products-data.js
-          git commit -m "Fiyat guncellemesi — $TARIH"
+          URUN=$(node -e "const d=require('./scraper/sephora-products.json'); console.log(d.length)")
+          git add products-data.js scraper/sephora-products.json
+          git commit -m "Fiyat guncellemesi — $TARIH ($URUN urun)"
           git push
-
-      - name: Değişiklik yoksa bildir
-        if: steps.check.outputs.changed == 'false'
-        run: echo "Fiyatlarda degisiklik yok, commit atlanıyor."
