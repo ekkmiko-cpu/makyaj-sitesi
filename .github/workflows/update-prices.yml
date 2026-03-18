@@ -2,7 +2,7 @@ name: Fiyat Güncelle — Sephora TR
 
 on:
   schedule:
-    - cron: '0 3 * * 1'   # Her Pazartesi gece 03:00 UTC (sabah 06:00 TR)
+    - cron: '0 3 * * *'   # Her gün gece 03:00 UTC (sabah 06:00 TR)
   workflow_dispatch:
 
 env:
