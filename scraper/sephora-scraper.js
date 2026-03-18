@@ -163,8 +163,8 @@ async function main() {
   console.log('⚠️  Açılan tarayıcıyı KAPATMAYIN!\n');
 
   const browser = await chromium.launch({
-    headless: false,
-    slowMo: 80,
+    headless: true,
+    slowMo: process.env.CI ? 0 : 80,
     args: ['--no-sandbox', '--disable-blink-features=AutomationControlled']
   });
 
