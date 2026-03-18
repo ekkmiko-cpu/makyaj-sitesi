@@ -224,6 +224,10 @@
     .card-bottom { display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto; padding-top: 8px; border-top: 0.5px solid var(--border); }
     .card-price { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; color: var(--text); }
     .card-price-sub { font-size: 9px; color: var(--text3); letter-spacing: 1px; margin-top: 1px; }
+    .card-price-range { font-size: 10px; color: var(--text2); margin-top: 2px; }
+    .card-seller-count { display: inline-flex; align-items: center; gap: 4px; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; background: rgba(42,122,59,0.08); color: #2a7a3b; border: 0.5px solid rgba(42,122,59,0.2); margin-top: 4px; }
+    .card-seller-count.single { background: rgba(201,169,110,0.08); color: var(--gold); border-color: rgba(201,169,110,0.25); }
+    .card-savings { font-size: 9px; color: #2a7a3b; font-weight: 500; letter-spacing: 0.5px; margin-top: 2px; }
 
     /* ── BADGES ── */
     .card-badges { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -278,17 +282,28 @@
     .shade-chip:hover { transform: translateY(-1px); }
     .shade-chip.active { background: var(--text); color: var(--bg3); border-color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
     .prices-table { width: 100%; margin-bottom: 1.5rem; border: 0.5px solid var(--border); border-radius: 2px; overflow: hidden; }
-    .price-row { display: flex; align-items: center; padding: 10px 16px; border-bottom: 0.5px solid var(--border); }
+    .prices-table-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--bg2); border-bottom: 0.5px solid var(--border); }
+    .prices-table-header-left { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+    .prices-table-header-right { font-size: 10px; color: var(--text3); }
+    .price-row { display: flex; align-items: center; padding: 12px 16px; border-bottom: 0.5px solid var(--border); transition: background 0.2s; }
     .price-row:last-child { border-bottom: none; }
-    .price-row.best-price { background: rgba(201,169,110,0.06); }
-    .price-row-site { flex: 1; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text2); }
-    .price-row-badge { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); border: 0.5px solid var(--gold); padding: 2px 6px; border-radius: 2px; margin-right: 12px; }
-    .price-row-amount { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--text); margin-right: 14px; }
+    .price-row:hover { background: rgba(201,169,110,0.03); }
+    .price-row.best-price { background: rgba(42,122,59,0.04); border-left: 3px solid #2a7a3b; }
+    .price-row.best-price:hover { background: rgba(42,122,59,0.07); }
+    .price-row-rank { width: 24px; font-size: 11px; color: var(--text3); font-weight: 500; flex-shrink: 0; }
+    .price-row.best-price .price-row-rank { color: #2a7a3b; }
+    .price-row-site { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .price-row-site-name { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--text); font-weight: 500; }
+    .price-row-site-info { font-size: 9px; color: var(--text3); letter-spacing: 0.5px; }
+    .price-row-badge { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: #fff; background: #2a7a3b; padding: 3px 8px; border-radius: 2px; margin-right: 12px; font-weight: 500; }
+    .price-row-diff { font-size: 10px; color: var(--text3); margin-right: 12px; }
+    .price-row-diff.more { color: #c0392b; }
+    .price-row-amount { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--text); margin-right: 14px; font-weight: 500; }
     .price-row.best-price .price-row-amount { color: #2a7a3b; }
     .buy-btn {
       font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
-      padding: 6px 14px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px;
-      cursor: pointer; text-decoration: none; display: inline-block; position: relative; overflow: hidden;
+      padding: 8px 18px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px;
+      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; position: relative; overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .buy-btn::before {
@@ -297,6 +312,11 @@
       transition: left 0.5s ease;
     }
     .buy-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .price-row.best-price .buy-btn { background: #2a7a3b; }
+    .price-summary-bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--bg2); border-top: 0.5px solid var(--border); }
+    .price-summary-item { font-size: 10px; color: var(--text3); letter-spacing: 0.5px; }
+    .price-summary-item strong { color: var(--text); font-weight: 500; }
+    .price-summary-item.savings { color: #2a7a3b; font-weight: 500; }
     .buy-btn:hover::before { left: 100%; }
     .detail-meta { display: flex; gap: 2rem; padding-top: 1rem; border-top: 0.5px solid var(--border); flex-wrap: wrap; }
     .detail-meta-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
@@ -647,6 +667,8 @@
     <button class="filter-btn" data-tag="vegan">🌿 Vegan</button>
     <button class="filter-btn" data-tag="crueltyFree">🐰 Cruelty-Free</button>
     <button class="filter-btn" data-tag="spf">☀️ SPF</button>
+    <div class="filter-divider"></div>
+    <button class="filter-btn" data-tag="multiSeller">🏪 Çoklu Satıcı</button>
     <input class="search-bar" type="text" id="searchInput" placeholder="Ürün veya marka ara...">
   </div>
 </div>
@@ -670,6 +692,8 @@
     <option value="price-desc">Fiyat: Yüksekten Düşüğe</option>
     <option value="rating">Puan: En Yüksek</option>
     <option value="reviews">Yorum: En Fazla</option>
+    <option value="sellers">Satıcı Sayısı: En Fazla</option>
+    <option value="savings">En Çok Tasarruf</option>
   </select>
 </div>
 
@@ -1076,6 +1100,7 @@ function getFiltered() {
     if (activeTag === 'vegan' && !p.vegan) return false;
     if (activeTag === 'crueltyFree' && !p.crueltyFree) return false;
     if (activeTag === 'spf' && !p.spf) return false;
+    if (activeTag === 'multiSeller' && p.prices.length < 2) return false;
     if (searchQ && !p.name.toLowerCase().includes(searchQ) && !p.brand.toLowerCase().includes(searchQ)) return false;
     const mp = minPrice(p);
     if (activePriceRange === '0-300'    && mp > 300)   return false;
@@ -1088,6 +1113,12 @@ function getFiltered() {
   if (sortMode === 'price-desc') arr.sort((a,b) => minPrice(b) - minPrice(a));
   if (sortMode === 'rating')     arr.sort((a,b) => b.rating - a.rating);
   if (sortMode === 'reviews')    arr.sort((a,b) => b.reviews - a.reviews);
+  if (sortMode === 'sellers')    arr.sort((a,b) => b.prices.length - a.prices.length || minPrice(a) - minPrice(b));
+  if (sortMode === 'savings')    arr.sort((a,b) => {
+    const savA = a.prices.length > 1 ? Math.max(...a.prices.map(pr=>pr.price)) - Math.min(...a.prices.map(pr=>pr.price)) : 0;
+    const savB = b.prices.length > 1 ? Math.max(...b.prices.map(pr=>pr.price)) - Math.min(...b.prices.map(pr=>pr.price)) : 0;
+    return savB - savA;
+  });
   return arr;
 }
 
@@ -1143,7 +1174,12 @@ function render() {
           <div class="card-bottom">
             <div>
               <div class="card-price">₺${mp.toLocaleString('tr-TR')}</div>
-              <div class="card-price-sub">${p.prices.length > 1 ? p.prices.length + ' satıcıda' : p.prices[0].site}</div>
+              ${p.prices.length > 1
+                ? `<div class="card-price-range">₺${mp.toLocaleString('tr-TR')} — ₺${Math.max(...p.prices.map(pr=>pr.price)).toLocaleString('tr-TR')}</div>
+                   <span class="card-seller-count">${p.prices.length} satıcıda${(() => { const maxP = Math.max(...p.prices.map(pr=>pr.price)); const save = maxP - mp; return save > 0 ? ' · ₺' + save.toLocaleString('tr-TR') + ' tasarruf' : ''; })()}</span>`
+                : `<div class="card-price-sub">${p.prices[0].site}</div>
+                   <span class="card-seller-count single">1 satıcı</span>`
+              }
             </div>
           </div>
         </div>
@@ -1298,16 +1334,33 @@ function openDetail(id) {
         </div>
       ` : ''}
 
-      <div class="detail-section-title">Fiyat Karşılaştırması</div>
+      <div class="detail-section-title">Fiyat Karşılaştırması — ${sorted.length} Satıcı</div>
       <div class="prices-table">
-        ${sorted.map(pr => `
+        <div class="prices-table-header">
+          <span class="prices-table-header-left">Satıcı</span>
+          <span class="prices-table-header-right">Fiyat</span>
+        </div>
+        ${sorted.map((pr, idx) => {
+          const diff = pr.price - best;
+          const diffPct = best > 0 ? ((diff / best) * 100).toFixed(0) : 0;
+          return `
           <div class="price-row${pr.price === best ? ' best-price' : ''}">
-            <span class="price-row-site">${pr.site}</span>
-            ${pr.price === best ? '<span class="price-row-badge">En Ucuz</span>' : ''}
+            <span class="price-row-rank">${idx + 1}.</span>
+            <div class="price-row-site">
+              <span class="price-row-site-name">${pr.site}</span>
+              <span class="price-row-site-info">Güncel fiyat</span>
+            </div>
+            ${pr.price === best ? '<span class="price-row-badge">En Ucuz</span>' : diff > 0 ? '<span class="price-row-diff more">+₺' + diff.toLocaleString('tr-TR') + ' (%' + diffPct + ')</span>' : ''}
             <span class="price-row-amount">₺${pr.price.toLocaleString('tr-TR')}</span>
-            <a href="${pr.url}" class="buy-btn">Satın Al →</a>
-          </div>
-        `).join('')}
+            <a href="${pr.url}" class="buy-btn" target="_blank" rel="noopener">Satın Al →</a>
+          </div>`;
+        }).join('')}
+        ${sorted.length > 1 ? `
+        <div class="price-summary-bar">
+          <span class="price-summary-item">En düşük: <strong>₺${best.toLocaleString('tr-TR')}</strong></span>
+          <span class="price-summary-item">En yüksek: <strong>₺${sorted[sorted.length-1].price.toLocaleString('tr-TR')}</strong></span>
+          ${sorted[sorted.length-1].price - best > 0 ? '<span class="price-summary-item savings">Tasarruf: ₺' + (sorted[sorted.length-1].price - best).toLocaleString('tr-TR') + '</span>' : ''}
+        </div>` : ''}
       </div>
 
       <!-- Price Alert -->

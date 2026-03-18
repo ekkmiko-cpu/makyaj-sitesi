@@ -97,13 +97,56 @@ function normalizeCategoryName(name) {
   return categoryNameMap[name] || name;
 }
 
-// ── Marka ismi normalizasyonu ──
+// ── Marka ismi normalizasyonu (agresif eşleştirme için) ──
+var brandAliases = {
+  'MAYBELLINE': 'MAYBELLINE',
+  'MAYBELLINE NEW YORK': 'MAYBELLINE',
+  'LOREAL': 'LOREAL PARIS',
+  'LOREAL PARIS': 'LOREAL PARIS',
+  'L OREAL PARIS': 'LOREAL PARIS',
+  'ESTEE LAUDER': 'ESTEE LAUDER',
+  'CLINIQUE': 'CLINIQUE',
+  'FLORMAR': 'FLORMAR',
+  'ESSENCE': 'ESSENCE',
+  'GOLDEN ROSE': 'GOLDEN ROSE',
+  'NYX': 'NYX',
+  'NYX PROFESSIONAL MAKEUP': 'NYX',
+  'NYX PROFESSIONAL': 'NYX',
+  'MAC': 'MAC',
+  'MAC COSMETICS': 'MAC',
+  'BENEFIT': 'BENEFIT',
+  'BENEFIT COSMETICS': 'BENEFIT',
+  'NARS': 'NARS',
+  'NARS COSMETICS': 'NARS',
+  'DIOR': 'DIOR',
+  'DIOR BACKSTAGE': 'DIOR',
+  'CHARLOTTE TILBURY': 'CHARLOTTE TILBURY',
+  'FENTY BEAUTY': 'FENTY BEAUTY',
+  'BOBBI BROWN': 'BOBBI BROWN',
+  'URBAN DECAY': 'URBAN DECAY',
+  'TOO FACED': 'TOO FACED',
+  'CATRICE': 'CATRICE',
+  'PUPA': 'PUPA',
+  'PUPA MILANO': 'PUPA',
+  'INGLOT': 'INGLOT',
+  'FARMASI': 'FARMASI',
+  'PASTEL': 'PASTEL',
+  'PASTEL PROFASHION': 'PASTEL',
+};
+
 function normalizeBrand(brand) {
-  return (brand || '')
+  var clean = (brand || '')
     .toUpperCase()
-    .replace(/[''`]/g, "'")
+    .replace(/[''`\u2019\u00B4\u0060\u2018]/g, '')
+    .replace(/[éèêë]/gi, 'E')
+    .replace(/[àâä]/gi, 'A')
+    .replace(/[ùûü]/gi, 'U')
+    .replace(/[îï]/gi, 'I')
+    .replace(/[ôö]/gi, 'O')
+    .replace(/[^A-Z0-9\s]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+  return brandAliases[clean] || clean;
 }
 
 // ── Ürün ismi normalizasyonu (eşleştirme için) ──
@@ -117,12 +160,15 @@ function normalizeNameForMatch(name) {
 
 // ── İsim benzerliği (basit Jaccard) ──
 function similarity(a, b) {
-  const wordsA = new Set(a.split(' ').filter(w => w.length > 2));
-  const wordsB = new Set(b.split(' ').filter(w => w.length > 2));
+  var wordsA = new Set(a.split(' ').filter(function(w) { return w.length > 1; }));
+  var wordsB = new Set(b.split(' ').filter(function(w) { return w.length > 1; }));
   if (wordsA.size === 0 || wordsB.size === 0) return 0;
-  let intersection = 0;
-  for (const w of wordsA) if (wordsB.has(w)) intersection++;
-  return intersection / Math.max(wordsA.size, wordsB.size);
+  var intersection = 0;
+  wordsA.forEach(function(w) { if (wordsB.has(w)) intersection++; });
+  var union = new Set();
+  wordsA.forEach(function(w) { union.add(w); });
+  wordsB.forEach(function(w) { union.add(w); });
+  return intersection / union.size;
 }
 
 // ── İsmi temizle (gösterim için) ──
@@ -211,7 +257,7 @@ for (var i = 0; i < allRaw.length; i++) {
     if (baseBrand !== otherBrand) continue;
     var otherName = normalizeNameForMatch(other.name);
     var sim = similarity(baseName, otherName);
-    if (sim < 0.5) continue;
+    if (sim < 0.35) continue;
     used[j] = true;
     prices.push({
       site: other._site,
@@ -220,7 +266,17 @@ for (var i = 0; i < allRaw.length; i++) {
     });
   }
 
+  // Aynı satıcıdan gelen duplicate fiyatları kaldır (en düşüğü tut)
+  var uniquePrices = [];
+  var seenSites = {};
   prices.sort(function(a, b) { return a.price - b.price; });
+  for (var k = 0; k < prices.length; k++) {
+    if (!seenSites[prices[k].site]) {
+      seenSites[prices[k].site] = true;
+      uniquePrices.push(prices[k]);
+    }
+  }
+  prices = uniquePrices;
 
   merged.push(Object.assign({}, base, {
     prices: prices,
@@ -247,7 +303,7 @@ var products = merged.map(function(p, i) {
     prices: p.prices,
     rating: +parseFloat(rating).toFixed(1),
     reviews: Math.round(reviews),
-    imageUrl: p.imageUrl,
+    imageUrl: Array.isArray(p.imageUrl) ? (p.imageUrl[0] || '') : (p.imageUrl || ''),
     productUrl: p.productUrl,
     desc: p.desc || '',
     trending: rating >= 4.7,

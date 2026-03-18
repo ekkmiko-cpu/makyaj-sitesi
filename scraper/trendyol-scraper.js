@@ -62,7 +62,7 @@ async function extractProducts(page, catName, catLabel) {
                   price: product.offers
                     ? parseFloat(product.offers.price || product.offers.lowPrice || 0)
                     : 0,
-                  imageUrl: product.image || '',
+                  imageUrl: Array.isArray(product.image) ? (product.image[0] || '') : (product.image || ''),
                   productUrl: product.url
                     ? (product.url.startsWith('http') ? product.url : baseUrl + product.url)
                     : '',
