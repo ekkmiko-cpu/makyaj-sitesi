@@ -12,22 +12,21 @@ const path = require('path');
 // -- AYARLAR ------------------------------------------------------------------
 const BASE_URL = 'https://www.trendyol.com';
 const CATEGORIES = [
-  { name: 'fondoten',         url: '/fondoten-x-c104159',                       label: 'Fondoten' },
-  { name: 'maskara',          url: '/maskara-x-c104149',                        label: 'Maskara' },
-  { name: 'ruj',              url: '/ruj-x-c104169',                            label: 'Ruj' },
-  { name: 'far',              url: '/goz-fari-x-c104147',                       label: 'Goz Fari' },
-  { name: 'far-paleti',       url: '/goz-fari-paleti-x-c106050',               label: 'Far Paleti' },
-  { name: 'eyeliner',         url: '/eyeliner-x-c104148',                       label: 'Eyeliner' },
-  { name: 'goz-kalemi',       url: '/goz-kalemi-x-c104146',                    label: 'Goz Kalemi' },
-  { name: 'allik',            url: '/allik-x-c104155',                          label: 'Allik' },
-  { name: 'aydinlatici',      url: '/aydinlatici-x-c106086',                    label: 'Aydinlatici' },
-  { name: 'bronzer',          url: '/bronzer-x-c106087',                        label: 'Bronzer' },
-  { name: 'kontur',           url: '/kontur-x-c106085',                         label: 'Kontur' },
-  { name: 'kapatici',         url: '/kapatici-x-c104160',                       label: 'Kapatici' },
-  { name: 'primer',           url: '/makyaj-bazi-x-c104158',                    label: 'Primer' },
-  { name: 'pudra',            url: '/pudra-x-c104156',                          label: 'Pudra' },
-  { name: 'dudak-parlatici',  url: '/dudak-parlatici-lip-gloss-x-c104170',     label: 'Dudak Parlatici' },
-  { name: 'dudak-kalemi',     url: '/dudak-kalemi-x-c104172',                  label: 'Dudak Kalemi' },
+  { name: 'fondoten',         url: '/fondoten-x-c1053',                         label: 'Fondoten' },
+  { name: 'maskara',          url: '/maskara-x-c1114',                          label: 'Maskara' },
+  { name: 'ruj',              url: '/ruj-x-c1156',                              label: 'Ruj' },
+  { name: 'far',              url: '/goz-fari-x-c1060',                         label: 'Goz Fari' },
+  { name: 'far-paleti',       url: '/far-paleti-y-s5667',                       label: 'Far Paleti' },
+  { name: 'eyeliner',         url: '/eyeliner-x-c1050',                         label: 'Eyeliner' },
+  { name: 'goz-kalemi',       url: '/goz-kalemi-x-c1060',                      label: 'Goz Kalemi' },
+  { name: 'allik',            url: '/allik-x-c999',                             label: 'Allik' },
+  { name: 'aydinlatici',      url: '/aydinlatici-x-c104017',                    label: 'Aydinlatici' },
+  { name: 'bronzer',          url: '/bronzer-x-c109099',                        label: 'Bronzer' },
+  { name: 'kapatici',         url: '/kapatici-x-c1085',                         label: 'Kapatici' },
+  { name: 'primer',           url: '/makyaj-bazi-primer-x-c1109',              label: 'Primer' },
+  { name: 'pudra',            url: '/pudra-x-c1153',                            label: 'Pudra' },
+  { name: 'dudak-parlatici',  url: '/dudak-parlatici-lip-gloss-x-c1041',       label: 'Dudak Parlatici' },
+  { name: 'dudak-kalemi',     url: '/dudak-kalemi-x-c1042',                    label: 'Dudak Kalemi' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'trendyol-products.json');
 const MAX_PAGES = 5;

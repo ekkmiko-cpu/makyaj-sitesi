@@ -38,6 +38,65 @@ const skinDefaults = {
   'dudak-kalemi':    ['normal', 'karma'],
 };
 
+// ── Kategori label normalizasyonu (Türkçe karakter birleştirme) ──
+var categoryLabelMap = {
+  'Fondoten': 'Fondöten',
+  'Fondöten': 'Fondöten',
+  'Maskara': 'Maskara',
+  'Ruj': 'Ruj',
+  'Goz Fari': 'Göz Farı',
+  'Göz Farı': 'Göz Farı',
+  'Far Paleti': 'Far Paleti',
+  'Eyeliner': 'Eyeliner',
+  'Goz Kalemi': 'Göz Kalemi',
+  'Göz Kalemi': 'Göz Kalemi',
+  'Allik': 'Allık',
+  'Allık': 'Allık',
+  'Aydinlatici': 'Aydınlatıcı',
+  'Aydınlatıcı': 'Aydınlatıcı',
+  'Bronzer': 'Bronzer',
+  'Kontur': 'Kontür',
+  'Kontür': 'Kontür',
+  'Kapatici': 'Kapatıcı',
+  'Kapatıcı': 'Kapatıcı',
+  'Primer': 'Primer',
+  'Pudra': 'Pudra',
+  'Dudak Parlatici': 'Dudak Parlatıcı',
+  'Dudak Parlatıcı': 'Dudak Parlatıcı',
+  'Dudak Kalemi': 'Dudak Kalemi',
+  'Kas Makyaji': 'Kaş Makyajı',
+};
+
+function normalizeCategoryLabel(label) {
+  return categoryLabelMap[label] || label;
+}
+
+// ── Kategori name normalizasyonu (eşleştirme için) ──
+var categoryNameMap = {
+  'fondoten': 'fondoten',
+  'maskara': 'maskara',
+  'ruj': 'ruj',
+  'ruj-likit': 'ruj',
+  'far': 'far',
+  'far-paleti': 'far-paleti',
+  'eyeliner': 'eyeliner',
+  'goz-kalemi': 'goz-kalemi',
+  'allik': 'allik',
+  'aydinlatici': 'aydinlatici',
+  'bronzer': 'bronzer',
+  'kontur': 'kontur',
+  'kapatici': 'kapatici',
+  'primer': 'primer',
+  'pudra': 'pudra',
+  'dudak-parlatici': 'dudak-parlatici',
+  'dudak-kalemi': 'dudak-kalemi',
+  'kas': 'kas',
+};
+
+function normalizeCategoryName(name) {
+  return categoryNameMap[name] || name;
+}
+
 // ── Marka ismi normalizasyonu ──
 function normalizeBrand(brand) {
   return (brand || '')
@@ -107,7 +166,13 @@ for (var s = 0; s < SOURCES.length; s++) {
       sourceCounts[src.site] = 0;
       continue;
     }
-    var tagged = data.map(function(p) { return Object.assign({}, p, { _site: src.site }); });
+    var tagged = data.map(function(p) {
+      return Object.assign({}, p, {
+        _site: src.site,
+        category: normalizeCategoryName(p.category),
+        categoryLabel: normalizeCategoryLabel(p.categoryLabel),
+      });
+    });
     allRaw = allRaw.concat(tagged);
     sourceCounts[src.site] = data.length;
     console.log('  ' + src.site + ': ' + data.length + ' urun yuklendi');
