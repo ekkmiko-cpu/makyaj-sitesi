@@ -21,17 +21,17 @@ const SOURCES = [
 // ── Kategori → skinType varsayılanları ──
 const skinDefaults = {
   fondoten:      ['normal', 'karma'],
-  kapatici:      ['normal', 'karma', 'yağlı'],
-  primer:        ['yağlı', 'karma'],
+  kapatici:      ['normal', 'karma', 'yagli'],
+  primer:        ['yagli', 'karma'],
   allik:         ['normal', 'kuru', 'karma'],
   aydinlatici:   ['kuru', 'normal'],
   bronzer:       ['normal', 'karma'],
   kontur:        ['normal', 'karma'],
-  pudra:         ['yağlı', 'karma'],
+  pudra:         ['yagli', 'karma'],
   maskara:       ['normal', 'kuru', 'karma'],
   far:           ['normal', 'kuru', 'karma'],
   'far-paleti':  ['normal', 'kuru', 'karma'],
-  eyeliner:      ['yağlı', 'karma'],
+  eyeliner:      ['yagli', 'karma'],
   'goz-kalemi':  ['normal', 'karma'],
   ruj:           ['kuru', 'normal'],
   'dudak-parlatici': ['kuru', 'normal'],
@@ -51,7 +51,7 @@ function normalizeBrand(brand) {
 function normalizeNameForMatch(name) {
   return (name || '')
     .toLowerCase()
-    .replace(/[^a-z0-9çğıöşü\s]/g, '')
+    .replace(/[^a-z0-9\s]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -89,72 +89,65 @@ function fakeReviews(price) {
 }
 
 // ── Tüm kaynaklardan verileri yükle ──
-let allRaw = [];
-const sourceCounts = {};
+var allRaw = [];
+var sourceCounts = {};
 
-for (const src of SOURCES) {
-  const filePath = path.join(__dirname, src.file);
+for (var s = 0; s < SOURCES.length; s++) {
+  var src = SOURCES[s];
+  var filePath = path.join(__dirname, src.file);
   if (!fs.existsSync(filePath)) {
-    console.log(`⏭️  ${src.site}: ${src.file} bulunamadı, atlanıyor`);
+    console.log('  ' + src.site + ': ' + src.file + ' bulunamadi, atlaniyor');
     sourceCounts[src.site] = 0;
     continue;
   }
   try {
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    const tagged = data.map(p => ({ ...p, _site: src.site }));
-    allRaw.push(...tagged);
+    var data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    if (!Array.isArray(data) || data.length === 0) {
+      console.log('  ' + src.site + ': bos dosya, atlaniyor');
+      sourceCounts[src.site] = 0;
+      continue;
+    }
+    var tagged = data.map(function(p) { return Object.assign({}, p, { _site: src.site }); });
+    allRaw = allRaw.concat(tagged);
     sourceCounts[src.site] = data.length;
-    console.log(`📦 ${src.site}: ${data.length} ürün yüklendi`);
+    console.log('  ' + src.site + ': ' + data.length + ' urun yuklendi');
   } catch (err) {
-    console.error(`❌ ${src.site}: JSON parse hatası — ${err.message}`);
+    console.error('  ' + src.site + ': JSON parse hatasi - ' + err.message);
     sourceCounts[src.site] = 0;
   }
 }
 
-console.log(`\n📊 Toplam ham veri: ${allRaw.length} ürün`);
+console.log('\nToplam ham veri: ' + allRaw.length + ' urun');
 
 // ── Ürünleri eşleştir ve birleştir ──
-// Aynı marka + benzer isim + aynı kategori = aynı ürün
-const merged = []; // Final ürün listesi
-const used = new Set(); // Kullanılmış indexler
+var merged = [];
+var used = {};
 
-for (let i = 0; i < allRaw.length; i++) {
-  if (used.has(i)) continue;
-  used.add(i);
+for (var i = 0; i < allRaw.length; i++) {
+  if (used[i]) continue;
+  used[i] = true;
 
-  const base = allRaw[i];
-  const baseBrand = normalizeBrand(base.brand);
-  const baseName = normalizeNameForMatch(base.name);
+  var base = allRaw[i];
+  var baseBrand = normalizeBrand(base.brand);
+  var baseName = normalizeNameForMatch(base.name);
 
-  // Bu ürünün fiyat bilgileri
-  const prices = [{
+  var prices = [{
     site: base._site,
     price: base.price,
     url: base.productUrl,
   }];
 
-  // Diğer kaynaklarda aynı ürünü bul
-  for (let j = i + 1; j < allRaw.length; j++) {
-    if (used.has(j)) continue;
-    const other = allRaw[j];
-
-    // Aynı kaynaktan geliyorsa atla
+  for (var j = i + 1; j < allRaw.length; j++) {
+    if (used[j]) continue;
+    var other = allRaw[j];
     if (other._site === base._site) continue;
-
-    // Aynı kategori mi?
     if (other.category !== base.category) continue;
-
-    // Marka eşleşmesi
-    const otherBrand = normalizeBrand(other.brand);
+    var otherBrand = normalizeBrand(other.brand);
     if (baseBrand !== otherBrand) continue;
-
-    // İsim benzerliği
-    const otherName = normalizeNameForMatch(other.name);
-    const sim = similarity(baseName, otherName);
+    var otherName = normalizeNameForMatch(other.name);
+    var sim = similarity(baseName, otherName);
     if (sim < 0.5) continue;
-
-    // Eşleşti!
-    used.add(j);
+    used[j] = true;
     prices.push({
       site: other._site,
       price: other.price,
@@ -162,28 +155,26 @@ for (let i = 0; i < allRaw.length; i++) {
     });
   }
 
-  // Fiyatları sırala (düşükten yükseğe)
-  prices.sort((a, b) => a.price - b.price);
+  prices.sort(function(a, b) { return a.price - b.price; });
 
-  merged.push({
-    ...base,
-    prices,
+  merged.push(Object.assign({}, base, {
+    prices: prices,
     _matchCount: prices.length,
-  });
+  }));
 }
 
-console.log(`🔗 Eşleştirme sonucu: ${merged.length} benzersiz ürün (${allRaw.length} ham veriden)`);
+console.log('Eslestirme sonucu: ' + merged.length + ' benzersiz urun (' + allRaw.length + ' ham veriden)');
 
 // ── Final ürün listesini oluştur ──
-const products = merged.map((p, i) => {
-  const rating = p.rating > 0 ? p.rating : fakeRating(p.prices[0].price);
-  const reviews = p.reviews > 0 ? p.reviews : fakeReviews(p.prices[0].price);
-  const name = cleanName(p.name, p.brand);
+var products = merged.map(function(p, i) {
+  var rating = p.rating > 0 ? p.rating : fakeRating(p.prices[0].price);
+  var reviews = p.reviews > 0 ? p.reviews : fakeReviews(p.prices[0].price);
+  var name = cleanName(p.name, p.brand);
 
   return {
     id: i + 1,
     brand: p.brand,
-    name,
+    name: name,
     category: p.category,
     categoryLabel: p.categoryLabel,
     skinType: skinDefaults[p.category] || ['normal'],
@@ -202,32 +193,34 @@ const products = merged.map((p, i) => {
     dupeOf: [],
     ingredients: [],
     ingredientWarnings: [],
-    source: p._site?.toLowerCase() || p.source || 'unknown',
+    source: (p._site || p.source || 'unknown').toLowerCase(),
     priceCount: p.prices.length,
   };
 });
 
 // ── Dosyaya yaz ──
-const siteCount = Object.entries(sourceCounts).filter(([,v]) => v > 0).length;
-const multiPriceCount = products.filter(p => p.prices.length > 1).length;
+var siteCount = Object.keys(sourceCounts).filter(function(k) { return sourceCounts[k] > 0; }).length;
+var multiPriceCount = products.filter(function(p) { return p.prices.length > 1; }).length;
 
-const js = \`// Beauté ürün verisi — \${products.length} ürün, \${siteCount} satıcı
-// Otomatik üretildi: \${new Date().toLocaleDateString('tr-TR')}
-// Çoklu fiyat: \${multiPriceCount} üründe birden fazla satıcı
-const products = \${JSON.stringify(products, null, 2)};
-\`;
+var header = '// Beaute urun verisi — ' + products.length + ' urun, ' + siteCount + ' satici\n';
+header += '// Otomatik uretildi: ' + new Date().toLocaleDateString('tr-TR') + '\n';
+header += '// Coklu fiyat: ' + multiPriceCount + ' urunde birden fazla satici\n';
+var js = header + 'const products = ' + JSON.stringify(products, null, 2) + ';\n';
 
 fs.writeFileSync(OUTPUT, js, 'utf8');
 
 // ── Özet ──
-console.log(\`\n✅ \${products.length} ürün → products-data.js\`);
-console.log(\`🏪 Satıcılar:\`);
-for (const [site, count] of Object.entries(sourceCounts)) {
-  console.log(\`   \${count > 0 ? '✅' : '⏭️'} \${site}: \${count}\`);
-}
-console.log(\`🔗 Çoklu fiyat: \${multiPriceCount} üründe\`);
+console.log('\n' + products.length + ' urun -> products-data.js');
+console.log('Saticilar:');
+Object.keys(sourceCounts).forEach(function(site) {
+  var count = sourceCounts[site];
+  console.log('   ' + (count > 0 ? 'OK' : 'ATLA') + ' ' + site + ': ' + count);
+});
+console.log('Coklu fiyat: ' + multiPriceCount + ' urunde');
 
-const cats = {};
-products.forEach(p => { cats[p.categoryLabel] = (cats[p.categoryLabel] || 0) + 1; });
-console.log(\`📂 Kategoriler:\`);
-Object.entries(cats).sort((a,b) => b[1]-a[1]).forEach(([k,v]) => console.log(\`   \${k}: \${v}\`));
+var cats = {};
+products.forEach(function(p) { cats[p.categoryLabel] = (cats[p.categoryLabel] || 0) + 1; });
+console.log('Kategoriler:');
+Object.keys(cats).sort(function(a,b) { return cats[b] - cats[a]; }).forEach(function(k) {
+  console.log('   ' + k + ': ' + cats[k]);
+});

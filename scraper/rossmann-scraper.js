@@ -13,21 +13,19 @@ const path = require('path');
 // -- AYARLAR -----------------------------------------------------------------
 const BASE_URL = 'https://www.rossmann.com.tr';
 const CATEGORIES = [
-  { name: 'fondoten',        url: '/makyaj/yuz/fondoten',            label: 'Fondoten' },
-  { name: 'maskara',         url: '/makyaj/goz-kas/maskara',         label: 'Maskara' },
-  { name: 'ruj',             url: '/makyaj/dudak/ruj',               label: 'Ruj' },
-  { name: 'far',             url: '/makyaj/goz-kas/goz-fari',        label: 'Goz Fari' },
-  { name: 'eyeliner',        url: '/makyaj/goz-kas/eyeliner',        label: 'Eyeliner' },
-  { name: 'goz-kalemi',      url: '/makyaj/goz-kas/goz-kalemi',      label: 'Goz Kalemi' },
-  { name: 'allik',           url: '/makyaj/yuz/allik',               label: 'Allik' },
-  { name: 'aydinlatici',     url: '/makyaj/yuz/aydinlatici',         label: 'Aydinlatici' },
-  { name: 'bronzer',         url: '/makyaj/yuz/bronzer',             label: 'Bronzer' },
-  { name: 'kontur',          url: '/makyaj/yuz/kontur',              label: 'Kontur' },
-  { name: 'kapatici',        url: '/makyaj/yuz/kapatici',            label: 'Kapatici' },
-  { name: 'primer',          url: '/makyaj/yuz/makyaj-bazi',         label: 'Primer' },
-  { name: 'pudra',           url: '/makyaj/yuz/pudra',               label: 'Pudra' },
-  { name: 'dudak-parlatici', url: '/makyaj/dudak/dudak-parlatici',   label: 'Dudak Parlatici' },
-  { name: 'dudak-kalemi',    url: '/makyaj/dudak/dudak-kalemi',      label: 'Dudak Kalemi' },
+  { name: 'fondoten',        url: '/makyaj/fondoten',                         label: 'Fondoten' },
+  { name: 'maskara',         url: '/makyaj/maskara-ve-rimel',                 label: 'Maskara' },
+  { name: 'ruj',             url: '/makyaj/ruj',                              label: 'Ruj' },
+  { name: 'far',             url: '/makyaj/far-paletleri',                    label: 'Goz Fari' },
+  { name: 'eyeliner',        url: '/makyaj/eyeliner',                         label: 'Eyeliner' },
+  { name: 'goz-kalemi',      url: '/makyaj/goz-kalemleri',                    label: 'Goz Kalemi' },
+  { name: 'allik',           url: '/makyaj/allik',                            label: 'Allik' },
+  { name: 'aydinlatici',     url: '/makyaj/highlighter-palettes-aydinlatici-paletler', label: 'Aydinlatici' },
+  { name: 'kapatici',        url: '/makyaj/concealer-kapatici',               label: 'Kapatici' },
+  { name: 'primer',          url: '/makyaj/baz-ve-sabitleyiciler',            label: 'Primer' },
+  { name: 'pudra',           url: '/makyaj/pudra',                            label: 'Pudra' },
+  { name: 'ruj-likit',       url: '/makyaj/likit-ruj',                        label: 'Ruj' },
+  { name: 'dudak-kalemi',    url: '/makyaj/dudak-kalemi',                     label: 'Dudak Kalemi' },
 ];
 
 // Alternate URL patterns to try if the primary URL returns 404
