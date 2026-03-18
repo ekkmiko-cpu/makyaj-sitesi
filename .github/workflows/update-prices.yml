@@ -1,8 +1,8 @@
-name: Fiyat Güncelle — Sephora TR
+name: Fiyat Güncelle — Tüm Satıcılar
 
 on:
   schedule:
-    - cron: '0 3,12,20 * * *'   # Günde 3 kez: 06:00, 15:00, 23:00 TR
+    - cron: '0 3 * * *'   # Her gün 06:00 TR (03:00 UTC)
   workflow_dispatch:
 
 env:
@@ -15,7 +15,7 @@ permissions:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Kodu çek
@@ -42,28 +42,10 @@ jobs:
         working-directory: scraper
         run: npx playwright install chrome --with-deps
 
-      - name: Sephora TR scrape et
+      - name: Tüm satıcıları scrape et
         working-directory: scraper
-        run: node sephora-scraper.js
-        timeout-minutes: 20
-
-      - name: Scraper sonucu kontrol et
-        run: |
-          if [ -f scraper/sephora-products.json ]; then
-            COUNT=$(node -e "console.log(require('./scraper/sephora-products.json').length)")
-            echo "Bulunan ürün: $COUNT"
-            if [ "$COUNT" -lt "10" ]; then
-              echo "HATA: Çok az ürün ($COUNT)."
-              exit 1
-            fi
-          else
-            echo "HATA: sephora-products.json oluşturulamadı!"
-            exit 1
-          fi
-
-      - name: products-data.js oluştur
-        working-directory: scraper
-        run: node generate-site-data.js
+        run: node run-all.js
+        timeout-minutes: 50
 
       - name: Değişiklik var mı kontrol et
         id: check
@@ -80,9 +62,8 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           TARIH=$(date +'%d.%m.%Y')
-          URUN=$(node -e "console.log(require('./scraper/sephora-products.json').length)")
-          git add products-data.js scraper/sephora-products.json
-          git commit -m "Fiyat guncellemesi — $TARIH ($URUN urun)"
+          git add products-data.js scraper/*-products.json
+          git commit -m "Fiyat guncellemesi — $TARIH"
           git push
 
       - name: Değişiklik yoksa bildir
