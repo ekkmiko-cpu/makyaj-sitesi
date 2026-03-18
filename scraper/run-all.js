@@ -11,7 +11,8 @@ const SCRAPERS = [
   { name: 'Sephora TR',  script: 'sephora-scraper.js',  output: 'sephora-products.json' },
   { name: 'Trendyol',    script: 'trendyol-scraper.js',  output: 'trendyol-products.json' },
   { name: 'Gratis',      script: 'gratis-scraper.js',    output: 'gratis-products.json' },
-  { name: 'Watsons',     script: 'watsons-scraper.js',   output: 'watsons-products.json' },
+  // Watsons: Bot korumasi (403) nedeniyle devre disi. Proxy gerektirir.
+  // { name: 'Watsons',     script: 'watsons-scraper.js',   output: 'watsons-products.json' },
   { name: 'Rossmann',    script: 'rossmann-scraper.js',  output: 'rossmann-products.json' },
 ];
 
