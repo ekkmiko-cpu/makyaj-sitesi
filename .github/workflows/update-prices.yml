@@ -1,0 +1,60 @@
+name: Fiyat Güncelle — Sephora TR
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'   # Her Pazartesi gece 03:00 UTC (sabah 06:00 TR)
+  workflow_dispatch:        # Elle de tetiklenebilir (GitHub UI'dan "Run workflow")
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Kodu çek
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Scraper bağımlılıklarını yükle
+        working-directory: scraper
+        run: npm install
+
+      - name: Playwright tarayıcısını yükle
+        working-directory: scraper
+        run: npx playwright install chromium --with-deps
+
+      - name: Sephora TR scrape et
+        working-directory: scraper
+        run: node sephora-scraper.js
+        timeout-minutes: 20
+
+      - name: products-data.js oluştur
+        working-directory: scraper
+        run: node generate-site-data.js
+
+      - name: Değişiklik var mı kontrol et
+        id: check
+        run: |
+          if git diff --quiet products-data.js; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Güncellemeyi commit et ve push yap
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          TARIH=$(date +'%d.%m.%Y')
+          git add products-data.js
+          git commit -m "Fiyat guncellemesi — $TARIH"
+          git push
+
+      - name: Değişiklik yoksa bildir
+        if: steps.check.outputs.changed == 'false'
+        run: echo "Fiyatlarda degisiklik yok, commit atlanıyor."
