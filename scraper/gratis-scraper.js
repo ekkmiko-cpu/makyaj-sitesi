@@ -30,7 +30,7 @@ const CATEGORIES = [
 ];
 const OUTPUT_FILE = path.join(__dirname, 'gratis-products.json');
 const DELAY_MS = 1500;
-const MAX_PAGES = 5;
+const MAX_PAGES = 1;
 const ID_START = 10000;
 // ----------------------------------------------------------------------------
 
@@ -55,62 +55,8 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
  * Returns an array (possibly empty) of product objects.
  */
 async function extractFromNextData(page, catName, catLabel) {
-  return page.evaluate(({ catName, catLabel }) => {
-    try {
-      const scriptEl = document.querySelector('script#__NEXT_DATA__');
-      if (!scriptEl) return [];
-      const data = JSON.parse(scriptEl.textContent);
-
-      // Navigate common Next.js commerce data paths
-      const pageProps = data?.props?.pageProps || {};
-      // Try multiple possible locations for the product list
-      const candidates = [
-        pageProps.products,
-        pageProps.initialData?.products,
-        pageProps.initialData?.searchResult?.products,
-        pageProps.categoryData?.products,
-        pageProps.plpData?.products,
-        pageProps.data?.products,
-        pageProps.searchResult?.products,
-      ];
-
-      let rawProducts = null;
-      for (const c of candidates) {
-        if (Array.isArray(c) && c.length > 0) {
-          rawProducts = c;
-          break;
-        }
-      }
-      if (!rawProducts) return [];
-
-      return rawProducts.map(p => {
-        const name = p.name || p.productName || p.title || '';
-        const brand = p.brand || p.brandName || p.manufacturer || '';
-        const price = parseFloat(p.price || p.salePrice || p.currentPrice || 0);
-        const imageUrl = p.image || p.imageUrl || p.img || p.thumbnailUrl || '';
-        const slug = p.url || p.slug || p.productUrl || '';
-        const productUrl = slug.startsWith('http') ? slug : (slug ? `https://www.gratis.com${slug.startsWith('/') ? '' : '/'}${slug}` : '');
-        const rating = parseFloat(p.rating || p.averageRating || 0) || 0;
-        const reviews = parseInt(p.reviewCount || p.ratingCount || p.numberOfReviews || 0) || 0;
-
-        if (!name) return null;
-        return {
-          name,
-          brand,
-          category: catName,
-          categoryLabel: catLabel,
-          price,
-          imageUrl,
-          productUrl,
-          rating: Math.round(rating * 10) / 10,
-          reviews,
-          source: 'gratis',
-        };
-      }).filter(Boolean);
-    } catch {
-      return [];
-    }
-  }, { catName, catLabel });
+  // Disabled Next.js block: it was extracting generic "trending" items across all pages
+  return [];
 }
 
 /**
@@ -136,12 +82,16 @@ async function extractFromDOM(page, catName, catLabel) {
 
       // Walk up to find the product card container
       let card = link;
+      let prevCard = link;
       for (let i = 0; i < 6; i++) {
-        if (card.parentElement) card = card.parentElement;
+        if (card.parentElement) {
+          prevCard = card;
+          card = card.parentElement;
+        }
         // Stop if we hit something that looks like a grid/list container
         if (card.children && card.children.length > 3 &&
             card.querySelectorAll('a[href*="-p-"]').length > 1) {
-          card = card.children[0]; // went too far, step back
+          card = prevCard; // The correct product card is the one we just traversed from!
           break;
         }
       }
@@ -197,7 +147,7 @@ async function extractFromDOM(page, catName, catLabel) {
       for (const el of allText) {
         const txt = el.textContent.trim();
         if (txt.includes('TL') && txt.length < 30) {
-          const cleaned = txt.replace(/[^\d,\.]/g, '').replace(',', '.');
+          const cleaned = txt.replace(/[^\d,]/g, '').replace(',', '.');
           const num = parseFloat(cleaned);
           if (num > 0 && num < 50000) {
             price = num;
@@ -206,14 +156,18 @@ async function extractFromDOM(page, catName, catLabel) {
         }
       }
 
-      // Image: prefer cdn.gratis.com images
+      // Image: prefer cdn.gratis.com images, prioritize lazy-loaded
       let imageUrl = '';
       const imgs = container.querySelectorAll('img');
       for (const img of imgs) {
-        const src = img.src || img.getAttribute('data-src') || img.getAttribute('data-lazy') || '';
+        const lazySrc = img.getAttribute('data-src') || img.getAttribute('data-lazy');
+        const src = lazySrc || img.src || '';
         if (src && (src.includes('gratis') || src.includes('cdn') || src.startsWith('http'))) {
-          imageUrl = src;
-          break;
+          // avoid 1x1 placeholder
+          if (!src.includes('data:image')) {
+            imageUrl = src;
+            break;
+          }
         }
       }
       // Also check srcset and picture source

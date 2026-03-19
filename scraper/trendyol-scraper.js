@@ -188,7 +188,7 @@ async function scrapeCategory(page, category) {
   // Sonra sayfayı scroll ederek DOM'dan daha fazla ürün yüklet
   let prevCount = 0;
   let sameCountRounds = 0;
-  const MAX_SCROLLS = 30; // en fazla 30 scroll
+  const MAX_SCROLLS = 3; // hizli test icin 3 scroll
 
   for (let s = 0; s < MAX_SCROLLS; s++) {
     await page.evaluate(() => window.scrollBy(0, window.innerHeight * 1.5));

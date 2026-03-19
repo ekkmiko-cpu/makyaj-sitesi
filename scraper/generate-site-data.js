@@ -690,8 +690,8 @@ console.log('\nToplam ham veri: ' + allRaw.length + ' urun');
 // ── Kalite filtresi: hatalı verileri temizle ──
 var beforeFilter = allRaw.length;
 allRaw = allRaw.filter(function(p) {
-  // 1. Fiyat 2 TL altı → hatalı scrape (Gratis 1.05 TL)
-  if (p.price > 0 && p.price < 2) return false;
+  // 1. Fiyat 5 TL altı → hatalı scrape (eski Gratis 1.05 TL hatası vb.)
+  if (p.price > 0 && p.price < 5) return false;
   // 2. Kategori sayfası başlıkları (ürün değil)
   if ((p.name || '').match(/\b(renkleri ve|markaları|fiyatları)\s+\d{4}\b/i)) return false;
   // 3. "Set", "Hediye Set" gibi çoklu ürün paketleri
@@ -963,18 +963,21 @@ var products = merged.map(function(p, i) {
   var reviews = p.reviews > 0 ? p.reviews : fakeReviews(p.prices[0].price);
   var name = cleanName(p.name, p.brand);
 
-  // En kaliteli görseli seç: kaynak önceliğine göre
+  // En kaliteli görseli seç: kaynak önceliğine göre ve çalışmayan görselleri ele
   var bestImage = '';
   for (var ip = 0; ip < IMAGE_PRIORITY.length; ip++) {
     var imgSite = IMAGE_PRIORITY[ip];
     // Önce base ürünün kendi görselini kontrol et
     if (p._site === imgSite) {
       bestImage = Array.isArray(p.imageUrl) ? (p.imageUrl[0] || '') : (p.imageUrl || '');
-      if (bestImage) break;
+      if (bestImage && !bestImage.includes('data:image') && !bestImage.includes('placeholder')) break;
+      bestImage = ''; // Eğer sadece placeholder varsa boşaltıp aramaya devam et
     }
     // Sonra eşleşen ürünlerin görsellerini kontrol et
     var priceEntry = p.prices.find(function(pr) { return pr.site === imgSite && pr.imageUrl; });
-    if (priceEntry && priceEntry.imageUrl) { bestImage = priceEntry.imageUrl; break; }
+    if (priceEntry && priceEntry.imageUrl && !priceEntry.imageUrl.includes('data:image') && !priceEntry.imageUrl.includes('placeholder')) {
+      bestImage = priceEntry.imageUrl; break;
+    }
   }
   if (!bestImage) bestImage = Array.isArray(p.imageUrl) ? (p.imageUrl[0] || '') : (p.imageUrl || '');
 

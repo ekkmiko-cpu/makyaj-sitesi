@@ -123,6 +123,7 @@ async function scrapeCategory(page, category) {
         hasMore = false;
       } else {
         startIdx += 48;
+        if (startIdx >= 48) hasMore = false; // Limit to 1 page for fast run
         await sleep(DELAY_MS);
       }
     } catch (err) {
