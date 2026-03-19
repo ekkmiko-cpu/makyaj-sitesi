@@ -25,9 +25,9 @@ const CATEGORIES = [
   { name: 'far-paleti', url: '/makyaj/goz/far-paleti-c258701/',               label: 'Far Paleti' },
   { name: 'eyeliner',   url: '/makyaj/goz/eyeliner-c7667/',                   label: 'Eyeliner' },
   { name: 'goz-kalemi', url: '/makyaj/goz/goz-kalemi-c365/',                  label: 'Göz Kalemi' },
-  { name: 'ruj',        url: '/makyaj/dudak/ruj-c369/',                       label: 'Ruj' },
-  { name: 'dudak-parlatici', url: '/makyaj/dudak/dudak-parlatici-c371/',      label: 'Dudak Parlatıcı' },
-  { name: 'dudak-kalemi',    url: '/makyaj/dudak/dudak-kalemi-c370/',         label: 'Dudak Kalemi' },
+  { name: 'ruj',        url: '/makyaj/dudak/ruj-c371/',                              label: 'Ruj' },
+  { name: 'dudak-parlatici', url: '/makyaj/dudak/lip-gloss-dudak-parlaticisi-c372/', label: 'Dudak Parlatıcı' },
+  { name: 'dudak-kalemi',    url: '/makyaj/dudak/dudak-kalemi-c373/',                label: 'Dudak Kalemi' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'sephora-products.json');
 const DELAY_MS = 1200;

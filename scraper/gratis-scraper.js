@@ -12,21 +12,21 @@ const path = require('path');
 // -- AYARLAR -----------------------------------------------------------------
 const BASE_URL = 'https://www.gratis.com';
 const CATEGORIES = [
-  { name: 'fondoten',         url: '/fondoten-c-50102/?prefn1=productMainCategory&prefv1=Fondöten',  label: 'Fondoten' },
-  { name: 'maskara',          url: '/maskara-c-50103/?prefn1=productMainCategory&prefv1=Maskara',    label: 'Maskara' },
-  { name: 'ruj',              url: '/ruj-c-50101/?prefn1=productMainCategory&prefv1=Ruj',            label: 'Ruj' },
-  { name: 'far',              url: '/goz-fari-c-50102/?prefn1=productMainCategory&prefv1=Göz+Farı',  label: 'Goz Fari' },
-  { name: 'far-paleti',       url: '/far-paleti-c-50102/',                                           label: 'Far Paleti' },
-  { name: 'eyeliner',         url: '/eyeliner-c-50102/?prefn1=productMainCategory&prefv1=Eyeliner',  label: 'Eyeliner' },
-  { name: 'goz-kalemi',       url: '/goz-kalemi-c-50102/',                                           label: 'Goz Kalemi' },
-  { name: 'allik',            url: '/allik-c-50103/?prefn1=productMainCategory&prefv1=Allık',        label: 'Allik' },
-  { name: 'aydinlatici',      url: '/aydinlatici-c-50103/',                                           label: 'Aydinlatici' },
-  { name: 'bronzer',          url: '/bronzer-c-50103/',                                               label: 'Bronzer' },
-  { name: 'kapatici',         url: '/kapatici-c-50103/',                                              label: 'Kapatici' },
-  { name: 'primer',           url: '/makyaj-bazi-c-50103/',                                           label: 'Primer' },
-  { name: 'pudra',            url: '/pudra-c-50103/',                                                 label: 'Pudra' },
-  { name: 'dudak-parlatici',  url: '/dudak-parlaticisi-c-50101/',                                     label: 'Dudak Parlatici' },
-  { name: 'dudak-kalemi',     url: '/dudak-kalemi-c-50101/',                                          label: 'Dudak Kalemi' },
+  { name: 'fondoten',         url: '/makyaj/fondoten-c-50102',              label: 'Fondoten' },
+  { name: 'maskara',          url: '/makyaj/maskara-c-50103',               label: 'Maskara' },
+  { name: 'ruj',              url: '/makyaj/ruj-c-50101',                   label: 'Ruj' },
+  { name: 'far',              url: '/makyaj/goz-fari-c-50102',              label: 'Goz Fari' },
+  { name: 'far-paleti',       url: '/makyaj/far-paleti-c-50102',            label: 'Far Paleti' },
+  { name: 'eyeliner',         url: '/makyaj/eyeliner-c-50102',              label: 'Eyeliner' },
+  { name: 'goz-kalemi',       url: '/makyaj/goz-kalemi-c-50102',            label: 'Goz Kalemi' },
+  { name: 'allik',            url: '/makyaj/allik-c-50103',                 label: 'Allik' },
+  { name: 'aydinlatici',      url: '/makyaj/aydinlatici-c-50103',           label: 'Aydinlatici' },
+  { name: 'bronzer',          url: '/makyaj/bronzer-c-50103',               label: 'Bronzer' },
+  { name: 'kapatici',         url: '/makyaj/kapatici-c-50103',              label: 'Kapatici' },
+  { name: 'primer',           url: '/makyaj/makyaj-bazi-c-50103',           label: 'Primer' },
+  { name: 'pudra',            url: '/makyaj/pudra-c-50103',                 label: 'Pudra' },
+  { name: 'dudak-parlatici',  url: '/makyaj/dudak-parlaticisi-c-50101',     label: 'Dudak Parlatici' },
+  { name: 'dudak-kalemi',     url: '/makyaj/dudak-kalemi-c-50101',          label: 'Dudak Kalemi' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'gratis-products.json');
 const DELAY_MS = 1500;
