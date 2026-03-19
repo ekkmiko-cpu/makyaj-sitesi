@@ -239,22 +239,27 @@ function normalizeNameForMatch(name, brand) {
 }
 
 // ── "Temel ürün adı" — renk/ton/numara bilgilerini çıkar ──
+// Akakçe mantığı: aynı ürünün farklı renklerini TEK ürün olarak grupla
 function coreProductName(name, brand) {
   var clean = (name || '').toLowerCase();
   if (brand) {
     var brandLower = brand.toLowerCase();
     clean = clean.replace(new RegExp(brandLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '');
   }
-  // Renk/ton kodlarını çıkar (örn: "013 Gorgeous Pink", "- 701 Matte Onyx", "No:25")
+  // Renk/ton kodlarını ve varyant bilgilerini çıkar
   clean = clean
-    .replace(/[-–]\s*\d+\s*.*/g, '')           // "- 701 Matte Onyx" kısmını sil
-    .replace(/\b\d{2,3}\s+[a-z]/g, '')          // "013 gorgeous" → sil
-    .replace(/\bno[:\s]*\d+/gi, '')             // "No:25" → sil
-    .replace(/\b\d+\s*(ml|gr|g|oz)\b/gi, '')    // "30 ml" → sil
-    .replace(/[^a-z0-9\sğüşıöç]/g, '')
+    .replace(/[-–]\s*\d{1,3}\s+[a-z].*$/g, '')  // "- 130 Light Beige" kısmını sil
+    .replace(/\b\d{2,3}\s+(light|dark|medium|soft|warm|cool|nude|beige|ivory|rose|golden|natural|honey|pure|sand|caramel|vanilla|cream|porcelain|tan|mocha|cocoa|toffee|amber|chestnut|mahogany|espresso|bronze|coral|pink|red|berry|plum|mauve|peach|apricot|cinnamon|sienna|almond|bisque|buff|linen|ecru|champagne|fawn|hazel|khaki|olive|sage|taupe|umber|wheat|bisque|burgundy|siyah|kahve|pembe|krem|bej|bal)\b.*/gi, '')
+    .replace(/\b(0[0-9]{1,2}|[1-9][0-9]{1,2})\s+[A-Z][a-z]+/g, '')  // "130 Light" pattern
+    .replace(/\bno[:\s]*\d+/gi, '')              // "No:25" → sil
+    .replace(/\b\d+\s*(ml|gr|g|oz|adet)\b/gi, '') // "30 ml", "1 adet" → sil
+    .replace(/\b\d{6,}/g, '')                     // Barkod numaraları (6+ digit) → sil
+    .replace(/\b(siyah|kahverengi|bordo|pembe|kırmızı|turuncu|mor|mavi|yeşil|bej|nude|black|brown|blue|red|pink|coral|berry|burgundy|nude|intense black|ekstra siyah)\b/gi, '')  // Renk isimleri → sil
+    .replace(/\b[0-9]{1,3}\s*$/g, '')             // Sondaki sayılar → sil
+    .replace(/[^a-z0-9\sğüşıöçâîû]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
-  // İlk 4-5 anlamlı kelimeyi tut (ürün tipi genelde burada)
+  // İlk 6 anlamlı kelimeyi tut (ürün tipi genelde burada)
   var words = clean.split(' ').filter(function(w) { return w.length > 2; });
   return words.slice(0, 6).join(' ');
 }
@@ -374,31 +379,81 @@ for (var s = 0; s < SOURCES.length; s++) {
 
 console.log('\nToplam ham veri: ' + allRaw.length + ' urun');
 
-// ── Ürünleri eşleştir ve birleştir ──
+// ══════════════════════════════════════════════════
+// ADIM 1: Aynı site içinde varyantları grupla (Akakçe ProductGroup mantığı)
+// Aynı marka + aynı kategori + aynı core isim → TEK ürün
+// ══════════════════════════════════════════════════
+var siteGroups = {};  // site -> { groupKey -> [products] }
+allRaw.forEach(function(p) {
+  if (!siteGroups[p._site]) siteGroups[p._site] = {};
+  var brand = normalizeBrand(p.brand);
+  var core = coreProductName(p.name, p.brand);
+  var cat = p.category;
+  var groupKey = brand + '|' + cat + '|' + core;
+  if (!siteGroups[p._site][groupKey]) siteGroups[p._site][groupKey] = [];
+  siteGroups[p._site][groupKey].push(p);
+});
+
+// Her grup için tek temsili ürün seç (en düşük fiyatlı veya en çok review'lı)
+var deduped = [];
+var variantStats = { totalGroups: 0, totalProducts: 0, mergedAway: 0 };
+Object.keys(siteGroups).forEach(function(site) {
+  var groups = siteGroups[site];
+  Object.keys(groups).forEach(function(key) {
+    var group = groups[key];
+    variantStats.totalGroups++;
+    variantStats.totalProducts += group.length;
+    if (group.length > 1) variantStats.mergedAway += group.length - 1;
+    // En düşük fiyatlı olanı temsili seç (0 TL olanları atla)
+    group.sort(function(a, b) {
+      var pa = a.price > 0 ? a.price : 999999;
+      var pb = b.price > 0 ? b.price : 999999;
+      return pa - pb;
+    });
+    var rep = group[0];
+    // Varyant bilgilerini sakla
+    rep._variantCount = group.length;
+    rep._variants = group.map(function(v) { return { name: v.name, price: v.price, url: v.productUrl }; });
+    // Min/max fiyat
+    var validPrices = group.filter(function(v) { return v.price > 0; }).map(function(v) { return v.price; });
+    if (validPrices.length > 0) {
+      rep._minPrice = Math.min.apply(null, validPrices);
+      rep._maxPrice = Math.max.apply(null, validPrices);
+    }
+    deduped.push(rep);
+  });
+});
+
+console.log('Varyant gruplama: ' + variantStats.totalProducts + ' urun -> ' + deduped.length + ' grup (' + variantStats.mergedAway + ' varyant birlestirildi)');
+
+// ══════════════════════════════════════════════════
+// ADIM 2: Siteler arası eşleştirme (farklı mağazaları karşılaştır)
+// ══════════════════════════════════════════════════
 var merged = [];
 var used = {};
 
-for (var i = 0; i < allRaw.length; i++) {
+for (var i = 0; i < deduped.length; i++) {
   if (used[i]) continue;
   used[i] = true;
 
-  var base = allRaw[i];
+  var base = deduped[i];
   var baseBrand = normalizeBrand(base.brand);
   var baseName = normalizeNameForMatch(base.name, base.brand);
   var baseCore = coreProductName(base.name, base.brand);
 
   var prices = [{
     site: base._site,
-    price: base.price,
+    price: base.price > 0 ? base.price : (base._minPrice || 0),
     url: base.productUrl,
+    variantCount: base._variantCount || 1,
   }];
 
   // En iyi eşleşmeyi bul (her farklı satıcı için)
   var candidatesBySite = {};
 
-  for (var j = i + 1; j < allRaw.length; j++) {
+  for (var j = i + 1; j < deduped.length; j++) {
     if (used[j]) continue;
-    var other = allRaw[j];
+    var other = deduped[j];
     if (other._site === base._site) continue;
 
     // Marka kontrolü — boş marka toleranslı
@@ -407,8 +462,7 @@ for (var i = 0; i < allRaw.length; i++) {
     if (baseBrand && otherBrand) {
       brandMatch = (baseBrand === otherBrand);
     } else if (!baseBrand || !otherBrand) {
-      // Marka boşsa isim içinde marka arayarak eşleştir
-      brandMatch = true; // isim benzerliğine bırak
+      brandMatch = true;
     }
     if (!brandMatch) continue;
 
@@ -418,12 +472,14 @@ for (var i = 0; i < allRaw.length; i++) {
     var otherName = normalizeNameForMatch(other.name, other.brand);
     var otherCore = coreProductName(other.name, other.brand);
 
-    // İki benzerlik skoru hesapla: tam isim ve temel isim
+    // Üç benzerlik skoru hesapla
     var simFull = similarity(baseName, otherName);
     var simCore = similarity(baseCore, otherCore);
-    var sim = Math.max(simFull, simCore);
+    // Bonus: core isimler tamamen aynıysa %100 eşleşme
+    var exactCore = (baseCore.length > 5 && baseCore === otherCore) ? 1.0 : 0;
+    var sim = Math.max(simFull, simCore, exactCore);
 
-    // Aynı kategori ise threshold düşük, farklı ama uyumlu kategori ise yüksek
+    // Threshold: aynı kategori düşük, farklı ama uyumlu yüksek
     var threshold = (base.category === other.category) ? 0.28 : 0.45;
     if (sim < threshold) continue;
 
@@ -440,10 +496,17 @@ for (var i = 0; i < allRaw.length; i++) {
     used[cand.idx] = true;
     prices.push({
       site: cand.other._site,
-      price: cand.other.price,
+      price: cand.other.price > 0 ? cand.other.price : (cand.other._minPrice || 0),
       url: cand.other.productUrl,
+      variantCount: cand.other._variantCount || 1,
     });
   });
+
+  // 0 TL fiyatları temizle (fiyat çekilememiş)
+  prices = prices.filter(function(p) { return p.price > 0; });
+  if (prices.length === 0) {
+    prices = [{ site: base._site, price: 0, url: base.productUrl, variantCount: 1 }];
+  }
 
   // Aynı satıcıdan gelen duplicate fiyatları kaldır (en düşüğü tut)
   var uniquePrices = [];
