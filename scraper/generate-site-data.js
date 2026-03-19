@@ -18,6 +18,15 @@ const SOURCES = [
   { file: 'rossmann-products.json', site: 'Rossmann' },
 ];
 
+// ── Trendyol barkodlarını yükle (trendyol-barcode-enricher.js tarafından üretilir) ──
+var trendyolBarcodes = {};
+var TRENDYOL_BARCODES_FILE = path.join(__dirname, 'trendyol-barcodes.json');
+if (fs.existsSync(TRENDYOL_BARCODES_FILE)) {
+  trendyolBarcodes = JSON.parse(fs.readFileSync(TRENDYOL_BARCODES_FILE, 'utf8'));
+  var bcCount = Object.values(trendyolBarcodes).filter(Boolean).length;
+  console.log('Trendyol barkod yüklendi: ' + bcCount + ' barkod');
+}
+
 // ── Kategori → skinType varsayılanları ──
 const skinDefaults = {
   fondoten:      ['normal', 'karma'],
@@ -256,6 +265,8 @@ function categoryCompatible(catA, catB) {
 // ── Ürün ismi normalizasyonu (eşleştirme için) ──
 function normalizeNameForMatch(name, brand) {
   var clean = (name || '').toLowerCase();
+  // Trendyol sponsored/reklam ürün işareti kaldır
+  clean = clean.replace(/^\*+/, '').trim();
   // Marka ismini ürün adından çıkar
   if (brand) {
     var brandLower = brand.toLowerCase();
@@ -434,13 +445,33 @@ function extractProductLine(name, brand) {
     'stay matte', 'lasting finish', 'the only one',
     // Benefit
     'precisely my brow', 'gimme brow', 'fan fest', 'bad gal',
-    'hoola', 'roller lash',
+    'hoola', 'roller lash', 'cookie', 'dandelion', 'cheeky',
+    'boi ing', 'real magnet', 'they re real', 'watt s up',
     // Charlotte Tilbury
     'pillow talk', 'airbrush flawless', 'magic away',
+    'beautiful skin', 'flawless filter', 'magic powder',
+    // Rare Beauty
+    'positive light', 'liquid touch', 'soft pinch', 'stay vulnerable',
+    'find comfort', 'kind words', 'with gratitude',
+    // NARS
+    'natural radiant', 'sheer glow', 'radiant creamy', 'soft matte complete',
+    'orgasm', 'laguna', 'blush',
+    // Urban Decay
+    'all nighter', 'naked', 'original', 'honey', 'vice',
+    // Fenty Beauty
+    'pro filtr', 'eaze drop', 'match stix', 'killawatt', 'gloss bomb',
+    // Lancôme / Lancome
+    'teint idole', 'miracle blur', 'hypnose', 'monsieur big',
+    'juicy tubes', 'absolu', 'maxi',
+    // Giorgio Armani
+    'luminous silk', 'designer lift', 'lip maestro',
     // Misc
     'air volume', 'mega length',
     'color elixir', 'rouge velvet',
     'brow this way',
+    // Essence / Catrice ekstra
+    'i love extreme', 'i love crazy', 'lash like wow', 'contouring',
+    'all about matt', 'sun glow',
   ];
   for (var i = 0; i < knownLines.length; i++) {
     if (clean.includes(knownLines[i])) return knownLines[i];
@@ -620,6 +651,8 @@ for (var s = 0; s < SOURCES.length; s++) {
     var tagged = data.map(function(p) {
       var brand = p.brand;
       var name = p.name;
+      // Trendyol sponsored ürün işaretlerini temizle (* prefix)
+      if (name && name.startsWith('*')) name = name.replace(/^\*+/, '').trim();
       // Marka boşsa ürün adından çıkar
       if (!brand || brand.trim() === '') {
         var extracted = extractBrandFromName(name);
@@ -629,12 +662,18 @@ for (var s = 0; s < SOURCES.length; s++) {
       // Kategori düzeltmesi: ürün adına bakarak yanlış kategorileri düzelt
       var correctedCat = normalizeCategoryName(p.category);
       correctedCat = correctCategoryByName(p.name, correctedCat);
+      // Trendyol ürünleri için barkod ekle (trendyol-barcodes.json'dan)
+      var barcode = p.barcode || '';
+      if (src.site === 'Trendyol' && p.id && trendyolBarcodes[p.id]) {
+        barcode = trendyolBarcodes[p.id];
+      }
       return Object.assign({}, p, {
         brand: brand,
         name: name,
         _site: src.site,
         category: correctedCat,
         categoryLabel: normalizeCategoryLabel(p.categoryLabel),
+        barcode: barcode,
       });
     });
     allRaw = allRaw.concat(tagged);
@@ -769,6 +808,7 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
     price: base.price > 0 ? base.price : (base._minPrice || 0),
     url: base.productUrl,
     variantCount: base._variantCount || 1,
+    imageUrl: Array.isArray(base.imageUrl) ? (base.imageUrl[0] || '') : (base.imageUrl || ''),
   }];
 
   for (var s = 1; s < sites.length; s++) {
@@ -779,6 +819,7 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
       price: entry.p.price > 0 ? entry.p.price : (entry.p._minPrice || 0),
       url: entry.p.productUrl,
       variantCount: entry.p._variantCount || 1,
+      imageUrl: Array.isArray(entry.p.imageUrl) ? (entry.p.imageUrl[0] || '') : (entry.p.imageUrl || ''),
     });
     barcodeMatchCount++;
   }
@@ -809,6 +850,7 @@ for (var i = 0; i < deduped.length; i++) {
     price: base.price > 0 ? base.price : (base._minPrice || 0),
     url: base.productUrl,
     variantCount: base._variantCount || 1,
+    imageUrl: Array.isArray(base.imageUrl) ? (base.imageUrl[0] || '') : (base.imageUrl || ''),
   }];
 
   // En iyi eşleşmeyi her satıcı için bul
@@ -869,6 +911,7 @@ for (var i = 0; i < deduped.length; i++) {
       price: cand.other.price > 0 ? cand.other.price : (cand.other._minPrice || 0),
       url: cand.other.productUrl,
       variantCount: cand.other._variantCount || 1,
+      imageUrl: Array.isArray(cand.other.imageUrl) ? (cand.other.imageUrl[0] || '') : (cand.other.imageUrl || ''),
     });
     namingMatchCount++;
   });
@@ -879,12 +922,12 @@ for (var i = 0; i < deduped.length; i++) {
     prices = [{ site: base._site, price: 0, url: base.productUrl, variantCount: 1 }];
   }
 
-  // Fiyat oranı kontrolü: 10x'den fazla fark → yanlış eşleşme (threshold düşürdük)
+  // Fiyat oranı kontrolü: isim tabanlı eşleşmede 4x'den fazla fark → yanlış eşleşme
   if (prices.length >= 2) {
     var sortedP = prices.slice().sort(function(a, b) { return a.price - b.price; });
     var maxRatio = sortedP[sortedP.length - 1].price / sortedP[0].price;
-    if (maxRatio >= 10) {
-      // Fiyat farkı 10x'den fazlaysa isim eşleşmesi hatalı — tek fiyatı tut
+    if (maxRatio >= 4) {
+      // Fiyat farkı 4x'den fazlaysa isim eşleşmesi hatalı — en yüksek fiyatlı (muhtemelen orijinal) tut
       prices = [sortedP[sortedP.length - 1]];
     }
   }
@@ -912,10 +955,33 @@ console.log('Isim tabanlı eslestirme: ' + namingMatchCount + ' ek satici eslest
 console.log('Eslestirme sonucu: ' + merged.length + ' benzersiz urun (' + allRaw.length + ' ham veriden)');
 
 // ── Final ürün listesini oluştur ──
+// Görsel kaynak önceliği: Sephora > Trendyol > Gratis > Watsons > Rossmann
+var IMAGE_PRIORITY = ['Sephora', 'Trendyol', 'Gratis', 'Watsons', 'Rossmann'];
+
 var products = merged.map(function(p, i) {
   var rating = p.rating > 0 ? p.rating : fakeRating(p.prices[0].price);
   var reviews = p.reviews > 0 ? p.reviews : fakeReviews(p.prices[0].price);
   var name = cleanName(p.name, p.brand);
+
+  // En kaliteli görseli seç: kaynak önceliğine göre
+  var bestImage = '';
+  for (var ip = 0; ip < IMAGE_PRIORITY.length; ip++) {
+    var imgSite = IMAGE_PRIORITY[ip];
+    // Önce base ürünün kendi görselini kontrol et
+    if (p._site === imgSite) {
+      bestImage = Array.isArray(p.imageUrl) ? (p.imageUrl[0] || '') : (p.imageUrl || '');
+      if (bestImage) break;
+    }
+    // Sonra eşleşen ürünlerin görsellerini kontrol et
+    var priceEntry = p.prices.find(function(pr) { return pr.site === imgSite && pr.imageUrl; });
+    if (priceEntry && priceEntry.imageUrl) { bestImage = priceEntry.imageUrl; break; }
+  }
+  if (!bestImage) bestImage = Array.isArray(p.imageUrl) ? (p.imageUrl[0] || '') : (p.imageUrl || '');
+
+  // prices array'den imageUrl'yi temizle (final data'da gereksiz)
+  var cleanPrices = p.prices.map(function(pr) {
+    return { site: pr.site, price: pr.price, url: pr.url, variantCount: pr.variantCount };
+  });
 
   return {
     id: i + 1,
@@ -925,10 +991,10 @@ var products = merged.map(function(p, i) {
     categoryLabel: p.categoryLabel,
     skinType: skinDefaults[p.category] || ['normal'],
     shades: [],
-    prices: p.prices,
+    prices: cleanPrices,
     rating: +parseFloat(rating).toFixed(1),
     reviews: Math.round(reviews),
-    imageUrl: Array.isArray(p.imageUrl) ? (p.imageUrl[0] || '') : (p.imageUrl || ''),
+    imageUrl: bestImage,
     productUrl: p.productUrl,
     desc: p.desc || '',
     trending: rating >= 4.7,
