@@ -229,6 +229,30 @@
     .card-seller-count.single { background: rgba(201,169,110,0.08); color: var(--gold); border-color: rgba(201,169,110,0.25); }
     .card-savings { font-size: 9px; color: #2a7a3b; font-weight: 500; letter-spacing: 0.5px; margin-top: 2px; }
 
+    /* ── AKAKÇE-STYLE MINI PRICE BARS ── */
+    .card-price-bars { display: flex; flex-direction: column; gap: 3px; margin-top: 6px; width: 100%; }
+    .card-price-bar-row { display: flex; align-items: center; gap: 6px; }
+    .card-price-bar-site { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--text3); width: 52px; flex-shrink: 0; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .card-price-bar-track { flex: 1; height: 6px; background: var(--bg2); border-radius: 3px; overflow: hidden; position: relative; }
+    .card-price-bar-fill { height: 100%; border-radius: 3px; transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); min-width: 8px; }
+    .card-price-bar-fill.cheapest { background: linear-gradient(90deg, #2a7a3b, #4caf50); }
+    .card-price-bar-fill.expensive { background: linear-gradient(90deg, #e8a87c, #d4876c); }
+    .card-price-bar-amount { font-size: 9px; color: var(--text2); width: 48px; flex-shrink: 0; font-weight: 500; }
+    .card-price-bar-amount.cheapest { color: #2a7a3b; font-weight: 600; }
+
+    /* ── SAVINGS BADGE (card top-right) ── */
+    .card-savings-badge { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); z-index: 5; font-size: 9px; font-weight: 600; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 2px; background: linear-gradient(135deg, #2a7a3b, #388e3c); color: #fff; pointer-events: none; white-space: nowrap; box-shadow: 0 2px 8px rgba(42,122,59,0.3); }
+    html.dark .card-savings-badge { background: linear-gradient(135deg, #1b5e20, #2e7d32); }
+
+    /* ── STORE LOGO DOTS ── */
+    .card-store-dots { display: flex; gap: 3px; margin-top: 3px; }
+    .card-store-dot { width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 6px; font-weight: 700; letter-spacing: 0; text-transform: uppercase; color: #fff; flex-shrink: 0; }
+    .card-store-dot.sephora { background: #000; }
+    .card-store-dot.trendyol { background: #f27a1a; }
+    .card-store-dot.rossmann { background: #e30613; }
+    .card-store-dot.gratis { background: #e91e63; }
+    .card-store-dot.watsons { background: #00a651; }
+
     /* ── BADGES ── */
     .card-badges { display: flex; gap: 4px; flex-wrap: wrap; }
     .badge { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 6px; border-radius: 2px; font-family: 'Jost', sans-serif; }
@@ -293,8 +317,19 @@
     .price-row-rank { width: 24px; font-size: 11px; color: var(--text3); font-weight: 500; flex-shrink: 0; }
     .price-row.best-price .price-row-rank { color: #2a7a3b; }
     .price-row-site { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-    .price-row-site-name { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--text); font-weight: 500; }
+    .price-row-site-name { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--text); font-weight: 500; display: flex; align-items: center; gap: 6px; }
+    .price-row-site-logo { width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 700; color: #fff; flex-shrink: 0; }
+    .price-row-site-logo.sephora { background: #000; }
+    .price-row-site-logo.trendyol { background: #f27a1a; }
+    .price-row-site-logo.rossmann { background: #e30613; }
+    .price-row-site-logo.gratis { background: #e91e63; }
+    .price-row-site-logo.watsons { background: #00a651; }
     .price-row-site-info { font-size: 9px; color: var(--text3); letter-spacing: 0.5px; }
+    .price-row-bar { flex: 0 0 80px; height: 5px; background: var(--bg2); border-radius: 3px; overflow: hidden; margin-right: 10px; }
+    .price-row-bar-fill { height: 100%; border-radius: 3px; }
+    .price-row-bar-fill.cheapest { background: #2a7a3b; }
+    .price-row-bar-fill.mid { background: #f0ad4e; }
+    .price-row-bar-fill.expensive { background: #c0392b; }
     .price-row-badge { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: #fff; background: #2a7a3b; padding: 3px 8px; border-radius: 2px; margin-right: 12px; font-weight: 500; }
     .price-row-diff { font-size: 10px; color: var(--text3); margin-right: 12px; }
     .price-row-diff.more { color: #c0392b; }
@@ -1162,6 +1197,14 @@ function render() {
             onclick="event.stopPropagation();toggleSelect(${p.id})"
             title="Karşılaştırmaya ekle">${isSel ? '✓' : ''}</div>
           ${isDupe ? '<span class="badge-dupe-card">Dupe</span>' : ''}
+          ${p.prices.length > 1 ? (() => {
+            const prs = p.prices.filter(pr=>pr.price>0);
+            if (prs.length < 2) return '';
+            const lo = Math.min(...prs.map(pr=>pr.price));
+            const hi = Math.max(...prs.map(pr=>pr.price));
+            const pct = hi > 0 ? Math.round(((hi - lo) / hi) * 100) : 0;
+            return pct > 5 ? '<span class="card-savings-badge">%' + pct + ' tasarruf</span>' : '';
+          })() : ''}
         </div>
         <div class="card-body">
           <div>
@@ -1172,12 +1215,33 @@ function render() {
           <span class="card-category">${p.category}</span>
           <div class="card-stars">${stars(p.rating)}<span class="star-count">${p.rating} · ${p.reviews.toLocaleString('tr-TR')} yorum</span></div>
           <div class="card-bottom">
-            <div>
-              <div class="card-price">₺${mp.toLocaleString('tr-TR')}</div>
+            <div style="width:100%">
               ${p.prices.length > 1
-                ? `<div class="card-price-range">₺${mp.toLocaleString('tr-TR')} — ₺${Math.max(...p.prices.map(pr=>pr.price)).toLocaleString('tr-TR')}</div>
-                   <span class="card-seller-count">${p.prices.length} satıcıda${(() => { const maxP = Math.max(...p.prices.map(pr=>pr.price)); const save = maxP - mp; return save > 0 ? ' · ₺' + save.toLocaleString('tr-TR') + ' tasarruf' : ''; })()}</span>`
-                : `<div class="card-price-sub">${p.prices[0].site}</div>
+                ? (() => {
+                    const sorted = [...p.prices].filter(pr=>pr.price>0).sort((a,b)=>a.price-b.price);
+                    const maxP = sorted[sorted.length-1].price;
+                    const save = maxP - mp;
+                    const savePct = maxP > 0 ? Math.round((save / maxP) * 100) : 0;
+                    return `
+                      <div style="display:flex;align-items:baseline;gap:6px">
+                        <div class="card-price" style="color:#2a7a3b">₺${mp.toLocaleString('tr-TR')}</div>
+                        <span style="font-size:10px;color:var(--text3);text-decoration:line-through">₺${maxP.toLocaleString('tr-TR')}</span>
+                      </div>
+                      <div class="card-price-bars">
+                        ${sorted.map((pr, idx) => {
+                          const pct = maxP > 0 ? Math.round((pr.price / maxP) * 100) : 100;
+                          return '<div class="card-price-bar-row">' +
+                            '<span class="card-price-bar-site">' + pr.site + '</span>' +
+                            '<div class="card-price-bar-track"><div class="card-price-bar-fill ' + (idx === 0 ? 'cheapest' : 'expensive') + '" style="width:' + pct + '%"></div></div>' +
+                            '<span class="card-price-bar-amount' + (idx === 0 ? ' cheapest' : '') + '">₺' + pr.price.toLocaleString('tr-TR') + '</span>' +
+                          '</div>';
+                        }).join('')}
+                      </div>
+                      <span class="card-seller-count">${sorted.length} satıcı · ₺${save.toLocaleString('tr-TR')} tasarruf (%${savePct})</span>
+                    `;
+                  })()
+                : `<div class="card-price">₺${mp.toLocaleString('tr-TR')}</div>
+                   <div class="card-price-sub">${p.prices[0].site}</div>
                    <span class="card-seller-count single">1 satıcı</span>`
               }
             </div>
@@ -1347,9 +1411,13 @@ function openDetail(id) {
           <div class="price-row${pr.price === best ? ' best-price' : ''}">
             <span class="price-row-rank">${idx + 1}.</span>
             <div class="price-row-site">
-              <span class="price-row-site-name">${pr.site}</span>
-              <span class="price-row-site-info">Güncel fiyat</span>
+              <span class="price-row-site-name">
+                <span class="price-row-site-logo ${pr.site.toLowerCase()}">${pr.site.charAt(0)}</span>
+                ${pr.site}
+              </span>
+              <span class="price-row-site-info">${pr.price === best ? '✓ En uygun fiyat' : 'Güncel fiyat'}</span>
             </div>
+            <div class="price-row-bar"><div class="price-row-bar-fill ${pr.price === best ? 'cheapest' : diff / best > 0.3 ? 'expensive' : 'mid'}" style="width:${best > 0 ? Math.round((best / pr.price) * 100) : 100}%"></div></div>
             ${pr.price === best ? '<span class="price-row-badge">En Ucuz</span>' : diff > 0 ? '<span class="price-row-diff more">+₺' + diff.toLocaleString('tr-TR') + ' (%' + diffPct + ')</span>' : ''}
             <span class="price-row-amount">₺${pr.price.toLocaleString('tr-TR')}</span>
             <a href="${pr.url}" class="buy-btn" target="_blank" rel="noopener">Satın Al →</a>
