@@ -690,8 +690,8 @@ console.log('\nToplam ham veri: ' + allRaw.length + ' urun');
 // ── Kalite filtresi: hatalı verileri temizle ──
 var beforeFilter = allRaw.length;
 allRaw = allRaw.filter(function(p) {
-  // 1. Fiyat 5 TL altı → hatalı scrape (eski Gratis 1.05 TL hatası vb.)
-  if (p.price > 0 && p.price < 5) return false;
+  // 1. Fiyat 5 TL altı (0 TL dahil) hatalı scrape
+  if (p.price < 5) return false;
   // 2. Kategori sayfası başlıkları (ürün değil)
   if ((p.name || '').match(/\b(renkleri ve|markaları|fiyatları)\s+\d{4}\b/i)) return false;
   // 3. "Set", "Hediye Set" gibi çoklu ürün paketleri
@@ -824,6 +824,16 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
     barcodeMatchCount++;
   }
 
+  // Uçurum fiyatlı (dropshipper) satıcıları filtrele (en düşük fiyatın 3 katından pahalıysa çıkar)
+  if (prices.length >= 2) {
+    prices.sort(function(a, b) { return a.price - b.price; });
+    var validPrices = [prices[0]];
+    for (var k = 1; k < prices.length; k++) {
+      if (prices[k].price / prices[0].price <= 3) validPrices.push(prices[k]);
+    }
+    prices = validPrices;
+  }
+
   merged.push(Object.assign({}, base, { prices: prices, _matchCount: prices.length, _matchMethod: 'barcode' }));
 });
 
@@ -922,14 +932,14 @@ for (var i = 0; i < deduped.length; i++) {
     prices = [{ site: base._site, price: 0, url: base.productUrl, variantCount: 1 }];
   }
 
-  // Fiyat oranı kontrolü: isim tabanlı eşleşmede 4x'den fazla fark → yanlış eşleşme
+  // Fiyat uçurum kontrolü: Çok pahalı satıcıları (3x) hatalı eşleşme say, en iyi fiyatları tut
   if (prices.length >= 2) {
-    var sortedP = prices.slice().sort(function(a, b) { return a.price - b.price; });
-    var maxRatio = sortedP[sortedP.length - 1].price / sortedP[0].price;
-    if (maxRatio >= 4) {
-      // Fiyat farkı 4x'den fazlaysa isim eşleşmesi hatalı — en yüksek fiyatlı (muhtemelen orijinal) tut
-      prices = [sortedP[sortedP.length - 1]];
+    prices.sort(function(a, b) { return a.price - b.price; });
+    var validPrices = [prices[0]];
+    for (var k = 1; k < prices.length; k++) {
+      if (prices[k].price / prices[0].price <= 3) validPrices.push(prices[k]);
     }
+    prices = validPrices;
   }
 
   // Aynı satıcıdan duplicate fiyatları kaldır (en düşüğü tut)
