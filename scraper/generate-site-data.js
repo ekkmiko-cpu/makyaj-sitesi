@@ -36,6 +36,8 @@ const skinDefaults = {
   ruj:           ['kuru', 'normal'],
   'dudak-parlatici': ['kuru', 'normal'],
   'dudak-kalemi':    ['normal', 'karma'],
+  'kas':             ['normal', 'karma'],
+  'bronzer':         ['normal', 'karma'],
 };
 
 // ── Kategori label normalizasyonu (Türkçe karakter birleştirme) ──
@@ -65,6 +67,9 @@ var categoryLabelMap = {
   'Dudak Parlatıcı': 'Dudak Parlatıcı',
   'Dudak Kalemi': 'Dudak Kalemi',
   'Kas Makyaji': 'Kaş Makyajı',
+  'Kaş Makyajı': 'Kaş Makyajı',
+  'Dudak Parlatici': 'Dudak Parlatıcı',
+  'Kontur': 'Kontür',
 };
 
 function normalizeCategoryLabel(label) {
@@ -91,6 +96,8 @@ var categoryNameMap = {
   'dudak-parlatici': 'dudak-parlatici',
   'dudak-kalemi': 'dudak-kalemi',
   'kas': 'kas',
+  'bronzer': 'bronzer',
+  'kontur': 'kontur',
 };
 
 function normalizeCategoryName(name) {
@@ -132,6 +139,45 @@ var brandAliases = {
   'FARMASI': 'FARMASI',
   'PASTEL': 'PASTEL',
   'PASTEL PROFASHION': 'PASTEL',
+  'SHOW BY PASTEL': 'PASTEL',
+  'REVOLUTION': 'REVOLUTION',
+  'REVOLUTION PRO': 'REVOLUTION',
+  'MAKEUP REVOLUTION': 'REVOLUTION',
+  'WET N WLD': 'WET N WILD',
+  'WET N WILD': 'WET N WILD',
+  'LOREAL': 'LOREAL PARIS',
+  'L OREAL': 'LOREAL PARIS',
+  'MISSHA': 'MISSHA',
+  'KIKO': 'KIKO',
+  'KIKO MILANO': 'KIKO',
+  'PIERRE CARDIN': 'PIERRE CARDIN',
+  'CATHERINE ARLEY': 'CATHERINE ARLEY',
+  'THE PUREST SOLUTIONS': 'THE PUREST SOLUTIONS',
+  'YVES ROCHER': 'YVES ROCHER',
+  'NIVEA': 'NIVEA',
+  'SHISEIDO': 'SHISEIDO',
+  'LANCOME': 'LANCOME',
+  'LANCME': 'LANCOME',
+  'GUERLAIN': 'GUERLAIN',
+  'ARMANI': 'ARMANI',
+  'GIORGIO ARMANI': 'ARMANI',
+  'YSL': 'YSL',
+  'YVES SAINT LAURENT': 'YSL',
+  'SISLEY': 'SISLEY',
+  'GIVENCHY': 'GIVENCHY',
+  'VALENTINO': 'VALENTINO',
+  'HUDA BEAUTY': 'HUDA BEAUTY',
+  'RARE BEAUTY': 'RARE BEAUTY',
+  'TARTE': 'TARTE',
+  'SEPHORA COLLECTION': 'SEPHORA COLLECTION',
+  'SEPHORA': 'SEPHORA COLLECTION',
+  'HOURGLASS': 'HOURGLASS',
+  'BELL': 'BELL',
+  'GABRINI': 'GABRINI',
+  'CALLISTA': 'CALLISTA',
+  'NASCITA': 'NASCITA',
+  'NOTE': 'NOTE',
+  'NOTE COSMETICS': 'NOTE',
 };
 
 function normalizeBrand(brand) {
@@ -149,13 +195,68 @@ function normalizeBrand(brand) {
   return brandAliases[clean] || clean;
 }
 
+// ── Kategori grupları (benzer kategoriler eşleşebilir) ──
+var categoryGroups = {
+  'fondoten': 'yuz',
+  'kapatici': 'yuz',
+  'primer': 'yuz',
+  'pudra': 'yuz',
+  'bronzer': 'yuz',
+  'kontur': 'yuz',
+  'allik': 'yanak',
+  'aydinlatici': 'yanak',
+  'maskara': 'goz',
+  'far': 'goz',
+  'far-paleti': 'goz',
+  'eyeliner': 'goz',
+  'goz-kalemi': 'goz',
+  'ruj': 'dudak',
+  'dudak-parlatici': 'dudak',
+  'dudak-kalemi': 'dudak',
+  'kas': 'kas',
+};
+
+function categoryCompatible(catA, catB) {
+  if (catA === catB) return true;
+  var groupA = categoryGroups[catA];
+  var groupB = categoryGroups[catB];
+  return groupA && groupB && groupA === groupB;
+}
+
 // ── Ürün ismi normalizasyonu (eşleştirme için) ──
-function normalizeNameForMatch(name) {
-  return (name || '')
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, '')
+function normalizeNameForMatch(name, brand) {
+  var clean = (name || '').toLowerCase();
+  // Marka ismini ürün adından çıkar
+  if (brand) {
+    var brandLower = brand.toLowerCase();
+    clean = clean.replace(new RegExp(brandLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '');
+  }
+  return clean
+    .replace(/[^a-z0-9\sğüşıöç]/g, '')
+    .replace(/\b(adet|ml|gr|spf|no|numara|1|2|3|4|5)\b/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+// ── "Temel ürün adı" — renk/ton/numara bilgilerini çıkar ──
+function coreProductName(name, brand) {
+  var clean = (name || '').toLowerCase();
+  if (brand) {
+    var brandLower = brand.toLowerCase();
+    clean = clean.replace(new RegExp(brandLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '');
+  }
+  // Renk/ton kodlarını çıkar (örn: "013 Gorgeous Pink", "- 701 Matte Onyx", "No:25")
+  clean = clean
+    .replace(/[-–]\s*\d+\s*.*/g, '')           // "- 701 Matte Onyx" kısmını sil
+    .replace(/\b\d{2,3}\s+[a-z]/g, '')          // "013 gorgeous" → sil
+    .replace(/\bno[:\s]*\d+/gi, '')             // "No:25" → sil
+    .replace(/\b\d+\s*(ml|gr|g|oz)\b/gi, '')    // "30 ml" → sil
+    .replace(/[^a-z0-9\sğüşıöç]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  // İlk 4-5 anlamlı kelimeyi tut (ürün tipi genelde burada)
+  var words = clean.split(' ').filter(function(w) { return w.length > 2; });
+  return words.slice(0, 6).join(' ');
 }
 
 // ── İsim benzerliği (basit Jaccard) ──
@@ -193,6 +294,39 @@ function fakeReviews(price) {
   return Math.floor(200 + Math.random() * 3000);
 }
 
+// ── Bilinen markalar listesi (ürün adından marka çıkarmak için) ──
+var knownBrands = [
+  'Maybelline New York', 'Maybelline', 'L\'Oreal Paris', 'L\'Oréal Paris',
+  'Flormar', 'Golden Rose', 'Essence', 'Catrice', 'NOTE', 'Pastel',
+  'NYX Professional Makeup', 'NYX', 'MAC', 'Clinique', 'Estee Lauder',
+  'Benefit', 'NARS', 'Dior', 'Charlotte Tilbury', 'Fenty Beauty',
+  'Bobbi Brown', 'Urban Decay', 'Too Faced', 'Inglot', 'Farmasi',
+  'Pupa', 'Revolution', 'Wet n Wild', 'Revlon', 'Rimmel',
+  'Shiseido', 'Armani', 'Lancome', 'Lancôme', 'Guerlain',
+  'rom&nd', 'Astra', 'Influence Beauty', 'Mixup', 'Sephora Collection',
+  'Huda Beauty', 'Rare Beauty', 'Pixi', 'Kosas', 'Tarte',
+  'Make Up For Ever', 'Sisley', 'Clarins', 'Givenchy', 'YSL',
+  'Yves Saint Laurent', 'Valentino', 'Dolce & Gabbana',
+  'Anastasia Beverly Hills', 'Nudestix', 'Milk Makeup',
+  'Kiko', 'Pierre Cardin', 'Catherine Arley', 'Bell',
+  'Callista', 'Isana', 'Alterra', 'Rival de Loop',
+].sort(function(a, b) { return b.length - a.length; }); // En uzun önce (greedy match)
+
+function extractBrandFromName(name) {
+  if (!name) return { brand: '', cleanName: name };
+  var nameLower = name.toLowerCase();
+  for (var i = 0; i < knownBrands.length; i++) {
+    var b = knownBrands[i];
+    var bLower = b.toLowerCase();
+    if (nameLower.startsWith(bLower + ' ') || nameLower.startsWith(bLower + ',') || nameLower.includes(bLower)) {
+      var cleanName = name.replace(new RegExp(b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), '').trim();
+      cleanName = cleanName.replace(/^[-–,\s]+/, '').trim();
+      return { brand: b, cleanName: cleanName };
+    }
+  }
+  return { brand: '', cleanName: name };
+}
+
 // ── Tüm kaynaklardan verileri yükle ──
 var allRaw = [];
 var sourceCounts = {};
@@ -213,7 +347,17 @@ for (var s = 0; s < SOURCES.length; s++) {
       continue;
     }
     var tagged = data.map(function(p) {
+      var brand = p.brand;
+      var name = p.name;
+      // Marka boşsa ürün adından çıkar
+      if (!brand || brand.trim() === '') {
+        var extracted = extractBrandFromName(name);
+        brand = extracted.brand;
+        if (brand) name = extracted.cleanName;
+      }
       return Object.assign({}, p, {
+        brand: brand,
+        name: name,
         _site: src.site,
         category: normalizeCategoryName(p.category),
         categoryLabel: normalizeCategoryLabel(p.categoryLabel),
@@ -240,7 +384,8 @@ for (var i = 0; i < allRaw.length; i++) {
 
   var base = allRaw[i];
   var baseBrand = normalizeBrand(base.brand);
-  var baseName = normalizeNameForMatch(base.name);
+  var baseName = normalizeNameForMatch(base.name, base.brand);
+  var baseCore = coreProductName(base.name, base.brand);
 
   var prices = [{
     site: base._site,
@@ -248,23 +393,57 @@ for (var i = 0; i < allRaw.length; i++) {
     url: base.productUrl,
   }];
 
+  // En iyi eşleşmeyi bul (her farklı satıcı için)
+  var candidatesBySite = {};
+
   for (var j = i + 1; j < allRaw.length; j++) {
     if (used[j]) continue;
     var other = allRaw[j];
     if (other._site === base._site) continue;
-    if (other.category !== base.category) continue;
+
+    // Marka kontrolü — boş marka toleranslı
     var otherBrand = normalizeBrand(other.brand);
-    if (baseBrand !== otherBrand) continue;
-    var otherName = normalizeNameForMatch(other.name);
-    var sim = similarity(baseName, otherName);
-    if (sim < 0.35) continue;
-    used[j] = true;
-    prices.push({
-      site: other._site,
-      price: other.price,
-      url: other.productUrl,
-    });
+    var brandMatch = false;
+    if (baseBrand && otherBrand) {
+      brandMatch = (baseBrand === otherBrand);
+    } else if (!baseBrand || !otherBrand) {
+      // Marka boşsa isim içinde marka arayarak eşleştir
+      brandMatch = true; // isim benzerliğine bırak
+    }
+    if (!brandMatch) continue;
+
+    // Kategori kontrolü — aynı grup yeterli
+    if (!categoryCompatible(base.category, other.category)) continue;
+
+    var otherName = normalizeNameForMatch(other.name, other.brand);
+    var otherCore = coreProductName(other.name, other.brand);
+
+    // İki benzerlik skoru hesapla: tam isim ve temel isim
+    var simFull = similarity(baseName, otherName);
+    var simCore = similarity(baseCore, otherCore);
+    var sim = Math.max(simFull, simCore);
+
+    // Aynı kategori ise threshold düşük, farklı ama uyumlu kategori ise yüksek
+    var threshold = (base.category === other.category) ? 0.28 : 0.45;
+    if (sim < threshold) continue;
+
+    // Bu satıcı için en iyi eşleşmeyi sakla
+    var siteKey = other._site;
+    if (!candidatesBySite[siteKey] || candidatesBySite[siteKey].sim < sim) {
+      candidatesBySite[siteKey] = { idx: j, sim: sim, other: other };
+    }
   }
+
+  // En iyi eşleşmeleri ekle
+  Object.keys(candidatesBySite).forEach(function(siteKey) {
+    var cand = candidatesBySite[siteKey];
+    used[cand.idx] = true;
+    prices.push({
+      site: cand.other._site,
+      price: cand.other.price,
+      url: cand.other.productUrl,
+    });
+  });
 
   // Aynı satıcıdan gelen duplicate fiyatları kaldır (en düşüğü tut)
   var uniquePrices = [];

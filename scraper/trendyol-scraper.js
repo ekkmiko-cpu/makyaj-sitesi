@@ -23,13 +23,14 @@ const CATEGORIES = [
   { name: 'aydinlatici',      url: '/aydinlatici-x-c104017',                    label: 'Aydinlatici' },
   { name: 'bronzer',          url: '/bronzer-x-c109099',                        label: 'Bronzer' },
   { name: 'kapatici',         url: '/kapatici-x-c1085',                         label: 'Kapatici' },
-  { name: 'primer',           url: '/makyaj-bazi-primer-x-c1109',              label: 'Primer' },
+  { name: 'primer',           url: '/sr?q=primer+makyaj+baz',                  label: 'Primer' },
   { name: 'pudra',            url: '/pudra-x-c1153',                            label: 'Pudra' },
-  { name: 'dudak-parlatici',  url: '/dudak-parlatici-lip-gloss-x-c1041',       label: 'Dudak Parlatici' },
+  { name: 'dudak-parlatici',  url: '/sr?q=dudak+parlatici+lip+gloss',          label: 'Dudak Parlatici' },
   { name: 'dudak-kalemi',     url: '/dudak-kalemi-x-c1042',                    label: 'Dudak Kalemi' },
+  { name: 'kontur',           url: '/sr?q=kontür+makyaj',                      label: 'Kontur' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'trendyol-products.json');
-const MAX_PAGES = 5;
+const MAX_PAGES = 10;
 const DELAY_MS = 1500;
 // -----------------------------------------------------------------------------
 
@@ -39,12 +40,12 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
  * Urunleri sayfadan cikarir.
  * Oncelik: JSON-LD structured data -> DOM selectors fallback
  */
-async function extractProducts(page, catName, catLabel) {
-  return page.evaluate(({ catName, catLabel, baseUrl }) => {
+async function extractProducts(page, catName, catLabel, useDOM) {
+  return page.evaluate(({ catName, catLabel, baseUrl, forceDOM }) => {
     const products = [];
 
-    // --- Yontem 1: JSON-LD structured data ---
-    try {
+    // --- Yontem 1: JSON-LD structured data (sadece ilk sayfa) ---
+    if (!forceDOM) try {
       const ldScripts = document.querySelectorAll('script[type="application/ld+json"]');
       for (const script of ldScripts) {
         try {
@@ -106,35 +107,33 @@ async function extractProducts(page, catName, catLabel) {
 
     if (products.length > 0) return products;
 
-    // --- Yontem 2: DOM selectors fallback ---
-    const cards = document.querySelectorAll('.p-card-wrppr');
+    // --- Yontem 2: DOM selectors (yeni Trendyol yapisi) ---
+    const cards = document.querySelectorAll('.product-card, [data-testid="product-card"]');
     for (const card of cards) {
       try {
         // Urun adi
-        const nameEl = card.querySelector('.prdct-desc-cntnr-name, .product-desc-sub-text, span[class*="prdct-desc"]');
+        const nameEl = card.querySelector('.product-name');
         const name = nameEl ? nameEl.textContent.replace(/\s+/g, ' ').trim() : '';
 
         // Marka
-        const brandEl = card.querySelector('.prdct-desc-cntnr-ttl, span[class*="prdct-desc-cntnr-ttl"]');
+        const brandEl = card.querySelector('.product-brand');
         const brand = brandEl ? brandEl.textContent.replace(/\s+/g, ' ').trim() : '';
 
         // Link
-        const linkEl = card.querySelector('a');
+        const linkEl = card.querySelector('a[href*="/p-"]') || card.querySelector('a[href]') || card.closest('a');
         const href = linkEl ? linkEl.getAttribute('href') : '';
         const productUrl = href
           ? (href.startsWith('http') ? href : baseUrl + href)
           : '';
 
         // Gorsel
-        const imgEl = card.querySelector('img.p-card-img, img[class*="p-card-img"]');
+        const imgEl = card.querySelector('img');
         const imageUrl = imgEl
           ? (imgEl.src || imgEl.getAttribute('data-src') || '')
           : '';
 
-        // Fiyat (indirimli fiyat oncelikli)
-        const discountPriceEl = card.querySelector('.prc-box-dscntd');
-        const regularPriceEl = card.querySelector('.prc-box-sllng');
-        const priceEl = discountPriceEl || regularPriceEl;
+        // Fiyat
+        const priceEl = card.querySelector('.price-section');
         let price = 0;
         if (priceEl) {
           const raw = priceEl.textContent.replace(/[^\d,]/g, '').replace(',', '.');
@@ -142,11 +141,11 @@ async function extractProducts(page, catName, catLabel) {
         }
 
         // Rating
-        const ratingEl = card.querySelector('.rating-score, span[class*="ratingScore"]');
+        const ratingEl = card.querySelector('.average-rating');
         const rating = ratingEl ? parseFloat(ratingEl.textContent.replace(',', '.')) || 0 : 0;
 
         // Yorum sayisi
-        const reviewEl = card.querySelector('.ratingCount, span[class*="ratingCount"]');
+        const reviewEl = card.querySelector('.total-count');
         let reviews = 0;
         if (reviewEl) {
           const txt = reviewEl.textContent.replace(/[^\d]/g, '');
@@ -171,60 +170,66 @@ async function extractProducts(page, catName, catLabel) {
     }
 
     return products;
-  }, { catName, catLabel, baseUrl: BASE_URL });
-}
-
-async function scrapePage(page, url, category) {
-  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-  await sleep(2500);
-
-  // Sayfayi kaydir (lazy load icin)
-  for (let i = 0; i < 5; i++) {
-    await page.evaluate(() => window.scrollBy(0, window.innerHeight * 0.8));
-    await sleep(400);
-  }
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await sleep(500);
-
-  return extractProducts(page, category.name, category.label);
+  }, { catName, catLabel, baseUrl: BASE_URL, forceDOM: !!useDOM });
 }
 
 async function scrapeCategory(page, category) {
   console.log(`\n[KATEGORI] ${category.label} -- taraniyor...`);
-  const allProducts = [];
 
-  for (let pageNum = 1; pageNum <= MAX_PAGES; pageNum++) {
-    const url = `${BASE_URL}${category.url}?pi=${pageNum}`;
-    console.log(`   Sayfa ${pageNum} yukleniyor...`);
+  // Sayfa 1'i yükle
+  const url = `${BASE_URL}${category.url}?pi=1`;
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await sleep(2500);
 
-    try {
-      let products = await scrapePage(page, url, category);
+  // Önce JSON-LD'den ilk batch'i al
+  let jsonLdProducts = await extractProducts(page, category.name, category.label, false);
+  console.log(`   JSON-LD: ${jsonLdProducts.length} urun`);
 
-      // Ilk sayfada 0 urun donerse, 2 kez daha dene (bot koruması/gec yuklenme)
-      if (products.length === 0 && pageNum === 1) {
-        for (let retry = 1; retry <= 2; retry++) {
-          console.log(`   Tekrar deneniyor (${retry}/2)...`);
-          await sleep(3000 * retry);
-          products = await scrapePage(page, url, category);
-          if (products.length > 0) break;
-        }
-      }
+  // Sonra sayfayı scroll ederek DOM'dan daha fazla ürün yüklet
+  let prevCount = 0;
+  let sameCountRounds = 0;
+  const MAX_SCROLLS = 30; // en fazla 30 scroll
 
-      console.log(`   ${products.length} urun bulundu`);
+  for (let s = 0; s < MAX_SCROLLS; s++) {
+    await page.evaluate(() => window.scrollBy(0, window.innerHeight * 1.5));
+    await sleep(800);
 
-      if (products.length === 0) {
-        console.log(`   Son sayfa -- bos sonuc, kategori tamamlandi.`);
+    const currentCount = await page.evaluate(() => document.querySelectorAll('.product-card, [data-testid="product-card"]').length);
+
+    if (currentCount === prevCount) {
+      sameCountRounds++;
+      if (sameCountRounds >= 3) {
+        console.log(`   Scroll ${s+1}: ${currentCount} kart (yeni urun yok, durduruluyor)`);
         break;
       }
+    } else {
+      sameCountRounds = 0;
+    }
+    prevCount = currentCount;
 
-      allProducts.push(...products);
-      await sleep(DELAY_MS);
-    } catch (err) {
-      console.error(`   HATA: ${err.message}`);
-      break;
+    if ((s + 1) % 5 === 0) {
+      console.log(`   Scroll ${s+1}: ${currentCount} kart yuklendi`);
     }
   }
 
+  // Scroll sonrası DOM'dan tüm ürünleri çek
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await sleep(500);
+  const domProducts = await extractProducts(page, category.name, category.label, true);
+  console.log(`   DOM: ${domProducts.length} urun`);
+
+  // JSON-LD ve DOM sonuçlarını birleştir, URL bazlı dedup
+  const seen = new Set();
+  const allProducts = [];
+  for (const p of [...jsonLdProducts, ...domProducts]) {
+    const key = p.productUrl || (p.brand + '|' + p.name);
+    if (!seen.has(key)) {
+      seen.add(key);
+      allProducts.push(p);
+    }
+  }
+
+  console.log(`   Toplam: ${allProducts.length} benzersiz urun`);
   return allProducts;
 }
 
