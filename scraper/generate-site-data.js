@@ -104,6 +104,45 @@ function normalizeCategoryName(name) {
   return categoryNameMap[name] || name;
 }
 
+// ── Ürün adından kategori doğrula/düzelt ──
+// Gratis gibi scraper'lar kategorileri karıştırabiliyor; isme bakarak düzeltiriz
+var nameToCategoryRules = [
+  // Göz kategorileri
+  { keywords: ['maskara', 'mascara', 'rimel', 'kirpik', 'lash sensational', 'sky high', 'colossal', 'lash princess', 'bambi', 'lash blasté', 'they\'re real', 'bad gal', 'roller lash', 'fan fest'], cat: 'maskara' },
+  { keywords: ['eyeliner', 'eye liner', 'dipliner', 'kajal liner', 'gel liner', 'liquid liner', 'waterproof liner', 'mat liner', 'otomatik jel', 'infaillible liner', 'precision liner'], cat: 'eyeliner' },
+  { keywords: ['göz kalemi', 'goz kalemi', 'eye pencil', 'kohl pencil', 'kayal', 'kajal pencil'], cat: 'goz-kalemi' },
+  { keywords: ['far paleti', 'palette', 'paleti', 'eyeshadow palette', 'shadow palette'], cat: 'far-paleti' },
+  { keywords: ['göz farı', 'goz fari', 'eye shadow', 'eyeshadow', 'far ', ' far', 'stick far', 'shimmer shadow'], cat: 'far' },
+  // Yüz kategorileri
+  { keywords: ['fondöten', 'fondoten', 'foundation', 'fond\\s', 'skin glow foundation', 'skin foundation', 'fluid foundation', 'cushion'], cat: 'fondoten' },
+  { keywords: ['kapatıcı', 'kapatici', 'concealer', 'conceal', 'touch eclat', 'corrector'], cat: 'kapatici' },
+  { keywords: ['allık', 'allik', 'blush', 'rouge joue'], cat: 'allik' },
+  { keywords: ['aydınlatıcı', 'aydinlatici', 'highlighter', 'illuminator', 'strobing', 'glow'], cat: 'aydinlatici' },
+  { keywords: ['bronzer', 'bronz', 'terracotta'], cat: 'bronzer' },
+  { keywords: ['kontür', 'kontur', 'contour', 'sculpt'], cat: 'kontur' },
+  { keywords: ['pudra', 'powder', 'loose powder', 'fixing powder', 'toz pudra', 'compact powder'], cat: 'pudra' },
+  { keywords: ['primer', 'makyaj bazı', 'makeup base', 'pore filler', 'sabitleyici', 'setting spray', 'baz '], cat: 'primer' },
+  // Dudak kategorileri
+  { keywords: ['ruj', 'lipstick', 'lip stick', 'likit mat ruj', 'lip cream', 'lip balm', 'lip color', 'rouge à lèvres'], cat: 'ruj' },
+  { keywords: ['dudak parlatıcı', 'dudak parlatici', 'lip gloss', 'lipgloss', 'lip glaze', 'lip oil'], cat: 'dudak-parlatici' },
+  { keywords: ['dudak kalemi', 'lip liner', 'lipliner', 'lip pencil'], cat: 'dudak-kalemi' },
+  // Kaş
+  { keywords: ['kaş', 'kas', 'brow', 'eyebrow', 'kaş kalemi', 'brow pencil', 'brow mascara', 'brow pomade'], cat: 'kas' },
+];
+
+function correctCategoryByName(productName, currentCategory) {
+  var lower = (productName || '').toLowerCase();
+  for (var i = 0; i < nameToCategoryRules.length; i++) {
+    var rule = nameToCategoryRules[i];
+    for (var k = 0; k < rule.keywords.length; k++) {
+      if (lower.includes(rule.keywords[k])) {
+        return rule.cat;
+      }
+    }
+  }
+  return currentCategory; // Kural bulunamadıysa orijinal kategoride bırak
+}
+
 // ── Marka ismi normalizasyonu (agresif eşleştirme için) ──
 var brandAliases = {
   'MAYBELLINE': 'MAYBELLINE',
@@ -587,11 +626,14 @@ for (var s = 0; s < SOURCES.length; s++) {
         brand = extracted.brand;
         if (brand) name = extracted.cleanName;
       }
+      // Kategori düzeltmesi: ürün adına bakarak yanlış kategorileri düzelt
+      var correctedCat = normalizeCategoryName(p.category);
+      correctedCat = correctCategoryByName(p.name, correctedCat);
       return Object.assign({}, p, {
         brand: brand,
         name: name,
         _site: src.site,
-        category: normalizeCategoryName(p.category),
+        category: correctedCat,
         categoryLabel: normalizeCategoryLabel(p.categoryLabel),
       });
     });
