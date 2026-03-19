@@ -195,32 +195,23 @@ function normalizeBrand(brand) {
   return brandAliases[clean] || clean;
 }
 
-// ── Kategori grupları (benzer kategoriler eşleşebilir) ──
-var categoryGroups = {
-  'fondoten': 'yuz',
-  'kapatici': 'yuz',
-  'primer': 'yuz',
-  'pudra': 'yuz',
-  'bronzer': 'yuz',
-  'kontur': 'yuz',
-  'allik': 'yanak',
-  'aydinlatici': 'yanak',
-  'maskara': 'goz',
-  'far': 'goz',
-  'far-paleti': 'goz',
-  'eyeliner': 'goz',
-  'goz-kalemi': 'goz',
-  'ruj': 'dudak',
-  'dudak-parlatici': 'dudak',
-  'dudak-kalemi': 'dudak',
-  'kas': 'kas',
-};
+// ── Kategori uyumluluğu — sadece çok yakın kategoriler eşleşebilir ──
+// Önceki geniş grup mantığı yanlış eşleşmeye yol açıyordu (fondoten↔kapatici gibi)
+var compatiblePairs = [
+  ['eyeliner', 'goz-kalemi'],   // göz kalemi / eyeliner aynı şey
+  ['far', 'far-paleti'],        // tek far / far paleti
+  // Trendyol goz-kalemi/eyeliner ürünlerini bazen "far" kategorisinde listeler
+  ['far', 'goz-kalemi'],        // Trendyol scraper kategori hatası için tolerans
+  ['far', 'eyeliner'],          // Trendyol eyeliner'ları da "far" olarak gelebilir
+];
 
 function categoryCompatible(catA, catB) {
   if (catA === catB) return true;
-  var groupA = categoryGroups[catA];
-  var groupB = categoryGroups[catB];
-  return groupA && groupB && groupA === groupB;
+  for (var i = 0; i < compatiblePairs.length; i++) {
+    var pair = compatiblePairs[i];
+    if ((pair[0] === catA && pair[1] === catB) || (pair[1] === catA && pair[0] === catB)) return true;
+  }
+  return false;
 }
 
 // ── Ürün ismi normalizasyonu (eşleştirme için) ──
@@ -430,6 +421,31 @@ var genericCosmeticWords = new Set([
   'suya', 'resistant', 'anti', 'care', 'spf', 'spf15', 'spf20', 'spf30',
 ]);
 
+// ── Ton/model kodu çıkar (örn: "1N", "120", "W3", "01") ──
+// Bu kodlar kozmetik ürünlerde renk/tonu tanımlar — eşleştirme için kritik
+function extractShadeCode(name, brand) {
+  var clean = (name || '').toLowerCase();
+  if (brand) {
+    clean = clean.replace(new RegExp(brand.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '');
+  }
+  // SPF, ml, gr gibi kelimeleri sil
+  clean = clean.replace(/\bspf\s*\d+/gi, '').replace(/\b\d+\s*(ml|gr|g|oz)\b/gi, '');
+
+  var codes = [];
+  // Örüntüler: "1N", "120", "N120", "1.5N", "W3", "01", "3W", "125C" vb.
+  var matches = clean.match(/\b([a-z]{0,2}\d{1,3}[a-z]{0,2})\b/g);
+  if (matches) {
+    matches.forEach(function(m) {
+      // Sadece rakam içerenleri al, en az 1 rakam olmalı, max 5 karakter
+      if (/\d/.test(m) && m.length <= 5 && m.length >= 1) {
+        // Anlamsız sayıları filtrele (çok uzun = barkod, ml, yıl vb. zaten silindi)
+        codes.push(m.toUpperCase());
+      }
+    });
+  }
+  return codes;
+}
+
 // ── Bigram çıkar (2-kelimelik diziler) ──
 function extractBigrams(text) {
   var words = text.split(' ').filter(function(w) { return w.length > 1; });
@@ -443,44 +459,49 @@ function extractBigrams(text) {
   return bigrams;
 }
 
-// ── İsim benzerliği (geliştirilmiş — contained match + Jaccard + bigram) ──
+// ── İsim benzerliği (jenerik kelimeleri dışlayan, anlamlı kelime odaklı) ──
 function similarity(a, b) {
-  var wordsA = new Set(a.split(' ').filter(function(w) { return w.length > 1; }));
-  var wordsB = new Set(b.split(' ').filter(function(w) { return w.length > 1; }));
-  if (wordsA.size === 0 || wordsB.size === 0) return 0;
+  var wordsA = a.split(' ').filter(function(w) { return w.length > 1; });
+  var wordsB = b.split(' ').filter(function(w) { return w.length > 1; });
+  if (wordsA.length === 0 || wordsB.length === 0) return 0;
 
-  // Normalize kozmetik terimleri
-  var normA = new Set(); wordsA.forEach(function(w) { normA.add(cosmeticSynonyms[w] || w); });
-  var normB = new Set(); wordsB.forEach(function(w) { normB.add(cosmeticSynonyms[w] || w); });
+  // Jenerik olmayan (ayırt edici) kelimeleri bul
+  var sigA = wordsA.filter(function(w) { return !genericCosmeticWords.has(cosmeticSynonyms[w] || w); });
+  var sigB = wordsB.filter(function(w) { return !genericCosmeticWords.has(cosmeticSynonyms[w] || w); });
+
+  // Eğer anlamlı kelime yoksa tam kelime listesiyle devam et
+  if (sigA.length === 0) sigA = wordsA;
+  if (sigB.length === 0) sigB = wordsB;
+
+  var setA = new Set(sigA.map(function(w) { return cosmeticSynonyms[w] || w; }));
+  var setB = new Set(sigB.map(function(w) { return cosmeticSynonyms[w] || w; }));
 
   var intersection = 0;
-  normA.forEach(function(w) { if (normB.has(w)) intersection++; });
+  setA.forEach(function(w) { if (setB.has(w)) intersection++; });
   var union = new Set();
-  normA.forEach(function(w) { union.add(w); });
-  normB.forEach(function(w) { union.add(w); });
+  setA.forEach(function(w) { union.add(w); });
+  setB.forEach(function(w) { union.add(w); });
 
-  var jaccard = intersection / union.size;
+  var jaccard = union.size > 0 ? intersection / union.size : 0;
 
-  // Contained ratio: kaç kelime ortak / kısa taraftaki kelime sayısı
-  var minSize = Math.min(normA.size, normB.size);
+  // Contained ratio: ortak anlamlı kelime / kısa taraftaki anlamlı kelime sayısı
+  var minSize = Math.min(setA.size, setB.size);
   var containedRatio = minSize > 0 ? intersection / minSize : 0;
-  var containedScore = containedRatio > 0.7 ? containedRatio * 0.92 : containedRatio * 0.85;
 
-  // Bigram match: ortak 2-kelimelik diziler (en güçlü sinyal)
-  var bigramsA = extractBigrams(a);
-  var bigramsB = extractBigrams(b);
+  // Bigram match: anlamlı bigram dizileri
+  var bigramsA = extractBigrams(sigA.join(' '));
+  var bigramsB = extractBigrams(sigB.join(' '));
   var bigramMatch = 0;
   if (bigramsA.length > 0 && bigramsB.length > 0) {
     var setBiB = new Set(bigramsB);
     var commonBigrams = 0;
     bigramsA.forEach(function(bg) { if (setBiB.has(bg)) commonBigrams++; });
-    if (commonBigrams > 0) {
-      bigramMatch = 0.75 + (commonBigrams * 0.05); // 1 bigram = 0.80, 2 = 0.85, etc.
-      if (bigramMatch > 1.0) bigramMatch = 1.0;
-    }
+    // Bigram eşleşmesi: daha muhafazakâr puanlama
+    if (commonBigrams >= 2) bigramMatch = 0.85;
+    else if (commonBigrams === 1) bigramMatch = 0.72;
   }
 
-  return Math.max(jaccard, containedScore, bigramMatch);
+  return Math.max(jaccard, containedRatio * 0.90, bigramMatch);
 }
 
 // ── İsmi temizle (gösterim için) ──
@@ -647,22 +668,92 @@ Object.keys(siteGroups).forEach(function(site) {
 
 console.log('Varyant gruplama: ' + variantStats.totalProducts + ' urun -> ' + deduped.length + ' grup (' + variantStats.mergedAway + ' varyant birlestirildi)');
 
-// ══════════════════════════════════════════════════
-// ADIM 2: Siteler arası eşleştirme (farklı mağazaları karşılaştır)
-// ══════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════
+// ADIM 2: Siteler arası eşleştirme — PROFESYONEL YÖNTEM
+// Adım 2a: Barkod eşleştirme (EAN/GTIN — %100 doğru)
+// Adım 2b: Marka + Ürün Serisi + Ton Kodu eşleştirme (çok sıkı)
+// ══════════════════════════════════════════════════════════════════
 
-// Ön hesaplama: her ürün için normalize isim, core, line bilgilerini hesapla
+// Ön hesaplama: her ürün için normalize isim, core, line, shade, barcode bilgilerini hesapla
 var precomputed = deduped.map(function(p) {
   return {
     brand: normalizeBrand(p.brand),
     name: normalizeNameForMatch(p.name, p.brand),
     core: coreProductName(p.name, p.brand),
     line: extractProductLine(p.name, p.brand),
+    shades: extractShadeCode(p.name, p.brand),
+    barcode: (p.barcode || '').trim(),
   };
 });
 
+// ── 2a: Barkod indeksi oluştur (barcode → [idx...]) ──
+var barcodeIndex = {};
+precomputed.forEach(function(pp, idx) {
+  if (pp.barcode && pp.barcode.length >= 8) {
+    if (!barcodeIndex[pp.barcode]) barcodeIndex[pp.barcode] = [];
+    barcodeIndex[pp.barcode].push(idx);
+  }
+});
+
+var barcodeMatchCount = 0;
 var merged = [];
 var used = new Set();
+
+// ── 2a: Önce barkod eşleşmelerini işle (kesin eşleşme) ──
+Object.keys(barcodeIndex).forEach(function(barcode) {
+  var indices = barcodeIndex[barcode];
+  if (indices.length < 2) return; // Tek satıcıda varsa sadece, atla
+
+  // Farklı satıcıları birleştir
+  var bySite = {};
+  indices.forEach(function(idx) {
+    var p = deduped[idx];
+    var site = p._site;
+    if (!bySite[site] || p.price < bySite[site].price) {
+      bySite[site] = { idx: idx, p: p };
+    }
+  });
+
+  var sites = Object.keys(bySite);
+  if (sites.length < 2) return; // Aynı sitede birden fazla, atla
+
+  // Tüm indexleri kullanıldı olarak işaretle
+  var baseEntry = bySite[sites[0]];
+  var base = baseEntry.p;
+  used.add(baseEntry.idx);
+
+  var prices = [{
+    site: base._site,
+    price: base.price > 0 ? base.price : (base._minPrice || 0),
+    url: base.productUrl,
+    variantCount: base._variantCount || 1,
+  }];
+
+  for (var s = 1; s < sites.length; s++) {
+    var entry = bySite[sites[s]];
+    used.add(entry.idx);
+    prices.push({
+      site: entry.p._site,
+      price: entry.p.price > 0 ? entry.p.price : (entry.p._minPrice || 0),
+      url: entry.p.productUrl,
+      variantCount: entry.p._variantCount || 1,
+    });
+    barcodeMatchCount++;
+  }
+
+  merged.push(Object.assign({}, base, { prices: prices, _matchCount: prices.length, _matchMethod: 'barcode' }));
+});
+
+console.log('Barkod eslestirme: ' + barcodeMatchCount + ' ek satici eslestirmesi yapildi');
+
+// ── 2b: Geri kalan ürünler için isim tabanlı eşleştirme (sıkı) ──
+// EŞLEŞTİRME KURALLARI:
+// 1. Aynı marka (zorunlu)
+// 2. Aynı kategori (çapraz kategori sadece çok yakın çiftler: eyeliner↔goz-kalemi, far↔far-paleti)
+// 3. Ürün serisi eşleşmeli (ikisi de seri içeriyorsa)
+// 4. Ton kodu eşleşmeli (ikisi de ton kodu içeriyorsa — en kritik kural)
+// 5. Minimum %50 isim benzerliği
+var namingMatchCount = 0;
 
 for (var i = 0; i < deduped.length; i++) {
   if (used.has(i)) continue;
@@ -678,7 +769,7 @@ for (var i = 0; i < deduped.length; i++) {
     variantCount: base._variantCount || 1,
   }];
 
-  // En iyi eşleşmeyi bul (her farklı satıcı için)
+  // En iyi eşleşmeyi her satıcı için bul
   var candidatesBySite = {};
 
   for (var j = i + 1; j < deduped.length; j++) {
@@ -688,27 +779,36 @@ for (var i = 0; i < deduped.length; i++) {
 
     var op = precomputed[j];
 
-    // Marka kontrolü — boş marka toleranslı
-    var brandMatch = false;
-    if (bp.brand && op.brand) {
-      brandMatch = (bp.brand === op.brand);
-    } else if (!bp.brand || !op.brand) {
-      brandMatch = true;
-    }
-    if (!brandMatch) continue;
+    // ── KURAL 1: Marka kontrolü (zorunlu) ──
+    if (!bp.brand || !op.brand) continue; // Markasız ürünleri eşleştirme
+    if (bp.brand !== op.brand) continue;
 
-    // Kategori kontrolü — aynı grup yeterli
+    // ── KURAL 2: Kategori kontrolü (sadece aynı veya çok yakın) ──
     if (!categoryCompatible(base.category, other.category)) continue;
 
-    // Çoklu benzerlik skoru hesapla
+    // ── KURAL 3: Ürün serisi kontrolü ──
+    // İkisi de bilinen ürün serisi içeriyorsa, seriler eşleşmeli
+    if (bp.line && op.line && bp.line !== op.line) continue;
+
+    // ── KURAL 4: TON KODU KONTROLÜ (en kritik kural) ──
+    // Her iki üründe de ton kodu varsa, en az bir kodu ortak olmalı
+    if (bp.shades.length > 0 && op.shades.length > 0) {
+      var shadeMatch = false;
+      for (var si = 0; si < bp.shades.length; si++) {
+        if (op.shades.indexOf(bp.shades[si]) !== -1) { shadeMatch = true; break; }
+      }
+      if (!shadeMatch) continue; // Farklı ton kodu → kesinlikle farklı ürün
+    }
+
+    // ── KURAL 5: İsim benzerliği (minimum %50) ──
     var simFull = similarity(bp.name, op.name);
     var simCore = similarity(bp.core, op.core);
     var exactCore = (bp.core.length > 5 && bp.core === op.core) ? 1.0 : 0;
-    var lineMatch = (bp.line && op.line && bp.line === op.line) ? 0.9 : 0;
-    var sim = Math.max(simFull, simCore, exactCore, lineMatch);
+    var lineBonus = (bp.line && op.line && bp.line === op.line) ? 0.85 : 0;
+    var sim = Math.max(simFull, simCore, exactCore, lineBonus);
 
-    // Threshold: aynı kategori düşük, farklı ama uyumlu yüksek
-    var threshold = (base.category === other.category) ? 0.20 : 0.38;
+    // Threshold: aynı kategori %50, uyumlu (farklı ama yakın) %65
+    var threshold = (base.category === other.category) ? 0.50 : 0.65;
     if (sim < threshold) continue;
 
     // Bu satıcı için en iyi eşleşmeyi sakla
@@ -728,25 +828,26 @@ for (var i = 0; i < deduped.length; i++) {
       url: cand.other.productUrl,
       variantCount: cand.other._variantCount || 1,
     });
+    namingMatchCount++;
   });
 
-  // 0 TL fiyatları temizle (fiyat çekilememiş)
+  // 0 TL fiyatları temizle
   prices = prices.filter(function(p) { return p.price > 0; });
   if (prices.length === 0) {
     prices = [{ site: base._site, price: 0, url: base.productUrl, variantCount: 1 }];
   }
 
-  // Fiyat oranı kontrolü: 15x'den fazla fark → yanlış eşleşme, en ucuzu çıkar
+  // Fiyat oranı kontrolü: 10x'den fazla fark → yanlış eşleşme (threshold düşürdük)
   if (prices.length >= 2) {
     var sortedP = prices.slice().sort(function(a, b) { return a.price - b.price; });
     var maxRatio = sortedP[sortedP.length - 1].price / sortedP[0].price;
-    if (maxRatio >= 15) {
-      // Sadece en ucuzu bırak (muhtemelen sahte/kopya ürün)
-      prices = [sortedP[sortedP.length - 1]]; // En pahalıyı tut (gerçek ürün)
+    if (maxRatio >= 10) {
+      // Fiyat farkı 10x'den fazlaysa isim eşleşmesi hatalı — tek fiyatı tut
+      prices = [sortedP[sortedP.length - 1]];
     }
   }
 
-  // Aynı satıcıdan gelen duplicate fiyatları kaldır (en düşüğü tut)
+  // Aynı satıcıdan duplicate fiyatları kaldır (en düşüğü tut)
   var uniquePrices = [];
   var seenSites = {};
   prices.sort(function(a, b) { return a.price - b.price; });
@@ -761,9 +862,11 @@ for (var i = 0; i < deduped.length; i++) {
   merged.push(Object.assign({}, base, {
     prices: prices,
     _matchCount: prices.length,
+    _matchMethod: 'name',
   }));
 }
 
+console.log('Isim tabanlı eslestirme: ' + namingMatchCount + ' ek satici eslestirmesi yapildi');
 console.log('Eslestirme sonucu: ' + merged.length + ' benzersiz urun (' + allRaw.length + ' ham veriden)');
 
 // ── Final ürün listesini oluştur ──

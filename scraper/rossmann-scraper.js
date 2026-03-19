@@ -102,14 +102,17 @@ function parseProducts(data, catName, catLabel) {
       imageUrl = item.image.startsWith('http') ? item.image : CDN_IMG + item.image;
     }
 
-    // Urun URL
+    // Urun URL — .html olmadan (404 veriyor)
     let productUrl = '';
     if (item.url_key) {
-      productUrl = BASE_URL + '/' + item.url_key + '.html';
+      productUrl = BASE_URL + '/' + item.url_key;
     }
 
     // Marka
     const brand = (typeof item.brand === 'string' ? item.brand : '').trim();
+
+    // Barkod (EAN-13) — profesyonel urun eslestirmesi icin
+    const barcode = (item.barcode || '').trim();
 
     products.push({
       name,
@@ -119,6 +122,7 @@ function parseProducts(data, catName, catLabel) {
       price,
       imageUrl,
       productUrl,
+      barcode,
       rating: parseFloat(item.rating || 0) || 0,
       reviews: parseInt(item.review_count || 0) || 0,
       source: 'rossmann',
