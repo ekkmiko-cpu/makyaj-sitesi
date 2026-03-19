@@ -4,7 +4,7 @@
     {
       "name": "makyaj-sitesi",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-p", "3456", "-n", "."],
+      "runtimeArgs": ["serve", "/Users/ekrem/Documents/GitHub/makyaj-sitesi", "-p", "3456", "--no-clipboard", "--cors", "-c", "0"],
       "port": 3456
     }
   ]

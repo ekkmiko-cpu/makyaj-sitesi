@@ -1144,6 +1144,19 @@ function getFiltered() {
     if (activePriceRange === '1500+'    && mp < 1500)  return false;
     return true;
   });
+  // Varsayılan: çoklu fiyat ürünlerini öne çıkar, sonra rating'e göre sırala
+  if (sortMode === 'default') arr.sort((a,b) => {
+    const multiA = a.prices.length > 1 ? 1 : 0;
+    const multiB = b.prices.length > 1 ? 1 : 0;
+    if (multiB !== multiA) return multiB - multiA;
+    // Multi-price ürünlerde tasarruf miktarına göre sırala
+    if (multiA && multiB) {
+      const savA = Math.max(...a.prices.map(pr=>pr.price)) - Math.min(...a.prices.map(pr=>pr.price));
+      const savB = Math.max(...b.prices.map(pr=>pr.price)) - Math.min(...b.prices.map(pr=>pr.price));
+      return savB - savA;
+    }
+    return b.rating - a.rating;
+  });
   if (sortMode === 'price-asc')  arr.sort((a,b) => minPrice(a) - minPrice(b));
   if (sortMode === 'price-desc') arr.sort((a,b) => minPrice(b) - minPrice(a));
   if (sortMode === 'rating')     arr.sort((a,b) => b.rating - a.rating);
