@@ -516,6 +516,22 @@ function extractShadeCode(name, brand) {
   return codes;
 }
 
+// ── Varyant Bilgisi Cikar (Ton Kodu + Renk/Sade Kelimeler) ──
+function extractVariantInfo(name) {
+  var clean = (name || '').toLowerCase();
+  var codes = [];
+  var matches = clean.match(/\b([a-z]{0,2}\d{1,3}[a-z]{0,2})\b/g);
+  if (matches) {
+    matches.forEach(function(m) { if (/\d/.test(m) && m.length <= 5) codes.push(m.toUpperCase()); });
+  }
+  var colorWords = ['siyah', 'kahverengi', 'bordo', 'pembe', 'kırmızı', 'turuncu', 'mor', 'mavi', 'yeşil', 'bej', 'nude', 'black', 'brown', 'blue', 'red', 'pink', 'coral', 'berry', 'burgundy', 'ivory', 'sand', 'honey', 'vanilla', 'porcelain', 'bronze', 'taupe', 'warm', 'cool', 'light', 'medium', 'dark', 'fair'];
+  var words = clean.split(/[\s,.-]+/);
+  words.forEach(function(w) {
+    if (colorWords.indexOf(w) !== -1) codes.push(w.toUpperCase());
+  });
+  return Array.from(new Set(codes)).sort().join('-');
+}
+
 // ── Bigram çıkar (2-kelimelik diziler) ──
 function extractBigrams(text) {
   var words = text.split(' ').filter(function(w) { return w.length > 1; });
@@ -712,7 +728,8 @@ allRaw.forEach(function(p) {
   var brand = normalizeBrand(p.brand);
   var core = coreProductName(p.name, p.brand);
   var cat = p.category;
-  var groupKey = brand + '|' + cat + '|' + core;
+  var variantInfo = extractVariantInfo(p.name);
+  var groupKey = brand + '|' + cat + '|' + core + '|' + variantInfo;
   if (!siteGroups[p._site][groupKey]) siteGroups[p._site][groupKey] = [];
   siteGroups[p._site][groupKey].push(p);
 });
@@ -763,6 +780,7 @@ var precomputed = deduped.map(function(p) {
     core: coreProductName(p.name, p.brand),
     line: extractProductLine(p.name, p.brand),
     shades: extractShadeCode(p.name, p.brand),
+    variantInfo: extractVariantInfo(p.name),
     barcode: (p.barcode || '').trim(),
   };
 });
@@ -884,14 +902,17 @@ for (var i = 0; i < deduped.length; i++) {
     // İkisi de bilinen ürün serisi içeriyorsa, seriler eşleşmeli
     if (bp.line && op.line && bp.line !== op.line) continue;
 
-    // ── KURAL 4: TON KODU KONTROLÜ (en kritik kural) ──
-    // Her iki üründe de ton kodu varsa, en az bir kodu ortak olmalı
-    if (bp.shades.length > 0 && op.shades.length > 0) {
+    // ── KURAL 4: TON/VARYANT KONTROLÜ (en kritik kural) ──
+    var bpVInfo = extractVariantInfo(bp.name);
+    var opVInfo = extractVariantInfo(op.name);
+    if (bpVInfo && opVInfo) {
+      if (bpVInfo !== opVInfo) continue; // Farklı renk/ton → farklı ürün
+    } else if (bp.shades.length > 0 && op.shades.length > 0) {
       var shadeMatch = false;
       for (var si = 0; si < bp.shades.length; si++) {
         if (op.shades.indexOf(bp.shades[si]) !== -1) { shadeMatch = true; break; }
       }
-      if (!shadeMatch) continue; // Farklı ton kodu → kesinlikle farklı ürün
+      if (!shadeMatch) continue;
     }
 
     // ── KURAL 5: İsim benzerliği (minimum %50) ──
@@ -964,6 +985,37 @@ for (var i = 0; i < deduped.length; i++) {
 console.log('Isim tabanlı eslestirme: ' + namingMatchCount + ' ek satici eslestirmesi yapildi');
 console.log('Eslestirme sonucu: ' + merged.length + ' benzersiz urun (' + allRaw.length + ' ham veriden)');
 
+// ── Master Grouping (Varyant Birleştirme) ──
+var masterGroups = {};
+merged.forEach(function(m) {
+  var vInfo = extractVariantInfo(m.name);
+  var key = normalizeBrand(m.brand) + '|' + m.category + '|' + coreProductName(m.name, m.brand);
+  if (!masterGroups[key]) masterGroups[key] = { base: m, variants: [] };
+  masterGroups[key].variants.push({
+    shade: vInfo || 'Standart',
+    name: cleanName(m.name, m.brand),
+    prices: m.prices,
+    imageUrl: Array.isArray(m.imageUrl) ? (m.imageUrl[0] || '') : (m.imageUrl || '')
+  });
+});
+
+var masterMerged = [];
+Object.keys(masterGroups).forEach(function(key) {
+  var mg = masterGroups[key];
+  var mBase = mg.base;
+  mg.variants.sort(function(a, b) { 
+    if (!a.prices || a.prices.length === 0) return 1;
+    if (!b.prices || b.prices.length === 0) return -1;
+    return (a.prices[0].price || 0) - (b.prices[0].price || 0); 
+  });
+  if (mg.variants.length > 0 && mg.variants[0].prices && mg.variants[0].prices.length > 0) {
+    mBase.prices = mg.variants[0].prices;
+  }
+  mBase._variants = mg.variants;
+  masterMerged.push(mBase);
+});
+merged = masterMerged;
+
 // ── Final ürün listesini oluştur ──
 // Görsel kaynak önceliği: Sephora > Trendyol > Gratis > Watsons > Rossmann
 var IMAGE_PRIORITY = ['Sephora', 'Trendyol', 'Gratis', 'Watsons', 'Rossmann'];
@@ -1003,7 +1055,7 @@ var products = merged.map(function(p, i) {
     category: p.category,
     categoryLabel: p.categoryLabel,
     skinType: skinDefaults[p.category] || ['normal'],
-    shades: [],
+    variants: (p._variants || []).map(function(v) { return { shade: v.shade, name: v.name, imageUrl: v.imageUrl, prices: (v.prices || []).map(function(pr) { return { site: pr.site, price: pr.price, url: pr.url, variantCount: pr.variantCount }; }) }; }),
     prices: cleanPrices,
     rating: +parseFloat(rating).toFixed(1),
     reviews: Math.round(reviews),

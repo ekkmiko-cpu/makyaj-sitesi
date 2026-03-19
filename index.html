@@ -1370,9 +1370,14 @@ function openDetail(id) {
   if (!p) return;
 
   document.getElementById('detailTitle').textContent = p.name;
-  document.getElementById('detailSub').textContent = p.brand + ' · ' + p.category;
-  const sorted = [...p.prices].sort((a,b) => a.price - b.price);
-  const best = sorted[0].price;
+  
+  // Base variants
+  const basePrices = (p.variants && p.variants.length > 0) ? p.variants[0].prices : p.prices;
+  const sorted = [...basePrices].sort((a,b) => a.price - b.price);
+  const best = sorted.length > 0 ? sorted[0].price : 0;
+  const vShade = (p.variants && p.variants.length > 0 && p.variants[0].shade !== 'Standart') ? p.variants[0].shade : '';
+  document.getElementById('detailSub').innerHTML = p.brand + ' · ' + p.category + (vShade ? ' · <strong>' + vShade + '</strong>' : '');
+
 
   // Dupes
   const dupes = getDupes(p);
@@ -1392,56 +1397,30 @@ function openDetail(id) {
 
   document.getElementById('detailBody').innerHTML = `
     <div class="detail-image">
-      ${p.imageUrl
-        ? `<img class="detail-image-real" src="${p.imageUrl}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">`
+      ${(p.imageUrl && !p.imageUrl.includes('placeholder')) || (p.variants && p.variants[0] && p.variants[0].imageUrl && !p.variants[0].imageUrl.includes('placeholder'))
+        ? `<img class="detail-image-real" id="detailModalImage" src="${(p.imageUrl && !p.imageUrl.includes('placeholder')) ? p.imageUrl : p.variants[0].imageUrl}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">`
         : ''}
-      <span class="detail-image-emoji" style="${p.imageUrl ? 'display:none' : ''}">${p.emoji || '💄'}</span>
+      <span class="detail-image-emoji" id="detailModalEmoji" style="${((p.imageUrl && !p.imageUrl.includes('placeholder')) || (p.variants && p.variants[0] && p.variants[0].imageUrl && !p.variants[0].imageUrl.includes('placeholder'))) ? 'display:none' : ''}">${p.emoji || '💄'}</span>
     </div>
     <div class="detail-body">
       ${badgeHtml.length ? '<div class="card-badges" style="margin-bottom:12px">' + badgeHtml.join(' ') + '</div>' : ''}
       <p class="detail-desc">"${p.desc}"</p>
 
-      ${p.shades.length > 1 ? `
-        <div class="detail-section-title">Renk / Ton Seçenekleri (${p.shades.length})</div>
-        <div class="shades-list">
-          ${p.shades.map((s,i) => `
-            <button class="shade-chip${i===0?' active':''}"
-              onclick="this.closest('.shades-list').querySelectorAll('.shade-chip').forEach(c=>c.classList.remove('active'));this.classList.add('active')">${s}</button>
+      ${p.variants && p.variants.length > 1 ? `
+        <div class="detail-section-title">Renk / Ton Seçenekleri (${p.variants.length})</div>
+        <div class="shades-list" id="variantsList">
+          ${p.variants.map((v,i) => `
+            <button class="shade-chip${i===0?' active':''}" 
+              onclick="changeVariant(${p.id}, ${i}, this)" title="${v.name}">
+              ${v.shade || 'Varyant ' + (i+1)}
+            </button>
           `).join('')}
         </div>
       ` : ''}
 
-      <div class="detail-section-title">Fiyat Karşılaştırması — ${sorted.length} Satıcı</div>
-      <div class="prices-table">
-        <div class="prices-table-header">
-          <span class="prices-table-header-left">Satıcı</span>
-          <span class="prices-table-header-right">Fiyat</span>
-        </div>
-        ${sorted.map((pr, idx) => {
-          const diff = pr.price - best;
-          const diffPct = best > 0 ? ((diff / best) * 100).toFixed(0) : 0;
-          return `
-          <div class="price-row${pr.price === best ? ' best-price' : ''}">
-            <span class="price-row-rank">${idx + 1}.</span>
-            <div class="price-row-site">
-              <span class="price-row-site-name">
-                <span class="price-row-site-logo ${pr.site.toLowerCase()}">${pr.site.charAt(0)}</span>
-                ${pr.site}
-              </span>
-              <span class="price-row-site-info">${pr.price === best ? '✓ En uygun fiyat' : 'Güncel fiyat'}</span>
-            </div>
-            <div class="price-row-bar"><div class="price-row-bar-fill ${pr.price === best ? 'cheapest' : diff / best > 0.3 ? 'expensive' : 'mid'}" style="width:${best > 0 ? Math.round((best / pr.price) * 100) : 100}%"></div></div>
-            ${pr.price === best ? '<span class="price-row-badge">En Ucuz</span>' : diff > 0 ? '<span class="price-row-diff more">+₺' + diff.toLocaleString('tr-TR') + ' (%' + diffPct + ')</span>' : ''}
-            <span class="price-row-amount">₺${pr.price.toLocaleString('tr-TR')}</span>
-            <a href="${pr.url}" class="buy-btn" target="_blank" rel="noopener">Satın Al →</a>
-          </div>`;
-        }).join('')}
-        ${sorted.length > 1 ? `
-        <div class="price-summary-bar">
-          <span class="price-summary-item">En düşük: <strong>₺${best.toLocaleString('tr-TR')}</strong></span>
-          <span class="price-summary-item">En yüksek: <strong>₺${sorted[sorted.length-1].price.toLocaleString('tr-TR')}</strong></span>
-          ${sorted[sorted.length-1].price - best > 0 ? '<span class="price-summary-item savings">Tasarruf: ₺' + (sorted[sorted.length-1].price - best).toLocaleString('tr-TR') + '</span>' : ''}
-        </div>` : ''}
+      <div class="detail-section-title">Fiyat Karşılaştırması — <span id="sellerCount">${sorted.length}</span> Satıcı</div>
+      <div class="prices-table" id="pricesTableContainer">
+        ${renderVariantPrices(sorted)}
       </div>
 
       <!-- Price Alert -->
@@ -1577,6 +1556,76 @@ function openDetail(id) {
     </div>
   `;
   document.getElementById('detailModal').classList.add('open');
+}
+
+
+function renderVariantPrices(pricesParams) {
+  const sorted = [...pricesParams].sort((a,b) => a.price - b.price);
+  const best = sorted.length > 0 ? sorted[0].price : 0;
+  let html = `
+        <div class="prices-table-header">
+          <span class="prices-table-header-left">Satıcı</span>
+          <span class="prices-table-header-right">Fiyat</span>
+        </div>
+        ${sorted.map((pr, idx) => {
+          const diff = pr.price - best;
+          const diffPct = best > 0 ? ((diff / best) * 100).toFixed(0) : 0;
+          return \`
+          <div class="price-row${pr.price === best ? ' best-price' : ''}">
+            <span class="price-row-rank">${idx + 1}.</span>
+            <div class="price-row-site">
+              <span class="price-row-site-name">
+                <span class="price-row-site-logo ${pr.site.toLowerCase()}">${pr.site.charAt(0)}</span>
+                ${pr.site}
+              </span>
+              <span class="price-row-site-info">${pr.price === best ? '✓ En uygun fiyat' : 'Güncel fiyat'}</span>
+            </div>
+            <div class="price-row-bar"><div class="price-row-bar-fill ${pr.price === best ? 'cheapest' : diff / best > 0.3 ? 'expensive' : 'mid'}" style="width:${best > 0 ? Math.round((best / pr.price) * 100) : 100}%"></div></div>
+            ${pr.price === best ? '<span class="price-row-badge">En Ucuz</span>' : diff > 0 ? '<span class="price-row-diff more">+₺' + diff.toLocaleString('tr-TR') + ' (%' + diffPct + ')</span>' : ''}
+            <span class="price-row-amount">₺${pr.price.toLocaleString('tr-TR')}</span>
+            <a href="${pr.url}" class="buy-btn" target="_blank" rel="noopener">Satın Al →</a>
+          </div>\`;
+        }).join('')}
+        ${sorted.length > 1 ? \`
+        <div class="price-summary-bar">
+          <span class="price-summary-item">En düşük: <strong>₺${best.toLocaleString('tr-TR')}</strong></span>
+          <span class="price-summary-item">En yüksek: <strong>₺${sorted[sorted.length-1].price.toLocaleString('tr-TR')}</strong></span>
+          ${sorted[sorted.length-1].price - best > 0 ? '<span class="price-summary-item savings">Tasarruf: ₺' + (sorted[sorted.length-1].price - best).toLocaleString('tr-TR') + '</span>' : ''}
+        </div>\` : ''}
+  `;
+  return html;
+}
+
+function changeVariant(productId, variantIndex, btnElem) {
+  const p = products.find(x => x.id === productId);
+  if (!p || !p.variants || !p.variants[variantIndex]) return;
+  const v = p.variants[variantIndex];
+  
+  const list = document.getElementById('variantsList');
+  if (list) {
+    list.querySelectorAll('.shade-chip').forEach(c => c.classList.remove('active'));
+    btnElem.classList.add('active');
+  }
+  
+  const imgElem = document.getElementById('detailModalImage');
+  const emojiElem = document.getElementById('detailModalEmoji');
+  if (v.imageUrl && !v.imageUrl.includes('placeholder')) {
+    if (imgElem) {
+      imgElem.src = v.imageUrl;
+      imgElem.style.display = 'block';
+      if (emojiElem) emojiElem.style.display = 'none';
+    }
+  }
+  
+  const container = document.getElementById('pricesTableContainer');
+  if (container) {
+    container.innerHTML = renderVariantPrices(v.prices);
+  }
+  
+  const subtitle = document.getElementById('detailSub');
+  if (subtitle) {
+    subtitle.innerHTML = p.brand + ' · ' + p.category + (v.shade && v.shade !== 'Standart' ? ' · <strong>' + v.shade + '</strong>' : '');
+  }
 }
 
 // ── COMPARE MODAL ─────────────────────────────────────────────────────────────
