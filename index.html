@@ -1570,7 +1570,7 @@ function renderVariantPrices(pricesParams) {
         ${sorted.map((pr, idx) => {
           const diff = pr.price - best;
           const diffPct = best > 0 ? ((diff / best) * 100).toFixed(0) : 0;
-          return \`
+          return `
           <div class="price-row${pr.price === best ? ' best-price' : ''}">
             <span class="price-row-rank">${idx + 1}.</span>
             <div class="price-row-site">
@@ -1584,14 +1584,14 @@ function renderVariantPrices(pricesParams) {
             ${pr.price === best ? '<span class="price-row-badge">En Ucuz</span>' : diff > 0 ? '<span class="price-row-diff more">+₺' + diff.toLocaleString('tr-TR') + ' (%' + diffPct + ')</span>' : ''}
             <span class="price-row-amount">₺${pr.price.toLocaleString('tr-TR')}</span>
             <a href="${pr.url}" class="buy-btn" target="_blank" rel="noopener">Satın Al →</a>
-          </div>\`;
+          </div>`;
         }).join('')}
-        ${sorted.length > 1 ? \`
+        ${sorted.length > 1 ? `
         <div class="price-summary-bar">
           <span class="price-summary-item">En düşük: <strong>₺${best.toLocaleString('tr-TR')}</strong></span>
           <span class="price-summary-item">En yüksek: <strong>₺${sorted[sorted.length-1].price.toLocaleString('tr-TR')}</strong></span>
           ${sorted[sorted.length-1].price - best > 0 ? '<span class="price-summary-item savings">Tasarruf: ₺' + (sorted[sorted.length-1].price - best).toLocaleString('tr-TR') + '</span>' : ''}
-        </div>\` : ''}
+        </div>` : ''}
   `;
   return html;
 }
