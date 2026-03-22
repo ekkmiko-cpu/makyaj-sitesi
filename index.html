@@ -839,13 +839,14 @@
     .brand-card.active .brand-card-avatar { background: rgba(201,169,110,0.25); color: var(--gold); border-color: rgba(201,169,110,0.4); }
     .brand-card-avatar {
       width: 56px; height: 56px; border-radius: 10px;
-      background: #fff; border: 0.5px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.12);
       display: flex; align-items: center; justify-content: center;
-      font-size: 18px; font-weight: 600; color: #1a1814; letter-spacing: 0;
+      font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0;
       transition: all 0.2s; overflow: hidden;
     }
     .brand-card-avatar img {
       width: 100%; height: 100%; object-fit: contain; padding: 6px;
+      background: #fff;
     }
     .brand-card-name {
       font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75);
@@ -1531,7 +1532,7 @@ function closeBrandModal() {
   document.body.style.overflow = '';
   _brandModalOpen = false;
 }
-// Clearbit logo CDN — büyük marka logolarını otomatik bulur
+// icon.horse — ücretsiz, auth gerektirmez, yüksek kaliteli favicon/logo servisi
 const BRAND_LOGOS = {
   'Maybelline':'maybelline.com','Maybelline New York':'maybelline.com',
   "L'Oréal Paris":'loreal-paris.com',"L'Oreal Paris":'loreal-paris.com','Loreal Paris':'loreal-paris.com',
@@ -1542,7 +1543,7 @@ const BRAND_LOGOS = {
   'BENEFIT COSMETICS':'benefitcosmetics.com','benefit cosmetics':'benefitcosmetics.com',
   'DIOR':'dior.com','DIOR BACKSTAGE':'dior.com',
   'CHANEL':'chanel.com',
-  'YVES SAINT LAURENT':'yslbeauty.com','Yves Saint Laurent':'yslbeauty.com',
+  'YVES SAINT LAURENT':'ysl.com','Yves Saint Laurent':'ysl.com',
   'ESTÉE LAUDER':'esteelauder.com','Estee Lauder':'esteelauder.com',
   'CLINIQUE':'clinique.com','Clinique':'clinique.com',
   'LANCÔME':'lancome.com','Lancome':'lancome.com',
@@ -1553,7 +1554,7 @@ const BRAND_LOGOS = {
   'RARE BEAUTY':'rarebeauty.com','Rare Beauty':'rarebeauty.com',
   'SHISEIDO':'shiseido.com','Shiseido':'shiseido.com',
   'GIVENCHY':'givenchy.com',
-  'ARMANI':'armanibeauty.com',
+  'ARMANI':'armani.com',
   'GUERLAIN':'guerlain.com',
   'CLARINS':'clarins.com',
   'SISLEY':'sisley-paris.com',
@@ -1603,7 +1604,35 @@ const BRAND_LOGOS = {
 };
 function getBrandLogo(name) {
   const domain = BRAND_LOGOS[name];
-  return domain ? `https://logo.clearbit.com/${domain}` : null;
+  return domain ? `https://icon.horse/icon/${domain}` : null;
+}
+function getBrandFavicon(name) {
+  const domain = BRAND_LOGOS[name];
+  return domain ? `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=128` : null;
+}
+function brandColor(name) {
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = name.charCodeAt(i) + ((h << 5) - h);
+  const palette = ['#9B59B6','#E91E8C','#C09040','#2ECC71','#3498DB','#6366F1','#00BFA5','#F97316','#C0392B','#16A085'];
+  return palette[Math.abs(h) % palette.length];
+}
+function brandImgError(img, fallbackSrc, initBg, initLetter) {
+  if (img.dataset.tried) {
+    const av = img.parentNode;
+    av.style.background = initBg;
+    av.innerHTML = `<span style="color:#fff;font-size:22px;font-weight:700;">${initLetter}</span>`;
+  } else {
+    img.dataset.tried = '1';
+    img.src = fallbackSrc;
+  }
+}
+function brandImgLoad(img, initBg, initLetter) {
+  // 32px'ten küçük ikonlar bulanık görünür — renkli initial göster
+  if (img.naturalWidth < 32 || img.naturalHeight < 32) {
+    const av = img.parentNode;
+    av.style.background = initBg;
+    av.innerHTML = `<span style="color:#fff;font-size:22px;font-weight:700;">${initLetter}</span>`;
+  }
 }
 
 function buildBrandGrid(filter) {
@@ -1619,10 +1648,15 @@ function buildBrandGrid(filter) {
     const isActive = isAll ? !activeBrand : activeBrand === b;
     const count  = isAll ? products.length : brandCounts[b] || 0;
     const safeB  = isAll ? '' : b.replace(/'/g, "\\'");
-    const logo   = !isAll ? getBrandLogo(b) : null;
+    const logo     = !isAll ? getBrandLogo(b) : null;
+    const favicon  = !isAll ? getBrandFavicon(b) : null;
+    const initBg   = !isAll ? brandColor(b) : 'transparent';
+    const initLtr  = b.charAt(0).toUpperCase();
+    const safeFav  = favicon ? favicon.replace(/'/g, '%27') : '';
+    const safeInitBg = initBg.replace(/'/g, '%27');
     const avatar = logo
-      ? `<div class="brand-card-avatar"><img src="${logo}" alt="${b}" onerror="this.parentNode.innerHTML='<span>${b.charAt(0).toUpperCase()}</span>'"></div>`
-      : `<div class="brand-card-avatar">${isAll ? '✦' : b.charAt(0).toUpperCase()}</div>`;
+      ? `<div class="brand-card-avatar"><img src="${logo}" alt="${b}" onload="brandImgLoad(this,'${safeInitBg}','${initLtr}')" onerror="brandImgError(this,'${safeFav}','${safeInitBg}','${initLtr}')"></div>`
+      : `<div class="brand-card-avatar" style="background:${isAll ? 'transparent' : initBg};color:#fff">${isAll ? '✦' : initLtr}</div>`;
     return `<div class="brand-card${isActive ? ' active' : ''}" onclick="selectBrandFromModal('${safeB}')">
       ${avatar}
       <div class="brand-card-name">${b}</div>
