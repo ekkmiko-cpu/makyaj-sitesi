@@ -747,14 +747,20 @@ console.log('\nToplam ham veri: ' + allRaw.length + ' urun');
 // ── Kalite filtresi: hatalı verileri temizle ──
 var beforeFilter = allRaw.length;
 allRaw = allRaw.filter(function(p) {
+  var name = (p.name || '').trim();
   // 1. Fiyat 5 TL altı (0 TL dahil) hatalı scrape
   if (p.price < 5) return false;
-  // 2. Kategori sayfası başlıkları (ürün değil)
-  if ((p.name || '').match(/\b(renkleri ve|markaları|fiyatları)\s+\d{4}\b/i)) return false;
-  // 3. "Set", "Hediye Set" gibi çoklu ürün paketleri
-  if ((p.name || '').match(/\bhediye set\b/i)) return false;
-  // 4. İsmi çok kısa (5 char altı) veya boş
-  if (!p.name || p.name.trim().length < 5) return false;
+  // 2. İsmi çok kısa veya boş
+  if (!name || name.length < 5) return false;
+  // 3. Trendyol SEO kategori sayfaları — "Markaları", "Fiyatları", "Yorumları" + yıl içeren başlıklar
+  if (name.match(/\b(renkleri|markaları|fiyatları|yorumları|çeşitleri|modelleri)\b.*\d{4}/i)) return false;
+  if (name.match(/\d{4}\s*\|/i) || name.match(/\|\s*trendyol/i)) return false;
+  // 4. Trendyol banner/kampanya başlıkları ("Işıltıyı Yakalayın", "Keşfet" gibi)
+  if (name.match(/\b(keşfet|yakalayın|ayrıcalıklı|özel fiyat|kampanya)\b/i)) return false;
+  // 5. Review sayısı gerçek dışı yüksek (SEO aggregation sayfası işareti)
+  if (p.reviews > 50000) return false;
+  // 6. "Set", "Hediye Set" gibi çoklu ürün paketleri
+  if (name.match(/\bhediye set\b/i)) return false;
   return true;
 });
 console.log('Kalite filtresi: ' + beforeFilter + ' -> ' + allRaw.length + ' (' + (beforeFilter - allRaw.length) + ' hatali veri cikarildi)');

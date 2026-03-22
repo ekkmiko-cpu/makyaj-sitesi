@@ -1442,8 +1442,15 @@ function saveAlerts() { localStorage.setItem('beaute-alerts', JSON.stringify(pri
 // ── ÖNE ÇIKANLAR ─────────────────────────────────────────────────────────────
 var _featTab = 'reviews'; // reviews | savings | rating
 
+function _isRealProduct(p) {
+  if (!p.name) return false;
+  if (p.reviews > 50000) return false;
+  if (/markaları|fiyatları|yorumları|\|\s*trendyol|\d{4}\s*\|/i.test(p.name)) return false;
+  if (/keşfet|yakalayın/i.test(p.name)) return false;
+  return true;
+}
 function getFeatured(tab) {
-  const pool = products.filter(p => p.prices && p.prices.length > 0);
+  const pool = products.filter(p => p.prices && p.prices.length > 0 && _isRealProduct(p));
   if (tab === 'reviews') {
     return pool.filter(p => p.reviews > 0).sort((a,b) => b.reviews - a.reviews).slice(0, 20);
   }
