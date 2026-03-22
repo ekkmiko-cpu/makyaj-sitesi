@@ -19,7 +19,17 @@ function parseProduct(data,id,category,url){
   const p=data.product;
   if(p.stockStatus==='OUT_OF_STOCK')return null;
   const prices=p.prices||{};
-  let price=prices.discountedPrice?prices.discountedPrice/100:prices.normalPrice?prices.normalPrice/100:0;
+  // "Gratis Kart ile" indirimi sadece kart sahiplerine özel — karşılaştırma için normalPrice kullan.
+  // Gerçek kampanya indirimi (herkese açık) ise discountedPrice kullan.
+  const isCardOnly = (prices.discountedText||'').toLowerCase().includes('kart');
+  let price;
+  if (isCardOnly) {
+    // Kart fiyatı değil, normal (kartsız) fiyatı kullan
+    price = prices.normalPrice ? prices.normalPrice/100 : 0;
+  } else {
+    // Herkese açık kampanya indirimi varsa onu, yoksa normal fiyatı kullan
+    price = prices.discountedPrice ? prices.discountedPrice/100 : prices.normalPrice ? prices.normalPrice/100 : 0;
+  }
   if(price<=0)return null;
   const imageUrl=(p.imageUrls&&p.imageUrls[0])?p.imageUrls[0].fileUrl:'';
   let name='',brand='',barcode='';
