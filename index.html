@@ -601,6 +601,237 @@
     html.dark .ingredient-bar-fill.bar-mid { background: #f0ad4e !important; }
     html.dark .ingredient-bar-fill.bar-bad { background: #e74c3c !important; }
 
+    /* ── SEARCH OVERLAY ── */
+    .search-overlay {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(10,9,8,0.96); backdrop-filter: blur(20px) saturate(180%);
+      display: flex; flex-direction: column; align-items: center;
+      padding: 5rem 1.5rem 2rem;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .search-overlay.open { opacity: 1; pointer-events: all; }
+    .search-overlay-close {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      background: none; border: none; color: rgba(255,255,255,0.4); cursor: pointer;
+      font-size: 22px; line-height: 1; padding: 6px; transition: color 0.2s;
+    }
+    .search-overlay-close:hover { color: #fff; }
+    .search-overlay-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 4px;
+      text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 2rem;
+    }
+    .search-overlay-input-wrap {
+      width: 100%; max-width: 680px; position: relative; margin-bottom: 2.5rem;
+    }
+    .search-overlay-icon {
+      position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+      color: rgba(255,255,255,0.35); pointer-events: none;
+    }
+    .search-overlay-input {
+      width: 100%; background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.15);
+      color: #fff; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300;
+      padding: 18px 20px 18px 54px; border-radius: 4px; outline: none;
+      transition: border-color 0.25s, background 0.25s;
+      letter-spacing: 1px;
+    }
+    .search-overlay-input::placeholder { color: rgba(255,255,255,0.25); }
+    .search-overlay-input:focus { border-color: rgba(201,169,110,0.6); background: rgba(255,255,255,0.09); }
+    .search-overlay-results {
+      width: 100%; max-width: 680px; overflow-y: auto; max-height: calc(100vh - 280px);
+    }
+    .search-results-section-title {
+      font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+      color: rgba(255,255,255,0.3); margin-bottom: 10px; margin-top: 16px; padding-left: 4px;
+    }
+    .search-result-item {
+      display: flex; align-items: center; gap: 14px; padding: 12px 14px;
+      border-radius: 3px; cursor: pointer; transition: background 0.2s;
+      border-bottom: 0.5px solid rgba(255,255,255,0.06);
+      opacity: 0; transform: translateY(10px);
+      animation: searchItemIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes searchItemIn { to { opacity: 1; transform: translateY(0); } }
+    .search-result-item:hover { background: rgba(255,255,255,0.07); }
+    .search-result-img {
+      width: 44px; height: 44px; border-radius: 3px; object-fit: contain;
+      background: rgba(255,255,255,0.06); flex-shrink: 0; padding: 3px;
+    }
+    .search-result-emoji {
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      font-size: 24px; background: rgba(255,255,255,0.06); border-radius: 3px; flex-shrink: 0;
+    }
+    .search-result-info { flex: 1; min-width: 0; }
+    .search-result-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #fff;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;
+    }
+    .search-result-meta { font-size: 10px; letter-spacing: 1px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+    .search-result-price {
+      font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--gold);
+      flex-shrink: 0;
+    }
+    .search-result-brand-card {
+      display: flex; align-items: center; gap: 12px; padding: 10px 14px;
+      border-radius: 3px; cursor: pointer; transition: background 0.2s;
+      border-bottom: 0.5px solid rgba(255,255,255,0.06);
+      opacity: 0; transform: translateY(8px);
+      animation: searchItemIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .search-result-brand-card:hover { background: rgba(255,255,255,0.07); }
+    .search-result-brand-avatar {
+      width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), #e8c878);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 600; color: #1a1814; flex-shrink: 0; letter-spacing: 0;
+    }
+    .search-result-brand-name { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
+    .search-result-brand-count { font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 1px; }
+    .search-empty {
+      text-align: center; padding: 3rem 0; color: rgba(255,255,255,0.25);
+      font-family: 'Cormorant Garamond', serif; font-size: 18px;
+    }
+    .search-nav-btn {
+      background: none; border: none; cursor: pointer; color: var(--text3); padding: 4px 6px;
+      transition: color 0.2s; display: flex; align-items: center; line-height: 1;
+    }
+    .search-nav-btn:hover { color: var(--text); }
+
+    /* ── BRAND MODAL ── */
+    .brand-modal {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(10,9,8,0.7); backdrop-filter: blur(10px) saturate(150%);
+      display: flex; flex-direction: column;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .brand-modal.open { opacity: 1; pointer-events: all; }
+    .brand-modal-panel {
+      background: var(--bg3); border-bottom: 0.5px solid var(--border2);
+      transform: translateY(-20px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      max-height: 92vh; overflow-y: auto;
+    }
+    .brand-modal.open .brand-modal-panel { transform: translateY(0); }
+    .brand-modal-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 2.5rem 0.8rem; position: sticky; top: 0;
+      background: var(--bg3); z-index: 2; border-bottom: 0.5px solid var(--border);
+    }
+    .brand-modal-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--text);
+    }
+    .brand-modal-sub { font-size: 10px; letter-spacing: 1.5px; color: var(--text3); margin-top: 2px; }
+    .brand-modal-close {
+      background: none; border: 0.5px solid var(--border2); cursor: pointer;
+      color: var(--text3); font-size: 18px; width: 36px; height: 36px; border-radius: 2px;
+      display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+    }
+    .brand-modal-close:hover { background: var(--bg2); color: var(--text); }
+    .brand-modal-search {
+      padding: 1rem 2.5rem 0; position: sticky; top: 72px; background: var(--bg3); z-index: 2;
+      padding-bottom: 0.8rem;
+    }
+    .brand-modal-search-input {
+      width: 100%; max-width: 340px; font-family: 'Jost', sans-serif; font-size: 12px;
+      padding: 8px 14px; border: 0.5px solid var(--border2); background: var(--bg2);
+      color: var(--text); border-radius: 2px; outline: none; letter-spacing: 1px;
+      transition: border-color 0.2s;
+    }
+    .brand-modal-search-input::placeholder { color: var(--text3); }
+    .brand-modal-search-input:focus { border-color: var(--text); }
+    .brand-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+      gap: 10px; padding: 1rem 2.5rem 2rem;
+    }
+    .brand-card {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      padding: 1.4rem 1rem; border: 0.5px solid var(--border2); border-radius: 3px;
+      cursor: pointer; background: var(--bg2); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      opacity: 0; transform: translateY(18px) scale(0.96);
+    }
+    .brand-card.anim-in {
+      animation: brandCardIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    @keyframes brandCardIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+    .brand-card:hover { background: var(--bg3); border-color: var(--border2); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
+    .brand-card.active { background: var(--text); border-color: var(--text); }
+    .brand-card.active .brand-card-name { color: var(--bg3); }
+    .brand-card.active .brand-card-count { color: rgba(255,255,255,0.5); }
+    .brand-card.active .brand-card-avatar { background: rgba(255,255,255,0.15); color: var(--bg3); }
+    .brand-card-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(201,169,110,0.15), rgba(232,200,120,0.08));
+      border: 0.5px solid rgba(201,169,110,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 500; color: var(--gold); letter-spacing: 0;
+      transition: all 0.2s;
+    }
+    .brand-card-name {
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text);
+      text-align: center; transition: color 0.2s; line-height: 1.3;
+    }
+    .brand-card-count { font-size: 9px; color: var(--text3); transition: color 0.2s; }
+
+    /* ── CATEGORY MODAL ── */
+    .cat-modal {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(10,9,8,0.7); backdrop-filter: blur(10px) saturate(150%);
+      display: flex; flex-direction: column;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cat-modal.open { opacity: 1; pointer-events: all; }
+    .cat-modal-panel {
+      background: var(--bg3); border-bottom: 0.5px solid var(--border2);
+      transform: translateY(-20px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      max-height: 92vh; overflow-y: auto;
+    }
+    .cat-modal.open .cat-modal-panel { transform: translateY(0); }
+    .cat-modal-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 2.5rem 0.8rem; position: sticky; top: 0;
+      background: var(--bg3); z-index: 2; border-bottom: 0.5px solid var(--border);
+    }
+    .cat-modal-title {
+      font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--text);
+    }
+    .cat-modal-sub { font-size: 10px; letter-spacing: 1.5px; color: var(--text3); margin-top: 2px; }
+    .cat-modal-close {
+      background: none; border: 0.5px solid var(--border2); cursor: pointer;
+      color: var(--text3); font-size: 18px; width: 36px; height: 36px; border-radius: 2px;
+      display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+    }
+    .cat-modal-close:hover { background: var(--bg2); color: var(--text); }
+    .cat-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px; padding: 1.2rem 2.5rem 2rem;
+    }
+    .cat-card {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      padding: 1.6rem 1rem; border: 0.5px solid var(--border2); border-radius: 3px;
+      cursor: pointer; background: var(--bg2); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      opacity: 0; transform: translateY(18px) scale(0.96);
+    }
+    .cat-card.anim-in {
+      animation: catCardIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    @keyframes catCardIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+    .cat-card:hover { background: var(--bg3); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 28px rgba(0,0,0,0.08); }
+    .cat-card.active { background: var(--text); border-color: var(--text); }
+    .cat-card.active .cat-card-name { color: var(--bg3); }
+    .cat-card.active .cat-card-count { color: rgba(255,255,255,0.5); }
+    .cat-card.active .cat-card-emoji { filter: grayscale(1) brightness(10); }
+    .cat-card-emoji { font-size: 28px; transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .cat-card:hover .cat-card-emoji { transform: scale(1.2) rotate(-5deg); }
+    .cat-card-name {
+      font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--text);
+      text-align: center; transition: color 0.2s; line-height: 1.3;
+    }
+    .cat-card-count { font-size: 9px; color: var(--text3); transition: color 0.2s; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.2rem; }
@@ -637,11 +868,15 @@
   <a href="#" class="logo">Beau<em>té</em></a>
   <div class="nav-center">
     <a onclick="resetFilters()">Koleksiyon</a>
-    <a onclick="toggleBrandOverlay()">Markalar</a>
+    <a onclick="openCatModal()">Kategoriler</a>
+    <a onclick="openBrandModal()">Markalar</a>
     <a onclick="openCompare()">Karşılaştır</a>
     <a onclick="openSkinTest()">Cilt Testi</a>
   </div>
   <div class="nav-right">
+    <button class="search-nav-btn" onclick="openSearchOverlay()" title="Ara">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </button>
     <button class="dark-btn" id="darkBtn" onclick="toggleDark()" title="Karanlık mod">
       <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
@@ -654,13 +889,54 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <a onclick="resetFilters();toggleMobileMenu()">Koleksiyon</a>
-  <a onclick="toggleBrandOverlay();toggleMobileMenu()">Markalar</a>
+  <a onclick="openCatModal();toggleMobileMenu()">Kategoriler</a>
+  <a onclick="openBrandModal();toggleMobileMenu()">Markalar</a>
   <a onclick="openSkinTest();toggleMobileMenu()">Cilt Testi</a>
+  <a onclick="openSearchOverlay();toggleMobileMenu()">🔍 Ara</a>
 </div>
 
-<div class="brand-overlay" id="brandOverlay">
-  <div class="brand-overlay-title">Markaya Göre Filtrele</div>
-  <div class="brand-chips" id="brandChips"></div>
+<!-- Brand Modal -->
+<div class="brand-modal" id="brandModal" onclick="if(event.target===this)closeBrandModal()">
+  <div class="brand-modal-panel">
+    <div class="brand-modal-head">
+      <div>
+        <div class="brand-modal-title">Markalar</div>
+        <div class="brand-modal-sub" id="brandModalSub">Marka seçerek filtreleyin</div>
+      </div>
+      <button class="brand-modal-close" onclick="closeBrandModal()">✕</button>
+    </div>
+    <div class="brand-modal-search">
+      <input class="brand-modal-search-input" id="brandModalSearch" type="text" placeholder="Marka ara..." oninput="filterBrandCards(this.value)">
+    </div>
+    <div class="brand-grid" id="brandGrid"></div>
+  </div>
+</div>
+
+<!-- Category Modal -->
+<div class="cat-modal" id="catModal" onclick="if(event.target===this)closeCatModal()">
+  <div class="cat-modal-panel">
+    <div class="cat-modal-head">
+      <div>
+        <div class="cat-modal-title">Kategoriler</div>
+        <div class="cat-modal-sub" id="catModalSub">Kategori seçerek filtreleyin</div>
+      </div>
+      <button class="cat-modal-close" onclick="closeCatModal()">✕</button>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</div>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-overlay-close" onclick="closeSearchOverlay()">✕</button>
+  <div class="search-overlay-title">Ürün veya marka ara</div>
+  <div class="search-overlay-input-wrap">
+    <span class="search-overlay-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </span>
+    <input class="search-overlay-input" id="searchOverlayInput" type="text" placeholder="Fondöten, L'Oréal, maskara..." autocomplete="off" oninput="updateSearchOverlayResults(this.value)">
+  </div>
+  <div class="search-overlay-results" id="searchOverlayResults"></div>
 </div>
 
 <div class="hero">
@@ -758,7 +1034,7 @@
       <div class="footer-col-title">Araçlar</div>
       <a onclick="openSkinTest()">Cilt Testi</a>
       <a onclick="openWishlist()">Favorilerim</a>
-      <a onclick="toggleBrandOverlay()">Markalar</a>
+      <a onclick="openBrandModal()">Markalar</a>
       <a onclick="openCompare()">Karşılaştır</a>
     </div>
     <div class="footer-col">
@@ -1105,24 +1381,191 @@ function renderTrending() {
   `;
 }
 
-// ── BRAND OVERLAY ─────────────────────────────────────────────────────────────
-function initBrandChips() {
-  const brands = [...new Set(products.map(p => p.brand))].sort();
-  document.getElementById('brandChips').innerHTML =
-    ['Tümü', ...brands].map(b => `
-      <button class="filter-btn${(b === 'Tümü' ? !activeBrand : activeBrand === b) ? ' active' : ''}"
-        onclick="filterBrand('${b === 'Tümü' ? '' : b}')">${b}</button>
-    `).join('');
+// ── BRAND MODAL ────────────────────────────────────────────────────────────────
+var _brandModalOpen = false;
+function openBrandModal() {
+  const modal = document.getElementById('brandModal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  _brandModalOpen = true;
+  document.getElementById('brandModalSearch').value = '';
+  buildBrandGrid('');
 }
-function toggleBrandOverlay() {
-  const el = document.getElementById('brandOverlay');
-  el.classList.toggle('open');
-  if (el.classList.contains('open')) initBrandChips();
+function closeBrandModal() {
+  document.getElementById('brandModal').classList.remove('open');
+  document.body.style.overflow = '';
+  _brandModalOpen = false;
 }
-function filterBrand(brand) {
+function buildBrandGrid(filter) {
+  const brandCounts = {};
+  products.forEach(p => { brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1; });
+  let brands = Object.keys(brandCounts).sort();
+  if (filter) brands = brands.filter(b => b.toLowerCase().includes(filter.toLowerCase()));
+  const sub = filter ? brands.length + ' marka bulundu' : Object.keys(brandCounts).length + ' marka';
+  document.getElementById('brandModalSub').textContent = sub;
+  const grid = document.getElementById('brandGrid');
+  grid.innerHTML = ['Tümü', ...brands].map((b, i) => {
+    const isAll = b === 'Tümü';
+    const isActive = isAll ? !activeBrand : activeBrand === b;
+    const count = isAll ? products.length : brandCounts[b] || 0;
+    const initial = isAll ? '✦' : b.charAt(0).toUpperCase();
+    const safeB = isAll ? '' : b.replace(/'/g, "\\'");
+    return `<div class="brand-card${isActive ? ' active' : ''}" onclick="selectBrandFromModal('${safeB}')">
+      <div class="brand-card-avatar">${initial}</div>
+      <div class="brand-card-name">${b}</div>
+      <div class="brand-card-count">${count} ürün</div>
+    </div>`;
+  }).join('');
+  // Staggered animation
+  requestAnimationFrame(() => {
+    grid.querySelectorAll('.brand-card').forEach((el, i) => {
+      el.style.animationDelay = (i * 22) + 'ms';
+      el.classList.add('anim-in');
+    });
+  });
+}
+function filterBrandCards(val) { buildBrandGrid(val); }
+function selectBrandFromModal(brand) {
   activeBrand = brand || null;
-  initBrandChips();
   render();
+  closeBrandModal();
+}
+
+// Legacy (kept for any old references)
+function toggleBrandOverlay() { openBrandModal(); }
+function initBrandChips() {}
+function filterBrand(brand) { selectBrandFromModal(brand); }
+
+// ── CATEGORY MODAL ─────────────────────────────────────────────────────────────
+var _catModalOpen = false;
+var CAT_EMOJIS = {
+  'all':'✨','fondoten':'✨','maskara':'👁️','ruj':'💄','far':'💜','far-paleti':'🎨',
+  'eyeliner':'✏️','goz-kalemi':'🖊️','allik':'🌸','aydinlatici':'💡','bronzer':'🌞',
+  'kontur':'🎭','kapatici':'💫','primer':'🌟','pudra':'🌿',
+  'dudak-parlatici':'✨','dudak-kalemi':'🖊️','kas':'🖌️'
+};
+var CAT_NAMES = {
+  'all':'Tümü','fondoten':'Fondöten','maskara':'Maskara','ruj':'Ruj','far':'Göz Farı',
+  'far-paleti':'Far Paleti','eyeliner':'Eyeliner','goz-kalemi':'Göz Kalemi','allik':'Allık',
+  'aydinlatici':'Aydınlatıcı','bronzer':'Bronzer','kontur':'Kontür','kapatici':'Kapatıcı',
+  'primer':'Primer','pudra':'Pudra','dudak-parlatici':'Dudak Parlatıcı',
+  'dudak-kalemi':'Dudak Kalemi','kas':'Kaş Makyajı'
+};
+function openCatModal() {
+  const modal = document.getElementById('catModal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  _catModalOpen = true;
+  buildCatGrid();
+}
+function closeCatModal() {
+  document.getElementById('catModal').classList.remove('open');
+  document.body.style.overflow = '';
+  _catModalOpen = false;
+}
+function buildCatGrid() {
+  const catCounts = {};
+  products.forEach(p => { catCounts[p.category] = (catCounts[p.category] || 0) + 1; });
+  const cats = ['all', ...Object.keys(catCounts).sort()];
+  document.getElementById('catModalSub').textContent = Object.keys(catCounts).length + ' kategori';
+  const grid = document.getElementById('catGrid');
+  grid.innerHTML = cats.map((c, i) => {
+    const isActive = activeCategory === c;
+    const count = c === 'all' ? products.length : (catCounts[c] || 0);
+    const emoji = CAT_EMOJIS[c] || '💄';
+    const name = CAT_NAMES[c] || c;
+    return `<div class="cat-card${isActive ? ' active' : ''}" onclick="selectCatFromModal('${c}')">
+      <div class="cat-card-emoji">${emoji}</div>
+      <div class="cat-card-name">${name}</div>
+      <div class="cat-card-count">${count} ürün</div>
+    </div>`;
+  }).join('');
+  requestAnimationFrame(() => {
+    grid.querySelectorAll('.cat-card').forEach((el, i) => {
+      el.style.animationDelay = (i * 28) + 'ms';
+      el.classList.add('anim-in');
+    });
+  });
+}
+function selectCatFromModal(cat) {
+  activeCategory = cat;
+  // also update the filter buttons
+  document.querySelectorAll('.filter-btn[data-cat]').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === cat);
+  });
+  render();
+  closeCatModal();
+}
+
+// ── SEARCH OVERLAY ─────────────────────────────────────────────────────────────
+var _searchOverlayOpen = false;
+function openSearchOverlay() {
+  const overlay = document.getElementById('searchOverlay');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  _searchOverlayOpen = true;
+  setTimeout(() => document.getElementById('searchOverlayInput').focus(), 80);
+  document.getElementById('searchOverlayInput').value = '';
+  document.getElementById('searchOverlayResults').innerHTML = '<div class="search-empty">Aramak istediğiniz ürün veya markayı yazın...</div>';
+}
+function closeSearchOverlay() {
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  _searchOverlayOpen = false;
+}
+function updateSearchOverlayResults(q) {
+  const container = document.getElementById('searchOverlayResults');
+  const query = (q || '').toLowerCase().trim();
+  if (!query) {
+    container.innerHTML = '<div class="search-empty">Aramak istediğiniz ürün veya markayı yazın...</div>';
+    return;
+  }
+  // Match products
+  const matchedProducts = products.filter(p =>
+    p.name.toLowerCase().includes(query) || p.brand.toLowerCase().includes(query)
+  ).slice(0, 8);
+  // Match brands
+  const brandCounts = {};
+  products.forEach(p => { brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1; });
+  const matchedBrands = Object.keys(brandCounts).filter(b => b.toLowerCase().includes(query)).slice(0, 5);
+
+  if (!matchedProducts.length && !matchedBrands.length) {
+    container.innerHTML = '<div class="search-empty">Sonuç bulunamadı</div>';
+    return;
+  }
+  let html = '';
+  if (matchedProducts.length) {
+    html += '<div class="search-results-section-title">Ürünler</div>';
+    html += matchedProducts.map((p, i) => {
+      const price = Math.min(...p.prices.map(pr => pr.price));
+      const hasImg = p.imageUrl && !p.imageUrl.includes('placeholder');
+      return `<div class="search-result-item" style="animation-delay:${i*40}ms" onclick="closeSearchOverlay();openDetail(${p.id})">
+        ${hasImg
+          ? `<img class="search-result-img" src="${p.imageUrl}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+          : ''}
+        <div class="search-result-emoji" style="${hasImg?'display:none':''}">${p.emoji||'💄'}</div>
+        <div class="search-result-info">
+          <div class="search-result-name">${p.name}</div>
+          <div class="search-result-meta">${p.brand.toUpperCase()} · ${CAT_NAMES[p.category]||p.category} · ${p.prices.length} satıcı</div>
+        </div>
+        <div class="search-result-price">₺${price.toLocaleString('tr-TR')}</div>
+      </div>`;
+    }).join('');
+  }
+  if (matchedBrands.length) {
+    html += '<div class="search-results-section-title">Markalar</div>';
+    html += matchedBrands.map((b, i) => {
+      const count = brandCounts[b];
+      return `<div class="search-result-brand-card" style="animation-delay:${(matchedProducts.length+i)*40}ms" onclick="closeSearchOverlay();selectBrandFromModal('${b.replace(/'/g,"\\'")}')">
+        <div class="search-result-brand-avatar">${b.charAt(0).toUpperCase()}</div>
+        <div>
+          <div class="search-result-brand-name">${b}</div>
+          <div class="search-result-brand-count">${count} ürün</div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  container.innerHTML = html;
 }
 
 // ── FILTER ────────────────────────────────────────────────────────────────────
@@ -1764,6 +2207,20 @@ document.getElementById('detailClose').addEventListener('click', () => document.
 document.getElementById('detailModal').addEventListener('click', e => { if (e.target === document.getElementById('detailModal')) document.getElementById('detailModal').classList.remove('open'); });
 document.getElementById('compareModalClose').addEventListener('click', () => document.getElementById('compareModal').classList.remove('open'));
 document.getElementById('compareModal').addEventListener('click', e => { if (e.target === document.getElementById('compareModal')) document.getElementById('compareModal').classList.remove('open'); });
+
+// Escape key closes overlays/modals
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (_searchOverlayOpen) { closeSearchOverlay(); return; }
+    if (_brandModalOpen) { closeBrandModal(); return; }
+    if (_catModalOpen) { closeCatModal(); return; }
+  }
+  // Cmd+K / Ctrl+K opens search
+  if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+    e.preventDefault();
+    openSearchOverlay();
+  }
+});
 
 // Hamburger visibility
 window.addEventListener('resize', () => {
