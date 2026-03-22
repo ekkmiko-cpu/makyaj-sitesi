@@ -839,14 +839,14 @@
     .brand-card.active .brand-card-avatar { background: rgba(201,169,110,0.25); color: var(--gold); border-color: rgba(201,169,110,0.4); }
     .brand-card-avatar {
       width: 56px; height: 56px; border-radius: 10px;
-      background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.07); border: 0.5px solid rgba(255,255,255,0.1);
       display: flex; align-items: center; justify-content: center;
-      font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0;
+      font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 0;
       transition: all 0.2s; overflow: hidden;
     }
+    .brand-card-avatar.has-logo { background: #fff; }
     .brand-card-avatar img {
-      width: 100%; height: 100%; object-fit: contain; padding: 6px;
-      background: #fff;
+      width: 100%; height: 100%; object-fit: contain; padding: 7px;
     }
     .brand-card-name {
       font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75);
@@ -1532,32 +1532,55 @@ function closeBrandModal() {
   document.body.style.overflow = '';
   _brandModalOpen = false;
 }
-// icon.horse — ücretsiz, auth gerektirmez, yüksek kaliteli favicon/logo servisi
+// ── MARKA LOGOLARI ────────────────────────────────────────────────────────────
+// Katman 1: Wikipedia Commons — SVG tabanlı, 500px genişliğinde HD çıktı
+const _WK = 'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/';
+const BRAND_WIKI = {
+  'Maybelline':_WK+'Maybelline-Logo.svg&width=400',
+  'Maybelline New York':_WK+'Maybelline-Logo.svg&width=400',
+  "L'Oréal Paris":_WK+"L'Or%C3%A9al_logo.svg&width=400",
+  "L'Oreal Paris":_WK+"L'Or%C3%A9al_logo.svg&width=400",
+  'Loreal Paris':_WK+"L'Or%C3%A9al_logo.svg&width=400",
+  'CHANEL':_WK+'Chanel%20logo.svg&width=400',
+  'DIOR':_WK+'Dior%20Logo%202022.svg&width=400',
+  'DIOR BACKSTAGE':_WK+'Dior%20Logo%202022.svg&width=400',
+  'CLINIQUE':_WK+'Clinique%20logo.svg&width=400',
+  'Clinique':_WK+'Clinique%20logo.svg&width=400',
+  'SHISEIDO':_WK+'Shiseido%20logo.svg&width=400',
+  'Shiseido':_WK+'Shiseido%20logo.svg&width=400',
+  'BENEFIT COSMETICS':_WK+'Benefit%20Cosmetics%20logo.svg&width=400',
+  'benefit cosmetics':_WK+'Benefit%20Cosmetics%20logo.svg&width=400',
+  'ESTÉE LAUDER':_WK+'Est%C3%A9e%20Lauder%20Companies%20Logo.svg&width=400',
+  'Estee Lauder':_WK+'Est%C3%A9e%20Lauder%20Companies%20Logo.svg&width=400',
+  'GIVENCHY':_WK+'Givenchy%20-%20logo%20(France%2C%202003).svg&width=400',
+  'GUERLAIN':_WK+'Guerlain%20-%20logo%20(France%2C%202022-).svg&width=400',
+  'LANCÔME':_WK+'Lancome%20logo.svg&width=400',
+  'Lancome':_WK+'Lancome%20logo.svg&width=400',
+  'Nivea':_WK+'NIVEA%20logo%202021.svg&width=400',
+  'YVES SAINT LAURENT':_WK+'Saint%20Laurent%20Paris%20SVG%20Logo.svg&width=400',
+  'Yves Saint Laurent':_WK+'Saint%20Laurent%20Paris%20SVG%20Logo.svg&width=400',
+  'ANASTASIA BEVERLY HILLS':_WK+'Anastasia%20Beverly%20Hills%20Logo.svg&width=400',
+  'CHARLOTTE TILBURY':_WK+'Charlotte%20Tilbury%20logo.svg&width=400',
+  'CLARINS':_WK+'Clarins-logo.svg&width=400',
+  'KIKO':_WK+'Kiko%20Milano%20logo.svg&width=400',
+  'Kiko':_WK+'Kiko%20Milano%20logo.svg&width=400',
+  'DOLCE & GABBANA':_WK+'Dolce%20%26%20Gabbana%20-%20logo%20(Italy%2C%201985-).svg&width=400',
+  'SISLEY':_WK+'Sisley%20Paris%20logo.svg&width=400',
+  'Yves Rocher':_WK+'Yves%20rocher%20logo.svg&width=400',
+  'Max Factor':_WK+'MaxFactor%20logo.svg&width=400',
+  'Avon':_WK+'Avon%20Products%20logo%20(2023).svg&width=400',
+  'AVON':_WK+'Avon%20Products%20logo%20(2023).svg&width=400',
+};
+// Katman 2: icon.horse — Wikipedia'da olmayan markalar için
 const BRAND_LOGOS = {
-  'Maybelline':'maybelline.com','Maybelline New York':'maybelline.com',
-  "L'Oréal Paris":'loreal-paris.com',"L'Oreal Paris":'loreal-paris.com','Loreal Paris':'loreal-paris.com',
   'NYX Professional Makeup':'nyxcosmetics.com',
   'Mac':'maccosmetics.com',
   'NARS':'narscosmetics.com',
-  'CHARLOTTE TILBURY':'charlottetilbury.com',
-  'BENEFIT COSMETICS':'benefitcosmetics.com','benefit cosmetics':'benefitcosmetics.com',
-  'DIOR':'dior.com','DIOR BACKSTAGE':'dior.com',
-  'CHANEL':'chanel.com',
-  'YVES SAINT LAURENT':'ysl.com','Yves Saint Laurent':'ysl.com',
-  'ESTÉE LAUDER':'esteelauder.com','Estee Lauder':'esteelauder.com',
-  'CLINIQUE':'clinique.com','Clinique':'clinique.com',
-  'LANCÔME':'lancome.com','Lancome':'lancome.com',
   'FENTY BEAUTY':'fentybeauty.com',
   'TOO FACED':'toofaced.com',
   'HUDA BEAUTY':'hudabeauty.com',
-  'ANASTASIA BEVERLY HILLS':'anastasiabeverlyhills.com',
   'RARE BEAUTY':'rarebeauty.com','Rare Beauty':'rarebeauty.com',
-  'SHISEIDO':'shiseido.com','Shiseido':'shiseido.com',
-  'GIVENCHY':'givenchy.com',
   'ARMANI':'armani.com',
-  'GUERLAIN':'guerlain.com',
-  'CLARINS':'clarins.com',
-  'SISLEY':'sisley-paris.com',
   'HOURGLASS':'hourglasscosmetics.com',
   'MAKE UP FOR EVER':'makeupforever.com',
   'MAKEUP BY MARIO':'makeupbymario.com',
@@ -1572,18 +1595,14 @@ const BRAND_LOGOS = {
   'ONESIZE':'onesize.com',
   'SENSAI':'sensai-cosmetics.com',
   'ERBORIAN':'erborian.com',
-  'DOLCE & GABBANA':'dolcegabbana.com',
-  'KIKO':'kikocosmetics.com','Kiko':'kikocosmetics.com',
   'Flormar':'flormar.com',
   'Golden Rose':'goldenrose.com.tr',
   'Essence':'essence.eu',
-  'Max Factor':'maxfactor.com',
   'Revolution':'revolutionbeauty.com','Revolution Pro':'revolutionbeauty.com','I Heart Revolution':'revolutionbeauty.com',
   'wet n wild':'wetnwild.com','WET N WİLD':'wetnwild.com',
   'Physicians Formula':'physiciansformula.com',
   'Pierre Cardin':'pierrecardin.com',
   'Farmasi':'farmasi.com',
-  'Yves Rocher':'yvesrocher.com',
   'SKINFOOD':'skinfood.co.kr',
   'rom&nd':'romand.co.kr',
   'Missha':'missha.us',
@@ -1598,11 +1617,13 @@ const BRAND_LOGOS = {
   'Alix Avien':'alixavien.com',
   'Catherine Arley':'catherinearley.com.tr',
   'Alterra':'alterra-naturkosmetik.de',
-  'Nivea':'nivea.com',
   'CLIO':'cliomakeup.com',
   'Bell':'bell.com.pl',
 };
 function getBrandLogo(name) {
+  // Önce Wikipedia HD (SVG-tabanlı, 500px)
+  if (BRAND_WIKI[name]) return BRAND_WIKI[name];
+  // Sonra icon.horse
   const domain = BRAND_LOGOS[name];
   return domain ? `https://icon.horse/icon/${domain}` : null;
 }
@@ -1610,29 +1631,17 @@ function getBrandFavicon(name) {
   const domain = BRAND_LOGOS[name];
   return domain ? `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=128` : null;
 }
-function brandColor(name) {
-  let h = 0;
-  for (let i = 0; i < name.length; i++) h = name.charCodeAt(i) + ((h << 5) - h);
-  const palette = ['#9B59B6','#E91E8C','#C09040','#2ECC71','#3498DB','#6366F1','#00BFA5','#F97316','#C0392B','#16A085'];
-  return palette[Math.abs(h) % palette.length];
+function _brandImgReplace(img, initLtr) {
+  const av = img.parentNode;
+  av.classList.remove('has-logo');
+  av.innerHTML = `<span>${initLtr}</span>`;
 }
-function brandImgError(img, fallbackSrc, initBg, initLetter) {
-  if (img.dataset.tried) {
-    const av = img.parentNode;
-    av.style.background = initBg;
-    av.innerHTML = `<span style="color:#fff;font-size:22px;font-weight:700;">${initLetter}</span>`;
-  } else {
-    img.dataset.tried = '1';
-    img.src = fallbackSrc;
-  }
+function brandImgLoad(img, initLtr) {
+  if (img.naturalWidth < 32 || img.naturalHeight < 32) _brandImgReplace(img, initLtr);
 }
-function brandImgLoad(img, initBg, initLetter) {
-  // 32px'ten küçük ikonlar bulanık görünür — renkli initial göster
-  if (img.naturalWidth < 32 || img.naturalHeight < 32) {
-    const av = img.parentNode;
-    av.style.background = initBg;
-    av.innerHTML = `<span style="color:#fff;font-size:22px;font-weight:700;">${initLetter}</span>`;
-  }
+function brandImgError(img, fallbackSrc, initLtr) {
+  if (img.dataset.tried || !fallbackSrc) { _brandImgReplace(img, initLtr); }
+  else { img.dataset.tried = '1'; img.src = fallbackSrc; }
 }
 
 function buildBrandGrid(filter) {
@@ -1648,15 +1657,13 @@ function buildBrandGrid(filter) {
     const isActive = isAll ? !activeBrand : activeBrand === b;
     const count  = isAll ? products.length : brandCounts[b] || 0;
     const safeB  = isAll ? '' : b.replace(/'/g, "\\'");
-    const logo     = !isAll ? getBrandLogo(b) : null;
-    const favicon  = !isAll ? getBrandFavicon(b) : null;
-    const initBg   = !isAll ? brandColor(b) : 'transparent';
-    const initLtr  = b.charAt(0).toUpperCase();
-    const safeFav  = favicon ? favicon.replace(/'/g, '%27') : '';
-    const safeInitBg = initBg.replace(/'/g, '%27');
+    const logo    = !isAll ? getBrandLogo(b) : null;
+    const favicon = !isAll ? getBrandFavicon(b) : null;
+    const initLtr = b.charAt(0).toUpperCase();
+    const safeFav = (favicon || '').replace(/'/g, '%27');
     const avatar = logo
-      ? `<div class="brand-card-avatar"><img src="${logo}" alt="${b}" onload="brandImgLoad(this,'${safeInitBg}','${initLtr}')" onerror="brandImgError(this,'${safeFav}','${safeInitBg}','${initLtr}')"></div>`
-      : `<div class="brand-card-avatar" style="background:${isAll ? 'transparent' : initBg};color:#fff">${isAll ? '✦' : initLtr}</div>`;
+      ? `<div class="brand-card-avatar has-logo"><img src="${logo}" alt="${b}" onload="brandImgLoad(this,'${initLtr}')" onerror="brandImgError(this,'${safeFav}','${initLtr}')"></div>`
+      : `<div class="brand-card-avatar">${isAll ? '✦' : initLtr}</div>`;
     return `<div class="brand-card${isActive ? ' active' : ''}" onclick="selectBrandFromModal('${safeB}')">
       ${avatar}
       <div class="brand-card-name">${b}</div>
