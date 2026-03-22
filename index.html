@@ -413,23 +413,77 @@
     .ingredient-score-label { font-size: 11px; font-weight: 500; letter-spacing: 1px; }
 
     /* ── SKIN TONE TEST ── */
-    .skin-test-modal { max-width: 520px; }
-    .skin-test-body { padding: 2rem; }
+    .skin-test-modal { max-width: 560px; }
+    .skin-test-body { padding: 2rem; overflow: hidden; }
     .skin-test-step { display: none; }
-    .skin-test-step.active { display: block; }
-    .skin-test-question { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); margin-bottom: 1.2rem; line-height: 1.4; }
-    .skin-test-options { display: flex; flex-direction: column; gap: 8px; }
-    .skin-test-opt { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 1px; padding: 12px 16px; border: 0.5px solid var(--border2); background: transparent; color: var(--text2); border-radius: 2px; cursor: pointer; transition: all 0.2s; text-align: left; }
-    .skin-test-opt:hover { background: var(--bg2); color: var(--text); }
-    .skin-test-opt.selected { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .skin-test-step.active { display: block; animation: stSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .skin-test-step.leaving { animation: stSlideOut 0.25s cubic-bezier(0.4, 0, 1, 1) both; }
+    @keyframes stSlideIn  { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes stSlideOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-28px); } }
+    .skin-test-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .skin-test-emoji { font-size: 28px; }
+    .skin-test-counter { font-size: 10px; letter-spacing: 2px; color: var(--text3); text-transform: uppercase; }
     .skin-test-progress { display: flex; gap: 4px; margin-bottom: 1.5rem; }
-    .skin-test-dot { width: 100%; height: 3px; background: var(--border); border-radius: 2px; }
+    .skin-test-dot { flex: 1; height: 3px; background: var(--border); border-radius: 2px; transition: background 0.4s; }
     .skin-test-dot.done { background: var(--gold); }
     .skin-test-dot.current { background: var(--text); }
-    .skin-test-result { text-align: center; padding: 1rem 0; }
-    .skin-test-result-tone { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--text); margin: 0.5rem 0; }
-    .skin-test-result-desc { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 1.5rem; }
-    .skin-test-recommended { margin-top: 1rem; }
+    .skin-test-question { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); margin-bottom: 1.4rem; line-height: 1.4; }
+    .skin-test-options { display: flex; flex-direction: column; gap: 8px; }
+    .skin-test-opt {
+      font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.8px; padding: 13px 16px;
+      border: 0.5px solid var(--border2); background: transparent; color: var(--text2);
+      border-radius: 2px; cursor: pointer; transition: all 0.22s; text-align: left;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .skin-test-opt:hover { background: var(--bg2); color: var(--text); border-color: var(--border2); transform: translateX(4px); }
+    .skin-test-opt.selected { background: var(--text); color: var(--bg3); border-color: var(--text); }
+    .skin-test-opt-hint { font-size: 9px; letter-spacing: 1.5px; color: var(--text3); opacity: 0.7; white-space: nowrap; }
+    .skin-test-opt:hover .skin-test-opt-hint { color: rgba(255,255,255,0.5); }
+    .skin-test-opt.selected .skin-test-opt-hint { color: rgba(255,255,255,0.5); }
+    /* ── Result page ── */
+    .skin-test-result { padding: 0.5rem 0; animation: stSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .skin-tone-swatch-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0.5rem 0 1.2rem; }
+    .skin-tone-swatch {
+      width: 72px; height: 72px; border-radius: 50%;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.18); transition: transform 0.3s;
+    }
+    .skin-tone-swatch:hover { transform: scale(1.08); }
+    .skin-test-result-tone { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text); margin: 0; }
+    .skin-test-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin: 0.8rem 0 1.2rem; }
+    .skin-test-chip {
+      font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px;
+      border-radius: 20px; border: 0.5px solid var(--border2); color: var(--text2);
+      background: var(--bg2);
+    }
+    .skin-test-chip.undertone-cool   { color: #6fa0d4; border-color: rgba(111,160,212,0.4); background: rgba(111,160,212,0.08); }
+    .skin-test-chip.undertone-warm   { color: var(--gold); border-color: rgba(201,169,110,0.4); background: rgba(201,169,110,0.08); }
+    .skin-test-chip.undertone-neutral{ color: #a8a49f; border-color: var(--border2); }
+    .skin-test-chip.concern-akne     { color: #e67e00; border-color: rgba(230,126,0,0.3); background: rgba(230,126,0,0.06); }
+    .skin-test-chip.concern-antiaging{ color: #c59bd4; border-color: rgba(197,155,212,0.3); background: rgba(197,155,212,0.06); }
+    .skin-test-chip.concern-hassas   { color: #e06ba0; border-color: rgba(224,107,160,0.3); background: rgba(224,107,160,0.06); }
+    .skin-test-result-desc { font-size: 12px; color: var(--text2); line-height: 1.7; margin-bottom: 0; text-align: center; }
+    .skin-test-routine { margin-top: 1.5rem; }
+    .skin-test-routine-title { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
+    .skin-test-routine-list { display: flex; flex-direction: column; gap: 7px; }
+    .skin-test-routine-item {
+      display: flex; align-items: center; gap: 12px; padding: 10px 13px;
+      border: 0.5px solid var(--border2); border-radius: 2px; background: var(--bg2);
+    }
+    .skin-test-routine-icon { font-size: 18px; flex-shrink: 0; }
+    .skin-test-routine-cat { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
+    .skin-test-routine-tip { font-size: 11px; color: var(--text2); margin-top: 2px; line-height: 1.4; }
+    .skin-test-prod-section { margin-top: 1.5rem; }
+    .skin-test-prod-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px; }
+    .skin-test-prod-card {
+      padding: 12px 10px; border: 0.5px solid var(--border2); border-radius: 2px;
+      cursor: pointer; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      background: var(--bg2); display: flex; flex-direction: column; gap: 4px;
+    }
+    .skin-test-prod-card:hover { background: var(--bg3); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+    .skin-test-prod-emoji { font-size: 18px; }
+    .skin-test-prod-brand { font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
+    .skin-test-prod-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--text); line-height: 1.2; }
+    .skin-test-prod-price { font-size: 12px; color: var(--gold); font-family: 'Cormorant Garamond', serif; margin-top: 2px; }
 
     /* ── WISHLIST MODAL ── */
     .wishlist-modal { max-width: 680px; }
@@ -2244,33 +2298,146 @@ if (localStorage.getItem('beaute-dark')) {
 }
 
 // ── SKIN TONE TEST ──────────────────────────────────────────────────────────
+// ── CİLT TESTİ — GENİŞLETİLMİŞ ──────────────────────────────────────────────
 const skinTestQuestions = [
   {
+    id: 'sun', emoji: '☀️',
     question: "Güneşte uzun süre kaldığınızda cildiniz nasıl tepki verir?",
     options: [
-      { text: "Hemen yanarım, bronzlaşamam", value: "fair" },
-      { text: "Önce yanarım, sonra hafif bronzlaşırım", value: "light" },
-      { text: "Nadiren yanarım, kolayca bronzlaşırım", value: "medium" },
-      { text: "Hiç yanmam, her zaman bronzlaşırım", value: "dark" }
+      { text: "Hemen yanarım, bronzlaşamam",              hint: "Çok açık",   value: "fair"   },
+      { text: "Önce yanarım, sonra hafif bronzlaşırım",   hint: "Açık",       value: "light"  },
+      { text: "Nadiren yanarım, kolayca bronzlaşırım",    hint: "Orta",       value: "medium" },
+      { text: "Hiç yanmam, her zaman bronzlaşırım",       hint: "Koyu",       value: "dark"   },
     ]
   },
   {
+    id: 'vein', emoji: '💙',
     question: "Bileğinizin iç kısmındaki damarlarınız hangi renkte görünür?",
     options: [
-      { text: "Mavi / Mor tonlarında (Soğuk alt ton)", value: "cool" },
-      { text: "Yeşil tonlarında (Sıcak alt ton)", value: "warm" },
-      { text: "Hem mavi hem yeşil (Nötr alt ton)", value: "neutral" }
+      { text: "Mavi / Mor tonlarında",  hint: "Soğuk alt ton", value: "cool"    },
+      { text: "Yeşil tonlarında",        hint: "Sıcak alt ton", value: "warm"    },
+      { text: "Hem mavi hem yeşil",      hint: "Nötr alt ton",  value: "neutral" },
     ]
   },
   {
-    question: "Altın mı gümüş mü takı size daha çok yakışır?",
+    id: 'jewelry', emoji: '💍',
+    question: "Altın mı, gümüş mü takı size daha çok yakışır?",
     options: [
-      { text: "Gümüş ve platin daha çok yakışır", value: "cool" },
-      { text: "Altın ve rose gold daha çok yakışır", value: "warm" },
-      { text: "İkisi de eşit güzel durur", value: "neutral" }
+      { text: "Gümüş ve platin",     hint: "Soğuk alt ton", value: "cool"    },
+      { text: "Altın ve rose gold",  hint: "Sıcak alt ton", value: "warm"    },
+      { text: "İkisi de eşit güzel", hint: "Nötr alt ton",  value: "neutral" },
     ]
-  }
+  },
+  {
+    id: 'skin_type', emoji: '🪞',
+    question: "Gün sonunda cildiniz nasıl görünür?",
+    options: [
+      { text: "Yağlanır ve parlar",              hint: "Yağlı cilt",  value: "yagli"  },
+      { text: "Çekilmiş ve gergin hissedilir",   hint: "Kuru cilt",   value: "kuru"   },
+      { text: "T bölgesi yağlı, yanaklar kuru",  hint: "Karma cilt",  value: "karma"  },
+      { text: "Ne aşırı yağlı ne de kuru",       hint: "Normal cilt", value: "normal" },
+    ]
+  },
+  {
+    id: 'concern', emoji: '🔍',
+    question: "En büyük cilt endişeniz hangisi?",
+    options: [
+      { text: "Sivilce ve akne izleri",       hint: "Gözenek açıcı", value: "akne"      },
+      { text: "Kırışıklık ve yaşlanma",        hint: "Anti-aging",   value: "antiaging" },
+      { text: "Leke ve hiperpigmentasyon",     hint: "Renk tonu",    value: "leke"      },
+      { text: "Kızarıklık ve hassasiyet",      hint: "Sakinleştirici",value: "hassas"   },
+      { text: "Belirgin gözenekler",           hint: "Pore-control", value: "gozener"   },
+      { text: "Genel cilt bakımı",             hint: "",             value: "genel"     },
+    ]
+  },
+  {
+    id: 'coverage', emoji: '✨',
+    question: "Fondöten kıvamı tercihiniz nasıl?",
+    options: [
+      { text: "Çok hafif, yok gibi görünsün", hint: "BB / Serum",     value: "hafif" },
+      { text: "Doğal, nefes alan kaplama",     hint: "Sıvı fondöten", value: "orta"  },
+      { text: "Tam kapatma, kalıcı makyaj",    hint: "Full coverage", value: "tam"   },
+      { text: "Işıltılı, dewy görünüm",        hint: "Glow finish",   value: "isilti"},
+    ]
+  },
 ];
+
+const SKIN_TONE_COLORS = {
+  'fair-cool': '#F4D4D0',   'fair-warm': '#F5D3BA',   'fair-neutral': '#F2D3C4',
+  'light-cool':'#E8C0BC',  'light-warm':'#E2B898',   'light-neutral':'#DCBDA8',
+  'medium-cool':'#C89880', 'medium-warm':'#C48860',  'medium-neutral':'#C09070',
+  'dark-cool':  '#8B5E4C', 'dark-warm':  '#8A5A30',  'dark-neutral': '#8C6048',
+};
+const SKIN_TONE_NAMES = {
+  'fair-cool':'Fair · Soğuk', 'fair-warm':'Fair · Sıcak', 'fair-neutral':'Fair · Nötr',
+  'light-cool':'Light · Soğuk','light-warm':'Light · Sıcak','light-neutral':'Light · Nötr',
+  'medium-cool':'Medium · Soğuk','medium-warm':'Medium · Sıcak','medium-neutral':'Medium · Nötr',
+  'dark-cool':'Dark · Soğuk','dark-warm':'Dark · Sıcak','dark-neutral':'Dark · Nötr',
+};
+const SKIN_TONE_DESC = {
+  'fair-cool':   'Çok açık, soğuk alt tonlu cilt. Pembe-kırmızı damarlar baskın, gümüş takılar daha çok yakışır.',
+  'fair-warm':   'Çok açık, sıcak alt tonlu cilt. Şeftali-sarı alt tonlar baskın, altın takılar daha çok yakışır.',
+  'fair-neutral':'Çok açık, dengeli alt tonlu cilt. Hem soğuk hem sıcak tonlara uyum sağlar.',
+  'light-cool':  'Açık, soğuk alt tonlu cilt. Pembe-bej alt tonlar baskın, mavi damarlar belirgin.',
+  'light-warm':  'Açık, sıcak alt tonlu cilt. Altın-şeftali alt tonlar baskın, yeşilimsi damarlar görünür.',
+  'light-neutral':'Açık, nötr alt tonlu cilt. Her iki ton da eşit oranda; çok yönlü renk uyumu.',
+  'medium-cool': 'Orta, soğuk alt tonlu cilt. Zeytin-pembe karışık alt ton, mor-mavi damarlar baskın.',
+  'medium-warm': 'Orta, sıcak alt tonlu cilt. Bal ve altın alt tonlar baskın, bronzlayan cilt.',
+  'medium-neutral':'Orta, nötr cilt. Bej-zeytin dengeli alt ton, çok yönlü renk uyumu.',
+  'dark-cool':   'Koyu, soğuk alt tonlu cilt. Kırmızı-mavi alt tonlar, güçlü ve derin renk.',
+  'dark-warm':   'Koyu, sıcak alt tonlu cilt. Altın-bakır alt tonlar, bronz parlaklık.',
+  'dark-neutral':'Koyu, dengeli alt tonlu cilt. Çok yönlü renk uyumu, derin ton.',
+};
+const SHADE_HINTS = {
+  'fair-cool':   ['Porcelain','Ivory','Fair','1N1','NC15','Alabaster'],
+  'fair-warm':   ['Ivory Nude','Warm Nude','1W','NC20','Warm Ivory'],
+  'fair-neutral':['Ivory','Fair','0N Neutral','NC15','NW25'],
+  'light-cool':  ['Pale Almond','Light','2C2','NC20','Shell'],
+  'light-warm':  ['Classic Ivory','Light','2W','NC25','Warm Beige'],
+  'light-neutral':['Natural Beige','Light','2N','NC25','NW25'],
+  'medium-cool': ['Shell Beige','Natural Beige','4N1','NC30','Sand'],
+  'medium-warm': ['Tawny','Warm Beige','3W1','NC35','Honey'],
+  'medium-neutral':['Natural Beige','Medium','NC30','NW35'],
+  'dark-cool':   ['Rich Caramel','Deep','NC45','5W2','Espresso'],
+  'dark-warm':   ['Caramel','Deep','NC45','Sun Beige','Mocha'],
+  'dark-neutral':['Caramel','Dark','NC45','5W2','Deep Beige'],
+};
+
+const SKIN_TYPE_LABELS = { yagli:'Yağlı Cilt', kuru:'Kuru Cilt', karma:'Karma Cilt', normal:'Normal Cilt' };
+const CONCERN_LABELS = {
+  akne:'Akne Endişesi', antiaging:'Anti-Aging', leke:'Leke/Ton Eşitsizliği',
+  hassas:'Hassas Cilt', gozener:'Gözenek Sorunu', genel:'Genel Bakım',
+};
+const ROUTINE_TIPS = {
+  yagli: [
+    { icon:'🌿', cat:'Primer',   tip:'Gözenek küçültücü ve yağ dengeleyici primer tercih edin.' },
+    { icon:'✨', cat:'Fondöten', tip:'Oil-free, matte finish sıvı fondöten. SPF\'li seçenekler bonus.' },
+    { icon:'🌫️', cat:'Pudra',    tip:'Pressed pudra ile T bölgesini matteleştirin, parlamayı önleyin.' },
+  ],
+  kuru: [
+    { icon:'💧', cat:'Primer',   tip:'Nemlendirici ve serum içerikli primer cilt rutinine ekleyin.' },
+    { icon:'✨', cat:'Fondöten', tip:'Dewy finish veya serum fondöten. Hyaluronik asit içerikli ideal.' },
+    { icon:'🌟', cat:'Aydınlatıcı', tip:'Yanak ve elmacık kemiğine vurgulayıcı ekleyin, donuk görünümü gidin.' },
+  ],
+  karma: [
+    { icon:'🌿', cat:'Primer',   tip:'T bölgesi için gözenek minimizer, yanaklar için nemlendirici primer.' },
+    { icon:'✨', cat:'Fondöten', tip:'Orta kapatmalı, uzun süre kalıcı sıvı fondöten.' },
+    { icon:'🌫️', cat:'Pudra',    tip:'Yalnızca T bölgesine hafif baskılı pudra uygulayın.' },
+  ],
+  normal: [
+    { icon:'🌟', cat:'Primer',   tip:'Renk düzenleyici veya ışıltı veren primer seçebilirsiniz.' },
+    { icon:'✨', cat:'Fondöten', tip:'Her kıvamda fondöten size uygundur; hafif ya da tam kapatma tercihe göre.' },
+    { icon:'💜', cat:'Göz Makyajı', tip:'Cilt tipiniz göz makyajına kısıtlama getirmiyor; tüm ürünleri deneyebilirsiniz.' },
+  ],
+};
+const CONCERN_TIP = {
+  akne:      'Non-comedogenic, fragrance-free formüller tercih edin. Salisilik asit içerikli kapatıcı sivilce izlerini azaltır.',
+  antiaging: 'SPF içeren fondöten UV hasarını önler. Hyaluronik asit ve peptit içerikli ürünler kırışıklık görünümünü azaltır.',
+  leke:      'Renk düzeltici kapatıcı (turuncu tonu kılcal damarlara, yeşil tonu kızarıklığa karşı). Vitamin C içerikli ürünlere bakın.',
+  hassas:    'Mineral makyaj ve parfümsüz formüller daha az reaksiyon yaratır. Test ettikten sonra kullanın.',
+  gozener:   'Silikonlu ya da nişastalı primer gözenek görünümünü anında azaltır. Set pudrası ile kalıcılığı artırın.',
+  genel:     'Düzenli cilt bakımı ve güneş koruyucu makyajınızı tamamlar. SPF 30+ günlük rutinin temel taşı.',
+};
 
 let skinTestStep = 0;
 let skinTestAnswers = [];
@@ -2283,26 +2450,30 @@ function openSkinTest() {
 }
 
 function renderSkinTest() {
-  const body = document.getElementById('skinTestBody');
-  const totalSteps = skinTestQuestions.length;
+  const body  = document.getElementById('skinTestBody');
+  const total = skinTestQuestions.length;
 
-  if (skinTestStep >= totalSteps) {
-    showSkinTestResult();
-    return;
-  }
+  if (skinTestStep >= total) { showSkinTestResult(); return; }
 
   const q = skinTestQuestions[skinTestStep];
   body.innerHTML = `
     <div class="skin-test-progress">
-      ${Array.from({length: totalSteps}, (_, i) =>
+      ${Array.from({length: total}, (_, i) =>
         '<div class="skin-test-dot ' + (i < skinTestStep ? 'done' : i === skinTestStep ? 'current' : '') + '"></div>'
       ).join('')}
     </div>
     <div class="skin-test-step active">
+      <div class="skin-test-header">
+        <span class="skin-test-emoji">${q.emoji}</span>
+        <span class="skin-test-counter">${skinTestStep + 1} / ${total}</span>
+      </div>
       <div class="skin-test-question">${q.question}</div>
       <div class="skin-test-options">
         ${q.options.map((opt, i) =>
-          '<button class="skin-test-opt" onclick="answerSkinTest(' + i + ')">' + opt.text + '</button>'
+          `<button class="skin-test-opt" onclick="answerSkinTest(${i})">
+            <span>${opt.text}</span>
+            ${opt.hint ? '<span class="skin-test-opt-hint">' + opt.hint + '</span>' : ''}
+          </button>`
         ).join('')}
       </div>
     </div>
@@ -2313,65 +2484,130 @@ function answerSkinTest(optIndex) {
   const q = skinTestQuestions[skinTestStep];
   skinTestAnswers.push(q.options[optIndex].value);
   skinTestStep++;
-  renderSkinTest();
+  // Slide animasyonu
+  const stepEl = document.querySelector('.skin-test-step.active');
+  if (stepEl) {
+    stepEl.classList.remove('active');
+    stepEl.classList.add('leaving');
+    setTimeout(() => renderSkinTest(), 220);
+  } else {
+    renderSkinTest();
+  }
 }
 
 function showSkinTestResult() {
-  const body = document.getElementById('skinTestBody');
-  const depth = skinTestAnswers[0];
-  const tones = skinTestAnswers.slice(1);
+  const body      = document.getElementById('skinTestBody');
+  const total     = skinTestQuestions.length;
+  const depth     = skinTestAnswers[0] || 'medium';
+  const tones     = [skinTestAnswers[1], skinTestAnswers[2]];
   const warmCount = tones.filter(t => t === 'warm').length;
   const coolCount = tones.filter(t => t === 'cool').length;
   const undertone = warmCount > coolCount ? 'warm' : coolCount > warmCount ? 'cool' : 'neutral';
+  const skinType  = skinTestAnswers[3] || 'normal';
+  const concern   = skinTestAnswers[4] || 'genel';
+  const coverage  = skinTestAnswers[5] || 'orta';
 
-  const toneMap = {
-    'fair-cool': { name: 'Fair Cool', desc: 'Açık, soğuk alt tonlu cilt. Pembe alt tonlar baskın.', shadeHints: ['Porcelain','Ivory','Fair','1N1','NC15'] },
-    'fair-warm': { name: 'Fair Warm', desc: 'Açık, sıcak alt tonlu cilt. Sarımsı-şeftali alt tonlar.', shadeHints: ['Ivory Nude','Warm Nude','1W','NC20'] },
-    'fair-neutral': { name: 'Fair Neutral', desc: 'Açık, nötr alt tonlu cilt. Dengeli alt tonlar.', shadeHints: ['Ivory','Fair','0N Neutral','NC15','NW25'] },
-    'light-cool': { name: 'Light Cool', desc: 'Açık-orta, soğuk alt tonlu cilt. Pembe-kırmızı alt tonlar.', shadeHints: ['Pale Almond','Light','2C2','NC20'] },
-    'light-warm': { name: 'Light Warm', desc: 'Açık-orta, sıcak alt tonlu cilt. Altın-şeftali alt tonlar.', shadeHints: ['Classic Ivory','Light','2W','NC25'] },
-    'light-neutral': { name: 'Light Neutral', desc: 'Açık-orta, nötr cilt. Her iki alt ton da mevcut.', shadeHints: ['Natural Beige','Light','2N','NC25','NW25'] },
-    'medium-cool': { name: 'Medium Cool', desc: 'Orta, soğuk alt tonlu cilt. Pembe-bej alt tonlar.', shadeHints: ['Shell Beige','Natural Beige','4N1','NC30'] },
-    'medium-warm': { name: 'Medium Warm', desc: 'Orta, sıcak alt tonlu cilt. Altın-bal tonları.', shadeHints: ['Tawny','Warm Beige','3W1','NC35'] },
-    'medium-neutral': { name: 'Medium Neutral', desc: 'Orta, nötr cilt. Çok yönlü ton uyumu.', shadeHints: ['Natural Beige','Medium','NC30','NW35'] },
-    'dark-cool': { name: 'Dark Cool', desc: 'Koyu, soğuk alt tonlu cilt. Kırmızı-mavi alt tonlar.', shadeHints: ['Rich Caramel','Deep','NC45','5W2'] },
-    'dark-warm': { name: 'Dark Warm', desc: 'Koyu, sıcak alt tonlu cilt. Altın-bakır alt tonlar.', shadeHints: ['Caramel','Deep','NC45','Sun Beige'] },
-    'dark-neutral': { name: 'Dark Neutral', desc: 'Koyu, nötr cilt. Dengeli ve derin tonlar.', shadeHints: ['Caramel','Dark','NC45','5W2'] }
-  };
+  const toneKey   = depth + '-' + undertone;
+  const swatchColor = SKIN_TONE_COLORS[toneKey]  || '#C09070';
+  const toneName    = SKIN_TONE_NAMES[toneKey]   || 'Medium · Nötr';
+  const toneDesc    = SKIN_TONE_DESC[toneKey]    || '';
+  const shadeHints  = SHADE_HINTS[toneKey]       || [];
 
-  const key = depth + '-' + undertone;
-  const result = toneMap[key] || toneMap['medium-neutral'];
+  // Undertone chip class
+  const undertoneClass = 'undertone-' + undertone;
+  const concernClass   = concern !== 'genel' ? 'concern-' + concern : '';
 
-  // Find matching products (fondoten category)
-  const matchingProducts = products.filter(p => {
+  // Eşleşen fondötenler
+  const matchFondoten = products.filter(p => {
     if (p.category !== 'fondoten') return false;
-    return p.shades.some(s => result.shadeHints.some(h => s.toLowerCase().includes(h.toLowerCase())));
-  });
+    return p.shades && p.shades.some(s => shadeHints.some(h => s.toLowerCase().includes(h.toLowerCase())));
+  }).slice(0, 4);
+
+  // Coverage tipine göre ek ürün önerileri
+  const coverageCat = coverage === 'hafif' ? 'primer' : coverage === 'tam' ? 'kapatici' : coverage === 'isilti' ? 'aydinlatici' : 'kapatici';
+  const matchCoverage = products.filter(p => p.category === coverageCat).slice(0, 2);
+
+  // Rutin
+  const routineTips  = ROUTINE_TIPS[skinType] || ROUTINE_TIPS['normal'];
+  const concernTipTx = CONCERN_TIP[concern]   || CONCERN_TIP['genel'];
 
   body.innerHTML = `
     <div class="skin-test-progress">
-      ${Array.from({length: skinTestQuestions.length}, () => '<div class="skin-test-dot done"></div>').join('')}
+      ${Array.from({length: total}, () => '<div class="skin-test-dot done"></div>').join('')}
     </div>
     <div class="skin-test-result">
-      <div style="font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3)">Cilt Tonunuz</div>
-      <div class="skin-test-result-tone">${result.name}</div>
-      <div class="skin-test-result-desc">${result.desc}</div>
-      ${matchingProducts.length ? `
-        <div class="skin-test-recommended">
-          <div class="detail-section-title" style="text-align:left">🎯 Size Uygun Fondötenler</div>
-          <div class="reco-cards">
-            ${matchingProducts.map(r => `
-              <div class="reco-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
-                <div class="reco-card-emoji">${r.emoji || '💄'}</div>
-                <div class="reco-card-brand">${r.brand}</div>
-                <div class="reco-card-name">${r.name}</div>
-                <div class="reco-card-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
+      <div class="skin-tone-swatch-wrap">
+        <div class="skin-tone-swatch" style="background: radial-gradient(circle at 35% 35%, ${swatchColor}ee, ${swatchColor}88)"></div>
+        <div class="skin-test-result-tone">${toneName}</div>
+      </div>
+
+      <div class="skin-test-chips">
+        <span class="skin-test-chip ${undertoneClass}">${undertone === 'cool' ? '❄️ Soğuk Alt Ton' : undertone === 'warm' ? '🔆 Sıcak Alt Ton' : '⚖️ Nötr Alt Ton'}</span>
+        <span class="skin-test-chip">${SKIN_TYPE_LABELS[skinType] || skinType}</span>
+        ${concern !== 'genel' ? '<span class="skin-test-chip ' + concernClass + '">' + CONCERN_LABELS[concern] + '</span>' : ''}
+        <span class="skin-test-chip">${coverage === 'hafif' ? '🌬️ Hafif Kaplama' : coverage === 'tam' ? '💼 Tam Kaplama' : coverage === 'isilti' ? '✨ Işıltılı' : '🌿 Doğal Kaplama'}</span>
+      </div>
+
+      <div class="skin-test-result-desc">${toneDesc}</div>
+
+      <!-- Makyaj Rutini -->
+      <div class="skin-test-routine">
+        <div class="skin-test-routine-title">🎯 Size Özel Makyaj Rutini</div>
+        <div class="skin-test-routine-list">
+          ${routineTips.map(r => `
+            <div class="skin-test-routine-item">
+              <span class="skin-test-routine-icon">${r.icon}</span>
+              <div>
+                <div class="skin-test-routine-cat">${r.cat}</div>
+                <div class="skin-test-routine-tip">${r.tip}</div>
+              </div>
+            </div>
+          `).join('')}
+          <div class="skin-test-routine-item">
+            <span class="skin-test-routine-icon">💡</span>
+            <div>
+              <div class="skin-test-routine-cat">${CONCERN_LABELS[concern] || 'İpucu'}</div>
+              <div class="skin-test-routine-tip">${concernTipTx}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      ${matchFondoten.length ? `
+        <div class="skin-test-prod-section">
+          <div class="skin-test-routine-title">✨ Ton Eşleşmeli Fondötenler</div>
+          <div class="skin-test-prod-grid">
+            ${matchFondoten.map(r => `
+              <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
+                <span class="skin-test-prod-emoji">${r.emoji || '✨'}</span>
+                <div class="skin-test-prod-brand">${r.brand}</div>
+                <div class="skin-test-prod-name">${r.name}</div>
+                <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
               </div>
             `).join('')}
           </div>
         </div>
       ` : ''}
-      <button class="share-btn" style="margin-top:1.2rem" onclick="openSkinTest()">Testi Tekrarla</button>
+
+      ${matchCoverage.length ? `
+        <div class="skin-test-prod-section" style="margin-top:1rem">
+          <div class="skin-test-routine-title">${coverage === 'hafif' ? '🌿 Önerilen Primerler' : coverage === 'isilti' ? '💫 Önerilen Aydınlatıcılar' : '💫 Önerilen Kapatıcılar'}</div>
+          <div class="skin-test-prod-grid">
+            ${matchCoverage.map(r => `
+              <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
+                <span class="skin-test-prod-emoji">${r.emoji || '💄'}</span>
+                <div class="skin-test-prod-brand">${r.brand}</div>
+                <div class="skin-test-prod-name">${r.name}</div>
+                <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <button class="share-btn" style="margin-top:1.5rem;width:100%;justify-content:center" onclick="openSkinTest()">
+        ↺ Testi Tekrarla
+      </button>
     </div>
   `;
 }

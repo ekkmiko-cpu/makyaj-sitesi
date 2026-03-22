@@ -11,11 +11,12 @@ const OUTPUT = path.join(__dirname, '..', 'products-data.js');
 
 // ── Satıcı dosyaları ──
 const SOURCES = [
-  { file: 'sephora-products.json',  site: 'Sephora' },
-  { file: 'trendyol-products.json', site: 'Trendyol' },
-  { file: 'gratis-products.json',   site: 'Gratis' },
-  { file: 'watsons-products.json',  site: 'Watsons' },
-  { file: 'rossmann-products.json', site: 'Rossmann' },
+  { file: 'sephora-products.json',      site: 'Sephora'      },
+  { file: 'trendyol-products.json',     site: 'Trendyol'     },
+  { file: 'gratis-products.json',       site: 'Gratis'       },
+  { file: 'watsons-products.json',      site: 'Watsons'      },
+  { file: 'rossmann-products.json',     site: 'Rossmann'     },
+  { file: 'yvesrocher-products.json',   site: 'YvesRocher'   },
 ];
 
 // ── Trendyol barkodlarını yükle (trendyol-barcode-enricher.js tarafından üretilir) ──
