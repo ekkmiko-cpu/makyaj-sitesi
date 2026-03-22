@@ -1665,33 +1665,22 @@ function getFiltered() {
   return arr;
 }
 
-// ── RENDER ────────────────────────────────────────────────────────────────────
-function render() {
-  const filtered = getFiltered();
-  document.getElementById('countLabel').textContent = filtered.length + ' ürün';
+// ── RENDER — sayfalı + IntersectionObserver ───────────────────────────────────
+const PAGE_SIZE = 48;
+let _currentFiltered = [];
+let _renderedCount   = 0;
+let _ioObserver      = null;
 
-  // fav nav button
-  const favBtn = document.getElementById('favNavBtn');
-  favBtn.innerHTML = (favMode ? '♥' : '♡') +
-    (favorites.size > 0 ? `<span class="fav-badge">${favorites.size}</span>` : '');
-  favBtn.classList.toggle('active', favMode);
-
-  const grid = document.getElementById('productGrid');
-  if (!filtered.length) {
-    grid.innerHTML = '<div class="no-results">Aradığınız kriterlere uygun ürün bulunamadı.</div>';
-    return;
-  }
-  grid.innerHTML = filtered.map(p => {
-    const mp = minPrice(p);
-    const isFav = favorites.has(p.id);
-    const isSel = selected.has(p.id);
-    const badges = [];
-    if (p.vegan) badges.push('<span class="badge badge-vegan">Vegan</span>');
-    if (p.crueltyFree) badges.push('<span class="badge badge-cf">Cruelty-Free</span>');
-    if (p.spf) badges.push('<span class="badge badge-spf">SPF ' + p.spf + '</span>');
-    const isDupe = p.dupeOf && p.dupeOf.length > 0;
-
-    return `
+function buildCardHTML(p) {
+  const mp = minPrice(p);
+  const isFav = favorites.has(p.id);
+  const isSel = selected.has(p.id);
+  const badges = [];
+  if (p.vegan) badges.push('<span class="badge badge-vegan">Vegan</span>');
+  if (p.crueltyFree) badges.push('<span class="badge badge-cf">Cruelty-Free</span>');
+  if (p.spf) badges.push('<span class="badge badge-spf">SPF ' + p.spf + '</span>');
+  const isDupe = p.dupeOf && p.dupeOf.length > 0;
+  return `
       <div class="product-card${isSel ? ' selected' : ''}" onclick="openDetail(${p.id})">
         <div class="card-image">
           ${p.imageUrl
@@ -1755,16 +1744,73 @@ function render() {
             </div>
           </div>
         </div>
-      </div>
-    `;
-  }).join('');
+      </div>`;
+}
+
+function _appendBatch(grid) {
+  const sentinel = document.getElementById('_loadSentinel');
+  const batch = _currentFiltered.slice(_renderedCount, _renderedCount + PAGE_SIZE);
+  if (!batch.length) return;
+  const html = batch.map(buildCardHTML).join('');
+  const tmp = document.createElement('template');
+  tmp.innerHTML = html;
+  if (sentinel) grid.insertBefore(tmp.content, sentinel);
+  else grid.appendChild(tmp.content);
+  _renderedCount += batch.length;
+  if (_renderedCount >= _currentFiltered.length) {
+    if (_ioObserver) _ioObserver.disconnect();
+    if (sentinel) sentinel.remove();
+  }
+}
+
+function render() {
+  _currentFiltered = getFiltered();
+  document.getElementById('countLabel').textContent = _currentFiltered.length + ' ürün';
+
+  // fav nav button
+  const favBtn = document.getElementById('favNavBtn');
+  favBtn.innerHTML = (favMode ? '♥' : '♡') +
+    (favorites.size > 0 ? `<span class="fav-badge">${favorites.size}</span>` : '');
+  favBtn.classList.toggle('active', favMode);
+
+  const grid = document.getElementById('productGrid');
+  if (_ioObserver) { _ioObserver.disconnect(); _ioObserver = null; }
+  _renderedCount = 0;
+
+  if (!_currentFiltered.length) {
+    grid.innerHTML = '<div class="no-results">Aradığınız kriterlere uygun ürün bulunamadı.</div>';
+    return;
+  }
+
+  // İlk sayfa
+  grid.innerHTML = '<div id="_loadSentinel" style="height:10px;grid-column:1/-1;pointer-events:none"></div>';
+  _appendBatch(grid);
+
+  // Sentinel gözlemle
+  const sentinel = document.getElementById('_loadSentinel');
+  if (sentinel && _renderedCount < _currentFiltered.length) {
+    _ioObserver = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) _appendBatch(document.getElementById('productGrid'));
+    }, { rootMargin: '400px' });
+    _ioObserver.observe(sentinel);
+  }
 }
 
 // ── FAVORITES ─────────────────────────────────────────────────────────────────
 function toggleFav(id) {
   if (favorites.has(id)) { favorites.delete(id); showToast('Favorilerden kaldırıldı'); }
   else { favorites.add(id); showToast('Favorilere eklendi ♥'); }
-  saveFavs(); render();
+  saveFavs();
+  // fav badge güncelle, tam render yerine sadece ilgili buton
+  const favBtn = document.getElementById('favNavBtn');
+  favBtn.innerHTML = (favMode ? '♥' : '♡') +
+    (favorites.size > 0 ? `<span class="fav-badge">${favorites.size}</span>` : '');
+  favBtn.classList.toggle('active', favMode);
+  document.querySelectorAll(`.fav-btn`).forEach(btn => {
+    const pid = parseInt(btn.closest('.product-card')?.getAttribute('onclick')?.match(/\d+/)?.[0]);
+    if (pid === id) { btn.classList.toggle('active', favorites.has(id)); btn.textContent = favorites.has(id) ? '♥' : '♡'; }
+  });
+  if (favMode) render(); // favori modunda tam render gerekli
 }
 function toggleFavMode() {
   if (favorites.size > 0) { openWishlist(); }
@@ -2243,8 +2289,11 @@ document.querySelectorAll('.price-btn').forEach(btn => {
     render();
   });
 });
+let _searchDebounce = null;
 document.getElementById('searchInput').addEventListener('input', e => {
-  searchQ = e.target.value.toLowerCase().trim(); render();
+  searchQ = e.target.value.toLowerCase().trim();
+  clearTimeout(_searchDebounce);
+  _searchDebounce = setTimeout(render, 250);
 });
 document.getElementById('sortSelect').addEventListener('change', e => {
   sortMode = e.target.value; render();
