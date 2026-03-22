@@ -897,9 +897,17 @@
     .cat-card.active { background: rgba(201,169,110,0.18); border-color: rgba(201,169,110,0.55); }
     .cat-card.active .cat-card-name { color: var(--gold); }
     .cat-card.active .cat-card-count { color: rgba(201,169,110,0.5); }
-    .cat-card.active .cat-card-emoji { filter: none; }
-    .cat-card-emoji { font-size: 28px; transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
-    .cat-card:hover .cat-card-emoji { transform: scale(1.2) rotate(-5deg); }
+    .cat-card.active .cat-card-emoji { filter: none; color: var(--gold); filter: drop-shadow(0 0 8px rgba(201,169,110,0.45)); }
+    .cat-card-emoji {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.45); transition: color 0.2s;
+    }
+    .cat-card-emoji svg { width: 100%; height: 100%; }
+    @keyframes iconFloat {
+      0%,100% { transform: translateY(0) scale(1.1); }
+      50%      { transform: translateY(-5px) scale(1.12); }
+    }
+    .cat-card:hover .cat-card-emoji { animation: iconFloat 1.8s ease-in-out infinite; color: rgba(255,255,255,0.85); }
     .cat-card-name {
       font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255,255,255,0.75);
       text-align: center; transition: color 0.2s; line-height: 1.3;
@@ -1568,8 +1576,15 @@ const BRAND_WIKI = {
   'SISLEY':_WK+'Sisley%20Paris%20logo.svg&width=400',
   'Yves Rocher':_WK+'Yves%20rocher%20logo.svg&width=400',
   'Max Factor':_WK+'MaxFactor%20logo.svg&width=400',
-  'Avon':_WK+'Avon%20Products%20logo%20(2023).svg&width=400',
-  'AVON':_WK+'Avon%20Products%20logo%20(2023).svg&width=400',
+  'Avon':_WK+'Avon%20Products%20logo%20(2023).svg&width=500',
+  'AVON':_WK+'Avon%20Products%20logo%20(2023).svg&width=500',
+  'ARMANI':_WK+'Armani_logo.svg&width=500',
+  'Armani':_WK+'Armani_logo.svg&width=500',
+  'Giorgio Armani':_WK+'Armani_logo.svg&width=500',
+  'ARMANI BEAUTY':_WK+'Armani_logo.svg&width=500',
+  'CHARLOTTE TILBURY':_WK+'Charlotte_Tilbury_logo.svg&width=500',
+  'Charlotte Tilbury':_WK+'Charlotte_Tilbury_logo.svg&width=500',
+  'NIVEA':_WK+'NIVEA%20logo%202021.svg&width=500',
 };
 // Katman 2: icon.horse — Wikipedia'da olmayan markalar için
 const BRAND_LOGOS = {
@@ -1619,17 +1634,35 @@ const BRAND_LOGOS = {
   'Alterra':'alterra-naturkosmetik.de',
   'CLIO':'cliomakeup.com',
   'Bell':'bell.com.pl',
+  // Türk markaları
+  'Rival Loves Me':'rivallovesme.com',
+  'Callista':'callistacosmetics.com.tr',
+  'LYKD':'lykd.com','lykd':'lykd.com',
+  'Beaulis':'beaulis.com','beaulis':'beaulis.com','Beaulis Fun':'beaulis.com',
+  'New Well':'newwell.com.tr',
+  'Influence Beauty':'influencebeauty.com',
+  'Makeuptime':'makeuptime.com.tr',
+  'S\'GLAM':'sglam.com.tr',
+  'Astra':'astracosmetics.it',
+  'Love Generation':'lovegeneration.ru',
+  'REM BEAUTY':'rembeauty.com',
+  'SHEGLAM':'sheglam.com',
+  '7Days':'7days.com',
+  'Vivienne Sabo':'viviennesabo.com',
+  'Stellary':'stellary.ru',
+  'Rival de Loop':'rivaldeloop.de',
+  'Muson':'muson.com.tr',
+  'Kryolan':'kryolan.com',
+  'Farmasi':'farmasi.com',
 };
 function getBrandLogo(name) {
-  // Önce Wikipedia HD (SVG-tabanlı, 500px)
   if (BRAND_WIKI[name]) return BRAND_WIKI[name];
-  // Sonra icon.horse
   const domain = BRAND_LOGOS[name];
-  return domain ? `https://icon.horse/icon/${domain}` : null;
+  return domain ? `https://icon.horse/icon/${domain}?size=256` : null;
 }
 function getBrandFavicon(name) {
   const domain = BRAND_LOGOS[name];
-  return domain ? `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=128` : null;
+  return domain ? `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=256` : null;
 }
 function _brandImgReplace(img, initLtr) {
   const av = img.parentNode;
@@ -1637,7 +1670,8 @@ function _brandImgReplace(img, initLtr) {
   av.innerHTML = `<span>${initLtr}</span>`;
 }
 function brandImgLoad(img, initLtr) {
-  if (img.naturalWidth < 32 || img.naturalHeight < 32) _brandImgReplace(img, initLtr);
+  // Wikipedia SVGs geniş ama kısa olabilir (ör. 500x60), sadece çok küçükleri reddet
+  if (img.naturalWidth < 40 && img.naturalHeight < 40) _brandImgReplace(img, initLtr);
 }
 function brandImgError(img, fallbackSrc, initLtr) {
   if (img.dataset.tried || !fallbackSrc) { _brandImgReplace(img, initLtr); }
@@ -1691,12 +1725,31 @@ function filterBrand(brand) { selectBrandFromModal(brand); }
 
 // ── CATEGORY MODAL ─────────────────────────────────────────────────────────────
 var _catModalOpen = false;
+var _S='stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"';
+var _svg=function(d){return '<svg viewBox="0 0 40 40" fill="none" '+_S+'>'+d+'</svg>';};
 var CAT_EMOJIS = {
-  'all':'✨','fondoten':'✨','maskara':'👁️','ruj':'💄','far':'💜','far-paleti':'🎨',
-  'eyeliner':'✏️','goz-kalemi':'🖊️','allik':'🌸','aydinlatici':'💡','bronzer':'🌞',
-  'kontur':'🎭','kapatici':'💫','primer':'🌟','pudra':'🌿',
-  'dudak-parlatici':'✨','dudak-kalemi':'🖊️','kas':'🖌️',
-  'nemlendirici':'💧','goz-kremi':'🌿','vucut-losyonu':'🧴','parfum':'🌺'
+  'all':_svg('<path d="M20 5l2.5 12.5L35 20l-12.5 2.5L20 35l-2.5-12.5L5 20z"/>'),
+  'fondoten':_svg('<rect x="13" y="18" width="14" height="17" rx="3"/><path d="M17 18v-4h6v4"/><path d="M20 14v-4"/><path d="M16 10h8"/>'),
+  'maskara':_svg('<line x1="27" y1="33" x2="17" y2="23"/><ellipse cx="13" cy="19" rx="4.5" ry="2.5" transform="rotate(-45 13 19)"/><line x1="7" y1="13" x2="9" y2="16"/><line x1="11" y1="9" x2="12" y2="13"/><line x1="16" y1="7" x2="16" y2="11"/><line x1="20" y1="9" x2="18" y2="12"/>'),
+  'ruj':_svg('<rect x="15" y="25" width="10" height="10" rx="2"/><path d="M15 25l2-8h6l2 8"/><path d="M17 17Q20 10 23 17"/>'),
+  'far':_svg('<rect x="7" y="15" width="26" height="16" rx="4"/><circle cx="20" cy="23" r="5.5"/><circle cx="20" cy="23" r="2"/>'),
+  'far-paleti':_svg('<rect x="4" y="11" width="32" height="20" rx="4"/><circle cx="13" cy="19" r="3.5"/><circle cx="21" cy="19" r="3.5"/><circle cx="29" cy="19" r="3.5"/><circle cx="13" cy="27" r="2.5"/><circle cx="21" cy="27" r="2.5"/><circle cx="29" cy="27" r="2.5"/>'),
+  'eyeliner':_svg('<rect x="17" y="6" width="6" height="24" rx="3"/><path d="M17 30l3 5.5 3-5.5"/>'),
+  'goz-kalemi':_svg('<line x1="11" y1="33" x2="29" y2="15"/><path d="M26 12l5 5-3 3-5-5z"/><path d="M11 33l-3 4 4-1z"/>'),
+  'allik':_svg('<rect x="7" y="14" width="26" height="16" rx="4"/><path d="M7 20h26"/><ellipse cx="20" cy="27" rx="7" ry="3.5"/>'),
+  'aydinlatici':_svg('<path d="M20 6L34 18L20 35L6 18Z"/><line x1="6" y1="18" x2="34" y2="18"/><line x1="20" y1="6" x2="20" y2="35"/>'),
+  'bronzer':_svg('<circle cx="20" cy="20" r="9"/><line x1="20" y1="5" x2="20" y2="8"/><line x1="20" y1="32" x2="20" y2="35"/><line x1="5" y1="20" x2="8" y2="20"/><line x1="32" y1="20" x2="35" y2="20"/><line x1="10" y1="10" x2="12.5" y2="12.5"/><line x1="27.5" y1="27.5" x2="30" y2="30"/><line x1="10" y1="30" x2="12.5" y2="27.5"/><line x1="27.5" y1="12.5" x2="30" y2="10"/>'),
+  'kontur':_svg('<path d="M20 7c-5.5 0-9.5 4.5-9.5 10 0 4.5 2.5 8.5 6.5 10l3 6 3-6c4-1.5 6.5-5.5 6.5-10 0-5.5-4-10-10-10z"/><path d="M15 25Q20 28 25 25"/>'),
+  'kapatici':_svg('<rect x="17" y="6" width="6" height="28" rx="3"/><line x1="17" y1="18" x2="23" y2="18"/>'),
+  'primer':_svg('<rect x="14" y="18" width="12" height="16" rx="3"/><path d="M17 18v-5h6v5"/><path d="M20 13v-4"/><circle cx="20" cy="7" r="2.5"/>'),
+  'pudra':_svg('<rect x="6" y="15" width="28" height="18" rx="4"/><path d="M6 21h28"/><circle cx="20" cy="28" r="5"/><circle cx="20" cy="28" r="1.5"/>'),
+  'dudak-parlatici':_svg('<rect x="7" y="15" width="20" height="11" rx="3"/><path d="M27 20.5h7"/><path d="M31 18l4 2.5-4 2.5"/>'),
+  'dudak-kalemi':_svg('<path d="M8 20c0-6 5.5-9.5 12-9.5s12 3.5 12 9.5-5.5 9.5-12 9.5S8 26 8 20z"/><line x1="8" y1="20" x2="32" y2="20"/><path d="M14 16Q20 20 26 16"/>'),
+  'kas':_svg('<path d="M6 22C9 15 17 13 28 17"/><path d="M6 27C9 20 17 18 28 22"/><line x1="29" y1="14" x2="33" y2="26"/><line x1="27" y1="14" x2="31" y2="14"/>'),
+  'nemlendirici':_svg('<rect x="9" y="20" width="22" height="14" rx="3"/><path d="M9 24h22"/><rect x="12" y="13" width="16" height="7" rx="2"/><line x1="16" y1="20" x2="16" y2="13"/><line x1="24" y1="20" x2="24" y2="13"/>'),
+  'goz-kremi':_svg('<rect x="13" y="15" width="14" height="20" rx="3"/><path d="M16 15v-4h8v4"/><path d="M13 21h14"/><path d="M16 28Q20 31 24 28"/>'),
+  'vucut-losyonu':_svg('<path d="M15 34V19l-5-7V8h20v4l-5 7v15"/><line x1="10" y1="34" x2="30" y2="34"/><line x1="15" y1="19" x2="25" y2="19"/><line x1="20" y1="8" x2="20" y2="4"/>'),
+  'parfum':_svg('<rect x="12" y="18" width="16" height="17" rx="4"/><path d="M17 18v-4h6v4"/><path d="M20 14v-3"/><path d="M16 11h8"/><path d="M13 11c-2 0-3 1.5-3 3.5"/><path d="M21 27Q19 24 21 22Q23 20 21 18"/>'),
 };
 var CAT_NAMES = {
   'all':'Tümü','fondoten':'Fondöten','maskara':'Maskara','ruj':'Ruj','far':'Göz Farı',
