@@ -84,17 +84,14 @@ function parseProducts(data, catName, catLabel) {
     const name = (item.name || '').trim();
     if (!name) continue;
 
-    // Fiyat: special_price > crm_price > ross_60_price > price
-    let price = 0;
-    if (item.special_price && parseFloat(item.special_price) > 0) {
-      price = parseFloat(item.special_price);
-    } else if (item.crm_price && parseFloat(item.crm_price) > 0) {
-      price = parseFloat(item.crm_price);
-    } else if (item.ross_60_price && parseFloat(item.ross_60_price) > 0) {
-      price = parseFloat(item.ross_60_price);
-    } else if (item.price) {
-      price = parseFloat(item.price);
-    }
+    // En düşük mevcut fiyatı al (kart/kampanya fiyatları dahil)
+    const candidatePrices = [
+      parseFloat(item.special_price || 0),
+      parseFloat(item.crm_price    || 0),  // Rossmann kart/CRM fiyatı
+      parseFloat(item.ross_60_price|| 0),  // Rossmann 60 üye fiyatı
+      parseFloat(item.price        || 0),
+    ].filter(v => v > 0);
+    let price = candidatePrices.length > 0 ? Math.min(...candidatePrices) : 0;
 
     // Gorsel URL
     let imageUrl = '';
