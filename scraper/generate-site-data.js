@@ -47,7 +47,18 @@ const skinDefaults = {
   'dudak-parlatici': ['kuru', 'normal'],
   'dudak-kalemi':    ['normal', 'karma'],
   'kas':             ['normal', 'karma'],
-  'bronzer':         ['normal', 'karma'],
+  // Cilt & Vücut Bakımı
+  nemlendirici:      ['kuru', 'normal', 'karma'],
+  serum:             ['normal', 'kuru', 'karma', 'yagli'],
+  'gunes-koruyucu':  ['normal', 'kuru', 'karma', 'yagli', 'hassas'],
+  'cilt-temizleme':  ['normal', 'karma', 'yagli'],
+  tonik:             ['normal', 'karma', 'yagli'],
+  'goz-kremi':       ['kuru', 'normal'],
+  'cilt-maskesi':    ['normal', 'kuru', 'karma'],
+  peeling:           ['normal', 'karma', 'yagli'],
+  'dus-jeli':        ['normal', 'kuru', 'karma'],
+  'vucut-losyonu':   ['kuru', 'normal'],
+  parfum:            ['normal', 'kuru', 'karma'],
 };
 
 // ── Kategori label normalizasyonu (Türkçe karakter birleştirme) ──
@@ -80,6 +91,24 @@ var categoryLabelMap = {
   'Kaş Makyajı': 'Kaş Makyajı',
   'Dudak Parlatici': 'Dudak Parlatıcı',
   'Kontur': 'Kontür',
+  // Cilt & Vücut Bakımı
+  'Nemlendirici': 'Nemlendirici',
+  'Serum': 'Serum',
+  'Gunes Koruyucu': 'Güneş Koruyucu',
+  'Güneş Koruyucu': 'Güneş Koruyucu',
+  'Cilt Temizleme': 'Cilt Temizleme',
+  'Tonik': 'Tonik',
+  'Goz Kremi': 'Göz Kremi',
+  'Göz Kremi': 'Göz Kremi',
+  'Cilt Maskesi': 'Cilt Maskesi',
+  'Peeling': 'Peeling',
+  'Dus Jeli': 'Duş Jeli',
+  'Duş Jeli': 'Duş Jeli',
+  'Vucut Losyonu': 'Vücut Losyonu',
+  'Vücut Losyonu': 'Vücut Losyonu',
+  'Vücut Bakımı': 'Vücut Bakımı',
+  'Parfüm': 'Parfüm',
+  'Parfum': 'Parfüm',
 };
 
 function normalizeCategoryLabel(label) {

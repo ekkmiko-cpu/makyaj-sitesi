@@ -1023,7 +1023,13 @@
     <button class="filter-btn" data-cat="dudak-parlatici">Dudak Parlatıcı</button>
     <button class="filter-btn" data-cat="dudak-kalemi">Dudak Kalemi</button>
     <div class="filter-divider"></div>
-    <span class="filter-label">Cilt</span>
+    <span class="filter-label">Cilt &amp; Bakım</span>
+    <button class="filter-btn" data-cat="nemlendirici">💧 Nemlendirici</button>
+    <button class="filter-btn" data-cat="goz-kremi">🌿 Göz Kremi</button>
+    <button class="filter-btn" data-cat="vucut-losyonu">🧴 Vücut Bakımı</button>
+    <button class="filter-btn" data-cat="parfum">🌺 Parfüm</button>
+    <div class="filter-divider"></div>
+    <span class="filter-label">Cilt Tipi</span>
     <button class="filter-btn" data-skin="yağlı">Yağlı</button>
     <button class="filter-btn" data-skin="kuru">Kuru</button>
     <button class="filter-btn" data-skin="karma">Karma</button>
@@ -1083,6 +1089,8 @@
       <a onclick="document.querySelector('[data-cat=ruj]').click()">Ruj</a>
       <a onclick="document.querySelector('[data-cat=maskara]').click()">Maskara</a>
       <a onclick="document.querySelector('[data-cat=far]').click()">Göz Farı</a>
+      <a onclick="document.querySelector('[data-cat=nemlendirici]').click()">Nemlendirici</a>
+      <a onclick="document.querySelector('[data-cat=parfum]').click()">Parfüm</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Araçlar</div>
@@ -1496,14 +1504,16 @@ var CAT_EMOJIS = {
   'all':'✨','fondoten':'✨','maskara':'👁️','ruj':'💄','far':'💜','far-paleti':'🎨',
   'eyeliner':'✏️','goz-kalemi':'🖊️','allik':'🌸','aydinlatici':'💡','bronzer':'🌞',
   'kontur':'🎭','kapatici':'💫','primer':'🌟','pudra':'🌿',
-  'dudak-parlatici':'✨','dudak-kalemi':'🖊️','kas':'🖌️'
+  'dudak-parlatici':'✨','dudak-kalemi':'🖊️','kas':'🖌️',
+  'nemlendirici':'💧','goz-kremi':'🌿','vucut-losyonu':'🧴','parfum':'🌺'
 };
 var CAT_NAMES = {
   'all':'Tümü','fondoten':'Fondöten','maskara':'Maskara','ruj':'Ruj','far':'Göz Farı',
   'far-paleti':'Far Paleti','eyeliner':'Eyeliner','goz-kalemi':'Göz Kalemi','allik':'Allık',
   'aydinlatici':'Aydınlatıcı','bronzer':'Bronzer','kontur':'Kontür','kapatici':'Kapatıcı',
   'primer':'Primer','pudra':'Pudra','dudak-parlatici':'Dudak Parlatıcı',
-  'dudak-kalemi':'Dudak Kalemi','kas':'Kaş Makyajı'
+  'dudak-kalemi':'Dudak Kalemi','kas':'Kaş Makyajı',
+  'nemlendirici':'Nemlendirici','goz-kremi':'Göz Kremi','vucut-losyonu':'Vücut Bakımı','parfum':'Parfüm'
 };
 function openCatModal() {
   const modal = document.getElementById('catModal');
@@ -2410,21 +2420,25 @@ const CONCERN_LABELS = {
 };
 const ROUTINE_TIPS = {
   yagli: [
+    { icon:'💧', cat:'Nemlendirici', tip:'Yağsız (oil-free), hafif dokulu jel nemlendirici seçin. Ağır kremler gözenekleri tıkayabilir.' },
     { icon:'🌿', cat:'Primer',   tip:'Gözenek küçültücü ve yağ dengeleyici primer tercih edin.' },
     { icon:'✨', cat:'Fondöten', tip:'Oil-free, matte finish sıvı fondöten. SPF\'li seçenekler bonus.' },
     { icon:'🌫️', cat:'Pudra',    tip:'Pressed pudra ile T bölgesini matteleştirin, parlamayı önleyin.' },
   ],
   kuru: [
-    { icon:'💧', cat:'Primer',   tip:'Nemlendirici ve serum içerikli primer cilt rutinine ekleyin.' },
+    { icon:'💧', cat:'Nemlendirici', tip:'Hyaluronik asit ve shea butter içerikli zengin krem. Makyaj öncesi iyi emmesini bekleyin.' },
+    { icon:'🌿', cat:'Primer',   tip:'Nemlendirici ve serum içerikli primer cilt rutinine ekleyin.' },
     { icon:'✨', cat:'Fondöten', tip:'Dewy finish veya serum fondöten. Hyaluronik asit içerikli ideal.' },
     { icon:'🌟', cat:'Aydınlatıcı', tip:'Yanak ve elmacık kemiğine vurgulayıcı ekleyin, donuk görünümü gidin.' },
   ],
   karma: [
+    { icon:'💧', cat:'Nemlendirici', tip:'Hafif, bölgesel uygulama yapabilirsiniz: T bölgesine hafif jel, yanaklar için daha zengin bir krem.' },
     { icon:'🌿', cat:'Primer',   tip:'T bölgesi için gözenek minimizer, yanaklar için nemlendirici primer.' },
     { icon:'✨', cat:'Fondöten', tip:'Orta kapatmalı, uzun süre kalıcı sıvı fondöten.' },
     { icon:'🌫️', cat:'Pudra',    tip:'Yalnızca T bölgesine hafif baskılı pudra uygulayın.' },
   ],
   normal: [
+    { icon:'💧', cat:'Nemlendirici', tip:'SPF 30+ içeren günlük nemlendirici cildinizi korurken makyaj tabanı oluşturur.' },
     { icon:'🌟', cat:'Primer',   tip:'Renk düzenleyici veya ışıltı veren primer seçebilirsiniz.' },
     { icon:'✨', cat:'Fondöten', tip:'Her kıvamda fondöten size uygundur; hafif ya da tam kapatma tercihe göre.' },
     { icon:'💜', cat:'Göz Makyajı', tip:'Cilt tipiniz göz makyajına kısıtlama getirmiyor; tüm ürünleri deneyebilirsiniz.' },
@@ -2527,6 +2541,10 @@ function showSkinTestResult() {
   const coverageCat = coverage === 'hafif' ? 'primer' : coverage === 'tam' ? 'kapatici' : coverage === 'isilti' ? 'aydinlatici' : 'kapatici';
   const matchCoverage = products.filter(p => p.category === coverageCat).slice(0, 2);
 
+  // Cilt tipine göre nemlendirici önerileri
+  const matchNemlendirici = products.filter(p => p.category === 'nemlendirici' &&
+    (!p.skinTypes || p.skinTypes.includes(skinType))).slice(0, 2);
+
   // Rutin
   const routineTips  = ROUTINE_TIPS[skinType] || ROUTINE_TIPS['normal'];
   const concernTipTx = CONCERN_TIP[concern]   || CONCERN_TIP['genel'];
@@ -2596,6 +2614,22 @@ function showSkinTestResult() {
             ${matchCoverage.map(r => `
               <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
                 <span class="skin-test-prod-emoji">${r.emoji || '💄'}</span>
+                <div class="skin-test-prod-brand">${r.brand}</div>
+                <div class="skin-test-prod-name">${r.name}</div>
+                <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      ${matchNemlendirici.length ? `
+        <div class="skin-test-prod-section" style="margin-top:1rem">
+          <div class="skin-test-routine-title">💧 Önerilen Nemlendirici</div>
+          <div class="skin-test-prod-grid">
+            ${matchNemlendirici.map(r => `
+              <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
+                <span class="skin-test-prod-emoji">${r.emoji || '💧'}</span>
                 <div class="skin-test-prod-brand">${r.brand}</div>
                 <div class="skin-test-prod-name">${r.name}</div>
                 <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
