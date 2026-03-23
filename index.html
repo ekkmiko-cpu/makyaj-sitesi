@@ -619,14 +619,78 @@
     .reco-card-name { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--text); margin: 2px 0 4px; transition: color 0.2s; }
     .reco-card-price { font-size: 14px; font-family: 'Cormorant Garamond', serif; color: var(--text); transition: color 0.2s; }
 
-    /* ── COMPARE TABLE ── */
+    /* ── COMPARE REDESIGN ── */
+    .compare-modal { max-width: 960px; }
     .modal-body { overflow-x: auto; }
-    .compare-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 500px; }
-    .compare-table th { padding: 1.2rem 1.5rem; text-align: left; font-weight: 400; font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--text); border-bottom: 0.5px solid var(--border); background: var(--bg2); }
-    .compare-table th .th-brand { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); display: block; margin-top: 3px; }
-    .compare-table td { padding: 0.9rem 1.5rem; border-bottom: 0.5px solid var(--border); vertical-align: top; color: var(--text); }
-    .compare-table tr:last-child td { border-bottom: none; }
-    .compare-table .row-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); font-weight: 400; background: var(--bg2); width: 100px; }
+    .cmp-grid { display: grid; gap: 0; }
+    .cmp-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    .cmp-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .cmp-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+    /* Product header cards */
+    .cmp-product-head { padding: 1.5rem 1.2rem; text-align: center; border-right: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); background: var(--bg2); position: relative; }
+    .cmp-product-head:last-child { border-right: none; }
+    .cmp-product-img { width: 90px; height: 90px; object-fit: contain; border-radius: 4px; margin-bottom: 10px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.06)); }
+    .cmp-product-brand { font-size: 8px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
+    .cmp-product-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 400; color: var(--text); line-height: 1.3; min-height: 40px; display: flex; align-items: center; justify-content: center; }
+    .cmp-winner-badge { position: absolute; top: 8px; right: 8px; font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; background: var(--gold); color: #1a1814; font-family: 'Jost', sans-serif; }
+
+    /* Row system */
+    .cmp-row-label { grid-column: 1 / -1; font-size: 8px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); padding: 12px 1.2rem 6px; background: var(--bg3); border-bottom: 0.5px solid var(--border); font-family: 'Jost', sans-serif; }
+    .cmp-cell { padding: 10px 1.2rem; border-right: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); font-size: 13px; color: var(--text); display: flex; flex-direction: column; justify-content: center; min-height: 44px; }
+    .cmp-cell:last-child { border-right: none; }
+    .cmp-cell.best { background: rgba(42,122,59,0.04); }
+    .cmp-cell.worst { background: rgba(211,47,47,0.03); }
+
+    /* Price display */
+    .cmp-price { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; }
+    .cmp-price.best { color: #2a7a3b; }
+    .cmp-price.worst { color: #c0392b; }
+    .cmp-price-sub { font-size: 9px; color: var(--text3); letter-spacing: 1px; margin-top: 2px; }
+
+    /* Rating display */
+    .cmp-rating { display: flex; align-items: center; gap: 6px; }
+    .cmp-rating-num { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 500; }
+    .cmp-rating-stars { display: flex; gap: 1px; }
+    .cmp-rating-reviews { font-size: 9px; color: var(--text3); letter-spacing: 1px; margin-top: 2px; }
+
+    /* Naturalness bar */
+    .cmp-nat-wrap { width: 100%; }
+    .cmp-nat-bar-bg { width: 100%; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; position: relative; }
+    .cmp-nat-bar-fill { height: 100%; border-radius: 4px; transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
+    .cmp-nat-bar-fill::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: barShine 2.5s ease-in-out infinite; }
+    .cmp-nat-bar-fill.green { background: linear-gradient(90deg, #2a7a3b, #4caf50); }
+    .cmp-nat-bar-fill.yellow { background: linear-gradient(90deg, #e67e00, #f9a825); }
+    .cmp-nat-bar-fill.red { background: linear-gradient(90deg, #c0392b, #e57373); }
+    .cmp-nat-info { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; }
+    .cmp-nat-score { font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
+    .cmp-nat-score.green { color: #2a7a3b; }
+    .cmp-nat-score.yellow { color: #e67e00; }
+    .cmp-nat-score.red { color: #c0392b; }
+    .cmp-nat-label { font-size: 9px; letter-spacing: 1px; color: var(--text3); text-transform: uppercase; }
+
+    /* Ingredient chips in compare */
+    .cmp-ing-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+    .cmp-ing-chip { font-size: 8px; letter-spacing: 0.5px; padding: 2px 6px; border-radius: 2px; font-family: 'Jost', sans-serif; }
+    .cmp-ing-chip.good { border: 0.5px solid rgba(46,125,50,0.3); color: #2e7d32; background: rgba(46,125,50,0.06); }
+    .cmp-ing-chip.neutral { border: 0.5px solid var(--border2); color: var(--text3); background: transparent; }
+    .cmp-ing-chip.bad { border: 0.5px solid rgba(211,47,47,0.25); color: #d32f2f; background: rgba(211,47,47,0.04); }
+
+    /* Badges in compare */
+    .cmp-badges { display: flex; flex-wrap: wrap; gap: 4px; }
+    .cmp-badge { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; font-family: 'Jost', sans-serif; }
+    .cmp-badge.yes { background: rgba(46,125,50,0.08); color: #2e7d32; border: 0.5px solid rgba(46,125,50,0.25); }
+    .cmp-badge.no { background: rgba(0,0,0,0.03); color: var(--text3); border: 0.5px solid var(--border2); }
+
+    /* Buy button in compare */
+    .cmp-buy { display: inline-flex; align-items: center; gap: 6px; font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 16px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px; cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+    .cmp-buy:hover { opacity: 0.85; }
+
+    /* Verdict section */
+    .cmp-verdict { grid-column: 1 / -1; padding: 1.2rem; background: rgba(201,169,110,0.04); border-top: 0.5px solid var(--gold); }
+    .cmp-verdict-title { font-size: 8px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-family: 'Jost', sans-serif; }
+    .cmp-verdict-text { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--text); line-height: 1.6; }
+
     .best-val { color: #2a7a3b; font-weight: 500; }
     .worst-val { color: #c0392b; }
 
@@ -991,6 +1055,10 @@
       .sort-row { padding: 0.5rem 1.2rem; }
       .products { grid-template-columns: repeat(2, 1fr); }
       .compare-bar { padding: 0.8rem 1.2rem; flex-wrap: wrap; }
+      .cmp-grid.cols-3, .cmp-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+      .cmp-product-img { width: 60px; height: 60px; }
+      .cmp-product-name { font-size: 13px; min-height: 32px; }
+      .cmp-cell { padding: 8px 10px; font-size: 12px; }
       .modal-backdrop { padding: 0.5rem; }
       .detail-body { padding: 1.2rem; }
       .modal-head { padding: 1.2rem; }
@@ -1266,11 +1334,11 @@
 
 <!-- Compare Modal -->
 <div class="modal-backdrop" id="compareModal">
-  <div class="modal">
+  <div class="modal compare-modal">
     <div class="modal-head">
       <div>
-        <div class="modal-title">Ürün karşılaştırması</div>
-        <div class="modal-subtitle">Seçilen ürünler yan yana</div>
+        <div class="modal-title">Ürün Karşılaştırması</div>
+        <div class="modal-subtitle">Detaylı analiz & doğallık skoru</div>
       </div>
       <button class="modal-close" id="compareModalClose">✕</button>
     </div>
@@ -2553,65 +2621,299 @@ function changeVariant(productId, variantIndex, btnElem) {
   }
 }
 
+// ── NATURALNESS SCORE ──────────────────────────────────────────────────────────
+// Kozmetik doğallık skoru — ürün özelliklerinden hesaplanır
+var NATURAL_BRANDS = {
+  'The Ordinary':90,'Innisfree':85,'Origins':82,'Kiehl\'s':78,'Burt\'s Bees':88,
+  'Weleda':92,'Dr. Hauschka':90,'RMS Beauty':88,'ILIA':85,'Tata Harper':95,
+  'Drunk Elephant':80,'Herbivore':87,'Youth To The People':83,'Farmacy':82,
+  'Korres':80,'Aveda':78,'Cocunat':85,'Nuxe':75,'Bioderma':72,'La Roche-Posay':68,
+  'Vichy':65,'Neutrogena':55,'CeraVe':60,'Clinique':58,'Estée Lauder':52,
+  'Lancôme':50,'Dior':48,'Chanel':45,'YSL':47,'Tom Ford':42,'NARS':50,
+  'MAC':48,'Urban Decay':45,'Too Faced':47,'Benefit':50,'Tarte':65,
+  'Fenty Beauty':55,'Rare Beauty':58,'Charlotte Tilbury':50,'Bobbi Brown':55,
+  'Maybelline New York':42,'Maybelline':42,'L\'Oréal Paris':45,'L\'Oréal':45,
+  'NYX':44,'Revlon':40,'Rimmel':38,'Catrice':42,'Essence':40,
+  'Golden Rose':45,'Flormar':43,'Pastel':40,'Note':48,'Note Cosmetique':48,
+  'Gratis':38,'Watsons':40,'Pierre Cardin':35,'Rival Loves Me':38,
+  'Inglot':50,'Sephora Collection':48,'MAKE UP FOR EVER':52,
+  'Shiseido':60,'SK-II':65,'Laneige':70,'Missha':62,'COSRX':75,
+  'Some By Mi':72,'Heimish':78,'Klairs':80,'Purito':82,'Benton':85
+};
+
+var NATURAL_KEYWORDS_GOOD = [
+  [/doğal|natural|organic|organik/i, 15],
+  [/vitamin\s*[cCeEaAbB]/i, 8],
+  [/hyaluron|hyalüron/i, 7],
+  [/aloe\s*vera/i, 10],
+  [/shea|karite/i, 8],
+  [/jojoba/i, 8],
+  [/argan/i, 8],
+  [/retinol/i, 5],
+  [/niacinamide|niasinamid/i, 6],
+  [/peptit|peptide/i, 5],
+  [/ceramide|seramid/i, 6],
+  [/çay\s*ağacı|tea\s*tree/i, 8],
+  [/gül\s*suyu|rose\s*water/i, 7],
+  [/mineral/i, 5],
+  [/bitkisel|herbal|botanical/i, 10],
+  [/serum/i, 3],
+  [/nemlendirici|hydrat|moistur/i, 4]
+];
+var NATURAL_KEYWORDS_BAD = [
+  [/matte?\s*ink|vinyl\s*ink/i, -5],
+  [/long\s*last|uzun\s*kal|24\s*h|36\s*h|kalıcı/i, -8],
+  [/waterproof|su\s*geçirmez/i, -6],
+  [/full\s*cover|tam\s*kapat/i, -5],
+  [/glitter|simli/i, -4],
+  [/transfer\s*proof/i, -5]
+];
+
+function calcNaturalness(p) {
+  var base = 50;
+  // Brand reputation
+  if (NATURAL_BRANDS[p.brand]) base = NATURAL_BRANDS[p.brand];
+  // Vegan bonus
+  if (p.vegan) base += 12;
+  // Cruelty-free bonus
+  if (p.crueltyFree) base += 8;
+  // SPF slight penalty (chemical filters common)
+  if (p.spf && p.spf > 30) base -= 3;
+  // Category adjustments
+  var catAdj = {'nemlendirici':6,'goz-kremi':4,'dudak-parlatici':2,'primer':-2,'fondoten':-5,'maskara':-8,'eyeliner':-6,'far-paleti':-4};
+  if (catAdj[p.category]) base += catAdj[p.category];
+  // Name keyword analysis
+  var nameDesc = (p.name + ' ' + (p.desc || '')).toLowerCase();
+  NATURAL_KEYWORDS_GOOD.forEach(function(kw){ if (kw[0].test(nameDesc)) base += kw[1]; });
+  NATURAL_KEYWORDS_BAD.forEach(function(kw){ if (kw[0].test(nameDesc)) base += kw[1]; });
+  // If has real ingredients data, override with actual calculation
+  if (p.ingredients && p.ingredients.length > 0) {
+    var warns = (p.ingredientWarnings || []).length;
+    base = Math.round(((p.ingredients.length - warns) / p.ingredients.length) * 100);
+  }
+  return Math.max(8, Math.min(98, Math.round(base)));
+}
+
+function getNatColor(score) {
+  if (score >= 70) return 'green';
+  if (score >= 45) return 'yellow';
+  return 'red';
+}
+
+function getNatLabel(score) {
+  if (score >= 85) return 'Çok Temiz';
+  if (score >= 70) return 'Temiz Formül';
+  if (score >= 55) return 'Orta Seviye';
+  if (score >= 40) return 'Dikkat Edilmeli';
+  return 'Yoğun Kimyasal';
+}
+
+// İçerik profili — ürün adı ve markasından tahmin edilen bileşenler
+function getIngredientProfile(p) {
+  var good = [], neutral = [], bad = [];
+  var txt = (p.name + ' ' + (p.desc || '') + ' ' + p.brand).toLowerCase();
+  // Good ingredients
+  if (/hyaluron|hyalüron/i.test(txt)) good.push('Hyaluronik Asit');
+  if (/vitamin\s*c/i.test(txt)) good.push('Vitamin C');
+  if (/vitamin\s*e/i.test(txt)) good.push('Vitamin E');
+  if (/niacinamide|niasinamid/i.test(txt)) good.push('Niasinamid');
+  if (/retinol/i.test(txt)) good.push('Retinol');
+  if (/aloe/i.test(txt)) good.push('Aloe Vera');
+  if (/shea|karite/i.test(txt)) good.push('Shea Yağı');
+  if (/jojoba/i.test(txt)) good.push('Jojoba Yağı');
+  if (/argan/i.test(txt)) good.push('Argan Yağı');
+  if (/peptit|peptide/i.test(txt)) good.push('Peptit');
+  if (/ceramide|seramid/i.test(txt)) good.push('Seramid');
+  if (/çay\s*ağacı|tea\s*tree/i.test(txt)) good.push('Çay Ağacı');
+  if (/gül|rose/i.test(txt) && !/golden\s*rose/i.test(txt)) good.push('Gül Özü');
+  if (/kolajen|collagen/i.test(txt)) good.push('Kolajen');
+  if (p.vegan) good.push('Vegan Formül');
+  // Category-based common ingredients
+  var cat = p.category;
+  if (cat === 'fondoten' || cat === 'kapatici') { neutral.push('Pigment'); neutral.push('Silikon Bazlı'); if (p.spf) neutral.push('UV Filtre'); }
+  if (cat === 'maskara' || cat === 'eyeliner') { neutral.push('Balmumu'); bad.push('Sentetik Polimer'); }
+  if (cat === 'ruj' || cat === 'dudak-parlatici') { neutral.push('Balmumu'); neutral.push('Yağ Bazlı'); }
+  if (cat === 'far' || cat === 'far-paleti') { neutral.push('Talk'); neutral.push('Mika'); bad.push('Sentetik Renklendirici'); }
+  if (cat === 'pudra') { neutral.push('Talk'); neutral.push('Mika'); }
+  if (cat === 'nemlendirici' || cat === 'goz-kremi') { good.push('Gliserin'); neutral.push('Emülgatör'); }
+  if (cat === 'primer') { neutral.push('Silikon Bazlı'); neutral.push('Dimethicone'); }
+  // Bad ingredients based on product type
+  if (/waterproof|su\s*geçirmez/i.test(txt)) bad.push('Su Geçirmez Ajan');
+  if (/long\s*last|uzun\s*kal|kalıcı|24\s*h/i.test(txt)) bad.push('Kalıcılık Kimyasalı');
+  if (/matte|mat\b/i.test(txt)) neutral.push('Mat Ajan');
+  if (/paraben/i.test(txt)) bad.push('Paraben');
+  else if (calcNaturalness(p) < 45) bad.push('Olası Paraben');
+  if (/parfüm|fragrance/i.test(txt) || calcNaturalness(p) < 50) bad.push('Sentetik Parfüm');
+  // Remove duplicates
+  good = [...new Set(good)];
+  neutral = [...new Set(neutral)];
+  bad = [...new Set(bad)];
+  return { good: good, neutral: neutral, bad: bad };
+}
+
 // ── COMPARE MODAL ─────────────────────────────────────────────────────────────
 function openCompare() {
   if (selected.size < 2) { showToast('En az 2 ürün seçin'); return; }
-  const items = [...selected].map(id => products.find(p => p.id === id));
-  const bestPrice  = Math.min(...items.map(p => minPrice(p)));
-  const worstPrice = Math.max(...items.map(p => minPrice(p)));
-  const bestRating = Math.max(...items.map(p => p.rating));
-  const rows = [
-    { label:'Marka',     fn: p => p.brand },
-    { label:'Kategori',  fn: p => p.category },
-    { label:'Fiyat',     fn: p => {
-      const mp = minPrice(p);
-      const cl = mp===bestPrice ? 'best-val' : mp===worstPrice ? 'worst-val' : '';
-      return `<div><span class="${cl}">₺${mp.toLocaleString('tr-TR')}</span><div style="font-size:10px;color:var(--text3);margin-top:2px">${p.prices.length} satıcı</div></div>`;
-    }},
-    { label:'Puan',      fn: p => `<span class="${p.rating===bestRating?'best-val':''}">${p.rating} ★</span>` },
-    { label:'Yorumlar',  fn: p => p.reviews.toLocaleString('tr-TR') },
-    { label:'Cilt Tipi', fn: p => p.skinType.join(', ') },
-    { label:'Tonlar',    fn: p => p.shades.length > 1 ? p.shades.length + ' seçenek' : '—' },
-    { label:'Vegan',     fn: p => p.vegan ? '<span class="best-val">Evet ✓</span>' : 'Hayır' },
-    { label:'Cruelty-Free', fn: p => p.crueltyFree ? '<span class="best-val">Evet ✓</span>' : 'Hayır' },
-    { label:'SPF',       fn: p => p.spf ? 'SPF ' + p.spf : '—' },
-    { label:'Açıklama',  fn: p => `<span style="font-size:12px;color:var(--text2)">${p.desc}</span>` },
-    { label:'Satın Al',  fn: p => {
-      const ch = [...p.prices].sort((a,b)=>a.price-b.price)[0];
-      return `<a href="${ch.url}" class="buy-btn">${ch.site} →</a>`;
-    }},
-  ];
-  const relReviews = reviews.filter(r => items.some(p => p.brand === r.brand));
-  document.getElementById('compareBody').innerHTML = `
-    <table class="compare-table">
-      <thead><tr>
-        <th class="row-label" style="font-family:'Jost',sans-serif;font-size:9px"></th>
-        ${items.map(p => `<th>${p.emoji || '💄'} ${p.name}<span class="th-brand">${p.brand}</span></th>`).join('')}
-      </tr></thead>
-      <tbody>
-        ${rows.map(r => `
-          <tr>
-            <td class="row-label">${r.label}</td>
-            ${items.map(p => `<td>${r.fn(p)}</td>`).join('')}
-          </tr>
-        `).join('')}
-      </tbody>
-    </table>
-    ${relReviews.length ? `
-    <div class="reviews-section">
-      <div class="reviews-title">Kullanıcı yorumları</div>
-      ${relReviews.map(r => `
-        <div class="review-card">
-          <div class="review-header">
-            <span class="reviewer">${r.name}</span>
-            <span class="review-meta">${r.brand} · ${r.product}</span>
-          </div>
-          <div class="card-stars" style="margin:4px 0">${stars(r.rating)}</div>
-          <div class="review-text">"${r.text}"</div>
-        </div>
-      `).join('')}
-    </div>` : ''}
-  `;
+  var items = [...selected].map(id => products.find(p => p.id === id)).filter(Boolean);
+  var n = items.length;
+  var prices = items.map(p => minPrice(p));
+  var bestPrice = Math.min(...prices);
+  var worstPrice = Math.max(...prices);
+  var bestRating = Math.max(...items.map(p => p.rating));
+  var bestReviews = Math.max(...items.map(p => p.reviews));
+  var natScores = items.map(p => calcNaturalness(p));
+  var bestNat = Math.max(...natScores);
+
+  // Determine overall winner (weighted score)
+  var winnerScores = items.map(function(p, i) {
+    var priceScore = prices[i] > 0 ? (1 - (prices[i] - bestPrice) / (worstPrice - bestPrice || 1)) * 30 : 0;
+    var ratingScore = (p.rating / 5) * 35;
+    var reviewScore = Math.min(p.reviews / bestReviews, 1) * 15;
+    var natScore = (natScores[i] / 100) * 20;
+    return priceScore + ratingScore + reviewScore + natScore;
+  });
+  var winnerIdx = winnerScores.indexOf(Math.max(...winnerScores));
+
+  var skinTypeNames = {'yagli':'Yağlı','kuru':'Kuru','karma':'Karma','normal':'Normal','hassas':'Hassas'};
+
+  var html = '<div class="cmp-grid cols-' + n + '">';
+
+  // Product headers
+  items.forEach(function(p, i) {
+    html += '<div class="cmp-product-head">';
+    if (i === winnerIdx) html += '<span class="cmp-winner-badge">✦ en iyi seçim</span>';
+    if (p.imageUrl) html += '<img class="cmp-product-img" src="' + p.imageUrl + '" alt="' + p.name + '" loading="lazy">';
+    html += '<div class="cmp-product-brand">' + p.brand + '</div>';
+    html += '<div class="cmp-product-name">' + p.name + '</div>';
+    html += '</div>';
+  });
+
+  // Fiyat
+  html += '<div class="cmp-row-label">Fiyat</div>';
+  items.forEach(function(p, i) {
+    var mp = prices[i];
+    var cls = mp === bestPrice ? ' best' : mp === worstPrice ? ' worst' : '';
+    var pcls = mp === bestPrice ? ' best' : mp === worstPrice ? ' worst' : '';
+    html += '<div class="cmp-cell' + cls + '">';
+    html += '<div class="cmp-price' + pcls + '">₺' + mp.toLocaleString('tr-TR') + '</div>';
+    html += '<div class="cmp-price-sub">' + p.prices.length + ' satıcıda mevcut</div>';
+    html += '</div>';
+  });
+
+  // Puan
+  html += '<div class="cmp-row-label">Puan & Yorumlar</div>';
+  items.forEach(function(p) {
+    var cls = p.rating === bestRating ? ' best' : '';
+    html += '<div class="cmp-cell' + cls + '">';
+    html += '<div class="cmp-rating">';
+    html += '<span class="cmp-rating-num">' + p.rating + '</span>';
+    html += '<span class="cmp-rating-stars">' + stars(p.rating) + '</span>';
+    html += '</div>';
+    html += '<div class="cmp-rating-reviews">' + p.reviews.toLocaleString('tr-TR') + ' değerlendirme</div>';
+    html += '</div>';
+  });
+
+  // Doğallık Skoru
+  html += '<div class="cmp-row-label">Doğallık Skoru</div>';
+  items.forEach(function(p, i) {
+    var score = natScores[i];
+    var color = getNatColor(score);
+    var label = getNatLabel(score);
+    var cls = score === bestNat ? ' best' : '';
+    html += '<div class="cmp-cell' + cls + '">';
+    html += '<div class="cmp-nat-wrap">';
+    html += '<div class="cmp-nat-bar-bg"><div class="cmp-nat-bar-fill ' + color + '" style="width:' + score + '%"></div></div>';
+    html += '<div class="cmp-nat-info">';
+    html += '<span class="cmp-nat-score ' + color + '">' + score + '/100</span>';
+    html += '<span class="cmp-nat-label">' + label + '</span>';
+    html += '</div></div></div>';
+  });
+
+  // İçerik Profili
+  html += '<div class="cmp-row-label">İçerik Profili</div>';
+  items.forEach(function(p) {
+    var profile = getIngredientProfile(p);
+    html += '<div class="cmp-cell"><div class="cmp-ing-list">';
+    profile.good.forEach(function(ing) { html += '<span class="cmp-ing-chip good">✓ ' + ing + '</span>'; });
+    profile.neutral.forEach(function(ing) { html += '<span class="cmp-ing-chip neutral">' + ing + '</span>'; });
+    profile.bad.forEach(function(ing) { html += '<span class="cmp-ing-chip bad">⚠ ' + ing + '</span>'; });
+    if (profile.good.length + profile.neutral.length + profile.bad.length === 0) {
+      html += '<span style="font-size:11px;color:var(--text3)">Detay bilgisi yok</span>';
+    }
+    html += '</div></div>';
+  });
+
+  // Cilt Tipi
+  html += '<div class="cmp-row-label">Cilt Uyumluluğu</div>';
+  items.forEach(function(p) {
+    var st = (p.skinType || []).map(function(s) { return skinTypeNames[s] || s; });
+    html += '<div class="cmp-cell">';
+    if (st.length) {
+      html += '<div class="cmp-badges">';
+      st.forEach(function(s) { html += '<span class="cmp-badge yes">' + s + '</span>'; });
+      html += '</div>';
+    } else {
+      html += '<span style="font-size:11px;color:var(--text3)">Bilgi yok</span>';
+    }
+    html += '</div>';
+  });
+
+  // Ton / Varyant
+  html += '<div class="cmp-row-label">Ton Seçenekleri</div>';
+  items.forEach(function(p) {
+    var vc = (p.variants || []).length;
+    html += '<div class="cmp-cell">';
+    html += vc > 1 ? '<span style="font-size:13px">' + vc + ' ton/renk seçeneği</span>' : '<span style="font-size:11px;color:var(--text3)">Tek seçenek</span>';
+    html += '</div>';
+  });
+
+  // Etiketler (Vegan, CF, SPF)
+  html += '<div class="cmp-row-label">Sertifikalar & Özellikler</div>';
+  items.forEach(function(p) {
+    html += '<div class="cmp-cell"><div class="cmp-badges">';
+    html += p.vegan ? '<span class="cmp-badge yes">✓ Vegan</span>' : '<span class="cmp-badge no">Vegan Değil</span>';
+    html += p.crueltyFree ? '<span class="cmp-badge yes">✓ Cruelty-Free</span>' : '<span class="cmp-badge no">Hayvan Testi</span>';
+    if (p.spf) html += '<span class="cmp-badge yes">SPF ' + p.spf + '</span>';
+    html += '</div></div>';
+  });
+
+  // Kategori
+  html += '<div class="cmp-row-label">Kategori</div>';
+  items.forEach(function(p) {
+    html += '<div class="cmp-cell"><span style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--text2)">' + (CAT_NAMES[p.category] || p.category) + '</span></div>';
+  });
+
+  // Açıklama
+  html += '<div class="cmp-row-label">Açıklama</div>';
+  items.forEach(function(p) {
+    html += '<div class="cmp-cell"><span style="font-size:12px;color:var(--text2);line-height:1.5;font-family:\'Cormorant Garamond\',serif;font-style:italic">' + (p.desc || 'Açıklama mevcut değil') + '</span></div>';
+  });
+
+  // Satın Al
+  html += '<div class="cmp-row-label">Satın Al</div>';
+  items.forEach(function(p) {
+    var ch = [...p.prices].sort(function(a,b){return a.price-b.price})[0];
+    html += '<div class="cmp-cell">';
+    html += '<a href="' + ch.url + '" target="_blank" rel="noopener" class="cmp-buy">' + ch.site + ' → ₺' + ch.price.toLocaleString('tr-TR') + '</a>';
+    html += '</div>';
+  });
+
+  // Verdict
+  html += '<div class="cmp-verdict">';
+  html += '<div class="cmp-verdict-title">✦ Sonuç</div>';
+  var winner = items[winnerIdx];
+  var verdictParts = [];
+  if (prices[winnerIdx] === bestPrice) verdictParts.push('en uygun fiyat');
+  if (winner.rating === bestRating) verdictParts.push('en yüksek puan');
+  if (natScores[winnerIdx] === bestNat) verdictParts.push('en yüksek doğallık skoru');
+  var verdictReason = verdictParts.length ? verdictParts.join(', ') : 'genel değerlendirme';
+  html += '<div class="cmp-verdict-text"><strong>' + winner.brand + ' ' + winner.name + '</strong> — ' + verdictReason + ' ile öne çıkıyor. ';
+  html += 'Doğallık skoru <strong>' + natScores[winnerIdx] + '/100</strong> (' + getNatLabel(natScores[winnerIdx]) + ') olarak hesaplandı.</div>';
+  html += '</div>';
+
+  html += '</div>';
+
+  document.getElementById('compareBody').innerHTML = html;
   document.getElementById('compareModal').classList.add('open');
 }
 
