@@ -578,7 +578,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "315C Cool (30 ml) - 03 Beige Diaphane",
+      "tükendi"
+    ]
   },
   {
     "id": 12,
@@ -970,7 +974,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2CR",
+      "1,5N",
+      "1N",
+      "2,5N",
+      "2N",
+      "2W",
+      "3,5N",
+      "3CR",
+      "3N",
+      "3W",
+      "4,5N",
+      "4N",
+      "5N",
+      "0N"
+    ]
   },
   {
     "id": 20,
@@ -1019,7 +1039,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "22p",
+      "12y",
+      "14p",
+      "17,5n",
+      "18,5y",
+      "20n",
+      "21p",
+      "23y",
+      "24n",
+      "25n",
+      "25,5y",
+      "26n",
+      "28,5n",
+      "29y",
+      "30p",
+      "31y",
+      "33n",
+      "34,5n",
+      "55n",
+      "35n",
+      "10n",
+      "38p",
+      "44y",
+      "57y"
+    ]
   },
   {
     "id": 21,
@@ -1068,7 +1114,53 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2N",
+      "tükendi",
+      "0,5N",
+      "0CR",
+      "0N",
+      "1,5N",
+      "1,5W",
+      "10N",
+      "1C",
+      "1CR",
+      "1N",
+      "1W",
+      "2,5N",
+      "2,5W",
+      "2CR",
+      "2W",
+      "2WO",
+      "2WP",
+      "3,5N",
+      "3C",
+      "3CR",
+      "3N",
+      "3W",
+      "3WO",
+      "3WP",
+      "4,5N",
+      "4,5W",
+      "4C",
+      "4N",
+      "4W",
+      "4WO",
+      "4WP",
+      "5N",
+      "5W",
+      "6,5N",
+      "6,5W",
+      "6N",
+      "6W",
+      "7,5N",
+      "7N",
+      "7W",
+      "8N",
+      "9N",
+      "0W"
+    ]
   },
   {
     "id": 22,
@@ -1117,7 +1209,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2 Fair (5,5 ml)",
+      "3 Fair (5,5 ml)",
+      "4.5 Medium (5,5 ml)",
+      "6.5 Deep (5,5 ml)"
+    ]
   },
   {
     "id": 23,
@@ -1166,7 +1264,44 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N2",
+      "tükendi",
+      "RN9",
+      "YN6",
+      "N7",
+      "P2",
+      "N8",
+      "RN3",
+      "P4",
+      "R2",
+      "P1",
+      "N3",
+      "NY12",
+      "N0.5",
+      "N1",
+      "P8",
+      "P3",
+      "N9",
+      "N5",
+      "N4",
+      "RN2.5",
+      "RP6",
+      "Y4",
+      "YP3",
+      "N6",
+      "YP5",
+      "Y1",
+      "YN9",
+      "Y2",
+      "NY11",
+      "YP11",
+      "R4",
+      "NR13",
+      "Y7",
+      "RN1"
+    ]
   },
   {
     "id": 24,
@@ -1216,7 +1351,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "8B porcelain beige (2,2 g)",
+      "12B fair beige (2,2 g)",
+      "12N fair neutral (2,2 g)",
+      "12S fair (2,2 g)",
+      "16N fair-light neutral (2,2 g)",
+      "20B light (2,2 g)",
+      "20S light sand (2,2 g)",
+      "22N light neutral (2,2 g)",
+      "22B light beige (2,2 g)",
+      "27B light-medium beige (2,2 g)",
+      "27S light-medium sand (2,2 g)",
+      "29N light-medium (2,2 g)",
+      "34S medium sand (2,2 g)",
+      "35N medium (2,2 g)",
+      "36S medium-tan sand (2,2 g)",
+      "38N medium-tan neutral (2,2 g)",
+      "42S tan sand (2,2 g)",
+      "47S tan-deep sand (2,2 g)",
+      "47H tan-deep honey (2,2 g)",
+      "53N deep neutral (2,2 g)"
+    ]
   },
   {
     "id": 25,
@@ -1265,7 +1422,40 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1.5N",
+      "tükendi",
+      "0N",
+      "0C",
+      "0.5N",
+      "0.5C",
+      "1N",
+      "1.5W",
+      "1.5C",
+      "2N",
+      "2C",
+      "3C",
+      "3W",
+      "3N",
+      "3.5N",
+      "4N",
+      "4W",
+      "4C",
+      "4.5W",
+      "4.5N",
+      "4.8N",
+      "5N",
+      "5.5C",
+      "5.5W",
+      "5.8N",
+      "5.8W",
+      "6W",
+      "6N",
+      "6.5C",
+      "6.7N",
+      "6.8N"
+    ]
   },
   {
     "id": 26,
@@ -1314,7 +1504,49 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2N Mighty",
+      "1C Ultimate",
+      "4N Wonder",
+      "3W Trailblazer",
+      "5C Confident",
+      "6W Extraordinary",
+      "7N Savy",
+      "8W Limitless",
+      "9C Supreme",
+      "10N Ace",
+      "11W Excellence",
+      "12N Major",
+      "13W Champion",
+      "14C Phenomenal",
+      "15N Incredible",
+      "16W Stellar",
+      "17N Ultra",
+      "18W Proud",
+      "19N Triumph",
+      "20W Beyond",
+      "21C Dynamic",
+      "22N Outstanding",
+      "23W Magnificent",
+      "24W Power",
+      "25C Awe",
+      "26C Hero",
+      "27W Leader",
+      "28N Superb",
+      "29W Driven",
+      "30C Fearless",
+      "31N Exceptional",
+      "32W Visionary",
+      "33N Marvelous",
+      "34C Legendary",
+      "35N Victorious",
+      "36W Remarkable",
+      "37N Brilliant",
+      "38C Magnetic",
+      "39N Winner",
+      "40N Iconic"
+    ]
   },
   {
     "id": 27,
@@ -1363,7 +1595,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1N Neutral",
+      "2N Neutral",
+      "3N Neutral",
+      "4N Neutral",
+      "2W Warm",
+      "4W Warm"
+    ]
   },
   {
     "id": 28,
@@ -1412,7 +1652,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "CN 52 Neutral - 30ml",
+      "CN 28 Ivory - 30ml",
+      "CN 40 Cream Chamois - 30ml",
+      "CN 10 Alabaster - 30ml",
+      "CN 20 Fair - 30ml",
+      "CN 18 Cream Whip - 30ml",
+      "WN 46 Golden Neutral - 30ml",
+      "CN 08 Linen - 30ml",
+      "WN 16 Buff - 30ml",
+      "WN 04 Bone - 30ml",
+      "WN 12 Meringue - 30 ml",
+      "WN 48 Oat - 30 ml",
+      "WN-38 Stone - 30 ml",
+      "WN-30 Biscuit - 30 ml",
+      "WN 01 Flax - 30 ml",
+      "CN 02 Breeze"
+    ]
   },
   {
     "id": 29,
@@ -1461,7 +1719,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "130N Fair",
+      "100N Fair",
+      "110P Fair",
+      "120Y Fair",
+      "140P Fair",
+      "150Y Light",
+      "160P Light",
+      "170O Light",
+      "180P Light",
+      "190Y Light",
+      "200N Medium",
+      "210O Medium",
+      "220Y Medium",
+      "230N Medium",
+      "240P Medium",
+      "250O Deep",
+      "260Y Deep",
+      "270P Deep",
+      "280Y Deep",
+      "290N Deep"
+    ]
   },
   {
     "id": 30,
@@ -1510,7 +1790,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rose 2",
+      "Golden 3",
+      "Neutral 2",
+      "Neutral 3",
+      "Neutral 4",
+      "Rose 3"
+    ]
   },
   {
     "id": 31,
@@ -1559,7 +1847,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "12N",
+      "10N",
+      "16C",
+      "14N",
+      "22C",
+      "20N",
+      "24W",
+      "26W",
+      "28N",
+      "30W",
+      "42C",
+      "32C",
+      "34W",
+      "44N",
+      "40W",
+      "52W"
+    ]
   },
   {
     "id": 32,
@@ -1608,7 +1914,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2N",
+      "0.5N NEUTRAL / NEUTRE",
+      "1N",
+      "1.5N",
+      "2C",
+      "2W",
+      "2.5N",
+      "3C",
+      "3N",
+      "3W",
+      "3.5N",
+      "4N"
+    ]
   },
   {
     "id": 33,
@@ -1657,7 +1977,36 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "6 Neutral",
+      "tükendi",
+      "1 Neutral",
+      "2 Warm",
+      "3 Cool",
+      "3 Neutral",
+      "4 Neutral",
+      "4 Warm",
+      "5 Neutral",
+      "6 Cool",
+      "7 Cool",
+      "7 Neutral",
+      "8 Neutral",
+      "8 Warm",
+      "9 Neutral",
+      "9 Warm",
+      "10 Neutral",
+      "10 Warm",
+      "11 Cool",
+      "11 Neutral",
+      "11 Warm",
+      "12 Neutral",
+      "13 Warm",
+      "14 Cool",
+      "15 Neutral",
+      "16 Cool",
+      "17 Neutral"
+    ]
   },
   {
     "id": 34,
@@ -1706,7 +2055,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "LW4",
+      "LN1",
+      "LC3",
+      "LN4",
+      "LC5",
+      "LN7",
+      "LN9",
+      "MN1.5",
+      "MW2",
+      "MC5",
+      "MN5",
+      "MN7",
+      "MN8",
+      "MN10",
+      "DN1",
+      "DN5"
+    ]
   },
   {
     "id": 35,
@@ -1755,7 +2122,41 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "8",
+      "8.5",
+      "1.5",
+      "7.5",
+      "18",
+      "20.5",
+      "21",
+      "24",
+      "5",
+      "19.5",
+      "2.5",
+      "12",
+      "17",
+      "16",
+      "9",
+      "4",
+      "20",
+      "10",
+      "1",
+      "7",
+      "2",
+      "25",
+      "23",
+      "14",
+      "15",
+      "13",
+      "3",
+      "26",
+      "11",
+      "6",
+      "19",
+      "22"
+    ]
   },
   {
     "id": 36,
@@ -1804,7 +2205,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "4N1 Shell Beige",
+      "1N1 Ivory Nude",
+      "1N2 Ecru",
+      "1W1 Bone",
+      "2C0 Cool Vanilla",
+      "2C3 Fresco",
+      "2N1 Desert Beige",
+      "2W1 Dawn",
+      "3N1 Ivory Beige",
+      "3N2 Wheat",
+      "3W1 Tawny",
+      "4N2 Spiced Sand"
+    ]
   },
   {
     "id": 37,
@@ -1853,7 +2268,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "160",
+      "210",
+      "SYNCHRO SKIN SELF-REFRESHING FOUND.",
+      "230",
+      "240",
+      "320",
+      "340",
+      "130",
+      "330",
+      "350",
+      "120",
+      "140",
+      "150",
+      "250"
+    ]
   },
   {
     "id": 38,
@@ -1902,7 +2333,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "125W",
+      "220C",
+      "245C",
+      "310N",
+      "400W"
+    ]
   },
   {
     "id": 39,
@@ -1951,7 +2389,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "36 amber tan",
+      "tükendi",
+      "21 petal light",
+      "25 beige medium",
+      "26 peach medium",
+      "30 sand medium",
+      "35 bronze tan",
+      "39 sienna tan",
+      "40 hazelnut tan",
+      "19 ivoire pâle",
+      "28 miel medium",
+      "38 caramel mat",
+      "45 cacao foncé"
+    ]
   },
   {
     "id": 40,
@@ -2000,7 +2453,47 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "220 WARM - Custard",
+      "100 NEUTRAL - Milkshake",
+      "110 WARM - Angel Food",
+      "120 COOL - Vanilla",
+      "140 NEUTRAL - Cashew",
+      "150 WARM - Crème Brulee",
+      "200 NEUTRAL - Shortbread",
+      "210 NEUTRAL - Chai",
+      "230 COOL - Macaroon",
+      "240 WARM - Toasted Coconut",
+      "250 NEUTRAL - Cheesecake",
+      "255 COOL - Apple Pie",
+      "300 NEUTRAL - Latte",
+      "310 WARM - Amaretti",
+      "320 NEUTRAL - Tres Leches",
+      "330 COOL - Butter Pecan",
+      "340 WARM Baklava",
+      "350 WARM - Dulce De Leche",
+      "400 WARM - Macchiato",
+      "420 WARM - Toffee",
+      "430 WARM - Gingerbread",
+      "440 WARM - Cinnamon",
+      "450 WARM - Chocolate Mousse",
+      "455 WARM - Peanut Butter Cup",
+      "500 NEUTRAL - Mocha",
+      "510 NEUTRAL - Cocoa",
+      "550 WARM - Hot Fudge",
+      "560 WARM - Ganache",
+      "600 NEUTRAL - Espresso",
+      "590 WARM - True Lava Cake",
+      "260 WARM - Cream Puff",
+      "305 COOL - Iced Frappe",
+      "307 NEUTRAL - Golden Milk",
+      "355 WARM - Créme Caramel",
+      "425 NEUTRAL - Pistachio Cream",
+      "570 WARM - Chocolate Swirl",
+      "580 NEUTRAL - Truffle Cake",
+      "595 NEUTRAL - Molten Cocoa"
+    ]
   },
   {
     "id": 41,
@@ -2049,7 +2542,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "15n light (7,50 g)",
+      "04p light (7,50 g)",
+      "06y light (7,50 g)",
+      "08n light (7,50 g)",
+      "12n light (7,50 g)",
+      "16n light (7,50 g)",
+      "17y light (7,50 g)",
+      "18,5n light (7,50 g)",
+      "20,5n medium (7,50 g)",
+      "20n medium (7,50 g)",
+      "21,5y medium (7,50 g)",
+      "22,6y medium (7,50 g)",
+      "22,8n medium (7,50 g)",
+      "23,8y medium (7,50 g)",
+      "25n medium (7,50 g)",
+      "30,5y tan (7,50 g)",
+      "35p tan (7,50 g)",
+      "36y tan (7,50 g)",
+      "44n tan (7,50 g)",
+      "46y tan (7,50 g)",
+      "56,5p deep (7,50 g)",
+      "56,8n deep (7,50 g)",
+      "57n deep (7,50 g)",
+      "59p deep (7,50 g)"
+    ]
   },
   {
     "id": 42,
@@ -2098,7 +2617,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "10N Light Medium",
+      "11W Light Medium",
+      "12N Light Medium",
+      "13C Light Medium",
+      "14W Light Medium",
+      "15N Light Medium",
+      "17W Medium",
+      "18N Medium",
+      "19W Medium",
+      "20C Medium",
+      "21W",
+      "22N Medium",
+      "23W",
+      "24N Medium",
+      "5N Light",
+      "6W Light",
+      "7N LIGHT",
+      "8W Light",
+      "9C Light medium",
+      "1N LIGHT",
+      "16N Light Medium",
+      "3W Light",
+      "4C Light",
+      "2C Light"
+    ]
   },
   {
     "id": 43,
@@ -2147,7 +2692,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "CN 0.75 Custard - 30 ml",
+      "WN 04 Bone - 30 ml",
+      "CN 08 Linen",
+      "CN 10 Alabaster - 30 ml",
+      "WN 16 Buff",
+      "CN 18 Cream Whip - 30 ml",
+      "CN 28 Ivory - 30 ml",
+      "WN 30 Biscuit - 30 ml",
+      "CN 40 Cream Chamois - 30 ml",
+      "CN 52 Neutral - 30 ml",
+      "CN 58 Honey - 30 ml",
+      "CN 70 Vanilla - 30 ml"
+    ]
   },
   {
     "id": 44,
@@ -2196,7 +2755,32 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "RN3 (12,5 g)",
+      "tükendi",
+      "RN1 (12,5 g)",
+      "N1 (12,5 g)",
+      "Y1 (12,5 g)",
+      "N2 (12,5 g)",
+      "Y5 (12,5 g)",
+      "P3 (12,5 g)",
+      "N5-5 (12,5 g)",
+      "Y5-7 (12,5 g)",
+      "N3 (12,5 g)",
+      "R2 (12,5 g)",
+      "N8-9 (12,5 g)",
+      "NP10 (12,5 g)",
+      "P2 (12,5 g)",
+      "Y8-9 (12,5 g)",
+      "NP7 (12,5 g)",
+      "NY11 (12,5 g)",
+      "NY12 (12,5 g)",
+      "NP13 (12,5 g)",
+      "NP14 (12,5 g)",
+      "YP15 (12,5 g)",
+      "RN9 (12,5 g)"
+    ]
   },
   {
     "id": 45,
@@ -2245,7 +2829,34 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Shade 9 - 2.5W",
+      "Shade 5 - 1.5N",
+      "Shade 15 - 4W",
+      "Shade 1 - 00N",
+      "Shade 2 - 0CR",
+      "Shade 4 - 1CR",
+      "Shade 3 - 1N",
+      "Shade 6 - 2N",
+      "Shade 7 - 2W",
+      "Shade 8 - 2WP",
+      "Shade 13 - 3CR",
+      "Shade 12 - 3WO",
+      "Shade 18 - 4.5W",
+      "Shade 14 - 4N",
+      "Shade 17 - 4WO",
+      "Shade 16 - 4WP",
+      "Shade 19 - 5W",
+      "Shade 23 - 7.5N",
+      "Shade 22 - 7N",
+      "Shade 24 - 8N",
+      "Shade 11 - 3N",
+      "Shade 10 - 3W",
+      "Shade 21 - 6.5N",
+      "Shade 20 - 6W",
+      "Shade 25 - 9N"
+    ]
   },
   {
     "id": 46,
@@ -2294,7 +2905,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1 Fair",
+      "1.5 Fair",
+      "2 Fair",
+      "3 Fair",
+      "4 Fair",
+      "5 Medium",
+      "6 Medium",
+      "7 Medium",
+      "7.5 Medium",
+      "8 Medium",
+      "9 Tan",
+      "10 Tan",
+      "11 Tan",
+      "12 Tan",
+      "12.5 Tan",
+      "13 Deep",
+      "14 Deep",
+      "15 Deep",
+      "16 Deep",
+      "17 Deep"
+    ]
   },
   {
     "id": 47,
@@ -2343,7 +2976,60 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "150",
+      "tükendi",
+      "360",
+      "370",
+      "390",
+      "400",
+      "410",
+      "420",
+      "440",
+      "430",
+      "450",
+      "310",
+      "290",
+      "300",
+      "280",
+      "250",
+      "260",
+      "350",
+      "330",
+      "190",
+      "200",
+      "210",
+      "140",
+      "160",
+      "170",
+      "220",
+      "240",
+      "230",
+      "120",
+      "130",
+      "100",
+      "110",
+      "490",
+      "470",
+      "480",
+      "185",
+      "235",
+      "345",
+      "385",
+      "445",
+      "495",
+      "498",
+      "125",
+      "175",
+      "225",
+      "265",
+      "295",
+      "315",
+      "335",
+      "425",
+      "485"
+    ]
   },
   {
     "id": 48,
@@ -2392,7 +3078,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "100.5W",
+      "105.5N - 30 Ml",
+      "103N - 30 Ml",
+      "111N - 30 Ml",
+      "SKIN ILLUSION 110N",
+      "109C - 30 Ml",
+      "108W - 30 Ml",
+      "112.5W - 30 Ml",
+      "107C - 30 Ml",
+      "100.4N - 30 Ml"
+    ]
   },
   {
     "id": 49,
@@ -2441,7 +3139,32 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2Y20",
+      "tükendi",
+      "1N00",
+      "1R02",
+      "1Y04",
+      "1N06",
+      "1Y08",
+      "1N10",
+      "1R12",
+      "1N14",
+      "1Y16",
+      "1Y18",
+      "2N22",
+      "2N26",
+      "2R28",
+      "2Y32",
+      "2N34",
+      "2Y36",
+      "2R38",
+      "3N42",
+      "3Y52",
+      "4N62",
+      "4R64"
+    ]
   },
   {
     "id": 50,
@@ -2490,7 +3213,58 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "23.5 P",
+      "tükendi",
+      "03 P",
+      "04 N",
+      "08 Y",
+      "10 N",
+      "11.5 P",
+      "12 Y",
+      "13 P",
+      "14 P",
+      "15.5 N",
+      "16 Y",
+      "17.5 N",
+      "18.5 Y",
+      "19.5 P",
+      "20 N",
+      "21 P",
+      "21.5 Y",
+      "22 P",
+      "22.5 N",
+      "23 Y",
+      "24 N",
+      "25 N",
+      "25.5 Y",
+      "FDT BEST SKIN EVER-21 26 N",
+      "26.5 Y",
+      "27 P",
+      "28.5 N",
+      "29 Y",
+      "30 P",
+      "31 Y",
+      "33 N",
+      "33.5 Y",
+      "34.5 N",
+      "35 N",
+      "38 P",
+      "44 Y",
+      "45 P",
+      "50 N",
+      "53.5 N",
+      "55 N",
+      "56.5 P",
+      "57 Y",
+      "59 N",
+      "61 P",
+      "63 P",
+      "65 N",
+      "66.5 N",
+      "68 N"
+    ]
   },
   {
     "id": 51,
@@ -2539,7 +3313,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1R02",
+      "1Y04",
+      "1N06",
+      "1Y08",
+      "1N10",
+      "1N14",
+      "2Y20",
+      "2N22 + 30ml",
+      "2N26",
+      "2Y32",
+      "3Y38",
+      "3N40",
+      "3R48",
+      "4N62"
+    ]
   },
   {
     "id": 52,
@@ -2589,7 +3379,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "LUMINOUS SILK CONCEALER 3 F12ML",
+      "LUMINOUS SILK CONCEALER 2 F12ML",
+      "LUMINOUS SILK CONCEALER 3.75",
+      "LUMINOUS SILK CONCEALER 4.5 F12ML",
+      "4,75",
+      "5,00",
+      "5,5",
+      "7,5",
+      "LUMINOUS SILK CONCEALER 4 F12ML",
+      "6.5",
+      "5.75"
+    ]
   },
   {
     "id": 53,
@@ -2639,7 +3442,28 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Shade 6",
+      "tükendi",
+      "1",
+      "Shade 2",
+      "2,5",
+      "Shade 3",
+      "4",
+      "BOI-ING CAKELESS CONCEALER 4.25",
+      "Teinte 4,5",
+      "4,75",
+      "Shade 5",
+      "BOI-ING CAKELESS CONCEALER 6.25",
+      "BOI-ING CAKELESS CONCEALER 6.3",
+      "6.5",
+      "Shade 7",
+      "Shade 8",
+      "Teinte 9",
+      "Shade 10",
+      "BOI-ING CAKELESS CONCEALER 14"
+    ]
   },
   {
     "id": 54,
@@ -2688,7 +3512,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1 - ROSE RADIANCE",
+      "3.5 - LUMINOUS ALMOND",
+      "1.5 - LUMINOUS SILK",
+      "2 - IVORY RADIANCE",
+      "2.5 - LUMINOUS VANILLA",
+      "3 - PEACH RADIANCE",
+      "6 Luminous Amber (2.5 ml)",
+      "7 Luminous Mocha (2.5 ml)",
+      "7.5 (2.5 ml)",
+      "8 Luminous Espresso (2.5 ml)",
+      "9 Luminous Acacia (2.5 ml)"
+    ]
   },
   {
     "id": 55,
@@ -2738,7 +3575,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "LC5",
+      "LN4",
+      "LW1",
+      "MC2",
+      "MN1",
+      "MW2",
+      "LC2",
+      "LN1",
+      "MN10",
+      "DW1"
+    ]
   },
   {
     "id": 56,
@@ -2788,7 +3637,36 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "T36",
+      "tükendi",
+      "T01",
+      "T03",
+      "T05",
+      "T06",
+      "T08",
+      "T13",
+      "T20",
+      "T22",
+      "T26",
+      "T27",
+      "T28",
+      "T29",
+      "T29.5",
+      "T30",
+      "T31",
+      "T33",
+      "T34",
+      "T37",
+      "T40",
+      "T42",
+      "T46",
+      "T53.5",
+      "T59",
+      "T61",
+      "T65"
+    ]
   },
   {
     "id": 57,
@@ -2838,7 +3716,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "120 N",
+      "tükendi",
+      "220 C",
+      "230 W",
+      "305 N",
+      "325 C",
+      "330 N",
+      "105 W",
+      "115 C",
+      "400 W",
+      "450 W"
+    ]
   },
   {
     "id": 58,
@@ -2888,7 +3779,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2.5N NEUTRAL / NEUTRE (11,5ml)",
+      "0.5N NEUTRAL / NEUTRE (11,5ml)",
+      "1N NEUTRAL / NEUTRE (11,5ml)",
+      "2N NEUTRAL / NEUTRE (11,5ml)",
+      "3N NEUTRAL / NEUTRE (11,5ml)",
+      "3.5N NEUTRAL / NEUTRE (11,5ml)",
+      "4N NEUTRAL / NEUTRE (11,5ml)"
+    ]
   },
   {
     "id": 59,
@@ -2938,7 +3838,39 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "8B Porcelain Beige",
+      "12B Fair Beige",
+      "12N Fair Neutral",
+      "12S Fair",
+      "16N Fair-Light Neutral",
+      "20B Light",
+      "20S Light Sand",
+      "22N Light Neutral",
+      "22B Light Beige",
+      "27H light-medium honey",
+      "27S Light-Medium Sand",
+      "27B light-medium beige",
+      "29N Light-Medium",
+      "34S Medium Sand",
+      "35H medium honey",
+      "35N Medium",
+      "36S Medium-Tan Sand",
+      "37G medium-tan golden",
+      "38N Medium-Tan Neutral",
+      "42S Tan-Sand",
+      "44H tan",
+      "47H tan-deep honey",
+      "47S tan-deep sand",
+      "53N Deep",
+      "53S deep sand",
+      "53H deep honey",
+      "57N rich",
+      "57S rich sand",
+      "60N mahogany",
+      "61H espresso"
+    ]
   },
   {
     "id": 60,
@@ -2988,7 +3920,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "3W",
+      "1N",
+      "1C",
+      "2C",
+      "2W",
+      "3C",
+      "2N",
+      "3N",
+      "4N",
+      "1W"
+    ]
   },
   {
     "id": 61,
@@ -3038,7 +3982,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Vanilla",
+      "Chantilly",
+      "Ginger",
+      "Custard",
+      "Biscuit",
+      "Café Con Leche",
+      "Honey",
+      "Crème Brûlée",
+      "Caramel",
+      "Amande"
+    ]
   },
   {
     "id": 62,
@@ -3088,7 +4044,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "05 N",
+      "01 P",
+      "02 Y",
+      "03 P",
+      "04 Y",
+      "06 Y",
+      "08 P",
+      "09 N",
+      "10 Y",
+      "11 Y",
+      "12 N",
+      "13 P",
+      "15 N",
+      "16 Y",
+      "17 N",
+      "18 Y",
+      "19 N",
+      "20 P",
+      "22 Y",
+      "24 N",
+      "25 Y",
+      "26 O",
+      "27 P",
+      "30 N"
+    ]
   },
   {
     "id": 63,
@@ -3138,7 +4120,42 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Apricot",
+      "tükendi",
+      "Birch",
+      "Crème",
+      "Cotton",
+      "Silk",
+      "Oat",
+      "Cedar",
+      "Pearl",
+      "Fawn",
+      "Sepia",
+      "Beech",
+      "Sienna",
+      "Topaz",
+      "Dune",
+      "Umber",
+      "Teak",
+      "Brandy",
+      "Velvet",
+      "Mocha",
+      "Anise",
+      "Flax",
+      "Maple",
+      "Clove 11.4",
+      "Stone 1.3",
+      "Sand 1.45",
+      "Bisque 1.8",
+      "Willow 2.3",
+      "Ecru 3.3",
+      "Drift 3.8",
+      "Khaki 6.25",
+      "Suede 6.6",
+      "Valley 8.25"
+    ]
   },
   {
     "id": 64,
@@ -3188,7 +4205,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Honey (6,2 g)",
+      "Chantilly (6,2 g)",
+      "Vanilla (6,2 g)",
+      "Crème Brûlée (6,2 g)",
+      "Custard (6,2 g)",
+      "Ginger (6,2 g)",
+      "Biscuit (6,2 g)",
+      "Caramel (6,2 g)",
+      "Amande (6,2g)",
+      "Cannelle (6,2 g)",
+      "Macadamia - (6.2 g)"
+    ]
   },
   {
     "id": 65,
@@ -3238,7 +4268,36 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Vanilla (13,5 ml)",
+      "tükendi",
+      "Cloud (13.5 ml)",
+      "Swan (13,5 ml)",
+      "Snow (13,5 ml)",
+      "Porcelain (13,5 ml)",
+      "Nude (13,5 ml)",
+      "Marshmallow (13.5 ml)",
+      "Cream Puff (13.5 ml)",
+      "Shortbread (13.5 ml)",
+      "Natural Beige (13,5 ml)",
+      "Light Beige (13,5 ml)",
+      "Warm Beige (13,5 ml)",
+      "Pearl (13.5 ml)",
+      "Golden Beige (13,5 ml)",
+      "Sand (13,5 ml)",
+      "Honey (13,5 ml)",
+      "Latte (13.5 ml)",
+      "Butterscotch (13,5 ml)",
+      "Warm Sand (13,5 ml)",
+      "Taffy (13,5 ml)",
+      "Cookie (13,5 ml)",
+      "Mocha (13,5 ml)",
+      "Maple (13,5 ml)",
+      "Chestnut (13,5 ml)",
+      "Toffee (13,5 ml)",
+      "Almond (13,5 ml)"
+    ]
   },
   {
     "id": 66,
@@ -3288,7 +4347,39 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "12N fair neutral",
+      "8B porcelain beige",
+      "12B fair beige",
+      "12S fair + net 10 ml / 0,33 Fl. Oz.",
+      "16N fair-light neutral",
+      "20B light",
+      "20S light sand",
+      "22N light neutral",
+      "22B light beige",
+      "27S light-medium sand",
+      "27B light-medium beige",
+      "29N light-medium",
+      "34S medium sand",
+      "35N medium",
+      "36S medium-tan sand",
+      "42S tan sand",
+      "53N deep",
+      "38N medium-tan neutral",
+      "27H light-medium honey",
+      "35H medium honey",
+      "37G medium-tan golden",
+      "44H tan",
+      "47H tan-deep honey",
+      "47S tan-deep sand",
+      "53H deep honey",
+      "53S deep sand",
+      "57N rich",
+      "57S rich sand",
+      "60N mahogany",
+      "61H espresso"
+    ]
   },
   {
     "id": 67,
@@ -3338,7 +4429,32 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2N Neutral",
+      "tükendi",
+      "0CR Cool Rosy",
+      "0N Neutral",
+      "0W Warm",
+      "1C Cool",
+      "1N Neutral",
+      "1W Warm",
+      "2CR Cool Rosy",
+      "2W Warm",
+      "3C Cool",
+      "3N Neutral",
+      "3W Warm",
+      "4C Cool",
+      "4N Neutral",
+      "4W Warm",
+      "5N Neutral",
+      "5W Warm",
+      "6N Neutral",
+      "6W Warm",
+      "7N Neutral",
+      "8N Neutral",
+      "9N Neutral"
+    ]
   },
   {
     "id": 68,
@@ -3388,7 +4504,37 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1.7B Honey - 9 ml",
+      "tükendi",
+      "0.1G Whipped Cream 9 ml",
+      "1.1 Royal Icing",
+      "1.3G Marshmallow 9 ml",
+      "1.5B Yogurt Drops 9 ml",
+      "2.1N Meringue - 9 ml",
+      "2.3B Cotton Candy - 9 ml",
+      "2.5G Nougat - 9 ml",
+      "2.7N Coconut Flakes - 9 ml",
+      "3.1B Vanilla Swirl - 9 ml",
+      "3.3B Marmalade - 9 ml",
+      "3.5N Sugar Biscuit - 9 ml",
+      "4.1G Graham Cracker - 9 ml",
+      "4.3N Cookie Dough - 9 ml",
+      "4.5G Granola - 9 ml",
+      "5.1N Caramel Corn - 9 ml",
+      "5.3G Toasted Almond - 9 ml",
+      "6.1G Candied Ginger - 9 ml",
+      "6.3N Praline - 9 ml",
+      "6.5G Brittle - 9 ml",
+      "6.7R Peanut Butter - 9 ml",
+      "7.1N Crumble - 9 ml",
+      "7.3G Salted Caramel - 9 ml",
+      "7.5G Butterscotch - 9 ml",
+      "8.1N Hazelnut 9 ml",
+      "8.3 Maple Syrup",
+      "8.5 Brownie"
+    ]
   },
   {
     "id": 69,
@@ -3438,7 +4584,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Deep (2,5 g)",
+      "Medium (2,5 g)",
+      "Fair (2,5 g)",
+      "Tan (2,5 g)"
+    ]
   },
   {
     "id": 70,
@@ -3488,7 +4640,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2N Light Medium",
+      "0.5 Light Medium",
+      "1C",
+      "1N Light",
+      "1W",
+      "2C",
+      "2W",
+      "3C",
+      "3N Medium",
+      "3W",
+      "2.5C Light Medium",
+      "3.5C Medium"
+    ]
   },
   {
     "id": 71,
@@ -3538,7 +4704,42 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "11 Tan (8,3 g)",
+      "tükendi",
+      "8.5 Medium Tan (8,3 g)",
+      "15 Deep (8,3 g)",
+      "1 Fair (8,3 g)",
+      "4 Fair Medium (8,3 g)",
+      "2 Fair (8,3 g)",
+      "7.5 Medium (8,3 g)",
+      "17 Deep (8,3 g)",
+      "14 Deep (8,3 g)",
+      "6 Medium (8,3 g)",
+      "4.5 Fair Medium (8,3 g)",
+      "12.5 Tan Deep (8,3 g)",
+      "3 Fair (8,3 g)",
+      "13 Deep (8,3 g)",
+      "7 Medium (8,3 g)",
+      "10 Tan (8,3 g)",
+      "5 Medium (8,3 g)",
+      "10.5 Tan (8,3 g)",
+      "9.5 Tan (8,3 g)",
+      "3.5 Fair (8,3 g)",
+      "13.5 Deep (8,3 g)",
+      "11.5 Tan (8,3 g)",
+      "14.5 Deep (8,3 g)",
+      "2.5 Fair (8,3 g)",
+      "6.5 Medium (8,3 g)",
+      "5.5 Medium (8,3 g)",
+      "9 Tan (8,3 g)",
+      "8 Medium Tan (8,3 g)",
+      "17.5 Deep (8,3 g)",
+      "16 Deep (8,3 g)",
+      "12 Tan Deep (8,3 g)",
+      "1.5 Fair (8,3 g)"
+    ]
   },
   {
     "id": 72,
@@ -3588,7 +4789,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pink Pomelo",
+      "Cherry Blossom Light",
+      "Cherry Blossom",
+      "Lychee",
+      "Peach Light",
+      "Peach",
+      "Mango",
+      "Papaya"
+    ]
   },
   {
     "id": 73,
@@ -3638,7 +4849,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N80",
+      "tükendi",
+      "N120",
+      "C105",
+      "C180",
+      "C240",
+      "C305",
+      "N250",
+      "N270",
+      "N280",
+      "N312",
+      "N335",
+      "N345",
+      "N385",
+      "N390",
+      "N95",
+      "W100",
+      "W110",
+      "W245",
+      "W310"
+    ]
   },
   {
     "id": 74,
@@ -3688,7 +4921,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 W",
+      "04 N",
+      "06 O",
+      "07 N",
+      "1.5 C",
+      "8.7 N"
+    ]
   },
   {
     "id": 75,
@@ -3738,7 +4979,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Chantilly (1,4 ml)",
+      "Vanilla (1,4 ml)",
+      "Ginger(1,4 ml)",
+      "Custard (1,4 ml)",
+      "Biscuit (1,4 ml)",
+      "Café con Leche (1,4 ml)",
+      "Honey (1,4 ml)",
+      "Crême Brulée (1,4 ml)",
+      "Cannelle (1,4 ml)",
+      "Macadamia (1,4 ml)",
+      "Caramel (1,4 ml)",
+      "Amande (1,4 ml)"
+    ]
   },
   {
     "id": 76,
@@ -3788,7 +5043,36 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "170W (7,5 ml)",
+      "110N (7,5 ml)",
+      "120C (7,5 ml)",
+      "130N (7,5 ml)",
+      "140C (7,5 ml)",
+      "150C (7,5 ml)",
+      "160C (7,5 ml)",
+      "180W (7,5 ml)",
+      "190W (7,5 ml)",
+      "200C (7,5 ml)",
+      "210N (7,5 ml)",
+      "230N (7,5 ml)",
+      "240W (7,5 ml)",
+      "250W (7,5 ml)",
+      "270N (7,5 ml)",
+      "280N (7,5 ml)",
+      "290N (7,5 ml)",
+      "310W (7,5 ml)",
+      "320W (7,5 ml)",
+      "340C (7,5 ml)",
+      "360W (7,5 ml)",
+      "380W (7,5 ml)",
+      "400W (7,5 ml)",
+      "430W (7,5 ml)",
+      "450N (7,5 ml)",
+      "480W (7,5 ml)",
+      "540C (7,5 ml)"
+    ]
   },
   {
     "id": 77,
@@ -3838,7 +5122,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "CN 10 Alabaster",
+      "CN 28 Ivory",
+      "EVEN BETTER CONCEALER - WN 01 FLAX",
+      "CN 02 Breeze",
+      "EVEN BETTER CONCEALER - WN 18 CREAM"
+    ]
   },
   {
     "id": 78,
@@ -3888,7 +5179,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Khaki (1,3 ml)",
+      "Cotton (1,3 ml)",
+      "Creme (1,3 ml)",
+      "Sepia (1,3 ml)",
+      "Silk (1,3 ml)",
+      "Beech (1,3 ml)"
+    ]
   },
   {
     "id": 79,
@@ -3938,7 +5237,40 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "22N Light Neutral",
+      "tükendi",
+      "8B Porcelain Beige",
+      "12B Fair Beige",
+      "12N Fair Neutral",
+      "12S Fair",
+      "16N Fair Light Neutral",
+      "20B Light",
+      "20S Light Sand",
+      "22B Light Beige",
+      "27S Light Medium Sand",
+      "27B Light Medium Beige",
+      "29N Light Medium",
+      "34S Medium Sand",
+      "35N Medium",
+      "36S Medium Tan Sand",
+      "38N Medium Tan Neutral",
+      "42S Tan Sand",
+      "53N Deep",
+      "27H light-medium honey",
+      "35H medium honey",
+      "37G Medium-Tan Golden",
+      "44H tan",
+      "47H Tan-Deep Honey",
+      "47S Tan-Deep Sand",
+      "57N Rich",
+      "53S Deep Sand",
+      "53H Deep Honey",
+      "57S Rich Sand",
+      "60N Mahogany",
+      "61H Espresso"
+    ]
   },
   {
     "id": 80,
@@ -3988,7 +5320,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "22N light neutral",
+      "29N light-medium",
+      "35N medium",
+      "42S Tan Sand",
+      "53N Deep"
+    ]
   },
   {
     "id": 81,
@@ -4038,7 +5377,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "4 N Neutral + 11 ml",
+      "tükendi",
+      "DIORSKIN FOREVER SKIN CORRECT 0N",
+      "1,5 N Neutral + 11 ml",
+      "1 N Neutral  + 11 ml",
+      "1 W Warm + 11 ml",
+      "2,5 N Neutral  + 11 ml",
+      "2 CR Cool Rosy + 11 ml",
+      "2 N Neutral + 11 ml",
+      "2 W Warm + 11 ml",
+      "2 WO Warm Olive + 11 ml",
+      "3 N Neutral  + 11 ml",
+      "3 W Warm  + 11 ml"
+    ]
   },
   {
     "id": 82,
@@ -4088,7 +5442,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "29N",
+      "22N",
+      "35N",
+      "53N",
+      "42S"
+    ]
   },
   {
     "id": 83,
@@ -4138,7 +5499,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Blue",
+      "Green",
+      "Peach"
+    ]
   },
   {
     "id": 84,
@@ -4188,7 +5554,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Coconut Flakes 2.7N",
+      "tükendi",
+      "Cookie Dough 4.3N",
+      "Crumble 7.1N",
+      "Honey 1.7B",
+      "Praline 6.3N",
+      "Sugar Biscuit 3.5N"
+    ]
   },
   {
     "id": 85,
@@ -4238,7 +5613,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Almond",
+      "Light Beige",
+      "Snow",
+      "Chestnut",
+      "Vanilla"
+    ]
   },
   {
     "id": 86,
@@ -4288,7 +5670,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "05 Red",
+      "01 Green",
+      "03 Peach",
+      "02 Pink",
+      "04 Orange"
+    ]
   },
   {
     "id": 87,
@@ -4338,7 +5727,39 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "NY12",
+      "tükendi",
+      "COLLECTION HY-GLAM CONCEALER RN1",
+      "N0.5",
+      "Y1",
+      "COLLECTION HY-GLAM CONCEALER N1",
+      "P1",
+      "R2",
+      "COLLECTION HY-GLAM CONCEALER Y2",
+      "YP3",
+      "RN2.5",
+      "P2",
+      "COLLECTION HY-GLAM CONCEALER N2",
+      "RN3",
+      "N3",
+      "N4",
+      "Y4",
+      "YP5",
+      "P3",
+      "P4",
+      "N7",
+      "YN6",
+      "Y7",
+      "N8",
+      "N9",
+      "YN9",
+      "NY11",
+      "NR13",
+      "P8",
+      "RN9"
+    ]
   },
   {
     "id": 88,
@@ -4388,7 +5809,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Doré",
+      "Clair",
+      "Nude",
+      "Caramel",
+      "Chocolat",
+      "Altın"
+    ]
   },
   {
     "id": 89,
@@ -4438,7 +5867,59 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "200C",
+      "100C",
+      "110W",
+      "125C",
+      "120N",
+      "140N",
+      "130W",
+      "170C",
+      "160W",
+      "175W",
+      "150N",
+      "185C",
+      "190W",
+      "210W",
+      "225N",
+      "220W",
+      "230W",
+      "235W",
+      "250W",
+      "240N",
+      "260N",
+      "280C",
+      "265W",
+      "290W",
+      "295W",
+      "300N",
+      "315W",
+      "310W",
+      "335W",
+      "330W",
+      "345C",
+      "350C",
+      "360W",
+      "370N",
+      "385W",
+      "390C",
+      "400N",
+      "410W",
+      "420W",
+      "430W",
+      "425W",
+      "440W",
+      "445N",
+      "450N",
+      "470W",
+      "480N",
+      "485C",
+      "490N",
+      "495C",
+      "498N"
+    ]
   },
   {
     "id": 90,
@@ -4488,7 +5969,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "12 (7,2 g)",
+      "tükendi",
+      "5 (7,2 g)",
+      "6.5 (7,2 g)",
+      "7 (7,2 g)",
+      "8 (7,2 g)",
+      "9 (7,2 g)",
+      "9.5 (7,2 g)",
+      "2.5 (7,2 g)",
+      "3 (7,2 g)",
+      "4 (7,2 g)",
+      "4.5 (7,2 g)",
+      "6 (7,2 g)",
+      "3.5 (7,2 g)"
+    ]
   },
   {
     "id": 91,
@@ -4537,7 +6034,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "LIGHT REFLECTING UNDER EYE - SUNFIRE",
+      "Night Swan",
+      "Golden Eye",
+      "Impossible Dream",
+      "Magic Hour"
+    ]
   },
   {
     "id": 92,
@@ -4587,7 +6091,38 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "25S light-medium sand (6,4 g)",
+      "tükendi",
+      "25N light-medium neutral (6,4 g)",
+      "20S light sand (6,4 g)",
+      "33N medium (6,4 g)",
+      "20N light (6,4 g)",
+      "13N fair-light neutral (6,4 g)",
+      "10N fair + net wt 6,4 g / 0,225 Oz.",
+      "57S rich sand + net wt 6,4 g / 0,225 Oz.",
+      "36S medium-tan sand (6,4 g)",
+      "47S tan-deep sand (6,4 g)",
+      "53G deep golden (6,4 g)",
+      "42S tan sand (6,4 g)",
+      "57G rich golden (6,4 g)",
+      "61N espresso neutral (6,4 g)",
+      "63N espresso neutral (6,4 g)",
+      "38N medium-tan neutral (6,4 g)",
+      "48G tan-deep golden (6,4 g)",
+      "44H tan honey (6,4 g)",
+      "53S deep sand (6,4 g)",
+      "51H deep honey (6,4 g)",
+      "53N deep neutral (6,4 g)",
+      "55W rich warm (6,4 g)",
+      "54H deep honey (6,4 g)",
+      "57H rich honey (6,4 g)",
+      "60H mahogany honey (6,4 g)",
+      "60W mahogany warm (6,4 g)",
+      "59H rich honey (6,4 g)",
+      "62W espresso warm (6,4 g)"
+    ]
   },
   {
     "id": 93,
@@ -4637,7 +6172,31 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "320 Medium Peach (5,8 ml)",
+      "340 (5,8 ml)",
+      "380 (5,8 ml)",
+      "420 (5,8 ml)",
+      "460 (5,8 ml)",
+      "540 (5,8 ml)",
+      "560 (5,8 ml)",
+      "620 (5,8 ml)",
+      "640 (5,8 ml)",
+      "120 (5,8 ml)",
+      "140 (5,8 ml)",
+      "160 (5,8 ml)",
+      "180 (5,8 ml)",
+      "200 (5,8 ml)",
+      "220 (5,8 ml)",
+      "240 (5,8 ml)",
+      "260 (5,8 ml)",
+      "280 (5,8 ml)",
+      "360 (5,8 ml)",
+      "440 (5,8 ml)",
+      "520 (5,8 ml)",
+      "660 (5,8 ml)"
+    ]
   },
   {
     "id": 94,
@@ -4686,7 +6245,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "CN 18 Cream Whip - 30ml",
+      "CN 10 Alabaster - 30ml",
+      "CN 40 Cream Chamois - 30ml",
+      "CN 52 Neutral - 30ml",
+      "CN 20 Fair - 30ml"
+    ]
   },
   {
     "id": 95,
@@ -4736,7 +6302,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "EVERLAST CONCEALER 06 - LIGHT",
+      "tükendi",
+      "EVERLAST CONCEALER 01 - LIGHT",
+      "EVERLAST CONCEALER 03 - LIGHT",
+      "EVERLAST CONCEALER 04 - LIGHT",
+      "EVERLAST CONCEALER 07 - LIGHT",
+      "EVERLAST CONCEALER 08 - LIGHT",
+      "EVERLAST CONCEALER 09 - LIGHT MEDIUM",
+      "EVERLAST CONCEALER 10 - LIGHT MEDIUM",
+      "EVERLAST CONCEALER 11 LIGHT MEDIUM",
+      "EVERLAST CONCEALER 13 - LIGHT MEDIUM",
+      "EVERLAST CONCEALER 14 - LIGHT MEDIUM",
+      "15 Light Medium - 11 ml",
+      "17 Medium - 11ml",
+      "EVERLAST CONCEALER 18 - MEDIUM",
+      "EVERLAST CONCEALER 19 - MEDIUM",
+      "EVERLAST CONCEALER 21 - MEDIUM",
+      "EVERLAST CONCEALER 25 - MEDIUM DEEP",
+      "20 Medium - 11 ml",
+      "23 Medium - 11ML"
+    ]
   },
   {
     "id": 96,
@@ -4786,7 +6374,35 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "8.5",
+      "tükendi",
+      "13",
+      "10",
+      "12",
+      "11.25",
+      "9.5",
+      "11",
+      "12.5",
+      "14",
+      "15",
+      "3",
+      "4",
+      "5.25",
+      "12.75",
+      "0.25",
+      "5",
+      "1",
+      "6",
+      "4.5",
+      "5.5",
+      "9",
+      "0.5",
+      "2 (14,17 g)",
+      "8",
+      "7"
+    ]
   },
   {
     "id": 97,
@@ -4884,7 +6500,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "100 ml",
+      "34 ml"
+    ]
   },
   {
     "id": 99,
@@ -4933,7 +6553,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "200 ml",
+      "34 ml",
+      "100 ml"
+    ]
   },
   {
     "id": 100,
@@ -5031,7 +6656,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "80 ml",
+      "40 ml"
+    ]
   },
   {
     "id": 102,
@@ -5080,7 +6709,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Sun Glow",
+      "Rose Glow",
+      "Sun glow"
+    ]
   },
   {
     "id": 103,
@@ -5129,7 +6763,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "46 ml",
+      "143 ml"
+    ]
   },
   {
     "id": 104,
@@ -5227,7 +6865,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "45ML",
+      "10ml",
+      "30 ml"
+    ]
   },
   {
     "id": 106,
@@ -5276,7 +6919,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "THE POREFESSIONAL FACE PRIMER",
+      "44 ml"
+    ]
   },
   {
     "id": 107,
@@ -5325,7 +6972,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "30 ml",
+      "60 ml"
+    ]
   },
   {
     "id": 108,
@@ -5374,7 +7025,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "30 ml",
+      "10 ml"
+    ]
   },
   {
     "id": 109,
@@ -5423,7 +7078,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Original",
+      "Sunlit"
+    ]
   },
   {
     "id": 110,
@@ -5472,7 +7131,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Universel",
+      "Mini"
+    ]
   },
   {
     "id": 111,
@@ -5570,7 +7233,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "30 ml",
+      "10 ml"
+    ]
   },
   {
     "id": 113,
@@ -5619,7 +7286,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "30 ml",
+      "15 ml"
+    ]
   },
   {
     "id": 114,
@@ -5717,7 +7388,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "120 ml",
+      "30 ml"
+    ]
   },
   {
     "id": 116,
@@ -5864,7 +7539,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "15 ml",
+      "Hydra booster"
+    ]
   },
   {
     "id": 119,
@@ -5913,7 +7592,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "85 ml",
+      "35 ml"
+    ]
   },
   {
     "id": 120,
@@ -5962,7 +7645,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "30 ml",
+      "55 ml"
+    ]
   },
   {
     "id": 121,
@@ -6011,7 +7698,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "100 ml",
+      "30 ml"
+    ]
   },
   {
     "id": 122,
@@ -6060,7 +7751,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "20 ml"
+    ]
   },
   {
     "id": 123,
@@ -6109,7 +7804,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Original",
+      "Sunlit"
+    ]
   },
   {
     "id": 124,
@@ -6158,7 +7857,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Shine Control",
+      "Shine controle"
+    ]
   },
   {
     "id": 125,
@@ -6207,7 +7910,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "10 ml",
+      "30 ml",
+      "60 ml"
+    ]
   },
   {
     "id": 126,
@@ -6893,7 +8601,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "30 ml",
+      "15 ml"
+    ]
   },
   {
     "id": 140,
@@ -6991,7 +8703,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "35 ml",
+      "15 ml"
+    ]
   },
   {
     "id": 142,
@@ -7189,7 +8905,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "PALE PETAL (10,5 g)",
+      "tükendi",
+      "DUSTY ROSE (10,5 g)",
+      "EARTHY PINK (10,5 g)",
+      "SOFT CORAL (10,5 g)",
+      "RASPBERRY (10,5 g)",
+      "PLUMBERRY (10,5 g)",
+      "Watermelon (10,5 g)",
+      "Soft Peach (10,5 g)",
+      "Sweet Pink (10,5 g)",
+      "Pomegranate (10,5 g)"
+    ]
   },
   {
     "id": 146,
@@ -7239,7 +8968,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Peachy nude",
+      "tükendi",
+      "Nude Lavallière",
+      "Berry bang",
+      "Coral Clash",
+      "Fuchsia fling",
+      "Lavender lust",
+      "74 Hibiscus Heat",
+      "80 Fig Fantasy",
+      "15 Chili Crush",
+      "03 Mischievous Magenta"
+    ]
   },
   {
     "id": 147,
@@ -7289,7 +9031,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Grateful (7,5 ml)",
+      "Joy (7,5 ml)",
+      "Happy (7,5 ml)",
+      "Grace (7,5 ml)",
+      "Bliss (7,5 ml)",
+      "Love (7,5 ml)",
+      "Encourage (7,5 ml)",
+      "Hope (7,5 ml)",
+      "Believe (7,5 ml)",
+      "Virtue (7,5 ml)",
+      "Worth (7,5 ml)",
+      "Resilience (7,5 ml)",
+      "Adore (7,5 ml)",
+      "Spirited (7,5 ml)"
+    ]
   },
   {
     "id": 148,
@@ -7339,7 +9097,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hope (3.2ml)",
+      "Happy (3.2ml)",
+      "Grateful (3.2ml)",
+      "Charm (3,2 ml)",
+      "Spirited (3.2 ml)",
+      "Wonder (3,2 ml)",
+      "Faith (3.2ml)"
+    ]
   },
   {
     "id": 149,
@@ -7389,7 +9156,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Dark Cherry",
+      "Rose",
+      "Raspberry"
+    ]
   },
   {
     "id": 150,
@@ -7439,7 +9211,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "41 Flamin Red -",
+      "62 Delicate Mauve -",
+      "65 Intense Berry -",
+      "31 Vivid Coral -",
+      "50.5 (12,3 g)",
+      "53 (12,3 g)"
+    ]
   },
   {
     "id": 151,
@@ -7489,7 +9269,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hope (2.8g)",
+      "Happy (2.8 g)",
+      "Joy (2.8 g)",
+      "Love (2.8g)",
+      "Truth (2.8g)",
+      "Cheer (2.8g)"
+    ]
   },
   {
     "id": 152,
@@ -7539,7 +9327,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "001 Pink (4.5 g)",
+      "006 Berry (4.5 g)",
+      "012 Rosewood (4.5 g)",
+      "015 Cherry (4.5 g)",
+      "103 Toffee (4.5 g)",
+      "063 Pink Lilac (4.5 g)",
+      "077 Candy (4.5 g)"
+    ]
   },
   {
     "id": 153,
@@ -7589,7 +9386,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "001 Pink",
+      "006 - Berry",
+      "012 Rosewood",
+      "015 Cherry",
+      "063 - Pink Lilac",
+      "077 - Candy",
+      "103 Toffe"
+    ]
   },
   {
     "id": 154,
@@ -7689,7 +9495,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "53S cosmic pink",
+      "62S magnetic mauve",
+      "42S sunlit sienna",
+      "50S starlit peach"
+    ]
   },
   {
     "id": 156,
@@ -7739,7 +9551,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 On point",
+      "06 On fire",
+      "04 On cloud 9",
+      "03 On the bright side",
+      "05 On the run",
+      "02 On the go"
+    ]
   },
   {
     "id": 157,
@@ -7789,7 +9609,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Light to medium (1 adet)",
+      "02 Medium to tan  (1pc)",
+      "03 Tan to deep  (1pc)"
+    ]
   },
   {
     "id": 158,
@@ -7839,7 +9664,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Behave",
+      "Brazen",
+      "Orgasm",
+      "Dolce Vita",
+      "Aragon",
+      "Secret Lover"
+    ]
   },
   {
     "id": 159,
@@ -7889,7 +9722,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Golden Hour (4.8g)",
+      "Candy Clouds (4.8g)",
+      "Head In The Clouds (4.8g)",
+      "Tequila Sunset (4.8g)",
+      "Velvet Crush (4.8g)",
+      "Watermelon Rain (4.8g)",
+      "Berry Dreamy",
+      "Super Candy Clouds"
+    ]
   },
   {
     "id": 160,
@@ -7939,7 +9782,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Diffused Heat (4,2 g)",
+      "Dim Infusion (4,2 g)",
+      "Ethereal Glow (4,2 g)",
+      "Luminous Flush (4,2 g)",
+      "Mood Exposure (4,2 g)",
+      "Sublime Flush (4,2 g)"
+    ]
   },
   {
     "id": 161,
@@ -7989,7 +9840,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Light Medium & Sweet Pink (2 x 4 g)",
+      "Medium & Pale Petal (2 x 4 g)",
+      "Dark & Raspberry (2 x 4 g)",
+      "SET SCULPT POP LIGHT MEDIUM & DUSTY ROSE"
+    ]
   },
   {
     "id": 162,
@@ -8039,7 +9896,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Orgasm Matte (4,8 g)",
+      "Orgasm (4,8 g)",
+      "Orgasm X (4,8 g)",
+      "Orgasm Rush (4,8 g)",
+      "Dominant (4,8 g)",
+      "Amour (4,8 g)",
+      "Torrid (4,8 g)",
+      "Deep Throat (4,8 g)",
+      "Behave (4,8 g)",
+      "Obsession (4,8 g)"
+    ]
   },
   {
     "id": 163,
@@ -8089,7 +9958,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Shame on you (3,50 g)",
+      "tükendi",
+      "05 Sweet on you (3,50 g)",
+      "06 Flirt it up (3,50 g)",
+      "16 Heated (3,50) g",
+      "17 Hey jalousy (3,50 g)",
+      "27 Charmed (3,50 g)",
+      "29 Fascinated (3,50 g)",
+      "48 Free spirit (3,50 g)",
+      "49 Shine bright (3,50 g)",
+      "50 Over the top (3,50 g)",
+      "Trust Yourself"
+    ]
   },
   {
     "id": 164,
@@ -8139,7 +10022,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Moon o'clock (3,50 g)",
+      "05 Golden hour (3,50 g)",
+      "01 Pink sunset (3,50 g)",
+      "02 Morning blaze (3,50 g)",
+      "03 Sunrise (3,50 g)"
+    ]
   },
   {
     "id": 165,
@@ -8189,7 +10079,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pink Champagne (7,8 g)",
+      "tükendi",
+      "Honey Blossom (7,8 g)",
+      "Strawberry Bliss (7,8 g)",
+      "Toasted Coconut (7,8 g)"
+    ]
   },
   {
     "id": 166,
@@ -8239,7 +10136,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Ube Cream (4,5 ml)",
+      "Peach Sorbet (4.5 ml)",
+      "Cotton Candy (4.5 ml)",
+      "Watermelon Pop (4.5 ml)",
+      "Strawberry Cream (4.5 ml)",
+      "Black Cherry (4.5 ml)",
+      "Bubblegum (4,5 ml)",
+      "Intense Guava (4,5 ml)",
+      "Sunset Lychee (4,5 ml)",
+      "Coco Loco (4,5 ml)",
+      "Latte (4,5 ml)"
+    ]
   },
   {
     "id": 167,
@@ -8289,7 +10199,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pillow Talk",
+      "tükendi",
+      "Sex on fire",
+      "The Climax",
+      "Love is the Drug",
+      "First Love",
+      "Love Glow"
+    ]
   },
   {
     "id": 168,
@@ -8339,7 +10258,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Orman Meyveleri Kırmızısı",
+      "Karpuz Kırmızısı",
+      "Dragonfruit",
+      "Cherry Berry"
+    ]
   },
   {
     "id": 169,
@@ -8389,7 +10314,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Paradise Pink",
+      "tükendi",
+      "Perfect Pink",
+      "SOFT POP PLUMP BLUSH VEIL-BARE BLUSHING",
+      "SOFT POP PLUMP BLUSH VEIL-PINCH ME PINK",
+      "SOFT POP PLUMP BLUSH VEIL-JUST PEACHY",
+      "SOFT POP PLUMP BLUSH VEIL-ROSE CRUSH",
+      "SOFT POP PLUMP BLUSH VEIL-BERRY PUNCH",
+      "Pink Peony",
+      "Strawberry Sunset",
+      "Papaya Pop"
+    ]
   },
   {
     "id": 170,
@@ -8439,7 +10377,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pink Pop",
+      "tükendi",
+      "Peach Pop",
+      "Dream Pop",
+      "Pillow Talk"
+    ]
   },
   {
     "id": 171,
@@ -8639,7 +10584,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rose Berry (7,5 g)",
+      "Toasty Peach (7,5 g)",
+      "Baby Pink (7,5 g)"
+    ]
   },
   {
     "id": 175,
@@ -8689,7 +10639,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Butterflies (4,5 g)",
+      "tükendi",
+      "Blissed (4,5 g)",
+      "Euphoria (4,5 g)",
+      "Dreamland (4,5 g)",
+      "Hype (4,5 g)",
+      "Swoon (4,5 g)",
+      "Thrill (4,5 g)",
+      "Adrenaline (4,5 g)"
+    ]
   },
   {
     "id": 176,
@@ -8739,7 +10700,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cherry Glow",
+      "Pinky Glow",
+      "Berry Glow",
+      "Rosy Glow",
+      "Peachy Glow",
+      "Pretty Glow"
+    ]
   },
   {
     "id": 177,
@@ -8789,7 +10758,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Heart breaker",
+      "01 Candy lover",
+      "02 Sunset chaser",
+      "03 Deal closer"
+    ]
   },
   {
     "id": 178,
@@ -8839,7 +10814,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Crazy coral (8,50 g)",
+      "01 Freaky fuschia (8,50 g)",
+      "03 Bizarre berry (8,50 g)"
+    ]
   },
   {
     "id": 179,
@@ -8889,7 +10869,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Peony",
+      "01 Petal",
+      "03 Bloom",
+      "05 Lily",
+      "04 Daisy",
+      "10 Fuschia"
+    ]
   },
   {
     "id": 180,
@@ -8989,7 +10977,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Dazed",
+      "Behave",
+      "Orgasm Crave",
+      "Dolce Vita",
+      "Swing",
+      "Trance",
+      "Fierce",
+      "Fling"
+    ]
   },
   {
     "id": 182,
@@ -9039,7 +11037,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "Pink Champagne (7,8 g)",
+      "Honey Blossom (7,8 g)",
+      "Strawberry Bliss (7,8 g)",
+      "Toasted Coconut (7,8 g)"
+    ]
   },
   {
     "id": 183,
@@ -9089,7 +11094,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Grateful (6,4 g)",
+      "Alive (6,4 g)",
+      "Hope (6,4 g)",
+      "Thriving (6,4 g)",
+      "Truth (6,4 g)",
+      "Worth (6,4 g)",
+      "Happy (6,4 g)"
+    ]
   },
   {
     "id": 184,
@@ -9139,7 +11153,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Daring Tangerine (3,50 g)",
+      "01 Crunchy Almond (3,50 g)",
+      "02 Tangy Grapefruit (3,50 g)",
+      "03 Pop Strawberry (3,50 g)",
+      "05 Crazy Cherry (3,50 g)",
+      "06 Dramatic Plum (3,50 g)"
+    ]
   },
   {
     "id": 185,
@@ -9189,7 +11211,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Orgasm Edge (2,5 g)",
+      "tükendi",
+      "Orgasm (2,5 g)",
+      "Orgasm X (2,5 g)"
+    ]
   },
   {
     "id": 186,
@@ -9239,7 +11267,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Warm-seashell pink / 6g",
+      "Warm-seashell pink / 2,5g"
+    ]
   },
   {
     "id": 187,
@@ -9339,7 +11371,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rally",
+      "Werk",
+      "Quirk",
+      "Flip",
+      "Perk",
+      "Quickie",
+      "Dash - rose clair",
+      "Enigma",
+      "Smirk",
+      "Muse"
+    ]
   },
   {
     "id": 189,
@@ -9439,7 +11483,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "summertime wine",
+      "tükendi",
+      "daiquiri dip",
+      "sundress szn",
+      "bakin' cakez",
+      "petal poppin",
+      "lolly poppy",
+      "riri",
+      "wattabratt",
+      "tutu turnt",
+      "bubbleband$",
+      "tahiti teaze",
+      "just a crush",
+      "brickkkk"
+    ]
   },
   {
     "id": 191,
@@ -9537,7 +11597,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Enlighten (2,8 g)",
+      "Exhilerate (2,8 g)",
+      "Mesmerize (2,8 g)",
+      "Flaunt (2,8 g)",
+      "Reflect",
+      "Reveal (2.8g)"
+    ]
   },
   {
     "id": 193,
@@ -9586,7 +11654,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 On ice",
+      "02 On the clock",
+      "03 On set",
+      "04 On top"
+    ]
   },
   {
     "id": 194,
@@ -9635,7 +11709,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "How Many Carats?!",
+      "tükendi",
+      "Rose Rave",
+      "Lavender Luv'r",
+      "Trophy Wife",
+      "Pink Ice",
+      "Rosé Rave"
+    ]
   },
   {
     "id": 195,
@@ -9684,7 +11767,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Enlighten",
+      "Enchant",
+      "Mesmerize",
+      "Outshine",
+      "Transcend",
+      "Flaunt",
+      "Reflect",
+      "Reveal",
+      "Exhilarate"
+    ]
   },
   {
     "id": 196,
@@ -9733,7 +11827,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "011 pink",
+      "tükendi",
+      "012 pearly",
+      "016 bronze",
+      "014 rosy",
+      "015 peachy",
+      "013 gold",
+      "DIORSKIN FOREVER GLOW MAX 018",
+      "DIORSKIN FOREVER GLOW MAX 019"
+    ]
   },
   {
     "id": 197,
@@ -9782,7 +11887,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Sparkling honey (3,50 g)",
+      "01 Glitzy gold (3,50 g)",
+      "03 Flash pink (3,50 g)",
+      "04 Blinding bronze (3,50 g)"
+    ]
   },
   {
     "id": 198,
@@ -9831,7 +11942,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Spotlight",
+      "tükendi",
+      "Goldgasm",
+      "Pinkgasm",
+      "Peachgasm",
+      "Pillowtalk Light-Medium",
+      "Pillowtalk Medium-Deep",
+      "Pinkgasm Sunset",
+      "Pillow Talk Medium"
+    ]
   },
   {
     "id": 199,
@@ -9880,7 +12002,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Pink Strobe",
+      "01 Nude Halo",
+      "02 Gold Halo",
+      "06 Opal Sequin",
+      "03 Pink Halo"
+    ]
   },
   {
     "id": 200,
@@ -10027,7 +12156,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2N",
+      "1N",
+      "3N",
+      "4N",
+      "5N",
+      "6N",
+      "7N",
+      "8N",
+      "0N",
+      "9N"
+    ]
   },
   {
     "id": 203,
@@ -10076,7 +12217,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Diffused Light",
+      "Dim Light",
+      "Ethereal Light",
+      "Luminous Light",
+      "Eternal Light",
+      "Transcendent Light"
+    ]
   },
   {
     "id": 204,
@@ -10174,7 +12323,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "GLIMMEROSE (4,5 g)",
+      "HALOED (4,5 g)",
+      "OPALINE (4,5 g)",
+      "GILDED (4,5 g)",
+      "EMBERED (4,5 g)"
+    ]
   },
   {
     "id": 206,
@@ -10223,7 +12379,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Libertine Light (8.5 g)",
+      "02 Hypnotic Honey (8.5 g)",
+      "03 Rose Sandy (8.5 g)"
+    ]
   },
   {
     "id": 207,
@@ -10272,7 +12433,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Eros",
+      "Heavenly",
+      "Electra"
+    ]
   },
   {
     "id": 208,
@@ -10371,7 +12537,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "honeypot (30,7 ml)",
+      "tükendi",
+      "goddess (30,7 ml)",
+      "aura (30,7 ml)",
+      "quartz (30,7 ml)"
+    ]
   },
   {
     "id": 210,
@@ -10420,7 +12593,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "AfternoonSnack / MoHunny (2 x 3,5 g)",
+      "tükendi",
+      "Trophy Wife",
+      "Lightning Dust / Fire Crystal (2 x 3,5 g)",
+      "Girl Next Door / Chic Phreak (2 x 3,5 g)",
+      "Ginger Binge / Moscow Mule (2 x 3,5 g)",
+      "Mean Money / Hu$tla Baby (2 x 3,5 g)",
+      "Wattabrat",
+      "Ruby Richez (7,5 g)",
+      "Penny4UThots (7,5g)"
+    ]
   },
   {
     "id": 211,
@@ -10518,7 +12703,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1",
+      "3",
+      "5",
+      "4",
+      "2"
+    ]
   },
   {
     "id": 213,
@@ -10567,7 +12759,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "7",
+      "tükendi",
+      "2",
+      "5",
+      "10",
+      "8"
+    ]
   },
   {
     "id": 214,
@@ -10617,7 +12817,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "Mini Bronze & Glow - 4g"
+    ]
   },
   {
     "id": 215,
@@ -10666,7 +12870,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Raya",
+      "Luna",
+      "Nova",
+      "Lumi",
+      "Comet",
+      "Aurora"
+    ]
   },
   {
     "id": 216,
@@ -10715,7 +12927,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "How Many Carats?!",
+      "Who Needs Clothes?!",
+      "Penny Drop",
+      "Hold My Trophy",
+      "Oyster Pearlz"
+    ]
   },
   {
     "id": 217,
@@ -10764,7 +12983,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Heat Wave",
+      "Solar Crush",
+      "Modern Mercury"
+    ]
   },
   {
     "id": 218,
@@ -10813,7 +13037,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Bronzed Peach",
+      "Polished Petal",
+      "Opalescent",
+      "Vanilla Beam",
+      "Honey Glow",
+      "Golden Mocha"
+    ]
   },
   {
     "id": 219,
@@ -10912,7 +13144,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Ivory",
+      "02 Gold"
+    ]
   },
   {
     "id": 221,
@@ -10961,7 +13197,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Enchanted",
+      "11 g",
+      "Ethereal"
+    ]
   },
   {
     "id": 222,
@@ -11010,7 +13251,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 Sunset Shine",
+      "tükendi",
+      "01 Full moon",
+      "02 Dawn Light"
+    ]
   },
   {
     "id": 223,
@@ -11059,7 +13306,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Light Glow",
+      "02",
+      "03"
+    ]
   },
   {
     "id": 224,
@@ -11108,7 +13360,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Dark",
+      "tükendi",
+      "Light",
+      "Medium",
+      "Deep"
+    ]
   },
   {
     "id": 225,
@@ -11206,7 +13465,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Galactic Glimmer - 0.35 GR",
+      "03 Golden Hour - 0.35 gr",
+      "01 North Star - 0.35 GR"
+    ]
   },
   {
     "id": 227,
@@ -11255,7 +13519,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "H110 Anywhere Glimmer",
+      "H100 - cheerful beige",
+      "H130 Wherever Pearl"
+    ]
   },
   {
     "id": 228,
@@ -11451,7 +13720,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pillow Talk Glow",
+      "tükendi",
+      "Champagne Glow",
+      "Gilded Glow",
+      "Rose Gold Glow",
+      "Bronze Glow"
+    ]
   },
   {
     "id": 232,
@@ -11500,7 +13777,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "TERRACOTTA NATURAL BRONZ. POWD. 02",
+      "TERRACOTTA NATURAL BRONZ. POWD. 03",
+      "TERRACOTTA NATURAL BRONZ. POWD. 04"
+    ]
   },
   {
     "id": 233,
@@ -11598,7 +13880,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Medium",
+      "Fair",
+      "Tan",
+      "Deep"
+    ]
   },
   {
     "id": 235,
@@ -11647,7 +13935,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "05",
+      "03",
+      "02",
+      "04"
+    ]
   },
   {
     "id": 236,
@@ -11696,7 +13990,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Light Medium",
+      "Light",
+      "Medium",
+      "Medium Dark",
+      "Dark",
+      "Dark Deep (5 g"
+    ]
   },
   {
     "id": 237,
@@ -11745,7 +14047,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 Moyen Doré",
+      "02 Moyen Rosé",
+      "05 Foncé Doré"
+    ]
   },
   {
     "id": 238,
@@ -11794,7 +14101,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "3 Tan",
+      "tükendi",
+      "1 Fair",
+      "2 Medium",
+      "Medium",
+      "Deep",
+      "Fair"
+    ]
   },
   {
     "id": 239,
@@ -11843,7 +14159,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Radiant Bronze Light",
+      "Luminous Bronze Light",
+      "Diffused Bronze Light",
+      "Nude Bronze Light"
+    ]
   },
   {
     "id": 240,
@@ -11892,7 +14214,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hoola / 8g",
+      "Lite / 8g",
+      "Deep",
+      "Medium Deep",
+      "Medium"
+    ]
   },
   {
     "id": 241,
@@ -11941,7 +14270,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Warm Sand Vibes",
+      "Golden Beach Glow",
+      "Beach Bum Bronze",
+      "Sunset Sizzle",
+      "Bronze Bay",
+      "Tropical Tan",
+      "Sun-Kissed Dreams"
+    ]
   },
   {
     "id": 242,
@@ -11990,7 +14328,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Laguna 02",
+      "Laguna 03",
+      "Laguna 04",
+      "Laguna 05"
+    ]
   },
   {
     "id": 243,
@@ -12039,7 +14383,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Summer Feels (9,0 g)",
+      "Sun Blaze (9,0 g)",
+      "Warmed Up (9,0 g)",
+      "Sunny Spirits (9,0 g)",
+      "Radiate Warmth (9,0 g)",
+      "Bronze Bliss (9,0 g)",
+      "New Dawn (9,0 g)"
+    ]
   },
   {
     "id": 244,
@@ -12088,7 +14441,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 (3.5 g)",
+      "02 (3.5 g)",
+      "04 (3.5 g)"
+    ]
   },
   {
     "id": 245,
@@ -12137,7 +14495,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "MEDIUM",
+      "LIGHT",
+      "LIGHT MEDIUM",
+      "Medium Dark",
+      "DARK",
+      "DEEP"
+    ]
   },
   {
     "id": 246,
@@ -12186,7 +14552,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Original",
+      "Deep",
+      "Light",
+      "Medium",
+      "Medium Deep"
+    ]
   },
   {
     "id": 247,
@@ -12236,7 +14609,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Fair- Medium",
+      "Medium - Dark"
+    ]
   },
   {
     "id": 248,
@@ -12285,7 +14662,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N001 - Mousseline Bronzée",
+      "N002 - Popeline Bronzée",
+      "N3 ORGANZA BRONZÉE",
+      "N004 - Velours Bronzé"
+    ]
   },
   {
     "id": 249,
@@ -12334,7 +14717,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "100 Sunkissed Sand",
+      "90 Golden Sunrays",
+      "120 Sunbsathed Dune",
+      "110 Sun Embrace"
+    ]
   },
   {
     "id": 250,
@@ -12383,7 +14772,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Spicy sunset",
+      "01 Amber glow",
+      "03 Cocoa gleam"
+    ]
   },
   {
     "id": 251,
@@ -12432,7 +14826,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Chocolate Lava",
+      "tükendi",
+      "Chocolate Mousse",
+      "Chocolate Souffle",
+      "Chocolate Caramel",
+      "Chocolate Mocha",
+      "Chocolate Espresso",
+      "CHOCOLATE SOLEIL BRONZER-CREAM"
+    ]
   },
   {
     "id": 252,
@@ -12481,7 +14885,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Beach bum tan",
+      "01 Golden gateway",
+      "03 Coconut retreat"
+    ]
   },
   {
     "id": 253,
@@ -12530,7 +14939,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Light Medium",
+      "Light",
+      "Medium",
+      "Medium Dark",
+      "Dark"
+    ]
   },
   {
     "id": 254,
@@ -12579,7 +14995,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Light",
+      "03 Light",
+      "04 Medium",
+      "05 Tan",
+      "01 Fair"
+    ]
   },
   {
     "id": 255,
@@ -12628,7 +15051,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Inda Sun (6,23 g)",
+      "Shady Biz (6,23 g)",
+      "Private Island (6,23 g)",
+      "I$land Ting (6,23 g)",
+      "Bajan Gyal (6,23 g)",
+      "Caramel Cutie (6,23 g)",
+      "Coco Naughty (6,23 g)",
+      "Mocha Mami (6,23 g)",
+      "Thick Mint (6,23 g)"
+    ]
   },
   {
     "id": 256,
@@ -12677,7 +15111,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Macchiato (6,23 g)",
+      "tükendi",
+      "Amber (6,23 g)",
+      "Butta Biscuit (6,23 g)",
+      "Hunnie glaze (6,23 g)",
+      "Teddy (6,23 g)",
+      "Chocolate (6,23 g)",
+      "Toffee tease (6,23 g)"
+    ]
   },
   {
     "id": 257,
@@ -12726,7 +15170,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Baked",
+      "Blaze",
+      "Dazed"
+    ]
   },
   {
     "id": 258,
@@ -12775,7 +15224,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Beachy",
+      "Waves",
+      "Escape",
+      "Paradise",
+      "Tropic"
+    ]
   },
   {
     "id": 259,
@@ -12873,7 +15329,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Medium",
+      "01 Light",
+      "03 Medium Deep"
+    ]
   },
   {
     "id": 261,
@@ -12922,7 +15383,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "out of office",
+      "send 2 voicemail",
+      "solar storm",
+      "blazed",
+      "cocoa-nut",
+      "espresso martini"
+    ]
   },
   {
     "id": 262,
@@ -12972,7 +15441,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Light (14 gr)",
+      "02 Light Medium (14gr)",
+      "3 Medium (14gr)",
+      "Medium deep (14 gr)",
+      "Deep ( 14 gr)"
+    ]
   },
   {
     "id": 263,
@@ -13119,7 +15595,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 10gr",
+      "tükendi",
+      "02 10gr",
+      "03 10gr"
+    ]
   },
   {
     "id": 266,
@@ -13168,7 +15650,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "Irisé",
+      "Mat"
+    ]
   },
   {
     "id": 267,
@@ -13217,7 +15704,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "B25 Brave Maple",
+      "B35 Lively Almond",
+      "B15 Wild Sand",
+      "B10 Glowing Chai"
+    ]
   },
   {
     "id": 268,
@@ -13266,7 +15759,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Light to medium (5,50 g)",
+      "tükendi",
+      "01 Fair to light (5,50 g)",
+      "03 Medium to tan (5,50 g)",
+      "04 Tan to deep (5,50 g)",
+      "05 Deep (5,5 g)"
+    ]
   },
   {
     "id": 269,
@@ -13315,7 +15816,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Mocha (7,1 g)",
+      "tükendi",
+      "Amber (7,1 g)",
+      "Truffle (7,1 g)",
+      "Expresso (7,1 g)",
+      "Ebony (7,1 g)",
+      "Soft Amber (7,1 g)",
+      "Amber Suede (7,1 g)",
+      "Suedish 7,1 g"
+    ]
   },
   {
     "id": 270,
@@ -13364,7 +15876,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Gentle (14,88 ml)",
+      "Mellow (14,88 ml)",
+      "Serene (14,88 ml)",
+      "Solace (14,88 ml)",
+      "Peaceful (14.,88 ml)",
+      "Tranquil (14,88 ml)"
+    ]
   },
   {
     "id": 271,
@@ -13413,7 +15933,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Full Of Life",
+      "tükendi",
+      "Power Boost",
+      "Always Sunny",
+      "Happy Sol",
+      "Bright Side",
+      "Good Energy",
+      "On the Horizon"
+    ]
   },
   {
     "id": 272,
@@ -13462,7 +15992,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "004",
+      "tükendi",
+      "001",
+      "002",
+      "003"
+    ]
   },
   {
     "id": 273,
@@ -13511,7 +16048,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Fair (10,5 g)",
+      "Light (10,5 g)",
+      "Light Medium (10,5 g)",
+      "Medium (10,5 g)",
+      "Medium Dark (10,5 g)",
+      "Dark (10,5 g)",
+      "Dark Deep (10,5 g)"
+    ]
   },
   {
     "id": 274,
@@ -13609,7 +16155,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Medium/Deep",
+      "tükendi",
+      "Fair - Medium",
+      "Medium - Dark",
+      "Fair",
+      "Medium",
+      "Tan/Deep",
+      "Tan",
+      "Deep",
+      "Fair/Med"
+    ]
   },
   {
     "id": 276,
@@ -13658,7 +16216,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "01 Vitamin sea (5,50 g)",
+      "02 Just wanna have sun (5,50 g)",
+      "03 Beach, please (5,50 g)",
+      "04 Aboat time (5,50 g)"
+    ]
   },
   {
     "id": 277,
@@ -13707,7 +16272,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "cool bronze",
+      "Warm Bronze",
+      "deep bronze"
+    ]
   },
   {
     "id": 278,
@@ -13805,7 +16375,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "Bamboo",
+      "Foxy",
+      "Bonfire",
+      "Toasty",
+      "Dawn"
+    ]
   },
   {
     "id": 280,
@@ -13854,7 +16432,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Stoked (5,7 g)",
+      "Toasted (5,7 g)",
+      "Simmer (5,7 g)",
+      "Sizzle (5,7 g)",
+      "Flicker",
+      "Smolder"
+    ]
   },
   {
     "id": 281,
@@ -13903,7 +16489,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cast Shadow",
+      "tükendi",
+      "Halftone",
+      "Shadow",
+      "Core Shadow",
+      "Greyscale"
+    ]
   },
   {
     "id": 282,
@@ -13952,7 +16546,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Sundown",
+      "tükendi",
+      "After Dark",
+      "Nightfall"
+    ]
   },
   {
     "id": 283,
@@ -14001,7 +16601,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Light",
+      "Fair",
+      "Light Medium",
+      "Medium",
+      "Medium Dark",
+      "Dark",
+      "Dark Deep"
+    ]
   },
   {
     "id": 284,
@@ -14099,7 +16708,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Invincible",
+      "Shapeshift",
+      "Time Travel"
+    ]
   },
   {
     "id": 286,
@@ -14148,7 +16762,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Curvy Contour",
+      "03 Really Rich"
+    ]
   },
   {
     "id": 287,
@@ -14197,7 +16815,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Ube Birthday Cake",
+      "Cupcake",
+      "Cherry Blossom Cake",
+      "Pound Cake",
+      "Banana Bread",
+      "Blondie",
+      "Kunafa",
+      "Cinnamon Bun",
+      "Peach Pie",
+      "Sugar Cookie"
+    ]
   },
   {
     "id": 288,
@@ -14246,7 +16876,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Brightening peach (7,5 g)",
+      "01 Brightening pink (7,5 g)",
+      "03 Brightening banana (7,5 g)",
+      "04 Brightening lilac (7,5 g)"
+    ]
   },
   {
     "id": 289,
@@ -14295,7 +16931,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Candy (9,5 g)",
+      "Buttery (9,5 g)",
+      "Peachy (9,5 g)"
+    ]
   },
   {
     "id": 290,
@@ -14393,7 +17034,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cashew",
+      "Lavender",
+      "Strawberry Milk",
+      "Butter",
+      "Banana",
+      "Honey",
+      "Cinnamon",
+      "Mocha"
+    ]
   },
   {
     "id": 292,
@@ -14442,7 +17093,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cherry Peach (2 x 6.5 g)",
+      "Pink Pumpkin (2 x 6,5 g)"
+    ]
   },
   {
     "id": 293,
@@ -14540,7 +17195,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Light",
+      "01 Fair",
+      "03 Medium",
+      "035 Medium Tan"
+    ]
   },
   {
     "id": 295,
@@ -14638,7 +17299,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Transparent (10,5 g)",
+      "Translucent Medium 10,5 g",
+      "Translucent Deep 10,5 g"
+    ]
   },
   {
     "id": 297,
@@ -14688,7 +17354,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N°01 Mousseline Lilas",
+      "tükendi",
+      "N°02 Taffetas Rosé",
+      "N°03 Voile Corail",
+      "N°04 Or ganza Sienne",
+      "N°05 Popeline Violine",
+      "N°06 Flanelle Rubis"
+    ]
   },
   {
     "id": 298,
@@ -14737,7 +17412,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 - Voile Rose",
+      "01 Mousseline Pastel",
+      "02 - Satin Blanc",
+      "04 - Mousseline Acidulee",
+      "05 - Popeline Mimosa",
+      "06 - Flanelle Epicee"
+    ]
   },
   {
     "id": 299,
@@ -14786,7 +17469,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Yellow",
+      "01 Translucent",
+      "03 Brown"
+    ]
   },
   {
     "id": 300,
@@ -14835,7 +17523,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2 - Neutral Light",
+      "1 - Fair Pink",
+      "3 - Neutral Peach",
+      "4 - Warm Honey",
+      "4.5 - Medium Dark Honey",
+      "5 - Neutral Medium Dark",
+      "6 - Warm Deep"
+    ]
   },
   {
     "id": 301,
@@ -14884,7 +17581,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Lavender",
+      "Caramel",
+      "Honey",
+      "Pink",
+      "Translucent",
+      "Yellow"
+    ]
   },
   {
     "id": 302,
@@ -14933,7 +17638,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Translucent",
+      "Banana",
+      "Vanilla",
+      "Deep Peach"
+    ]
   },
   {
     "id": 303,
@@ -14982,7 +17693,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 - Volie Rose",
+      "01 - Mousseline Pastel",
+      "02 - Satin Blanc",
+      "04 - Mousseline Acidulee",
+      "05 - Popeline Mimosa",
+      "06 - Flanelle Epicee"
+    ]
   },
   {
     "id": 304,
@@ -15129,7 +17848,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Ultra Peach (6.5 g)",
+      "Sweet Honey (6.5 g)",
+      "Rich Peach (6.5 g)",
+      "Marigold (6.5 g)",
+      "Dark Deep (6.5 g)",
+      "Universal Translucent (6.5 g)",
+      "Ultra Pink (6.5 g)"
+    ]
   },
   {
     "id": 307,
@@ -15178,7 +17906,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "FOREVER CUSHION POWDER 010",
+      "FOREVER CUSHION POWDER 020",
+      "FOREVER CUSHION POWDER 030",
+      "FOREVER CUSHION POWDER 040",
+      "FOREVER CUSHION POWDER 050"
+    ]
   },
   {
     "id": 308,
@@ -15227,7 +17962,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Light Beige",
+      "Chestnut",
+      "Espresso",
+      "Buff",
+      "Porcelain",
+      "Ivory",
+      "Natural",
+      "Sand",
+      "Almond",
+      "Golden Tan",
+      "Honey",
+      "Amber",
+      "True Caramel",
+      "Sepia",
+      "Opal",
+      "Linen"
+    ]
   },
   {
     "id": 309,
@@ -15276,7 +18029,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Candy",
+      "Buttery",
+      "Peachy"
+    ]
   },
   {
     "id": 310,
@@ -15472,7 +18230,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "8 g",
+      "4 g"
+    ]
   },
   {
     "id": 314,
@@ -15570,7 +18332,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 - Lavender (8,5 g)",
+      "02 - Rose Quartz (8,5 g)",
+      "03 - Banana (8,5 g)",
+      "04 - Peach (8,5 g)",
+      "05 - Cinnamon (8,5 g)",
+      "06 - Pumpkin (8,5 g)"
+    ]
   },
   {
     "id": 316,
@@ -15619,7 +18389,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 Moyen",
+      "02 Clair",
+      "01 Transparent",
+      "04 Foncé"
+    ]
   },
   {
     "id": 317,
@@ -15668,7 +18444,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rosy 12gr",
+      "02 Translucent",
+      "Deep 12gr",
+      "Shimmer 12gr"
+    ]
   },
   {
     "id": 318,
@@ -15766,7 +18548,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Refill - TF13 (11gr)",
+      "tükendi",
+      "Refill - TF12 (11gr)",
+      "Refill - TF22 (11gr)",
+      "Refill - TF23 (11gr)",
+      "Refill - TF24 (11gr)",
+      "Refill - TF25 (11gr)"
+    ]
   },
   {
     "id": 320,
@@ -15815,7 +18606,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "EVER MATTE LOOSE 02",
+      "tükendi",
+      "EVER MATTE LOOSE 01",
+      "EVER MATTE LOOSE POWDER 03"
+    ]
   },
   {
     "id": 321,
@@ -15865,7 +18662,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "8,5 g",
+      "4 g"
+    ]
   },
   {
     "id": 322,
@@ -15915,7 +18716,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Noir",
+      "tükendi",
+      "02 Brun",
+      "04 Blue",
+      "Scandalous Green",
+      "Sassy Burgundy",
+      "17 Magnetic Purple"
+    ]
   },
   {
     "id": 323,
@@ -15965,7 +18775,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hyper Black (8,5 g)",
+      "Hyper Black"
+    ]
   },
   {
     "id": 324,
@@ -16015,7 +18829,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "01 Noir Sculptural"
+    ]
   },
   {
     "id": 325,
@@ -16165,7 +18983,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Blue (12,5 ml)",
+      "tükendi",
+      "Ultra black",
+      "Brown (12,5 ml)",
+      "Burgundy (12,5 ml)",
+      "Pink (12,5 ml)"
+    ]
   },
   {
     "id": 328,
@@ -16215,7 +19041,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Noir 9 ml",
+      "Brown"
+    ]
   },
   {
     "id": 329,
@@ -16465,7 +19295,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cuz I'm Black",
+      "Cuz I'm Black - Mini (6,5 ml)",
+      "Let'z Be Blunt",
+      "Elec’trip Blue"
+    ]
   },
   {
     "id": 334,
@@ -16515,7 +19351,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Power Blue (8,5 g)",
+      "Intense Black (8,5 g)",
+      "Wild Plum (8,5 g)",
+      "Rebel Brown (8,5 g)"
+    ]
   },
   {
     "id": 335,
@@ -16965,7 +19807,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Black",
+      "Black/Brown"
+    ]
   },
   {
     "id": 344,
@@ -17015,7 +19861,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "01 Black",
+      "02 Brown",
+      "03 Blue"
+    ]
   },
   {
     "id": 345,
@@ -17215,7 +20067,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "10 ml",
+      "Dream Pop"
+    ]
   },
   {
     "id": 349,
@@ -17265,7 +20121,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Noir Hypnotic (6,2 ml)",
+      "02 Brun Hypnotic (6,2 ml)"
+    ]
   },
   {
     "id": 350,
@@ -17315,7 +20175,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Black",
+      "8 ml"
+    ]
   },
   {
     "id": 351,
@@ -17415,7 +20279,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hypnotize (10,5 ml)",
+      "Hypnotize (6,5 ml)"
+    ]
   },
   {
     "id": 353,
@@ -17465,7 +20333,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "090 Black",
+      "tükendi",
+      "264 Blue",
+      "694 Brown",
+      "374"
+    ]
   },
   {
     "id": 354,
@@ -17615,7 +20490,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Black",
+      "HIGH IMPACT BLACK HONEY MASCARA"
+    ]
   },
   {
     "id": 357,
@@ -17665,7 +20544,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "090 Black",
+      "288 Blue",
+      "798 Brown"
+    ]
   },
   {
     "id": 358,
@@ -17715,7 +20599,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Black",
+      "Espresso"
+    ]
   },
   {
     "id": 359,
@@ -18165,7 +21053,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Bleu",
+      "black",
+      "Marron"
+    ]
   },
   {
     "id": 368,
@@ -18215,7 +21108,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Noir (8,5 g)",
+      "Noir"
+    ]
   },
   {
     "id": 369,
@@ -18265,7 +21162,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "10 S Chesnut - 3.9 ml",
+      "tükendi",
+      "1 S Silver 3.9 ml",
+      "2 S Gold 3.9 ml",
+      "8 S Rose - 3.9 ml",
+      "11 S Bronze - 3.9 ml",
+      "18 M Beige 3.9 ml",
+      "20 M Camel 3.9 ml",
+      "22 M Cashew 3.9 ml",
+      "26 S Copper 3.9 ml",
+      "36 M Wood 3.9 ml",
+      "44 S Blush - 3.9 ml",
+      "45S Desert (3.9 ml)",
+      "50 S Petrol 3.9 ml",
+      "56 S Mahogany 3.9 ml",
+      "99 M Ebony 3.9 ml",
+      "9S Sand (3.9 ml)",
+      "27 S Pony - 3.9 ml",
+      "67S Sparkle (3.9 ml)",
+      "68S Tobacco (3.9 ml)",
+      "70M Sakura (3.9 ml)",
+      "25M Sandalwood (3.9 ml)",
+      "69S Auburn (3.9 ml)",
+      "90M Olive (3.9 ml)"
+    ]
   },
   {
     "id": 370,
@@ -18315,7 +21238,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Fiery Warm Nude (7,47 g)",
+      "Fearless Cool Nude (7,02 g)",
+      "Rebellious Rosey Nude (7,92 g)",
+      "Wild Khaki Nude (7,92 g)"
+    ]
   },
   {
     "id": 371,
@@ -18415,7 +21344,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "EYESHADOW & LINER STICK-23 Y",
+      "11 Truffle shimmer (1,40 g)",
+      "15 Eggplant matte (1,40 g)",
+      "01 Stone matte (1,40 g)",
+      "09 Espresso matte (1,40 g)",
+      "05 Fawn shimmer (1,40 g)",
+      "04 Sand shimmer (1,40 g)",
+      "24 Black matte (1,40 g)",
+      "16 Army green matte (1,40 g)",
+      "17 Olive shimmer (1,40 g)",
+      "12 Periwinkle matte (1,40 g)",
+      "13 Iris shimmer (1,40 g)",
+      "00 White matte (1,40 g)",
+      "08 Brown shimmer (1,40 g)"
+    ]
   },
   {
     "id": 373,
@@ -18465,7 +21410,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Daring Blue Dusk (2,49 g)",
+      "Beyond Brown (2,70 g)",
+      "Grunge Green (2,49 g)",
+      "Boss Berry (2,82 g)",
+      "Ethereal Liliac (2,01 g)",
+      "Audacious Aqua (3,03 g)"
+    ]
   },
   {
     "id": 374,
@@ -18515,7 +21468,40 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "323 Can't stop",
+      "tükendi",
+      "212 Flame",
+      "316 Pinkalicious",
+      "308 Smell of roses",
+      "500 Celestial",
+      "324 Dreamy",
+      "400 80's vibes",
+      "320 Ultra violet",
+      "319 Pink sand",
+      "305 Touch of silk",
+      "304 Cotton candy",
+      "314 Fantasia",
+      "201 Milky way",
+      "218 Shock choc",
+      "103 First light",
+      "207 Golden",
+      "217 Chocolate chip",
+      "600 To the moon and back",
+      "116 Glitter fever",
+      "223 Caviar",
+      "602 Diamond crush",
+      "216 Big bang",
+      "105 Twinkle twinkle",
+      "102 Fairy aura",
+      "104 Ballet shoes",
+      "205 Fool's gold",
+      "307 Let's party",
+      "403 Lunar eclipse",
+      "401 Moonstone",
+      "606 Night constellation"
+    ]
   },
   {
     "id": 375,
@@ -18565,7 +21551,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "003 Warm Essentials",
+      "tükendi",
+      "001 Warm Neutrals",
+      "002 Smoky Essentials",
+      "004 Celestial Purple"
+    ]
   },
   {
     "id": 376,
@@ -18665,7 +21658,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "OBSESSIONS E/S PAL - NUDE LIGHT",
+      "OBSESSIONS E/S PAL - NUDE MEDIUM"
+    ]
   },
   {
     "id": 378,
@@ -18815,7 +21812,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N°600 - Spontini Lilies (3,2 g)",
+      "tükendi",
+      "N°200 - Gueliz Dream (3,2 g)",
+      "N°400 - Babylone Roses (3,2 g)",
+      "N°500 - Meedina Glow (3,2 g)",
+      "N°700 - Over Noir (3,2 g)",
+      "N°800 - Over Doré (3,2 g)",
+      "N°710 - Over Brun (3,2 g)",
+      "N°810 - Over Orange (3,2 g)",
+      "N°730 - Sunrise Safari (3,2 g)",
+      "N°820 - Majestic Riad (3,2 g)",
+      "N°830 - Unexplored Garden (3,2 g)",
+      "N°720 - Captivating Dunes (3,2 g)"
+    ]
   },
   {
     "id": 381,
@@ -18915,7 +21927,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "siren - rose fuchsia duochrome brillant",
+      "tükendi",
+      "brb - mauve rose mat",
+      "nvm - marron taupe mat",
+      "comet - or doré brillant",
+      "ty - marron foncé mat",
+      "lab coat - rose brillant",
+      "muse - bronze brilliant",
+      "glitch - or rose brillant",
+      "ily - marron chocolat mat",
+      "fembot - bleu brillant",
+      "nebulous - argenté brillant",
+      "horoscope - taupe brillant"
+    ]
   },
   {
     "id": 383,
@@ -19015,7 +22042,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "404 Fresh wave",
+      "309 Scented candle",
+      "301 Strawberry macaroon",
+      "603 Hurricane wave",
+      "209 Mocha latte",
+      "220 Roasted chestnut",
+      "106 Lazy afternoon",
+      "109 Secret boudoir",
+      "607 Black lace"
+    ]
   },
   {
     "id": 385,
@@ -19165,7 +22203,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 (1.2 ml)",
+      "tükendi",
+      "03 (1.2 ml)",
+      "05 (1.2 ml)",
+      "09 (1.2 ml)",
+      "10 (1.2 ml)",
+      "12 (1.2 ml)"
+    ]
   },
   {
     "id": 388,
@@ -19215,7 +22262,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Gaze (1,6 g)",
+      "Smoke Show (1,6 g)",
+      "Smolder (1,6 g)",
+      "Envy (1,6 g)"
+    ]
   },
   {
     "id": 389,
@@ -19265,7 +22318,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 Cosmic blue",
+      "02 Supernova illusion",
+      "04 Galactic red"
+    ]
   },
   {
     "id": 390,
@@ -19365,7 +22423,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rose gold",
+      "Pillowtalk",
+      "Walk of No Shame",
+      "Champagne",
+      "Oyster Pearl",
+      "Amber Gold"
+    ]
   },
   {
     "id": 392,
@@ -19665,7 +22731,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Champagne + Caviar (1.90g)",
+      "Café Au Lait (1.90g)",
+      "Mixed Greens (1.90g)",
+      "Double Latte",
+      "Flame + Ember",
+      "Strawberries + Chocolate ( 4 ml)",
+      "Rosé + Truffles",
+      "Day + Night (1,9g)",
+      "Definer + Royal couple (1,9 g)",
+      "Mixed Greens (4 ml )",
+      "HIGH IMPACT EYESHADOW PLAY"
+    ]
   },
   {
     "id": 398,
@@ -19715,7 +22794,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "073 Pied-de-poule",
+      "tükendi",
+      "279",
+      "343",
+      "649",
+      "673",
+      "689",
+      "439",
+      "879"
+    ]
   },
   {
     "id": 399,
@@ -19815,7 +22905,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "101 - Blushing Pink",
+      "tükendi",
+      "808 - Boundless Berry",
+      "102 – Starfire Gold",
+      "106 - Dazzling Peach",
+      "126 - Peach Coral",
+      "228 - Cheeky Fushia",
+      "414 - Sunny Tawny",
+      "436 - Spicy Caramel",
+      "600 - Anywhere Caffeine",
+      "606 - Wherever Walnut",
+      "506 - Endless Cacao",
+      "608 - Limitless Brown"
+    ]
   },
   {
     "id": 401,
@@ -19865,7 +22970,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Lumières Dorées (1 adet)",
+      "03 Eclat Orangé (1 adet)",
+      "02 Crépuscule violet (1 adet)"
+    ]
   },
   {
     "id": 402,
@@ -19915,7 +23025,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2 Joyful peach (8 gr)",
+      "tükendi",
+      "1 Blissful mauve pink (8 gr)",
+      "3 Hopeful rose pink (8 gr)",
+      "4 Cheerful pink (8 gr)",
+      "5 Wonderful strawberry red (8 gr)",
+      "6  Playful rosewood (8gr)"
+    ]
   },
   {
     "id": 403,
@@ -19965,7 +23084,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "9.1",
+      "tükendi",
+      "9.05",
+      "9.08",
+      "9.09",
+      "9.12",
+      "N15"
+    ]
   },
   {
     "id": 404,
@@ -20015,7 +23143,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Medium (4,5 g)",
+      "Light (4,5 g)\n\n\n\n\n\n\n\n\n\ntükendi",
+      "Deep (4,5 g)",
+      "Warm (4,5 g)",
+      "Cool (4.5g)",
+      "Light (4,5 g)"
+    ]
   },
   {
     "id": 405,
@@ -20065,7 +23201,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Or Inoubliable (1,4 g)",
+      "03 Taupe Quartz (1,4 g)",
+      "04 Brun Captivant (1,4 g)",
+      "05 Erika F (1,4 g)",
+      "07 Bleu Nuit (1,4 g)"
+    ]
   },
   {
     "id": 406,
@@ -20115,7 +23258,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "310 Soulmate",
+      "tükendi",
+      "322 Sweet berry",
+      "302 Prom date",
+      "503 Python",
+      "108 No place like home",
+      "221 Tiramisu",
+      "300 Glazed donut",
+      "501 Go green",
+      "601 Silverstorm"
+    ]
   },
   {
     "id": 407,
@@ -20164,7 +23319,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Whatever Black",
+      "03 Limitless Brown",
+      "05 Sunrise Shimmer",
+      "07 Beetle Chrome"
+    ]
   },
   {
     "id": 408,
@@ -20264,7 +23425,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Magical blue",
+      "tükendi",
+      "01 Glitzy gold",
+      "03 Dazzling pink",
+      "04 Gleaming grey"
+    ]
   },
   {
     "id": 410,
@@ -20364,7 +23532,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Charmed (1.5 g)",
+      "Chocolate Sprinkles (1.5 g)",
+      "Fairy Dust (1.5 g)",
+      "Lilac Lust (1.5 g)",
+      "Love Stone (1.5 g)",
+      "Pure Magic (1.5 g)",
+      "Sunset Sizzle (1.5 g)",
+      "Twinkle (1.5 g)"
+    ]
   },
   {
     "id": 412,
@@ -20464,7 +23642,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Taupe Craze",
+      "09 Fraîcheur Rosée",
+      "14 Smokey Chic",
+      "19 Drama"
+    ]
   },
   {
     "id": 414,
@@ -20514,7 +23698,27 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "223 Caviar",
+      "tükendi",
+      "102 Fairy aura",
+      "103 First light",
+      "104 Ballet shoes",
+      "116 Glitter fever",
+      "205 Fool's gold",
+      "216 Big bang",
+      "217 Chocolate chip",
+      "304 Cotton candy",
+      "305 Touch of silk",
+      "314 Fantasia",
+      "319 Pink sand",
+      "320 Ultra violet",
+      "323 Can't stop",
+      "324 Dreamy",
+      "500 Celestial",
+      "602 Diamond crush"
+    ]
   },
   {
     "id": 415,
@@ -20564,7 +23768,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 HOT LAVA",
+      "01 SUNBURST",
+      "02 DESERT SAND",
+      "04 SIENNA",
+      "05 SAND STORM 9 ml",
+      "06 CANYON CLAY",
+      "07 EARTH RED",
+      "08 - Cocoa Macchiato",
+      "10 - Lavander Latte",
+      "11 Rich Espresso",
+      "09 Strawberry Latte"
+    ]
   },
   {
     "id": 416,
@@ -20664,7 +23881,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "4 g",
+      "Cool"
+    ]
   },
   {
     "id": 418,
@@ -20764,7 +23985,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Soft (21,4 g)",
+      "Dramatic (21.4 g)"
+    ]
   },
   {
     "id": 420,
@@ -20914,7 +24139,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "EVER ICONEYE PALETTE AMBER VENUS",
+      "02 Rose Goddess - 6.5 gr",
+      "03 Chrome Star - 6.5 gr"
+    ]
   },
   {
     "id": 423,
@@ -21264,7 +24495,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Far Paleti -1 Tender Tofee 7,2 gr",
+      "Far Paleti 2- BOIS DE Rose 7,2 gr"
+    ]
   },
   {
     "id": 430,
@@ -21514,7 +24749,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Frosty Twilight (3.7gr)",
+      "Shiny Foliage - 3,7 g",
+      "Night Sparkle - 3,7 g",
+      "Petal Dance - 3,7 g"
+    ]
   },
   {
     "id": 435,
@@ -21662,7 +24903,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Chocolate (0,6 ml)",
+      "Noir (0,6 ml)"
+    ]
   },
   {
     "id": 438,
@@ -21711,7 +24956,28 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Matte snow (0,3 g)",
+      "tükendi",
+      "01 Matte black (0,3 g)",
+      "04 Matte terracotta (0,3 g)",
+      "05 Matte beige (0,3 g)",
+      "06 Shimmer sand (0,3 g)",
+      "07 Shimmer rose (0,3 g)",
+      "08 Shimmer espresso (0,3 g)",
+      "09 Glitter black (0,3 g)",
+      "10 Matte brown (0,3 g)",
+      "11 Matte charcoal gray (0,3 g)",
+      "13 Matte olive (0,3 g)",
+      "19 Shimmer navy (0,3 g)",
+      "20 Matte burgundy (0,3 g)",
+      "21 Shimmer plum (0,3 g)",
+      "24 Matte fuchsia (0,3 g)",
+      "26 Shimmer taupe (0,3 g)",
+      "28 Matte cobalt blue (0,3 g)",
+      "29 Shimmer aqua (0,3 g)"
+    ]
   },
   {
     "id": 439,
@@ -21760,7 +25026,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "05 Baby blue",
+      "01 Deep black (1,20 ml)",
+      "02 Espresso",
+      "03 Navy blue",
+      "04 True teal",
+      "07 Vivid pink",
+      "08 Bright coral"
+    ]
   },
   {
     "id": 440,
@@ -21809,7 +25084,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "03 Celestial blue (0,20 g)",
+      "02 Green aurora (0,20 g)"
+    ]
   },
   {
     "id": 441,
@@ -21858,7 +25138,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Noir Onyx (0.4 g)",
+      "tükendi",
+      "08 Rêve Anthracite (0.4 g)",
+      "LE STYLO WATERPROOF R21 07",
+      "09 Prune Radicale  (0.4 g)",
+      "LE STYLO WATERPROOF R21 03",
+      "LE STYLO WATERPROOF R21 02",
+      "LE STYLO WATERPROOF R21 06",
+      "10 Burgundy Fever (0.4 g)",
+      "11 Radiant White (3.5 ml)"
+    ]
   },
   {
     "id": 442,
@@ -21907,7 +25199,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Chocolate Brown (2,8 ml)",
+      "01 Deep black (2,8 ml)",
+      "03 Forest green (2,8 ml)",
+      "04 Dark navy (2,8 ml)",
+      "05 Cobalt blue (2,8 ml)",
+      "06 Pure white (2,8 ml)",
+      "07 Candy pink (2,8 ml)",
+      "08 Olive green (2,8 ml)",
+      "09 Pastel blue (2,8 ml)"
+    ]
   },
   {
     "id": 443,
@@ -22005,7 +25308,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cuz I'm Black (0,55 ml)",
+      "In Big Truffle"
+    ]
   },
   {
     "id": 445,
@@ -22054,7 +25361,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Super Brown",
+      "tükendi",
+      "Brown",
+      "Panther"
+    ]
   },
   {
     "id": 446,
@@ -22103,7 +25416,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "061 Matte Grey (0,3 g)",
+      "076 Pearly Silver (0,3 g)",
+      "091 Matte Black (0.3 g)",
+      "146 Pearly Lilac (0.3 g)",
+      "176 Matte Purple (0.3 g)",
+      "246 Matte Mint (0,3 g)",
+      "296 Matte Blue (0,3 g)",
+      "466 Pearly Bronze (0,3 g)",
+      "471 Matte Green (0,3 g)",
+      "556 Pearly Gold (0,3 g)",
+      "646 Pearly Coral (0,3 g)",
+      "771 Matte Taupe (0,3 g)",
+      "781 Matte Brown (0,3 g)",
+      "846 Pearly Pink (0,3 g)"
+    ]
   },
   {
     "id": 447,
@@ -22152,7 +25481,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "True Black (0,25 g)",
+      "True Brown (0,25 g)",
+      "Compassion (0,25 g)"
+    ]
   },
   {
     "id": 448,
@@ -22250,7 +25584,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Intense Black (0,35 g)",
+      "Black Honey (0.35g)",
+      "Deep Denim (0.35g)",
+      "Bright White (0.35g)",
+      "Beaming Beige (0.35g)",
+      "Bronze Glow (0.35g)",
+      "Polished Pewter (0.35g)",
+      "Sparkling Amethyst (0.35g)"
+    ]
   },
   {
     "id": 450,
@@ -22397,7 +25741,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Black (0,8 g)",
+      "tükendi",
+      "White (0,8 g)",
+      "Brown (0,8 g)",
+      "Plum",
+      "Navy (0,8 g)"
+    ]
   },
   {
     "id": 453,
@@ -22544,7 +25896,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 (1,4 g)",
+      "02 (1,4 g)",
+      "06 (1,4 g)",
+      "09 (1,4 g)",
+      "13 (1,4 g)",
+      "15 (1,4 g)",
+      "04 (1,4 g)",
+      "10 (1,4 g)"
+    ]
   },
   {
     "id": 456,
@@ -22692,7 +26054,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "22 Cobalt Shimmer (1,4 g)",
+      "21 Baby Blue Matte (1,4 g)",
+      "00 White Matte (1,4 g)",
+      "05 Fawn Shimmer (1,4 g)"
+    ]
   },
   {
     "id": 459,
@@ -22741,7 +26110,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "HYPNOSE DRAMA LIQ PENCIL 01",
+      "tükendi",
+      "HYPNOSE DRAMA LIQ PENCIL 02",
+      "08 Eiffel Diamond 1.2 g",
+      "05 1,2  g"
+    ]
   },
   {
     "id": 460,
@@ -22790,7 +26166,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hypnotize (0,35 g)",
+      "Orbit (0,35 g)",
+      "Allure (0,35 g)",
+      "Depth (0,35 g)",
+      "Enigma (0,35 g)",
+      "Eternal (0,35 g)",
+      "Bewitch (0,35 g)",
+      "Cosmic (0,35 g)",
+      "Mesmerize (0,35 g)",
+      "Gravitate (0,35 g)"
+    ]
   },
   {
     "id": 461,
@@ -22839,7 +26227,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Marine/Sky",
+      "02 Bordeaux/Ivory",
+      "03 Dark Chocolate/Rich Brown",
+      "04 Noir/Cream"
+    ]
   },
   {
     "id": 462,
@@ -22888,7 +26282,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "No. 01 - Minimal Matte Black (2.95ml)",
+      "4 (2,95 ml)"
+    ]
   },
   {
     "id": 463,
@@ -22937,7 +26335,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "bardot (0,35 g)",
+      "knee socks (0,35 g)",
+      "moon ring (0,35 g)",
+      "pixie (0,35 g)",
+      "babe (0,35 g)",
+      "shag (0,35 g)",
+      "teddy (0,35 g)",
+      "flower power (0,35 g)",
+      "plumage (0,35 g)",
+      "far out (0,35 g)"
+    ]
   },
   {
     "id": 464,
@@ -23035,7 +26445,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Park Avenue",
+      "tükendi",
+      "Via Veneto",
+      "Mambo",
+      "Mulholland Drive",
+      "Grafton Street",
+      "Rue Bonaparte"
+    ]
   },
   {
     "id": 466,
@@ -23084,7 +26503,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Super Black (1,1 g)",
+      "Soft Brown (1,1 g)",
+      "Perfect Brown (1,1 g)",
+      "Bronze (1,1 g)",
+      "Midnight Blue (1,1 g)",
+      "Plum (1,1 g)"
+    ]
   },
   {
     "id": 467,
@@ -23133,7 +26560,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Bronze (0,06 g)",
+      "Obsidian (0,06 g)",
+      "Canyon (0,06 g)"
+    ]
   },
   {
     "id": 468,
@@ -23182,7 +26614,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "12 - STRIKING CHAMELEON",
+      "01 - MATTE CHARCOAL",
+      "02 - MATTE WOOD",
+      "04 - MATTE PLUM",
+      "08 - COPPER LAVA",
+      "09 - KHAKI TWINKLE"
+    ]
   },
   {
     "id": 469,
@@ -23231,7 +26671,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "08 - Satin Pure White (2,8ml)",
+      "tükendi",
+      "INTENSE INK LINER MATTE-20 BLACK",
+      "INTENSE INK LINER MATTE-20 ESPRESSO",
+      "03 - Satin Dark Navy (2,8ml)",
+      "05 - Satin Cobalt Blue (2,8ml)",
+      "06 - Satin Forest Green (2,8ml)",
+      "07 - Satin Dusty Rose (2,8ml)"
+    ]
   },
   {
     "id": 470,
@@ -23280,7 +26730,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Black (2.4 ml)",
+      "tükendi",
+      "Burgundy (2,4 ml)",
+      "Aubergine (2,4 ml)",
+      "Brown (2,4 ml)",
+      "White (2,4 ml)",
+      "Navy Blue (2,4 ml)"
+    ]
   },
   {
     "id": 471,
@@ -23329,7 +26788,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Black",
+      "02 Syrup Brown"
+    ]
   },
   {
     "id": 472,
@@ -23427,7 +26890,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Forest 0,55 ml",
+      "Cave 0,55 ml",
+      "Chestnut 0,55 ml",
+      "Obsidian 0,55 ml",
+      "Solstice 0,55 ml"
+    ]
   },
   {
     "id": 474,
@@ -23476,7 +26946,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Periwinkle (0.55ml)",
+      "tükendi",
+      "01 White (0.55ml)",
+      "03 Pink (0.55ml)",
+      "04 Green (0.55ml)",
+      "05 Blu (0.55ml)",
+      "06 Purple (0.55 ml)",
+      "07 Black (0.55ml)"
+    ]
   },
   {
     "id": 475,
@@ -23623,7 +27103,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "black + net wt 0,6 g / 0,0204 Oz",
+      "brown + net wt 0,6 g / 0,0204 Oz."
+    ]
   },
   {
     "id": 478,
@@ -23770,7 +27255,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "EYELINER FLUID MAD EYES 01 BLACK",
+      "EYELINER FLUID MAD EYES 02 BROWN"
+    ]
   },
   {
     "id": 481,
@@ -23819,7 +27309,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "EYE MICROLINER INK 07 GRAY",
+      "EYE MICROLINER INK 08 TEAL",
+      "EYE MICROLINER INK 09 VIOLET",
+      "EYE MICROLINER INK 10 BURGUNDY"
+    ]
   },
   {
     "id": 482,
@@ -23868,7 +27364,24 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 (1,2 g)",
+      "tükendi",
+      "01 (1,2 g)",
+      "02 (1,2 g)",
+      "04 (1,2 g)",
+      "05 (1,2 g)",
+      "06 (1,2 g)",
+      "07 (1,2 g)",
+      "08 (1,2 g)",
+      "09 (1,2 g)",
+      "10 (1,2 g)",
+      "11 (1,2 g)",
+      "Obsessive Tangerine (1,2 g)",
+      "13 Bewitching Turquoise (1,2g)",
+      "14 Magnetic Purple (1,2g)"
+    ]
   },
   {
     "id": 483,
@@ -23917,7 +27430,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 - Whatever Black (1.2 g)",
+      "06 - Total Bronze (1.2 g)",
+      "16 - Sparkling Graphite (1.2 g)",
+      "11 - Unlimited Ivy (1.2 g)",
+      "13 - Boundless Bisque (1.2 g)",
+      "12 - Deep Cranberry (1.2 g)",
+      "02 - Iron Gray (1.2 g)",
+      "07 - Absolute Forest (1.2 g)",
+      "10 - Versatile Purple (1.2 g)",
+      "09 - Cosmic Lavender (1.2 g)",
+      "15 - Lively Pink (1.2 g)",
+      "05 - Desert Taupe (1.2 g)",
+      "14 - Bubbly Sand (1.2 g)",
+      "04 - Limitless Brown (1.2 g)",
+      "08 - Midnight Cobalt (1.2 g)",
+      "03 - Cool Ebony (1.2 g)"
+    ]
   },
   {
     "id": 484,
@@ -23966,7 +27497,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "ONYX",
+      "COCOA",
+      "Saphire Sky (1,2 g)",
+      "DOUBLE WEAR GEL EYELINER SMOKE",
+      "DOUBLE WEAR GEL EYELINER- ESPRESSO",
+      "DOUBLE WEAR GEL EYELINER - AUBERGIN",
+      "1,20 g"
+    ]
   },
   {
     "id": 485,
@@ -24015,7 +27555,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 - Cuz I'm Black (0,1 g)",
+      "02 - In Big Truffle (0,1 g)",
+      "03 - Wet T-Shirt (0,1 g)",
+      "04 - The Navy (0,1 g)",
+      "05 - Riri (0,1 g)",
+      "06 - Don't Clay Me (0,1 g)",
+      "07 - Wink o'Pink (0,1 g)",
+      "08 - Naked Beach (0,1 g)",
+      "09 - Vanilla Killa (0,1 g)",
+      "10 - Ca$h You (0,1 g)"
+    ]
   },
   {
     "id": 486,
@@ -24064,7 +27616,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "59 Golden hour (1,30 g)",
+      "54 Coconut (1,30 g)",
+      "58 Berry sweet (1,30 g)",
+      "13 Tiramisu (1,30 g)",
+      "47 Waterfall (1,30 g)",
+      "57 Rock'n brown (1,30 g)",
+      "04 Starry sky (1,30 g)",
+      "55 Purple illusion (1,30 g)",
+      "01 Black lace (1,30 g)",
+      "48 Midnight blue (1,30 g)",
+      "12H COLORFUL CRAY CONT YX-25 02 CLUBBING",
+      "12H COLORFUL CRAY CONT YX-25 56 SOFT",
+      "14 Cocoa (1,30g)",
+      "12H COLORFUL CRAY CONT YX-25 46 TREX",
+      "12H COLORFUL CRAY CONT YX-25 51 STONE",
+      "12H COLORFUL CRAY CONT YX-25 12 CAPUCCIN",
+      "12H COLORFUL CRAY CONT YX-25 29 MYBOYFRI",
+      "62 Endless (1,30g)",
+      "15 FLIRT (1,30g)",
+      "60 Fresh Mint (1,30 g)",
+      "12H COLORFUL CRAY CONT YX-25 06 BLONDE",
+      "63 SUNSHINE (1,30g)",
+      "12H COLORFUL CRAY CONT YX-25 50 PEACOCK",
+      "12H COLORFUL CRAY CONT YX-25 61 PURPLE"
+    ]
   },
   {
     "id": 487,
@@ -24113,7 +27691,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      ":01 Total Black (1.20 g)",
+      "tükendi",
+      "02 Espresso Brown (1.20 g)",
+      "03 Roaring Burgundy (1.20 g)",
+      "04 Metallic Copper (1.20 g)",
+      "05 Vibrant Plum (1.20 g)",
+      "06 Metallic Steel (1.20 g)",
+      "07 Jade Green (1.20 g)",
+      "08 Blushing Nude (1.20 g)"
+    ]
   },
   {
     "id": 488,
@@ -24162,7 +27751,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "0,29g 03 Blue orchid",
+      "0,29g 04 Fig",
+      "0,29g 05 Forest",
+      "0,29g 06 Smoked wood"
+    ]
   },
   {
     "id": 489,
@@ -24309,7 +27904,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "CRUSHLINER 1",
+      "tükendi",
+      "CRUSHLINER 2",
+      "CRUSHLINER 6"
+    ]
   },
   {
     "id": 492,
@@ -24358,7 +27959,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Bedroom Black (1,2 g)",
+      "Barbarella Brown (1,2 g)",
+      "Hypnotic Peacock (1,2 g)",
+      "Fig Smoulder (1,2 g)",
+      "Smokey Bronze (1,2 g)",
+      "Sapphire Nights (1,2 g)"
+    ]
   },
   {
     "id": 493,
@@ -24407,7 +28016,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "009 White",
+      "tükendi",
+      "099 Black",
+      "254 Blue",
+      "374 Dark Green",
+      "594 Brown",
+      "529 Beige"
+    ]
   },
   {
     "id": 494,
@@ -24456,7 +28074,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 BLACK EBONY 0.35g",
+      "02 BROWN EARTH 0.35g",
+      "03 NIGHT BLUE 0.35g",
+      "04 PLUM PEONY 0.35g",
+      "05 JUNGLE GREEN 0.35g"
+    ]
   },
   {
     "id": 495,
@@ -24554,7 +28179,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "CRAY CT YX 12H WTP-21 29 JEANS",
+      "CRAY CT YX 12H WTP-21 50 PEACOCK",
+      "47 Waterfall  (1,40 g)",
+      "CRAY CT YX 12H WTP-21 15 FLIRTING",
+      "CRAY CT YX 12H WTP-21 06 AMBITION",
+      "59 Golden hour - irisé (1,40 g)",
+      "CRAY CT YX 12H WTP-21 02 CLUBBING",
+      "48 Midnight blue (1,40 g)",
+      "CRAY CT YX 12H WTP-21 60 FRESH MINT",
+      "CRAY CT YX 12H WTP-21 61 DISCO",
+      "CRAY CT YX 12H WTP-21 54 COCONUT",
+      "62 Endless night  (1,40 g)",
+      "63 Sunshine (1,40 g)"
+    ]
   },
   {
     "id": 497,
@@ -24652,7 +28293,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "KHOL COUT WTP N1 BLACK",
+      "tükendi",
+      "KHOL COUT WTP N2 CHESTNUT",
+      "KHOL COUT WTP N4 COBALT"
+    ]
   },
   {
     "id": 499,
@@ -24701,7 +28348,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "01 Fresh Licorice (1,05 g)",
+      "02 Soft Pepper (1,05 g)",
+      "03 Delicious Cocoa (1,05 g)",
+      "04 Delicate Vanilla (1,05 g)",
+      "05 Wild Blueberry (1,05 g)",
+      "06 Funky Cornflower (1,05 g)",
+      "07 Pure Agave (1,05 g)",
+      "08 Wild Mint (1,05 g)"
+    ]
   },
   {
     "id": 500,
@@ -24799,7 +28457,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "4 Noir (1,05 g)",
+      "tükendi",
+      "5 Mauve (1,05 g)",
+      "12 Brun (1,05 g)"
+    ]
   },
   {
     "id": 502,
@@ -24848,7 +28512,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "Burgundy (1,2 g)",
+      "Noir (1,2 g)",
+      "Marron (1,2 g)",
+      "Taupe (1,2 g)"
+    ]
   },
   {
     "id": 503,
@@ -24897,7 +28568,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "187 Pearly Plum (0,3g)",
+      "951 Pearly Rosegold (0,3g)"
+    ]
   },
   {
     "id": 504,
@@ -24946,7 +28622,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "Classic Black (1,1 g)",
+      "Classic Brown (1,1 g)",
+      "Shimmering Brown (1,1 g)"
+    ]
   },
   {
     "id": 505,
@@ -24995,7 +28677,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N°6 Mystic Purple",
+      "tükendi",
+      "N°5 Sparkling Blue",
+      "N°4 Sparkling Bronze",
+      "N°3 Sparkling Brown",
+      "N°2 Sparkling Grey (0,3 g)",
+      "N°1 Sparkling Black (0,3 g)",
+      "N°8 Mystic Green",
+      "N°7 Mystic Blue"
+    ]
   },
   {
     "id": 506,
@@ -25044,7 +28737,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Bachelor Pad (0,3 g)",
+      "tükendi",
+      "Cuz I'm Black (0,3 g)",
+      "In Big Truffle (0,3 g)",
+      "Purp-a-Trader (0,3 g)",
+      "Black Card (0,3 g)",
+      "Space Cookie (0,3 g)",
+      "Navy or Die (0,3 g)",
+      "Purple Stuff (0,3 g)",
+      "Sea About It (0,3 g)",
+      "Lady Lagoon (0,3 g)",
+      "Bank Tank (0,3 g)",
+      "Bad Bride (0,3 g)",
+      "Puppy Eyez (0,3 g)"
+    ]
   },
   {
     "id": 507,
@@ -25093,7 +28802,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "07 Snow (1,2 g)",
+      "01 Black (1,2 g)",
+      "02 Brown (1,2 g)",
+      "03 Steel (1,2 g)",
+      "04 Khaki (1,2 g)",
+      "05 Navy (1,2 g)",
+      "06 Plum (1,2 g)",
+      "08 Purple (1,2 g)",
+      "09 Deep Jungle (1,2 g)",
+      "10 Ebony (1,2 g)"
+    ]
   },
   {
     "id": 508,
@@ -25142,7 +28863,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Matte Camille/Sand Shimmer",
+      "Matte Shell/Lace Shimmer"
+    ]
   },
   {
     "id": 509,
@@ -25191,7 +28916,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "EYE MICROLINER INK 07 GRAY",
+      "EYE MICROLINER INK 08 TEAL",
+      "EYE MICROLINER INK 09 VIOLET",
+      "EYE MICROLINER INK 10 BURGUNDY"
+    ]
   },
   {
     "id": 510,
@@ -25240,7 +28971,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(0,3 g)\n\n\n\n\n\n\n\n\n\ntükendi",
+      "(0,3 g)"
+    ]
   },
   {
     "id": 511,
@@ -25289,7 +29024,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1 Matte Onyx",
+      "3 Matte Jungle",
+      "4 Matte Graphite",
+      "5 Matte Peacock",
+      "6 Matte Chestnut"
+    ]
   },
   {
     "id": 512,
@@ -25338,7 +29080,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "102 Romanza (3,1 g)",
+      "tükendi",
+      "103 Androgino (3,1 g)",
+      "104 Selfless (3,1 g)",
+      "107 Sensual (3.1 g)",
+      "109 Intimate (3.1 g)",
+      "113 Elegant (3.1 g)",
+      "202 Grazia (3,1 g)",
+      "214 Free (3.1 g)",
+      "400 Four Hundred (3,1 g)",
+      "403 Fighter (3,1 g)",
+      "404 Tempting (3,1 g)",
+      "405 Sultan (3.1 g)",
+      "502 Desire (3,1 g)",
+      "503 Eccentrico (3,1 g)",
+      "504 Flirt (3,1 g)"
+    ]
   },
   {
     "id": 513,
@@ -25387,7 +29147,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "196 French Touch",
+      "525 French Bisou",
+      "274 French Tea",
+      "888 French Idol",
+      "481 Nuit Pourpre",
+      "270 Peau Contre Peau",
+      "500 L'orfevre",
+      "138 Rouge Drama",
+      "154 Dis Oui",
+      "555 Soif De Vivre",
+      "311 Rose Cherie",
+      "502 Fiery Pink",
+      "288 French Opera"
+    ]
   },
   {
     "id": 514,
@@ -25436,7 +29211,51 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N6 (3,8 g)",
+      "N7 (3,8 g)",
+      "N8 (3,8 g)",
+      "O1 (3,8g )",
+      "O6 (3,8 g)",
+      "O7 (3,8 g)",
+      "N1 Beige Trench (3.8 g)",
+      "R9 Brazen Bordeaux (3.8 g)",
+      "R11 Rouge Eros (3.8 g)",
+      "R1971 Rouge Provocation (3.8 g)",
+      "R4 Rouge Extravagance (3.8 g)",
+      "N10 Nude Stiletto (3.8 g)",
+      "N13 Effortless Maroon (3.8 g)",
+      "O4 Rusty Orange (3.8 g)",
+      "P4 (3.8 g)",
+      "O83 (3.8 g)",
+      "Rouge Libre (3.8 g)",
+      "Rose No Taboo (3.8 g)",
+      "O13 Le Orange (3.8 g)",
+      "N12 Nude Instinct (3.8 g)",
+      "O154 Orange Fatal (3.8 g)",
+      "N2 Nude Lace (3.8 g)",
+      "Orange Muse (3.8 g)",
+      "P2 Rose No Taboo (3.8 g)",
+      "R7 Rouge Insolite (3.8 g)",
+      "R8 Rouge Legion (3.8 g)",
+      "P1 Liberated Plum (3.8 g)",
+      "R1 Le Rouge (3.8 g)",
+      "R21 Rouge Paradoxe (3.8 g)",
+      "R5 Subversive Ruby (3.8 g)",
+      "P22 Rose Celebration (3.8 g)",
+      "N3 Nude Decollete (3.8 g)",
+      "Rouge Muse (3.8 g)",
+      "R10 Effortless Vermillon (3.8 g)",
+      "Nu Muse (3.8 g)",
+      "Pink Muse (3.8 g)",
+      "R12 Rouge Feminin (3.8 g)",
+      "ROUGE PUR COUTURE N15",
+      "ROUGE PUR COUTURE N44",
+      "RENO N16 (3.8 g)",
+      "RENO O8 (3.8 g)",
+      "RENO R13 (3.8 g)"
+    ]
   },
   {
     "id": 515,
@@ -25485,7 +29304,36 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "08 La Vie Est Belle (3.4 g)",
+      "11 Rose Nature (3.4 g)",
+      "132 Caprice De Rouge (3.4 g)",
+      "185 Eclat D'Amour (3.4 g)",
+      "238",
+      "250",
+      "264",
+      "295 French Rendez-Vous (3.4 g)",
+      "397 Berry Noir (3.4 g)",
+      "66",
+      "L'ABSOLU ROUGE CREAM 525",
+      "366 Paris S'Eveille (3.4 g)",
+      "347 Le Baiser (3.4 g)",
+      "L'ABSOLU ROUGE CREAM R21 339",
+      "259 Mademoiselle Chiara (3.4 g)",
+      "L'ABSOLU ROUGE CREAM 274",
+      "253 Mademoiselle Amanda (3.4 g)",
+      "190 La Fougue (3.4 g)",
+      "171 Pêché Mignon (3.4 g)",
+      "12 Smoky Rose (3.4 g)",
+      "493 Nuit Parisienne (3.4 g)",
+      "199 Tout Ce Qui Brille (3.4 g)",
+      "350 Destination Honfleur (3.4 g)",
+      "182 Belle & Rebelle (3.4 g)",
+      "276 Timeless Romance (3.4 g)",
+      "216 Soif-De-Riviera | 3,4 g"
+    ]
   },
   {
     "id": 516,
@@ -25534,7 +29382,41 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 Strawberry kissed",
+      "tükendi",
+      "01 Always red",
+      "06 Pink Souffle",
+      "13 Marvelous Mauve",
+      "16 Cherry Nectar",
+      "23 Copper Blush",
+      "24 Burnt Sienna",
+      "25 Coral Sunset",
+      "26 Pretty Auburn",
+      "27 Black Cherry",
+      "28 Night Bird",
+      "29 Dark Forest",
+      "38 Sweet Raspberry",
+      "39 Frozen Strawberry",
+      "40 Pink Tea",
+      "41 Vintage Rosewood",
+      "42 Rose Wood",
+      "69 Hippy Pink",
+      "72 Alter-ego",
+      "76 Blaze of Glory",
+      "78 Chili Pepper",
+      "80 Honeymoon",
+      "82 Warm Kiss",
+      "83 Cinder Rose",
+      "90 Sunrise Pink",
+      "92 Flaming Flamingo",
+      "94 Cherry Moon",
+      "96 Red Velvet",
+      "97 Red Desert",
+      "99 Purple Red",
+      "101 Plum Aurora"
+    ]
   },
   {
     "id": 517,
@@ -25583,7 +29465,49 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Always Red",
+      "02 Classic Beige",
+      "06 Pink Soufflé",
+      "120 Soft mocha",
+      "121 Blush Addict",
+      "122 Casual Peach",
+      "123 Brownie",
+      "124 Rose Instinct",
+      "125 Rose Flambé",
+      "126 Hot Hot Pink",
+      "127 Frozen Pomegranate",
+      "128 Fancy Raspberry",
+      "129 Risky Red",
+      "13 Marvelous Mauve",
+      "130 Naughty Burgundy",
+      "131 Spicy Terracotta",
+      "132 Acid Coral",
+      "133 Purple Pop",
+      "134 Plum Madness",
+      "135 Mystic Purple",
+      "136 Ultra Violet",
+      "137 Neon Marmalade",
+      "16 Cherry Nectar",
+      "17 Dark Red",
+      "23 Copper Blush",
+      "25 Coral Sunset",
+      "26 Pretty Auburn",
+      "28 Night Bird",
+      "41 Vintage Rosewood",
+      "72 Alter Ego",
+      "78 Chili Pepper",
+      "80 Honeymoon",
+      "81 Daydreaming",
+      "84 Rose Redux",
+      "85 Rosewood",
+      "86 English rose",
+      "90 Sunrise Pink",
+      "76 Blaze Of Glory",
+      "94 Cherry Moon",
+      "97 Red Desert"
+    ]
   },
   {
     "id": 518,
@@ -25632,7 +29556,34 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "44 Nude Lavallière (3.2 g)",
+      "12 Electric Love (3.2 g)",
+      "122 Caramel Swirl (3.2 g)",
+      "150 Nude Lingerie (3.2 g)",
+      "154 Love Berry (3.2 g)",
+      "200 Rosy Sand (3.2 g)",
+      "201 Rosewood Blush (3.2 g)",
+      "202 Peachy Glow (3.2 g)",
+      "204 Melted Honey (3.2 g)",
+      "212 Deep Ruby (3.2 g)",
+      "45 Coral Crush (3.2 g)",
+      "80 Glowing Lava (3.2 g)",
+      "203 Blushed Mallow (3.2 g)",
+      "205 Nude Self (3.2 g)",
+      "206 Spicy Affair (3.2 g)",
+      "207 Scenic Brown (3.2 g)",
+      "208 Raspberry Shine (3.2 g)",
+      "209 Pink Desire (3.2 g)",
+      "210 Passion Red (3.2 g)",
+      "211 Ardent Carmine (3.2 g)",
+      "213 Pink Trip (3.2 g)",
+      "163 Raspberry Crush (3,2 g)",
+      "214 Wet Guava (3,2 g)",
+      "10 Stardust Love (3.2 g)",
+      "215 Plum Levitation (3.2 g)"
+    ]
   },
   {
     "id": 519,
@@ -25681,7 +29632,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Black Honey - 1.90g",
+      "Pink Honey (1.9 g)",
+      "Nude Honey (1,9g)"
+    ]
   },
   {
     "id": 520,
@@ -25730,7 +29686,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pillow Talk Original (1,5 g + 0,8 g)",
+      "Pillow Talk Deep (1,5 g + 0,8 g)",
+      "Pillow Talk Medium (1,5 g + 0,8 g)",
+      "Pillow Talk Fair (1,5 g + 0,8 g)"
+    ]
   },
   {
     "id": 521,
@@ -25779,7 +29741,37 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Satin - 968 Le Lie De Vin (3,5g)",
+      "Velvet - 879 Le Cerise Noire (3,5g)",
+      "Velvet - 258 Bois De Rose (3,5g)",
+      "Satin - 880 Le Rouge Rubis (3,5g)",
+      "Velvet - 772 Le Rose Bourbon (3,5g)",
+      "Satin - 870 Le Prune Intense (3,5 g)",
+      "Satin - 775 Le Rouge Bordeaux (3,5g)",
+      "Velvet - 366 Le Rose Pompon (3,5g)",
+      "Velvet - 360 Le Beige Nu (3,5g)",
+      "Velvet - 520 Le Rouge Profond (3,5g)",
+      "Velvet - 888 Le Rouge Brun (3,5g)",
+      "Satin - 409 Le Rose Indien (3,5g)",
+      "Satin - 08 Le Nu (3,5g)",
+      "Satin - 319 Le Moka Chaud (3,5g)",
+      "Satin - 518 Le Rose Blush (3,5g)",
+      "Satin - 521 Le Grège Rosé (3,5g)",
+      "Satin - 11 Le Beige Noisette (3,5g)",
+      "Satin - 131 Le Beige Praline (3,5g)",
+      "Satin - 235 Le Rouge Sienne (3,5g)",
+      "Satin - 06 Le Rose Brun (3,5g)",
+      "Satin - 03 Le Nude Intense (3,5g)",
+      "Satin - 333 Le Rouge Framboise (3,5g)",
+      "Velvet - 775 Le Rouge Bordeaux (3,5g)",
+      "Satin - 214 Le Rouge Kiss (3,5g)",
+      "139 LE NUDE DRAGÉE (3.5 g) - Refil",
+      "Velvet - Le Beige Blush (3,5g)",
+      "555 LE BRIQUE AMBRÉ (3.5 g) - Refil",
+      "777 LE PRUNE MAGENTA (3.5 g) - Refil"
+    ]
   },
   {
     "id": 522,
@@ -25828,7 +29820,24 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Les Studs",
+      "Le Croco",
+      "Le Fauve",
+      "Le Marbre",
+      "L'Art Déco",
+      "Le Camel",
+      "L'Écaille",
+      "Le Strassé",
+      "Le Nude",
+      "Phoenix\n\n\n\n\n\n\n\n\n\ntükendi",
+      "Peacock\n\n\n\n\n\n\n\n\n\ntükendi",
+      "Songbird\n\n\n\n\n\n\n\n\n\ntükendi",
+      "Phoenix",
+      "Peacock",
+      "Songbird"
+    ]
   },
   {
     "id": 523,
@@ -25877,7 +29886,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 - Icy Amethy$t (3,6 g)",
+      "02 - Fenty Glow (3,6 g)",
+      "01 - FU$$Y (3,6 g)",
+      "03 - Hot Chocolit (3,6 g)",
+      "05 - Flamingo Fling (3,6 g)",
+      "06 - C U In Maui (3,6 g)",
+      "07 - How Many Carats ?! (3,6 g)"
+    ]
   },
   {
     "id": 524,
@@ -25926,7 +29944,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "05 Tangerine twist (5,50 ml)",
+      "01 Sweet jelly (5,50 ml)",
+      "02 Rose syrup (5,50 ml)",
+      "03 Summer slushy (5,50 ml)",
+      "06 Spice it up (5,50 ml)",
+      "08 Cookie bite (5,50 ml)",
+      "09 Maple glaze (5,50 ml)",
+      "11 Frosted berry (5,50 ml)",
+      "07 Cranberry fizz (5,50 ml)",
+      "10 Grapes for desert (5,50 ml)",
+      "04 Pink sorbet (5,50 ml)",
+      "12 Mocha crush (5,50 ml)"
+    ]
   },
   {
     "id": 525,
@@ -25975,7 +30007,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "08 Ray of red (3,20 g)",
+      "01 Beige sparkle (3,20 g)",
+      "02 Soft twinkle (3,20 g)",
+      "03 Desert glow (3,20 g)",
+      "04 Pink mirage (3,20 g)",
+      "05 Mystical blush (3,20 g)",
+      "06 Dazzling brick (3,20 g)",
+      "07 Rose refraction (3,20 g)",
+      "09 Red moon (3,20 g)",
+      "10 Radiant flame (3,20 g)",
+      "11 Cosmic coral (3,20 g)",
+      "12 Brilliant berry (3,20 g)",
+      "13 Blinding pink (3,20 g)",
+      "14 Dark aura (3,20 g)",
+      "15 Galactic plum (3,20 g)",
+      "16 Electric glitter (3,20 g)",
+      "17 Chromatic bronze (3,20 g)",
+      "18 Flashing lights (3,20 g)",
+      "19 Glazed confetti (3,20 g)",
+      "20 Iridescent ice (3,20 g)"
+    ]
   },
   {
     "id": 526,
@@ -26024,7 +30078,28 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Sexy Sienna (3,5 g)",
+      "tükendi",
+      "Lost Cherry (3,5 g)",
+      "Red Carpet Red (3,5 g)",
+      "Very Victoria (3,5 g)",
+      "The Queen (3,5 g)",
+      "Pillow Talk (3,5 g)",
+      "Pillow Talk Medium (3,5 g)",
+      "Super Fabulous (3,5 g)",
+      "Catwalking (3,5 g)",
+      "Cover Star (3,5 g)",
+      "Walk Of No Shame (3,5 g)",
+      "Festival Magic (3,5 g)",
+      "M.I. Kiss (3,5 g)",
+      "So 90's (3,5 g)",
+      "Gracefully Pink (3,5 g)",
+      "Love Liberty (3,5 g)",
+      "Supermodel (3,5 g)",
+      "Cat Walking (3,5 g)"
+    ]
   },
   {
     "id": 527,
@@ -26073,7 +30148,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "08 Clean cut",
+      "01 Perfect line",
+      "02 Keep it sleek",
+      "03 Spot on",
+      "04 Neat treat",
+      "05 Strictly smooth",
+      "06 Laser beam",
+      "07 Pinpoint",
+      "09 Sharp move",
+      "10 Crisp edge"
+    ]
   },
   {
     "id": 528,
@@ -26122,7 +30209,30 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Unconditional - pink (3,50 g)",
+      "tükendi",
+      "01 Never ending - beige pink (3,50 g)",
+      "02 One more round - bluish pink (3,50 g)",
+      "03 Big hit - nude (3,50 g)",
+      "05 Can't stop - coral pink (3,50 g)",
+      "06 Full ignition - soft beige (3,50 g)",
+      "07 Push the limit - neutre rosé (3,50 g)",
+      "08 Stronger than ever - brown (3,50 g)",
+      "09 Undisciplined - amber nude (3,50 g)",
+      "10 More is more - reddish yellow (3,50 g)",
+      "11 Excessively good - red (3,50 g)",
+      "12 Not too much - burgundy (3,50 g)",
+      "13 Super bold - purple (3,50 g)",
+      "14 Unlimited intensity - plum (3,50 g)",
+      "15 Explosive game - fuchsia pink (3,50 g)",
+      "16 Fierce fire - orange (3,50 g)",
+      "17 Extra pulse - brick red (3,50 g)",
+      "18 Extreme power - rosewood (3,50 g)",
+      "19 Megawatt - rusty orange (3,50 g)",
+      "20 Never enough - old rose (3,50 g)"
+    ]
   },
   {
     "id": 529,
@@ -26171,7 +30281,48 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "373 Rose Celestial (3,2 g)",
+      "tükendi",
+      "008 Dior 8 (3,2 g)",
+      "100 Nude Look (3,2 g)",
+      "329 Tie & Dior (3,2 g)",
+      "418 Beige Oblique (3,2 g)",
+      "422 Rose des Vents (3,2 g)",
+      "525 Chérie (3,2 g)",
+      "526 Mallow Rose (3,2 g)",
+      "576 Rose Bagatelle (3,2 g)",
+      "536 Lucky (3,2 g)",
+      "636 Ultra Dior (3,2 g)",
+      "667 Diormania (3,2 g)",
+      "720 Icône (3,2 g)",
+      "727 Dior Tulle (3,2 g)",
+      "745 Re(d)volution (3,2 g)",
+      "841 Caro (3,2 g)",
+      "922 Wildior (3,2 g)",
+      "976 Be Dior (3,2 g)",
+      "521 Diorelita (3,2 g)",
+      "566 Peony Pink (3,2 g)",
+      "652 Rose Dior (3,2 g)",
+      "845 Vinyl Red (3,2 g)",
+      "463 Dior Ribbon (3,2 g)",
+      "481 Désir (3,2 g)",
+      "546 Dolce Vita (3,2 g)",
+      "616 Nude Mitzah (3,2 g)",
+      "362 Rose Bonheur (3,2 g)",
+      "391 Dior Lilac (3,2 g)",
+      "327 D-Vibe (3.2 g)",
+      "212 Tutu (3.2 g)",
+      "250 Dior Charm (3.2 g)",
+      "380 Pink D-Sire (3.2 g)",
+      "426 Dior Rodeo (3.2 g)",
+      "428 Dioract (3.2 g)",
+      "734 D-Club (3.2 g)",
+      "786 D-Player (3.2 g)",
+      "862 Dio(r)evolution (3.2 g)",
+      "871 D-Dream (3.2 g)"
+    ]
   },
   {
     "id": 530,
@@ -26220,7 +30371,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Plum (1,1 ml)",
+      "Rosette (1,1 ml)",
+      "FLUSHED LIP STAIN SLIPPER",
+      "Mocha (1,1 ml)",
+      "Almond (1,1 ml)",
+      "Maple (1,1 ml)"
+    ]
   },
   {
     "id": 531,
@@ -26269,7 +30428,44 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "777 (3,5 g)",
+      "tükendi",
+      "028 Actrice satin (3,5 g)",
+      "080 Red Smile satin (3,5 g)",
+      "100 Nude Look satin (3,5 g)",
+      "277 Osée satin (3,5 g)",
+      "434 Promenade satin (3,5 g)",
+      "458 Paris satin (3,5 g)",
+      "683 Rendez-vous satin (3,5 g)",
+      "720 Icone satin (3,5 g)",
+      "743 Rouge Zinnia satin (3,5 g)",
+      "999 satin (3,5 g)",
+      "100 Nude Look velvet (3,5 g)",
+      "625 Mitzah velvet (3,5 g)",
+      "720 Icone velvet (3,5 g)",
+      "764 Rouge Gipsy velvet (3,5 g)",
+      "772 Classic Rosewood velvet (3,5 g)",
+      "866 Together velvet (3,5 g)",
+      "999 velvet (3,5 g)",
+      "200 Nude Touch velvet (3,5 g)",
+      "300 Nude Style velvet (3,5 g)",
+      "400 Nude Line velvet (3,5 g)",
+      "429 Rose Blues velvet (3,5 g)",
+      "221 Frou-frou velvet (3,5 g)",
+      "581 Virevolte velvet (3,5 g)",
+      "771 Radiant velvet (3,5 g)",
+      "888 Strong Red velvet (3,5 g)",
+      "505 Sensual velvet (3,5 g)",
+      "624 Vérone velvet (3,5 g)",
+      "784 Rouge Rose velvet (3,5 g)",
+      "964 Ambitious velvet (3,5 g)",
+      "644 Sydney satin (3,5 g)",
+      "360 Souffle de Rose velvet (3,5 g)",
+      "220 Beige Couture velvet (3,5 g)",
+      "909 Midnight velvet (3,5 g)"
+    ]
   },
   {
     "id": 532,
@@ -26318,7 +30514,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kiss (3,5 g)",
+      "Crush (3,5 g)",
+      "Parchment (3,5 g)",
+      "Peach Amber (3,5 g)",
+      "Peachy Nude (3,5 g)",
+      "Pure Hollywood (3,5 g)",
+      "Pale Mauve (3,5 g)",
+      "Pink Sand (3,5 g)",
+      "Rosy Mauve (3,5 g)",
+      "Softy (3,5 g)",
+      "Hush Rose (3,5 g)",
+      "Pomegranate (3,5 g)",
+      "Cool Brown (3,5 g)",
+      "Blackberry (3,5 g)"
+    ]
   },
   {
     "id": 533,
@@ -26367,7 +30579,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Blown kiss",
+      "01 Cloud whisperer",
+      "02 Pom-pom",
+      "03 Fluffy hug",
+      "05 Double snuggle",
+      "06 Dream weaver",
+      "07 Cushyyy",
+      "08 Snooze",
+      "09 Hush hush",
+      "10 Not a softy"
+    ]
   },
   {
     "id": 534,
@@ -26416,7 +30640,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pillow Talk (2,4 g)",
+      "tükendi",
+      "Crytstal Happikiss (2,4 g)",
+      "Enchanting Kiss (2,4 g)",
+      "Happipetal (2,4 g)",
+      "Happipeach (2,4 g)",
+      "Romance Kiss (2,4 g)",
+      "Passion Kiss (2,4 g)",
+      "Happiberry (2,4 g)"
+    ]
   },
   {
     "id": 535,
@@ -26465,7 +30700,24 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Orgasm (1,5 g)",
+      "tükendi",
+      "Dolce Vita (1,5 g)",
+      "On Edge (1,5 g)",
+      "Truth or Dare (1,5 g)",
+      "Voltage (1,5 g)",
+      "Idolized (1,5 g)",
+      "Turned On (1,5 g)",
+      "Show Off (1,5 g)",
+      "Breathless (1,5 g)",
+      "Devotion (1,5 g)",
+      "Aragon (1,5 g)",
+      "No Inhibition (1,5 g)",
+      "Ever After (1,5 g)",
+      "First Move (1,5 g)"
+    ]
   },
   {
     "id": 536,
@@ -26514,7 +30766,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rich Brown",
+      "Rosewood",
+      "Baby Pink",
+      "Warm Brown",
+      "Soft Nude",
+      "Cinnamon",
+      "Cherry Red",
+      "Toasty Brown"
+    ]
   },
   {
     "id": 537,
@@ -26563,7 +30825,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "17 Break The Rules (3,50 g)",
+      "1 Out Of Your League (3,50 g)",
+      "2 Too Good To Be True (3,50 g)",
+      "3 Now Or Never (3,50 g)",
+      "4 Never Ashamed (3,50 g)",
+      "5 High Standards (3,50 g)",
+      "6 Power Move (3,50 g)",
+      "7 Game Changer (3,50 g)",
+      "8 Risk It All (3,50 g)",
+      "9 Watch Me (3,50 g)",
+      "10 On Blast (3,50 g)",
+      "11 Beyond Limits (3,50 g)",
+      "12 Try Harder (3,50 g)",
+      "13 Put Some More (3,50 g)",
+      "14 Speechless (3,50 g)",
+      "15 Better Than Yours (3,50 g)",
+      "16 Main Character (3,50 g)",
+      "18 Say It Louder (3,50 g)",
+      "19 On Fire (3,50 g)",
+      "20 Out Of Control (3,50 g)"
+    ]
   },
   {
     "id": 538,
@@ -26612,7 +30896,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Mrs Kisses (3,5 g)",
+      "Wedding Belles (3,5 g)",
+      "First Dance (3,5 g)"
+    ]
   },
   {
     "id": 539,
@@ -26661,7 +30950,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "In Love With Olivia (3,5 g)",
+      "tükendi",
+      "Dancefloor Princess (3,5 g)",
+      "Amazing Amal (3,5 g)",
+      "Viva La Vergara (3,5 g)",
+      "Patsy Red (3,5 g)",
+      "Red Hot Susan (3,5 g)",
+      "Carina's Star (3,5 g)",
+      "Glowing Jen (3,5 g)"
+    ]
   },
   {
     "id": 540,
@@ -26710,7 +31010,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "09 Volcanic lava",
+      "01 Magnetic wave",
+      "02 Soft frequency",
+      "03 Pink plasma",
+      "04 Cosmic signal",
+      "05 Explosive touch",
+      "06 Electric spectrum",
+      "07 Adrenaline shot",
+      "08 Red inferno",
+      "10 Laser beam"
+    ]
   },
   {
     "id": 541,
@@ -26759,7 +31071,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Bare Pop - Brillant (3.90 g)",
+      "05 Melon Pop - Brillant (3.90 g)",
+      "13 Love Pop - Brillant (3.90 g)",
+      "Sugar Pop - Shine (3.90 g)",
+      "01 Blushing Pop - Mat (3.90 g)",
+      "17 Latte Pop - Mat (3.90 g)",
+      "18 Chili Pop - Mat (3.90 g)",
+      "19 Petal Pop - Mat (3.90 g)",
+      "Honey Pop - Satin (3.90 g)",
+      "35 Cola Pop -  Satiné (3.90 g)",
+      "39 Disco Pop - Satiné (3.90 g)",
+      "41 Petal Pop - Satiné (3.90 g)"
+    ]
   },
   {
     "id": 542,
@@ -26808,7 +31134,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2 Whatsoever (4,50 ml)",
+      "1 Less Is More (4,50 ml)",
+      "3 Simple As That (4,50 ml)",
+      "4 Laid Back (4,50 ml)",
+      "5 Nevermind (4,50 ml)",
+      "6 What's The Matter? (4,50 ml)",
+      "7 Not My Problem (4,50 ml)",
+      "9 Yes and? (4,50 ml)",
+      "10 No Brainer (4,50 ml)",
+      "11 Je Ne Sais Quoi (4,50 ml)",
+      "12 No Drama (4,50 ml)",
+      "13 Keep It Casual (4,50 ml)",
+      "14 Never Cared (4,50 ml)",
+      "15 No Big Deal (4,50 ml)"
+    ]
   },
   {
     "id": 543,
@@ -26857,7 +31199,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "babydoll (8,5 ml)",
+      "firecracker (8,5 ml)",
+      "tutu (8,5 ml)",
+      "hot tamale (8,5 ml)",
+      "prima donna (8,5 ml)"
+    ]
   },
   {
     "id": 544,
@@ -26906,7 +31255,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Uncensored",
+      "Uncuffed",
+      "Unlocked",
+      "Underdawg",
+      "STUNNA LIP PAINT 4ML. UNLAWFUL",
+      "STUNNA LIP PAINT UNINTERESTED 4ML",
+      "STUNNA LIP PAINT RIRI 4ML"
+    ]
   },
   {
     "id": 545,
@@ -26955,7 +31313,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "351 Natural Nude",
+      "251 Natural Peach",
+      "421 Natural Tea",
+      "451 Natural Coral",
+      "541 Natural Sienna",
+      "561 Natural Poppy",
+      "651 Natural Rose",
+      "761 Natural Fuchsia",
+      "771 Natural Berry",
+      "491"
+    ]
   },
   {
     "id": 546,
@@ -27004,7 +31374,26 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "131 Bois De Rose (3.5g)",
+      "220 Powerful (3.5g)",
+      "260 Eccentric (3.5g)",
+      "320 Defiant Coral (3.5g)",
+      "330 Impassioned (3.5g)",
+      "360 Fierce (3.5g)",
+      "410 Dynamic (3.5 g)",
+      "420 Rebellious Rose (3.5g)",
+      "440 Irresistible (3.5g)",
+      "450 Insolent Plum (3.5g)",
+      "520 Carnal (3.5g)",
+      "541 LA Noir  (3.5g)",
+      "561 Intense Nude (3.5g)",
+      "685 Midnight Kiss (3.5g)",
+      "822 Make You Blush (3.5g)",
+      "826 Modern Muse (3.5g)",
+      "862 Untamable (3.5 g)"
+    ]
   },
   {
     "id": 547,
@@ -27053,7 +31442,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "333 Persuasive (3.5g)",
+      "tükendi",
+      "420 Rebellious Rose (3.5g)",
+      "557 Fragile Ego (3.5g)",
+      "567 Knowing (3.5g)",
+      "569 Fearless (3.5g)",
+      "571 Independent (3.5g)",
+      "600 Visionary (3.5g)",
+      "616 Enigma (3.5g)",
+      "666 Captivated (3.5g)",
+      "669 Stolen Heart (3.5g)",
+      "682 After Hours (3.5g)",
+      "688 Idol (3.5g)",
+      "689 Dark Desire (3.5g)",
+      "699 Thrill Me (3.5g)",
+      "816 Suit Up (3.5g)",
+      "828 In Control (3.5g)",
+      "836 Love Bite (3.5g)",
+      "868 Influential (3.5g)",
+      "888 Power Kiss (3.5g)"
+    ]
   },
   {
     "id": 548,
@@ -27102,7 +31513,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Icon Baby (3,5 g)",
+      "90s Pink (3,5 g)",
+      "Candy Chic (3,5 g)",
+      "Red Carpet Pink (3,5 g)",
+      "Rose To Fame (3,5 g)"
+    ]
   },
   {
     "id": 549,
@@ -27152,7 +31570,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pink Ice",
+      "Sunset Gold",
+      "Peach Pearl",
+      "Rose Glow",
+      "Magenta Magic"
+    ]
   },
   {
     "id": 550,
@@ -27201,7 +31626,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "390 Redwood Star (2.2 g)",
+      "tükendi",
+      "222 Confident Nude (2.2 g)",
+      "120 Iconic Rose (2.2 g)",
+      "496 Berry Attitude (2.2 g)",
+      "425 Wild Rosewood (2.2 g)",
+      "550 Red Shock (2.2 g)",
+      "565 Fearless Brown (2.2 g)"
+    ]
   },
   {
     "id": 551,
@@ -27250,7 +31685,28 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Haze (saten bitiş)",
+      "tükendi",
+      "Tease (saten bitiş)",
+      "Praline (saten bitiş)",
+      "Taupe Beige (saten bitiş)",
+      "Rose Brown (saten bitiş)",
+      "Peach Bud (saten bitiş)",
+      "Soft Brown (saten bitiş)",
+      "Peach Amber (saten bitiş)",
+      "Dusty Rose (saten bitiş)",
+      "Sugar Plump (mat bitiş)",
+      "American Doll (mat bitiş)",
+      "Royal Red (mat bitiş)",
+      "Rose Dream (saten bitiş)",
+      "Butterscotch (saten bitiş)",
+      "Rum Punch (mat bitiş)",
+      "Blackberry (mat bitiş)",
+      "Honey Taupe (saten bitiş)",
+      "Berry Mocha (1,49 g)"
+    ]
   },
   {
     "id": 552,
@@ -27299,7 +31755,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "101 - Blushing Pink",
+      "tükendi",
+      "808 - Boundless Berry",
+      "102 – Starfire Gold",
+      "106 - Dazzling Peach",
+      "126 - Peach Coral",
+      "228 - Cheeky Fushia",
+      "414 - Sunny Tawny",
+      "436 - Spicy Caramel",
+      "600 - Anywhere Caffeine",
+      "606 - Wherever Walnut",
+      "506 - Endless Cacao",
+      "608 - Limitless Brown"
+    ]
   },
   {
     "id": 553,
@@ -27348,7 +31819,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "10 Pink ôh la la",
+      "12 Cherrylicious",
+      "16 Pinky promise",
+      "N18 - Vivid Berry (8.5ml)",
+      "22 Rosy plump",
+      "25 Toffe talk",
+      "33 Idôle nude",
+      "40 All the tea",
+      "60 Million-dollar berry",
+      "90 Berry bisou"
+    ]
   },
   {
     "id": 554,
@@ -27397,7 +31880,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Skinny Dip",
+      "Baby Rose",
+      "Heatwave",
+      "Malibu",
+      "Hot Beach",
+      "Papaya Treat",
+      "100 Degrees",
+      "Sunset Simmer",
+      "Island High",
+      "Tropic Bliss",
+      "Cinnamon Spritz",
+      "Bikini Blaze"
+    ]
   },
   {
     "id": 555,
@@ -27446,7 +31943,24 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "402 Chatbot (3,30 g)",
+      "403 Augmented Nude (3,30 g)",
+      "404 Data Stream (3,30 g)",
+      "405 Playback (3,30 g)",
+      "407 Pulsar Pink (3,30 g)",
+      "408 Voltage Rose (3,30 g)",
+      "409 Harmonic Drive (3,30 g)",
+      "410 Lilac Echo (3,30 g)",
+      "411 Scarlet Cluster (3,30 g)",
+      "413 Main Frame (3,30 g)",
+      "414 Upload (3,30 g)",
+      "415 Short Circuit (3,30 g)",
+      "416 Red Shift (3,30 g)",
+      "417 Soundwave (3,30 g)",
+      "422 Fuchsia Flux (3,30 g)"
+    ]
   },
   {
     "id": 556,
@@ -27495,7 +32009,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "06 -  Fig",
+      "02 - Pitaya",
+      "04 - Almond",
+      "05 - Cherry",
+      "03 - Lychee",
+      "01  - Pale Pink"
+    ]
   },
   {
     "id": 557,
@@ -27544,7 +32066,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Flora 330 + 4 g",
+      "Dahlia 318 + 4 g",
+      "Fauna 340 + 4 g",
+      "Instinct 326 + 4 g",
+      "Lynx 338 + 4 g",
+      "Oasis 312 + 4 g",
+      "Roar 324 + 4 g",
+      "Sahara 310 + 4 g",
+      "Tropic 332 + 4 g",
+      "Red 0 + 4 g",
+      "Cypress 328",
+      "Lotus 314",
+      "Shore 306",
+      "Tide 302"
+    ]
   },
   {
     "id": 558,
@@ -27593,7 +32131,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Love Talk (3,5 g)",
+      "Dream Talk (3,5 g)",
+      "Kiss Talk (3,5 g)",
+      "Naughty Talk (3,5 g)"
+    ]
   },
   {
     "id": 559,
@@ -27691,7 +32235,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 - FU$$Y (3,6 g)",
+      "tükendi",
+      "01 - Blaz'd Donut (3,6 g)",
+      "02 - Two'Lip Kiss (3,6 g)",
+      "03 - Fenty Glow (3,6 g)",
+      "05 - High'Biscus (3,6 g)",
+      "06 - Riri (3,6 g)",
+      "07 - Sorta Selfi$h (3,6 g)",
+      "08 - Sp'ice cold (3,6 g)",
+      "09 - Hot Chocolit (3,6 g)",
+      "10 - The MVP (3,6 g)",
+      "Rose Amber 37,3 g"
+    ]
   },
   {
     "id": 561,
@@ -27740,7 +32298,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Dazzle (3,3 ml)",
+      "Blaze (3,3 ml)",
+      "Flicker (3,3 ml)",
+      "Glimmer (3,3 ml)",
+      "Spark (3,3 ml)",
+      "Beam (3,3 ml)"
+    ]
   },
   {
     "id": 562,
@@ -27789,7 +32355,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "07. Pink Pout",
+      "tükendi",
+      "01. Universal Volume",
+      "02. XXL Nude",
+      "05. Pump Up It Red",
+      "08. Sparkling Dawn",
+      "09. Dazzling Plum(p)",
+      "10. Coral Flash",
+      "11. Starstruck Pink"
+    ]
   },
   {
     "id": 563,
@@ -27838,7 +32415,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Jalapeño",
+      "Sriracha",
+      "Tabasco red",
+      "Extreme heat"
+    ]
   },
   {
     "id": 564,
@@ -27887,7 +32470,26 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "015 Cherry",
+      "tükendi",
+      "001 Pink",
+      "006 Berry",
+      "007 Raspberry",
+      "012 Rosewood",
+      "031 Strawberry",
+      "041 Peachy",
+      "046 Cranberry",
+      "074 Jelly",
+      "077 Rosy Candy",
+      "081 Latte",
+      "085 Cupcake",
+      "086 Minty",
+      "087 Spicy",
+      "088 Mocha",
+      "104 Black Cherry"
+    ]
   },
   {
     "id": 565,
@@ -27936,7 +32538,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Thunder Stealer",
+      "2 Lucky Moonstone",
+      "3 Mellow Mallow",
+      "4 Honey Pure Love",
+      "5 California Sunshine",
+      "6 espresso stardust",
+      "7 Strawberry Star",
+      "8 purple dream",
+      "9 Cherry Flash",
+      "44 Nude Lavallière",
+      "11 Radiant Glass",
+      "12 Honey Moon",
+      "10 Stardust Love"
+    ]
   },
   {
     "id": 566,
@@ -27985,7 +32602,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "07 Fearless",
+      "01 Boss",
+      "02 Lover",
+      "03 Wild",
+      "04 Unstoppable",
+      "05 Muse",
+      "06 Empowered",
+      "08 Trendsetter",
+      "09 Heartbreaker",
+      "10 Self made",
+      "11 Limitless",
+      "12 Daring",
+      "13 Invincible",
+      "14 Powerful"
+    ]
   },
   {
     "id": 567,
@@ -28034,7 +32667,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Serenity",
+      "Affection",
+      "Happy",
+      "Joy",
+      "Delight",
+      "Hope",
+      "Wonder",
+      "Honesty"
+    ]
   },
   {
     "id": 568,
@@ -28083,7 +32726,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Ejder meyvesi",
+      "Kiraz",
+      "Böğürtlen",
+      "Şeftali"
+    ]
   },
   {
     "id": 569,
@@ -28132,7 +32781,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N°2 - Healthy Glow Plumper (3,2 g)",
+      "tükendi",
+      "N°5 - Pink Satisfaction (3,2 g)",
+      "N°4 - Nude Pleasure (3,2 g)",
+      "6 (3,2 g)",
+      "N°8 - Chili Delight (3,2 g)",
+      "N°12 - Coral Excitement (3,2 g)",
+      "N°13 - Flashing Rosé (3,2 g)",
+      "N°14 - Scenic Brown (3,2 g)",
+      "N°15 - Showcasing nude (3,2 g)",
+      "N°3 - Cacao No Boundary (3,2 g)",
+      "16 Watermelon High (3,2 g)",
+      "17 Strawberry Cloud (3,2 g)",
+      "44 Nude Lavaliére (3,2 g)",
+      "19 Salted Caramel (3.2 g)",
+      "18 Bubble Gum (3.2 g)"
+    ]
   },
   {
     "id": 570,
@@ -28181,7 +32848,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hot Cherry",
+      "tükendi",
+      "Hot Chocolit",
+      "Fenty Glow",
+      "Fu$$y",
+      "Lemon Lava",
+      "Glass Slipper"
+    ]
   },
   {
     "id": 571,
@@ -28230,7 +32906,26 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "061 Poppy Coral",
+      "tükendi",
+      "062 Bronzed Glow",
+      "063 Pink Lilac",
+      "001 Pink",
+      "002 Opal",
+      "006 Berry",
+      "010 Holo Pink",
+      "012 Rosewood",
+      "015 Cherry",
+      "038 Rose Nude",
+      "039 Intense Cinnamon",
+      "007 Raspberry | 6 ml",
+      "009 Intense Rosewood | 6 ml",
+      "020 Mahogany | 6 ml",
+      "026 Intense Mauve",
+      "072 Celestial Purple"
+    ]
   },
   {
     "id": 572,
@@ -28329,7 +33024,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "7 ml",
+      "Nude Honey",
+      "Pink Honey"
+    ]
   },
   {
     "id": 574,
@@ -28378,7 +33078,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "UUU-Baby (3,9 ml)",
+      "Bombshell (3,9 ml)",
+      "Coco (3,9 ml)",
+      "Foxy (3,9 ml)",
+      "Glassy (3,9 ml)",
+      "Honey (3,9 ml)",
+      "Posh (3,9 ml)",
+      "Sugar Baby (3,9 ml)",
+      "She Glitzy (3,9 ml)",
+      "She Fire (3,9 ml)",
+      "She Flirty (3,9 ml)"
+    ]
   },
   {
     "id": 575,
@@ -28427,7 +33140,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Fenty Glow (5,5 ml)",
+      "Fu$$y (5,5 ml)",
+      "$weet Mouth (5,5 ml)",
+      "Riri (5,5 ml)"
+    ]
   },
   {
     "id": 576,
@@ -28476,7 +33195,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Fever",
+      "02 Inferno",
+      "OUTRAGEOUS INTENSE-24 E-STORE"
+    ]
   },
   {
     "id": 577,
@@ -28525,7 +33249,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "01 Universal volume",
+      "05 Pump up it red",
+      "07 Pink pout",
+      "08 Sparkling dawn",
+      "11 Starstruck pink",
+      "02 Xxl nude"
+    ]
   },
   {
     "id": 578,
@@ -28574,7 +33307,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pink Lemonade",
+      "Strawberry Milk",
+      "Melon Spritz"
+    ]
   },
   {
     "id": 579,
@@ -28623,7 +33361,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Bronze Glow (2,3 g)",
+      "tükendi",
+      "Rose Glow (2,3 g)",
+      "Mauve Glow (2,3 g)",
+      "Mocha Glow (2,3 g)",
+      "Plum Glow (2,3 g)",
+      "Apricot Glow (2,3 g)",
+      "Bare Glow (2,3 g)",
+      "Pink Glow (2,3 g)",
+      "Blush Glow (2,3 g)",
+      "Cinnamon Glow (2,3 g)",
+      "Honey Glow (2,3 g)",
+      "Nude Glow (2,3 g)",
+      "Petal Glow (2,3 g)",
+      "Rosewood Glow (2,3 g)",
+      "Watermelon Glow (2,3 g)",
+      "Tangerine Glow (2,3 g)",
+      "Cherry Glow (2,3 g)",
+      "Strawberry Glow (2,3 g)",
+      "Pomegranate Glow (2,3 g)"
+    ]
   },
   {
     "id": 580,
@@ -28672,7 +33432,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rosy Mauve (2,7g)",
+      "Peach (2,7g)",
+      "Pearl (2,7g)",
+      "Pink (2,7 g)",
+      "Rose (2,7 g)",
+      "Rosy Copper (2,7g)"
+    ]
   },
   {
     "id": 581,
@@ -28721,7 +33489,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Fenty Glow",
+      "Honey Waffles",
+      "Cookie Jar",
+      "Fuit Snackz",
+      "Mauve Wives 01"
+    ]
   },
   {
     "id": 582,
@@ -28770,7 +33545,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "honey",
+      "raspberry",
+      "cherry",
+      "pıtaya",
+      "08 - Strawberry",
+      "chocolate",
+      "oıl 05"
+    ]
   },
   {
     "id": 583,
@@ -28819,7 +33603,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "cherry cola (4.7 ml)",
+      "tükendi",
+      "hocus cocoa (4.7 ml)",
+      "shirley (4.7 ml)",
+      "strawberry soda (4.7 ml)",
+      "skinny dripped (4.7 ml)",
+      "cosmo (4,7 ml)",
+      "cotton candy - ph (4,7 ml)",
+      "on ice (4,7 ml)",
+      "fembot (4,8 ml)"
+    ]
   },
   {
     "id": 584,
@@ -28868,7 +33664,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "130. Independent - Glitter Finish",
+      "tükendi",
+      "01. Boss - Pure effect",
+      "05. Strut - Glitter Finish",
+      "07. Lover - Glitter Finish",
+      "10. Wild - Glitter Finish",
+      "GLOSSED-20 25 YES HONEY!",
+      "35. Confident - Pearly Finish",
+      "45. Chic - Glitter Finish",
+      "GLOSSED-20 95 BOOKED",
+      "GLOSSED-20 100 BUSY",
+      "120 Fly",
+      "140. Stunning",
+      "GLOSSED-24 M"
+    ]
   },
   {
     "id": 585,
@@ -28917,7 +33729,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "7 rings",
+      "tükendi",
+      "fembot",
+      "jelly sandals",
+      "chuckie"
+    ]
   },
   {
     "id": 586,
@@ -28966,7 +33785,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Fearless pink",
+      "GLOSSED (SHADE EXTENSION)-25 B",
+      "GLOSSED (SHADE EXTENSION)-25 C"
+    ]
   },
   {
     "id": 587,
@@ -29015,7 +33839,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "258 Rose Glow (9,5 ml)",
+      "809 Lavender Glow (9,5 ml)",
+      "775 Poppy Glow (9,5 ml)",
+      "309 Honey Glow (9,5 ml)",
+      "319 Peach Glow (9,5 ml)",
+      "458 Pop Rose Glow (9,5 ml)"
+    ]
   },
   {
     "id": 588,
@@ -29064,7 +33896,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "21 SOFT PINK GLOW",
+      "tükendi",
+      "20 TRANSCULENT",
+      "22 PEACH GLOW",
+      "23 POMEGRANATE",
+      "24 FUCHSIA GLOW",
+      "NATURAL LIP PERFECTOR 25 MULBERRY GLOW"
+    ]
   },
   {
     "id": 589,
@@ -29113,7 +33954,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Juicy Apple Pop (3.4 ml)",
+      "01 Black Honey Pop (3.4 ml)",
+      "02 Chiffon Pop (3.4 ml)",
+      "03 Brulee Pop (3.4 ml)",
+      "05 Rosewater Pop (3.4 ml)",
+      "07 Airkiss Pop (3.4 ml)",
+      "08 Strawberry Pop (3.4 ml)",
+      "09 Sugarplum Pop (3.4 ml)"
+    ]
   },
   {
     "id": 590,
@@ -29162,7 +34013,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "06 - Fenty Glow",
+      "01 - FU$$Y",
+      "02 - Miss Jellyfish",
+      "03 - Rose Amber",
+      "04 - Razzberry Jamz",
+      "05 - Fro$ted Bunz",
+      "07 - $uperfine $uga"
+    ]
   },
   {
     "id": 591,
@@ -29211,7 +34071,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Chilled",
+      "01 Plunge",
+      "02 Granita",
+      "03 Sorbet"
+    ]
   },
   {
     "id": 592,
@@ -29260,7 +34126,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "hibiscus + net wt 2,7 g / 0,095 Oz.",
+      "rose + net wt 2,7 g / 0,095 Oz.",
+      "strawberry + net wt 2.7 g / 0.095 Oz.",
+      "orchid + net wt 2,7 g / 0,095 Oz.",
+      "Raspberry (2,7 g)"
+    ]
   },
   {
     "id": 593,
@@ -29407,7 +34280,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Juiced",
+      "Ion",
+      "Pump",
+      "Electron",
+      "Werk Out",
+      "Refresher",
+      "Quench"
+    ]
   },
   {
     "id": 596,
@@ -29456,7 +34338,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Spring Fling",
+      "tükendi",
+      "04 Miracle",
+      "07 Magic Spell",
+      "09 Hallucination",
+      "01 Pure",
+      "05 Marshmallow Ele",
+      "08 Tickled Pink",
+      "16 Name of shades",
+      "19 Name of shades",
+      "20 Lavender Latte",
+      "27 Cheeky Cherry",
+      "15 Berry Bisou"
+    ]
   },
   {
     "id": 597,
@@ -29505,7 +34402,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Juicy Pink Lady (3,9 ml)",
+      "Juicy Peach (3,9 ml)",
+      "Juicy Goji Berry (3,9 ml)"
+    ]
   },
   {
     "id": 598,
@@ -29554,7 +34456,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Original",
+      "Cotton Candy Kisses",
+      "Yummy Bear",
+      "Creamsicle Tickle",
+      "Blueberry Buzz"
+    ]
   },
   {
     "id": 599,
@@ -29603,7 +34512,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Peachy Nude + 4.7 ml",
+      "Peachy (4,7 ml)",
+      "Amber Sparkle (4,7 ml)",
+      "Soft Pink (4.7 ml)",
+      "Deep Taupe (4.7 ml)",
+      "Sun Baked (4.7 ml)",
+      "Guava (4.5 ml)",
+      "Toffee Rose (4.5 ml)",
+      "Butterscotch (4.5 ml)",
+      "Dusty Rose (4.5 ml)",
+      "Crystal (4,5 ml)",
+      "Honey Diamond (4,8 ml)"
+    ]
   },
   {
     "id": 600,
@@ -29652,7 +34575,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Crystal",
+      "tükendi",
+      "02 Fairy Glimmer",
+      "03 Festival Lilac",
+      "05 Anywhere Caffeine",
+      "06 Wherever Walnut",
+      "07 Limitless Brown",
+      "08 Boundless Berry"
+    ]
   },
   {
     "id": 601,
@@ -29701,7 +34634,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Blush Dreams  (4.5 ml)",
+      "Pink Cloud (4.5 ml)",
+      "Mauve (4.5 ml)",
+      "Rosewood Nights (4.5 ml)",
+      "Gül goncası (4,5 g)",
+      "Warm Beige (4,5 ml)",
+      "Bare Sand (4,5 ml)",
+      "Midnight Berry (4,5 g)"
+    ]
   },
   {
     "id": 602,
@@ -29750,7 +34693,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Mixed Berries (2,7 ml)",
+      "Cherry (2,7 ml)",
+      "Honeysuckle (2,7 ml)",
+      "Rose (2,7 ml)",
+      "MARACUJA JUICY PLUMPING LIP OIL BUFF RSE",
+      "Petal (2,7 ml)"
+    ]
   },
   {
     "id": 603,
@@ -29799,7 +34750,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pillow Talk Original (1,5 g + 0,8 g)",
+      "Pillow Talk Deep (1,5 g + 0,8 g)",
+      "Pillow Talk Medium (1,5 g + 0,8 g)",
+      "Pillow Talk Fair (1,5 g + 0,8 g)"
+    ]
   },
   {
     "id": 604,
@@ -29848,7 +34805,38 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pillowtalk (1,2 g)",
+      "tükendi",
+      "Pink Venus (1,2 g)",
+      "Bad Romance (1,2 g)",
+      "Kiss 'n' Tell (1,2 g)",
+      "Foxy Brown (1,2 g)",
+      "Hollywood Honey (1,2 g)",
+      "Berry Naughty (1,2 g)",
+      "Iconic Nude (1,2 g)",
+      "Love Trap (1,2 g)",
+      "Hot Gossip (1,2 g)",
+      "Pillow Talk Medium (1,2 g)",
+      "Pillow Talk Intense (1,2 g)",
+      "Walk of no Shame (1,2 g)",
+      "Lip Cheat - Icon Baby (1,2 g)",
+      "Lip Cheat - 90s Pink (1,2 g)",
+      "Lip Cheat - The Queen (1,2 g)",
+      "Lip Cheat - Mark Of A Kiss (1,2 g)",
+      "Lip Cheat - Red Carpet Red (1,2 g)",
+      "Pillow Talk Fair (1,2 g)",
+      "Kiss 'N' Tell (1,2 g)",
+      "Walk Of No Shame (1,2 g)",
+      "Supersize Me (1,2 g)",
+      "Pillow Talk Deep (1,2 g)",
+      "M.I.Kiss (1,2 g)",
+      "Crazy In Love (1,2 g)",
+      "Savage Rose (1,2 g)",
+      "Pillow Talk (1,2 g)",
+      "MIKiss (1,2 g)"
+    ]
   },
   {
     "id": 605,
@@ -29897,7 +34885,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "06 Rosewood mood (1,20 g)",
+      "01 Pink frosting (1,20 g)",
+      "02 Soft suede (1,20 g)",
+      "03 Touch of rose (1,20 g)",
+      "04 Everyday pink (1,20 g)",
+      "05 Marvelous mauve (1,20 g)",
+      "07 Fresh apricot (1,20 g)",
+      "08 Perfect beige (1,20 g)",
+      "09 Pink honey (1,20 g)",
+      "10 Sweet hazel (1,20 g)",
+      "11 Cinnamon brown (1,20 g)",
+      "12 Frappucino (1,20 g)",
+      "13 Frosted chestnut (1,20 g)",
+      "14 Muted brown (1,20 g)",
+      "15 Molasses (1,20 g)",
+      "16 Very cherry (1,20 g)",
+      "17 Always red (1,20 g)",
+      "18 Plum syrup (1,20 g)",
+      "19 Crushed raspberry (1,20 g)",
+      "20 Berry bang (1,20 g)"
+    ]
   },
   {
     "id": 606,
@@ -29946,7 +34956,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "100 - Whatever Black",
+      "tükendi",
+      "608 - Limitless Brown",
+      "500 - Boundless Bisque",
+      "602 - Completely Sepia",
+      "808 - Boundless Berry",
+      "506 - Endless Cacao",
+      "600 - Anywhere Caffeine",
+      "606 - Wherever Walnut",
+      "540 - Zesty Yellow (1.41 g)",
+      "206 - Dreamy Pink (1.41 g)",
+      "424 - Rouge For Ever (1.41 g)",
+      "830 - Cosmic Festival Lilac (1.41 g)",
+      "550 - Cosmic Magnetic Gold (1.41 g)",
+      "606 - Cosmic Wherever Walnut (1.41 g)",
+      "608 - Cosmic Limitless Brown (1.41 g)"
+    ]
   },
   {
     "id": 607,
@@ -29995,7 +35023,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N°3. Classic Red (0,7 g)",
+      "N°4. Deep Ruby (0,7 g)",
+      "N°5. Deep Aubergine (0,7 g)",
+      "N°6. Rosewood (0,7 g)",
+      "N°10. Fresh Berry (0,7 g)",
+      "N°11. Rose (0,7 g)",
+      "N°15. Deep Beige (0,7 g)",
+      "N°16. Nude Beige (0,7 g)",
+      "N°17. Light Brown (0,7 g)",
+      "N°18. Deep Brown (0,7 g)"
+    ]
   },
   {
     "id": 608,
@@ -30044,7 +35084,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Terracotta ink",
+      "02 Rosewood trace",
+      "03 Pink outline",
+      "04 Cocoa swipe",
+      "05 Espresso line",
+      "06 Brownie sketch"
+    ]
   },
   {
     "id": 609,
@@ -30093,7 +35141,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Vivid Pink (0,5 g)",
+      "Sandy Beige (0,5 g)",
+      "Honey Beige (0,5 g)",
+      "Terracotta (0,5 g)",
+      "Warm Brown (0,5 g)",
+      "LIP CONTOUR PINKY BROWN",
+      "Rusty Pink (0,5 g)",
+      "Muted Pink (0,5 g)",
+      "Very Berry (0,5 g)",
+      "Deep Rose (0,5 g)",
+      "Rich Brown (0,5 g)",
+      "LIP CONTOUR UNIVERSAL RED"
+    ]
   },
   {
     "id": 610,
@@ -30142,7 +35204,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Black Honey (0.3 g)",
+      "Nude Honey (0.3 g)",
+      "Pink Honey (0.3 g)"
+    ]
   },
   {
     "id": 611,
@@ -30191,7 +35258,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Walkyrie (2,4 g)",
+      "Bohemian Rhapsody (2,4 g)",
+      "Kiss Me Deadly (2,4 g)",
+      "Dolce Vita (2,4 g)",
+      "Cruella (2,4 g)",
+      "Take Me Home (2,4 g)",
+      "American Woman (2,4 g)",
+      "Endless Love (2,4 g)",
+      "Born To Be Wild (2,4 g)",
+      "Dragon Girl (2,4 g)"
+    ]
   },
   {
     "id": 612,
@@ -30240,7 +35319,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "10 - The Mvp (1,24 g)",
+      "08 - Brown'd Out (1,24 g)",
+      "09 - Coal Blooded (1,24 g)",
+      "06 - Extra Thigh (1,24 g)",
+      "07 - I Woodn't (1,24 g)",
+      "04 - Pnut Butta (1,24 g)",
+      "01 - Riri (1,24 g)",
+      "05 - Rubbabandz (1,24 g)",
+      "03 - Satin Panty (1,24 g)",
+      "02 - Thugz Blush Too (1,24 g)",
+      "11 - Apri'Caught (1,24 g)",
+      "12 - Bubble-tini (1,24 g)",
+      "13 - They So Vine (1,24 g)",
+      "14 - Bored Heaux (1,24 g)",
+      "15 - Whiskey (1,24 g)",
+      "TRACE'D OUT ROSE AMBER"
+    ]
   },
   {
     "id": 613,
@@ -30289,7 +35386,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "30 Lisa's Coral Glow (1,2 g)",
+      "tükendi",
+      "36 Nude Nowe (1,2 g)",
+      "100 Red Now (1,2 g)",
+      "101 Spicy Cherry (1,2 g)",
+      "21 Shade Throwing Beige (1,2 g)",
+      "33 Idôle Nude (1,2 g)",
+      "50 Sheik's Rosy Nude (1,2 g)",
+      "53 The Tea Is Hot (1,2 g)",
+      "60 Million-Dollar Berry (1,2 g)",
+      "62 Morning Espresso (1,2 g)"
+    ]
   },
   {
     "id": 614,
@@ -30338,7 +35448,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "170 - Rose Flair (1,2 g)",
+      "tükendi",
+      "128 - Lively Peony (1,2 g)",
+      "164 - Sassy Rhubarb (1,2 g)",
+      "402 - Untamed Fire (1,2 g)",
+      "412 - Forever Passion (1,2 g)",
+      "600 - Anywhere Caffeine (1,2 g)",
+      "606 - Wherever Walnut (1,2 g)"
+    ]
   },
   {
     "id": 615,
@@ -30387,7 +35507,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "015 Blush (1.2 g)",
+      "014 Rose Tea (1.2 g)",
+      "420 Rebellious Rose (1.2g)",
+      "008 Spice (1.2g)",
+      "018 Red (1.2g)",
+      "557 Fragile Ego (1.2g)",
+      "009 Taupe (1,2 g)",
+      "017 Mauve (1,2 g)"
+    ]
   },
   {
     "id": 616,
@@ -30436,7 +35566,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cherry Cola (1,2 g)",
+      "tükendi",
+      "I NEED A NUDE LIP CRAYON - NB4 NAYA",
+      "Cleo (1,2 g)",
+      "Liyan (1,2 g)",
+      "Storme (1,2 g)",
+      "Cherry Blossom (1,2 g)"
+    ]
   },
   {
     "id": 617,
@@ -30485,7 +35624,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Rosé (1,02 g)",
+      "Brownie (1,02 g)",
+      "Espresso (1,02 g)",
+      "Toffee (1,02 g)",
+      "Latte (1,02 g)",
+      "Pecan (1,02 g)",
+      "Cinnamon (1,02 g)",
+      "Sugar (1,02 g)"
+    ]
   },
   {
     "id": 618,
@@ -30534,7 +35683,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "101 - Blushing Pink",
+      "tükendi",
+      "808 - Boundless Berry",
+      "102 – Starfire Gold",
+      "106 - Dazzling Peach",
+      "126 - Peach Coral",
+      "228 - Cheeky Fushia",
+      "414 - Sunny Tawny",
+      "436 - Spicy Caramel",
+      "600 - Anywhere Caffeine",
+      "606 - Wherever Walnut",
+      "506 - Endless Cacao",
+      "608 - Limitless Brown"
+    ]
   },
   {
     "id": 619,
@@ -30583,7 +35747,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "LIP LINER INKDUO 01",
+      "tükendi",
+      "02 Beige (1,1 g)",
+      "03 Mauve (1,1 g)",
+      "04 Rosewood (1,1 g)",
+      "07 Poppy (1,1 g)",
+      "08 True Red (1,1 g)",
+      "09 Scarlet (1,1 g)",
+      "10 Violet (1,1 g)",
+      "11  Plum (1,1 g)"
+    ]
   },
   {
     "id": 620,
@@ -30632,7 +35808,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Post-Op Pink (0.38 g)",
+      "tükendi",
+      "Puffy Nude (0.38 g)",
+      "Hot & Spicy (0.38 g)",
+      "Cinnamon Swell (0.38 g)",
+      "Big Truffle (0.38 g)",
+      "Espresso Shot (0.38 g)",
+      "LIP INJECTION EXTREME LIPSHAPER - VOTED",
+      "LIP INJECTION EXTREME LIPSHAPER - HAPPIL",
+      "LIP INJECTION EXTREME LIPSHAPER - I DO"
+    ]
   },
   {
     "id": 621,
@@ -30681,7 +35869,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 My Honey Nude (1.20 g)",
+      "02 My Brownie Nude (1.20 g)",
+      "03 My Rosy Nude (1.20 g)",
+      "04 My Caramel Brown (1.20 g)",
+      "05 My Chocolate Brown (1.20 g)",
+      "06 My Rich Plum (1.20 g)",
+      "07 My Crimson Red (1.20 g)",
+      "08 My Devotion Red (1.20 g)",
+      "10 My Pinky Coral (1.20 g)",
+      "11 My Terracotta Peach (1.20 g)",
+      "12 My Pastel Pink (1.20 g)",
+      "13 My Candy Pink (1.20 g)",
+      "14 My Rosewood Pink (1.20 g)"
+    ]
   },
   {
     "id": 622,
@@ -30730,7 +35933,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "743 Rouge Zinnia (1,2 g)",
+      "tükendi",
+      "200 Nude Touch (1,2 g)",
+      "300 Nude Style (1,2 g)",
+      "720 Icone (1,2 g)",
+      "777 Fahrenheit (1,2 g)",
+      "277 Osée (1,2 g)",
+      "400 Nude Line (1,2 g)",
+      "624 Vérone (1,2 g)",
+      "909 Midnight (1,2 g)",
+      "964 Ambitious (1,2 g)",
+      "999 (1,2 g)",
+      "310",
+      "329",
+      "229",
+      "510"
+    ]
   },
   {
     "id": 623,
@@ -30779,7 +36000,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "N°11 Universel Transparent (1,1 g)",
+      "tükendi",
+      "N°1 Rose Mutin (1,1 g)",
+      "N°2 Brun Créateur (1,1 g)",
+      "CRAYON LEVRE N°3",
+      "N°4 Fuchsia Irresistible (1,1 g)",
+      "N°5 Coral Décolleté (1,1 g)",
+      "N°6 Carmin Escarpin (1,1 g)",
+      "N°7 Framboise Velours (1,1 g)",
+      "N°8 Parme Silhouette (1,1 g)",
+      "N°9 Moka Renversant (1,1 g)",
+      "N°10 Beige Mousseline (1,1 g)"
+    ]
   },
   {
     "id": 624,
@@ -30828,7 +36063,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Nude (1,2 g)",
+      "02 Beige Naturel (1,2 g)",
+      "03 Rose Thé (1,2 g)",
+      "04 Rose Passion (1,2 g)",
+      "05 Burgundy (1,2 g)",
+      "06 Chocolat (1,2 g)",
+      "07 Ruby (1,2 g)",
+      "09 Fushia (1,2 g)",
+      "10 Auburn (1,2 g)"
+    ]
   },
   {
     "id": 625,
@@ -30877,7 +36123,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Gifted (0,4 g)",
+      "Bold (0,4 g)",
+      "Fun (0,4 g)",
+      "Humble (0,4 g)",
+      "Lively (0,4 g)",
+      "Talented (0,4 g)",
+      "Wise (0,4 g)",
+      "Worthy (0,4 g)",
+      "Devoted (0,4 g)"
+    ]
   },
   {
     "id": 626,
@@ -30926,7 +36183,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "100 (0,5 g)",
+      "tükendi",
+      "Beyond (0,5 g)",
+      "Epic (0,5 g)",
+      "Extra (0,5 g)",
+      "Infinite (0,5 g)",
+      "Max (0,5 g)",
+      "Mega (0,5 g)",
+      "Supreme (0,5 g)"
+    ]
   },
   {
     "id": 627,
@@ -30975,7 +36243,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "06 Le Burgundy",
+      "04 Le Rouge Feu",
+      "02 Le Beige Praline",
+      "05 Le Rouge Rubis",
+      "01 Le Bois de Rose",
+      "03 Le Brun Tonka"
+    ]
   },
   {
     "id": 628,
@@ -31024,7 +36300,28 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Baby Roses (1,49 g)",
+      "tükendi",
+      "Sunbaked (1,49 g)",
+      "Warm Taupe (1,49 g)",
+      "Parchment (1,49 g)",
+      "Deep Taupe (1,49 g)",
+      "Cherry (1,49 g)",
+      "Chai (1,49 g)",
+      "Raisin (1,49 g)",
+      "Malt (1,49 g)",
+      "Sandstone (1,49 g)",
+      "Peach Amber (1,49 g)",
+      "Dusty Rose (1,49 g)",
+      "Cool Brown (1,49 g)",
+      "Rose Dream (1,49 g)",
+      "Hazelnut (1,49 g)",
+      "Auburn (1,49 g)",
+      "Blackberry (1,49 g)",
+      "Stormy (1,49 g)"
+    ]
   },
   {
     "id": 629,
@@ -31073,7 +36370,29 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Niels (1,4 g)",
+      "tükendi",
+      "Dmitry (1,4 g)",
+      "Hugh (1,4 g)",
+      "Johnny (1,4 g)",
+      "Daniel (1,4 g)",
+      "Angela (1,4 g)",
+      "Lauren (1,4 g)",
+      "Kelley (1,4 g)",
+      "Travis (1,4 g)",
+      "Jeff (1,4 g)",
+      "Almond (1,4 g)",
+      "Dark Chocolate (1,4 g)",
+      "Rich Mauve (1,4 g)",
+      "Smokey Pink (1,4 g)",
+      "Tan (1,4 g)",
+      "Burnt Sienna (1.1 g)",
+      "Flame Red (1.1 g)",
+      "Pink Peony (1.1 g)",
+      "Spiced Chai (1.1 g)"
+    ]
   },
   {
     "id": 630,
@@ -31122,7 +36441,30 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "16 Cherry Nectar",
+      "tükendi",
+      "01 Always Red",
+      "03 Strawberry Kissed",
+      "04 Endless Purple",
+      "06 Pink Souffle",
+      "13 Marvelous Mauve",
+      "17 Dark-red",
+      "23 Copper Blush",
+      "25 Coral Sunset",
+      "40 Pink Tea",
+      "41 Vintage Rosewood",
+      "78 Chili Pepper",
+      "81 Daydreaming",
+      "84 Rose Redux",
+      "86 English Rose",
+      "90 Sunrise Pink",
+      "94 Cherry Moon",
+      "99 Purple Red",
+      "02 Classic Beige",
+      "70 First Date"
+    ]
   },
   {
     "id": 631,
@@ -31269,7 +36611,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Mauve (0,5 g)",
+      "tükendi",
+      "Soft Pink (0,5 g)",
+      "nude (0,5 g)",
+      "dusty rose (0,5 g)",
+      "rosy brown (0,5 g)",
+      "honeysuckle (0,5 g)",
+      "blush pink (0,5 g)"
+    ]
   },
   {
     "id": 634,
@@ -31318,7 +36670,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Candid (1,2 g)",
+      "Incite (1,2 g)",
+      "Uncover (1,2 g)",
+      "Expose (1,2 g)",
+      "Silhouette (1,2 g)",
+      "Tempt 3 (1,2 g)",
+      "Flaunt (1,2 g)"
+    ]
   },
   {
     "id": 635,
@@ -31416,7 +36777,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "tükendi",
+      "eq - brun rosé nude (0,50 g)",
+      "harmonies - beige miel nude (0,50 g)",
+      "reverb - brun chocolat (0,50 g)",
+      "top line - rose nude (0,50 g)"
+    ]
   },
   {
     "id": 637,
@@ -31465,7 +36833,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "sephora",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Actress Red (1gr)",
+      "04 Feminine Mauve (1 gr)",
+      "05 CLASSY ROSE (1gr)",
+      "06 Stunning Nude (1 gr)"
+    ]
   },
   {
     "id": 638,
