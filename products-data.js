@@ -173,7 +173,19 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 2
+    "priceCount": 2,
+    "shadeOptions": [
+      "01 Light",
+      "05 Brighten",
+      "03 Fair",
+      "02 Nude",
+      "121 Light Honey Concealer",
+      "04 Honey Concealer",
+      "06 Neutralizer",
+      "07 Sand",
+      "Renk Eşitleyici Kapatıcı",
+      "Maybelline New York Instant Anti Age Eraser Kapatıcı - 00 Ivory"
+    ]
   },
   {
     "id": 4,
@@ -31613,7 +31625,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "medium 30ml",
+      "Dark.30 ml"
+    ]
   },
   {
     "id": 641,
@@ -31724,7 +31740,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "50+/PA+++ (No.23)"
+    ]
   },
   {
     "id": 643,
@@ -31871,7 +31890,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Mat Fondöten Professional Hd Matte Foundation 2 No",
+      "No;3",
+      "No:4"
+    ]
   },
   {
     "id": 646,
@@ -31920,7 +31944,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Flormar Perfect Coverage Yüksek Pigmentli & Yarı Parlak Bitişli SPF15 Fondöten",
+      "Yoğun Kapatıcı Su Bazlı Fondöten (Sıcak Alt Ton) 134 Golden Honey 8682536070614",
+      "121 Goldn Ntrl"
+    ]
   },
   {
     "id": 647,
@@ -31969,7 +31998,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "TUZ Fondöten Mantar Kafa Süngerli"
+    ]
   },
   {
     "id": 648,
@@ -32116,7 +32148,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "SPF50+/PA+++ No.23",
+      "Yüksek Kapatıcı Yarı Mat Cushion Fondöten Magic Cushion Cover Lasting No.25 SPF 50+ PA+++",
+      "Yüksek Kapatıcı Yarı Mat Cushion Fondöten Magic Cushion Cover Lasting No.27 SPF50+ PA+++"
+    ]
   },
   {
     "id": 651,
@@ -32312,7 +32349,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Detox & Protect Foundation Spf 15 Yoğun Kapatıcı Saten Bitişli Fondöten - 01 Beige",
+      "Cosmetics Detox & Protect Foundation Spf 15 Yoğun Kapatıcı Saten Bitişli Fondöten - 03 Medium Beige",
+      "Cosmetics Detox & Protect Foundation Spf 15 Yoğun Kapatıcı Saten Bitişli Fondöten - 04 Sand"
+    ]
   },
   {
     "id": 655,
@@ -32362,7 +32404,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kremi Yüksek Kapatıcı SPF50 Parlak Bitiş Nemlendirici 50ml, Makyaj Süngeri Set"
+    ]
   },
   {
     "id": 656,
@@ -32460,7 +32505,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hd Matte Professional Foundation No:1",
+      "Hd Matte Professional Foundation No;3",
+      "Hd Matte Professional Foundation No:4"
+    ]
   },
   {
     "id": 658,
@@ -32558,7 +32608,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "90",
+      "118",
+      "114",
+      "117",
+      "112",
+      "102",
+      "116"
+    ]
   },
   {
     "id": 660,
@@ -32607,7 +32666,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Beige",
+      "03 Medium Beige",
+      "04 Sand"
+    ]
   },
   {
     "id": 661,
@@ -32656,7 +32720,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "98",
+      "118",
+      "119",
+      "132",
+      "Uzun Süre Kalıcı Işıltılı Fondöten – 140",
+      "129",
+      "108",
+      "126"
+    ]
   },
   {
     "id": 662,
@@ -32754,7 +32828,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "120 Natural Beige",
+      "180 Dark Honey",
+      "140 Soft Sand",
+      "Fondöten New Era 160 Fondöten - 160 Warm Almond",
+      "130 Beige",
+      "150 Medium Beige",
+      "190 Deep Neutral"
+    ]
   },
   {
     "id": 664,
@@ -32803,7 +32886,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "5.5",
+      "Kapatıcı C Vitaminli Fondöten 03",
+      "MAYBELLİNE NEWYORK SUPER STAY SKİNTİNT FONDÖTEN 40-",
+      "MAYBELLİNE NEWYORK SUPER STAY SKİNTİNT FONDÖTEN 30-",
+      "20",
+      "10",
+      "21"
+    ]
   },
   {
     "id": 665,
@@ -32950,7 +33042,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Orta / Koyu Ton"
+    ]
   },
   {
     "id": 668,
@@ -33048,7 +33143,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "06 Light",
+      "08 Vanilla",
+      "12 Natural",
+      "10 Nude",
+      "03 Fair",
+      "04 Cool Porcelain",
+      "16 Natural Beige"
+    ]
   },
   {
     "id": 670,
@@ -33097,7 +33201,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Mat Fondöten - Truly Matte Foundation Fair 8680570466967",
+      "Mat Fondöten - Truly Matte Foundation Natural Beige 8680570467001",
+      "Rose Beige",
+      "Beige",
+      "Tan"
+    ]
   },
   {
     "id": 671,
@@ -33293,7 +33404,47 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(1N1 IVORY NUDE) 30ml",
+      "(1N0 PORCELAIN) 30ml",
+      "(0N1 ALABASTER) 30ml",
+      "(2W1 DAWN) 30ml",
+      "(1N2 ECRU) 30ml",
+      "(2N2 BUFF) 30ml",
+      "(1C0 SHELL) 30ml",
+      "(1C1 COOL BONE) 30ml",
+      "(3N1 IVORY BEIGE) 30ml",
+      "(2C2 PALE ALMOND) 30ml",
+      "(3W1 TAWNY) 30ml",
+      "(2C1 PURE BEIGE) 30ml",
+      "(1W2 SAND) 30ml",
+      "(2W1.5 NATURAL SUEDE) 30ml",
+      "(3C2 PEBBLE) 30ml",
+      "(2W0 WARM VANILLA) 30ml",
+      "(2C3 FRESCO) 30ml",
+      "(2W2 RATTAN) 30ml",
+      "(1W0 WARM PORCELAIN) 30ml",
+      "(3C0 COOL CRÈME) 30ml",
+      "(5W1 BRONZE) 30ml",
+      "(4C1 OUTDOOR BEIGE) 30ml",
+      "(1W1 BONE) 30ml",
+      "(4W1 HONEY BRONZE) 30ml",
+      "(4N1 SHELL BEIGE) 30ml",
+      "(6W2 NUTMEG) 30ml",
+      "(4N3 MAPLE SUGAR) 30ml",
+      "(4W4 HAZEL) 30ml",
+      "(3W1.5 FAWN) 30ml",
+      "(4W3 HENNA) 30ml",
+      "(3N2 WHEAT) 30ml",
+      "(2N3 DOLCE) 30ml",
+      "(2C0 COOL VANILLA) 30ml",
+      "(4W1.5 MEDIUM SPICE) 30ml",
+      "(4N2 SPICED SAND) 30ml",
+      "(5N1.5 MAPLE) 30ml",
+      "(3W2 CASHEW) 30ml",
+      "(1C2 PETAL) 30ml"
+    ]
   },
   {
     "id": 675,
@@ -33391,7 +33542,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Orta / Koyu Ton"
+    ]
   },
   {
     "id": 677,
@@ -33440,7 +33594,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Beyaz Ten",
+      "03 Buğday Ten"
+    ]
   },
   {
     "id": 678,
@@ -33649,7 +33807,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(SOĞUK ALT TON) Skin Lifting Fdt. 020 Pure Beige 8682536059558",
+      "Skin Lifting Sıkılaştırıcı Bakım Yapan Kremsi Dokulu SPF 30 Fondöten 050",
+      "(NÖTR ALT TON) Skin Lifting Fdt. 090 Honey 8682536059695",
+      "060 Golden Neutral 8682536059633",
+      "110 Golden Honey 8682536059732",
+      "(SOĞUK ALT TON) Skin Lifting Fdt. 140 Tan 8682536059794",
+      "160 Dark Caramel 8682536059831",
+      "040 Soft Beige 8682536059596",
+      "080 Golden Beige 8682536059671",
+      "150 Toffee 8682536059817",
+      "070 Medium Beige 8682536059657",
+      "(NÖTR ALT TON) Skin Lifting Fdt. 100 Sand 8682536059718",
+      "120 Desert Beige 8682536059756"
+    ]
   },
   {
     "id": 682,
@@ -33747,7 +33920,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Koruyucu 12g Pure",
+      "Kalıcı Zero Fit Cushion Kore Fondöten Doğal Bitişli Spf50 Pa Güneş Koruyucu 12g Tan",
+      "Zero Fit Cushion Uzun Süre Kalıcı Kore Fondöten Spf50 Pa Doğal Bitişli Refill X2 12g Beige",
+      "Koruyucu 12g Sand"
+    ]
   },
   {
     "id": 684,
@@ -34410,7 +34589,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Maybelline New York Lash Sensational Yelpaze Etkili Intense Black Maskara - Ekstra Siyah"
+    ]
   },
   {
     "id": 697,
@@ -34960,7 +35142,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Bordeaux Cashmere",
+      "Blue Seudede"
+    ]
   },
   {
     "id": 708,
@@ -35810,7 +35996,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmic Black Maskara",
+      "Kahverengi Maskara",
+      "Suya Dayanıklı Waterproof Maskara",
+      "Blue Mist Maskara",
+      "Space Diamond Elmas Işıltılı Maskara"
+    ]
   },
   {
     "id": 725,
@@ -35910,7 +36103,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Siyah Maskara Ultra Definiton Mascara Black",
+      "Mavi Maskara Ultra Definiton Mascara Saxe Blue"
+    ]
   },
   {
     "id": 727,
@@ -36147,7 +36344,28 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "109 Strawberry Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "107 Cherry Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "120 Rosy Mauve Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "114 Orange Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "110 Spicy Rose Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "123 Satin Grape Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "Likit Ruj - Unlimited Double Touch 102 Satin Rosy Beige 6 ml 8025272623308",
+      "104 Sangria Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "108 Satin Currant Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "105 Scarlet Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "Parlak Likit Ruj - Unlimited Double Touch 115 Fire Red 6 ml 8025272623438",
+      "112 Satin Peach Rose Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "101 Soft Rose Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "106 Satin Ruby Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "119 Rhododendron Pink Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "111 Satin Pink Camellia Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "121 Dark Rosy Chestnut Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+      "Likit Ruj - Unlimited Double Touch 118 Orchid 6 ml 8025272623469",
+      "Likit Ruj - Unlimited Double Touch 122 Bordeaux 6 ml 8025272623506"
+    ]
   },
   {
     "id": 731,
@@ -36196,7 +36414,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1 Adet Kozmetik Sihirli 24 Saat Kalıcı Renk Değiştiren Ruj",
+      "6 Adet Kozmetik Sihirli 24 Saat Kalıcı Renk Değiştiren Ruj"
+    ]
   },
   {
     "id": 732,
@@ -36245,7 +36467,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cappucino",
+      "True Colour Ultra Beauty Ruj - Totally Twig 2 Lİ SET",
+      "Sunset İkili Set",
+      "True Colour Ultra Beauty Ruj - Eternal Flame 2'li Lovider Cep Aynası",
+      "Color Trend Beauty Ruj - Pink Peach 2'li + Lovider Cep Aynası Hediye",
+      "Color Trend Beauty Ruj - Cappuccino 2'li + Lovider Cep Aynası Hediye",
+      "True Colour Ultra Beauty Ruj - Sunset",
+      "Stik Ruj Pink Peach",
+      "True Colour Ultra Beauty Ruj - Vintage Pink 2'li + Lovider Cep Aynası Hediye",
+      "True Colour Ultra Beauty Ruj - Totally Twig 2'li + Lovider Cep Aynası Hediye",
+      "True Colour Ultra Beauty Ruj - Rose Creme 2'li + Lovider Cep Aynası Hediye"
+    ]
   },
   {
     "id": 733,
@@ -36588,7 +36823,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(Mor) Water Lip Stain 003 Girl Gang 8682536042185",
+      "(PEMBE) Water Lip Stain 001 Infinite Pink 8682536042161",
+      "(turuncu) Water Lip Stain 004 Orange Juice 8682536042192",
+      "8682536042178"
+    ]
   },
   {
     "id": 740,
@@ -36637,7 +36878,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(NO.02 STRAWBERRY)",
+      "(NO.01 CHERRY)"
+    ]
   },
   {
     "id": 741,
@@ -36784,7 +37029,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 06 Cinnamon - Kahverengi",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 13 Impressive Red - Kırmızı",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 04 Terracotta - Pembe",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 09 Spicy Nude - Kahverengi",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 02 Optimistic Rose - Nude",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 05 Leather Mood - Kahverengi",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 08 Sophisticate Burgundy - Kırmızı",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 03 Confident Rose - Nude",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 14 Warm Cherry - Kırmızı",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 12 Flaming Heart Red - Kırmızı",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 01 The Better Me Nude - Nude",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 11 Vibrant Pink - Kırmızı",
+      "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 10 Fall in Pink - Kahverengi"
+    ]
   },
   {
     "id": 744,
@@ -36833,7 +37093,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Nude Honey 1.9g | Parlak, Nemli Ve Doğal Görünüm",
+      "Pink Honey 1.9g | Hafif Parlak, Nemli Ve Doğal Görünüm"
+    ]
   },
   {
     "id": 745,
@@ -36931,7 +37195,32 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "404 Rosy Biscuit 8025272631419",
+      "432 Hazelnut 8025272631686",
+      "FUSİON LİPSTİCK 406 WARM ROSE 8025272631433",
+      "431 Chocolate",
+      "407 Rosewood İpeksi Parlak Lipstick",
+      "412 Strawberry Pink İpeksi Parlak Lipstick",
+      "423 Magenta 8025272631600",
+      "430 Amaranth İpeksi Parlak Lipstick",
+      "416 Cherry Red 8025272631532",
+      "434 Chestnut 8025272631709",
+      "411 Coral 8025272631488",
+      "410 Watermelon İpeksi Parlak Lipstick",
+      "415 Raspberry İpeksi Parlak Lipstick",
+      "421 LİPSTİCK - SMART FUSİON LONG LASTİNG LİPSTİCK LİPSTİCK PİNK DEMBA5638",
+      "402 Peachy Nude İpeksi Parlak Lipstick",
+      "428 Grape 8025272631655",
+      "425",
+      "435 Scarlet Red 8025272631716",
+      "422 Crimson Red İpeksi Parlak Lipstick",
+      "409",
+      "420 Light Rosy Mauve 8025272631570",
+      "427 Lively Pink İpeksi Parlak Lipstick",
+      "LIPSTICK - MOİSTURİZİNG SMART FUSION LIPSTICK 429 PEARLY MAUVE DEMBA3454"
+    ]
   },
   {
     "id": 747,
@@ -36980,7 +37269,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Klasik Nude Kalıcı Dudak Dövmesi",
+      "& Klasik Nude 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "Lovely Kalıcı Dudak Dövmesi",
+      "Sakız Pembesi Kalıcı Dudak Dövmesi",
+      "& Lovely 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "Klasik Nude & Lovely 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "Klasik Nude & Sakız Pembesi 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "Lovely 3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "Klasik Nude 3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "Lovely & Sakız Pembesi 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "Sakız Pembesi 3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+      "& Sakız Pembesi 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi"
+    ]
   },
   {
     "id": 748,
@@ -37176,7 +37480,32 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "405 Vintage Rose 8025272631426",
+      "432 Hazelnut 8025272631686",
+      "FUSİON LİPSTİCK 406 WARM ROSE 8025272631433",
+      "431 Chocolate",
+      "407 Rosewood İpeksi Parlak Lipstick",
+      "412 Strawberry Pink İpeksi Parlak Lipstick",
+      "430 Amaranth İpeksi Parlak Lipstick",
+      "423 Magenta 8025272631600",
+      "434 Chestnut 8025272631709",
+      "416 Cherry Red 8025272631532",
+      "415 Raspberry İpeksi Parlak Lipstick",
+      "LIPSTICK - MOİSTURİZİNG SMART FUSION LIPSTICK 429 PEARLY MAUVE DEMBA3454",
+      "427 Lively Pink İpeksi Parlak Lipstick",
+      "422 Crimson Red İpeksi Parlak Lipstick",
+      "411 Coral 8025272631488",
+      "420 Light Rosy Mauve 8025272631570",
+      "409",
+      "402 Peachy Nude İpeksi Parlak Lipstick",
+      "410 Watermelon İpeksi Parlak Lipstick",
+      "425",
+      "421 LİPSTİCK - SMART FUSİON LONG LASTİNG LİPSTİCK LİPSTİCK PİNK DEMBA5638",
+      "428 Grape 8025272631655",
+      "435 Scarlet Red 8025272631716"
+    ]
   },
   {
     "id": 752,
@@ -37274,7 +37603,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(AÇIK GÜL KURUSU) Shine Kiss Me More Lls 005 Bare Beauty 8682536083751",
+      "(KOYU GÜL KURUSU) Shine Kiss Me More Lls 004 Fall Rose 8682536083737",
+      "Shine Kiss Me More Uzun Süre Kalıcı & Parlak Bitişli Likit Ruj - 002 Marmalade",
+      "(ŞEKER KIRMIZISI) Shine Kiss Me More Lls 011 Candy 8682536083874",
+      "(AÇIK MOR) Shine Kiss Me More Lls 008 Long Story 8682536083812"
+    ]
   },
   {
     "id": 754,
@@ -37385,7 +37721,26 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "120 Punchy",
+      "35 Cheeky",
+      "115 Peppy",
+      "Maybelline Super Stay Vinyl Ink Ruj 10 Lippy",
+      "130 Extra",
+      "55 Royal",
+      "155 Upbeat",
+      "20 Coy",
+      "145 Rogue",
+      "95 Captivated",
+      "160 Sultry",
+      "30 Unrivaled",
+      "100 Charmed",
+      "50 Wicked",
+      "Teddy Tint Kalıcı Likit Mat Ruj 15 Skinny Dip & Sky High Mini Maskara",
+      "Nudes Longwear Transfer Proof Gloss Lipstick, Punchy",
+      "Maybelline New York Super Stay Vinyl Ink Uzun Süre Kalıcı Likit Parlak Ruj 15 Peachy"
+    ]
   },
   {
     "id": 756,
@@ -37434,7 +37789,31 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "205 Nude Self 3614274132731",
+      "154 Love Berry 3614274132670",
+      "44 Nude Lavaliere 3614274132625",
+      "İçerikli Ruj 219 3614274741902",
+      "150 Nude Lingerie 3614274132663",
+      "206 Spicy Affair 3614274132748",
+      "201 Rosewood Blush 3614274132694",
+      "203 Blushed Mallow 3614274132717",
+      "204 Melted Honey 3614274132724",
+      "İçerikli Ruj 211 Ardent Carmine 3614274132793",
+      "200 Rosy Sand 3614274132687",
+      "122 Caramel Swirl 3614274132656",
+      "208 Raspberry Shine 3614274132762",
+      "207 Scenic Brown 3614274132755",
+      "80 Glowing Lava 3614274132649",
+      "12 Electric Love 3614274132618",
+      "İçerikli Ruj 215 3614274544749",
+      "209 Pink Desire 3614274132779",
+      "45 Coral Rush 3614274132632",
+      "210 Passion Red 3614274132786",
+      "212 Deep Ruby 3614274132809",
+      "İçerikli Ruj 10 3614274544732"
+    ]
   },
   {
     "id": 757,
@@ -37483,7 +37862,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Hot Rose Soyulabilir Kalıcı Ruj",
+      "Pink Pop Kalıcı Soyulabilir Ruj",
+      "Lip Oil Soyulabilir Kalıcı Ruj"
+    ]
   },
   {
     "id": 758,
@@ -37581,7 +37965,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 55 Knee High",
+      "Maybelline Super Stay Teddy Tint Uzun Süre Kalkıcı Likit Mat Tint 10 Current Mood",
+      "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 30 Coquettish",
+      "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 25 Baby Tee",
+      "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 35 July Forever",
+      "Maybelline Super Stay Teddy Tint Uzun Süre Kalkıcı Likit Mat Tint 40 Petalcore",
+      "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 50 Wild at Heart"
+    ]
   },
   {
     "id": 760,
@@ -37630,7 +38023,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "MACximal Mini Mac Silky Matte Lipstick - Ruby Woo 1.8g",
+      "MACximal Mini Mac Silky Matte Lipstick - Warm Teddy 1.8g",
+      "MACximal Mini Mac Silky Matte Lipstick - Mehr 1.8g",
+      "MACximal Mini Mac Silky Matte Lipstick - Chili 1.8g",
+      "MACximal Mini MAC Silky Matte Lipstick-EVERYBODY'S HEROINE",
+      "MACximal Mini Mac Silky Matte Lipstick - Diva 1.8g"
+    ]
   },
   {
     "id": 761,
@@ -37679,7 +38080,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Likit Mat Ruj 510 Charmer",
+      "70 Amazonian Kahverengi",
+      "Likit Mat Ruj 175 Ringleader Pembe",
+      "75 Fighter Kahverengi",
+      "City Edition Likit Mat Ruj 130 Self starter",
+      "Superstay Matte Ink Kalıcı Ruj 50 Voyager",
+      "City Edition Likit Mat Ruj 125 Inspirer",
+      "Likit Mat Ruj 15 Lover Pembe",
+      "Superstay Matte Ink Liquid Lipstick 10 Dreamer 3600531411183",
+      "Superstay Matte Ink Kalıcı Ruj 115 Founder",
+      "City Edition Likit Mat Ruj 135 Globe trotter",
+      "Likit Mat Ruj - SuperStay Matte Ink Liquid Lipstick 80 Ruler",
+      "Likit Mat Ruj 180 Revolutionary Pembe",
+      "60 Poet Nude",
+      "Likit Mat Ruj 500 Insider",
+      "90 Huntress Gri",
+      "City Edition Likit Mat Ruj 118 Dancer",
+      "Likit Mat Ruj 155 Savant Nude/pembe",
+      "Likit Mat Ruj 45 Escapist Koyu Mürdüm",
+      "Likit Mat Ruj 20 Kırmızı",
+      "Likit Mat Ruj - SuperStay Matte Ink City Edition Lipstick 105 Explorer 3600531513399",
+      "Likit Mat Ruj 05 Loyalist Nude",
+      "City Edition Likit Mat Ruj 110 Originator",
+      "City Edition Likit Mat Ruj 117 Ground breaker"
+    ]
   },
   {
     "id": 762,
@@ -37728,7 +38155,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "203 Charming Nude",
+      "210 Alluring Kırmızı",
+      "205 Mystick Nude",
+      "201 Darling Nemlendirici Parlak Ruj Nude",
+      "207 Idol Kahverengi",
+      "204 Ruler Pembe",
+      "202 Soulmate nude",
+      "208 Dreamer Pembe",
+      "211 Fearless Kırmızı",
+      "209 Limitless Pembe",
+      "212 Powerful Kırmızı"
+    ]
   },
   {
     "id": 763,
@@ -37875,7 +38315,44 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "740",
+      "771",
+      "779",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 763",
+      "723",
+      "754",
+      "753",
+      "747",
+      "757",
+      "781",
+      "775",
+      "Sevgililer Günü Özel Seri Yumuşak Sürümlü Nemlendirici Parlak Ruj No: 762",
+      "777",
+      "750",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 737",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 727",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 735",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 721",
+      "741",
+      "764",
+      "733",
+      "766",
+      "776",
+      "778",
+      "724",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 770",
+      "742",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 734",
+      "749",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 784",
+      "729",
+      "725",
+      "728",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 730",
+      "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 759"
+    ]
   },
   {
     "id": 766,
@@ -37973,7 +38450,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "No: 628",
+      "No: 638",
+      "No:619",
+      "No:639",
+      "LipstickNo: 635",
+      "No: 641"
+    ]
   },
   {
     "id": 768,
@@ -38022,7 +38507,46 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "27 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "22 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "25 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "02 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "31 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "12 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "MAT RUJ - VELVET MATTE LİPSTİCK NO:23-",
+      "01 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Ruj - Velvet Matte Lipstick No: 06",
+      "Ruj No: 20",
+      "14 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "05 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Ruj - Velvet Matte Lipstick No: 26",
+      "10 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Ruj 29",
+      "Mat Ruj - Velvet Matte Lipstick No: 19",
+      "07 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Lipstick No.11/ Delist",
+      "No:13 Hot Pink Mat Ruj 8691190466138",
+      "Mat Ruj - Velvet Matte Lipstick No: 38",
+      "21 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Ruj 34",
+      "Mat Ruj - Velvet Matte Lipstick No: 15",
+      "Ruj 09",
+      "35 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Ruj 04",
+      "32 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "08 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Ruj 37",
+      "Ruj 33",
+      "39 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "No 01",
+      "03 Yoğun Pigmentli Kadifemsi Mat Ruj",
+      "Mat Ruj - Velvet Matte Lipstick No: 17",
+      "No:24 Mat Ruj",
+      "Mat Ruj 28",
+      "18 Yoğun Pigmentli Kadifemsi Mat Ruj"
+    ]
   },
   {
     "id": 769,
@@ -38097,7 +38621,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "146",
+      "159",
+      "155"
+    ]
   },
   {
     "id": 770,
@@ -38195,7 +38724,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "07 Warm Chocolatte Kahverengi",
+      "06 Cinnamon Kahverengi",
+      "13 Impressive Red Kırmızı",
+      "09 Spicy Nude Kahverengi",
+      "02 Optimistic Rose Nude",
+      "05 Leather Mood Kahverengi",
+      "08 Sophisticate Burgundy Kırmızı",
+      "03 Confident Rose Nude",
+      "14 Warm Cherry Kırmızı",
+      "12 Flaming Heart Red Kırmızı",
+      "11 Vibrant Pink Kırmızı",
+      "01 The Better Me Nude Nude",
+      "10 Fall in Pink Kahverengi"
+    ]
   },
   {
     "id": 772,
@@ -38294,7 +38838,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Show by Pastel Show By Your Sweetness Freckle Pen Çil Kalemi",
+      "Pastel Show Your Sweetness Freckle Pen - Çil Kalemi (8690644247019)",
+      "Your Sweetness Çil Kalemi 01"
+    ]
   },
   {
     "id": 774,
@@ -38392,7 +38941,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Suya Dayanıklı Siyah Göz Kalemi - 13 Saat Kalıcı Etki - Extreme Lasting Effect Eye Pencil Black",
+      "Extreme Coffee Bean",
+      "Extreme Eggplant",
+      "Yeşil Göz Kalemi Extreme Khaki",
+      "Suya Dayanıklı Gece Mavisi Göz Kalemi - 13 Saat Kalıcı Etki - Extreme Lasting Effect Eye Pencil",
+      "Suya Dayanıklı Mavi Göz Kalemi - 13 Saat Kalıcı Etki - Extreme Lasting Effect Eye Pencil Royal Blue",
+      "Yeşil Göz Kalemi Extreme Emerald Green"
+    ]
   },
   {
     "id": 776,
@@ -38516,7 +39074,33 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "409 Mat Bitişli Yumuşak Göz Kalemi",
+      "405 Mat Bitişli Yumuşak Göz Kalemi",
+      "410 Mat Bitişli Yumuşak Göz Kalemi",
+      "423 Mat Bitişli Yumuşak Göz Kalemi",
+      "419 Mat Bitişli Yumuşak Göz Kalemi",
+      "407 Mat Bitişli Yumuşak Göz Kalemi",
+      "425 Mat Bitişli Yumuşak Göz Kalemi",
+      "414 Mat Bitişli Yumuşak Göz Kalemi",
+      "422 Mat Bitişli Yumuşak Göz Kalemi",
+      "408 Mat Bitişli Yumuşak Göz Kalemi",
+      "416 Mat Bitişli Yumuşak Göz Kalemi",
+      "421 Mat Bitişli Yumuşak Göz Kalemi",
+      "403 Mat Bitişli Yumuşak Göz Kalemi",
+      "420 Mat Bitişli Yumuşak Göz Kalemi",
+      "412 Mat Bitişli Yumuşak Göz Kalemi",
+      "424 Mat Bitişli Yumuşak Göz Kalemi",
+      "406 Mat Bitişli Yumuşak Göz Kalemi",
+      "413 Mat Bitişli Yumuşak Göz Kalemi",
+      "418 Mat Bitişli Yumuşak Göz Kalemi",
+      "417 Mat Bitişli Yumuşak Göz Kalemi",
+      "411 Mat Bitişli Yumuşak Göz Kalemi",
+      "415 Mat Bitişli Yumuşak Göz Kalemi",
+      "402 Mat Bitişli Yumuşak Göz Kalemi",
+      "404 Mat Bitişli Yumuşak Göz Kalemi"
+    ]
   },
   {
     "id": 778,
@@ -38664,7 +39248,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Kahverengi Göz Kalemi - Extreme Umber",
+      "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Kahverengi Göz Kalemi - Extreme Coffee Bean",
+      "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Kahverengi Göz Kalemi - Extreme Eggplant",
+      "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Yeşil Göz Kalemi - Extreme Khaki",
+      "Gece Mavisi Göz Kalemi 13 Saat Kalıcı Etki Extreme Lasting Effect Eye Pencil",
+      "Mavi Göz Kalemi 13 Saat Kalıcı Etki Extreme Lasting Effect Eye Pencil Royal Blue",
+      "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Yeşil Göz Kalemi - Extreme Emerald Green"
+    ]
   },
   {
     "id": 781,
@@ -38958,7 +39551,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Silk Tattoo Liner Suya Dayanıklı İpeksi Jel Göz Kalemi - 01 Midnight - Siyah (Mat)",
+      "Cosmetics Silk Tattoo Liner Suya Dayanıklı İpeksi Jel Göz Kalemi - 04 Deep Wine - Bordo (Mat)",
+      "Cosmetics Silk Tattoo Liner Suya Dayanıklı İpeksi Jel Göz Kalemi - 03 Antique Bronze - Bronz (Işıltılı)"
+    ]
   },
   {
     "id": 787,
@@ -39057,7 +39655,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Tattoo Liner Jel Göz Kalemi - Berry Bliss - Mürdüm",
+      "Tattoo Liner Jel Göz Kalemi - Blue Disco - Mavi",
+      "Tattoo Liner Jel Göz Kalemi - 821 Stardust Chrome",
+      "Tattoo Liner Jel Göz Kalemi - Vivid Green - Yeşil",
+      "Tattoo Liner Jel Göz Kalemi - Tealtini - Koyu Yeşil",
+      "Tattoo Liner Jel Göz Kalemi - 822 Space Graphite",
+      "Tattoo Liner Jel Göz Kalemi - 823 Aurora Flip",
+      "Tattoo Liner Jel Göz Kalemi - Galatic Cobalt - Saks Mavisi",
+      "Tattoo Liner Jel Göz Kalemi - Ultra Pink - Pembe",
+      "Tattoo Liner Jel Göz Kalemi - Purple Pop - Mor",
+      "Tattoo Liner Jel Göz Kalemi - 950 Rich Clay (KIZIL KAHVERENGİ)"
+    ]
   },
   {
     "id": 789,
@@ -39106,7 +39717,30 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Brown Black",
+      "Bronze",
+      "Forest Green",
+      "Azure Blue",
+      "Navy",
+      "Fearless Sapphire",
+      "Emerald İkili Set",
+      "Göz Kalemi Navy 2'li + Lovider Cep Aynası",
+      "Hot Brown",
+      "Fierce Amber",
+      "Majestic Plum İkili Set",
+      "Bold Amethyst",
+      "Göz Kalemi Brown Black 2'li + Lovider Cep Aynası Hediye",
+      "Göz Kalemi Bronze 2'li + Lovider Cep Aynası Hediye",
+      "Göz Kalemi Cherry Red 2'li + Lovider Cep Aynası Hediye",
+      "Göz Kalemi Starry Night 2'li + Lovider Cep Aynası",
+      "Göz Kalemi Azure Blue 2'li + Lovider Cep Aynası Hediye",
+      "Asansörlü Göz Kalemi Cosmic Brown 2'li + Lovider Cep Aynası",
+      "Göz Kalemi Forest Green 2'li + Lovider Cep Aynası Hediye",
+      "Daring Citrine",
+      "Purple Gaze"
+    ]
   },
   {
     "id": 790,
@@ -39155,7 +39789,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kahverengi Tattoo Liner Jel Göz Kalemi 911 Smooth Walnut",
+      "Blue Disco Mavi",
+      "821 Stardust Chrome",
+      "Vivid Green Yeşil",
+      "823 Aurora Flip",
+      "Galatic Cobalt Saks Mavisi",
+      "Tealtini Koyu Yeşil",
+      "822 Space Graphite",
+      "Ultra Pink Pembe",
+      "Purple Pop Mor",
+      "950 Rich Clay (KIZIL KAHVERENGİ)"
+    ]
   },
   {
     "id": 791,
@@ -39204,7 +39851,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "08 Burgundy Yoğun Pigmentli Dudak Kalemi",
+      "01 Blush Haze Yoğun Pigmentli Dudak Kalemi",
+      "03 Rosy Beige Yoğun Pigmentli Dudak Kalemi",
+      "06 Amber Bloom Yoğun Pigmentli Dudak Kalemi",
+      "11 Rosy Pink Yoğun Pigmentli Dudak Kalemi",
+      "10 Pink Berry Yoğun Pigmentli Dudak Kalemi",
+      "09 Vintage Rose Yoğun Pigmentli Dudak Kalemi",
+      "04 Rosewood Yoğun Pigmentli Dudak Kalemi"
+    ]
   },
   {
     "id": 792,
@@ -39302,7 +39959,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Infaillible Automatic Jel Göz Kalemi - Kahverengi",
+      "L'Oréal Paris Automatic Jel Infaillible Göz Kalemi - 13 Velvet Bordeaux",
+      "Zümrüt Yeşili",
+      "L'Oréal Paris Infaillible Göz Kalemi - 12 Bronzed Espresso",
+      "Mavi",
+      "Infaillible Automatic Jel Göz Kalemi - Mat Siyah",
+      "Superliner Stylo Waterroof Gel Eyeliner Taupe Grey",
+      "Superliner Stylo Waterroof Gel Eyeliner 314 Rebel Blue",
+      "İnfaillible Yeşil Stylo Eyeliner 24 Saat Kalıcılık Su Geçirmez Özellikli- Kaki-313",
+      "Superliner Stylo Waterroof Gel Eyeliner 320 Nude Obbession",
+      "L'Oreal Paris Infaillable Automatic Jel Göz Kalemi - Yoğun Siyah",
+      "Superliner Stylo Waterroof Gel Eyeliner 312 Flawless Grey"
+    ]
   },
   {
     "id": 794,
@@ -39364,7 +40035,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Pearly White Uzun Süre Kalıcı, Suya Dayanıklı",
+      "13 Pearly Violet Uzun Süre Kalıcı, Suya Dayanıklı",
+      "11 Metallic Blue Teal Kalıcı, Suya Dayanıklı",
+      "02 Pearly Gold 71",
+      "10 Metallic Ivy Green 61",
+      "Likit Eyeliner - Intense Colour Long Lasting Eyeliner 12 Metallic Turquoise 8025272623223",
+      "06 Mat Ebony Uzun Süre Kalıcı, Suya Dayanıklı"
+    ]
   },
   {
     "id": 795,
@@ -39462,7 +40142,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Siyah 3614273436366",
+      "01 Noir Onyx 3614273436359",
+      "06 Yeşil 3614273436403",
+      "11 Radiant White 3614274376807",
+      "07 Mavi 3614273436410",
+      "08 Rêve Anthracite 3614273436427"
+    ]
   },
   {
     "id": 797,
@@ -39511,7 +40199,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Smolder 1.36 G",
+      "Göz Kalemi - Eye Kohl Feline 1.36 G 773602567317",
+      "Costa Riche 1.36 G",
+      "Minted 1.36 G"
+    ]
   },
   {
     "id": 798,
@@ -39560,7 +40254,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Midnight Black Siyah",
+      "Green With Envy",
+      "Under The Sea"
+    ]
   },
   {
     "id": 799,
@@ -39756,7 +40455,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmic Brown",
+      "Saturn Grey",
+      "Majestic Plum",
+      "Starry Night Blue",
+      "Emerald",
+      "Glimmerstick Asansörlü Göz Kalemi - Saturn Grey",
+      "Siyah Göz Kalemi Black 8681298934820"
+    ]
   },
   {
     "id": 803,
@@ -39805,7 +40513,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01. Siyah 1.1 Gr 56447",
+      "Lacivert 94458",
+      "03. Antrasit 1.2 Gr 57013"
+    ]
   },
   {
     "id": 804,
@@ -39854,7 +40567,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Göz Kalemi 101"
+    ]
   },
   {
     "id": 805,
@@ -39952,7 +40668,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Infaillable Automatic Jel Göz Kalemi - Yoğun Siyah",
+      "Infaillible Automatic Jel Göz Kalemi - Kahverengi",
+      "Infaillable Automatic Jel Göz Kalemi - Zümrüt Yeşili",
+      "Infaillible Göz Kalemi 12 Bronzed Espresso",
+      "Infaillable Automatic Jel Göz Kalemi - Mavi",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner Taupe Grey",
+      "Infaillible Automatic Jel Göz Kalemi - Mat Siyah",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner 312 Flawless Grey",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-320 Nude Obbession",
+      "İnfaillible Yeşil Stylo Eyeliner 24 Saat Kalıcılık Su Geçirmez Özellikli- Kaki-313",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-314 Rebel Blue"
+    ]
   },
   {
     "id": 807,
@@ -40001,7 +40730,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Beyaz Göz Kalemi - L'oréal Paris Paradise Le Khol Göz Kalemi 120 Immaculate Snow",
+      "Siyah Göz Kalemi - L'oréal Paris Paradise Le Khol Göz Kalemi 101 Midnight Black",
+      "Le Liner Signature Eyeliner Su Geçirmez Asansörlü Sarı Göz Kalemi",
+      "Gel Crayon Eyeliner Su Geçirmez Özellikli -Beyaz Jel Göz Kalemi-14 Numara White",
+      "Gel Crayon Eyeliner Su Geçirmez Özellikli -Uptown Beige 013 Numara İnfaillible Jel Göz Kalemi"
+    ]
   },
   {
     "id": 808,
@@ -40050,7 +40786,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kahve",
+      "Yeşil 58772",
+      "Granit Gri 20990"
+    ]
   },
   {
     "id": 809,
@@ -40148,7 +40889,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Infaillable Automatic Jel Göz Kalemi - Yoğun Siyah",
+      "L'Oréal Paris Automatic Jel Infaillible Göz Kalemi - 13 Velvet Bordeaux",
+      "Infaillable Automatic Jel Göz Kalemi - Zümrüt Yeşili",
+      "L'Oréal Paris Infaillible Göz Kalemi - 12 Bronzed Espresso",
+      "Infaillable Automatic Jel Göz Kalemi - Mavi",
+      "Mat Siyah",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner Taupe Grey",
+      "İnfaillible Yeşil Stylo Eyeliner 24 Saat Kalıcılık Su Geçirmez Özellikli- Kaki-313",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner 312 Flawless Grey",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-320 Nude Obbession",
+      "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-314 Rebel Blue"
+    ]
   },
   {
     "id": 811,
@@ -40246,7 +41000,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Brown Sugar Kahverengi",
+      "Green With Envy",
+      "Under The Sea"
+    ]
   },
   {
     "id": 813,
@@ -40346,7 +41105,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "54'lü Mat-sedefli Far Paleti",
+      "MUJGAN Siyah 54lü Mat Sedefli Far Paleti"
+    ]
   },
   {
     "id": 815,
@@ -40396,7 +41159,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Flormar Mono Yüksek Pigmentli & Doğal Işıltılı Kompakt Göz Farı"
+    ]
   },
   {
     "id": 816,
@@ -40496,7 +41262,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (301 Winter Salt)",
+      "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (304 New Planet)",
+      "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (303 Rose Space)",
+      "(ORANGE PEKOE)",
+      "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (302 Summer Fizz)",
+      "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (307 Telepathy)",
+      "Kalıcı, Topaklanma Yapmayan, Simli Tekli Krem Far Modern Shadow Glitter (305 Bridal Peach)",
+      "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (308 Twinverse)"
+    ]
   },
   {
     "id": 818,
@@ -40609,7 +41385,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "004 FOLLOW YOUR HEART",
+      "005 NUDE DUDE",
+      "006 FELT CUTE",
+      "001 FALLEN ANGEL",
+      "007 GRAND GALAXY"
+    ]
   },
   {
     "id": 820,
@@ -40659,7 +41442,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "567 Flawless",
+      "383 Mystical",
+      "151 Essential"
+    ]
   },
   {
     "id": 821,
@@ -40709,7 +41497,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "No 3",
+      "No:05 | Yüksek Pigment, Koyu Krem",
+      "Mat Beyaz (GÖZ FARI) No:02",
+      "No:01"
+    ]
   },
   {
     "id": 822,
@@ -40809,7 +41603,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "MUJGAN 40'lı Sedefli- Mat Far Paleti"
+    ]
   },
   {
     "id": 824,
@@ -40959,7 +41756,23 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "23 Dried Rose Pembe",
+      "24 Smell Of Coffee Nude",
+      "13 Secret Kiss Işıltılı",
+      "04 Dark Caramel Mor",
+      "10 Love Whisper Bordo",
+      "08 Party Mood Kırmızı",
+      "07 Mellow Thought Pembe",
+      "12 Magic Touch Işıltılı",
+      "03 Just Nude Nude",
+      "06 It's Fantastic Pembe",
+      "11 Only You Işıltılı",
+      "09 Heartbreaker Kırmızı",
+      "05 Mystic Aura Kahverengi",
+      "01 Nude Style Nude"
+    ]
   },
   {
     "id": 827,
@@ -41159,7 +41972,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Nemli Bitiş Ve Işıltılı Görünüm Sunan Göz Farı M Dewy Glossy Eyes (WHİTE BEACH)",
+      "(304 New Planet)",
+      "(303 Rose Space)",
+      "(302 Summer Fizz)",
+      "Nemli Bitiş Ve Işıltılı Görünüm Sunan Göz Farı M Dewy Glossy Eyes (ORANGE PEKOE)",
+      "(307 Telepathy)",
+      "Krem Far Modern Shadow Glitter (305 Bridal Peach)",
+      "(308 Twinverse)"
+    ]
   },
   {
     "id": 831,
@@ -41309,7 +42132,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Ultimate Shadow Palette - Paradise Shock Göz Farı Paleti",
+      "Ultimate Shadow Palette - Vintage Jean Baby Göz Farı Paleti",
+      "Utopia Ultimate Far Paleti 800897207779",
+      "Ultımate Shadow Palette - Phoenıx",
+      "Palette Brights 800897017651"
+    ]
   },
   {
     "id": 834,
@@ -41422,7 +42252,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "004 Follow Your Heart 8682536048460",
+      "002 Ready The Party 8682536048446",
+      "006 Felt Cute 8682536048484",
+      "001 Fallen Angel 8682536048439",
+      "005 Nude Dude 8682536048477",
+      "007 Grand Galaxy 8682536048491"
+    ]
   },
   {
     "id": 836,
@@ -41672,7 +42510,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Mikro Sim Glitter - Goldshadow"
+    ]
   },
   {
     "id": 841,
@@ -41722,7 +42563,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "333 Glamorous Galaxy 15,6 G",
+      "999 All Seasons 15,6 G",
+      "12 li Far Paleti - Eyeshadow Palette 111 Tropical Bouquet 15,6 g"
+    ]
   },
   {
     "id": 842,
@@ -42178,7 +43024,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Eyeliner Yüksek Pigmentli Uzun Süre Kalıcı Mat Jel Eyeliner - Yoğun Gel Liner 01 Black",
+      "Eyeliner Yüksek Pigmentli Uzun Süre Kalıcı Mat Jel Eyeliner - Yoğun Gel Liner 02 Deep Mohang"
+    ]
   },
   {
     "id": 851,
@@ -42423,7 +43273,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Epic Ink Liner Eyeliner - Midnight Rise",
+      "Epic Ink Liner Eyeliner - Vintage Baby",
+      "Epic Ink Liner - Marshmallow"
+    ]
   },
   {
     "id": 856,
@@ -42632,7 +43487,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Siyah Göz Kalemi Inkliner Eyeliner Black",
+      "Gri Göz Kalemi Inkliner Eyeliner Orion Gray",
+      "Yeşil Göz Kalemi Inkliner Eyeliner Sacramento",
+      "Lacivert Göz Kalemi Inkliner Eyeliner Cobalt Blue"
+    ]
   },
   {
     "id": 860,
@@ -42730,7 +43591,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Elegant Matte Dipliner Waterproof Suya Dayanıklı - 04 Ocean Green - Yeşil",
+      "Cosmetics Elegant Matte Dipliner Waterproof Suya Dayanıklı - 03 Navy Blue - Mavi"
+    ]
   },
   {
     "id": 862,
@@ -42926,7 +43791,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "8690131734015"
+    ]
   },
   {
     "id": 866,
@@ -43380,7 +44248,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Maybelline Hyper Precise All Day Eyeliner -700 Siyah",
+      "710 Forest Brown kahverengi",
+      "Master Precise Curvitude Liquid Siyah Eyeliner-Carbon Film Formül Kavisli Uç-30154636",
+      "720 Parrot",
+      "Likit Liner 730 Jungle Green"
+    ]
   },
   {
     "id": 875,
@@ -43772,7 +44647,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Suya Dayanıklı Siyah Dipliner 8691190198831",
+      "Dıplıner Black",
+      "Suya Dayanıklı Siyah Dipliner 8691190198831 Eyeliner"
+    ]
   },
   {
     "id": 883,
@@ -43821,7 +44701,31 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "90",
+      "Suya Dayanıklı Mat Eyeliner - Eyeliner Gel Matte It Be 68 5907587149687",
+      "95",
+      "69",
+      "75",
+      "99",
+      "61 5.5 g 5901905005495",
+      "67",
+      "Suya Dayanıklı Jel Eyeliner - Eyeliner Gel Italian Kiss 65 5907587149656",
+      "96",
+      "86",
+      "87",
+      "89",
+      "79",
+      "76",
+      "66",
+      "84",
+      "62 5.5 g 5901905005501",
+      "92",
+      "94",
+      "78",
+      "74"
+    ]
   },
   {
     "id": 884,
@@ -44018,7 +44922,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Skualen Vitamin E"
+    ]
   },
   {
     "id": 888,
@@ -44094,7 +45001,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Dusty Rose Nemlendirici Makyaj | Gülkurusu | Hyaluronik Asit Peptit",
+      "Baby Pink Nemlendirici Makyaj | Pastel Pembe Hyaluronik Asit Peptit",
+      "Rich Berry | Nemlendirici Makyaj | Bordo | Hyaluronik Asit Peptit",
+      "Warm Peach | Nemlendirici Makyaj | Şeftali | Hyaluronik Asit Peptit",
+      "Chilli Red | Nemlendirici Makyaj | Kiremit | Hyaluronik Asit Peptit",
+      "Deep Red | Nemlendirici Makyaj | Kırmızı | Hyaluronik Asit Peptit",
+      "Radiant Pink | Nemlendirici Makyaj | Pembe | Hyaluronik Asit Peptit"
+    ]
   },
   {
     "id": 889,
@@ -44144,7 +45060,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "L’Oréal Paris Lumi Blush Likit Allık - 625 Glowy Gold Pink",
+      "L’Oréal Paris Lumi Blush Likit Allık - 635 Glowy Worth It Medium",
+      "L’Oréal Paris Lumi Blush Likit Allık - 627 Glowy Warm Peach",
+      "640 Glowy Rouge Paris"
+    ]
   },
   {
     "id": 890,
@@ -44244,7 +45166,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Flormar Baked Blush-on Yüksek Pigmentli & Doğal Işıltılı Fırınlanmış Allık",
+      "Mat Bitişli Fırınlanmış Allık",
+      "Işıltılı Fırınlanmış Allık - Baked Blush-On - 055 Dual Gold - 8682536051514",
+      "Işıltılı Fırınlanmış Allık - Baked Blush-On - 056 Peachy Pink - 8682536051521",
+      "Yüksek Pigmentli & Mat Bitişli Kremsi Kompakt Allık 003 Rissing Of The Sun",
+      "Işıltılı Fırınlanmış Allık - Baked Blush-On - 054 Flormar Pink - 8682536051507"
+    ]
   },
   {
     "id": 892,
@@ -44457,7 +45387,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Soft Mocha | Nemlendirici Makyaj | Nude | Hyaluronik Asit Peptit",
+      "Dusty Rose Nemlendirici Makyaj | Gülkurusu | Hyaluronik Asit Peptit",
+      "Rich Berry | Nemlendirici Makyaj | Bordo | Hyaluronik Asit Peptit",
+      "Warm Peach | Nemlendirici Makyaj | Şeftali | Hyaluronik Asit Peptit",
+      "Chilli Red | Nemlendirici Makyaj | Kiremit | Hyaluronik Asit Peptit",
+      "Deep Red | Nemlendirici Makyaj | Kırmızı | Hyaluronik Asit Peptit",
+      "Radiant Pink | Nemlendirici Makyaj | Pembe | Hyaluronik Asit Peptit"
+    ]
   },
   {
     "id": 896,
@@ -44507,7 +45446,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Soft Mocha | Nemlendirici Makyaj | Nude | Hyaluronik Asit Peptit",
+      "Dusty Rose Nemlendirici Makyaj | Gülkurusu | Hyaluronik Asit Peptit",
+      "Baby Pink Nemlendirici Makyaj | Pastel Pembe Hyaluronik Asit Peptit",
+      "Warm Peach | Nemlendirici Makyaj | Şeftali | Hyaluronik Asit Peptit",
+      "Chilli Red | Nemlendirici Makyaj | Kiremit | Hyaluronik Asit Peptit",
+      "Deep Red | Nemlendirici Makyaj | Kırmızı | Hyaluronik Asit Peptit",
+      "Radiant Pink | Nemlendirici Makyaj | Pembe | Hyaluronik Asit Peptit"
+    ]
   },
   {
     "id": 897,
@@ -44557,7 +45505,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Liliy Şeftali"
+    ]
   },
   {
     "id": 898,
@@ -44607,7 +45558,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "No02",
+      "(mat) No06",
+      "(mat) No05",
+      "No01",
+      "(mat) No04",
+      "No:1"
+    ]
   },
   {
     "id": 899,
@@ -44657,7 +45616,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "PEACH | Kalıcı Yüksek Pigmentli | Peach",
+      "LILAC | Kalıcı Yüksek Pigmentli Nemlendirici | Lilac",
+      "COLD BRONZE | Kalıcı Yüksek Pigmentli | Cold Bronze",
+      "RED | Kalıcı, Yüksek Pigmentli | Sweet Red",
+      "COLD PINK | Kalıcı Yüksek Pigmentli | Cold Pink"
+    ]
   },
   {
     "id": 900,
@@ -44757,7 +45723,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Bouncy Blush Yumuşak Kremsi Allık - 04 Sunkiss",
+      "Cosmetics Bouncy Blush Yumuşak Kremsi Allık - 03 Coral Bliss",
+      "Cosmetics Bouncy Blush Yumuşak Kremsi Allık - 01 Paradise"
+    ]
   },
   {
     "id": 902,
@@ -44857,7 +45828,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "08 Enchanted Mauve",
+      "05 Coral Illusion",
+      "03 Divine Crimson",
+      "04 Pink Daydream",
+      "07 Moonlit Rose"
+    ]
   },
   {
     "id": 904,
@@ -44907,7 +45885,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 06 Hot Rose",
+      "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 04 Deeply Bronze",
+      "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 01 Pleasure",
+      "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 02 Vintage Pink",
+      "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 05 Mocha Taste"
+    ]
   },
   {
     "id": 905,
@@ -44957,7 +45942,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "41 Dazzling",
+      "47 Peachy",
+      "46 Harmony",
+      "43 Scarlett",
+      "44 Blossom",
+      "50 Brownie",
+      "45 Sunlit",
+      "49 Heavenly",
+      "48 Romance"
+    ]
   },
   {
     "id": 906,
@@ -45007,7 +46003,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "09 Feelin Butta",
+      "08 Getting Butta",
+      "01 My Butta Half",
+      "Pudra Allık 02 Butta Together",
+      "07 Butta With Me"
+    ]
   },
   {
     "id": 907,
@@ -45309,7 +46312,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "08 Drippin' In Rose",
+      "07 Bubblegum Burst",
+      "09 Blush Rush",
+      "02 Hydra Honey",
+      "15 Water 'Bout Wine?",
+      "03 Splash N Spice",
+      "13 Cranberry Splash",
+      "10 Berry Thirsty"
+    ]
   },
   {
     "id": 912,
@@ -45359,7 +46372,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "06 Rose Haze 3614274254372",
+      "93 Restless Rose 3614274254341",
+      "37 Peachy Nude 3614274254334",
+      "42 Babydoll Pink 3614274254396",
+      "57 Coral Clash 3614274254297",
+      "54 Berry Bang 3614274254303",
+      "83 3614274502176",
+      "87 Pink Voltage 3614274254365",
+      "66 Fuchsia Fizz 3614274727586",
+      "10 Stardust Love 3614274727609",
+      "69 Lavender Lust 3614274254327"
+    ]
   },
   {
     "id": 913,
@@ -45408,7 +46434,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "NO:3",
+      "NO:4",
+      "NO:2"
+    ]
   },
   {
     "id": 914,
@@ -45558,7 +46589,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (Lavender Perfume)",
+      "Blusher (Ballet Shoes)",
+      "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (Mamas Camel Coat)",
+      "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (PİCNİC BLANKET)",
+      "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (CARROT BUTTER CREAM)",
+      "Blusher (My Candy Shop)",
+      "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (Mandarine Ade)"
+    ]
   },
   {
     "id": 917,
@@ -45608,7 +46648,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "LR01 Cherry Liar",
+      "LR07 Just Peachy",
+      "LR03 Apricot Hope",
+      "LR05 Milky Rose",
+      "LRO4 Rosy Truth",
+      "LR06 Muted Plum"
+    ]
   },
   {
     "id": 918,
@@ -45658,7 +46706,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "4 Dragon Fruit Drip",
+      "6 Bouncin' Berry",
+      "3 Guava Gush",
+      "2 Fig Fizz",
+      "1 Papaya Plump"
+    ]
   },
   {
     "id": 919,
@@ -45708,7 +46763,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Nude Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+      "Peach Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+      "Cola Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+      "Melon Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+      "Pink Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+      "Pansy Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül"
+    ]
   },
   {
     "id": 920,
@@ -45758,7 +46821,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "03 Warm Apricot",
+      "05 Burnt Terracotta",
+      "04 Pinkish Terracotta"
+    ]
   },
   {
     "id": 921,
@@ -45808,7 +46876,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Lıquıd Blush 52",
+      "Likit Allık No 57",
+      "Pastel Show Your Joy Lıquıd Blush No:53",
+      "Pastel Show Your Joy Liquid Blush NO:54",
+      "Likit Allık 58",
+      "Lıquıd Blush 51",
+      "Likit Allık 56",
+      "Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 57",
+      "Pastel Show By Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 55",
+      "Pastel Show By Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 52",
+      "Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 53",
+      "Likit Allık - Show By Liquid Blush 51"
+    ]
   },
   {
     "id": 922,
@@ -45858,7 +46940,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "POP 3 86844",
+      "Freckle 868"
+    ]
   },
   {
     "id": 923,
@@ -45958,7 +47044,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(05 Cool Apple)",
+      "(10 Pale Lavender)",
+      "(09 Pale Peach)",
+      "(03FriendshipMauve)",
+      "(07 Fluffy Pink)",
+      "PERIPERA Syrupy Tok Cheek (08 SyrupGrapefruit)"
+    ]
   },
   {
     "id": 925,
@@ -46058,7 +47152,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "BERRY POP – 3’ü 1 arada Göz, Yanak, Dudak",
+      "CORAL CRUSH – 3’ü 1 arada Göz, Yanak, Dudak",
+      "CHEEKY SUN – 3’ü 1 arada Göz, Yanak, Dudak"
+    ]
   },
   {
     "id": 927,
@@ -46205,7 +47304,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Glotion All-In-One Doğal Işıltı 901 - Fair Glow 40 ml",
+      "Glotion All-ın-one Doğal Işıltı 903 - Medium Glow 40 ml",
+      "904 Deep Glow"
+    ]
   },
   {
     "id": 930,
@@ -46254,7 +47358,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "L'oréal Paris Glotion All-In-One Doğal Işıltı 902 - Light Glow",
+      "ın one Doğal Işıltı 903 Medium Glow 40 ml",
+      "L'Oréal Paris Glotion All-In-One Doğal Işıltı 904 - Deep Glow"
+    ]
   },
   {
     "id": 931,
@@ -46352,7 +47461,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pearl 01",
+      "Sunstone 02",
+      "Carnelian 03"
+    ]
   },
   {
     "id": 933,
@@ -46758,7 +47872,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "620 Glassy Pink Ballet"
+    ]
   },
   {
     "id": 941,
@@ -46807,7 +47924,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Lemon Meringue",
+      "Blueberry Muffin"
+    ]
   },
   {
     "id": 942,
@@ -46869,7 +47990,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "201 Işıltılı Likit Aydınlatıcı",
+      "202 Işıltılı Likit Aydınlatıcı",
+      "204 Işıltılı Likit Aydınlatıcı"
+    ]
   },
   {
     "id": 943,
@@ -46967,7 +48093,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Sirius İnci"
+    ]
   },
   {
     "id": 945,
@@ -47114,7 +48243,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Baked Highlighter Işıltılı Fırınlanmış Toz Aydınlatıcı - 02 Sunkiss"
+    ]
   },
   {
     "id": 948,
@@ -47163,7 +48295,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "15 U Butta Werk",
+      "10 Glaze It Butta",
+      "45 Butta In Black"
+    ]
   },
   {
     "id": 949,
@@ -47212,7 +48349,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Highlighter (#8 White)",
+      "Highlighter (#5 Mermaid)"
+    ]
   },
   {
     "id": 950,
@@ -47558,7 +48699,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "m.ake up maruderm Islak Bitişli Likit Aydınlatıcı – Liquid Highlighter Pale Gold"
+    ]
   },
   {
     "id": 957,
@@ -47607,7 +48751,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "wonderway Highlighter - Göz Kalemi Ile"
+    ]
   },
   {
     "id": 958,
@@ -47804,7 +48951,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Highlihter Palette",
+      "Stronbıng Hıghlıghter Palette Aydınlatıcı",
+      "Aydınlatıcı Paleti  Strobing Highlighter Palette 8691190965914"
+    ]
   },
   {
     "id": 962,
@@ -47951,7 +49103,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Sarı Işıltılı Likit Aydınlatıcı - Liquid Highlighter 102 - Yüz & Vücut İçin - 30 ml",
+      "Kahverengi Işıltılı Likit Aydınlatıcı - Liquid Highlighter - 103 Yüz & Vücut İçin - 45 ml"
+    ]
   },
   {
     "id": 965,
@@ -48000,7 +49156,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Daylight Cream Highlighter - Krem Aydınlatıcı 14 Milkyway",
+      "Profashion Daylight Highlighter No:13"
+    ]
   },
   {
     "id": 966,
@@ -48245,7 +49405,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "İkili Aydınlatıcı Pudra Bronz 7165"
+    ]
   },
   {
     "id": 971,
@@ -48405,7 +49568,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Moonrise | Kontür Nötr Kahve | Yüz Şekillendirici Nemlendirici Makyaj",
+      "Eclipse | Kontür Nötr Koyu Kahve | Yüz Şekillendirici Nemlendirici Makyaj"
+    ]
   },
   {
     "id": 974,
@@ -48503,7 +49670,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(ORTA TON) Stick Contour 002 Medıum 8690604554867",
+      "8690604554874"
+    ]
   },
   {
     "id": 976,
@@ -48552,7 +49723,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "New Well Kontür - Prof. Contour Stick - Çift Taraflı 8680923304953"
+    ]
   },
   {
     "id": 977,
@@ -48614,7 +49788,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "002 Hot Chclate 8682536093828",
+      "003 Deep 8682536093842",
+      "8682536093804"
+    ]
   },
   {
     "id": 978,
@@ -48712,7 +49891,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "stıck kontür wınk"
+    ]
   },
   {
     "id": 980,
@@ -48910,7 +50092,22 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 04 Soft Peach",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 05 Desert Rose",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 01 Pinky Beach",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 03 Coral",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 14 Dreamy Coral",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 13 Deep Pink",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 10 Pink Paradise",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 02 Pink In Summer",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 11 Sunset",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 12 Rosy Glow",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 09 Dusty Pink",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 08 Bronze Show",
+      "Cosmetics Luminous Silk Compact Blusher Toz Allık - 07 Star"
+    ]
   },
   {
     "id": 984,
@@ -49034,7 +50231,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 All Buttad Up",
+      "04 Butta Buscuit",
+      "05 Butta Off"
+    ]
   },
   {
     "id": 986,
@@ -49183,7 +50385,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Fair 3614274212051",
+      "C.E. Skin Transforming Bronzer 04 Medium 3614274110104",
+      "C.E. Skin Transforming Bronzer 05 Tan 3614274110111",
+      "C.E. Skin Transforming Bronzer 02 Light 3614274110081"
+    ]
   },
   {
     "id": 989,
@@ -49381,7 +50589,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "55"
+    ]
   },
   {
     "id": 993,
@@ -50038,7 +51249,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(SOĞUK ALT TON) Stay Perfect Concealer 001 Fair 8682536085441",
+      "(SOĞUK ALT TON) Stay Perfect Concealer 003 Soft Beige 8682536085489",
+      "(SOĞUK ALT TON) Stay Perfect Concealer 006 Medium Beige 8682536085540",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 012SALMONCOVER - 8682536111591",
+      "(SOĞUK ALT TON) Stay Perfect Concealer 007 Light Beige 8682536085564",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 013MANGOFILTER - 8682536111614",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 011MATCHAVEIL - 8682536111577",
+      "(SOĞUK ALT TON) Stay Perfect Concealer 004 Ivory 8682536085502",
+      "(SOĞUK ALT TON) Stay Perfect Concealer 005 Beige 8682536085526",
+      "(SARI ALT TON) Stay Perfect Concealer 010 Toffee 8682536085625",
+      "009 Tan 8682536085601",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı"
+    ]
   },
   {
     "id": 1006,
@@ -50101,7 +51326,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Fair Concealer",
+      "03 Vanilla Concealer",
+      "2.5 Medium Vanilla Concealer",
+      "04 Beige Concealer",
+      "05 Golden Concealer",
+      "5.7 Light Tan Concealer",
+      "07 Medium Concealer",
+      "06 Tan Concealer",
+      "08 Sand Concealer"
+    ]
   },
   {
     "id": 1007,
@@ -50151,7 +51387,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Mineral Concealer Spf 15 Yoğun Kapatıcı Metal Başlıklı Göz Altı Kapatıcısı - 201 Açık",
+      "Cosmetics Mineral Concealer Spf 15 Yoğun Kapatıcı Metal Başlıklı Göz Altı Kapatıcısı - 203 Orta Koyu"
+    ]
   },
   {
     "id": 1008,
@@ -50301,7 +51541,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02 Light Concealer",
+      "03 Vanilla Concealer",
+      "2.5 Medium Vanilla Concealer",
+      "04 Beige Concealer",
+      "05 Golden Concealer",
+      "06 Tan Concealer",
+      "07 Medium Concealer",
+      "5.7 Light Tan Concealer",
+      "08 Sand Concealer"
+    ]
   },
   {
     "id": 1011,
@@ -50351,7 +51602,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Close It Likit Kapatıcı Pale Almond 132",
+      "Close It Likit Kapatıcı - 650 Pink Sand (Pembe Alt Tonlu)",
+      "134 Sand Kategori: Kapatıcı",
+      "Close It Likit Kapatıcı 135"
+    ]
   },
   {
     "id": 1012,
@@ -50401,7 +51658,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 30 Natural Ivory",
+      "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 40 Soft Ivory",
+      "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 50 Medium Beige",
+      "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 60 Deep Beige"
+    ]
   },
   {
     "id": 1013,
@@ -50501,7 +51764,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Conceal & Protect Concealer Likit Göz Altı Kapatıcısı - 05 Soft Ivory",
+      "Cosmetics Conceal & Protect Concealer Likit Göz Altı Kapatıcısı - 04 Porcelain",
+      "Cosmetics Conceal & Protect Concealer Likit Göz Altı Kapatıcısı - 03 Soft Sand"
+    ]
   },
   {
     "id": 1015,
@@ -50551,7 +51819,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(AÇIKORTA TON)"
+    ]
   },
   {
     "id": 1016,
@@ -50601,7 +51872,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Concealer – MEDIUM"
+    ]
   },
   {
     "id": 1017,
@@ -50751,7 +52025,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1n 11 ml",
+      "2r 11 ml",
+      "3r 11 ml",
+      "4d Light Medium 11 ml",
+      "1r 11 ml",
+      "4n 11 ml"
+    ]
   },
   {
     "id": 1020,
@@ -50801,7 +52083,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Medium"
+    ]
   },
   {
     "id": 1021,
@@ -50851,7 +52136,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "23(Sand)"
+    ]
   },
   {
     "id": 1022,
@@ -50901,7 +52189,21 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(SICAK ALT TON) Stay Perfect Concealer 002 Light 8682536085465",
+      "003 Soft Beige 8682536085489",
+      "006 Medium Beige 8682536085540",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 012SALMONCOVER - 8682536111591",
+      "007 Light Beige 8682536085564",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 013MANGOFILTER - 8682536111614",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 011MATCHAVEIL - 8682536111577",
+      "004 Ivory 8682536085502",
+      "005 Beige 8682536085526",
+      "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı",
+      "(SARI ALT TON) Stay Perfect Concealer 010 Toffee 8682536085625",
+      "(SICAK ALT TON) Stay Perfect Concealer 009 Tan 8682536085601"
+    ]
   },
   {
     "id": 1023,
@@ -51001,7 +52303,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "305n Concealer 3614273988520",
+      "105w Concealer 3614273988452",
+      "230w Concealer 3614273988506",
+      "400w Concealer 3614273988575",
+      "450w Concealer 3614273988636",
+      "330n Concealer 3614273988551",
+      "325c Concealer 3614273988544"
+    ]
   },
   {
     "id": 1025,
@@ -51114,7 +52425,14 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "15",
+      "25",
+      "20",
+      "30",
+      "35"
+    ]
   },
   {
     "id": 1027,
@@ -51214,7 +52532,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Medium 822",
+      "Golden Amber 623",
+      "Light Sand 622"
+    ]
   },
   {
     "id": 1029,
@@ -51364,7 +52687,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Açık",
+      "03 Orta Koyu"
+    ]
   },
   {
     "id": 1032,
@@ -51427,7 +52754,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01"
+    ]
   },
   {
     "id": 1033,
@@ -51477,7 +52807,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "00 Light"
+    ]
   },
   {
     "id": 1034,
@@ -51626,7 +52959,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "2N Light/Medium (Neutral) 12ml",
+      "1c Light (cool) 12ml",
+      "2W Light/Medium (Warm) 12ml",
+      "2C Light/Medium (Cool) 12ml",
+      "1w Light (WARM) 12ml",
+      "3N Medium (Neutral) 12ml",
+      "4N Medium Deep (Neutral) 12ml",
+      "2.5C Light/Medium (Cool Pink)",
+      "3.5C Medium (Cool Rosy) 12ml",
+      "3c Medium (COOL) 12ml",
+      "3W Medium (Warm) 12ml"
+    ]
   },
   {
     "id": 1037,
@@ -51676,7 +53022,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "62 Ivory",
+      "63 Göz Kremi Göz Altı Kapatıcısı Milkshake",
+      "64 Medium Light",
+      "65 Honeybun",
+      "66 Deep Medium",
+      "Göz Kremi Nemlendirici Saten Kapatıcı - Göz Kremi Göz Altı Kapatıcı 66 Deep Medium4,3 ml"
+    ]
   },
   {
     "id": 1038,
@@ -51826,7 +53180,20 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "1n Light (NEUTRAL) 12ml",
+      "1c Light (cool) 12ml",
+      "3N Medium (Neutral) 12ml",
+      "1w Light (WARM) 12ml",
+      "2C Light/Medium (Cool) 12ml",
+      "2W Light/Medium (Warm) 12ml",
+      "2.5C Light/Medium (Cool Pink)",
+      "4N Medium Deep (Neutral) 12ml",
+      "3.5C Medium (Cool Rosy) 12ml",
+      "3W Medium (Warm) 12ml",
+      "3c Medium (COOL) 12ml"
+    ]
   },
   {
     "id": 1041,
@@ -52120,7 +53487,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Light Tinted Moisturizer SPF 50 Renk Ton Eşitleyici Aydınlatıcı Krem 00 Açık Ton",
+      "Glowing Skin Tinted Moisturizer 50 SPF Işıltılı Aydınlatıcı Krem"
+    ]
   },
   {
     "id": 1047,
@@ -52855,7 +54226,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Farmasi Işıltılı Makyaj Bazı - Vfx Pro Camera Ready Strobe Cream 25 Ml 8690131112851",
+      "Farmasi Işıltılı Makyaj Bazı - Vfx Pro Camera Ready Strobe Cream 25 Ml"
+    ]
   },
   {
     "id": 1062,
@@ -53639,7 +55014,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Toz Pudra Translucent Yarı Saydam 32 gr",
+      "Baking Toz Pudra -Fırınlanmış Sarı Toz Pudra-32 Gr"
+    ]
   },
   {
     "id": 1078,
@@ -53689,7 +55068,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kahverengi Saç & Sakal Toz Kapatıcı Dolgunlaştırıcı Pudra – Doğal Topik Etki 10gr"
+    ]
   },
   {
     "id": 1079,
@@ -53738,7 +55120,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Flormar Set'n Go Nemlendirici & Parlama Karşıtı Sabitleyici Kompakt Pudra"
+    ]
   },
   {
     "id": 1080,
@@ -53836,7 +55221,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Banana Setting Powder Mat Bitişli Makyaj Sabitleyici Toz Pudra"
+    ]
   },
   {
     "id": 1082,
@@ -53996,7 +55384,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "01 Sugar Serve",
+      "03 Peach Posse",
+      "05 Banana Brat"
+    ]
   },
   {
     "id": 1085,
@@ -54045,7 +55438,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 02 Natural Beige",
+      "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 03 Medium Beige",
+      "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 04 Sand",
+      "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 06 Dark Honey",
+      "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 05 Honey Beige",
+      "Cosmetics Luminous Silk Compact Powder 07 Apricot Mat Bitişli Toz Yüz Pudrası Beige"
+    ]
   },
   {
     "id": 1086,
@@ -54094,7 +55495,15 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "02",
+      "03",
+      "04",
+      "08",
+      "05",
+      "06"
+    ]
   },
   {
     "id": 1087,
@@ -54241,7 +55650,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Sand",
+      "Neutral Sand",
+      "Neutral Honey",
+      "Beige 434"
+    ]
   },
   {
     "id": 1090,
@@ -54303,7 +55718,16 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pudra - Compact Powder 01 Pudra",
+      "Pudra - Compact Powder 03 Pudra",
+      "Pudra - Compact Powder 5,5 Pudra",
+      "Pudra - Compact Powder 6,5 Pudra",
+      "Pudra - Compact Powder 04 Pudra",
+      "Pudra - Compact Powder 07 Pudra",
+      "Pudra - Compact Powder 02 Pudra"
+    ]
   },
   {
     "id": 1091,
@@ -54352,7 +55776,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Shimmery Pink Açık Pembe Işıltılı Sabitleyici Toz Pudra 12 GR."
+    ]
   },
   {
     "id": 1092,
@@ -54450,7 +55877,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Pastel Sabitleyici Pudra - Profashion Final Touch Fixing Powder No 00"
+    ]
   },
   {
     "id": 1094,
@@ -54549,7 +55979,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Renk:01 Çok Açık Beyaz",
+      "Renk:04 Açık Buğday Ten",
+      "Renk:02 Açık Beyaz Ten"
+    ]
   },
   {
     "id": 1096,
@@ -54696,7 +56131,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Transparan Toz Pudra High Definition Finishing Powder Translucent 8 g"
+    ]
   },
   {
     "id": 1099,
@@ -54745,7 +56183,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Medium"
+    ]
   },
   {
     "id": 1100,
@@ -54794,7 +56235,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Yarı Mat Bitişli Fırınlanmış Kompakt Pudra",
+      "Yoğun Pigmentli Fırınlanmış Mat Pudra  - Baked Powder - 034 Honey Beige - 8682536053617",
+      "Flormar Yüksek Pigmentli & Doğal Işıltılı Fırınlanmış Kompakt Pudra"
+    ]
   },
   {
     "id": 1101,
@@ -55039,7 +56485,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Donuk Cilt Görünümünü Gidererek Makyajı Sabitleyen Ultra Hafif Pudra Airy Pot Pressed Powder (PİNK)",
+      "Kızarık Görünümü Azaltarak Makyajı Sabitleyen Ultra Hafif Pudra Airy Pot Pressed Powder (Mint)"
+    ]
   },
   {
     "id": 1106,
@@ -55186,7 +56636,13 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Emily Long-lasting Lip Pencil 203 Dudak Kalemi",
+      "Emily Dudak Kalemi No:203",
+      "Emily Long Lasting Lip Pencil Dudak Kalemi 203 8691190522032",
+      "Emily Long Lasting Lip Pencil - 203"
+    ]
   },
   {
     "id": 1109,
@@ -55568,7 +57024,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kolay Keskin Uygulama",
+      "Uzun Süre Kalıcı, Suya Dayanıklı Dudak Kalemi, Transfer Yapmaz, Dolgun Görünüm 6'lı Set Kutulu"
+    ]
   },
   {
     "id": 1116,
@@ -55813,7 +57273,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "07 Big Lift",
+      "06 Line Leader",
+      "04 Out of Line",
+      "011 Upstate",
+      "Kırmızı Dudak Kalemi 10 Main Character",
+      "013 Maybe It's",
+      "012 Crop Top",
+      "Pembe Tonlu Dudak Kalemi 09 Peaking"
+    ]
   },
   {
     "id": 1121,
@@ -55973,7 +57443,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Long Lasting Lip Liner Dudak Kalemi 205"
+    ]
   },
   {
     "id": 1124,
@@ -56022,7 +57495,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "MUJGAN Rose 12'li Ultra Yağlı Dudak Kalemi"
+    ]
   },
   {
     "id": 1125,
@@ -56208,7 +57684,18 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "04 Berry Rose Nude",
+      "05 Roselle Pembe",
+      "03 Soft Bloom Nude",
+      "01 Muted Peach Nude",
+      "10 Chocolate Brown Kahverengi",
+      "08 Scarlet Red Kırmızı",
+      "07 Cherry Silk Kırmızı",
+      "09 Espresso Dream Kahverengi",
+      "06 Pink Pembe"
+    ]
   },
   {
     "id": 1128,
@@ -56319,7 +57806,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "211 Long-lastıng Dudak Kalemi"
+    ]
   },
   {
     "id": 1130,
@@ -56368,7 +57858,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "KIKO Dudak Kalemi - New Creamy Colour Comfort Lip Liner 05 Pinkish Brown"
+    ]
   },
   {
     "id": 1131,
@@ -56417,7 +57910,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Kalemi"
+    ]
   },
   {
     "id": 1132,
@@ -56479,7 +57975,25 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "52 Caramel Nude",
+      "55 Cinnamon",
+      "51 Pinky Beige",
+      "67 Crimson Pink",
+      "54 Spicy Terracotta",
+      "65 Rusty Rose",
+      "66 Antique Pink",
+      "60 Maroon",
+      "63 Reddish Brown",
+      "62 Chesnut Red",
+      "56 Wild Red",
+      "68 Dusty Carmine",
+      "59 Plum",
+      "61 Deep Puce",
+      "57 Raspberry",
+      "58 Cherry"
+    ]
   },
   {
     "id": 1133,
@@ -56675,7 +58189,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Suya Dayanıklı Dudak Kalemi - Waterproff Dudak Kalemi 101"
+    ]
   },
   {
     "id": 1137,
@@ -56920,7 +58437,17 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "09 Warm Brown",
+      "07 Spicy Rose",
+      "02 Dirty Nude",
+      "17 Ruby Red",
+      "16 Red Carpet",
+      "10 Star Pink",
+      "08 Terracotta Nude",
+      "03 Sheer Coral"
+    ]
   },
   {
     "id": 1142,
@@ -57165,7 +58692,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "Stıck Contour Hot"
+    ]
   },
   {
     "id": 1147,
@@ -57312,7 +58842,10 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "(KOYU TON) Stick Contour 003 Medıum Deep 8690604554874"
+    ]
   },
   {
     "id": 1150,
@@ -57558,7 +59091,11 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "& Aydınlatıcı Stick Universal Light",
+      "& Aydınlatıcı Stick Light Medium"
+    ]
   },
   {
     "id": 1155,
@@ -57607,7 +59144,12 @@ const products = [
     "ingredients": [],
     "ingredientWarnings": [],
     "source": "trendyol",
-    "priceCount": 1
+    "priceCount": 1,
+    "shadeOptions": [
+      "L'Oreal Paris L'Oréal Paris Infaillible Face Sculpter Stick Kontür - Fair",
+      "Light",
+      "Medium"
+    ]
   },
   {
     "id": 1156,

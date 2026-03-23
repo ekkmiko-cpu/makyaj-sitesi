@@ -2399,17 +2399,29 @@ function openDetail(id) {
       ${badgeHtml.length ? '<div class="card-badges" style="margin-bottom:12px">' + badgeHtml.join(' ') + '</div>' : ''}
       <p class="detail-desc">"${p.desc}"</p>
 
-      ${p.variants && p.variants.length > 1 ? `
-        <div class="detail-section-title">Renk / Ton Seçenekleri (${p.variants.length})</div>
-        <div class="shades-list" id="variantsList">
-          ${p.variants.map((v,i) => `
-            <button class="shade-chip${i===0?' active':''}" 
-              onclick="changeVariant(${p.id}, ${i}, this)" title="${v.name}">
-              ${v.shade || 'Varyant ' + (i+1)}
-            </button>
-          `).join('')}
-        </div>
-      ` : ''}
+      ${(() => {
+        const shadeList = p.shadeOptions && p.shadeOptions.length > 1 ? p.shadeOptions : null;
+        const variantList = p.variants && p.variants.length > 1 ? p.variants : null;
+        if (shadeList) {
+          return '<div class="detail-section-title">Renk / Ton Seçenekleri (' + shadeList.length + ')</div>' +
+            '<div class="shades-list">' +
+            (variantList ? variantList.map((v,i) =>
+              '<button class="shade-chip' + (i===0?' active':'') + '" onclick="changeVariant(' + p.id + ',' + i + ',this)" title="' + (v.name||'') + '">' + (v.shade || 'Varyant ' + (i+1)) + '</button>'
+            ).join('') : '') +
+            shadeList.filter(s => !variantList || !variantList.find(v => v.shade === s)).map(s =>
+              '<span class="shade-chip" style="cursor:default;opacity:0.7" title="Bu ton için fiyat verisi mevcut değil">' + s + '</span>'
+            ).join('') +
+            '</div>';
+        } else if (variantList) {
+          return '<div class="detail-section-title">Renk / Ton Seçenekleri (' + variantList.length + ')</div>' +
+            '<div class="shades-list" id="variantsList">' +
+            variantList.map((v,i) =>
+              '<button class="shade-chip' + (i===0?' active':'') + '" onclick="changeVariant(' + p.id + ',' + i + ',this)" title="' + (v.name||'') + '">' + (v.shade || 'Varyant ' + (i+1)) + '</button>'
+            ).join('') +
+            '</div>';
+        }
+        return '';
+      })()}
 
       <div class="detail-section-title">Fiyat Karşılaştırması — <span id="sellerCount">${sorted.length}</span> Satıcı</div>
       <div class="prices-table" id="pricesTableContainer">
@@ -2858,12 +2870,25 @@ function openCompare() {
     html += '</div>';
   });
 
-  // Ton / Varyant
+  // Ton / Varyant — shadeOptions veya variants'tan
   html += '<div class="cmp-row-label">Ton Seçenekleri</div>';
   items.forEach(function(p) {
-    var vc = (p.variants || []).length;
+    var shades = p.shadeOptions || [];
+    var vc = shades.length || (p.variants || []).length;
     html += '<div class="cmp-cell">';
-    html += vc > 1 ? '<span style="font-size:13px">' + vc + ' ton/renk seçeneği</span>' : '<span style="font-size:11px;color:var(--text3)">Tek seçenek</span>';
+    if (shades.length > 1) {
+      html += '<div style="font-size:12px;margin-bottom:4px;font-weight:500">' + shades.length + ' ton/renk</div>';
+      html += '<div style="display:flex;flex-wrap:wrap;gap:3px">';
+      shades.slice(0, 8).forEach(function(s) {
+        html += '<span style="font-size:9px;padding:2px 6px;border:0.5px solid var(--border2);border-radius:2px;color:var(--text2);white-space:nowrap">' + s + '</span>';
+      });
+      if (shades.length > 8) html += '<span style="font-size:9px;color:var(--text3)">+' + (shades.length - 8) + ' daha</span>';
+      html += '</div>';
+    } else if (vc > 1) {
+      html += '<span style="font-size:13px">' + vc + ' ton/renk seçeneği</span>';
+    } else {
+      html += '<span style="font-size:11px;color:var(--text3)">Tek seçenek</span>';
+    }
     html += '</div>';
   });
 
