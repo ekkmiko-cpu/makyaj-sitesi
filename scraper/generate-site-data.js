@@ -832,10 +832,30 @@ var precomputed = deduped.map(function(p) {
   };
 });
 
+// ── Barkod güvenilirlik filtresi ──
+// Bazı siteler gerçek EAN-8/EAN-13/UPC-A yerine kendi iç katalog numaralarını barkod olarak kaydeder:
+//   Rossmann: 8 haneli "30XXXXXX" article numaraları (EAN değil, iç numara)
+//   Gratis: 13 haneli "205XXXXXXXXXX" katalog numaraları (EAN değil, iç numara)
+// Bu iç numaralar farklı ürünlere atanabileceğinden yanlış eşleşmelere yol açar.
+// Yalnızca gerçek EAN-8 (8 hane), UPC-A (12 hane) veya EAN-13 (13 hane) formatındaki
+// ve bilinen iç numara öneklerine girmeyen barkodları kabul et.
+function isReliableBarcode(bc) {
+  if (!bc) return false;
+  // Sadece rakamlardan oluşmalı
+  if (!/^\d+$/.test(bc)) return false;
+  // EAN-8, UPC-A veya EAN-13 uzunluğunda olmalı
+  if (bc.length !== 8 && bc.length !== 12 && bc.length !== 13) return false;
+  // Rossmann iç article numaraları: 8 haneli, "30" ile başlayan
+  if (bc.length === 8 && bc.startsWith('30')) return false;
+  // Gratis iç katalog numaraları: 13 haneli, "205" ile başlayan
+  if (bc.length === 13 && bc.startsWith('205')) return false;
+  return true;
+}
+
 // ── 2a: Barkod indeksi oluştur (barcode → [idx...]) ──
 var barcodeIndex = {};
 precomputed.forEach(function(pp, idx) {
-  if (pp.barcode && pp.barcode.length >= 8) {
+  if (isReliableBarcode(pp.barcode)) {
     if (!barcodeIndex[pp.barcode]) barcodeIndex[pp.barcode] = [];
     barcodeIndex[pp.barcode].push(idx);
   }
@@ -862,6 +882,16 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
 
   var sites = Object.keys(bySite);
   if (sites.length < 2) return; // Aynı sitede birden fazla, atla
+
+  // ── Marka tutarlılık kontrolü ──
+  // Aynı barkod farklı markalara atanmışsa bu bir veri hatası/yanlış barkod demektir.
+  // Eşleşmeye dahil edilecek ürünlerin hepsi aynı normalize marka adına sahip olmalı.
+  var brandKeys = sites.map(function(site) { return normalizeBrand(bySite[site].p.brand); });
+  var allSameBrand = brandKeys.every(function(b) { return b === brandKeys[0]; });
+  if (!allSameBrand) {
+    // Farklı marka → bu barkod güvenilir değil, eşleştirme yapma
+    return;
+  }
 
   // Tüm indexleri kullanıldı olarak işaretle
   var baseEntry = bySite[sites[0]];
