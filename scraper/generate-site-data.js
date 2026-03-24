@@ -904,11 +904,127 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
 
 console.log('Barkod eslestirme: ' + barcodeMatchCount + ' ek satici eslestirmesi yapildi');
 
-// ── 2b: Barkodla eşleşmeyen ürünleri tek-fiyatlı olarak ekle ──
-// İSİM TABANLI EŞLEŞTİRME KALDIRILDI — sadece barkod eşleşmesi kullanılıyor.
-// Yanlış eşleştirme (farklı boyut, farklı ürün) riskini sıfırlamak için.
+// ── 2b: SIKI İSİM TABANLI EŞLEŞTİRME ──
+// Kural: Aynı marka + aynı/uyumlu kategori + yüksek benzerlik (>=0.80) + boyut eşleşmesi
+var nameMatchCount = 0;
+var unmatchedIndices = [];
 for (var i = 0; i < deduped.length; i++) {
-  if (used.has(i)) continue; // Barkodla zaten eşleştirildi
+  if (!used.has(i)) unmatchedIndices.push(i);
+}
+
+// İndeksi marka bazında grupla (kategori uyumluluğu sonra kontrol edilecek)
+var brandGroups = {};
+unmatchedIndices.forEach(function(idx) {
+  var pp = precomputed[idx];
+  if (!brandGroups[pp.brand]) brandGroups[pp.brand] = [];
+  brandGroups[pp.brand].push(idx);
+});
+
+// Her grupta aynı marka ürünleri karşılaştır (kategori uyumluluğu kontrol edilir)
+Object.keys(brandGroups).forEach(function(brandKey) {
+  var group = brandGroups[brandKey];
+  if (group.length < 2) return;
+
+  // Farklı site ürünlerini ayır
+  var bySite = {};
+  group.forEach(function(idx) {
+    var site = deduped[idx]._site;
+    if (!bySite[site]) bySite[site] = [];
+    bySite[site].push(idx);
+  });
+
+  var sites = Object.keys(bySite);
+  if (sites.length < 2) return; // Tek sitede, eşleştirme yok
+
+  // İlk site ürünlerini baz al, diğer sitelerde eşleşme ara
+  var baseSite = sites[0];
+  bySite[baseSite].forEach(function(baseIdx) {
+    if (used.has(baseIdx)) return;
+    var basePP = precomputed[baseIdx];
+    var baseP = deduped[baseIdx];
+    var baseSize = extractVariantInfo(baseP.name);
+
+    var matchedPrices = [{
+      site: baseP._site,
+      price: baseP.price > 0 ? baseP.price : (baseP._minPrice || 0),
+      url: baseP.productUrl,
+      variantCount: baseP._variantCount || 1,
+      imageUrl: Array.isArray(baseP.imageUrl) ? (baseP.imageUrl[0] || '') : (baseP.imageUrl || ''),
+    }];
+
+    for (var s = 1; s < sites.length; s++) {
+      var bestMatch = null;
+      var bestScore = 0;
+
+      bySite[sites[s]].forEach(function(candIdx) {
+        if (used.has(candIdx)) return;
+        var candPP = precomputed[candIdx];
+        var candP = deduped[candIdx];
+
+        // Kategori uyumluluk kontrolü
+        if (!categoryCompatible(baseP.category, candP.category)) return;
+
+        // Boyut kontrolü: eğer ikisi de boyut bilgisi varsa, eşleşmeli
+        var candSize = extractVariantInfo(candP.name);
+        if (baseSize && candSize && baseSize !== candSize) return;
+
+        // Core isim benzerliği
+        var sim = similarity(basePP.core, candPP.core);
+        if (sim < 0.72) return; // Sıkı ama makul eşik
+
+        // Ek kontrol: fiyat aralığı makul olmalı (5x farktan fazla olmasın)
+        var bp = baseP.price || baseP._minPrice || 0;
+        var cp = candP.price || candP._minPrice || 0;
+        if (bp > 0 && cp > 0) {
+          var ratio = Math.max(bp, cp) / Math.min(bp, cp);
+          if (ratio > 5) return; // Çok farklı fiyat = muhtemelen farklı ürün
+        }
+
+        if (sim > bestScore) {
+          bestScore = sim;
+          bestMatch = { idx: candIdx, p: candP };
+        }
+      });
+
+      if (bestMatch) {
+        used.add(bestMatch.idx);
+        matchedPrices.push({
+          site: bestMatch.p._site,
+          price: bestMatch.p.price > 0 ? bestMatch.p.price : (bestMatch.p._minPrice || 0),
+          url: bestMatch.p.productUrl,
+          variantCount: bestMatch.p._variantCount || 1,
+          imageUrl: Array.isArray(bestMatch.p.imageUrl) ? (bestMatch.p.imageUrl[0] || '') : (bestMatch.p.imageUrl || ''),
+        });
+        nameMatchCount++;
+      }
+    }
+
+    if (matchedPrices.length >= 2) {
+      // Uçurum fiyat filtresi
+      matchedPrices.sort(function(a, b) { return a.price - b.price; });
+      var validPrices = [matchedPrices[0]];
+      for (var k = 1; k < matchedPrices.length; k++) {
+        if (matchedPrices[k].price / matchedPrices[0].price <= 3) validPrices.push(matchedPrices[k]);
+      }
+      matchedPrices = validPrices;
+    }
+
+    if (matchedPrices.filter(function(p){ return p.price > 0; }).length > 0) {
+      used.add(baseIdx);
+      merged.push(Object.assign({}, baseP, {
+        prices: matchedPrices.filter(function(p){ return p.price > 0; }),
+        _matchCount: matchedPrices.length,
+        _matchMethod: matchedPrices.length > 1 ? 'name' : 'single',
+      }));
+    }
+  });
+});
+
+console.log('Isim eslestirme: ' + nameMatchCount + ' ek satici eslestirmesi yapildi');
+
+// ── 2c: Hâlâ eşleşmemiş ürünleri tek-fiyatlı olarak ekle ──
+for (var i = 0; i < deduped.length; i++) {
+  if (used.has(i)) continue;
 
   var base = deduped[i];
   var prices = [{

@@ -1043,37 +1043,330 @@
     }
     .cat-card-count { font-size: 9px; color: rgba(255,255,255,0.3); transition: color 0.2s; }
 
-    /* ── RESPONSIVE ── */
+    /* ── RESPONSIVE — TABLET (768px) ── */
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.2rem; }
+      nav { padding: 0.8rem 1rem; }
       .nav-center { display: none; }
       .nav-hamburger { display: flex; }
-      .hero { padding: 2.5rem 1.2rem 1.5rem; }
-      .hero-title { font-size: 32px; }
-      .featured-section { padding: 1.2rem; } .featured-tabs { flex-wrap: wrap; }
-      .filters { padding: 0.8rem 1.2rem; }
-      .sort-row { padding: 0.5rem 1.2rem; }
+      .hero { padding: 2rem 1rem 1.2rem; }
+      .hero-title { font-size: 30px; }
+      .hero-sub { font-size: 12px; }
+      .featured-section { padding: 1rem; }
+      .featured-tabs { flex-wrap: wrap; gap: 6px; }
+      .filters { padding: 0.6rem 1rem; gap: 5px; }
+      .filter-btn { font-size: 8px; padding: 4px 8px; }
+      .filter-label { font-size: 7px; }
+      .sort-row { padding: 0.4rem 1rem; flex-wrap: wrap; gap: 6px; }
+      .sort-row-left { gap: 6px; }
+      .price-btns { gap: 3px; }
+      .price-btn { font-size: 8px; padding: 3px 7px; }
+      .budget-pick-btn { font-size: 8px; padding: 3px 8px; }
+      .sort-select { font-size: 10px; }
       .products { grid-template-columns: repeat(2, 1fr); }
-      .compare-bar { padding: 0.8rem 1.2rem; flex-wrap: wrap; }
+      .card-body { padding: 0.8rem 1rem 1rem; gap: 6px; }
+      .card-name { font-size: 15px; }
+      .card-price { font-size: 18px; }
+      .card-image { height: 130px; }
+      .compare-bar { padding: 0.7rem 1rem; flex-wrap: wrap; gap: 8px; }
+      .compare-info { font-size: 10px; letter-spacing: 1px; }
+      .compare-btn { font-size: 9px; padding: 7px 16px; }
+
+      /* Compare modal tablet */
+      .compare-modal { max-width: 100%; }
       .cmp-grid.cols-3, .cmp-grid.cols-4 { grid-template-columns: 1fr 1fr; }
       .cmp-product-img { width: 60px; height: 60px; }
       .cmp-product-name { font-size: 13px; min-height: 32px; }
+      .cmp-product-head { padding: 1rem 0.8rem; }
       .cmp-cell { padding: 8px 10px; font-size: 12px; }
-      .modal-backdrop { padding: 0.5rem; }
-      .detail-body { padding: 1.2rem; }
-      .modal-head { padding: 1.2rem; }
-      .brand-overlay { padding: 1rem 1.2rem; }
-      .cookie-banner { flex-direction: column; padding: 1rem 1.2rem; text-align: center; }
-      .cookie-banner-btns { justify-content: center; }
+      .cmp-price { font-size: 18px; }
+      .cmp-row-label { padding: 8px 0.8rem 4px; }
+      .cmp-buy { font-size: 8px; padding: 6px 12px; }
+      .cmp-verdict { padding: 1rem; }
+      .cmp-verdict-text { font-size: 14px; }
+
+      /* Detail modal tablet */
+      .modal-backdrop { padding: 0; }
+      .modal { border-radius: 0; max-width: 100%; min-height: 100vh; }
+      .detail-modal { max-width: 100%; }
+      .modal-head { padding: 1rem 1.2rem; }
+      .modal-title { font-size: 22px; }
+      .detail-body { padding: 1rem 1.2rem; }
+      .detail-image { height: 180px; }
+      .detail-desc { font-size: 14px; margin-bottom: 1rem; }
+
+      /* Price rows — mobile-friendly layout */
+      .price-row { flex-wrap: wrap; padding: 10px 12px; gap: 6px; }
+      .price-row-bar { display: none; }
+      .price-row-badge { margin-right: 6px; }
+      .price-row-diff { margin-right: 6px; font-size: 9px; }
+      .price-row-amount { font-size: 18px; margin-right: 8px; }
+      .buy-btn { font-size: 8px; padding: 8px 14px; letter-spacing: 1px; flex-shrink: 0; }
+      .price-row-site-name { font-size: 11px; }
+      .price-summary-bar { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
+
+      /* Skin test tablet */
+      .skin-test-modal { max-width: 100%; }
+      .skin-test-body { padding: 1.2rem; }
+      .skin-test-question { font-size: 19px; }
+      .skin-test-prod-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+
+      /* Wishlist tablet */
+      .wishlist-modal { max-width: 100%; }
+      .wishlist-body { padding: 1rem 1.2rem; }
+      .wishlist-item { gap: 10px; padding: 10px 0; }
+      .wishlist-item-name { font-size: 14px; }
+      .wishlist-item-price { font-size: 17px; }
+      .wishlist-total-amount { font-size: 24px; }
+
+      /* Brand & category modals */
+      .brand-modal { padding: 3.5rem 1rem 1.5rem; }
+      .brand-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+      .brand-card { padding: 1rem 0.8rem; }
+      .brand-card-avatar { width: 44px; height: 44px; font-size: 18px; }
+      .cat-modal { padding: 3.5rem 1rem 1.5rem; }
+      .cat-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+      .cat-card { padding: 1.2rem 0.8rem; }
+
+      /* Budget picker tablet */
+      .budget-picker-inner { padding: 1.2rem 1rem 1.4rem; }
+      .bp-budget-input { width: 160px; font-size: 16px; }
+      .bp-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+
+      /* Footer tablet */
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; padding: 2rem 1.2rem 1.5rem; }
       .footer-brand-desc { max-width: 100%; }
+      .cookie-banner { flex-direction: column; padding: 1rem 1.2rem; text-align: center; }
+      .cookie-banner-btns { justify-content: center; }
       .legal-content { padding: 1.2rem; }
+
+      /* Search overlay tablet */
+      .search-overlay { padding: 3rem 1rem 1.5rem; }
+      .search-overlay-input { font-size: 20px; padding: 14px 16px 14px 48px; }
     }
-    @media (max-width: 420px) {
-      .products { grid-template-columns: 1fr; }
-      .hero-title { font-size: 26px; }
+
+    /* ── RESPONSIVE — MOBILE (480px) ── */
+    @media (max-width: 480px) {
+      nav { padding: 0.6rem 0.8rem; }
+      .logo { font-size: 22px; }
+      .nav-right { gap: 4px; }
+      .search-nav-btn svg, .dark-btn svg { width: 16px; height: 16px; }
+      .fav-nav-btn { font-size: 16px; }
+      .hero { padding: 1.5rem 0.8rem 1rem; }
+      .hero-eyebrow { font-size: 8px; letter-spacing: 3px; }
+      .hero-title { font-size: 24px; }
+      .hero-sub { font-size: 11px; letter-spacing: 1px; }
+      .products { grid-template-columns: repeat(2, 1fr); gap: 1px; }
+      .card-image { height: 110px; }
+      .card-body { padding: 0.6rem 0.8rem 0.8rem; gap: 4px; }
+      .card-brand { font-size: 7px; letter-spacing: 2px; }
+      .card-name { font-size: 13px; }
+      .card-category { font-size: 7px; padding: 1px 5px; }
+      .card-stars { gap: 1px; }
+      .star { font-size: 10px; }
+      .star-count { font-size: 8px; }
+      .card-price { font-size: 16px; }
+      .card-price-sub { font-size: 8px; }
+      .card-price-bars { gap: 2px; margin-top: 4px; }
+      .card-price-bar-site { font-size: 7px; width: 40px; }
+      .card-price-bar-amount { font-size: 8px; width: 40px; }
+      .card-seller-count { font-size: 7px; padding: 2px 5px; }
+      .fav-btn { width: 26px; height: 26px; font-size: 13px; top: 5px; right: 5px; }
+      .compare-toggle { width: 18px; height: 18px; font-size: 9px; top: 5px; left: 5px; }
+      .card-savings-badge { font-size: 7px; padding: 2px 6px; }
+      .badge { font-size: 7px; padding: 1px 4px; letter-spacing: 0.5px; }
+
+      /* Filters mobile */
+      .filters { padding: 0.5rem 0.8rem; gap: 4px; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .filters::-webkit-scrollbar { display: none; }
+      .filter-btn { font-size: 7.5px; padding: 3px 7px; white-space: nowrap; flex-shrink: 0; }
+      .filter-label { white-space: nowrap; flex-shrink: 0; }
+      .filter-divider { display: none; }
+      .sort-row { padding: 0.3rem 0.8rem; gap: 4px; }
+      .sort-row-left { gap: 4px; }
       .price-btns { display: none; }
-      .footer-grid { grid-template-columns: 1fr; }
+      .sort-select { font-size: 9px; padding: 3px 6px; }
+      .budget-pick-btn { font-size: 7px; padding: 3px 7px; letter-spacing: 1px; }
+
+      /* Detail modal mobile - FULL SCREEN */
+      .modal-backdrop { padding: 0; }
+      .modal { border-radius: 0; min-height: 100vh; min-height: 100dvh; }
+      .modal-head { padding: 0.8rem 1rem; }
+      .modal-title { font-size: 19px; }
+      .modal-subtitle { font-size: 9px; letter-spacing: 1.5px; }
+      .modal-close { font-size: 18px; padding: 6px; }
+      .detail-modal { max-width: 100%; }
+      .detail-image { height: 160px; }
+      .detail-image-emoji { font-size: 56px; }
+      .detail-body { padding: 0.8rem 1rem 2rem; }
+      .detail-desc { font-size: 13px; margin-bottom: 0.8rem; }
+      .detail-section-title { font-size: 8px; letter-spacing: 2px; margin-bottom: 8px; }
+      .shades-list { gap: 4px; margin-bottom: 1rem; }
+      .shade-chip { font-size: 9px; padding: 3px 7px; }
+
+      /* PRICE ROWS MOBILE — stacked layout for readability */
+      .prices-table { margin-bottom: 1rem; }
+      .prices-table-header { padding: 8px 10px; }
+      .price-row { display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; gap: 4px 8px; padding: 10px; align-items: center; }
+      .price-row-rank { grid-row: 1 / 3; font-size: 10px; align-self: center; }
+      .price-row-site { grid-column: 2; grid-row: 1; }
+      .price-row-site-name { font-size: 11px; gap: 5px; }
+      .price-row-site-logo { width: 18px; height: 18px; font-size: 7px; }
+      .price-row-site-info { font-size: 8px; }
+      .price-row-bar { display: none; }
+      .price-row-badge { grid-column: 3; grid-row: 1; margin-right: 0; font-size: 7px; padding: 2px 6px; }
+      .price-row-diff { grid-column: 2; grid-row: 2; margin-right: 0; font-size: 9px; }
+      .price-row-amount { grid-column: 2; grid-row: 2; font-size: 17px; margin-right: 0; justify-self: start; }
+      .buy-btn { grid-column: 3; grid-row: 1 / 3; font-size: 7px; padding: 8px 10px; letter-spacing: 1px; align-self: center; white-space: nowrap; }
+
+      /* Price alert mobile */
+      .price-alert-section { padding: 0.8rem; }
+      .price-alert-form { flex-direction: column; gap: 6px; }
+      .price-alert-input { font-size: 14px; padding: 10px 12px; }
+      .price-alert-btn { padding: 10px 16px; text-align: center; }
+
+      /* Detail meta mobile */
+      .detail-meta { gap: 1rem; flex-direction: column; }
+
+      /* Dupe & reco cards mobile */
+      .dupe-cards { gap: 8px; }
+      .dupe-card { width: 150px; padding: 10px; }
+      .dupe-card-name { font-size: 12px; }
+      .dupe-card-price { font-size: 15px; }
+      .reco-cards { gap: 8px; }
+      .reco-card { width: 140px; padding: 10px; }
+      .reco-card-name { font-size: 12px; }
+      .share-btns { flex-direction: column; }
+      .share-btn { justify-content: center; padding: 10px 14px; }
+
+      /* Compare modal mobile */
+      .compare-modal { max-width: 100%; }
+      .cmp-grid.cols-2, .cmp-grid.cols-3, .cmp-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+      .cmp-product-head { padding: 0.8rem 0.6rem; }
+      .cmp-product-img { width: 50px; height: 50px; }
+      .cmp-product-brand { font-size: 7px; }
+      .cmp-product-name { font-size: 12px; min-height: 28px; }
+      .cmp-winner-badge { font-size: 6px; padding: 2px 5px; top: 4px; right: 4px; }
+      .cmp-row-label { font-size: 7px; padding: 6px 0.6rem 3px; letter-spacing: 2px; }
+      .cmp-cell { padding: 6px 0.6rem; font-size: 11px; min-height: 36px; }
+      .cmp-price { font-size: 16px; }
+      .cmp-price-sub { font-size: 8px; }
+      .cmp-rating-num { font-size: 16px; }
+      .cmp-rating-reviews { font-size: 8px; }
+      .cmp-nat-bar-bg { height: 6px; }
+      .cmp-nat-score { font-size: 11px; }
+      .cmp-nat-label { font-size: 8px; }
+      .cmp-ing-chip { font-size: 7px; padding: 1px 4px; }
+      .cmp-badge { font-size: 7px; padding: 2px 5px; }
+      .cmp-buy { font-size: 7px; padding: 6px 10px; letter-spacing: 1px; }
+      .cmp-verdict { padding: 0.8rem; }
+      .cmp-verdict-title { font-size: 7px; }
+      .cmp-verdict-text { font-size: 13px; }
+
+      /* Skin test mobile */
+      .skin-test-modal { max-width: 100%; }
+      .skin-test-body { padding: 1rem; }
+      .skin-test-emoji { font-size: 24px; }
+      .skin-test-question { font-size: 17px; margin-bottom: 1rem; }
+      .skin-test-opt { font-size: 11px; padding: 11px 12px; }
+      .skin-test-result-tone { font-size: 24px; }
+      .skin-tone-swatch { width: 60px; height: 60px; }
+      .skin-test-chips { gap: 5px; }
+      .skin-test-chip { font-size: 8px; padding: 4px 9px; letter-spacing: 1px; }
+      .skin-test-result-desc { font-size: 11px; }
+      .skin-test-routine-item { padding: 8px 10px; gap: 10px; }
+      .skin-test-routine-icon { font-size: 16px; }
+      .skin-test-routine-cat { font-size: 8px; }
+      .skin-test-routine-tip { font-size: 10px; }
+      .skin-test-prod-grid { grid-template-columns: 1fr 1fr; gap: 5px; }
+      .skin-test-prod-card { padding: 8px; }
+      .skin-test-prod-name { font-size: 12px; }
+      .skin-test-prod-price { font-size: 11px; }
+
+      /* Wishlist mobile */
+      .wishlist-modal { max-width: 100%; }
+      .wishlist-body { padding: 0.8rem 1rem; }
+      .wishlist-item { gap: 8px; padding: 8px 0; }
+      .wishlist-item-emoji { width: 40px !important; height: 40px !important; font-size: 22px; }
+      .wishlist-item-brand { font-size: 7px; }
+      .wishlist-item-name { font-size: 13px; }
+      .wishlist-item-price { font-size: 15px; }
+      .wishlist-item-remove { font-size: 14px; }
+      .wishlist-summary { padding: 0.8rem; }
+      .wishlist-total-amount { font-size: 22px; }
+      .wishlist-budget-input { width: 120px; font-size: 14px; padding: 8px 10px; }
+      .wishlist-alt { flex-wrap: wrap; gap: 6px; padding: 6px 8px; }
+      .wishlist-alt-swap { font-size: 7px; }
+      .wishlist-group-label { font-size: 7px; padding: 8px 0 3px; }
+
+      /* Brand & category modals mobile */
+      .brand-modal { padding: 3rem 0.8rem 1rem; }
+      .brand-modal-search-input { font-size: 18px; padding: 12px 16px 12px 44px; }
+      .brand-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .brand-card { padding: 0.8rem 0.5rem; gap: 5px; }
+      .brand-card-avatar { width: 38px; height: 38px; font-size: 16px; border-radius: 8px; }
+      .brand-card-name { font-size: 8px; letter-spacing: 1.5px; }
+      .brand-card-count { font-size: 7px; }
+      .cat-modal { padding: 3rem 0.8rem 1rem; }
+      .cat-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .cat-card { padding: 1rem 0.5rem; gap: 5px; }
+      .cat-card-emoji { width: 32px; height: 32px; }
+      .cat-card-name { font-size: 8px; letter-spacing: 1.5px; }
+      .cat-card-count { font-size: 7px; }
+
+      /* Budget picker mobile */
+      .budget-picker-inner { padding: 1rem 0.8rem 1.2rem; }
+      .budget-picker-title { font-size: 10px; letter-spacing: 3px; margin-bottom: 1rem; }
+      .bp-budget-input { width: 100%; font-size: 16px; }
+      .bp-budget-wrap { flex-direction: column; align-items: stretch; }
+      .bp-chips { gap: 4px; }
+      .bp-chip { font-size: 8px; padding: 4px 9px; }
+      .bp-run { width: 100%; text-align: center; padding: 12px; }
+      .bp-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+      .bp-card { padding: 10px; }
+      .bp-card-name { font-size: 12px; }
+      .bp-card-price { font-size: 16px; }
+
+      /* Footer mobile */
+      .footer-grid { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.5rem 1rem 1rem; }
+      .footer-col-title { font-size: 8px; }
+      .footer-col a { font-size: 11px; }
+      .footer-bottom { font-size: 9px; padding: 0.8rem 1rem; }
+
+      /* Search overlay mobile */
+      .search-overlay { padding: 2.5rem 0.8rem 1rem; }
+      .search-overlay-title { font-size: 10px; }
+      .search-overlay-input { font-size: 18px; padding: 12px 14px 12px 42px; }
+      .search-result-item { gap: 8px; padding: 10px 0; }
+      .search-result-name { font-size: 13px; }
+      .search-result-price { font-size: 13px; }
+
+      /* Cookie banner mobile */
+      .cookie-banner { flex-direction: column; padding: 0.8rem; text-align: center; gap: 8px; }
+      .cookie-banner-text { font-size: 11px; }
+      .cookie-banner-btns { justify-content: center; }
+
+      /* Legal content mobile */
+      .legal-content { padding: 1rem; }
+      .legal-content h2 { font-size: 16px; }
+      .legal-content p, .legal-content li { font-size: 12px; }
+
+      /* Mobile menu improvements */
+      .mobile-menu a { font-size: 14px; padding: 12px 0; }
+    }
+
+    /* ── RESPONSIVE — SMALL MOBILE (360px) ── */
+    @media (max-width: 360px) {
+      .hero-title { font-size: 20px; }
+      .products { grid-template-columns: 1fr; }
+      .card-image { height: 140px; }
+      .card-body { padding: 0.8rem 1rem 1rem; }
+      .card-name { font-size: 15px; }
+      .card-price { font-size: 18px; }
+      .brand-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .bp-grid { grid-template-columns: 1fr; }
+      .cmp-grid.cols-2, .cmp-grid.cols-3, .cmp-grid.cols-4 { grid-template-columns: 1fr; }
+      .skin-test-prod-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1106,8 +1399,9 @@
   <a onclick="resetFilters();toggleMobileMenu()">Koleksiyon</a>
   <a onclick="openCatModal();toggleMobileMenu()">Kategoriler</a>
   <a onclick="openBrandModal();toggleMobileMenu()">Markalar</a>
+  <a onclick="openCompare();toggleMobileMenu()">Karsilastir</a>
   <a onclick="openSkinTest();toggleMobileMenu()">Cilt Testi</a>
-  <a onclick="openSearchOverlay();toggleMobileMenu()">🔍 Ara</a>
+  <a onclick="openSearchOverlay();toggleMobileMenu()">Ara</a>
 </div>
 
 <!-- Brand Modal -->
@@ -1184,10 +1478,10 @@
     <button class="filter-btn" data-cat="dudak-kalemi">Dudak Kalemi</button>
     <div class="filter-divider"></div>
     <span class="filter-label">Cilt &amp; Bakım</span>
-    <button class="filter-btn" data-cat="nemlendirici">💧 Nemlendirici</button>
-    <button class="filter-btn" data-cat="goz-kremi">🌿 Göz Kremi</button>
-    <button class="filter-btn" data-cat="vucut-losyonu">🧴 Vücut Bakımı</button>
-    <button class="filter-btn" data-cat="parfum">🌺 Parfüm</button>
+    <button class="filter-btn" data-cat="nemlendirici">Nemlendirici</button>
+    <button class="filter-btn" data-cat="goz-kremi">Göz Kremi</button>
+    <button class="filter-btn" data-cat="vucut-losyonu">Vücut Bakımı</button>
+    <button class="filter-btn" data-cat="parfum">Parfüm</button>
     <div class="filter-divider"></div>
     <span class="filter-label">Cilt Tipi</span>
     <button class="filter-btn" data-skin="yağlı">Yağlı</button>
@@ -1195,11 +1489,11 @@
     <button class="filter-btn" data-skin="karma">Karma</button>
     <button class="filter-btn" data-skin="hassas">Hassas</button>
     <div class="filter-divider"></div>
-    <button class="filter-btn" data-tag="vegan">🌿 Vegan</button>
-    <button class="filter-btn" data-tag="crueltyFree">🐰 Cruelty-Free</button>
-    <button class="filter-btn" data-tag="spf">☀️ SPF</button>
+    <button class="filter-btn" data-tag="vegan">Vegan</button>
+    <button class="filter-btn" data-tag="crueltyFree">Cruelty-Free</button>
+    <button class="filter-btn" data-tag="spf">SPF</button>
     <div class="filter-divider"></div>
-    <button class="filter-btn" data-tag="multiSeller">🏪 Çoklu Satıcı</button>
+    <button class="filter-btn" data-tag="multiSeller">Çoklu Satıcı</button>
     <input class="search-bar" type="text" id="searchInput" placeholder="Ürün veya marka ara...">
   </div>
 </div>
@@ -1578,6 +1872,8 @@
 <script src="products-data.js"></script>
 <script>
 // ── Ürün verisi products-data.js dosyasından yükleniyor ──
+// Fallback SVG icon (replaces all emoji fallbacks like 💄)
+var FALLBACK_ICON = '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;color:var(--text3)"><rect x="15" y="22" width="10" height="12" rx="2"/><path d="M15 22l2-8h6l2 8"/><path d="M17 14Q20 8 23 14"/></svg>';
 
 
 const reviews = [
@@ -1677,7 +1973,7 @@ function renderFeatured(tab) {
             <div class="feat-img-wrap">
               ${p.imageUrl
                 ? `<img src="${p.imageUrl}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">`
-                : `<div class="feat-img-emoji">${p.emoji||'💄'}</div>`}
+                : `<div class="feat-img-emoji">${p.emoji||FALLBACK_ICON}</div>`}
               <span class="feat-rank">${i+1}</span>
               ${pct > 5 ? `<span class="feat-badge">%${pct}</span>` : ''}
             </div>
@@ -1976,7 +2272,7 @@ function buildCatGrid() {
   grid.innerHTML = cats.map((c, i) => {
     const isActive = activeCategory === c;
     const count = c === 'all' ? products.length : (catCounts[c] || 0);
-    const emoji = CAT_EMOJIS[c] || '💄';
+    const emoji = CAT_EMOJIS[c] || FALLBACK_ICON;
     const name = CAT_NAMES[c] || c;
     return `<div class="cat-card${isActive ? ' active' : ''}" onclick="selectCatFromModal('${c}')">
       <div class="cat-card-emoji">${emoji}</div>
@@ -2047,7 +2343,7 @@ function updateSearchOverlayResults(q) {
         ${hasImg
           ? `<img class="search-result-img" src="${p.imageUrl}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
           : ''}
-        <div class="search-result-emoji" style="${hasImg?'display:none':''}">${p.emoji||'💄'}</div>
+        <div class="search-result-emoji" style="${hasImg?'display:none':''}">${p.emoji||FALLBACK_ICON}</div>
         <div class="search-result-info">
           <div class="search-result-name">${p.name}</div>
           <div class="search-result-meta">${p.brand.toUpperCase()} · ${CAT_NAMES[p.category]||p.category} · ${p.prices.length} satıcı</div>
@@ -2138,7 +2434,7 @@ function buildCardHTML(p) {
           ${p.imageUrl
             ? `<img class="card-image-real" src="${p.imageUrl}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
             : ''}
-          <span class="card-image-emoji" style="${p.imageUrl ? 'display:none' : ''}">${p.emoji || '💄'}</span>
+          <span class="card-image-emoji" style="${p.imageUrl ? 'display:none' : ''}">${p.emoji || FALLBACK_ICON}</span>
           <button class="fav-btn${isFav ? ' active' : ''}"
             onclick="event.stopPropagation();toggleFav(${p.id})"
             title="${isFav ? 'Favorilerden çıkar' : 'Favorilere ekle'}">${isFav ? '♥' : '♡'}</button>
@@ -2322,7 +2618,7 @@ function setPriceAlert(productId) {
   const section = document.getElementById('alertSection_' + productId);
   if (section) {
     section.innerHTML = `
-      <div class="price-alert-title">🔔 Fiyat Alarmı</div>
+      <div class="price-alert-title">Fiyat Alarmı</div>
       <div class="price-alert-set">✓ Alarm kuruldu — ${email} adresine bildirilecek
         <button onclick="removePriceAlert(${productId})" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:10px;text-decoration:underline;margin-left:8px">Kaldır</button>
       </div>
@@ -2393,7 +2689,7 @@ function openDetail(id) {
       ${(p.imageUrl && !p.imageUrl.includes('placeholder')) || (p.variants && p.variants[0] && p.variants[0].imageUrl && !p.variants[0].imageUrl.includes('placeholder'))
         ? `<img class="detail-image-real" id="detailModalImage" src="${(p.imageUrl && !p.imageUrl.includes('placeholder')) ? p.imageUrl : p.variants[0].imageUrl}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">`
         : ''}
-      <span class="detail-image-emoji" id="detailModalEmoji" style="${((p.imageUrl && !p.imageUrl.includes('placeholder')) || (p.variants && p.variants[0] && p.variants[0].imageUrl && !p.variants[0].imageUrl.includes('placeholder'))) ? 'display:none' : ''}">${p.emoji || '💄'}</span>
+      <span class="detail-image-emoji" id="detailModalEmoji" style="${((p.imageUrl && !p.imageUrl.includes('placeholder')) || (p.variants && p.variants[0] && p.variants[0].imageUrl && !p.variants[0].imageUrl.includes('placeholder'))) ? 'display:none' : ''}">${p.emoji || FALLBACK_ICON}</span>
     </div>
     <div class="detail-body">
       ${badgeHtml.length ? '<div class="card-badges" style="margin-bottom:12px">' + badgeHtml.join(' ') + '</div>' : ''}
@@ -2430,7 +2726,7 @@ function openDetail(id) {
 
       <!-- Price Alert -->
       <div class="price-alert-section" id="alertSection_${p.id}">
-        <div class="price-alert-title">🔔 Fiyat Alarmı</div>
+        <div class="price-alert-title">Fiyat Alarmı</div>
         ${hasAlert
           ? `<div class="price-alert-set">✓ Alarm kuruldu — ${hasAlert} adresine bildirilecek
               <button onclick="removePriceAlert(${p.id})" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:10px;text-decoration:underline;margin-left:8px">Kaldır</button>
@@ -2463,14 +2759,14 @@ function openDetail(id) {
 
       ${dupes.length ? `
         <div class="dupe-section">
-          <div class="detail-section-title">💰 Bütçe Dostu Alternatifleri (Dupe)</div>
+          <div class="detail-section-title">Bütçe Dostu Alternatifleri (Dupe)</div>
           <div class="dupe-cards">
             ${dupes.map(d => {
               const dp = minPrice(d);
               const save = minPrice(p) - dp;
               return `
                 <div class="dupe-card" onclick="openDetail(${d.id})">
-                  <div class="dupe-card-emoji">${d.emoji || '💄'}</div>
+                  <div class="dupe-card-emoji">${d.emoji || FALLBACK_ICON}</div>
                   <div class="dupe-card-brand">${d.brand}</div>
                   <div class="dupe-card-name">${d.name}</div>
                   <div class="dupe-card-price">₺${dp.toLocaleString('tr-TR')}</div>
@@ -2484,11 +2780,11 @@ function openDetail(id) {
 
       ${originals.length ? `
         <div class="dupe-section">
-          <div class="detail-section-title">✨ Bunun Lüks Versiyonu</div>
+          <div class="detail-section-title">Bunun Lüks Versiyonu</div>
           <div class="dupe-cards">
             ${originals.map(o => `
               <div class="dupe-card" onclick="openDetail(${o.id})">
-                <div class="dupe-card-emoji">${o.emoji || '💄'}</div>
+                <div class="dupe-card-emoji">${o.emoji || FALLBACK_ICON}</div>
                 <div class="dupe-card-brand">${o.brand}</div>
                 <div class="dupe-card-name">${o.name}</div>
                 <div class="dupe-card-price dupe-card-price-luxury">₺${minPrice(o).toLocaleString('tr-TR')}</div>
@@ -2500,11 +2796,11 @@ function openDetail(id) {
 
       ${recos.length ? `
         <div class="reco-section">
-          <div class="detail-section-title">🎯 Bunu Beğenenler Şunu da Beğendi</div>
+          <div class="detail-section-title">Bunu Beğenenler Şunu da Beğendi</div>
           <div class="reco-cards">
             ${recos.map(r => `
               <div class="reco-card" onclick="openDetail(${r.id})">
-                <div class="reco-card-emoji">${r.emoji || '💄'}</div>
+                <div class="reco-card-emoji">${r.emoji || FALLBACK_ICON}</div>
                 <div class="reco-card-brand">${r.brand}</div>
                 <div class="reco-card-name">${r.name}</div>
                 <div class="reco-card-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
@@ -2517,7 +2813,7 @@ function openDetail(id) {
       <!-- Ingredients -->
       ${p.ingredients && p.ingredients.length ? `
         <div class="ingredients-section">
-          <div class="detail-section-title">🧪 İçerik Analizi</div>
+          <div class="detail-section-title">İçerik Analizi</div>
           <div class="ingredient-list">
             ${p.ingredients.map(ing => {
               const isWarn = p.ingredientWarnings && p.ingredientWarnings.includes(ing);
@@ -3065,65 +3361,75 @@ if (localStorage.getItem('beaute-dark')) {
 
 // ── SKIN TONE TEST ──────────────────────────────────────────────────────────
 // ── CİLT TESTİ — GENİŞLETİLMİŞ ──────────────────────────────────────────────
+// SVG icons for skin test questions (inline, line-art style)
+var _stSvg = function(d){return '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px">'+d+'</svg>';};
+var ST_ICONS = {
+  sun:     _stSvg('<circle cx="16" cy="16" r="6"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="16" y1="25" x2="16" y2="29"/><line x1="5.5" y1="5.5" x2="8.3" y2="8.3"/><line x1="23.7" y1="23.7" x2="26.5" y2="26.5"/><line x1="3" y1="16" x2="7" y2="16"/><line x1="25" y1="16" x2="29" y2="16"/><line x1="5.5" y1="26.5" x2="8.3" y2="23.7"/><line x1="23.7" y1="8.3" x2="26.5" y2="5.5"/>'),
+  vein:    _stSvg('<path d="M10 28V18c0-3 2-5 6-5s6 2 6 5v10"/><path d="M13 18v-4c0-2 1-3 3-3s3 1 3 3v4"/><circle cx="16" cy="7" r="3"/>'),
+  jewelry: _stSvg('<circle cx="16" cy="18" r="8"/><path d="M11 10l5 8 5-8"/><line x1="11" y1="10" x2="21" y2="10"/>'),
+  skin:    _stSvg('<ellipse cx="16" cy="16" rx="10" ry="12"/><path d="M11 13c1-1 3-2 5-2s4 1 5 2"/><circle cx="12" cy="16" r="1.5" fill="currentColor"/><circle cx="20" cy="16" r="1.5" fill="currentColor"/><path d="M13 21c1.5 1 4.5 1 6 0"/>'),
+  concern: _stSvg('<circle cx="16" cy="16" r="11"/><path d="M16 10v7"/><circle cx="16" cy="22" r="1.2" fill="currentColor"/>'),
+  routine: _stSvg('<rect x="8" y="4" width="16" height="24" rx="3"/><line x1="8" y1="10" x2="24" y2="10"/><circle cx="16" cy="20" r="3"/><line x1="16" y1="17" x2="16" y2="10"/>'),
+};
 const skinTestQuestions = [
   {
-    id: 'sun', emoji: '☀️',
+    id: 'sun', icon: ST_ICONS.sun,
     question: "Güneşte uzun süre kaldığınızda cildiniz nasıl tepki verir?",
     options: [
-      { text: "Hemen yanarım, bronzlaşamam",              hint: "Çok açık",   value: "fair"   },
-      { text: "Önce yanarım, sonra hafif bronzlaşırım",   hint: "Açık",       value: "light"  },
-      { text: "Nadiren yanarım, kolayca bronzlaşırım",    hint: "Orta",       value: "medium" },
-      { text: "Hiç yanmam, her zaman bronzlaşırım",       hint: "Koyu",       value: "dark"   },
+      { text: "Hemen yanarım, bronzlaşamam",              hint: "Çok açık ten",   value: "fair"   },
+      { text: "Önce yanarım, sonra hafif bronzlaşırım",   hint: "Açık ten",       value: "light"  },
+      { text: "Nadiren yanarım, kolayca bronzlaşırım",    hint: "Orta ten",       value: "medium" },
+      { text: "Hiç yanmam, her zaman bronzlaşırım",       hint: "Koyu ten",       value: "dark"   },
     ]
   },
   {
-    id: 'vein', emoji: '💙',
+    id: 'vein', icon: ST_ICONS.vein,
     question: "Bileğinizin iç kısmındaki damarlarınız hangi renkte görünür?",
     options: [
-      { text: "Mavi / Mor tonlarında",  hint: "Soğuk alt ton", value: "cool"    },
-      { text: "Yeşil tonlarında",        hint: "Sıcak alt ton", value: "warm"    },
-      { text: "Hem mavi hem yeşil",      hint: "Nötr alt ton",  value: "neutral" },
+      { text: "Mavi veya mor tonlarında",   hint: "Soğuk alt ton", value: "cool"    },
+      { text: "Yeşil tonlarında",            hint: "Sıcak alt ton", value: "warm"    },
+      { text: "Hem mavi hem yeşil karışık",  hint: "Nötr alt ton",  value: "neutral" },
     ]
   },
   {
-    id: 'jewelry', emoji: '💍',
-    question: "Altın mı, gümüş mü takı size daha çok yakışır?",
+    id: 'jewelry', icon: ST_ICONS.jewelry,
+    question: "Hangi tür takılar cildinizde daha çok yakışır?",
     options: [
-      { text: "Gümüş ve platin",     hint: "Soğuk alt ton", value: "cool"    },
-      { text: "Altın ve rose gold",  hint: "Sıcak alt ton", value: "warm"    },
-      { text: "İkisi de eşit güzel", hint: "Nötr alt ton",  value: "neutral" },
+      { text: "Gümüş ve platin takılar",     hint: "Soğuk alt ton", value: "cool"    },
+      { text: "Altın ve rose gold takılar",   hint: "Sıcak alt ton", value: "warm"    },
+      { text: "İkisi de eşit derecede güzel", hint: "Nötr alt ton",  value: "neutral" },
     ]
   },
   {
-    id: 'skin_type', emoji: '🪞',
-    question: "Gün sonunda cildiniz nasıl görünür?",
+    id: 'skin_type', icon: ST_ICONS.skin,
+    question: "Sabah yüzünüzü yıkadıktan 3-4 saat sonra cildiniz nasıl hissettiriyor?",
     options: [
-      { text: "Yağlanır ve parlar",              hint: "Yağlı cilt",  value: "yagli"  },
-      { text: "Çekilmiş ve gergin hissedilir",   hint: "Kuru cilt",   value: "kuru"   },
-      { text: "T bölgesi yağlı, yanaklar kuru",  hint: "Karma cilt",  value: "karma"  },
-      { text: "Ne aşırı yağlı ne de kuru",       hint: "Normal cilt", value: "normal" },
+      { text: "Özellikle alın ve burun bölgesi yağlanıyor",     hint: "Yağlı cilt",  value: "yagli"  },
+      { text: "Gergin ve kurumuş hissediyorum",                  hint: "Kuru cilt",   value: "kuru"   },
+      { text: "Bazı bölgeler yağlı, bazıları kuru",              hint: "Karma cilt",  value: "karma"  },
+      { text: "Dengeli, ne yağlı ne kuru",                       hint: "Normal cilt", value: "normal" },
     ]
   },
   {
-    id: 'concern', emoji: '🔍',
-    question: "En büyük cilt endişeniz hangisi?",
+    id: 'concern', icon: ST_ICONS.concern,
+    question: "Cildinizle ilgili sizi en çok rahatsız eden durum hangisi?",
     options: [
-      { text: "Sivilce ve akne izleri",       hint: "Gözenek açıcı", value: "akne"      },
-      { text: "Kırışıklık ve yaşlanma",        hint: "Anti-aging",   value: "antiaging" },
-      { text: "Leke ve hiperpigmentasyon",     hint: "Renk tonu",    value: "leke"      },
-      { text: "Kızarıklık ve hassasiyet",      hint: "Sakinleştirici",value: "hassas"   },
-      { text: "Belirgin gözenekler",           hint: "Pore-control", value: "gozener"   },
-      { text: "Genel cilt bakımı",             hint: "",             value: "genel"     },
+      { text: "Sivilce, akne izleri ve siyah noktalar",   hint: "Akne kontrolü",  value: "akne"      },
+      { text: "İnce çizgiler ve kırışıklıklar",            hint: "Anti-aging",     value: "antiaging" },
+      { text: "Güneş lekeleri ve ton eşitsizliği",         hint: "Aydınlatma",     value: "leke"      },
+      { text: "Kızarıklık, tahriş ve hassasiyet",          hint: "Hassas bakım",   value: "hassas"    },
+      { text: "Belirgin ve açık gözenekler",                hint: "Gözenek bakımı", value: "gozener"   },
+      { text: "Genel olarak memnunum",                      hint: "Koruyucu bakım", value: "genel"     },
     ]
   },
   {
-    id: 'coverage', emoji: '✨',
-    question: "Fondöten kıvamı tercihiniz nasıl?",
+    id: 'routine', icon: ST_ICONS.routine,
+    question: "Günlük cilt bakım rutininiz nasıl?",
     options: [
-      { text: "Çok hafif, yok gibi görünsün", hint: "BB / Serum",     value: "hafif" },
-      { text: "Doğal, nefes alan kaplama",     hint: "Sıvı fondöten", value: "orta"  },
-      { text: "Tam kapatma, kalıcı makyaj",    hint: "Full coverage", value: "tam"   },
-      { text: "Işıltılı, dewy görünüm",        hint: "Glow finish",   value: "isilti"},
+      { text: "Sadece yüzümü yıkıyorum, ek ürün kullanmıyorum",  hint: "Minimal",     value: "minimal" },
+      { text: "Temizleyici ve nemlendirici kullanıyorum",          hint: "Temel",       value: "temel"   },
+      { text: "Serum, krem ve güneş koruyucu kullanıyorum",        hint: "Orta düzey",  value: "orta"    },
+      { text: "Detaylı çok adımlı bir rutinim var",                hint: "Kapsamlı",    value: "kapsamli"},
     ]
   },
 ];
@@ -3176,28 +3482,28 @@ const CONCERN_LABELS = {
 };
 const ROUTINE_TIPS = {
   yagli: [
-    { icon:'💧', cat:'Nemlendirici', tip:'Yağsız (oil-free), hafif dokulu jel nemlendirici seçin. Ağır kremler gözenekleri tıkayabilir.' },
-    { icon:'🌿', cat:'Primer',   tip:'Gözenek küçültücü ve yağ dengeleyici primer tercih edin.' },
-    { icon:'✨', cat:'Fondöten', tip:'Oil-free, matte finish sıvı fondöten. SPF\'li seçenekler bonus.' },
-    { icon:'🌫️', cat:'Pudra',    tip:'Pressed pudra ile T bölgesini matteleştirin, parlamayı önleyin.' },
+    { icon:'drop', cat:'Nemlendirici', tip:'Yağsız (oil-free), hafif dokulu jel nemlendirici seçin. Ağır kremler gözenekleri tıkayabilir.' },
+    { icon:'leaf', cat:'Primer',   tip:'Gözenek küçültücü ve yağ dengeleyici primer tercih edin.' },
+    { icon:'sparkle', cat:'Fondöten', tip:'Oil-free, matte finish sıvı fondöten. SPF\'li seçenekler bonus.' },
+    { icon:'sun', cat:'Pudra',    tip:'Pressed pudra ile T bölgesini matteleştirin, parlamayı önleyin.' },
   ],
   kuru: [
-    { icon:'💧', cat:'Nemlendirici', tip:'Hyaluronik asit ve shea butter içerikli zengin krem. Makyaj öncesi iyi emmesini bekleyin.' },
-    { icon:'🌿', cat:'Primer',   tip:'Nemlendirici ve serum içerikli primer cilt rutinine ekleyin.' },
-    { icon:'✨', cat:'Fondöten', tip:'Dewy finish veya serum fondöten. Hyaluronik asit içerikli ideal.' },
-    { icon:'🌟', cat:'Aydınlatıcı', tip:'Yanak ve elmacık kemiğine vurgulayıcı ekleyin, donuk görünümü gidin.' },
+    { icon:'drop', cat:'Nemlendirici', tip:'Hyaluronik asit ve shea butter içerikli zengin krem. Makyaj öncesi iyi emmesini bekleyin.' },
+    { icon:'leaf', cat:'Primer',   tip:'Nemlendirici ve serum içerikli primer cilt rutinine ekleyin.' },
+    { icon:'sparkle', cat:'Fondöten', tip:'Dewy finish veya serum fondöten. Hyaluronik asit içerikli ideal.' },
+    { icon:'sparkle', cat:'Aydınlatıcı', tip:'Yanak ve elmacık kemiğine vurgulayıcı ekleyin, donuk görünümü gidin.' },
   ],
   karma: [
-    { icon:'💧', cat:'Nemlendirici', tip:'Hafif, bölgesel uygulama yapabilirsiniz: T bölgesine hafif jel, yanaklar için daha zengin bir krem.' },
-    { icon:'🌿', cat:'Primer',   tip:'T bölgesi için gözenek minimizer, yanaklar için nemlendirici primer.' },
-    { icon:'✨', cat:'Fondöten', tip:'Orta kapatmalı, uzun süre kalıcı sıvı fondöten.' },
-    { icon:'🌫️', cat:'Pudra',    tip:'Yalnızca T bölgesine hafif baskılı pudra uygulayın.' },
+    { icon:'drop', cat:'Nemlendirici', tip:'Hafif, bölgesel uygulama yapabilirsiniz: T bölgesine hafif jel, yanaklar için daha zengin bir krem.' },
+    { icon:'leaf', cat:'Primer',   tip:'T bölgesi için gözenek minimizer, yanaklar için nemlendirici primer.' },
+    { icon:'sparkle', cat:'Fondöten', tip:'Orta kapatmalı, uzun süre kalıcı sıvı fondöten.' },
+    { icon:'sun', cat:'Pudra',    tip:'Yalnızca T bölgesine hafif baskılı pudra uygulayın.' },
   ],
   normal: [
-    { icon:'💧', cat:'Nemlendirici', tip:'SPF 30+ içeren günlük nemlendirici cildinizi korurken makyaj tabanı oluşturur.' },
-    { icon:'🌟', cat:'Primer',   tip:'Renk düzenleyici veya ışıltı veren primer seçebilirsiniz.' },
-    { icon:'✨', cat:'Fondöten', tip:'Her kıvamda fondöten size uygundur; hafif ya da tam kapatma tercihe göre.' },
-    { icon:'💜', cat:'Göz Makyajı', tip:'Cilt tipiniz göz makyajına kısıtlama getirmiyor; tüm ürünleri deneyebilirsiniz.' },
+    { icon:'drop', cat:'Nemlendirici', tip:'SPF 30+ içeren günlük nemlendirici cildinizi korurken makyaj tabanı oluşturur.' },
+    { icon:'leaf', cat:'Primer',   tip:'Renk düzenleyici veya ışıltı veren primer seçebilirsiniz.' },
+    { icon:'sparkle', cat:'Fondöten', tip:'Her kıvamda fondöten size uygundur; hafif ya da tam kapatma tercihe göre.' },
+    { icon:'eye', cat:'Göz Makyajı', tip:'Cilt tipiniz göz makyajına kısıtlama getirmiyor; tüm ürünleri deneyebilirsiniz.' },
   ],
 };
 const CONCERN_TIP = {
@@ -3234,7 +3540,7 @@ function renderSkinTest() {
     </div>
     <div class="skin-test-step active">
       <div class="skin-test-header">
-        <span class="skin-test-emoji">${q.emoji}</span>
+        <span class="skin-test-emoji">${q.icon || ''}</span>
         <span class="skin-test-counter">${skinTestStep + 1} / ${total}</span>
       </div>
       <div class="skin-test-question">${q.question}</div>
@@ -3265,6 +3571,19 @@ function answerSkinTest(optIndex) {
   }
 }
 
+// SVG icons for skin test result sections
+var _stResSvg = function(d){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;color:var(--text3)">'+d+'</svg>';};
+var ST_RES_ICONS = {
+  drop:    _stResSvg('<path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z"/>'),
+  leaf:    _stResSvg('<path d="M17 8C8 10 5.9 16.17 3.82 21.34L5 22l1.18-.66C11 18 14 13.12 17 8z"/><path d="M5 22l6-6"/>'),
+  sparkle: _stResSvg('<path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5z"/><path d="M19 17l.7 2.3L22 20l-2.3.7L19 23l-.7-2.3L16 20l2.3-.7z"/>'),
+  sun:     _stResSvg('<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>'),
+  bulb:    _stResSvg('<path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.7V17h8v-2.3A7 7 0 0012 2z"/>'),
+  target:  _stResSvg('<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>'),
+  eye:     _stResSvg('<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>'),
+  jar:     _stResSvg('<rect x="5" y="12" width="14" height="9" rx="3"/><path d="M7 12V9c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v3"/>'),
+};
+
 function showSkinTestResult() {
   const body      = document.getElementById('skinTestBody');
   const total     = skinTestQuestions.length;
@@ -3275,7 +3594,7 @@ function showSkinTestResult() {
   const undertone = warmCount > coolCount ? 'warm' : coolCount > warmCount ? 'cool' : 'neutral';
   const skinType  = skinTestAnswers[3] || 'normal';
   const concern   = skinTestAnswers[4] || 'genel';
-  const coverage  = skinTestAnswers[5] || 'orta';
+  const routine   = skinTestAnswers[5] || 'temel';
 
   const toneKey   = depth + '-' + undertone;
   const swatchColor = SKIN_TONE_COLORS[toneKey]  || '#C09070';
@@ -3287,23 +3606,25 @@ function showSkinTestResult() {
   const undertoneClass = 'undertone-' + undertone;
   const concernClass   = concern !== 'genel' ? 'concern-' + concern : '';
 
-  // Eşleşen fondötenler
-  const matchFondoten = products.filter(p => {
-    if (p.category !== 'fondoten') return false;
-    return p.shades && p.shades.some(s => shadeHints.some(h => s.toLowerCase().includes(h.toLowerCase())));
-  }).slice(0, 4);
+  // Routine level label
+  const routineLabels = {minimal:'Minimal Bakım', temel:'Temel Bakım', orta:'Orta Düzey Bakım', kapsamli:'Kapsamlı Bakım'};
 
-  // Coverage tipine göre ek ürün önerileri
-  const coverageCat = coverage === 'hafif' ? 'primer' : coverage === 'tam' ? 'kapatici' : coverage === 'isilti' ? 'aydinlatici' : 'kapatici';
-  const matchCoverage = products.filter(p => p.category === coverageCat).slice(0, 2);
-
-  // Cilt tipine göre nemlendirici önerileri
+  // Cilt tipine göre ürün önerileri (fondöten hariç - herkes kullanmıyor)
   const matchNemlendirici = products.filter(p => p.category === 'nemlendirici' &&
-    (!p.skinTypes || p.skinTypes.includes(skinType))).slice(0, 2);
+    p.skinType && p.skinType.some(s => s === skinType || s === 'normal')
+  ).sort((a,b) => b.rating - a.rating).slice(0, 4);
+
+  // Concern'e göre öneriler
+  var concernCat = {akne:'primer', antiaging:'goz-kremi', leke:'aydinlatici', hassas:'nemlendirici', gozener:'primer', genel:'nemlendirici'};
+  const matchConcern = products.filter(p => p.category === (concernCat[concern]||'nemlendirici'))
+    .sort((a,b) => b.rating - a.rating).slice(0, 2);
 
   // Rutin
   const routineTips  = ROUTINE_TIPS[skinType] || ROUTINE_TIPS['normal'];
   const concernTipTx = CONCERN_TIP[concern]   || CONCERN_TIP['genel'];
+
+  // Routine icons mapping (replaces emojis)
+  var routineIconMap = {'Nemlendirici':ST_RES_ICONS.drop, 'Primer':ST_RES_ICONS.leaf, 'Fondöten':ST_RES_ICONS.sparkle, 'Pudra':ST_RES_ICONS.sun, 'Aydınlatıcı':ST_RES_ICONS.sparkle, 'Göz Makyajı':ST_RES_ICONS.eye};
 
   body.innerHTML = `
     <div class="skin-test-progress">
@@ -3316,21 +3637,21 @@ function showSkinTestResult() {
       </div>
 
       <div class="skin-test-chips">
-        <span class="skin-test-chip ${undertoneClass}">${undertone === 'cool' ? '❄️ Soğuk Alt Ton' : undertone === 'warm' ? '🔆 Sıcak Alt Ton' : '⚖️ Nötr Alt Ton'}</span>
+        <span class="skin-test-chip ${undertoneClass}">${undertone === 'cool' ? 'Soğuk Alt Ton' : undertone === 'warm' ? 'Sıcak Alt Ton' : 'Nötr Alt Ton'}</span>
         <span class="skin-test-chip">${SKIN_TYPE_LABELS[skinType] || skinType}</span>
         ${concern !== 'genel' ? '<span class="skin-test-chip ' + concernClass + '">' + CONCERN_LABELS[concern] + '</span>' : ''}
-        <span class="skin-test-chip">${coverage === 'hafif' ? '🌬️ Hafif Kaplama' : coverage === 'tam' ? '💼 Tam Kaplama' : coverage === 'isilti' ? '✨ Işıltılı' : '🌿 Doğal Kaplama'}</span>
+        <span class="skin-test-chip">${routineLabels[routine] || 'Temel Bakım'}</span>
       </div>
 
       <div class="skin-test-result-desc">${toneDesc}</div>
 
-      <!-- Makyaj Rutini -->
+      <!-- Cilt Bakım Rutini -->
       <div class="skin-test-routine">
-        <div class="skin-test-routine-title">🎯 Size Özel Makyaj Rutini</div>
+        <div class="skin-test-routine-title">Size Özel Bakım Rutini</div>
         <div class="skin-test-routine-list">
           ${routineTips.map(r => `
             <div class="skin-test-routine-item">
-              <span class="skin-test-routine-icon">${r.icon}</span>
+              <span class="skin-test-routine-icon">${routineIconMap[r.cat] || ST_RES_ICONS.drop}</span>
               <div>
                 <div class="skin-test-routine-cat">${r.cat}</div>
                 <div class="skin-test-routine-tip">${r.tip}</div>
@@ -3338,54 +3659,38 @@ function showSkinTestResult() {
             </div>
           `).join('')}
           <div class="skin-test-routine-item">
-            <span class="skin-test-routine-icon">💡</span>
+            <span class="skin-test-routine-icon">${ST_RES_ICONS.bulb}</span>
             <div>
-              <div class="skin-test-routine-cat">${CONCERN_LABELS[concern] || 'İpucu'}</div>
+              <div class="skin-test-routine-cat">${CONCERN_LABELS[concern] || 'Ipucu'}</div>
               <div class="skin-test-routine-tip">${concernTipTx}</div>
             </div>
           </div>
         </div>
       </div>
 
-      ${matchFondoten.length ? `
-        <div class="skin-test-prod-section">
-          <div class="skin-test-routine-title">✨ Ton Eşleşmeli Fondötenler</div>
-          <div class="skin-test-prod-grid">
-            ${matchFondoten.map(r => `
-              <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
-                <span class="skin-test-prod-emoji">${r.emoji || '✨'}</span>
-                <div class="skin-test-prod-brand">${r.brand}</div>
-                <div class="skin-test-prod-name">${r.name}</div>
-                <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      ` : ''}
-
-      ${matchCoverage.length ? `
-        <div class="skin-test-prod-section" style="margin-top:1rem">
-          <div class="skin-test-routine-title">${coverage === 'hafif' ? '🌿 Önerilen Primerler' : coverage === 'isilti' ? '💫 Önerilen Aydınlatıcılar' : '💫 Önerilen Kapatıcılar'}</div>
-          <div class="skin-test-prod-grid">
-            ${matchCoverage.map(r => `
-              <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
-                <span class="skin-test-prod-emoji">${r.emoji || '💄'}</span>
-                <div class="skin-test-prod-brand">${r.brand}</div>
-                <div class="skin-test-prod-name">${r.name}</div>
-                <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      ` : ''}
-
       ${matchNemlendirici.length ? `
-        <div class="skin-test-prod-section" style="margin-top:1rem">
-          <div class="skin-test-routine-title">💧 Önerilen Nemlendirici</div>
+        <div class="skin-test-prod-section">
+          <div class="skin-test-routine-title">Cilt Tipinize Uygun Ürünler</div>
           <div class="skin-test-prod-grid">
             ${matchNemlendirici.map(r => `
               <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
-                <span class="skin-test-prod-emoji">${r.emoji || '💧'}</span>
+                ${r.imageUrl ? '<img src="'+r.imageUrl+'" style="width:28px;height:28px;object-fit:contain;border-radius:2px" onerror="this.style.display=\'none\'">' : ''}
+                <div class="skin-test-prod-brand">${r.brand}</div>
+                <div class="skin-test-prod-name">${r.name}</div>
+                <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      ${matchConcern.length ? `
+        <div class="skin-test-prod-section" style="margin-top:1rem">
+          <div class="skin-test-routine-title">${CONCERN_LABELS[concern] || 'Öneriler'} İçin Ürünler</div>
+          <div class="skin-test-prod-grid">
+            ${matchConcern.map(r => `
+              <div class="skin-test-prod-card" onclick="document.getElementById('skinTestModal').classList.remove('open');openDetail(${r.id})">
+                ${r.imageUrl ? '<img src="'+r.imageUrl+'" style="width:28px;height:28px;object-fit:contain;border-radius:2px" onerror="this.style.display=\'none\'">' : ''}
                 <div class="skin-test-prod-brand">${r.brand}</div>
                 <div class="skin-test-prod-name">${r.name}</div>
                 <div class="skin-test-prod-price">₺${minPrice(r).toLocaleString('tr-TR')}</div>
@@ -3396,7 +3701,7 @@ function showSkinTestResult() {
       ` : ''}
 
       <button class="share-btn" style="margin-top:1.5rem;width:100%;justify-content:center" onclick="openSkinTest()">
-        ↺ Testi Tekrarla
+        Testi Tekrarla
       </button>
     </div>
   `;
@@ -3433,9 +3738,10 @@ function openWishlist() {
       lastCat = p.category;
       groupLabel = `<div class="wishlist-group-label">${CAT_NAMES[p.category] || p.category}</div>`;
     }
+    const fallbackSafe = FALLBACK_ICON.replace(/"/g,'&quot;');
     const img = p.imageUrl
-      ? `<img src="${p.imageUrl}" class="wishlist-item-emoji" style="object-fit:contain;border-radius:2px;width:50px;height:50px" onerror="this.outerHTML='<span class=wishlist-item-emoji>💄</span>'">`
-      : `<span class="wishlist-item-emoji">${p.emoji || '💄'}</span>`;
+      ? `<img src="${p.imageUrl}" class="wishlist-item-emoji" style="object-fit:contain;border-radius:2px;width:50px;height:50px" onerror="this.outerHTML='<span class=wishlist-item-emoji>${fallbackSafe}</span>'">`
+      : `<span class="wishlist-item-emoji">${FALLBACK_ICON}</span>`;
     return `${groupLabel}
       <div class="wishlist-item" id="wlitem-${p.id}">
         ${img}
