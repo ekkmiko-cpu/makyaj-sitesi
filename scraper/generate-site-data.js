@@ -591,7 +591,7 @@ function extractBigrams(text) {
   return bigrams;
 }
 
-// ── İsim benzerliği (jenerik kelimeleri dışlayan, anlamlı kelime odaklı) ──
+// ── İsim benzerliği (ÇİFT YÖNLÜ — her iki isim de yüksek eşleşme sağlamalı) ──
 function similarity(a, b) {
   var wordsA = a.split(' ').filter(function(w) { return w.length > 1; });
   var wordsB = b.split(' ').filter(function(w) { return w.length > 1; });
@@ -616,24 +616,29 @@ function similarity(a, b) {
 
   var jaccard = union.size > 0 ? intersection / union.size : 0;
 
-  // Contained ratio: ortak anlamlı kelime / kısa taraftaki anlamlı kelime sayısı
-  var minSize = Math.min(setA.size, setB.size);
-  var containedRatio = minSize > 0 ? intersection / minSize : 0;
+  // ÇİFT YÖNLÜ kapsam: HER İKİ tarafın da yüksek eşleşme oranı olmalı
+  // "Teint Idole Ultra Wear" vs "Teint Idole Ultra Wear Care & Glow"
+  // coverageA = 4/4 = 1.0 ama coverageB = 4/6 = 0.67 → min = 0.67 → REDDEDILIR
+  var coverageA = setA.size > 0 ? intersection / setA.size : 0;
+  var coverageB = setB.size > 0 ? intersection / setB.size : 0;
+  var bidirectional = Math.min(coverageA, coverageB);
 
-  // Bigram match: anlamlı bigram dizileri
+  // Bigram match: ÇİFT YÖNLÜ bigram kapsam kontrolü
   var bigramsA = extractBigrams(sigA.join(' '));
   var bigramsB = extractBigrams(sigB.join(' '));
-  var bigramMatch = 0;
+  var bigramScore = 0;
   if (bigramsA.length > 0 && bigramsB.length > 0) {
     var setBiB = new Set(bigramsB);
+    var setBiA = new Set(bigramsA);
     var commonBigrams = 0;
     bigramsA.forEach(function(bg) { if (setBiB.has(bg)) commonBigrams++; });
-    // Bigram eşleşmesi: daha muhafazakâr puanlama
-    if (commonBigrams >= 2) bigramMatch = 0.85;
-    else if (commonBigrams === 1) bigramMatch = 0.72;
+    // Çift yönlü bigram kapsam
+    var bigramCovA = commonBigrams / bigramsA.length;
+    var bigramCovB = commonBigrams / bigramsB.length;
+    bigramScore = Math.min(bigramCovA, bigramCovB);
   }
 
-  return Math.max(jaccard, containedRatio * 0.90, bigramMatch);
+  return Math.max(jaccard, bidirectional, bigramScore);
 }
 
 // ── İsmi temizle (gösterim için) ──
@@ -1038,19 +1043,40 @@ Object.keys(brandGroups).forEach(function(brandKey) {
           if (!lineMatch) return; // İkisi de bilinen seri ama farklı seri = farklı ürün
         }
 
-        // 2. Core isim benzerliği — eşik yükseltildi
+        // 2. Core isim benzerliği — ÇOK SIKI eşleştirme
         var sim = similarity(basePP.core, candPP.core);
-        var minThreshold = 0.82; // Varsayılan eşik yüksek
+        var minThreshold = 0.85; // Yüksek eşik — bir kelime farkı bile reddeder
 
         // Product line eşleşmesi varsa biraz daha toleranslı ol
-        if (lineMatch) minThreshold = 0.75;
+        if (lineMatch) minThreshold = 0.78;
 
         // Core isimler çok kısa ise (3 kelimeden az) daha sıkı ol
         var baseWords = basePP.core.split(' ').filter(function(w) { return w.length > 1; });
         var candWords = candPP.core.split(' ').filter(function(w) { return w.length > 1; });
-        if (baseWords.length <= 2 || candWords.length <= 2) minThreshold = Math.max(minThreshold, 0.88);
+        if (baseWords.length <= 2 || candWords.length <= 2) minThreshold = Math.max(minThreshold, 0.90);
 
         if (sim < minThreshold) return;
+
+        // 2b. EK KONTROL: Eşleşmeyen ayırt edici kelimeler varsa reddet
+        // "Glow", "Matte", "Velvet" gibi tek bir kelime farkı bile ürünü değiştirir
+        var baseSigWords = basePP.core.split(' ').filter(function(w) {
+          return w.length > 1 && !genericCosmeticWords.has(cosmeticSynonyms[w] || w);
+        }).map(function(w) { return cosmeticSynonyms[w] || w; });
+        var candSigWords = candPP.core.split(' ').filter(function(w) {
+          return w.length > 1 && !genericCosmeticWords.has(cosmeticSynonyms[w] || w);
+        }).map(function(w) { return cosmeticSynonyms[w] || w; });
+        var baseSet = new Set(baseSigWords);
+        var candSet = new Set(candSigWords);
+        // A'da olup B'de olmayan kelimeler
+        var unmatchedA = 0;
+        baseSet.forEach(function(w) { if (!candSet.has(w)) unmatchedA++; });
+        // B'de olup A'da olmayan kelimeler
+        var unmatchedB = 0;
+        candSet.forEach(function(w) { if (!baseSet.has(w)) unmatchedB++; });
+        // Toplam eşleşmeyen ayırt edici kelime sayısı
+        var totalUnmatched = unmatchedA + unmatchedB;
+        if (totalUnmatched >= 2) return; // 2+ farklı kelime = kesinlikle farklı ürün
+        if (totalUnmatched === 1 && !lineMatch) return; // 1 farklı kelime + aynı seri değilse = farklı ürün
 
         // 3. Fiyat aralığı makul olmalı (3x farktan fazla olmasın)
         var bp = baseP.price || baseP._minPrice || 0;
