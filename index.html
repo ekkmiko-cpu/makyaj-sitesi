@@ -329,10 +329,15 @@
     .detail-body { padding: 1.8rem 2rem; }
     .detail-desc { font-size: 16px; color: var(--text2); line-height: 1.7; margin-bottom: 1.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; }
     .detail-section-title { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
-    .shades-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.5rem; }
-    .shade-chip { font-size: 10px; letter-spacing: 1px; padding: 4px 10px; border: 0.5px solid var(--border2); border-radius: 2px; color: var(--text2); cursor: pointer; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); background: transparent; font-family: 'Jost', sans-serif; }
-    .shade-chip:hover { transform: translateY(-1px); }
-    .shade-chip.active { background: var(--text); color: var(--bg3); border-color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+    .shades-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+    .shade-chip { display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.3px; padding: 6px 12px 6px 6px; border: 1px solid var(--border2); border-radius: 4px; color: var(--text2); cursor: pointer; transition: all 0.2s ease; background: transparent; font-family: 'Jost', sans-serif; min-width: 120px; }
+    .shade-chip:hover { border-color: var(--text3); background: var(--bg2); }
+    .shade-chip.active { background: var(--bg2); color: var(--text); border-color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .shade-chip-img { width: 36px; height: 36px; border-radius: 3px; object-fit: contain; background: var(--bg2); flex-shrink: 0; }
+    .shade-chip-info { display: flex; flex-direction: column; gap: 1px; overflow: hidden; }
+    .shade-chip-name { font-size: 10px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px; }
+    .shade-chip-price { font-size: 10px; color: var(--text3); }
+    .shade-chip.no-data { cursor: default; opacity: 0.5; }
     .prices-table { width: 100%; margin-bottom: 1.5rem; border: 0.5px solid var(--border); border-radius: 2px; overflow: hidden; }
     .prices-table-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: var(--bg2); border-bottom: 0.5px solid var(--border); }
     .prices-table-header-left { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
@@ -346,12 +351,8 @@
     .price-row.best-price .price-row-rank { color: #2a7a3b; }
     .price-row-site { flex: 1; display: flex; flex-direction: column; gap: 2px; }
     .price-row-site-name { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--text); font-weight: 500; display: flex; align-items: center; gap: 6px; }
-    .price-row-site-logo { width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 700; color: #fff; flex-shrink: 0; }
-    .price-row-site-logo.sephora { background: #000; }
-    .price-row-site-logo.trendyol { background: #f27a1a; }
-    .price-row-site-logo.rossmann { background: #e30613; }
-    .price-row-site-logo.gratis { background: #e91e63; }
-    .price-row-site-logo.watsons { background: #00a651; }
+    .price-row-site-logo { width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; background: #eee; }
+    .price-row-site-logo img { width: 100%; height: 100%; object-fit: contain; }
     .price-row-site-info { font-size: 9px; color: var(--text3); letter-spacing: 0.5px; }
     .price-row-bar { flex: 0 0 80px; height: 5px; background: var(--bg2); border-radius: 3px; overflow: hidden; margin-right: 10px; }
     .price-row-bar-fill { height: 100%; border-radius: 3px; }
@@ -1200,8 +1201,11 @@
       .detail-body { padding: 0.8rem 1rem 2rem; }
       .detail-desc { font-size: 13px; margin-bottom: 0.8rem; }
       .detail-section-title { font-size: 8px; letter-spacing: 2px; margin-bottom: 8px; }
-      .shades-list { gap: 4px; margin-bottom: 1rem; }
-      .shade-chip { font-size: 9px; padding: 3px 7px; }
+      .shades-list { gap: 6px; margin-bottom: 1rem; }
+      .shade-chip { font-size: 10px; padding: 5px 8px 5px 5px; min-width: 105px; }
+      .shade-chip-img { width: 30px; height: 30px; }
+      .shade-chip-name { max-width: 75px; font-size: 9px; }
+      .shade-chip-price { font-size: 9px; }
 
       /* PRICE ROWS MOBILE — stacked layout for readability */
       .prices-table { margin-bottom: 1rem; }
@@ -1210,7 +1214,7 @@
       .price-row-rank { grid-row: 1 / 3; font-size: 10px; align-self: center; }
       .price-row-site { grid-column: 2; grid-row: 1; }
       .price-row-site-name { font-size: 11px; gap: 5px; }
-      .price-row-site-logo { width: 18px; height: 18px; font-size: 7px; }
+      .price-row-site-logo { width: 18px; height: 18px; }
       .price-row-site-info { font-size: 8px; }
       .price-row-bar { display: none; }
       .price-row-badge { grid-column: 3; grid-row: 1; margin-right: 0; font-size: 7px; padding: 2px 6px; }
@@ -2654,6 +2658,20 @@ function shareProduct(platform, product) {
 }
 
 // ── DETAIL MODAL ──────────────────────────────────────────────────────────────
+const SITE_LOGOS = {
+  sephora: 'https://www.google.com/s2/favicons?sz=64&domain=sephora.com.tr',
+  trendyol: 'https://www.google.com/s2/favicons?sz=64&domain=trendyol.com',
+  gratis: 'https://www.google.com/s2/favicons?sz=64&domain=gratis.com',
+  watsons: 'https://www.google.com/s2/favicons?sz=64&domain=watsons.com.tr',
+  rossmann: 'https://www.google.com/s2/favicons?sz=64&domain=rossmann.com.tr',
+  yvesrocher: 'https://www.google.com/s2/favicons?sz=64&domain=yves-rocher.com.tr',
+  hepsiburada: 'https://www.google.com/s2/favicons?sz=64&domain=hepsiburada.com',
+  amazon: 'https://www.google.com/s2/favicons?sz=64&domain=amazon.com.tr',
+  idefix: 'https://www.google.com/s2/favicons?sz=64&domain=idefix.com',
+  pazarama: 'https://www.google.com/s2/favicons?sz=64&domain=pazarama.com',
+  pttavm: 'https://www.google.com/s2/favicons?sz=64&domain=pttavm.com',
+};
+
 function openDetail(id) {
   const p = products.find(x => x.id === id);
   if (!p) return;
@@ -2696,23 +2714,29 @@ function openDetail(id) {
       <p class="detail-desc">"${p.desc}"</p>
 
       ${(() => {
-        const shadeList = p.shadeOptions && p.shadeOptions.length > 1 ? p.shadeOptions : null;
         const variantList = p.variants && p.variants.length > 1 ? p.variants : null;
-        if (shadeList) {
-          return '<div class="detail-section-title">Renk / Ton Seçenekleri (' + shadeList.length + ')</div>' +
-            '<div class="shades-list">' +
-            (variantList ? variantList.map((v,i) =>
-              '<button class="shade-chip' + (i===0?' active':'') + '" onclick="changeVariant(' + p.id + ',' + i + ',this)" title="' + (v.name||'') + '">' + (v.shade || 'Varyant ' + (i+1)) + '</button>'
-            ).join('') : '') +
-            shadeList.filter(s => !variantList || !variantList.find(v => v.shade === s)).map(s =>
-              '<span class="shade-chip" style="cursor:default;opacity:0.7" title="Bu ton için fiyat verisi mevcut değil">' + s + '</span>'
-            ).join('') +
-            '</div>';
-        } else if (variantList) {
+        const shadeList = p.shadeOptions && p.shadeOptions.length > 1 ? p.shadeOptions : null;
+        if (variantList) {
           return '<div class="detail-section-title">Renk / Ton Seçenekleri (' + variantList.length + ')</div>' +
             '<div class="shades-list" id="variantsList">' +
-            variantList.map((v,i) =>
-              '<button class="shade-chip' + (i===0?' active':'') + '" onclick="changeVariant(' + p.id + ',' + i + ',this)" title="' + (v.name||'') + '">' + (v.shade || 'Varyant ' + (i+1)) + '</button>'
+            variantList.map((v,i) => {
+              const vMin = v.prices && v.prices.length ? Math.min(...v.prices.map(pr=>pr.price)) : 0;
+              const imgSrc = v.imageUrl || p.imageUrl || '';
+              return '<button class="shade-chip' + (i===0?' active':'') + '" onclick="changeVariant(' + p.id + ',' + i + ',this)" title="' + (v.name||v.shade||'') + '">' +
+                (imgSrc ? '<img class="shade-chip-img" src="' + imgSrc + '" alt="' + (v.shade||'') + '" onerror="this.style.display=\'none\'">' : '') +
+                '<span class="shade-chip-info"><span class="shade-chip-name">' + (v.shade || 'Varyant ' + (i+1)) + '</span>' +
+                (vMin > 0 ? '<span class="shade-chip-price">' + vMin.toLocaleString('tr-TR') + ' TL</span>' : '') +
+                '</span></button>';
+            }).join('') +
+            (shadeList ? shadeList.filter(s => !variantList.find(v => v.shade === s)).map(s =>
+              '<span class="shade-chip no-data" title="Bu ton için fiyat verisi mevcut değil"><span class="shade-chip-info"><span class="shade-chip-name">' + s + '</span></span></span>'
+            ).join('') : '') +
+            '</div>';
+        } else if (shadeList) {
+          return '<div class="detail-section-title">Renk / Ton Seçenekleri (' + shadeList.length + ')</div>' +
+            '<div class="shades-list">' +
+            shadeList.map(s =>
+              '<span class="shade-chip no-data"><span class="shade-chip-info"><span class="shade-chip-name">' + s + '</span></span></span>'
             ).join('') +
             '</div>';
         }
@@ -2876,7 +2900,7 @@ function renderVariantPrices(pricesParams) {
             <span class="price-row-rank">${idx + 1}.</span>
             <div class="price-row-site">
               <span class="price-row-site-name">
-                <span class="price-row-site-logo ${pr.site.toLowerCase()}">${pr.site.charAt(0)}</span>
+                <span class="price-row-site-logo"><img src="${SITE_LOGOS[pr.site.toLowerCase()] || ''}" alt="${pr.site}" onerror="this.parentElement.textContent='${pr.site.charAt(0)}'"></span>
                 ${pr.site}
               </span>
               <span class="price-row-site-info">${pr.price === best ? '✓ En uygun fiyat' : 'Güncel fiyat'}</span>

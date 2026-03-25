@@ -17,6 +17,11 @@ const SOURCES = [
   { file: 'watsons-products.json',      site: 'Watsons'      },
   { file: 'rossmann-products.json',     site: 'Rossmann'     },
   { file: 'yvesrocher-products.json',   site: 'YvesRocher'   },
+  { file: 'hepsiburada-products.json',  site: 'Hepsiburada'  },
+  { file: 'amazon-products.json',      site: 'Amazon'       },
+  { file: 'idefix-products.json',      site: 'Idefix'       },
+  { file: 'pazarama-products.json',    site: 'Pazarama'     },
+  { file: 'pttavm-products.json',      site: 'PttAvm'       },
 ];
 
 // ── Trendyol barkodlarını yükle (trendyol-barcode-enricher.js tarafından üretilir) ──
@@ -884,13 +889,22 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
   if (sites.length < 2) return; // Aynı sitede birden fazla, atla
 
   // ── Marka tutarlılık kontrolü ──
-  // Aynı barkod farklı markalara atanmışsa bu bir veri hatası/yanlış barkod demektir.
-  // Eşleşmeye dahil edilecek ürünlerin hepsi aynı normalize marka adına sahip olmalı.
   var brandKeys = sites.map(function(site) { return normalizeBrand(bySite[site].p.brand); });
   var allSameBrand = brandKeys.every(function(b) { return b === brandKeys[0]; });
   if (!allSameBrand) {
-    // Farklı marka → bu barkod güvenilir değil, eşleştirme yapma
     return;
+  }
+
+  // ── Boyut/ML tutarlılık kontrolü ──
+  // Aynı barkod ama farklı boyut = veri hatası
+  var sizeKeys = sites.map(function(site) {
+    var vi = extractVariantInfo(bySite[site].p.name);
+    var sizes = (vi || '').split('-').filter(function(s) { return s.startsWith('SIZE_'); });
+    return sizes.length > 0 ? sizes.join(',') : '';
+  }).filter(function(s) { return s !== ''; });
+  if (sizeKeys.length >= 2) {
+    var allSameSize = sizeKeys.every(function(s) { return s === sizeKeys[0]; });
+    if (!allSameSize) return; // Farklı boyut = eşleştirme yapma
   }
 
   // Tüm indexleri kullanıldı olarak işaretle
@@ -994,20 +1008,56 @@ Object.keys(brandGroups).forEach(function(brandKey) {
         // Kategori uyumluluk kontrolü
         if (!categoryCompatible(baseP.category, candP.category)) return;
 
-        // Boyut kontrolü: eğer ikisi de boyut bilgisi varsa, eşleşmeli
+        // ── BOYUT/ML KONTROLÜ (KRİTİK) ──
+        // Farklı boyutlar (15ml vs 30ml vs 40ml) kesinlikle eşleşmemeli
         var candSize = extractVariantInfo(candP.name);
-        if (baseSize && candSize && baseSize !== candSize) return;
+        var baseSizes = (baseSize || '').split('-').filter(function(s) { return s.startsWith('SIZE_'); });
+        var candSizes = (candSize || '').split('-').filter(function(s) { return s.startsWith('SIZE_'); });
+        if (baseSizes.length > 0 && candSizes.length > 0) {
+          // Her iki ürünün de boyut bilgisi varsa, eşleşmeli
+          var sizeMatch = baseSizes.some(function(bs) { return candSizes.indexOf(bs) !== -1; });
+          if (!sizeMatch) return; // Farklı boyut = farklı ürün
+        }
+        // Bir tarafta boyut varken diğerinde yoksa — fiyat farkı ile kontrol et
+        if ((baseSizes.length > 0) !== (candSizes.length > 0)) {
+          var bp2 = baseP.price || baseP._minPrice || 0;
+          var cp2 = candP.price || candP._minPrice || 0;
+          if (bp2 > 0 && cp2 > 0) {
+            var sizeRatio = Math.max(bp2, cp2) / Math.min(bp2, cp2);
+            if (sizeRatio > 2) return; // Büyük fiyat farkı + boyut uyumsuzluğu = farklı ürün
+          }
+        }
 
-        // Core isim benzerliği
+        // ── İSİM EŞLEŞTİRME (SIKI) ──
+        // 1. Product line eşleşmesi kontrol et
+        var baseLine = basePP.line;
+        var candLine = candPP.line;
+        var lineMatch = false;
+        if (baseLine && candLine) {
+          lineMatch = (baseLine === candLine);
+          if (!lineMatch) return; // İkisi de bilinen seri ama farklı seri = farklı ürün
+        }
+
+        // 2. Core isim benzerliği — eşik yükseltildi
         var sim = similarity(basePP.core, candPP.core);
-        if (sim < 0.72) return; // Sıkı ama makul eşik
+        var minThreshold = 0.82; // Varsayılan eşik yüksek
 
-        // Ek kontrol: fiyat aralığı makul olmalı (5x farktan fazla olmasın)
+        // Product line eşleşmesi varsa biraz daha toleranslı ol
+        if (lineMatch) minThreshold = 0.75;
+
+        // Core isimler çok kısa ise (3 kelimeden az) daha sıkı ol
+        var baseWords = basePP.core.split(' ').filter(function(w) { return w.length > 1; });
+        var candWords = candPP.core.split(' ').filter(function(w) { return w.length > 1; });
+        if (baseWords.length <= 2 || candWords.length <= 2) minThreshold = Math.max(minThreshold, 0.88);
+
+        if (sim < minThreshold) return;
+
+        // 3. Fiyat aralığı makul olmalı (3x farktan fazla olmasın)
         var bp = baseP.price || baseP._minPrice || 0;
         var cp = candP.price || candP._minPrice || 0;
         if (bp > 0 && cp > 0) {
           var ratio = Math.max(bp, cp) / Math.min(bp, cp);
-          if (ratio > 5) return; // Çok farklı fiyat = muhtemelen farklı ürün
+          if (ratio > 3) return; // Çok farklı fiyat = muhtemelen farklı ürün veya boyut
         }
 
         if (sim > bestScore) {
