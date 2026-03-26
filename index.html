@@ -731,6 +731,11 @@
     .footer-col-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 1rem; }
     .footer-col a { display: block; font-size: 12px; color: var(--text2); text-decoration: none; padding: 4px 0; transition: color 0.2s; cursor: pointer; }
     .footer-col a:hover { color: var(--text); }
+    .footer-disclaimer { padding: 1.5rem 2.5rem; border-top: 0.5px solid var(--border); font-size: 11px; color: var(--text3); line-height: 1.8; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .footer-disclaimer p { margin: 0; }
+    .footer-disclaimer p:last-child { grid-column: 1 / -1; text-align: center; font-size: 10px; }
+    .footer-disclaimer a { color: var(--text2); text-decoration: underline; cursor: pointer; }
+    .footer-disclaimer a:hover { color: var(--text); }
     .footer-bottom { text-align: center; padding: 1.2rem 2.5rem; border-top: 0.5px solid var(--border); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
 
     /* ── COOKIE BANNER ── */
@@ -1334,6 +1339,7 @@
       .footer-grid { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.5rem 1rem 1rem; }
       .footer-col-title { font-size: 8px; }
       .footer-col a { font-size: 11px; }
+      .footer-disclaimer { grid-template-columns: 1fr; padding: 1rem; font-size: 10px; }
       .footer-bottom { font-size: 9px; padding: 0.8rem 1rem; }
 
       /* Search overlay mobile */
@@ -1603,11 +1609,16 @@
       <a onclick="openAbout()">Hakkımızda</a>
       <a onclick="openContact()">İletişim</a>
       <a onclick="openPrivacy()">Gizlilik Politikası</a>
-      <a onclick="openTerms()">Kullanım Şartları</a>
+      <a onclick="openTerms()">Kullanım Sözleşmesi</a>
       <a onclick="openCookiePolicy()">Çerez Politikası</a>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Beauté — Makyaj Karşılaştırma Platformu</div>
+  <div class="footer-disclaimer">
+    <p>Beauté, daha iyi bir alışveriş deneyimi sunabilmek için sitemizde çerez konumlandırmaktayız. Çerezler ile toplanan kişisel veriler <a onclick="openTerms()">Kullanım Sözleşmesi</a> ve <a onclick="openPrivacy()">Gizlilik Politikası</a>'nda belirtilen amaçlar ve yöntemler ile mevzuata uygun olarak kullanılacaktır.</p>
+    <p>beaute.com.tr tüketiciler için ücretsiz bir bilgi servisidir. Alışveriş öncesi sipariş edilecek ürünle ilgili geçerli bilgi her zaman için ilgili satıcıdan alınmalıdır. beaute.com.tr'de verilen bilgilerdeki hatalardan, eksikliklerden veya bu bilgilere dayanılarak yapılan işlemler sonucu meydana gelebilecek her türlü maddi ve manevi zararlardan ve her ne şekilde olursa olsun üçüncü kişilerin uğrayabileceği her türlü zararlardan dolayı beaute.com.tr sorumlu tutulamaz.</p>
+    <p>beaute.com.tr'de yer alan bütün marka ve isimlerin hakları ilgili sahiplerine aittir.</p>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Beauté — Makyaj Karşılaştırma Platformu</div>
 </footer>
 
 <div class="compare-bar" id="compareBar">
@@ -1747,36 +1758,54 @@
   <div class="modal">
     <div class="modal-head">
       <div>
-        <div class="modal-title">Gizlilik Politikası</div>
-        <div class="modal-subtitle">KVKK uyumlu kişisel veri koruma politikası</div>
+        <div class="modal-title">Gizlilik ve Kişisel Verilerin Korunması Politikası</div>
+        <div class="modal-subtitle">6698 sayılı KVKK kapsamında kişisel veri koruma politikası</div>
       </div>
       <button class="modal-close" onclick="closeModal('privacyModal')">✕</button>
     </div>
     <div class="legal-content">
-      <h2>Kişisel Verilerin Korunması</h2>
-      <p>Beauté olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında kişisel verilerinizin güvenliğine büyük önem veriyoruz. Bu politika, hangi verilerin toplandığını, nasıl kullanıldığını ve haklarınızı açıklamaktadır.</p>
+      <h2>1. Genel Bilgilendirme</h2>
+      <p>Beauté (beaute.com.tr), tüketiciler için ücretsiz bir kozmetik ve makyaj fiyat karşılaştırma servisidir. Beauté olarak, daha iyi bir alışveriş deneyimi sunabilmek için sitemizde çerez konumlandırmaktayız. Çerezler ile toplanan kişisel veriler, <a onclick="openTerms()" style="color:var(--accent);cursor:pointer;text-decoration:underline">Kullanım Sözleşmesi</a> ve işbu Gizlilik Politikası'nda belirtilen amaçlar ve yöntemler ile mevzuata uygun olarak kullanılacaktır.</p>
+      <p>Bu politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") ve ilgili mevzuat kapsamında hazırlanmıştır.</p>
 
-      <h2>Hangi Veriler Toplanır?</h2>
+      <h2>2. Veri Sorumlusu</h2>
+      <p>KVKK kapsamında veri sorumlusu Beauté'dür. Veri sorumlusu olarak, kişisel verilerinizin hukuka uygun olarak işlenmesini ve güvenliğini sağlamak amacıyla gerekli teknik ve idari tedbirleri almaktayız.</p>
+
+      <h2>3. Toplanan Kişisel Veriler</h2>
+      <p>Beauté, aşağıdaki kişisel verileri toplayabilir:</p>
       <ul>
-        <li><strong>Çerez verileri:</strong> Tema tercihi (açık/koyu mod), favori ürünler listesi ve çerez onay durumu tarayıcınızda saklanır.</li>
+        <li><strong>Tarayıcı çerezleri:</strong> Tema tercihi (açık/koyu mod), favori ürünler listesi, çerez onay durumu ve oturum bilgileri tarayıcınızda (localStorage/cookie) saklanır.</li>
         <li><strong>E-posta adresi:</strong> Fiyat alarmı özelliğini kullandığınızda, bildirim göndermek amacıyla e-posta adresiniz toplanır.</li>
-        <li><strong>İletişim bilgileri:</strong> İletişim formu aracılığıyla gönderdiğiniz ad, e-posta ve mesaj içeriği.</li>
-        <li><strong>Kullanım verileri:</strong> Site trafiği ve kullanım istatistikleri anonim olarak toplanabilir.</li>
+        <li><strong>İletişim bilgileri:</strong> İletişim formu aracılığıyla ilettiğiniz ad, e-posta ve mesaj içeriği.</li>
+        <li><strong>Kullanım verileri:</strong> Ziyaret edilen sayfalar, tıklanan ürünler, arama sorguları ve site trafiği anonim olarak toplanabilir.</li>
+        <li><strong>Cihaz ve bağlantı bilgileri:</strong> IP adresi, tarayıcı türü, işletim sistemi, ekran çözünürlüğü gibi teknik bilgiler anonim istatistik amacıyla işlenebilir.</li>
       </ul>
 
-      <h2>Verilerin Nasıl Kullanılır?</h2>
+      <h2>4. Verilerin İşlenme Amaçları</h2>
+      <p>Toplanan kişisel veriler aşağıdaki amaçlarla işlenir:</p>
       <ul>
-        <li>Site deneyiminizi kişiselleştirmek (tema, favoriler)</li>
-        <li>Fiyat düşüşlerinde sizi bilgilendirmek</li>
+        <li>Site deneyiminizi kişiselleştirmek (tema tercihi, favori ürünler, son aramalar)</li>
+        <li>Fiyat alarmı ve bildirim hizmetlerini sağlamak</li>
         <li>İletişim taleplerinize yanıt vermek</li>
-        <li>Platformu geliştirmek ve iyileştirmek</li>
-        <li>Anonim kullanım istatistikleri oluşturmak</li>
+        <li>Platformun teknik altyapısını geliştirmek ve iyileştirmek</li>
+        <li>Anonim kullanım istatistikleri oluşturmak ve analiz etmek</li>
+        <li>Hukuki yükümlülüklerimizi yerine getirmek</li>
       </ul>
 
-      <h2>Üçüncü Taraf Paylaşımı</h2>
-      <p>Kişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylaşılmaz. Sitemizdeki satıcı bağlantıları affiliate (ortaklık) programları aracılığıyla çalışabilir; ancak bu süreçte kişisel verileriniz satıcılarla tarafımızca paylaşılmaz.</p>
+      <h2>5. Verilerin İşlenme Hukuki Sebebi</h2>
+      <p>Kişisel verileriniz; açık rızanız, sözleşmenin ifası, yasal yükümlülük ve meşru menfaat hukuki sebeplerine dayanılarak işlenmektedir.</p>
 
-      <h2>Kullanıcı Hakları (KVKK Madde 11)</h2>
+      <h2>6. Verilerin Aktarılması</h2>
+      <p>Kişisel verileriniz, yasal zorunluluklar dışında üçüncü taraflarla paylaşılmaz. Sitemizdeki satıcı bağlantıları affiliate (ortaklık) programları aracılığıyla çalışabilir; ancak bu süreçte kişisel verileriniz satıcılarla tarafımızca paylaşılmaz.</p>
+      <p>Analitik hizmetleri kapsamında anonim ve toplu veriler, hizmet sağlayıcılarla paylaşılabilir. Bu veriler kişisel olarak sizi tanımlamak için kullanılamaz.</p>
+
+      <h2>7. Verilerin Saklanma Süresi</h2>
+      <p>Kişisel verileriniz, işlenme amaçlarının gerektirdiği süre boyunca ve ilgili mevzuatta öngörülen zamanaşımı süreleri boyunca saklanır. Süre sona erdiğinde verileriniz silinir, yok edilir veya anonim hale getirilir.</p>
+
+      <h2>8. Veri Güvenliği</h2>
+      <p>Beauté, kişisel verilerinizin hukuka aykırı olarak işlenmesini ve erişilmesini önlemek ile verilerin muhafazasını sağlamak amacıyla uygun güvenlik düzeyini temin etmeye yönelik gerekli teknik ve idari tedbirleri almaktadır.</p>
+
+      <h2>9. Kullanıcı Hakları (KVKK Madde 11)</h2>
       <p>KVKK'nın 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:</p>
       <ul>
         <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
@@ -1785,12 +1814,14 @@
         <li>Yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme</li>
         <li>Kişisel verilerinizin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
         <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
+        <li>Düzeltme ve silme işlemlerinin kişisel verilerinizin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
         <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
         <li>Kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
       </ul>
+      <p>Yukarıdaki haklarınızı kullanmak için <strong>iletisim@beaute.com.tr</strong> adresine yazılı olarak başvurabilirsiniz. Başvurular en geç 30 gün içinde sonuçlandırılır.</p>
 
-      <h2>İletişim</h2>
-      <p>Kişisel verilerinizle ilgili tüm soru ve talepleriniz için <strong>iletisim@beaute.com.tr</strong> adresine e-posta gönderebilirsiniz.</p>
+      <h2>10. Politika Değişiklikleri</h2>
+      <p>Beauté, işbu Gizlilik Politikası'nı yasal düzenlemeler ve hizmet değişiklikleri doğrultusunda güncelleme hakkını saklı tutar. Güncel politika her zaman bu sayfada yayımlanır.</p>
       <p><em>Son güncelleme: Mart 2026</em></p>
     </div>
   </div>
@@ -1801,28 +1832,59 @@
   <div class="modal">
     <div class="modal-head">
       <div>
-        <div class="modal-title">Kullanım Şartları</div>
-        <div class="modal-subtitle">Hizmet koşulları ve sorumluluklar</div>
+        <div class="modal-title">Kullanım Sözleşmesi</div>
+        <div class="modal-subtitle">Hizmet koşulları, sorumluluklar ve yasal bilgilendirme</div>
       </div>
       <button class="modal-close" onclick="closeModal('termsModal')">✕</button>
     </div>
     <div class="legal-content">
-      <h2>Hizmet Tanımı</h2>
-      <p>Beauté, makyaj ve kozmetik ürünlerinin fiyat, içerik ve özelliklerini karşılaştırmanızı sağlayan bir bilgi platformudur. Beauté doğrudan ürün satışı yapmaz; farklı satıcıların sunduğu fiyat bilgilerini bir araya getirir.</p>
+      <h2>1. Hizmet Tanımı</h2>
+      <p>Beauté (beaute.com.tr), tüketiciler için ücretsiz bir kozmetik ve makyaj ürünleri bilgi servisidir. Platform, farklı satıcıların sunduğu makyaj ve kozmetik ürünlerinin fiyat, özellik ve içerik bilgilerini bir araya getirerek tüketicilerin karşılaştırma yapmasını sağlar. Beauté doğrudan ürün satışı yapmaz ve herhangi bir satıcının temsilcisi değildir.</p>
 
-      <h2>Sorumluluk Reddi</h2>
-      <p>Platformumuzda gösterilen fiyatlar ve ürün bilgileri çeşitli kaynaklardan derlenmektedir. Fiyatlar satıcılara aittir ve anlık değişiklik gösterebilir. Beauté, fiyatların doğruluğu veya güncelliği konusunda garanti vermez. Satın alma işlemleri doğrudan ilgili satıcıyla gerçekleştirilir.</p>
-      <p>Ürün açıklamaları, içerik listeleri ve kullanıcı yorumları bilgilendirme amaçlıdır. Herhangi bir tıbbi veya dermatolojik tavsiye niteliği taşımaz.</p>
+      <h2>2. Sözleşmenin Kabulü</h2>
+      <p>Beauté'yü kullanarak işbu Kullanım Sözleşmesi'ni ve <a onclick="openPrivacy()" style="color:var(--accent);cursor:pointer;text-decoration:underline">Gizlilik Politikası</a>'nı kabul etmiş sayılırsınız. Bu koşulları kabul etmiyorsanız, lütfen platformu kullanmayınız.</p>
 
-      <h2>Fikri Mülkiyet</h2>
-      <p>Beauté platformunun tasarımı, logosu, içerikleri ve yazılımı fikri mülkiyet hakları kapsamında korunmaktadır. Platformdaki içerikler izinsiz kopyalanamaz, çoğaltılamaz veya ticari amaçla kullanılamaz.</p>
-      <p>Platformda yer alan marka adları ve ürün isimleri ilgili marka sahiplerine aittir.</p>
+      <h2>3. Fiyat ve Ürün Bilgileri</h2>
+      <p>Beauté'de gösterilen fiyatlar ve ürün bilgileri, satıcı web sitelerinden belirli aralıklarla derlenmektedir. Alışveriş öncesi sipariş edilecek ürünle ilgili geçerli bilgi her zaman için ilgili satıcıdan alınmalıdır.</p>
+      <p><strong>Beauté'de verilen bilgilerdeki hatalardan, eksikliklerden veya bu bilgilere dayanılarak yapılan işlemler sonucu meydana gelebilecek her türlü maddi ve manevi zararlardan ve her ne şekilde olursa olsun üçüncü kişilerin uğrayabileceği her türlü zararlardan dolayı Beauté sorumlu tutulamaz.</strong></p>
+      <ul>
+        <li>Fiyatlar satıcılara aittir ve anlık değişiklik gösterebilir.</li>
+        <li>Stok durumu satıcı tarafından belirlenir ve garanti edilmez.</li>
+        <li>Ürün görselleri satıcılar tarafından sağlanmakta olup temsili niteliktedir.</li>
+        <li>Kargo ücreti, kampanya koşulları ve ödeme seçenekleri satıcıya göre değişiklik gösterebilir.</li>
+      </ul>
 
-      <h2>Affiliate Bağlantılar</h2>
-      <p>Beauté, satıcı sitelerine yönlendirme bağlantılarında affiliate (ortaklık) programlarını kullanabilir. Bu bağlantılar aracılığıyla yapılan satın alımlardan komisyon geliri elde edilebilir. Bu durum, ürün sıralamasını veya önerilerimizi etkilemez; tarafsızlık ilkemize bağlıyız.</p>
+      <h2>4. Satın Alma İşlemleri</h2>
+      <p>Beauté üzerinden bir satıcıya yönlendirildiğinizde, satın alma işlemi doğrudan ilgili satıcının web sitesinde gerçekleşir. Satın alma, teslimat, iade, değişim ve garanti süreçleri tamamen satıcı ile aranızdaki ilişkiye tabidir. Beauté bu işlemlerde taraf değildir.</p>
 
-      <h2>Değişiklik Hakkı</h2>
-      <p>Beauté, bu kullanım şartlarını önceden bildirmeksizin güncelleme hakkını saklı tutar. Güncel şartlar her zaman bu sayfada yayımlanır. Platformu kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</p>
+      <h2>5. Sorumluluk Sınırları</h2>
+      <ul>
+        <li>Beauté, üçüncü taraf satıcı sitelerinin içeriklerinden, güvenliğinden veya hizmet kalitesinden sorumlu değildir.</li>
+        <li>Platform üzerindeki ürün açıklamaları ve içerik listeleri bilgilendirme amaçlıdır. Herhangi bir tıbbi, dermatolojik veya kozmetik tavsiye niteliği taşımaz.</li>
+        <li>Cilt testi ve ürün önerileri genel bilgi amaçlıdır; profesyonel sağlık danışmanlığı yerine geçmez.</li>
+        <li>Platform, teknik sorunlar, bakım çalışmaları veya mücbir sebepler nedeniyle geçici olarak erişilemez olabilir.</li>
+      </ul>
+
+      <h2>6. Fikri Mülkiyet Hakları</h2>
+      <p>Beauté platformunun tasarımı, logosu, grafikleri, yazılımı ve özgün içerikleri fikri mülkiyet hakları kapsamında korunmaktadır. Platformdaki içerikler yazılı izin olmaksızın kopyalanamaz, çoğaltılamaz, dağıtılamaz veya ticari amaçla kullanılamaz.</p>
+      <p><strong>Beauté'de yer alan bütün marka ve isimlerin hakları ilgili sahiplerine aittir.</strong> Marka adları, logolar ve ürün isimleri yalnızca tanımlama amacıyla kullanılmakta olup ilgili marka sahiplerinin onayını veya desteğini ima etmez.</p>
+
+      <h2>7. Affiliate (Ortaklık) Bağlantılar</h2>
+      <p>Beauté, satıcı sitelerine yönlendirme bağlantılarında affiliate programlarını kullanabilir. Bu bağlantılar aracılığıyla yapılan satın alımlardan komisyon geliri elde edilebilir. Bu durum, ürün sıralamasını veya fiyat karşılaştırmalarını etkilemez; Beauté tarafsızlık ve tüketici yararı ilkesine bağlıdır.</p>
+
+      <h2>8. Kullanıcı Yükümlülükleri</h2>
+      <ul>
+        <li>Platformu yasalara ve ahlaka aykırı amaçlarla kullanamazsınız.</li>
+        <li>Platformun teknik altyapısına zarar verecek, aşırı yük bindirecek veya işleyişini engelleyecek faaliyetlerde bulunamazsınız.</li>
+        <li>Otomatik veri toplama araçları (bot, scraper, crawler vb.) ile platformdan izinsiz veri çekemezsiniz.</li>
+        <li>Platform içeriklerini izinsiz olarak kopyalayamaz, yeniden yayınlayamaz veya ticari amaçla kullanamazsınız.</li>
+      </ul>
+
+      <h2>9. Uygulanacak Hukuk ve Uyuşmazlık Çözümü</h2>
+      <p>İşbu sözleşme Türkiye Cumhuriyeti hukukuna tabidir. Sözleşmeden doğan uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri ve icra daireleri yetkilidir.</p>
+
+      <h2>10. Değişiklik Hakkı</h2>
+      <p>Beauté, işbu Kullanım Sözleşmesi'ni önceden bildirmeksizin güncelleme hakkını saklı tutar. Güncel sözleşme her zaman bu sayfada yayımlanır. Platformu kullanmaya devam etmeniz, güncellenmiş koşulları kabul ettiğiniz anlamına gelir.</p>
       <p><em>Son güncelleme: Mart 2026</em></p>
     </div>
   </div>
@@ -1839,35 +1901,51 @@
       <button class="modal-close" onclick="closeModal('cookiePolicyModal')">✕</button>
     </div>
     <div class="legal-content">
-      <h2>Çerez Nedir?</h2>
-      <p>Çerezler, web siteleri tarafından tarayıcınıza yerleştirilen küçük metin dosyalarıdır. Tercihlerinizi hatırlamak ve size daha iyi bir deneyim sunmak için kullanılır.</p>
+      <h2>1. Çerez Nedir?</h2>
+      <p>Çerezler (cookies), web siteleri tarafından tarayıcınıza yerleştirilen küçük metin dosyalarıdır. Tercihlerinizi hatırlamak, site performansını ölçmek ve size daha iyi bir deneyim sunmak için kullanılır.</p>
 
-      <h2>Hangi Çerezler Kullanılır?</h2>
+      <h2>2. Kullanılan Çerez Türleri</h2>
 
-      <h2>Zorunlu Çerezler</h2>
+      <h3>a) Zorunlu Çerezler</h3>
       <p>Bu çerezler sitenin temel işlevleri için gereklidir ve devre dışı bırakılamaz.</p>
       <ul>
-        <li><strong>Tema tercihi:</strong> Açık veya koyu mod seçiminizi hatırlar (localStorage).</li>
+        <li><strong>Tema tercihi:</strong> Açık veya koyu mod seçiminizi hatırlar.</li>
         <li><strong>Favoriler:</strong> Favori ürün listenizi tarayıcınızda saklar.</li>
         <li><strong>Çerez onayı:</strong> Çerez tercihlerinizin durumunu kaydeder.</li>
+        <li><strong>Oturum bilgileri:</strong> Site içi gezinme sırasında oturumunuzu sürdürür.</li>
       </ul>
 
-      <h2>Analitik Çerezler</h2>
+      <h3>b) Analitik Çerezler</h3>
       <p>Site trafiğini ve kullanım kalıplarını anlamamıza yardımcı olan çerezlerdir. Toplanan veriler anonimdir ve kişisel olarak sizi tanımlamak için kullanılmaz.</p>
       <ul>
         <li>Ziyaret edilen sayfa sayısı ve süreleri</li>
         <li>En çok görüntülenen ürün kategorileri</li>
+        <li>Arama sorguları ve popüler ürünler</li>
         <li>Genel kullanım istatistikleri</li>
       </ul>
 
-      <h2>Çerezleri Nasıl Kontrol Edebilirsiniz?</h2>
+      <h3>c) İşlevsellik Çerezleri</h3>
+      <p>Daha gelişmiş ve kişiselleştirilmiş özellikler sunmak için kullanılır.</p>
+      <ul>
+        <li>Son görüntülenen ürünler</li>
+        <li>Filtre ve sıralama tercihleri</li>
+        <li>Dil ve bölge ayarları</li>
+      </ul>
+
+      <h2>3. Üçüncü Taraf Çerezleri</h2>
+      <p>Satıcı sitelerine yönlendirildiğinizde, ilgili satıcılar kendi çerez politikalarını uygulayabilir. Beauté, üçüncü taraf sitelerinin çerez uygulamalarından sorumlu değildir.</p>
+
+      <h2>4. Çerezleri Nasıl Kontrol Edebilirsiniz?</h2>
       <p>Tarayıcınızın ayarlarından çerezleri silebilir veya engelleyebilirsiniz. Ancak zorunlu çerezlerin engellenmesi, sitenin bazı özelliklerinin düzgün çalışmamasına neden olabilir.</p>
       <ul>
-        <li><strong>Chrome:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
-        <li><strong>Firefox:</strong> Ayarlar → Gizlilik ve Güvenlik → Çerezler</li>
-        <li><strong>Safari:</strong> Tercihler → Gizlilik → Çerezler</li>
+        <li><strong>Chrome:</strong> Ayarlar &rarr; Gizlilik ve Güvenlik &rarr; Çerezler ve diğer site verileri</li>
+        <li><strong>Firefox:</strong> Ayarlar &rarr; Gizlilik ve Güvenlik &rarr; Çerezler ve site verileri</li>
+        <li><strong>Safari:</strong> Tercihler &rarr; Gizlilik &rarr; Web sitesi verilerini yönet</li>
+        <li><strong>Edge:</strong> Ayarlar &rarr; Çerezler ve site izinleri &rarr; Çerezleri ve site verilerini yönetin</li>
       </ul>
-      <p>Daha fazla bilgi için <strong>iletisim@beaute.com.tr</strong> adresinden bize ulaşabilirsiniz.</p>
+
+      <h2>5. Daha Fazla Bilgi</h2>
+      <p>Çerez politikamız hakkında sorularınız için <strong>iletisim@beaute.com.tr</strong> adresinden bize ulaşabilirsiniz.</p>
       <p><em>Son güncelleme: Mart 2026</em></p>
     </div>
   </div>

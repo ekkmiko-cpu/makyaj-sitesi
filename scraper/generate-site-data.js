@@ -762,15 +762,19 @@ allRaw = allRaw.filter(function(p) {
   if (p.price < 5) return false;
   // 2. İsmi çok kısa veya boş
   if (!name || name.length < 5) return false;
-  // 3. Trendyol SEO kategori sayfaları — "Markaları", "Fiyatları", "Yorumları" + yıl içeren başlıklar
-  if (name.match(/\b(renkleri|markaları|fiyatları|yorumları|çeşitleri|modelleri)\b.*\d{4}/i)) return false;
+  // 3. SEO kategori sayfaları — "Markaları", "Fiyatları", "Yorumları", "Çeşitleri" vb.
+  // Not: \b Türkçe karakterlerle düzgün çalışmaz, bu yüzden daha geniş regex kullan
+  if (/(fiyatlar|markalar|çeşitler|modelller|renkleri|yorumlar|cesitler|fiyatlari|markalari)/i.test(name)) return false;
   if (name.match(/\d{4}\s*\|/i) || name.match(/\|\s*trendyol/i)) return false;
-  // 4. Trendyol banner/kampanya başlıkları ("Işıltıyı Yakalayın", "Keşfet" gibi)
-  if (name.match(/\b(keşfet|yakalayın|ayrıcalıklı|özel fiyat|kampanya)\b/i)) return false;
+  // 4. Trendyol banner/kampanya başlıkları
+  if (/(keşfet|yakalayın|ayrıcalıklı|özel fiyat|kampanya)/i.test(name)) return false;
   // 5. Review sayısı gerçek dışı yüksek (SEO aggregation sayfası işareti)
   if (p.reviews > 50000) return false;
   // 6. "Set", "Hediye Set" gibi çoklu ürün paketleri
-  if (name.match(/\bhediye set\b/i)) return false;
+  if (/hediye set/i.test(name)) return false;
+  // 7. Çoklu ürün setleri (2'li, 3'lü set, paket)
+  if (/\b\d['']?l[iıuü]\s*(set|paket)\b/i.test(name)) return false;
+  if (/\b\d['']?l[iıuü]\s*maskara\b/i.test(name)) return false; // "2'li Maskara" = set
   return true;
 });
 console.log('Kalite filtresi: ' + beforeFilter + ' -> ' + allRaw.length + ' (' + (beforeFilter - allRaw.length) + ' hatali veri cikarildi)');
@@ -1032,6 +1036,26 @@ Object.keys(brandGroups).forEach(function(brandKey) {
             if (sizeRatio > 2) return; // Büyük fiyat farkı + boyut uyumsuzluğu = farklı ürün
           }
         }
+
+        // ── TON/SHADE KODU KONTROLÜ (KRİTİK) ──
+        // Farklı ton numaraları (01 vs 02, Light vs Medium) kesinlikle eşleşmemeli
+        var baseShadeCodes = extractShadeCode(baseP.name, basePP.brand);
+        var candShadeCodes = extractShadeCode(candP.name, candPP.brand);
+        if (baseShadeCodes.length > 0 && candShadeCodes.length > 0) {
+          // Her iki üründe de ton kodu varsa, en az bir ortak kod olmalı
+          var shadeMatch = baseShadeCodes.some(function(sc) { return candShadeCodes.indexOf(sc) !== -1; });
+          if (!shadeMatch) return; // Farklı ton = farklı ürün (01 ≠ 02)
+        }
+
+        // ── SEYAHAT BOYU / MİNİ KONTROLÜ ──
+        var baseTravel = /\b(seyahat|travel|mini|minyat[uü]r|sample|deneme)\b/i.test(baseP.name);
+        var candTravel = /\b(seyahat|travel|mini|minyat[uü]r|sample|deneme)\b/i.test(candP.name);
+        if (baseTravel !== candTravel) return; // Biri seyahat boyu diğeri değil = farklı ürün
+
+        // ── WATERPROOF KONTROLÜ ──
+        var baseWP = /\b(waterproof|su\s*ge[cç]irmez)\b/i.test(baseP.name);
+        var candWP = /\b(waterproof|su\s*ge[cç]irmez)\b/i.test(candP.name);
+        if (baseWP !== candWP) return; // Biri waterproof diğeri değil = farklı ürün
 
         // ── İSİM EŞLEŞTİRME (SIKI) ──
         // 1. Product line eşleşmesi kontrol et
