@@ -775,6 +775,19 @@ allRaw = allRaw.filter(function(p) {
   // 7. Çoklu ürün setleri (2'li, 3'lü set, paket)
   if (/\b\d['']?l[iıuü]\s*(set|paket)\b/i.test(name)) return false;
   if (/\b\d['']?l[iıuü]\s*maskara\b/i.test(name)) return false; // "2'li Maskara" = set
+  // 8. Aşırı yüksek fiyat — tek kozmetik ürünü 10.000 TL'yi geçmez (Hepsiburada toplu satış hataları)
+  // Not: Sensai, La Mer gibi ultra-lüks markalar bile nadiren 10K'yı geçer
+  if (p.price > 10000) return false;
+  // 9. Otomobil parçaları — "far" kelimesi araba farı olarak çekilmiş
+  if (/\b(ford|volkswagen|vw|renault|toyota|honda|bmw|mercedes|audi|opel|fiat|hyundai|kia|peugeot|citroen|seat|skoda|volvo|passat|focus|corolla|civic|golf|polo|mais)\b/i.test(name)) return false;
+  // 10. Elektronik/otomotiv/spor ürünleri — makyaj sitesine ait olmayan ürünler
+  if (/\b(led far|xenon|oto |otomobil|araç|araba|bisiklet|koşu bandı|çadır|spor alet|dambıl|halter|kondisyon)\b/i.test(name)) return false;
+  // 11. Giyim/iç giyim ürünleri — Hepsiburada'dan hatalı çekilmiş
+  if (/\b(termal|fanila|korse|atlet|tayt|boxer|külot|çorap|pantolon|gömlek|tişört|t-shirt|sweatshirt|mont|ceket|palto|elbise|etek|şort)\b/i.test(name)) return false;
+  // 12. "& xyz Hediye/Set" combo paketleri (Maskara & Krem Hediye gibi)
+  if (/&.*hediye\b/i.test(name) || /&.*\bset\b/i.test(name)) return false;
+  // 13. Çok uzun isimler genelde combo/set ürünleri
+  if (name.length > 120) return false;
   return true;
 });
 console.log('Kalite filtresi: ' + beforeFilter + ' -> ' + allRaw.length + ' (' + (beforeFilter - allRaw.length) + ' hatali veri cikarildi)');
@@ -1264,6 +1277,7 @@ var products = merged.map(function(p, i) {
     ingredientWarnings: [],
     source: (p._site || p.source || 'unknown').toLowerCase(),
     priceCount: p.prices.length,
+    lastUpdated: new Date().toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: '2-digit' }).replace(/\//g, '.'),
   };
 });
 

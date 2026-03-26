@@ -255,6 +255,8 @@
     .card-price-range { font-size: 10px; color: var(--text2); margin-top: 2px; }
     .card-seller-count { display: inline-flex; align-items: center; gap: 4px; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; background: rgba(42,122,59,0.08); color: #2a7a3b; border: 0.5px solid rgba(42,122,59,0.2); margin-top: 4px; }
     .card-seller-count.single { background: rgba(201,169,110,0.08); color: var(--gold); border-color: rgba(201,169,110,0.25); }
+    .card-update-date { display: block; font-size: 9px; color: var(--text3); margin-top: 3px; letter-spacing: 0.3px; }
+    .detail-update-date { font-size: 11px; font-weight: 400; color: var(--text3); letter-spacing: 0; text-transform: none; margin-left: 6px; }
     .card-savings { font-size: 9px; color: #2a7a3b; font-weight: 500; letter-spacing: 0.5px; margin-top: 2px; }
 
     /* ── AKAKÇE-STYLE MINI PRICE BARS ── */
@@ -1661,7 +1663,7 @@
     <div class="modal-head">
       <div>
         <div class="modal-title">Cilt Tonuma Uyar Mı?</div>
-        <div class="modal-subtitle">3 soruda cilt tonunuzu belirleyelim</div>
+        <div class="modal-subtitle">Cilt tipinize uygun ürünleri keşfedin</div>
       </div>
       <button class="modal-close" onclick="document.getElementById('skinTestModal').classList.remove('open')">✕</button>
     </div>
@@ -2614,11 +2616,13 @@ function buildCardHTML(p) {
                         }).join('')}
                       </div>
                       <span class="card-seller-count">${sorted.length} satıcı · ₺${save.toLocaleString('tr-TR')} tasarruf (%${savePct})</span>
+                      ${p.lastUpdated ? '<span class="card-update-date">' + p.lastUpdated + '</span>' : ''}
                     `;
                   })()
                 : `<div class="card-price">₺${mp.toLocaleString('tr-TR')}</div>
                    <div class="card-price-sub">${p.prices[0].site}</div>
-                   <span class="card-seller-count single">1 satıcı</span>`
+                   <span class="card-seller-count single">1 satıcı</span>
+                   ${p.lastUpdated ? '<span class="card-update-date">' + p.lastUpdated + '</span>' : ''}`
               }
             </div>
           </div>
@@ -2870,7 +2874,7 @@ function openDetail(id) {
         return '';
       })()}
 
-      <div class="detail-section-title">Fiyat Karşılaştırması — <span id="sellerCount">${sorted.length}</span> Satıcı</div>
+      <div class="detail-section-title">Fiyat Karşılaştırması — <span id="sellerCount">${sorted.length}</span> Satıcı${p.lastUpdated ? ' <span class="detail-update-date">Son güncelleme: ' + p.lastUpdated + '</span>' : ''}</div>
       <div class="prices-table" id="pricesTableContainer">
         ${renderVariantPrices(sorted)}
       </div>
