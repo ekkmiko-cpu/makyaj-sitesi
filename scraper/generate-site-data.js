@@ -772,9 +772,14 @@ allRaw = allRaw.filter(function(p) {
   if (p.reviews > 50000) return false;
   // 6. "Set", "Hediye Set" gibi çoklu ürün paketleri
   if (/hediye set/i.test(name)) return false;
-  // 7. Çoklu ürün setleri (2'li, 3'lü set, paket)
+  // 7. Çoklu ürün setleri ve combo paketler
   if (/\b\d['']?l[iıuü]\s*(set|paket)\b/i.test(name)) return false;
   if (/\b\d['']?l[iıuü]\s*maskara\b/i.test(name)) return false; // "2'li Maskara" = set
+  // "Kalemli", "Hediyeli" combo setleri (Pazarama özellikle bunları listeler)
+  if (/\b(kalemli|hediyeli|kremli)\s+(maskara|ruj|far)\b/i.test(name)) return false;
+  if (/\b(maskara|ruj|far)\s+(kalemli|hediyeli|kremli)\b/i.test(name)) return false;
+  // "Jel Göz Kalemli" gibi combo: "Lash Sensational + Jel Göz Kalemi"
+  if (/göz\s*kalemli\s/i.test(name)) return false;
   // 8. Aşırı yüksek fiyat — tek kozmetik ürünü 10.000 TL'yi geçmez (Hepsiburada toplu satış hataları)
   // Not: Sensai, La Mer gibi ultra-lüks markalar bile nadiren 10K'yı geçer
   if (p.price > 10000) return false;
@@ -928,6 +933,55 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
     var allSameSize = sizeKeys.every(function(s) { return s === sizeKeys[0]; });
     if (!allSameSize) return; // Farklı boyut = eşleştirme yapma
   }
+
+  // ── İsim tutarlılık kontrolü (KRİTİK) ──
+  // Pazarama ve bazı siteler aynı barkodu farklı ürünlere atayabiliyor
+  // Barkod eşleşse bile ürün isimleri tamamen farklıysa eşleştirme yapma
+  var siteNames = sites.map(function(site) {
+    return {
+      site: site,
+      name: bySite[site].p.name || '',
+      words: new Set(
+        (bySite[site].p.name || '').toLowerCase()
+          .replace(/[^a-zçğıöşü0-9\s]/g, '')
+          .split(/\s+/)
+          .filter(function(w) { return w.length > 2; })
+      )
+    };
+  });
+  // Her çift arasında overlap kontrol et
+  var nameConflict = false;
+  for (var ni = 0; ni < siteNames.length && !nameConflict; ni++) {
+    for (var nj = ni + 1; nj < siteNames.length && !nameConflict; nj++) {
+      var common = 0;
+      siteNames[ni].words.forEach(function(w) { if (siteNames[nj].words.has(w)) common++; });
+      var maxWords = Math.max(siteNames[ni].words.size, siteNames[nj].words.size);
+      var overlap = maxWords > 0 ? common / maxWords : 0;
+      // Kategori de kontrol et
+      var cat1 = (bySite[siteNames[ni].site].p.category || '').toLowerCase();
+      var cat2 = (bySite[siteNames[nj].site].p.category || '').toLowerCase();
+      var catMismatch = cat1 && cat2 && cat1 !== cat2 && !categoryCompatible(cat1, cat2);
+      if (overlap < 0.25 || catMismatch) {
+        nameConflict = true;
+      }
+    }
+  }
+  if (nameConflict) return; // İsimler uyuşmuyor = farklı ürün, barkod yanlış
+
+  // ── Shade/Ton kodu kontrolü (barkod eşleştirmede de) ──
+  // Farklı numara/ton = farklı ürün (105 vs 006 gibi)
+  var barcodeShades = sites.map(function(site) {
+    return extractShadeCode(bySite[site].p.name, bySite[site].p.brand);
+  });
+  for (var si = 0; si < barcodeShades.length && !nameConflict; si++) {
+    for (var sj = si + 1; sj < barcodeShades.length && !nameConflict; sj++) {
+      if (barcodeShades[si].length > 0 && barcodeShades[sj].length > 0) {
+        var shadeMatch = barcodeShades[si].some(function(sc) { return barcodeShades[sj].indexOf(sc) !== -1; });
+        if (!shadeMatch) nameConflict = true;
+      }
+    }
+  }
+  if (nameConflict) return;
 
   // Tüm indexleri kullanıldı olarak işaretle
   var baseEntry = bySite[sites[0]];
