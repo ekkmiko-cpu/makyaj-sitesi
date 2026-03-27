@@ -188,13 +188,21 @@ function correctCategoryByName(productName, currentCategory) {
 }
 
 // ── Marka ismi normalizasyonu (agresif eşleştirme için) ──
+// ── Marka aliasları: normalizeBrand() çıktısı → dahili canonical key ──
 var brandAliases = {
+  // Maybelline
   'MAYBELLINE': 'MAYBELLINE',
   'MAYBELLINE NEW YORK': 'MAYBELLINE',
+  // L'Oréal
   'LOREAL': 'LOREAL PARIS',
   'LOREAL PARIS': 'LOREAL PARIS',
   'L OREAL PARIS': 'LOREAL PARIS',
+  'L OREAL': 'LOREAL PARIS',
+  'LOREAL PROFESSIONNEL': 'LOREAL PARIS',
+  // Estée Lauder
   'ESTEE LAUDER': 'ESTEE LAUDER',
+  'ESTEE LAUDER COMPANIES': 'ESTEE LAUDER',
+  // Diğerleri
   'CLINIQUE': 'CLINIQUE',
   'FLORMAR': 'FLORMAR',
   'ESSENCE': 'ESSENCE',
@@ -204,6 +212,8 @@ var brandAliases = {
   'NYX PROFESSIONAL': 'NYX',
   'MAC': 'MAC',
   'MAC COSMETICS': 'MAC',
+  'M.A.C': 'MAC',
+  'M.A.C.': 'MAC',
   'BENEFIT': 'BENEFIT',
   'BENEFIT COSMETICS': 'BENEFIT',
   'NARS': 'NARS',
@@ -212,6 +222,7 @@ var brandAliases = {
   'DIOR BACKSTAGE': 'DIOR',
   'CHARLOTTE TILBURY': 'CHARLOTTE TILBURY',
   'FENTY BEAUTY': 'FENTY BEAUTY',
+  'FENTY': 'FENTY BEAUTY',
   'BOBBI BROWN': 'BOBBI BROWN',
   'URBAN DECAY': 'URBAN DECAY',
   'TOO FACED': 'TOO FACED',
@@ -223,13 +234,13 @@ var brandAliases = {
   'PASTEL': 'PASTEL',
   'PASTEL PROFASHION': 'PASTEL',
   'SHOW BY PASTEL': 'PASTEL',
+  'SHOW PASTEL': 'PASTEL',
   'REVOLUTION': 'REVOLUTION',
   'REVOLUTION PRO': 'REVOLUTION',
   'MAKEUP REVOLUTION': 'REVOLUTION',
   'WET N WLD': 'WET N WILD',
   'WET N WILD': 'WET N WILD',
-  'LOREAL': 'LOREAL PARIS',
-  'L OREAL': 'LOREAL PARIS',
+  'WET AND WILD': 'WET N WILD',
   'MISSHA': 'MISSHA',
   'KIKO': 'KIKO',
   'KIKO MILANO': 'KIKO',
@@ -241,17 +252,22 @@ var brandAliases = {
   'SHISEIDO': 'SHISEIDO',
   'LANCOME': 'LANCOME',
   'LANCME': 'LANCOME',
+  'LANCÔME': 'LANCOME',
   'GUERLAIN': 'GUERLAIN',
   'ARMANI': 'ARMANI',
   'GIORGIO ARMANI': 'ARMANI',
+  'ARMANI BEAUTY': 'ARMANI',
   'YSL': 'YSL',
   'YVES SAINT LAURENT': 'YSL',
+  'SAINT LAURENT': 'YSL',
   'SISLEY': 'SISLEY',
   'GIVENCHY': 'GIVENCHY',
   'VALENTINO': 'VALENTINO',
+  'VALENTINO BEAUTY': 'VALENTINO',
   'HUDA BEAUTY': 'HUDA BEAUTY',
   'RARE BEAUTY': 'RARE BEAUTY',
   'TARTE': 'TARTE',
+  'TARTE COSMETICS': 'TARTE',
   'SEPHORA COLLECTION': 'SEPHORA COLLECTION',
   'SEPHORA': 'SEPHORA COLLECTION',
   'HOURGLASS': 'HOURGLASS',
@@ -261,6 +277,145 @@ var brandAliases = {
   'NASCITA': 'NASCITA',
   'NOTE': 'NOTE',
   'NOTE COSMETICS': 'NOTE',
+  'ANASTASIA BEVERLY HILLS': 'ANASTASIA BEVERLY HILLS',
+  'ABH': 'ANASTASIA BEVERLY HILLS',
+  'MAKE UP FOR EVER': 'MAKE UP FOR EVER',
+  'MAKEUP FOREVER': 'MAKE UP FOR EVER',
+  'NUDESTIX': 'NUDESTIX',
+  'MILK MAKEUP': 'MILK MAKEUP',
+  'MILK': 'MILK MAKEUP',
+  'PIXI': 'PIXI',
+  'PIXI BY PETRA': 'PIXI',
+  'AVON': 'AVON',
+  'CHANEL': 'CHANEL',
+  'CHANEL BEAUTY': 'CHANEL',
+  'CLARINS': 'CLARINS',
+  'DOLCE GABBANA': 'DOLCE & GABBANA',
+  'DOLCE AND GABBANA': 'DOLCE & GABBANA',
+  'CAUDALIE': 'CAUDALIE',
+  'NUXE': 'NUXE',
+  'VIVIENNE SABO': 'VIVIENNE SABO',
+  'WONDERWAY': 'WONDERWAY',
+  'LYKD': 'LYKD',
+  'COLOURPOP': 'COLOURPOP',
+  'E L F': 'E.L.F.',
+  'ELF': 'E.L.F.',
+  'ELF COSMETICS': 'E.L.F.',
+  'ESSENCE COSMETICS': 'ESSENCE',
+  'ESSENCE THE SKIN CARE': 'ESSENCE',
+  'LANEIGE': 'LANEIGE',
+  'ETUDE': 'ETUDE',
+  'ETUDE HOUSE': 'ETUDE',
+  'INNISFREE': 'INNISFREE',
+  'BABYFACE': 'BABYFACE',
+  'FLORMAR COLLECTION': 'FLORMAR',
+  'BEAULIS': 'BEAULIS',
+  'LUSS': 'LUSS',
+  'SKINFOOD': 'SKINFOOD',
+  'KUATRA': 'KUATRA',
+  'JOWE': 'JOWE',
+  'COLORGRAM': 'COLORGRAM',
+  'LR': 'LR',
+  'LR ZEITGARD': 'LR',
+  'MUSON': 'MUSON',
+  'WONDERSKIN': 'WONDERSKIN',
+  'HOMM LIFE': 'HOMM LIFE',
+  'BIOAQUA': 'BIOAQUA',
+  'VERACLARA': 'VERACLARA',
+  'FOCALLURE': 'FOCALLURE',
+  'TTT': 'TTT',
+  'MARUDERM': 'MARUDERM',
+  'MARUDERM.': 'MARUDERM',
+  'MARU.DERM': 'MARUDERM',
+};
+
+// ── Marka görüntü adları: dahili canonical key → güzel gösterim ──
+var brandDisplayNames = {
+  'MAYBELLINE': 'Maybelline',
+  'LOREAL PARIS': "L'Oréal Paris",
+  'ESTEE LAUDER': 'Estée Lauder',
+  'CLINIQUE': 'Clinique',
+  'FLORMAR': 'Flormar',
+  'ESSENCE': 'Essence',
+  'GOLDEN ROSE': 'Golden Rose',
+  'NYX': 'NYX',
+  'MAC': 'MAC',
+  'BENEFIT': 'Benefit',
+  'NARS': 'NARS',
+  'DIOR': 'Dior',
+  'CHARLOTTE TILBURY': 'Charlotte Tilbury',
+  'FENTY BEAUTY': 'Fenty Beauty',
+  'BOBBI BROWN': 'Bobbi Brown',
+  'URBAN DECAY': 'Urban Decay',
+  'TOO FACED': 'Too Faced',
+  'CATRICE': 'Catrice',
+  'PUPA': 'Pupa',
+  'INGLOT': 'Inglot',
+  'FARMASI': 'Farmasi',
+  'PASTEL': 'Pastel',
+  'REVOLUTION': 'Revolution',
+  'WET N WILD': 'Wet n Wild',
+  'MISSHA': 'Missha',
+  'KIKO': 'KIKO',
+  'PIERRE CARDIN': 'Pierre Cardin',
+  'CATHERINE ARLEY': 'Catherine Arley',
+  'THE PUREST SOLUTIONS': 'The Purest Solutions',
+  'YVES ROCHER': 'Yves Rocher',
+  'NIVEA': 'Nivea',
+  'SHISEIDO': 'Shiseido',
+  'LANCOME': 'Lancôme',
+  'GUERLAIN': 'Guerlain',
+  'ARMANI': 'Armani Beauty',
+  'YSL': 'Yves Saint Laurent',
+  'SISLEY': 'Sisley',
+  'GIVENCHY': 'Givenchy',
+  'VALENTINO': 'Valentino Beauty',
+  'HUDA BEAUTY': 'Huda Beauty',
+  'RARE BEAUTY': 'Rare Beauty',
+  'TARTE': 'Tarte',
+  'SEPHORA COLLECTION': 'Sephora Collection',
+  'HOURGLASS': 'Hourglass',
+  'BELL': 'Bell',
+  'GABRINI': 'Gabrini',
+  'CALLISTA': 'Callista',
+  'NASCITA': 'Nascita',
+  'NOTE': 'NOTE',
+  'ANASTASIA BEVERLY HILLS': 'Anastasia Beverly Hills',
+  'MAKE UP FOR EVER': 'Make Up For Ever',
+  'NUDESTIX': 'Nudestix',
+  'MILK MAKEUP': 'Milk Makeup',
+  'PIXI': 'Pixi',
+  'AVON': 'Avon',
+  'CHANEL': 'Chanel',
+  'CLARINS': 'Clarins',
+  'DOLCE & GABBANA': 'Dolce & Gabbana',
+  'CAUDALIE': 'Caudalie',
+  'NUXE': 'Nuxe',
+  'VIVIENNE SABO': 'Vivienne Sabo',
+  'WONDERWAY': 'Wonderway',
+  'LYKD': 'LYKD',
+  'COLOURPOP': 'ColourPop',
+  'E.L.F.': 'e.l.f.',
+  'LANEIGE': 'Laneige',
+  'ETUDE': 'Etude',
+  'INNISFREE': 'Innisfree',
+  'BABYFACE': 'Babyface',
+  'BEAULIS': 'Beaulis',
+  'LUSS': 'Luss',
+  'SKINFOOD': 'Skinfood',
+  'KUATRA': 'Kuatra',
+  'JOWE': 'Jowe',
+  'COLORGRAM': 'Colorgram',
+  'LR': 'LR',
+  'MUSON': 'Muson',
+  'WONDERSKIN': 'Wonderskin',
+  'HOMM LIFE': 'Homm Life',
+  'BIOAQUA': 'Bioaqua',
+  'VERACLARA': 'Veraclara',
+  'FOCALLURE': 'Focallure',
+  'MAC': 'M·A·C',
+  'TTT': 'TTT',
+  'MARUDERM': 'Maru.Derm',
 };
 
 function normalizeBrand(brand) {
@@ -272,10 +427,17 @@ function normalizeBrand(brand) {
     .replace(/[ùûü]/gi, 'U')
     .replace(/[îï]/gi, 'I')
     .replace(/[ôö]/gi, 'O')
-    .replace(/[^A-Z0-9\s]/g, '')
+    .replace(/[^A-Z0-9\s&.]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
   return brandAliases[clean] || clean;
+}
+
+// Canonical key → güzel gösterim adı
+function displayBrand(brand) {
+  if (!brand || brand.trim() === '') return '';
+  var key = normalizeBrand(brand);
+  return brandDisplayNames[key] || brand;
 }
 
 // ── Kategori uyumluluğu — sadece çok yakın kategoriler eşleşebilir ──
@@ -665,21 +827,75 @@ function fakeReviews(price) {
 
 // ── Bilinen markalar listesi (ürün adından marka çıkarmak için) ──
 var knownBrands = [
-  'Maybelline New York', 'Maybelline', 'L\'Oreal Paris', 'L\'Oréal Paris',
-  'Flormar', 'Golden Rose', 'Essence', 'Catrice', 'NOTE', 'Pastel',
-  'NYX Professional Makeup', 'NYX', 'MAC', 'Clinique', 'Estee Lauder',
-  'Benefit', 'NARS', 'Dior', 'Charlotte Tilbury', 'Fenty Beauty',
-  'Bobbi Brown', 'Urban Decay', 'Too Faced', 'Inglot', 'Farmasi',
-  'Pupa', 'Revolution', 'Wet n Wild', 'Revlon', 'Rimmel',
-  'Shiseido', 'Armani', 'Lancome', 'Lancôme', 'Guerlain',
-  'rom&nd', 'Astra', 'Influence Beauty', 'Mixup', 'Sephora Collection',
-  'Huda Beauty', 'Rare Beauty', 'Pixi', 'Kosas', 'Tarte',
-  'Make Up For Ever', 'Sisley', 'Clarins', 'Givenchy', 'YSL',
-  'Yves Saint Laurent', 'Valentino', 'Dolce & Gabbana',
-  'Anastasia Beverly Hills', 'Nudestix', 'Milk Makeup',
-  'Kiko', 'Pierre Cardin', 'Catherine Arley', 'Bell',
-  'Callista', 'Isana', 'Alterra', 'Rival de Loop',
+  // Çok kelimeli önce (greedy)
+  'Maybelline New York', 'NYX Professional Makeup', 'Make Up For Ever',
+  'L\'Oréal Paris', 'L\'Oreal Paris', 'L\'Oréal', 'L\'Oreal',
+  'Anastasia Beverly Hills', 'Charlotte Tilbury', 'Yves Saint Laurent',
+  'Yves Rocher', 'The Purest Solutions', 'Fenty Beauty',
+  'Huda Beauty', 'Rare Beauty', 'Dolce & Gabbana', 'Urban Decay',
+  'Too Faced', 'Bobbi Brown', 'NARS Cosmetics',
+  'Giorgio Armani', 'Armani Beauty',
+  'Sephora Collection', 'Benefit Cosmetics',
+  'Revolution Pro', 'Makeup Revolution',
+  'Pastel Profashion', 'Show By Pastel', 'Show by Pastel',
+  'Kiko Milano', 'KIKO Milano', 'KIKO',
+  'Pupa Milano',
+  'Pierre Cardin', 'Catherine Arley',
+  'Wet n Wild', 'Wet N Wild',
+  'Vivienne Sabo', 'Golden Rose',
+  'ColourPop', 'Colourpop',
+  'Pixi by Petra',
+  // Tek kelimeli
+  'Maybelline', 'Flormar', 'Essence', 'Catrice', 'NOTE', 'Pastel',
+  'NYX', 'MAC', 'Clinique', 'Benefit', 'NARS', 'Dior',
+  'Farmasi', 'Inglot', 'Revolution',
+  'Pupa', 'Revlon', 'Rimmel', 'Shiseido',
+  'Armani', 'Lancôme', 'Lancome', 'Guerlain', 'YSL',
+  'rom&nd', 'Astra', 'Missha', 'Tarte', 'Sisley',
+  'Clarins', 'Givenchy', 'Valentino', 'Nudestix',
+  'Pixi', 'Kosas', 'Hourglass', 'Chanel',
+  'Kiko', 'Bell', 'Callista', 'Nascita', 'Gabrini',
+  'Farmasi', 'Avon', 'Wonderway', 'LYKD', 'Lykd',
+  'Isana', 'Alterra', 'Etude', 'Laneige', 'Innisfree',
+  'Caudalie', 'Nuxe', 'Milani', 'E.L.F.',
+  'Vivienne Sabo', 'Colorgram', 'Jowe', 'Wonderskin',
+  'Bioaqua', 'Veraclara', 'Focallure', 'Beaulis',
+  'Homm Life', 'Muson', 'LR Zeitgard',
+  // Ürün serisi → marka mapping (Hepsiburada'da marka eksik olduğunda)
+  'Infaillible', // L'Oréal ürün serisi — extractBrandFromName'de yakalanamaz, aşağıda özel mapping var
 ].sort(function(a, b) { return b.length - a.length; }); // En uzun önce (greedy match)
+
+// ── Ürün serisi → marka mapping (bazı siteler markayı ürün serisiyle karıştırır) ──
+var productLineTooBrand = {
+  'infaillible': "L'Oréal Paris",
+  'true match': "L'Oréal Paris",
+  'fit me': 'Maybelline',
+  'superstay': 'Maybelline',
+  'sky high': 'Maybelline',
+  'lash sensational': 'Maybelline',
+  'double wear': 'Estée Lauder',
+  'stay in place': 'Estée Lauder',
+  'teint idole': 'Lancôme',
+  'backstage': 'Dior',
+  'air blush': 'NARS',
+  'matte trance': 'NARS',
+  'telescopic': "L'Oréal Paris",
+  'true match': "L'Oréal Paris",
+  'accord parfait': "L'Oréal Paris",
+  'lifter': 'Maybelline',
+  'brow up': 'Flormar',
+  'colorgram': 'Colorgram',
+  'jowe': 'Jowe',
+};
+
+function extractBrandFromProductLine(name) {
+  if (!name) return '';
+  var nameLower = name.toLowerCase();
+  for (var line in productLineTooBrand) {
+    if (nameLower.includes(line)) return productLineTooBrand[line];
+  }
+  return '';
+}
 
 function extractBrandFromName(name) {
   if (!name) return { brand: '', cleanName: name };
@@ -720,12 +936,24 @@ for (var s = 0; s < SOURCES.length; s++) {
       var name = p.name;
       // Trendyol sponsored ürün işaretlerini temizle (* prefix)
       if (name && name.startsWith('*')) name = name.replace(/^\*+/, '').trim();
+      // Gratis: "+2Vivienne Sabo..." veya "+5Colorgram..." prefix temizle
+      if (src.site === 'Gratis' && name) {
+        name = name.replace(/^\+\d+\s*/, '').trim();
+        // "(238)" gibi suffix temizle
+        name = name.replace(/\s*\(\d+\)\s*$/, '').trim();
+      }
       // Marka boşsa ürün adından çıkar
       if (!brand || brand.trim() === '') {
         var extracted = extractBrandFromName(name);
         brand = extracted.brand;
         if (brand) name = extracted.cleanName;
       }
+      // Hala boşsa ürün serisi adından çıkar
+      if (!brand || brand.trim() === '') {
+        brand = extractBrandFromProductLine(name);
+      }
+      // Marka görüntü adını düzelt (canonical display name)
+      brand = displayBrand(brand);
       // Kategori düzeltmesi: ürün adına bakarak yanlış kategorileri düzelt
       var correctedCat = normalizeCategoryName(p.category);
       correctedCat = correctCategoryByName(p.name, correctedCat);
@@ -762,6 +990,17 @@ allRaw = allRaw.filter(function(p) {
   if (p.price < 5) return false;
   // 2. İsmi çok kısa veya boş
   if (!name || name.length < 5) return false;
+  // 2b. Gratis/scraper çöp isimleri: "Gratis Kart ile", "3 Tür", "2 Renk" vb.
+  if (/^gratis\s+kart\s+ile\b/i.test(name)) return false;
+  if (/^\d+\s+(tür|renk|çeşit|adet|tip)$/i.test(name)) return false;
+  // 2c. Marka yoksa ve isim çok genericse eleme (Hepsiburada/Gratis garbage)
+  if (!p.brand || p.brand.trim() === '') {
+    // Sadece bilinen marka yoksa ve isim generikse at
+    if (name.length < 10) return false;
+  }
+  // 2d. Mağaza adı marka olarak gelmiş olanları at (Diyar-ı Fırsat, Ucuzmağaza, vb.)
+  var brandLow = (p.brand || '').toLowerCase();
+  if (/fırsat|mağaza|market|indirim|kampanya/.test(brandLow)) return false;
   // 3. SEO kategori sayfaları — "Markaları", "Fiyatları", "Yorumları", "Çeşitleri" vb.
   // Not: \b Türkçe karakterlerle düzgün çalışmaz, bu yüzden daha geniş regex kullan
   if (/(fiyatlar|markalar|çeşitler|modelller|renkleri|yorumlar|cesitler|fiyatlari|markalari)/i.test(name)) return false;
@@ -1309,7 +1548,7 @@ var products = merged.map(function(p, i) {
 
   return {
     id: i + 1,
-    brand: p.brand,
+    brand: displayBrand(p.brand) || p.brand,
     name: name,
     category: p.category,
     categoryLabel: p.categoryLabel,
