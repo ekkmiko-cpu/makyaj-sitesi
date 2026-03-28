@@ -209,7 +209,16 @@ async function main() {
     ...p,
   }));
 
-  // Kaydet
+  // Kaydet — 0 urun donerse mevcut dosyayi koru (API blok veya network hatasi)
+  if (allProducts.length === 0) {
+    const existing = fs.existsSync(OUTPUT_FILE) ? JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8') || '[]') : [];
+    if (existing.length > 0) {
+      console.warn('\n[UYARI] Hic urun cekilemedi — mevcut ' + existing.length + ' urunluk cache korunuyor.');
+      console.log('\nKaydedildi (cache): ' + OUTPUT_FILE);
+      return;
+    }
+    console.warn('\n[UYARI] Hic urun cekilemedi ve cache yok.');
+  }
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allProducts, null, 2), 'utf8');
 
   // Ozet

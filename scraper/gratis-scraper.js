@@ -374,7 +374,15 @@ async function main() {
     ...p,
   }));
 
-  // Save
+  // Save — 0 urun donerse mevcut cache'i koru
+  if (allProducts.length === 0) {
+    const existing = fs.existsSync(OUTPUT_FILE) ? JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8') || '[]') : [];
+    if (existing.length > 0) {
+      console.warn(`\n[UYARI] Hic urun cekilemedi — mevcut ${existing.length} urunluk cache korunuyor.`);
+      await browser.close();
+      return;
+    }
+  }
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(allProducts, null, 2), 'utf8');
 
   // Summary
