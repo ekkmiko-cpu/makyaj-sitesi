@@ -29,6 +29,15 @@ const CATEGORIES = [
   { name: 'ruj',             q: 'ruj',                catId: '702', label: 'Ruj' },
   { name: 'dudak-parlatici', q: 'dudak parlatici lip gloss', catId: '702', label: 'Dudak Parlatici' },
   { name: 'dudak-kalemi',    q: 'dudak kalemi',       catId: '702', label: 'Dudak Kalemi' },
+  // ── Yeni kategoriler (Akakce uyumu) ─────────────────────────────────────────
+  { name: 'dipliner',           q: 'dipliner',                      catId: '702', label: 'Dipliner' },
+  { name: 'kas-kalemi',         q: 'kas kalemi makyaj',             catId: '702', label: 'Kas Kalemi' },
+  { name: 'kas-fari',           q: 'kas fari',                      catId: '702', label: 'Kas Fari' },
+  { name: 'kas-sabitleyici',    q: 'kas sabitleyici jeli',          catId: '702', label: 'Kas Sabitleyici' },
+  { name: 'bb-cc-krem',         q: 'bb krem cc krem makyaj',        catId: '702', label: 'BB CC Krem' },
+  { name: 'makyaj-sabitleyici', q: 'makyaj sabitleyici sprey',      catId: '702', label: 'Makyaj Sabitleyici' },
+  { name: 'makyaj-seti',        q: 'makyaj seti',                   catId: '702', label: 'Makyaj Seti' },
+  { name: 'vucut-simi',         q: 'vucut simi',                    catId: '702', label: 'Vucut Simi' },
 ];
 
 const OUTPUT_FILE = path.join(__dirname, 'hepsiburada-products.json');

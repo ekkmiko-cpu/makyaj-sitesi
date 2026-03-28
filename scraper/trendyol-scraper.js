@@ -28,6 +28,15 @@ const CATEGORIES = [
   { name: 'dudak-parlatici',  url: '/sr?q=dudak+parlatici+lip+gloss',          label: 'Dudak Parlatici' },
   { name: 'dudak-kalemi',     url: '/dudak-kalemi-x-c1042',                    label: 'Dudak Kalemi' },
   { name: 'kontur',           url: '/sr?q=kontür+makyaj',                      label: 'Kontur' },
+  // ── Yeni kategoriler (Akakce uyumu) ─────────────────────────────────────────
+  { name: 'dipliner',           url: '/sr?q=dipliner',                          label: 'Dipliner' },
+  { name: 'kas-kalemi',         url: '/sr?q=kas+kalemi',                        label: 'Kas Kalemi' },
+  { name: 'kas-fari',           url: '/sr?q=kas+fari',                          label: 'Kas Fari' },
+  { name: 'kas-sabitleyici',    url: '/sr?q=kas+sabitleyici+jeli',              label: 'Kas Sabitleyici' },
+  { name: 'bb-cc-krem',         url: '/bb-cc-krem-x-c108823',                   label: 'BB CC Krem' },
+  { name: 'makyaj-sabitleyici', url: '/sr?q=makyaj+sabitleyici+sprey',          label: 'Makyaj Sabitleyici' },
+  { name: 'makyaj-seti',        url: '/makyaj-seti-x-c104019',                  label: 'Makyaj Seti' },
+  { name: 'vucut-simi',         url: '/sr?q=vucut+simi',                        label: 'Vucut Simi' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'trendyol-products.json');
 const MAX_PAGES = 10;
@@ -308,6 +317,8 @@ async function main() {
     aydinlatici: '💡', bronzer: '🌞', kontur: '🎭', pudra: '🌿',
     maskara: '👁️', far: '💜', 'far-paleti': '🎨', eyeliner: '✏️',
     'goz-kalemi': '🖊️', ruj: '💄', 'dudak-parlatici': '✨', 'dudak-kalemi': '🖊️',
+    dipliner: '✏️', 'kas-kalemi': '✒️', 'kas-fari': '🤎', 'kas-sabitleyici': '🌿',
+    'bb-cc-krem': '💧', 'makyaj-sabitleyici': '💨', 'makyaj-seti': '🎁', 'vucut-simi': '✨',
   };
   allProducts = allProducts.map((p, i) => ({
     id: i + 5000,

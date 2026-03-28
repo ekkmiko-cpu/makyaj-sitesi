@@ -63,6 +63,15 @@ const skinDefaults = {
   'dudak-parlatici': ['kuru', 'normal'],
   'dudak-kalemi':    ['normal', 'karma'],
   'kas':             ['normal', 'karma'],
+  // ── Yeni kategoriler (Akakce uyumu) ───────────────────────────────────────
+  'dipliner':           ['yagli', 'karma'],
+  'kas-kalemi':         ['normal', 'karma'],
+  'kas-fari':           ['normal', 'kuru', 'karma'],
+  'kas-sabitleyici':    ['yagli', 'karma'],
+  'bb-cc-krem':         ['normal', 'kuru', 'karma'],
+  'makyaj-sabitleyici': ['yagli', 'karma'],
+  'makyaj-seti':        ['normal', 'kuru', 'karma', 'yagli'],
+  'vucut-simi':         ['normal', 'kuru', 'karma'],
   // Cilt & Vücut Bakımı
   nemlendirici:      ['kuru', 'normal', 'karma'],
   serum:             ['normal', 'kuru', 'karma', 'yagli'],
@@ -107,6 +116,20 @@ var categoryLabelMap = {
   'Kaş Makyajı': 'Kaş Makyajı',
   'Dudak Parlatici': 'Dudak Parlatıcı',
   'Kontur': 'Kontür',
+  // ── Yeni kategoriler (Akakce uyumu) ───────────────────────────────────────
+  'Dipliner': 'Dipliner',
+  'Kas Kalemi': 'Kaş Kalemi',
+  'Kaş Kalemi': 'Kaş Kalemi',
+  'Kas Fari': 'Kaş Farı',
+  'Kaş Farı': 'Kaş Farı',
+  'Kas Sabitleyici': 'Kaş Sabitleyici',
+  'Kaş Sabitleyici': 'Kaş Sabitleyici',
+  'BB CC Krem': 'BB & CC Krem',
+  'BB & CC Krem': 'BB & CC Krem',
+  'Makyaj Sabitleyici': 'Makyaj Sabitleyici',
+  'Makyaj Seti': 'Makyaj Seti',
+  'Vucut Simi': 'Vücut Simi',
+  'Vücut Simi': 'Vücut Simi',
   // Cilt & Vücut Bakımı
   'Nemlendirici': 'Nemlendirici',
   'Serum': 'Serum',
@@ -153,6 +176,15 @@ var categoryNameMap = {
   'kas': 'kas',
   'bronzer': 'bronzer',
   'kontur': 'kontur',
+  // ── Yeni kategoriler (Akakce uyumu) ───────────────────────────────────────
+  'dipliner': 'dipliner',
+  'kas-kalemi': 'kas-kalemi',
+  'kas-fari': 'kas-fari',
+  'kas-sabitleyici': 'kas-sabitleyici',
+  'bb-cc-krem': 'bb-cc-krem',
+  'makyaj-sabitleyici': 'makyaj-sabitleyici',
+  'makyaj-seti': 'makyaj-seti',
+  'vucut-simi': 'vucut-simi',
 };
 
 function normalizeCategoryName(name) {
@@ -164,7 +196,9 @@ function normalizeCategoryName(name) {
 var nameToCategoryRules = [
   // Göz kategorileri
   { keywords: ['maskara', 'mascara', 'rimel', 'kirpik', 'lash sensational', 'sky high', 'colossal', 'lash princess', 'bambi', 'lash blasté', 'they\'re real', 'bad gal', 'roller lash', 'fan fest'], cat: 'maskara' },
-  { keywords: ['eyeliner', 'eye liner', 'dipliner', 'kajal liner', 'gel liner', 'liquid liner', 'waterproof liner', 'mat liner', 'otomatik jel', 'infaillible liner', 'precision liner'], cat: 'eyeliner' },
+  // dipliner önce gelsin (eyeliner'dan daha spesifik)
+  { keywords: ['dipliner', 'dip liner', 'likit eyeliner', 'liquid liner', 'likit liner'], cat: 'dipliner' },
+  { keywords: ['eyeliner', 'eye liner', 'kajal liner', 'gel liner', 'waterproof liner', 'mat liner', 'otomatik jel', 'infaillible liner', 'precision liner'], cat: 'eyeliner' },
   { keywords: ['göz kalemi', 'goz kalemi', 'eye pencil', 'kohl pencil', 'kayal', 'kajal pencil'], cat: 'goz-kalemi' },
   { keywords: ['far paleti', 'palette', 'paleti', 'eyeshadow palette', 'shadow palette'], cat: 'far-paleti' },
   { keywords: ['göz farı', 'goz fari', 'eye shadow', 'eyeshadow', 'far ', ' far', 'stick far', 'shimmer shadow'], cat: 'far' },
@@ -176,13 +210,24 @@ var nameToCategoryRules = [
   { keywords: ['bronzer', 'bronz', 'terracotta'], cat: 'bronzer' },
   { keywords: ['kontür', 'kontur', 'contour', 'sculpt'], cat: 'kontur' },
   { keywords: ['pudra', 'powder', 'loose powder', 'fixing powder', 'toz pudra', 'compact powder'], cat: 'pudra' },
+  // bb/cc krem primer'dan önce gelsin
+  { keywords: ['bb krem', 'bb cream', 'cc krem', 'cc cream', 'bb & cc', 'bb&cc', 'bb ve cc'], cat: 'bb-cc-krem' },
+  // setting spray / makyaj sabitleyici
+  { keywords: ['setting spray', 'makyaj sabitleyici sprey', 'fixing spray', 'fixer spray', 'sabitleyici sprey', 'fix spray'], cat: 'makyaj-sabitleyici' },
   { keywords: ['primer', 'makyaj bazı', 'makeup base', 'pore filler', 'sabitleyici', 'setting spray', 'baz '], cat: 'primer' },
   // Dudak kategorileri
   { keywords: ['ruj', 'lipstick', 'lip stick', 'likit mat ruj', 'lip cream', 'lip balm', 'lip color', 'rouge à lèvres'], cat: 'ruj' },
   { keywords: ['dudak parlatıcı', 'dudak parlatici', 'lip gloss', 'lipgloss', 'lip glaze', 'lip oil'], cat: 'dudak-parlatici' },
   { keywords: ['dudak kalemi', 'lip liner', 'lipliner', 'lip pencil'], cat: 'dudak-kalemi' },
-  // Kaş
-  { keywords: ['kaş', 'kas', 'brow', 'eyebrow', 'kaş kalemi', 'brow pencil', 'brow mascara', 'brow pomade'], cat: 'kas' },
+  // Kaş kategorileri (spesifik önce, genel sonra)
+  { keywords: ['kaş kalemi', 'kas kalemi', 'eyebrow pencil', 'brow pencil', 'kaş şekillendirici', 'brow shaper', 'brow definer'], cat: 'kas-kalemi' },
+  { keywords: ['kaş farı', 'kas fari', 'eyebrow powder', 'brow powder', 'kaş tozu'], cat: 'kas-fari' },
+  { keywords: ['kaş sabitleyici', 'kas sabitleyici', 'kaş jeli', 'brow gel', 'kaş maskara', 'brow mascara', 'brow pomade', 'kaş pomad'], cat: 'kas-sabitleyici' },
+  { keywords: ['kaş', 'kas', 'brow', 'eyebrow'], cat: 'kas' },
+  // Makyaj seti
+  { keywords: ['makyaj seti', 'makeup set', 'beauty set', 'makeup kit', 'makyaj kit'], cat: 'makyaj-seti' },
+  // Vücut simi
+  { keywords: ['vücut simi', 'vucut simi', 'body shimmer', 'body glitter', 'vücut parıltı', 'body glow', 'vücut ışıltı'], cat: 'vucut-simi' },
 ];
 
 function correctCategoryByName(productName, currentCategory) {

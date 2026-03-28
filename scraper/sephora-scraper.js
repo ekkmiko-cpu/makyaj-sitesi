@@ -29,6 +29,10 @@ const CATEGORIES = [
   { name: 'ruj',        url: '/makyaj/dudak/ruj-c371/',                              label: 'Ruj' },
   { name: 'dudak-parlatici', url: '/makyaj/dudak/lip-gloss-dudak-parlaticisi-c372/', label: 'Dudak Parlatıcı' },
   { name: 'dudak-kalemi',    url: '/makyaj/dudak/dudak-kalemi-c373/',                label: 'Dudak Kalemi' },
+  // ── Yeni kategoriler (Akakce uyumu) ─────────────────────────────────────────
+  { name: 'kas-kalemi',      url: '/makyaj/kas/kas-kalemi-ve-sekillendirici-c253102/', label: 'Kaş Kalemi' },
+  { name: 'kas-sabitleyici', url: '/makyaj/kas/kas-jeli-ve-maskarasi-c253103/',        label: 'Kaş Sabitleyici' },
+  { name: 'bb-cc-krem',      url: '/makyaj/yuz/bb-ve-cc-krem-c93801/',                label: 'BB & CC Krem' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'sephora-products.json');
 const DELAY_MS = 1200;
@@ -257,7 +261,8 @@ async function main() {
     fondoten: '✨', kapatici: '💫', primer: '🌟', allik: '🌸',
     aydinlatici: '💡', bronzer: '🌞', kontur: '🎭', pudra: '🌿',
     maskara: '👁️', far: '💜', 'far-paleti': '🎨', eyeliner: '✏️',
-    'goz-kalemi': '🖊️', ruj: '💄', 'dudak-parlatici': '✨', 'dudak-kalemi': '🖊️'
+    'goz-kalemi': '🖊️', ruj: '💄', 'dudak-parlatici': '✨', 'dudak-kalemi': '🖊️',
+    'kas-kalemi': '✒️', 'kas-sabitleyici': '🌿', 'bb-cc-krem': '💧'
   };
   allProducts = allProducts.map((p, i) => ({
     id: i + 100,
