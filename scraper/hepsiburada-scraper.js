@@ -178,18 +178,20 @@ async function scrapeCategory(page, category) {
 
     try {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await sleep(3000);
+      // article'larin render olmasi icin bekle (CI'da daha yavas olabilir)
+      await page.waitForSelector('article', { timeout: 12000 }).catch(() => {});
+      await sleep(1500);
 
-      // Scroll to load lazy images
-      for (var i = 0; i < 6; i++) {
-        await page.evaluate(() => window.scrollBy(0, window.innerHeight * 0.7));
-        await sleep(500);
+      // Lazy load icin 3 scroll
+      for (var i = 0; i < 3; i++) {
+        await page.evaluate(() => window.scrollBy(0, window.innerHeight));
+        await sleep(400);
       }
       await page.evaluate(() => window.scrollTo(0, 0));
-      await sleep(500);
+      await sleep(400);
 
       var products = await extractProducts(page, category.name, category.label);
-      console.log('  -> ' + products.length + ' urun bulundu');
+      console.log('  -> Sayfa ' + pageNum + ': ' + products.length + ' urun');
 
       if (products.length === 0) {
         console.log('  -> Urun yok, kategori tamamlandi.');
@@ -197,10 +199,6 @@ async function scrapeCategory(page, category) {
       }
 
       allProducts.push(...products);
-
-      // Sayfa basa sarisinda 3'ten az urun varsa son sayfa
-      if (products.length < 10) break;
-
       await sleep(DELAY_MS);
     } catch(err) {
       console.log('  HATA: ' + err.message.substring(0, 100));
