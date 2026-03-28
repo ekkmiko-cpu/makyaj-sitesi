@@ -39,206 +39,93 @@ const CATEGORIES = [
   { name: 'vucut-simi',         url: '/sr?q=vucut+simi',                        label: 'Vucut Simi' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'trendyol-products.json');
-const MAX_PAGES = 10;
-const DELAY_MS = 1500;
+const MAX_PAGES = 12;      // sayfa basina 24 urun → 12 sayfa × 24 kat = ~6900 urun
+const DELAY_MS  = 1200;    // sayfa arasi bekleme (ms)
 // -----------------------------------------------------------------------------
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 /**
- * Urunleri sayfadan cikarir.
- * Oncelik: JSON-LD structured data -> DOM selectors fallback
+ * Tek sayfadan urunleri cikar — a.product-card selector (Trendyol 2024+ yapisi)
  */
-async function extractProducts(page, catName, catLabel, useDOM) {
-  return page.evaluate(({ catName, catLabel, baseUrl, forceDOM }) => {
-    const products = [];
-
-    // --- Yontem 1: JSON-LD structured data (sadece ilk sayfa) ---
-    if (!forceDOM) try {
-      const ldScripts = document.querySelectorAll('script[type="application/ld+json"]');
-      for (const script of ldScripts) {
-        try {
-          const data = JSON.parse(script.textContent);
-          // ItemList icinde urunler olabilir
-          if (data['@type'] === 'ItemList' && Array.isArray(data.itemListElement)) {
-            for (const item of data.itemListElement) {
-              const product = item.item || item;
-              if (product && product.name) {
-                products.push({
-                  name: (product.name || '').trim(),
-                  brand: (product.brand && product.brand.name) ? product.brand.name.trim() : '',
-                  category: catName,
-                  categoryLabel: catLabel,
-                  price: product.offers
-                    ? parseFloat(product.offers.price || product.offers.lowPrice || 0)
-                    : 0,
-                  imageUrl: Array.isArray(product.image) ? (product.image[0] || '') : (product.image || ''),
-                  productUrl: product.url
-                    ? (product.url.startsWith('http') ? product.url : baseUrl + product.url)
-                    : '',
-                  rating: product.aggregateRating
-                    ? parseFloat(product.aggregateRating.ratingValue || 0)
-                    : 0,
-                  reviews: product.aggregateRating
-                    ? parseInt(product.aggregateRating.reviewCount || product.aggregateRating.ratingCount || 0)
-                    : 0,
-                  source: 'trendyol',
-                });
-              }
-            }
-          }
-          // Product tipinde tekil urun
-          if (data['@type'] === 'Product' && data.name) {
-            products.push({
-              name: (data.name || '').trim(),
-              brand: (data.brand && data.brand.name) ? data.brand.name.trim() : '',
-              category: catName,
-              categoryLabel: catLabel,
-              price: data.offers
-                ? parseFloat(data.offers.price || data.offers.lowPrice || 0)
-                : 0,
-              imageUrl: data.image || '',
-              productUrl: data.url
-                ? (data.url.startsWith('http') ? data.url : baseUrl + data.url)
-                : '',
-              rating: data.aggregateRating
-                ? parseFloat(data.aggregateRating.ratingValue || 0)
-                : 0,
-              reviews: data.aggregateRating
-                ? parseInt(data.aggregateRating.reviewCount || data.aggregateRating.ratingCount || 0)
-                : 0,
-              source: 'trendyol',
-            });
-          }
-        } catch (_) { /* JSON parse hatasi, devam */ }
-      }
-    } catch (_) { /* JSON-LD bulunamadi */ }
-
-    if (products.length > 0) return products;
-
-    // --- Yontem 2: DOM selectors (yeni Trendyol yapisi) ---
-    const cards = document.querySelectorAll('.product-card, [data-testid="product-card"]');
+async function extractPageProducts(page, catName, catLabel) {
+  return page.evaluate(({ catName, catLabel, baseUrl }) => {
+    const cards = [...document.querySelectorAll('a.product-card')];
+    const results = [];
     for (const card of cards) {
       try {
-        // Urun adi
-        const nameEl = card.querySelector('.product-name');
-        const name = nameEl ? nameEl.textContent.replace(/\s+/g, ' ').trim() : '';
-
-        // Marka
-        const brandEl = card.querySelector('.product-brand');
-        const brand = brandEl ? brandEl.textContent.replace(/\s+/g, ' ').trim() : '';
-
-        // Link
-        const linkEl = card.querySelector('a[href*="/p-"]') || card.querySelector('a[href]') || card.closest('a');
-        const href = linkEl ? linkEl.getAttribute('href') : '';
-        const productUrl = href
-          ? (href.startsWith('http') ? href : baseUrl + href)
-          : '';
-
-        // Gorsel
-        const imgEl = card.querySelector('img');
-        const imageUrl = imgEl
-          ? (imgEl.src || imgEl.getAttribute('data-src') || '')
-          : '';
-
-        // Fiyat
-        const priceEl = card.querySelector('.price-section');
-        let price = 0;
-        if (priceEl) {
-          const raw = priceEl.textContent.replace(/[^\d,]/g, '').replace(',', '.');
-          price = parseFloat(raw) || 0;
-        }
-
-        // Rating
-        const ratingEl = card.querySelector('.average-rating');
-        const rating = ratingEl ? parseFloat(ratingEl.textContent.replace(',', '.')) || 0 : 0;
-
-        // Yorum sayisi
-        const reviewEl = card.querySelector('.total-count');
-        let reviews = 0;
-        if (reviewEl) {
-          const txt = reviewEl.textContent.replace(/[^\d]/g, '');
-          reviews = parseInt(txt) || 0;
-        }
-
+        const name  = (card.querySelector('.product-name')?.textContent  || '').trim();
+        const brand = (card.querySelector('.product-brand')?.textContent || '').trim();
         if (!name && !brand) continue;
 
-        products.push({
-          name: name || brand,
-          brand,
-          category: catName,
-          categoryLabel: catLabel,
-          price,
-          imageUrl,
-          productUrl,
-          rating,
-          reviews,
-          source: 'trendyol',
-        });
-      } catch (_) { /* tek kart hatasi, devam */ }
-    }
+        // Fiyat: önce indirimli, sonra normal
+        let price = 0;
+        const priceEl = card.querySelector('.price-value') ||
+                        card.querySelector('.discounted-price .price-value') ||
+                        card.querySelector('[class*="price"]');
+        if (priceEl) {
+          price = parseFloat(priceEl.textContent.replace(/[^\d,]/g, '').replace(',', '.')) || 0;
+        }
 
-    return products;
-  }, { catName, catLabel, baseUrl: BASE_URL, forceDOM: !!useDOM });
+        const imageUrl  = card.querySelector('img.image, img[src*="cdn.dsmcdn"]')?.src || '';
+        const productUrl = card.href
+          ? (card.href.startsWith('http') ? card.href : baseUrl + card.href)
+          : '';
+        const rating  = parseFloat((card.querySelector('.average-rating')?.textContent || '0').replace(',', '.')) || 0;
+        const reviews = parseInt((card.querySelector('.total-count')?.textContent || '0').replace(/[^\d]/g, '')) || 0;
+
+        results.push({ name: name || brand, brand, category: catName, categoryLabel: catLabel,
+          price, imageUrl, productUrl, rating, reviews, source: 'trendyol' });
+      } catch (_) { /* kart hatasi */ }
+    }
+    return results;
+  }, { catName, catLabel, baseUrl: BASE_URL });
 }
 
+/**
+ * Kategoriyi sayfalayarak tara (pi=1 .. MAX_PAGES)
+ */
 async function scrapeCategory(page, category) {
   console.log(`\n[KATEGORI] ${category.label} -- taraniyor...`);
 
-  // Sayfa 1'i yükle
-  const url = `${BASE_URL}${category.url}?pi=1`;
-  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
-  await sleep(2500);
-
-  // Önce JSON-LD'den ilk batch'i al
-  let jsonLdProducts = await extractProducts(page, category.name, category.label, false);
-  console.log(`   JSON-LD: ${jsonLdProducts.length} urun`);
-
-  // Sonra sayfayı scroll ederek DOM'dan daha fazla ürün yüklet
-  let prevCount = 0;
-  let sameCountRounds = 0;
-  const MAX_SCROLLS = 3; // hizli test icin 3 scroll
-
-  for (let s = 0; s < MAX_SCROLLS; s++) {
-    await page.evaluate(() => window.scrollBy(0, window.innerHeight * 1.5));
-    await sleep(800);
-
-    const currentCount = await page.evaluate(() => document.querySelectorAll('.product-card, [data-testid="product-card"]').length);
-
-    if (currentCount === prevCount) {
-      sameCountRounds++;
-      if (sameCountRounds >= 3) {
-        console.log(`   Scroll ${s+1}: ${currentCount} kart (yeni urun yok, durduruluyor)`);
-        break;
-      }
-    } else {
-      sameCountRounds = 0;
-    }
-    prevCount = currentCount;
-
-    if ((s + 1) % 5 === 0) {
-      console.log(`   Scroll ${s+1}: ${currentCount} kart yuklendi`);
-    }
-  }
-
-  // Scroll sonrası DOM'dan tüm ürünleri çek
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await sleep(500);
-  const domProducts = await extractProducts(page, category.name, category.label, true);
-  console.log(`   DOM: ${domProducts.length} urun`);
-
-  // JSON-LD ve DOM sonuçlarını birleştir, URL bazlı dedup
   const seen = new Set();
   const allProducts = [];
-  for (const p of [...jsonLdProducts, ...domProducts]) {
-    const key = p.productUrl || (p.brand + '|' + p.name);
-    if (!seen.has(key)) {
-      seen.add(key);
-      allProducts.push(p);
+
+  for (let pi = 1; pi <= MAX_PAGES; pi++) {
+    // URL olustur: /kategori-x-cXXX?pi=N  veya  /sr?q=arama&pi=N
+    const sep = category.url.includes('?') ? '&' : '?';
+    const url = `${BASE_URL}${category.url}${sep}pi=${pi}`;
+
+    try {
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+      // a.product-card'ların render olmasi icin bekle (maks 8 sn)
+      await page.waitForSelector('a.product-card', { timeout: 8000 }).catch(() => {});
+      await sleep(800);
+    } catch (err) {
+      console.log(`   Sayfa ${pi}: yuklenemedi (${err.message.substring(0,40)}), durduruluyor`);
+      break;
     }
+
+    const pageProducts = await extractPageProducts(page, category.name, category.label);
+    if (pageProducts.length === 0) {
+      console.log(`   Sayfa ${pi}: urun yok — durduruluyor`);
+      break;
+    }
+
+    let newCount = 0;
+    for (const p of pageProducts) {
+      const key = p.productUrl || `${p.brand}|${p.name}`;
+      if (!seen.has(key)) { seen.add(key); allProducts.push(p); newCount++; }
+    }
+
+    console.log(`   Sayfa ${pi}: ${pageProducts.length} urun (${newCount} yeni, toplam: ${allProducts.length})`);
+
+    if (newCount === 0) { console.log(`   Tekrar eden sayfa — durduruluyor`); break; }
+
+    await sleep(DELAY_MS);
   }
 
-  console.log(`   Toplam: ${allProducts.length} benzersiz urun`);
+  console.log(`   => ${category.label}: ${allProducts.length} urun`);
   return allProducts;
 }
 

@@ -41,8 +41,8 @@ const CATEGORIES = [
 ];
 
 const OUTPUT_FILE = path.join(__dirname, 'hepsiburada-products.json');
-const DELAY_MS = 2500;
-const MAX_PAGES = 3;
+const DELAY_MS = 2000;
+const MAX_PAGES = 10;   // sayfa basina ~28 urun → 10 sayfa × 24 kat = ~6700 (dedup oncesi)
 const START_ID = 25000;
 // -----------------------------------------------------------------------------
 
@@ -50,105 +50,75 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 /**
  * Sayfadaki urun kartlarindan veri cikarir.
- * Hepsiburada'nin DOM yapisi:
- *   article.horizontalProductCard -> a[href*="-p-"] -> h2[data-test-id="title-N"]
- *   [data-test-id="final-price-N"] -> fiyat
+ * Hepsiburada 2024+ DOM yapisi: her urun bir <article> elementi.
+ * Icerisindeki ilk hepsiburada.com linki urun URL'si, adservice linkleri reklam.
  */
 async function extractProducts(page, catName, catLabel) {
-  return page.evaluate(({ catName, catLabel }) => {
+  return page.evaluate(({ catName, catLabel, baseUrl }) => {
     var results = [];
     var seen = {};
 
-    // Tum urun linklerini bul
-    var links = document.querySelectorAll('a[href*="-p-"]');
+    var articles = document.querySelectorAll('article');
 
-    links.forEach(function(link) {
-      // URL'yi temizle (reklam redirect'lerinden gercek URL'yi cikar)
-      var rawUrl = link.href || '';
-      var productUrl = rawUrl;
-
-      // Reklam redirect URL'lerinden gercek URL'yi cikar
-      if (rawUrl.includes('adservice.hepsiburada.com') || rawUrl.includes('redirect=')) {
-        var redirectMatch = rawUrl.match(/redirect=([^&]+)/);
-        if (redirectMatch) {
-          productUrl = decodeURIComponent(redirectMatch[1]);
+    articles.forEach(function(art) {
+      // adservice olmayan ilk hepsiburada linki
+      var links = art.querySelectorAll('a[href]');
+      var productUrl = '';
+      for (var i = 0; i < links.length; i++) {
+        var href = links[i].href || '';
+        if (href.includes('hepsiburada.com') && !href.includes('adservice') && !href.includes('/ara?')) {
+          productUrl = href;
+          break;
         }
       }
+      if (!productUrl) return;
 
-      // Sadece hepsiburada urun URL'lerini al
-      if (!productUrl.includes('hepsiburada.com') || !productUrl.includes('-p-')) return;
+      // Dedup
+      var dedupKey = productUrl.split('?')[0];
+      if (seen[dedupKey]) return;
+      seen[dedupKey] = true;
 
-      // SKU cikar (URL'deki -p-XXXXX kismi)
-      var skuMatch = productUrl.match(/-p-([A-Z0-9]+)/);
-      var sku = skuMatch ? skuMatch[1] : '';
-
-      if (seen[sku] || seen[productUrl]) return;
-      if (sku) seen[sku] = true;
-      seen[productUrl] = true;
-
-      // Urun ismi — title attribute veya aria-label
-      var name = link.getAttribute('title') || '';
-      if (!name) {
-        var h2 = link.querySelector('h2, [data-test-id^="title"]');
-        if (h2) {
-          name = h2.getAttribute('aria-label') || h2.textContent || '';
-          // "Sepete ekle, fiyat: XXX TL, BRAND Name" formatini temizle
-          name = name.replace(/^Sepete ekle,\s*fiyat:\s*[\d.,]+\s*TL,\s*/i, '');
-        }
-      }
+      // Urun adi
+      var name = '';
+      var nameEl = art.querySelector('h2, h3, [data-test-id*="title"], [class*="title"]');
+      if (nameEl) name = nameEl.textContent.replace(/\s+/g, ' ').trim();
       if (!name) return;
-      name = name.replace(/\s+/g, ' ').trim();
 
-      // Marka — ismin basindaki marka adi
+      // Marka
       var brand = '';
-      // Link'in title'inda "MARKA urun adi" seklinde olabilir
-      var titleAttr = link.getAttribute('title') || '';
-      // Ust parent'tan marka bilgisi
-      var article = link.closest('article') || link.closest('li') || link.closest('div');
-      if (article) {
-        var brandEl = article.querySelector('[class*="brand"], [data-test-id*="brand"]');
-        if (brandEl) brand = brandEl.textContent.trim();
-      }
+      var brandEl = art.querySelector('[class*="brand"], [data-test-id*="brand"]');
+      if (brandEl) brand = brandEl.textContent.trim();
 
-      // Fiyat
+      // Fiyat — en dusuk fiyati al
       var price = 0;
-      if (article) {
-        var priceEl = article.querySelector('[data-test-id^="final-price"], [class*="price"]');
-        if (priceEl) {
-          var priceText = priceEl.textContent.replace(/\s+/g, '');
-          var priceMatch = priceText.match(/([\d.]+,\d+)/);
-          if (priceMatch) {
-            price = parseFloat(priceMatch[1].replace(/\./g, '').replace(',', '.')) || 0;
-          }
+      var priceEls = art.querySelectorAll('[data-test-id*="price"], [class*="price"], [class*="Price"]');
+      priceEls.forEach(function(el) {
+        var txt = el.textContent.replace(/\s+/g, '');
+        var m = txt.match(/([\d]+[.,][\d]+)/);
+        if (m) {
+          var v = parseFloat(m[1].replace(/\./g, '').replace(',', '.')) || 0;
+          if (v > 0 && (price === 0 || v < price)) price = v;
         }
-      }
+      });
 
       // Gorsel
       var imageUrl = '';
-      if (article) {
-        var imgEl = article.querySelector('img[src*="productimages"]');
-        if (imgEl) {
-          imageUrl = imgEl.src || '';
-          // Daha buyuk gorsel al
-          imageUrl = imageUrl.replace(/\/\d+-\d+\//, '/400-400/');
-        }
-      }
+      var imgEl = art.querySelector('img[src*="productimages"], img[src*="hbcdn"], img[src]');
+      if (imgEl) imageUrl = imgEl.src || '';
 
       // Rating
       var rating = 0;
-      if (article) {
-        var ratingEl = article.querySelector('[class*="rating"] span, [class*="star"]');
-        if (ratingEl) {
-          var rVal = parseFloat(ratingEl.textContent);
-          if (rVal > 0 && rVal <= 5) rating = rVal;
-        }
+      var ratingEl = art.querySelector('[class*="rating"], [class*="star"], [aria-label*="puan"]');
+      if (ratingEl) {
+        var rv = parseFloat(ratingEl.textContent.replace(',', '.'));
+        if (rv > 0 && rv <= 5) rating = rv;
       }
 
-      // magaza parametresini kaldir, temiz URL olustur
+      // Temiz URL (query string kaldir)
       try {
-        var urlObj = new URL(productUrl);
-        urlObj.searchParams.delete('magaza');
-        productUrl = urlObj.toString();
+        var u = new URL(productUrl);
+        u.search = '';
+        productUrl = u.toString();
       } catch(e) {}
 
       results.push({
@@ -159,7 +129,6 @@ async function extractProducts(page, catName, catLabel) {
         price: price,
         imageUrl: imageUrl,
         productUrl: productUrl,
-        sku: sku,
         rating: rating,
         reviews: 0,
         source: 'hepsiburada',
@@ -167,7 +136,7 @@ async function extractProducts(page, catName, catLabel) {
     });
 
     return results;
-  }, { catName, catLabel });
+  }, { catName, catLabel, baseUrl: BASE_URL });
 }
 
 /**
