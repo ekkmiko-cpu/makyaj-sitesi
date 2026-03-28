@@ -8,6 +8,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+const { preflightCheck } = require('./robots-checker');
 
 // -- AYARLAR ------------------------------------------------------------------
 const BASE_URL = 'https://www.amazon.com.tr';
@@ -173,6 +174,14 @@ async function scrapeCategory(page, category) {
 
 (async () => {
   console.log('Amazon.com.tr Kozmetik Scraper baslatiliyor...');
+
+  // robots.txt kontrolü
+  var { blockedPaths, crawlDelay } = await preflightCheck(BASE_URL, ['/s']);
+  if (blockedPaths.includes('/s')) {
+    console.log('❌ Arama yolu robots.txt tarafından engellenmiş. Çıkılıyor.');
+    return;
+  }
+  var effectiveDelay = crawlDelay ? Math.max(DELAY_MS, crawlDelay * 1000) : DELAY_MS;
 
   var browser = await chromium.launch({
     headless: false,

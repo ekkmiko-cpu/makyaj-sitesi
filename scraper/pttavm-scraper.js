@@ -8,6 +8,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+const { preflightCheck } = require('./robots-checker');
 
 // -- AYARLAR ------------------------------------------------------------------
 const BASE_URL = 'https://www.pttavm.com';
@@ -214,6 +215,14 @@ var knownBrands = [
 
 (async () => {
   console.log('PTT AVM Kozmetik Scraper baslatiliyor...');
+
+  // robots.txt kontrolü
+  var { blockedPaths, crawlDelay } = await preflightCheck(BASE_URL, ['/arama']);
+  if (blockedPaths.includes('/arama')) {
+    console.log('❌ Arama yolu robots.txt tarafından engellenmiş. Çıkılıyor.');
+    return;
+  }
+  var effectiveDelay = crawlDelay ? Math.max(DELAY_MS, crawlDelay * 1000) : DELAY_MS;
 
   var browser = await chromium.launch({
     headless: false,

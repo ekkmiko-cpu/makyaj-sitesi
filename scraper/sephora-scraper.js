@@ -8,6 +8,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
+const { preflightCheck } = require('./robots-checker');
 
 // ── AYARLAR ──────────────────────────────────────────────────────────────────
 const BASE_URL = 'https://www.sephora.com.tr';
@@ -220,12 +221,24 @@ async function main() {
     await sleep(1000);
   } catch {}
 
+  // robots.txt kontrolü
+  const paths = CATEGORIES.map(c => c.url);
+  const { blockedPaths, crawlDelay } = await preflightCheck(BASE_URL, paths);
+  const activeCats = CATEGORIES.filter(c => !blockedPaths.includes(c.url));
+  const effectiveDelay = crawlDelay ? Math.max(DELAY_MS, crawlDelay * 1000) : DELAY_MS;
+
+  if (activeCats.length === 0) {
+    console.log('❌ Tüm yollar robots.txt tarafından engellenmiş. Çıkılıyor.');
+    await browser.close();
+    return;
+  }
+
   // Tüm kategorileri tara
   let allProducts = [];
-  for (const cat of CATEGORIES) {
+  for (const cat of activeCats) {
     const products = await scrapeCategory(page, cat);
     allProducts.push(...products);
-    await sleep(DELAY_MS * 2);
+    await sleep(effectiveDelay * 2);
   }
 
   console.log(`\n✅ Toplam ${allProducts.length} ürün listelendi`);
