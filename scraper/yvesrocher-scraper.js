@@ -14,6 +14,7 @@
 const { chromium } = require('playwright');
 const fs   = require('fs');
 const path = require('path');
+const { preflightCheck } = require('./robots-checker');
 
 // -- AYARLAR ------------------------------------------------------------------
 const BASE       = 'https://www.yvesrocher.com.tr';
@@ -301,13 +302,29 @@ async function main() {
   console.log('  Yves Rocher TR — TAM KATALOG Scraper');
   console.log('══════════════════════════════════════════════════════\n');
 
+  // robots.txt kontrolü
+  const checkPaths = MAKEUP_CATEGORIES.map(c => new URL(c.url).pathname);
+  checkPaths.push('/search');
+  const { blockedPaths } = await preflightCheck(BASE, checkPaths);
+  const activeCats = MAKEUP_CATEGORIES.filter(c => !blockedPaths.includes(new URL(c.url).pathname));
+  if (activeCats.length === 0) {
+    console.log('❌ Tüm kategori yolları robots.txt tarafından engellenmiş. Çıkılıyor.');
+    return;
+  }
+  if (blockedPaths.length > 0) {
+    console.log(`ℹ️  ${blockedPaths.length} yol engellendi, ${activeCats.length} kategori taranacak.`);
+  }
+
   const browser = await chromium.launch({
     headless: true, channel: 'chrome',
     args: ['--disable-blink-features=AutomationControlled'],
   });
   const ctx = await createCtx(browser);
 
+  // Sadece izinli kategorileri tara
+  const origCats = MAKEUP_CATEGORIES.splice(0, MAKEUP_CATEGORIES.length, ...activeCats);
   const { products: makeup, seenCodes } = await scrapeMakeupCategories(ctx);
+  MAKEUP_CATEGORIES.splice(0, MAKEUP_CATEGORIES.length, ...origCats); // geri yükle
   const extra = await scrapeSearchExtra(ctx, seenCodes);
   await enrichBarcodes(ctx, [...makeup, ...extra]);
 

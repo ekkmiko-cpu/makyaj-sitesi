@@ -8,12 +8,21 @@ const path = require('path');
 const fs = require('fs');
 
 const SCRAPERS = [
-  { name: 'Sephora TR',  script: 'sephora-scraper.js',  output: 'sephora-products.json' },
-  { name: 'Trendyol',    script: 'trendyol-scraper.js',  output: 'trendyol-products.json' },
-  { name: 'Gratis',      script: 'gratis-scraper.js',    output: 'gratis-products.json' },
-  // Watsons: Bot korumasi (403) nedeniyle devre disi. Proxy gerektirir.
-  // { name: 'Watsons',     script: 'watsons-scraper.js',   output: 'watsons-products.json' },
-  { name: 'Rossmann',    script: 'rossmann-scraper.js',  output: 'rossmann-products.json' },
+  // ── Büyük platformlar ─────────────────────────────────────────────────────
+  { name: 'Trendyol',      script: 'trendyol-scraper.js',     output: 'trendyol-products.json'     },
+  { name: 'Hepsiburada',   script: 'hepsiburada-scraper.js',  output: 'hepsiburada-products.json'  },
+  { name: 'Amazon TR',     script: 'amazon-scraper.js',       output: 'amazon-products.json'       },
+  // ── Güzellik/kozmetik zincirler ───────────────────────────────────────────
+  { name: 'Sephora TR',    script: 'sephora-scraper.js',      output: 'sephora-products.json'      },
+  { name: 'Rossmann',      script: 'rossmann-scraper.js',     output: 'rossmann-products.json'     },
+  { name: 'Gratis',        script: 'gratis-scraper.js',       output: 'gratis-products.json'       },
+  { name: 'Yves Rocher',   script: 'yvesrocher-scraper.js',   output: 'yvesrocher-products.json'   },
+  // ── Genel marketplace ─────────────────────────────────────────────────────
+  { name: 'İdefix',        script: 'idefix-scraper.js',       output: 'idefix-products.json'       },
+  { name: 'Pazarama',      script: 'pazarama-scraper.js',     output: 'pazarama-products.json'     },
+  { name: 'PTT AVM',       script: 'pttavm-scraper.js',       output: 'pttavm-products.json'       },
+  // ── Bot koruması nedeniyle devre dışı ────────────────────────────────────
+  // { name: 'Watsons',    script: 'watsons-scraper.js',      output: 'watsons-products.json'      },
 ];
 
 const results = {};
