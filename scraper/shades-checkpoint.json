@@ -1,0 +1,7385 @@
+{
+  "1": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:26.393Z"
+  },
+  "2": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:27.647Z"
+  },
+  "3": {
+    "shades": [
+      {
+        "shade": "01 Light",
+        "price": 699.95
+      },
+      {
+        "shade": "05 Brighten",
+        "price": 769.94
+      },
+      {
+        "shade": "03 Fair",
+        "price": 769.94
+      },
+      {
+        "shade": "02 Nude",
+        "price": 769.94
+      },
+      {
+        "shade": "121 Light Honey Concealer",
+        "price": 698.9
+      },
+      {
+        "shade": "04 Honey Concealer",
+        "price": 471.6
+      },
+      {
+        "shade": "06 Neutralizer",
+        "price": 629
+      },
+      {
+        "shade": "07 Sand",
+        "price": 526.58
+      },
+      {
+        "shade": "Renk Eşitleyici Kapatıcı",
+        "price": 710
+      },
+      {
+        "shade": "Maybelline New York Instant Anti Age Eraser Kapatıcı - 00 Ivory",
+        "price": 692.9
+      }
+    ],
+    "count": 10,
+    "fetchedAt": "2026-03-23T17:06:29.115Z"
+  },
+  "638": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:30.226Z"
+  },
+  "639": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:31.409Z"
+  },
+  "640": {
+    "shades": [
+      {
+        "shade": "medium 30ml",
+        "price": 647.2
+      },
+      {
+        "shade": "Dark.30 ml",
+        "price": 578.4
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:06:32.551Z"
+  },
+  "641": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:33.612Z"
+  },
+  "642": {
+    "shades": [
+      {
+        "shade": "50+/PA+++ (No.23)",
+        "price": 505.67
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:06:34.728Z"
+  },
+  "643": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:36.005Z"
+  },
+  "644": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:37.061Z"
+  },
+  "645": {
+    "shades": [
+      {
+        "shade": "Mat Fondöten Professional Hd Matte Foundation 2 No",
+        "price": 194.5
+      },
+      {
+        "shade": "No;3",
+        "price": 229
+      },
+      {
+        "shade": "No:4",
+        "price": 221.2
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:06:38.393Z"
+  },
+  "646": {
+    "shades": [
+      {
+        "shade": "Flormar Perfect Coverage Yüksek Pigmentli & Yarı Parlak Bitişli SPF15 Fondöten",
+        "price": 485
+      },
+      {
+        "shade": "Yoğun Kapatıcı Su Bazlı Fondöten (Sıcak Alt Ton) 134 Golden Honey 8682536070614",
+        "price": 449.99
+      },
+      {
+        "shade": "121 Goldn Ntrl",
+        "price": 595
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:06:39.653Z"
+  },
+  "647": {
+    "shades": [
+      {
+        "shade": "TUZ Fondöten Mantar Kafa Süngerli",
+        "price": 244.02
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:06:40.849Z"
+  },
+  "648": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:41.991Z"
+  },
+  "649": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:43.300Z"
+  },
+  "650": {
+    "shades": [
+      {
+        "shade": "SPF50+/PA+++ No.23",
+        "price": 475.92
+      },
+      {
+        "shade": "Yüksek Kapatıcı Yarı Mat Cushion Fondöten Magic Cushion Cover Lasting No.25 SPF 50+ PA+++",
+        "price": 475.92
+      },
+      {
+        "shade": "Yüksek Kapatıcı Yarı Mat Cushion Fondöten Magic Cushion Cover Lasting No.27 SPF50+ PA+++",
+        "price": 475.92
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:06:44.678Z"
+  },
+  "651": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:45.819Z"
+  },
+  "652": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:47.651Z"
+  },
+  "653": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:48.828Z"
+  },
+  "654": {
+    "shades": [
+      {
+        "shade": "Cosmetics Detox & Protect Foundation Spf 15 Yoğun Kapatıcı Saten Bitişli Fondöten - 01 Beige",
+        "price": 399.9
+      },
+      {
+        "shade": "Cosmetics Detox & Protect Foundation Spf 15 Yoğun Kapatıcı Saten Bitişli Fondöten - 03 Medium Beige",
+        "price": 399.9
+      },
+      {
+        "shade": "Cosmetics Detox & Protect Foundation Spf 15 Yoğun Kapatıcı Saten Bitişli Fondöten - 04 Sand",
+        "price": 399.9
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:06:50.202Z"
+  },
+  "655": {
+    "shades": [
+      {
+        "shade": "Kremi Yüksek Kapatıcı SPF50 Parlak Bitiş Nemlendirici 50ml, Makyaj Süngeri Set",
+        "price": 424.9
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:06:51.318Z"
+  },
+  "656": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:52.583Z"
+  },
+  "657": {
+    "shades": [
+      {
+        "shade": "Hd Matte Professional Foundation No:1",
+        "price": 192.9
+      },
+      {
+        "shade": "Hd Matte Professional Foundation No;3",
+        "price": 229
+      },
+      {
+        "shade": "Hd Matte Professional Foundation No:4",
+        "price": 221.2
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:06:53.802Z"
+  },
+  "658": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:06:55.441Z"
+  },
+  "659": {
+    "shades": [
+      {
+        "shade": "90",
+        "price": 649.95
+      },
+      {
+        "shade": "118",
+        "price": 714.94
+      },
+      {
+        "shade": "114",
+        "price": 714.94
+      },
+      {
+        "shade": "117",
+        "price": 714.94
+      },
+      {
+        "shade": "112",
+        "price": 714.94
+      },
+      {
+        "shade": "102",
+        "price": 714.94
+      },
+      {
+        "shade": "116",
+        "price": 714.95
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:06:56.524Z"
+  },
+  "660": {
+    "shades": [
+      {
+        "shade": "01 Beige",
+        "price": 329.9
+      },
+      {
+        "shade": "03 Medium Beige",
+        "price": 449
+      },
+      {
+        "shade": "04 Sand",
+        "price": 522.4
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:06:57.839Z"
+  },
+  "661": {
+    "shades": [
+      {
+        "shade": "98",
+        "price": 907.45
+      },
+      {
+        "shade": "118",
+        "price": 907.45
+      },
+      {
+        "shade": "119",
+        "price": 789.9
+      },
+      {
+        "shade": "132",
+        "price": 684
+      },
+      {
+        "shade": "Uzun Süre Kalıcı Işıltılı Fondöten – 140",
+        "price": 428
+      },
+      {
+        "shade": "129",
+        "price": 716.99
+      },
+      {
+        "shade": "108",
+        "price": 777
+      },
+      {
+        "shade": "126",
+        "price": 787.99
+      }
+    ],
+    "count": 8,
+    "fetchedAt": "2026-03-23T17:06:59.007Z"
+  },
+  "662": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:00.130Z"
+  },
+  "663": {
+    "shades": [
+      {
+        "shade": "120 Natural Beige",
+        "price": 529.9
+      },
+      {
+        "shade": "180 Dark Honey",
+        "price": 529.9
+      },
+      {
+        "shade": "140 Soft Sand",
+        "price": 529.9
+      },
+      {
+        "shade": "Fondöten New Era 160 Fondöten - 160 Warm Almond",
+        "price": 529.9
+      },
+      {
+        "shade": "130 Beige",
+        "price": 529.9
+      },
+      {
+        "shade": "150 Medium Beige",
+        "price": 529.9
+      },
+      {
+        "shade": "190 Deep Neutral",
+        "price": 529.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:07:01.860Z"
+  },
+  "664": {
+    "shades": [
+      {
+        "shade": "5.5",
+        "price": 750.26
+      },
+      {
+        "shade": "Kapatıcı C Vitaminli Fondöten 03",
+        "price": 1049.99
+      },
+      {
+        "shade": "MAYBELLİNE NEWYORK SUPER STAY SKİNTİNT FONDÖTEN 40-",
+        "price": 550
+      },
+      {
+        "shade": "MAYBELLİNE NEWYORK SUPER STAY SKİNTİNT FONDÖTEN 30-",
+        "price": 531.05
+      },
+      {
+        "shade": "20",
+        "price": 899
+      },
+      {
+        "shade": "10",
+        "price": 1127.44
+      },
+      {
+        "shade": "21",
+        "price": 970
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:07:03.313Z"
+  },
+  "665": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:04.428Z"
+  },
+  "666": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:06.151Z"
+  },
+  "667": {
+    "shades": [
+      {
+        "shade": "Orta / Koyu Ton",
+        "price": 597
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:07:07.217Z"
+  },
+  "668": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:08.520Z"
+  },
+  "669": {
+    "shades": [
+      {
+        "shade": "06 Light",
+        "price": 722.49
+      },
+      {
+        "shade": "08 Vanilla",
+        "price": 722.49
+      },
+      {
+        "shade": "12 Natural",
+        "price": 722.49
+      },
+      {
+        "shade": "10 Nude",
+        "price": 722.49
+      },
+      {
+        "shade": "03 Fair",
+        "price": 722.49
+      },
+      {
+        "shade": "04 Cool Porcelain",
+        "price": 722.49
+      },
+      {
+        "shade": "16 Natural Beige",
+        "price": 722.49
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:07:09.772Z"
+  },
+  "670": {
+    "shades": [
+      {
+        "shade": "Mat Fondöten - Truly Matte Foundation Fair 8680570466967",
+        "price": 222.95
+      },
+      {
+        "shade": "Mat Fondöten - Truly Matte Foundation Natural Beige 8680570467001",
+        "price": 217.56
+      },
+      {
+        "shade": "Rose Beige",
+        "price": 244.39
+      },
+      {
+        "shade": "Beige",
+        "price": 271.46
+      },
+      {
+        "shade": "Tan",
+        "price": 217.56
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:07:11.161Z"
+  },
+  "671": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:12.297Z"
+  },
+  "672": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:13.766Z"
+  },
+  "673": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:14.795Z"
+  },
+  "674": {
+    "shades": [
+      {
+        "shade": "(1N1 IVORY NUDE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1N0 PORCELAIN) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(0N1 ALABASTER) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2W1 DAWN) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1N2 ECRU) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2N2 BUFF) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1C0 SHELL) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1C1 COOL BONE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(3N1 IVORY BEIGE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2C2 PALE ALMOND) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(3W1 TAWNY) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2C1 PURE BEIGE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1W2 SAND) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2W1.5 NATURAL SUEDE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(3C2 PEBBLE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2W0 WARM VANILLA) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2C3 FRESCO) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2W2 RATTAN) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1W0 WARM PORCELAIN) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(3C0 COOL CRÈME) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(5W1 BRONZE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4C1 OUTDOOR BEIGE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1W1 BONE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4W1 HONEY BRONZE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4N1 SHELL BEIGE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(6W2 NUTMEG) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4N3 MAPLE SUGAR) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4W4 HAZEL) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(3W1.5 FAWN) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4W3 HENNA) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(3N2 WHEAT) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2N3 DOLCE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(2C0 COOL VANILLA) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4W1.5 MEDIUM SPICE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(4N2 SPICED SAND) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(5N1.5 MAPLE) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(3W2 CASHEW) 30ml",
+        "price": 2856
+      },
+      {
+        "shade": "(1C2 PETAL) 30ml",
+        "price": 2856
+      }
+    ],
+    "count": 38,
+    "fetchedAt": "2026-03-23T17:07:15.911Z"
+  },
+  "675": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:16.933Z"
+  },
+  "676": {
+    "shades": [
+      {
+        "shade": "Orta / Koyu Ton",
+        "price": 598
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:07:18.239Z"
+  },
+  "677": {
+    "shades": [
+      {
+        "shade": "02 Beyaz Ten",
+        "price": 189.9
+      },
+      {
+        "shade": "03 Buğday Ten",
+        "price": 189.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:07:19.793Z"
+  },
+  "678": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:21.084Z"
+  },
+  "679": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:22.381Z"
+  },
+  "680": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:23.468Z"
+  },
+  "681": {
+    "shades": [
+      {
+        "shade": "(SOĞUK ALT TON) Skin Lifting Fdt. 020 Pure Beige 8682536059558",
+        "price": 494.99
+      },
+      {
+        "shade": "Skin Lifting Sıkılaştırıcı Bakım Yapan Kremsi Dokulu SPF 30 Fondöten 050",
+        "price": 490
+      },
+      {
+        "shade": "(NÖTR ALT TON) Skin Lifting Fdt. 090 Honey 8682536059695",
+        "price": 490
+      },
+      {
+        "shade": "060 Golden Neutral 8682536059633",
+        "price": 490
+      },
+      {
+        "shade": "110 Golden Honey 8682536059732",
+        "price": 999.99
+      },
+      {
+        "shade": "(SOĞUK ALT TON) Skin Lifting Fdt. 140 Tan 8682536059794",
+        "price": 999.99
+      },
+      {
+        "shade": "160 Dark Caramel 8682536059831",
+        "price": 999.99
+      },
+      {
+        "shade": "040 Soft Beige 8682536059596",
+        "price": 749.99
+      },
+      {
+        "shade": "080 Golden Beige 8682536059671",
+        "price": 859.99
+      },
+      {
+        "shade": "150 Toffee 8682536059817",
+        "price": 999.99
+      },
+      {
+        "shade": "070 Medium Beige 8682536059657",
+        "price": 869.9
+      },
+      {
+        "shade": "(NÖTR ALT TON) Skin Lifting Fdt. 100 Sand 8682536059718",
+        "price": 495
+      },
+      {
+        "shade": "120 Desert Beige 8682536059756",
+        "price": 806
+      }
+    ],
+    "count": 13,
+    "fetchedAt": "2026-03-23T17:07:24.535Z"
+  },
+  "682": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:26.084Z"
+  },
+  "683": {
+    "shades": [
+      {
+        "shade": "Koruyucu 12g Pure",
+        "price": 949
+      },
+      {
+        "shade": "Kalıcı Zero Fit Cushion Kore Fondöten Doğal Bitişli Spf50 Pa Güneş Koruyucu 12g Tan",
+        "price": 949
+      },
+      {
+        "shade": "Zero Fit Cushion Uzun Süre Kalıcı Kore Fondöten Spf50 Pa Doğal Bitişli Refill X2 12g Beige",
+        "price": 1424.05
+      },
+      {
+        "shade": "Koruyucu 12g Sand",
+        "price": 949
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:07:27.252Z"
+  },
+  "684": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:28.351Z"
+  },
+  "685": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:30.013Z"
+  },
+  "686": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:31.128Z"
+  },
+  "687": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:32.251Z"
+  },
+  "688": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:33.421Z"
+  },
+  "689": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:34.439Z"
+  },
+  "690": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:35.878Z"
+  },
+  "691": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:37.526Z"
+  },
+  "692": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:39.192Z"
+  },
+  "693": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:40.751Z"
+  },
+  "694": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:41.937Z"
+  },
+  "695": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:43.117Z"
+  },
+  "696": {
+    "shades": [
+      {
+        "shade": "Maybelline New York Lash Sensational Yelpaze Etkili Intense Black Maskara - Ekstra Siyah",
+        "price": 675.9
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:07:44.568Z"
+  },
+  "697": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:45.772Z"
+  },
+  "698": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:46.954Z"
+  },
+  "699": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:48.568Z"
+  },
+  "700": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:49.911Z"
+  },
+  "701": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:51.251Z"
+  },
+  "702": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:52.480Z"
+  },
+  "703": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:53.578Z"
+  },
+  "704": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:54.737Z"
+  },
+  "705": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:56.146Z"
+  },
+  "706": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:57.268Z"
+  },
+  "707": {
+    "shades": [
+      {
+        "shade": "Bordeaux Cashmere",
+        "price": 989.95
+      },
+      {
+        "shade": "Blue Seudede",
+        "price": 989.95
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:07:58.469Z"
+  },
+  "708": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:07:59.551Z"
+  },
+  "709": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:00.669Z"
+  },
+  "710": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:01.792Z"
+  },
+  "711": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:02.936Z"
+  },
+  "712": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:03.949Z"
+  },
+  "713": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:04.993Z"
+  },
+  "714": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:06.183Z"
+  },
+  "715": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:07.271Z"
+  },
+  "716": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:09.091Z"
+  },
+  "717": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:10.664Z"
+  },
+  "718": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:11.875Z"
+  },
+  "719": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:13.028Z"
+  },
+  "720": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:14.552Z"
+  },
+  "721": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:15.674Z"
+  },
+  "722": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:16.772Z"
+  },
+  "723": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:18.109Z"
+  },
+  "724": {
+    "shades": [
+      {
+        "shade": "Cosmic Black Maskara",
+        "price": 566.9
+      },
+      {
+        "shade": "Kahverengi Maskara",
+        "price": 849.95
+      },
+      {
+        "shade": "Suya Dayanıklı Waterproof Maskara",
+        "price": 529
+      },
+      {
+        "shade": "Blue Mist Maskara",
+        "price": 549.9
+      },
+      {
+        "shade": "Space Diamond Elmas Işıltılı Maskara",
+        "price": 934.94
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:08:19.781Z"
+  },
+  "725": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:20.854Z"
+  },
+  "726": {
+    "shades": [
+      {
+        "shade": "Siyah Maskara Ultra Definiton Mascara Black",
+        "price": 449.9
+      },
+      {
+        "shade": "Mavi Maskara Ultra Definiton Mascara Saxe Blue",
+        "price": 449.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:08:21.943Z"
+  },
+  "727": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:23.038Z"
+  },
+  "728": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:24.265Z"
+  },
+  "729": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:25.636Z"
+  },
+  "730": {
+    "shades": [
+      {
+        "shade": "109 Strawberry Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 699
+      },
+      {
+        "shade": "107 Cherry Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1049
+      },
+      {
+        "shade": "120 Rosy Mauve Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 948
+      },
+      {
+        "shade": "114 Orange Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 699
+      },
+      {
+        "shade": "110 Spicy Rose Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1044
+      },
+      {
+        "shade": "123 Satin Grape Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 699
+      },
+      {
+        "shade": "Likit Ruj - Unlimited Double Touch 102 Satin Rosy Beige 6 ml 8025272623308",
+        "price": 1099
+      },
+      {
+        "shade": "104 Sangria Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1048
+      },
+      {
+        "shade": "108 Satin Currant Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1079
+      },
+      {
+        "shade": "105 Scarlet Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1124.27
+      },
+      {
+        "shade": "Parlak Likit Ruj - Unlimited Double Touch 115 Fire Red 6 ml 8025272623438",
+        "price": 1037.57
+      },
+      {
+        "shade": "112 Satin Peach Rose Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1049
+      },
+      {
+        "shade": "101 Soft Rose Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1099
+      },
+      {
+        "shade": "106 Satin Ruby Red Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1054.93
+      },
+      {
+        "shade": "119 Rhododendron Pink Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1099
+      },
+      {
+        "shade": "111 Satin Pink Camellia Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1059
+      },
+      {
+        "shade": "121 Dark Rosy Chestnut Uzun Süre Kalıcı Parlak / Mat Likit Lipstick",
+        "price": 1151.02
+      },
+      {
+        "shade": "Likit Ruj - Unlimited Double Touch 118 Orchid 6 ml 8025272623469",
+        "price": 1099
+      },
+      {
+        "shade": "Likit Ruj - Unlimited Double Touch 122 Bordeaux 6 ml 8025272623506",
+        "price": 960
+      }
+    ],
+    "count": 19,
+    "fetchedAt": "2026-03-23T17:08:26.911Z"
+  },
+  "731": {
+    "shades": [
+      {
+        "shade": "1 Adet Kozmetik Sihirli 24 Saat Kalıcı Renk Değiştiren Ruj",
+        "price": 91.63
+      },
+      {
+        "shade": "6 Adet Kozmetik Sihirli 24 Saat Kalıcı Renk Değiştiren Ruj",
+        "price": 349
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:08:28.098Z"
+  },
+  "732": {
+    "shades": [
+      {
+        "shade": "Cappucino",
+        "price": 219.9
+      },
+      {
+        "shade": "True Colour Ultra Beauty Ruj - Totally Twig 2 Lİ SET",
+        "price": 300
+      },
+      {
+        "shade": "Sunset İkili Set",
+        "price": 385.9
+      },
+      {
+        "shade": "True Colour Ultra Beauty Ruj - Eternal Flame 2'li Lovider Cep Aynası",
+        "price": 599
+      },
+      {
+        "shade": "Color Trend Beauty Ruj - Pink Peach 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "Color Trend Beauty Ruj - Cappuccino 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "True Colour Ultra Beauty Ruj - Sunset",
+        "price": 229
+      },
+      {
+        "shade": "Stik Ruj Pink Peach",
+        "price": 394.99
+      },
+      {
+        "shade": "True Colour Ultra Beauty Ruj - Vintage Pink 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "True Colour Ultra Beauty Ruj - Totally Twig 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "True Colour Ultra Beauty Ruj - Rose Creme 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:08:29.800Z"
+  },
+  "733": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:30.970Z"
+  },
+  "734": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:32.181Z"
+  },
+  "735": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:33.283Z"
+  },
+  "736": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:34.407Z"
+  },
+  "737": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:35.511Z"
+  },
+  "738": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:36.630Z"
+  },
+  "739": {
+    "shades": [
+      {
+        "shade": "(Mor) Water Lip Stain 003 Girl Gang 8682536042185",
+        "price": 314.99
+      },
+      {
+        "shade": "(PEMBE) Water Lip Stain 001 Infinite Pink 8682536042161",
+        "price": 360
+      },
+      {
+        "shade": "(turuncu) Water Lip Stain 004 Orange Juice 8682536042192",
+        "price": 314.99
+      },
+      {
+        "shade": "8682536042178",
+        "price": 899
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:08:38.041Z"
+  },
+  "740": {
+    "shades": [
+      {
+        "shade": "(NO.02 STRAWBERRY)",
+        "price": 259.91
+      },
+      {
+        "shade": "(NO.01 CHERRY)",
+        "price": 259.91
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:08:39.276Z"
+  },
+  "741": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:40.410Z"
+  },
+  "742": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:41.583Z"
+  },
+  "743": {
+    "shades": [
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 06 Cinnamon - Kahverengi",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 13 Impressive Red - Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 04 Terracotta - Pembe",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 09 Spicy Nude - Kahverengi",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 02 Optimistic Rose - Nude",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 05 Leather Mood - Kahverengi",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 08 Sophisticate Burgundy - Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 03 Confident Rose - Nude",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 14 Warm Cherry - Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 12 Flaming Heart Red - Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 01 The Better Me Nude - Nude",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 11 Vibrant Pink - Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "Cosmetics Deep Impact Lipstick Kremsi Dokulu Yarı Parlak Ruj 10 Fall in Pink - Kahverengi",
+        "price": 199.9
+      }
+    ],
+    "count": 13,
+    "fetchedAt": "2026-03-23T17:08:42.858Z"
+  },
+  "744": {
+    "shades": [
+      {
+        "shade": "Nude Honey 1.9g | Parlak, Nemli Ve Doğal Görünüm",
+        "price": 1231.2
+      },
+      {
+        "shade": "Pink Honey 1.9g | Hafif Parlak, Nemli Ve Doğal Görünüm",
+        "price": 1147.5
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:08:43.976Z"
+  },
+  "745": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:45.275Z"
+  },
+  "746": {
+    "shades": [
+      {
+        "shade": "404 Rosy Biscuit 8025272631419",
+        "price": 440.3
+      },
+      {
+        "shade": "432 Hazelnut 8025272631686",
+        "price": 440.3
+      },
+      {
+        "shade": "FUSİON LİPSTİCK 406 WARM ROSE 8025272631433",
+        "price": 440.3
+      },
+      {
+        "shade": "431 Chocolate",
+        "price": 440.3
+      },
+      {
+        "shade": "407 Rosewood İpeksi Parlak Lipstick",
+        "price": 735
+      },
+      {
+        "shade": "412 Strawberry Pink İpeksi Parlak Lipstick",
+        "price": 440.3
+      },
+      {
+        "shade": "423 Magenta 8025272631600",
+        "price": 435.61
+      },
+      {
+        "shade": "430 Amaranth İpeksi Parlak Lipstick",
+        "price": 784
+      },
+      {
+        "shade": "416 Cherry Red 8025272631532",
+        "price": 739
+      },
+      {
+        "shade": "434 Chestnut 8025272631709",
+        "price": 1470.15
+      },
+      {
+        "shade": "411 Coral 8025272631488",
+        "price": 1558.93
+      },
+      {
+        "shade": "410 Watermelon İpeksi Parlak Lipstick",
+        "price": 1558.93
+      },
+      {
+        "shade": "415 Raspberry İpeksi Parlak Lipstick",
+        "price": 1502.25
+      },
+      {
+        "shade": "421 LİPSTİCK - SMART FUSİON LONG LASTİNG LİPSTİCK LİPSTİCK PİNK DEMBA5638",
+        "price": 1810.17
+      },
+      {
+        "shade": "402 Peachy Nude İpeksi Parlak Lipstick",
+        "price": 959
+      },
+      {
+        "shade": "428 Grape 8025272631655",
+        "price": 1558.93
+      },
+      {
+        "shade": "425",
+        "price": 826
+      },
+      {
+        "shade": "435 Scarlet Red 8025272631716",
+        "price": 1233
+      },
+      {
+        "shade": "422 Crimson Red İpeksi Parlak Lipstick",
+        "price": 1558.93
+      },
+      {
+        "shade": "409",
+        "price": 999
+      },
+      {
+        "shade": "420 Light Rosy Mauve 8025272631570",
+        "price": 1502.25
+      },
+      {
+        "shade": "427 Lively Pink İpeksi Parlak Lipstick",
+        "price": 939
+      },
+      {
+        "shade": "LIPSTICK - MOİSTURİZİNG SMART FUSION LIPSTICK 429 PEARLY MAUVE DEMBA3454",
+        "price": 1558.93
+      }
+    ],
+    "count": 23,
+    "fetchedAt": "2026-03-23T17:08:46.442Z"
+  },
+  "747": {
+    "shades": [
+      {
+        "shade": "Klasik Nude Kalıcı Dudak Dövmesi",
+        "price": 655.5
+      },
+      {
+        "shade": "& Klasik Nude 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1130.5
+      },
+      {
+        "shade": "Lovely Kalıcı Dudak Dövmesi",
+        "price": 655.5
+      },
+      {
+        "shade": "Sakız Pembesi Kalıcı Dudak Dövmesi",
+        "price": 655.5
+      },
+      {
+        "shade": "& Lovely 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1130.5
+      },
+      {
+        "shade": "Klasik Nude & Lovely 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1130.5
+      },
+      {
+        "shade": "Klasik Nude & Sakız Pembesi 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1130.5
+      },
+      {
+        "shade": "3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1510.5
+      },
+      {
+        "shade": "Lovely 3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1510.5
+      },
+      {
+        "shade": "Klasik Nude 3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1510.5
+      },
+      {
+        "shade": "Lovely & Sakız Pembesi 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1130.5
+      },
+      {
+        "shade": "Sakız Pembesi 3 Lü Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1510.5
+      },
+      {
+        "shade": "& Sakız Pembesi 2 Li Avantajlı Paket Kalıcı Dudak Dövmesi",
+        "price": 1130.5
+      }
+    ],
+    "count": 13,
+    "fetchedAt": "2026-03-23T17:08:47.535Z"
+  },
+  "748": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:48.633Z"
+  },
+  "749": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:49.968Z"
+  },
+  "750": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:51.092Z"
+  },
+  "751": {
+    "shades": [
+      {
+        "shade": "405 Vintage Rose 8025272631426",
+        "price": 629
+      },
+      {
+        "shade": "432 Hazelnut 8025272631686",
+        "price": 629
+      },
+      {
+        "shade": "FUSİON LİPSTİCK 406 WARM ROSE 8025272631433",
+        "price": 629
+      },
+      {
+        "shade": "431 Chocolate",
+        "price": 629
+      },
+      {
+        "shade": "407 Rosewood İpeksi Parlak Lipstick",
+        "price": 729
+      },
+      {
+        "shade": "412 Strawberry Pink İpeksi Parlak Lipstick",
+        "price": 629
+      },
+      {
+        "shade": "430 Amaranth İpeksi Parlak Lipstick",
+        "price": 784
+      },
+      {
+        "shade": "423 Magenta 8025272631600",
+        "price": 622.3
+      },
+      {
+        "shade": "434 Chestnut 8025272631709",
+        "price": 1500
+      },
+      {
+        "shade": "416 Cherry Red 8025272631532",
+        "price": 739
+      },
+      {
+        "shade": "415 Raspberry İpeksi Parlak Lipstick",
+        "price": 1502.25
+      },
+      {
+        "shade": "LIPSTICK - MOİSTURİZİNG SMART FUSION LIPSTICK 429 PEARLY MAUVE DEMBA3454",
+        "price": 1558.93
+      },
+      {
+        "shade": "427 Lively Pink İpeksi Parlak Lipstick",
+        "price": 939
+      },
+      {
+        "shade": "422 Crimson Red İpeksi Parlak Lipstick",
+        "price": 1558.93
+      },
+      {
+        "shade": "411 Coral 8025272631488",
+        "price": 1558.93
+      },
+      {
+        "shade": "420 Light Rosy Mauve 8025272631570",
+        "price": 1502.25
+      },
+      {
+        "shade": "409",
+        "price": 999
+      },
+      {
+        "shade": "402 Peachy Nude İpeksi Parlak Lipstick",
+        "price": 959
+      },
+      {
+        "shade": "410 Watermelon İpeksi Parlak Lipstick",
+        "price": 1558.93
+      },
+      {
+        "shade": "425",
+        "price": 826
+      },
+      {
+        "shade": "421 LİPSTİCK - SMART FUSİON LONG LASTİNG LİPSTİCK LİPSTİCK PİNK DEMBA5638",
+        "price": 1810.17
+      },
+      {
+        "shade": "428 Grape 8025272631655",
+        "price": 1558.93
+      },
+      {
+        "shade": "435 Scarlet Red 8025272631716",
+        "price": 1233
+      }
+    ],
+    "count": 23,
+    "fetchedAt": "2026-03-23T17:08:52.317Z"
+  },
+  "752": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:53.782Z"
+  },
+  "753": {
+    "shades": [
+      {
+        "shade": "(AÇIK GÜL KURUSU) Shine Kiss Me More Lls 005 Bare Beauty 8682536083751",
+        "price": 382.49
+      },
+      {
+        "shade": "(KOYU GÜL KURUSU) Shine Kiss Me More Lls 004 Fall Rose 8682536083737",
+        "price": 415
+      },
+      {
+        "shade": "Shine Kiss Me More Uzun Süre Kalıcı & Parlak Bitişli Likit Ruj - 002 Marmalade",
+        "price": 409
+      },
+      {
+        "shade": "(ŞEKER KIRMIZISI) Shine Kiss Me More Lls 011 Candy 8682536083874",
+        "price": 419
+      },
+      {
+        "shade": "(AÇIK MOR) Shine Kiss Me More Lls 008 Long Story 8682536083812",
+        "price": 392
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:08:55.078Z"
+  },
+  "754": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:08:56.344Z"
+  },
+  "755": {
+    "shades": [
+      {
+        "shade": "120 Punchy",
+        "price": 779.9
+      },
+      {
+        "shade": "35 Cheeky",
+        "price": 699.99
+      },
+      {
+        "shade": "115 Peppy",
+        "price": 645
+      },
+      {
+        "shade": "Maybelline Super Stay Vinyl Ink Ruj 10 Lippy",
+        "price": 682.5
+      },
+      {
+        "shade": "130 Extra",
+        "price": 879.94
+      },
+      {
+        "shade": "55 Royal",
+        "price": 586
+      },
+      {
+        "shade": "155 Upbeat",
+        "price": 879.94
+      },
+      {
+        "shade": "20 Coy",
+        "price": 720
+      },
+      {
+        "shade": "145 Rogue",
+        "price": 635
+      },
+      {
+        "shade": "95 Captivated",
+        "price": 777
+      },
+      {
+        "shade": "160 Sultry",
+        "price": 739
+      },
+      {
+        "shade": "30 Unrivaled",
+        "price": 680
+      },
+      {
+        "shade": "100 Charmed",
+        "price": 879.94
+      },
+      {
+        "shade": "50 Wicked",
+        "price": 635
+      },
+      {
+        "shade": "Teddy Tint Kalıcı Likit Mat Ruj 15 Skinny Dip & Sky High Mini Maskara",
+        "price": 841.45
+      },
+      {
+        "shade": "Nudes Longwear Transfer Proof Gloss Lipstick, Punchy",
+        "price": 749
+      },
+      {
+        "shade": "Maybelline New York Super Stay Vinyl Ink Uzun Süre Kalıcı Likit Parlak Ruj 15 Peachy",
+        "price": 816.55
+      }
+    ],
+    "count": 17,
+    "fetchedAt": "2026-03-23T17:08:57.831Z"
+  },
+  "756": {
+    "shades": [
+      {
+        "shade": "205 Nude Self 3614274132731",
+        "price": 2049
+      },
+      {
+        "shade": "154 Love Berry 3614274132670",
+        "price": 2049
+      },
+      {
+        "shade": "44 Nude Lavaliere 3614274132625",
+        "price": 2137.5
+      },
+      {
+        "shade": "İçerikli Ruj 219 3614274741902",
+        "price": 2137.5
+      },
+      {
+        "shade": "150 Nude Lingerie 3614274132663",
+        "price": 2049
+      },
+      {
+        "shade": "206 Spicy Affair 3614274132748",
+        "price": 2137.5
+      },
+      {
+        "shade": "201 Rosewood Blush 3614274132694",
+        "price": 2137.5
+      },
+      {
+        "shade": "203 Blushed Mallow 3614274132717",
+        "price": 2049
+      },
+      {
+        "shade": "204 Melted Honey 3614274132724",
+        "price": 2137.5
+      },
+      {
+        "shade": "İçerikli Ruj 211 Ardent Carmine 3614274132793",
+        "price": 2137.5
+      },
+      {
+        "shade": "200 Rosy Sand 3614274132687",
+        "price": 2137.5
+      },
+      {
+        "shade": "122 Caramel Swirl 3614274132656",
+        "price": 2137.5
+      },
+      {
+        "shade": "208 Raspberry Shine 3614274132762",
+        "price": 2137.5
+      },
+      {
+        "shade": "207 Scenic Brown 3614274132755",
+        "price": 2137.5
+      },
+      {
+        "shade": "80 Glowing Lava 3614274132649",
+        "price": 2137.5
+      },
+      {
+        "shade": "12 Electric Love 3614274132618",
+        "price": 2137.5
+      },
+      {
+        "shade": "İçerikli Ruj 215 3614274544749",
+        "price": 2850
+      },
+      {
+        "shade": "209 Pink Desire 3614274132779",
+        "price": 2137.5
+      },
+      {
+        "shade": "45 Coral Rush 3614274132632",
+        "price": 2137.5
+      },
+      {
+        "shade": "210 Passion Red 3614274132786",
+        "price": 2137.5
+      },
+      {
+        "shade": "212 Deep Ruby 3614274132809",
+        "price": 2137.5
+      },
+      {
+        "shade": "İçerikli Ruj 10 3614274544732",
+        "price": 2850
+      }
+    ],
+    "count": 22,
+    "fetchedAt": "2026-03-23T17:08:58.984Z"
+  },
+  "757": {
+    "shades": [
+      {
+        "shade": "Hot Rose Soyulabilir Kalıcı Ruj",
+        "price": 699
+      },
+      {
+        "shade": "Pink Pop Kalıcı Soyulabilir Ruj",
+        "price": 699
+      },
+      {
+        "shade": "Lip Oil Soyulabilir Kalıcı Ruj",
+        "price": 699
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:09:00.270Z"
+  },
+  "758": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:01.818Z"
+  },
+  "759": {
+    "shades": [
+      {
+        "shade": "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 55 Knee High",
+        "price": 634.9
+      },
+      {
+        "shade": "Maybelline Super Stay Teddy Tint Uzun Süre Kalkıcı Likit Mat Tint 10 Current Mood",
+        "price": 629.9
+      },
+      {
+        "shade": "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 30 Coquettish",
+        "price": 639.9
+      },
+      {
+        "shade": "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 25 Baby Tee",
+        "price": 588
+      },
+      {
+        "shade": "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 35 July Forever",
+        "price": 564.99
+      },
+      {
+        "shade": "Maybelline Super Stay Teddy Tint Uzun Süre Kalkıcı Likit Mat Tint 40 Petalcore",
+        "price": 624.9
+      },
+      {
+        "shade": "Maybelline Super Stay Teddy Tint Uzun Süre Kalıcı Likit Mat Tint 50 Wild at Heart",
+        "price": 629.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:09:03.142Z"
+  },
+  "760": {
+    "shades": [
+      {
+        "shade": "MACximal Mini Mac Silky Matte Lipstick - Ruby Woo 1.8g",
+        "price": 899
+      },
+      {
+        "shade": "MACximal Mini Mac Silky Matte Lipstick - Warm Teddy 1.8g",
+        "price": 1399.99
+      },
+      {
+        "shade": "MACximal Mini Mac Silky Matte Lipstick - Mehr 1.8g",
+        "price": 899
+      },
+      {
+        "shade": "MACximal Mini Mac Silky Matte Lipstick - Chili 1.8g",
+        "price": 899
+      },
+      {
+        "shade": "MACximal Mini MAC Silky Matte Lipstick-EVERYBODY'S HEROINE",
+        "price": 899
+      },
+      {
+        "shade": "MACximal Mini Mac Silky Matte Lipstick - Diva 1.8g",
+        "price": 1399.99
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:09:04.549Z"
+  },
+  "761": {
+    "shades": [
+      {
+        "shade": "Likit Mat Ruj 510 Charmer",
+        "price": 797.44
+      },
+      {
+        "shade": "70 Amazonian Kahverengi",
+        "price": 714.9
+      },
+      {
+        "shade": "Likit Mat Ruj 175 Ringleader Pembe",
+        "price": 797.44
+      },
+      {
+        "shade": "75 Fighter Kahverengi",
+        "price": 797.44
+      },
+      {
+        "shade": "City Edition Likit Mat Ruj 130 Self starter",
+        "price": 797.44
+      },
+      {
+        "shade": "Superstay Matte Ink Kalıcı Ruj 50 Voyager",
+        "price": 610
+      },
+      {
+        "shade": "City Edition Likit Mat Ruj 125 Inspirer",
+        "price": 724.5
+      },
+      {
+        "shade": "Likit Mat Ruj 15 Lover Pembe",
+        "price": 714.9
+      },
+      {
+        "shade": "Superstay Matte Ink Liquid Lipstick 10 Dreamer 3600531411183",
+        "price": 889
+      },
+      {
+        "shade": "Superstay Matte Ink Kalıcı Ruj 115 Founder",
+        "price": 825
+      },
+      {
+        "shade": "City Edition Likit Mat Ruj 135 Globe trotter",
+        "price": 724.5
+      },
+      {
+        "shade": "Likit Mat Ruj - SuperStay Matte Ink Liquid Lipstick 80 Ruler",
+        "price": 797.44
+      },
+      {
+        "shade": "Likit Mat Ruj 180 Revolutionary Pembe",
+        "price": 797.44
+      },
+      {
+        "shade": "60 Poet Nude",
+        "price": 797.44
+      },
+      {
+        "shade": "Likit Mat Ruj 500 Insider",
+        "price": 655
+      },
+      {
+        "shade": "90 Huntress Gri",
+        "price": 468.25
+      },
+      {
+        "shade": "City Edition Likit Mat Ruj 118 Dancer",
+        "price": 1995.9
+      },
+      {
+        "shade": "Likit Mat Ruj 155 Savant Nude/pembe",
+        "price": 1325.9
+      },
+      {
+        "shade": "Likit Mat Ruj 45 Escapist Koyu Mürdüm",
+        "price": 950
+      },
+      {
+        "shade": "Likit Mat Ruj 20 Kırmızı",
+        "price": 2100
+      },
+      {
+        "shade": "Likit Mat Ruj - SuperStay Matte Ink City Edition Lipstick 105 Explorer 3600531513399",
+        "price": 746.14
+      },
+      {
+        "shade": "Likit Mat Ruj 05 Loyalist Nude",
+        "price": 1999.9
+      },
+      {
+        "shade": "City Edition Likit Mat Ruj 110 Originator",
+        "price": 799
+      },
+      {
+        "shade": "City Edition Likit Mat Ruj 117 Ground breaker",
+        "price": 2100
+      }
+    ],
+    "count": 24,
+    "fetchedAt": "2026-03-23T17:09:05.847Z"
+  },
+  "762": {
+    "shades": [
+      {
+        "shade": "203 Charming Nude",
+        "price": 349.9
+      },
+      {
+        "shade": "210 Alluring Kırmızı",
+        "price": 349.9
+      },
+      {
+        "shade": "205 Mystick Nude",
+        "price": 349.9
+      },
+      {
+        "shade": "201 Darling Nemlendirici Parlak Ruj Nude",
+        "price": 349.9
+      },
+      {
+        "shade": "207 Idol Kahverengi",
+        "price": 349.9
+      },
+      {
+        "shade": "204 Ruler Pembe",
+        "price": 349.9
+      },
+      {
+        "shade": "202 Soulmate nude",
+        "price": 349.9
+      },
+      {
+        "shade": "208 Dreamer Pembe",
+        "price": 349.9
+      },
+      {
+        "shade": "211 Fearless Kırmızı",
+        "price": 349.9
+      },
+      {
+        "shade": "209 Limitless Pembe",
+        "price": 349.9
+      },
+      {
+        "shade": "212 Powerful Kırmızı",
+        "price": 349.9
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:09:07.289Z"
+  },
+  "763": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:08.549Z"
+  },
+  "764": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:09.679Z"
+  },
+  "765": {
+    "shades": [
+      {
+        "shade": "740",
+        "price": 200.48
+      },
+      {
+        "shade": "771",
+        "price": 235.6
+      },
+      {
+        "shade": "779",
+        "price": 216.31
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 763",
+        "price": 212.72
+      },
+      {
+        "shade": "723",
+        "price": 224.53
+      },
+      {
+        "shade": "754",
+        "price": 225.61
+      },
+      {
+        "shade": "753",
+        "price": 217.44
+      },
+      {
+        "shade": "747",
+        "price": 215.91
+      },
+      {
+        "shade": "757",
+        "price": 220.09
+      },
+      {
+        "shade": "781",
+        "price": 223.35
+      },
+      {
+        "shade": "775",
+        "price": 220.53
+      },
+      {
+        "shade": "Sevgililer Günü Özel Seri Yumuşak Sürümlü Nemlendirici Parlak Ruj No: 762",
+        "price": 244.17
+      },
+      {
+        "shade": "777",
+        "price": 217.59
+      },
+      {
+        "shade": "750",
+        "price": 239.11
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 737",
+        "price": 251.01
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 727",
+        "price": 237.24
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 735",
+        "price": 231.39
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 721",
+        "price": 268.32
+      },
+      {
+        "shade": "741",
+        "price": 229.35
+      },
+      {
+        "shade": "764",
+        "price": 218.66
+      },
+      {
+        "shade": "733",
+        "price": 221.29
+      },
+      {
+        "shade": "766",
+        "price": 219.09
+      },
+      {
+        "shade": "776",
+        "price": 221.64
+      },
+      {
+        "shade": "778",
+        "price": 237.91
+      },
+      {
+        "shade": "724",
+        "price": 258.11
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 770",
+        "price": 213.58
+      },
+      {
+        "shade": "742",
+        "price": 236.25
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 734",
+        "price": 221.52
+      },
+      {
+        "shade": "749",
+        "price": 215.61
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 784",
+        "price": 216.5
+      },
+      {
+        "shade": "729",
+        "price": 254.69
+      },
+      {
+        "shade": "725",
+        "price": 213.62
+      },
+      {
+        "shade": "728",
+        "price": 232.7
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 730",
+        "price": 234.66
+      },
+      {
+        "shade": "Parlak Ruj – SilkGlow Hydrating Satin Lipstick No: 759",
+        "price": 248.23
+      }
+    ],
+    "count": 35,
+    "fetchedAt": "2026-03-23T17:09:10.948Z"
+  },
+  "766": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:12.290Z"
+  },
+  "767": {
+    "shades": [
+      {
+        "shade": "No: 628",
+        "price": 202.49
+      },
+      {
+        "shade": "No: 638",
+        "price": 189.31
+      },
+      {
+        "shade": "No:619",
+        "price": 149.9
+      },
+      {
+        "shade": "No:639",
+        "price": 149.9
+      },
+      {
+        "shade": "LipstickNo: 635",
+        "price": 210.37
+      },
+      {
+        "shade": "No: 641",
+        "price": 149.9
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:09:13.567Z"
+  },
+  "768": {
+    "shades": [
+      {
+        "shade": "27 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 265.07
+      },
+      {
+        "shade": "22 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 239
+      },
+      {
+        "shade": "25 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 306.9
+      },
+      {
+        "shade": "02 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 253.44
+      },
+      {
+        "shade": "31 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 255.55
+      },
+      {
+        "shade": "12 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 301.95
+      },
+      {
+        "shade": "MAT RUJ - VELVET MATTE LİPSTİCK NO:23-",
+        "price": 231.82
+      },
+      {
+        "shade": "01 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 315
+      },
+      {
+        "shade": "Mat Ruj - Velvet Matte Lipstick No: 06",
+        "price": 664.05
+      },
+      {
+        "shade": "Ruj No: 20",
+        "price": 373
+      },
+      {
+        "shade": "14 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 281.1
+      },
+      {
+        "shade": "05 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 293.26
+      },
+      {
+        "shade": "Mat Ruj - Velvet Matte Lipstick No: 26",
+        "price": 339.15
+      },
+      {
+        "shade": "10 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 305
+      },
+      {
+        "shade": "Mat Ruj 29",
+        "price": 664.05
+      },
+      {
+        "shade": "Mat Ruj - Velvet Matte Lipstick No: 19",
+        "price": 495
+      },
+      {
+        "shade": "07 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 301.95
+      },
+      {
+        "shade": "Mat Lipstick No.11/ Delist",
+        "price": 300
+      },
+      {
+        "shade": "No:13 Hot Pink Mat Ruj 8691190466138",
+        "price": 249
+      },
+      {
+        "shade": "Mat Ruj - Velvet Matte Lipstick No: 38",
+        "price": 320
+      },
+      {
+        "shade": "21 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 301.95
+      },
+      {
+        "shade": "Mat Ruj 34",
+        "price": 232.65
+      },
+      {
+        "shade": "Mat Ruj - Velvet Matte Lipstick No: 15",
+        "price": 249
+      },
+      {
+        "shade": "Ruj 09",
+        "price": 499
+      },
+      {
+        "shade": "35 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 850
+      },
+      {
+        "shade": "Mat Ruj 04",
+        "price": 331.55
+      },
+      {
+        "shade": "32 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 216.31
+      },
+      {
+        "shade": "08 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 375
+      },
+      {
+        "shade": "Mat Ruj 37",
+        "price": 655.4
+      },
+      {
+        "shade": "Ruj 33",
+        "price": 799.9
+      },
+      {
+        "shade": "39 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 319.02
+      },
+      {
+        "shade": "No 01",
+        "price": 469.31
+      },
+      {
+        "shade": "03 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 320
+      },
+      {
+        "shade": "Mat Ruj - Velvet Matte Lipstick No: 17",
+        "price": 329
+      },
+      {
+        "shade": "No:24 Mat Ruj",
+        "price": 495
+      },
+      {
+        "shade": "Mat Ruj 28",
+        "price": 469.3
+      },
+      {
+        "shade": "18 Yoğun Pigmentli Kadifemsi Mat Ruj",
+        "price": 450
+      }
+    ],
+    "count": 37,
+    "fetchedAt": "2026-03-23T17:09:15.094Z"
+  },
+  "769": {
+    "shades": [
+      {
+        "shade": "146",
+        "price": 125.12
+      },
+      {
+        "shade": "159",
+        "price": 129.68
+      },
+      {
+        "shade": "155",
+        "price": 132.57
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:09:16.449Z"
+  },
+  "770": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:17.753Z"
+  },
+  "771": {
+    "shades": [
+      {
+        "shade": "07 Warm Chocolatte Kahverengi",
+        "price": 199.9
+      },
+      {
+        "shade": "06 Cinnamon Kahverengi",
+        "price": 199.9
+      },
+      {
+        "shade": "13 Impressive Red Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "09 Spicy Nude Kahverengi",
+        "price": 199.9
+      },
+      {
+        "shade": "02 Optimistic Rose Nude",
+        "price": 199.9
+      },
+      {
+        "shade": "05 Leather Mood Kahverengi",
+        "price": 199.9
+      },
+      {
+        "shade": "08 Sophisticate Burgundy Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "03 Confident Rose Nude",
+        "price": 199.9
+      },
+      {
+        "shade": "14 Warm Cherry Kırmızı",
+        "price": 199.9
+      },
+      {
+        "shade": "12 Flaming Heart Red Kırmızı",
+        "price": 202.35
+      },
+      {
+        "shade": "11 Vibrant Pink Kırmızı",
+        "price": 202.16
+      },
+      {
+        "shade": "01 The Better Me Nude Nude",
+        "price": 199.9
+      },
+      {
+        "shade": "10 Fall in Pink Kahverengi",
+        "price": 199.9
+      }
+    ],
+    "count": 13,
+    "fetchedAt": "2026-03-23T17:09:18.991Z"
+  },
+  "772": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:20.301Z"
+  },
+  "773": {
+    "shades": [
+      {
+        "shade": "Show by Pastel Show By Your Sweetness Freckle Pen Çil Kalemi",
+        "price": 217.63
+      },
+      {
+        "shade": "Pastel Show Your Sweetness Freckle Pen - Çil Kalemi (8690644247019)",
+        "price": 297.5
+      },
+      {
+        "shade": "Your Sweetness Çil Kalemi 01",
+        "price": 297.5
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:09:21.631Z"
+  },
+  "774": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:23.003Z"
+  },
+  "775": {
+    "shades": [
+      {
+        "shade": "Suya Dayanıklı Siyah Göz Kalemi - 13 Saat Kalıcı Etki - Extreme Lasting Effect Eye Pencil Black",
+        "price": 399.9
+      },
+      {
+        "shade": "Extreme Coffee Bean",
+        "price": 399.9
+      },
+      {
+        "shade": "Extreme Eggplant",
+        "price": 399.9
+      },
+      {
+        "shade": "Yeşil Göz Kalemi Extreme Khaki",
+        "price": 399.9
+      },
+      {
+        "shade": "Suya Dayanıklı Gece Mavisi Göz Kalemi - 13 Saat Kalıcı Etki - Extreme Lasting Effect Eye Pencil",
+        "price": 399.9
+      },
+      {
+        "shade": "Suya Dayanıklı Mavi Göz Kalemi - 13 Saat Kalıcı Etki - Extreme Lasting Effect Eye Pencil Royal Blue",
+        "price": 399.9
+      },
+      {
+        "shade": "Yeşil Göz Kalemi Extreme Emerald Green",
+        "price": 399.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:09:24.157Z"
+  },
+  "776": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:25.617Z"
+  },
+  "777": {
+    "shades": [
+      {
+        "shade": "409 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 108.8
+      },
+      {
+        "shade": "405 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 101.9
+      },
+      {
+        "shade": "410 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 111.72
+      },
+      {
+        "shade": "423 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 89.99
+      },
+      {
+        "shade": "419 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 112.81
+      },
+      {
+        "shade": "407 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 99.28
+      },
+      {
+        "shade": "425 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 105
+      },
+      {
+        "shade": "414 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 104.38
+      },
+      {
+        "shade": "422 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 69.99
+      },
+      {
+        "shade": "408 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 80.06
+      },
+      {
+        "shade": "416 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 107.99
+      },
+      {
+        "shade": "421 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 117.82
+      },
+      {
+        "shade": "403 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 89.99
+      },
+      {
+        "shade": "420 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 119.99
+      },
+      {
+        "shade": "412 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 99.99
+      },
+      {
+        "shade": "424 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 119
+      },
+      {
+        "shade": "406 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 90
+      },
+      {
+        "shade": "413 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 87.99
+      },
+      {
+        "shade": "418 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 89.99
+      },
+      {
+        "shade": "417 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 105
+      },
+      {
+        "shade": "411 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 120
+      },
+      {
+        "shade": "415 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 100
+      },
+      {
+        "shade": "402 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 125
+      },
+      {
+        "shade": "404 Mat Bitişli Yumuşak Göz Kalemi",
+        "price": 99
+      }
+    ],
+    "count": 24,
+    "fetchedAt": "2026-03-23T17:09:27.212Z"
+  },
+  "778": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:28.290Z"
+  },
+  "779": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:29.642Z"
+  },
+  "780": {
+    "shades": [
+      {
+        "shade": "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Kahverengi Göz Kalemi - Extreme Umber",
+        "price": 399.9
+      },
+      {
+        "shade": "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Kahverengi Göz Kalemi - Extreme Coffee Bean",
+        "price": 399.9
+      },
+      {
+        "shade": "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Kahverengi Göz Kalemi - Extreme Eggplant",
+        "price": 399.9
+      },
+      {
+        "shade": "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Yeşil Göz Kalemi - Extreme Khaki",
+        "price": 399.9
+      },
+      {
+        "shade": "Gece Mavisi Göz Kalemi 13 Saat Kalıcı Etki Extreme Lasting Effect Eye Pencil",
+        "price": 399.9
+      },
+      {
+        "shade": "Mavi Göz Kalemi 13 Saat Kalıcı Etki Extreme Lasting Effect Eye Pencil Royal Blue",
+        "price": 399.9
+      },
+      {
+        "shade": "Uzun Süre Kalıcı Suya Dayanıklı Akma, Dağılma Yapmayan Yeşil Göz Kalemi - Extreme Emerald Green",
+        "price": 399.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:09:30.903Z"
+  },
+  "781": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:32.260Z"
+  },
+  "782": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:33.665Z"
+  },
+  "783": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:34.970Z"
+  },
+  "784": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:36.154Z"
+  },
+  "785": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:37.714Z"
+  },
+  "786": {
+    "shades": [
+      {
+        "shade": "Cosmetics Silk Tattoo Liner Suya Dayanıklı İpeksi Jel Göz Kalemi - 01 Midnight - Siyah (Mat)",
+        "price": 299.9
+      },
+      {
+        "shade": "Cosmetics Silk Tattoo Liner Suya Dayanıklı İpeksi Jel Göz Kalemi - 04 Deep Wine - Bordo (Mat)",
+        "price": 299.9
+      },
+      {
+        "shade": "Cosmetics Silk Tattoo Liner Suya Dayanıklı İpeksi Jel Göz Kalemi - 03 Antique Bronze - Bronz (Işıltılı)",
+        "price": 299.9
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:09:39.117Z"
+  },
+  "787": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:40.361Z"
+  },
+  "788": {
+    "shades": [
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - Berry Bliss - Mürdüm",
+        "price": 489.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - Blue Disco - Mavi",
+        "price": 225.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - 821 Stardust Chrome",
+        "price": 489.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - Vivid Green - Yeşil",
+        "price": 489.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - Tealtini - Koyu Yeşil",
+        "price": 225.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - 822 Space Graphite",
+        "price": 400
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - 823 Aurora Flip",
+        "price": 489.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - Galatic Cobalt - Saks Mavisi",
+        "price": 489.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - Ultra Pink - Pembe",
+        "price": 282
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - Purple Pop - Mor",
+        "price": 489.44
+      },
+      {
+        "shade": "Tattoo Liner Jel Göz Kalemi - 950 Rich Clay (KIZIL KAHVERENGİ)",
+        "price": 372.66
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:09:41.428Z"
+  },
+  "789": {
+    "shades": [
+      {
+        "shade": "Brown Black",
+        "price": 167.87
+      },
+      {
+        "shade": "Bronze",
+        "price": 193
+      },
+      {
+        "shade": "Forest Green",
+        "price": 199.9
+      },
+      {
+        "shade": "Azure Blue",
+        "price": 199.9
+      },
+      {
+        "shade": "Navy",
+        "price": 189
+      },
+      {
+        "shade": "Fearless Sapphire",
+        "price": 279.99
+      },
+      {
+        "shade": "Emerald İkili Set",
+        "price": 349.9
+      },
+      {
+        "shade": "Göz Kalemi Navy 2'li + Lovider Cep Aynası",
+        "price": 599
+      },
+      {
+        "shade": "Hot Brown",
+        "price": 219.9
+      },
+      {
+        "shade": "Fierce Amber",
+        "price": 279.99
+      },
+      {
+        "shade": "Majestic Plum İkili Set",
+        "price": 349.9
+      },
+      {
+        "shade": "Bold Amethyst",
+        "price": 279.99
+      },
+      {
+        "shade": "Göz Kalemi Brown Black 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "Göz Kalemi Bronze 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "Göz Kalemi Cherry Red 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "Göz Kalemi Starry Night 2'li + Lovider Cep Aynası",
+        "price": 599
+      },
+      {
+        "shade": "Göz Kalemi Azure Blue 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "Asansörlü Göz Kalemi Cosmic Brown 2'li + Lovider Cep Aynası",
+        "price": 599
+      },
+      {
+        "shade": "Göz Kalemi Forest Green 2'li + Lovider Cep Aynası Hediye",
+        "price": 599
+      },
+      {
+        "shade": "Daring Citrine",
+        "price": 219.9
+      },
+      {
+        "shade": "Purple Gaze",
+        "price": 299
+      }
+    ],
+    "count": 21,
+    "fetchedAt": "2026-03-23T17:09:42.549Z"
+  },
+  "790": {
+    "shades": [
+      {
+        "shade": "Kahverengi Tattoo Liner Jel Göz Kalemi 911 Smooth Walnut",
+        "price": 489.44
+      },
+      {
+        "shade": "Blue Disco Mavi",
+        "price": 225.44
+      },
+      {
+        "shade": "821 Stardust Chrome",
+        "price": 489.44
+      },
+      {
+        "shade": "Vivid Green Yeşil",
+        "price": 489.44
+      },
+      {
+        "shade": "823 Aurora Flip",
+        "price": 489.44
+      },
+      {
+        "shade": "Galatic Cobalt Saks Mavisi",
+        "price": 489.44
+      },
+      {
+        "shade": "Tealtini Koyu Yeşil",
+        "price": 225.44
+      },
+      {
+        "shade": "822 Space Graphite",
+        "price": 400
+      },
+      {
+        "shade": "Ultra Pink Pembe",
+        "price": 282
+      },
+      {
+        "shade": "Purple Pop Mor",
+        "price": 489.44
+      },
+      {
+        "shade": "950 Rich Clay (KIZIL KAHVERENGİ)",
+        "price": 372.66
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:09:43.644Z"
+  },
+  "791": {
+    "shades": [
+      {
+        "shade": "08 Burgundy Yoğun Pigmentli Dudak Kalemi",
+        "price": 204.27
+      },
+      {
+        "shade": "01 Blush Haze Yoğun Pigmentli Dudak Kalemi",
+        "price": 220
+      },
+      {
+        "shade": "03 Rosy Beige Yoğun Pigmentli Dudak Kalemi",
+        "price": 191.88
+      },
+      {
+        "shade": "06 Amber Bloom Yoğun Pigmentli Dudak Kalemi",
+        "price": 199.47
+      },
+      {
+        "shade": "11 Rosy Pink Yoğun Pigmentli Dudak Kalemi",
+        "price": 180.38
+      },
+      {
+        "shade": "10 Pink Berry Yoğun Pigmentli Dudak Kalemi",
+        "price": 227.05
+      },
+      {
+        "shade": "09 Vintage Rose Yoğun Pigmentli Dudak Kalemi",
+        "price": 190.54
+      },
+      {
+        "shade": "04 Rosewood Yoğun Pigmentli Dudak Kalemi",
+        "price": 274.55
+      }
+    ],
+    "count": 8,
+    "fetchedAt": "2026-03-23T17:09:44.794Z"
+  },
+  "792": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:45.895Z"
+  },
+  "793": {
+    "shades": [
+      {
+        "shade": "Infaillible Automatic Jel Göz Kalemi - Kahverengi",
+        "price": 522.44
+      },
+      {
+        "shade": "L'Oréal Paris Automatic Jel Infaillible Göz Kalemi - 13 Velvet Bordeaux",
+        "price": 522.44
+      },
+      {
+        "shade": "Zümrüt Yeşili",
+        "price": 372.96
+      },
+      {
+        "shade": "L'Oréal Paris Infaillible Göz Kalemi - 12 Bronzed Espresso",
+        "price": 522.44
+      },
+      {
+        "shade": "Mavi",
+        "price": 408.9
+      },
+      {
+        "shade": "Infaillible Automatic Jel Göz Kalemi - Mat Siyah",
+        "price": 579
+      },
+      {
+        "shade": "Superliner Stylo Waterroof Gel Eyeliner Taupe Grey",
+        "price": 489.99
+      },
+      {
+        "shade": "Superliner Stylo Waterroof Gel Eyeliner 314 Rebel Blue",
+        "price": 477.5
+      },
+      {
+        "shade": "İnfaillible Yeşil Stylo Eyeliner 24 Saat Kalıcılık Su Geçirmez Özellikli- Kaki-313",
+        "price": 519.99
+      },
+      {
+        "shade": "Superliner Stylo Waterroof Gel Eyeliner 320 Nude Obbession",
+        "price": 479.99
+      },
+      {
+        "shade": "L'Oreal Paris Infaillable Automatic Jel Göz Kalemi - Yoğun Siyah",
+        "price": 947.15
+      },
+      {
+        "shade": "Superliner Stylo Waterroof Gel Eyeliner 312 Flawless Grey",
+        "price": 499.99
+      }
+    ],
+    "count": 12,
+    "fetchedAt": "2026-03-23T17:09:47.277Z"
+  },
+  "794": {
+    "shades": [
+      {
+        "shade": "01 Pearly White Uzun Süre Kalıcı, Suya Dayanıklı",
+        "price": 799
+      },
+      {
+        "shade": "13 Pearly Violet Uzun Süre Kalıcı, Suya Dayanıklı",
+        "price": 789
+      },
+      {
+        "shade": "11 Metallic Blue Teal Kalıcı, Suya Dayanıklı",
+        "price": 799
+      },
+      {
+        "shade": "02 Pearly Gold 71",
+        "price": 2999.99
+      },
+      {
+        "shade": "10 Metallic Ivy Green 61",
+        "price": 1400
+      },
+      {
+        "shade": "Likit Eyeliner - Intense Colour Long Lasting Eyeliner 12 Metallic Turquoise 8025272623223",
+        "price": 1754.18
+      },
+      {
+        "shade": "06 Mat Ebony Uzun Süre Kalıcı, Suya Dayanıklı",
+        "price": 2217.56
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:09:48.490Z"
+  },
+  "795": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:49.790Z"
+  },
+  "796": {
+    "shades": [
+      {
+        "shade": "02 Siyah 3614273436366",
+        "price": 1575
+      },
+      {
+        "shade": "01 Noir Onyx 3614273436359",
+        "price": 1575
+      },
+      {
+        "shade": "06 Yeşil 3614273436403",
+        "price": 1575
+      },
+      {
+        "shade": "11 Radiant White 3614274376807",
+        "price": 1575
+      },
+      {
+        "shade": "07 Mavi 3614273436410",
+        "price": 2250
+      },
+      {
+        "shade": "08 Rêve Anthracite 3614273436427",
+        "price": 1575
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:09:51.114Z"
+  },
+  "797": {
+    "shades": [
+      {
+        "shade": "Smolder 1.36 G",
+        "price": 1449
+      },
+      {
+        "shade": "Göz Kalemi - Eye Kohl Feline 1.36 G 773602567317",
+        "price": 1449
+      },
+      {
+        "shade": "Costa Riche 1.36 G",
+        "price": 1449
+      },
+      {
+        "shade": "Minted 1.36 G",
+        "price": 1449
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:09:52.363Z"
+  },
+  "798": {
+    "shades": [
+      {
+        "shade": "Midnight Black Siyah",
+        "price": 540
+      },
+      {
+        "shade": "Green With Envy",
+        "price": 241.94
+      },
+      {
+        "shade": "Under The Sea",
+        "price": 241.94
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:09:53.529Z"
+  },
+  "799": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:54.814Z"
+  },
+  "800": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:56.061Z"
+  },
+  "801": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:09:57.198Z"
+  },
+  "802": {
+    "shades": [
+      {
+        "shade": "Cosmic Brown",
+        "price": 199
+      },
+      {
+        "shade": "Saturn Grey",
+        "price": 138.04
+      },
+      {
+        "shade": "Majestic Plum",
+        "price": 199.9
+      },
+      {
+        "shade": "Starry Night Blue",
+        "price": 199
+      },
+      {
+        "shade": "Emerald",
+        "price": 199.9
+      },
+      {
+        "shade": "Glimmerstick Asansörlü Göz Kalemi - Saturn Grey",
+        "price": 256
+      },
+      {
+        "shade": "Siyah Göz Kalemi Black 8681298934820",
+        "price": 539.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:09:58.469Z"
+  },
+  "803": {
+    "shades": [
+      {
+        "shade": "01. Siyah 1.1 Gr 56447",
+        "price": 342.32
+      },
+      {
+        "shade": "Lacivert 94458",
+        "price": 342.32
+      },
+      {
+        "shade": "03. Antrasit 1.2 Gr 57013",
+        "price": 342.32
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:09:59.697Z"
+  },
+  "804": {
+    "shades": [
+      {
+        "shade": "Göz Kalemi 101",
+        "price": 111.04
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:10:01.282Z"
+  },
+  "805": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:02.580Z"
+  },
+  "806": {
+    "shades": [
+      {
+        "shade": "Infaillable Automatic Jel Göz Kalemi - Yoğun Siyah",
+        "price": 439.99
+      },
+      {
+        "shade": "Infaillible Automatic Jel Göz Kalemi - Kahverengi",
+        "price": 522.44
+      },
+      {
+        "shade": "Infaillable Automatic Jel Göz Kalemi - Zümrüt Yeşili",
+        "price": 372.96
+      },
+      {
+        "shade": "Infaillible Göz Kalemi 12 Bronzed Espresso",
+        "price": 522.44
+      },
+      {
+        "shade": "Infaillable Automatic Jel Göz Kalemi - Mavi",
+        "price": 408.9
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner Taupe Grey",
+        "price": 489.99
+      },
+      {
+        "shade": "Infaillible Automatic Jel Göz Kalemi - Mat Siyah",
+        "price": 579
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner 312 Flawless Grey",
+        "price": 499.99
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-320 Nude Obbession",
+        "price": 479.99
+      },
+      {
+        "shade": "İnfaillible Yeşil Stylo Eyeliner 24 Saat Kalıcılık Su Geçirmez Özellikli- Kaki-313",
+        "price": 519.99
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-314 Rebel Blue",
+        "price": 477.5
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:10:03.694Z"
+  },
+  "807": {
+    "shades": [
+      {
+        "shade": "Beyaz Göz Kalemi - L'oréal Paris Paradise Le Khol Göz Kalemi 120 Immaculate Snow",
+        "price": 449
+      },
+      {
+        "shade": "Siyah Göz Kalemi - L'oréal Paris Paradise Le Khol Göz Kalemi 101 Midnight Black",
+        "price": 488
+      },
+      {
+        "shade": "Le Liner Signature Eyeliner Su Geçirmez Asansörlü Sarı Göz Kalemi",
+        "price": 499.99
+      },
+      {
+        "shade": "Gel Crayon Eyeliner Su Geçirmez Özellikli -Beyaz Jel Göz Kalemi-14 Numara White",
+        "price": 515
+      },
+      {
+        "shade": "Gel Crayon Eyeliner Su Geçirmez Özellikli -Uptown Beige 013 Numara İnfaillible Jel Göz Kalemi",
+        "price": 515
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:10:04.939Z"
+  },
+  "808": {
+    "shades": [
+      {
+        "shade": "Kahve",
+        "price": 455.92
+      },
+      {
+        "shade": "Yeşil 58772",
+        "price": 455.92
+      },
+      {
+        "shade": "Granit Gri 20990",
+        "price": 455.92
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:10:06.066Z"
+  },
+  "809": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:07.175Z"
+  },
+  "810": {
+    "shades": [
+      {
+        "shade": "Infaillable Automatic Jel Göz Kalemi - Yoğun Siyah",
+        "price": 439.99
+      },
+      {
+        "shade": "L'Oréal Paris Automatic Jel Infaillible Göz Kalemi - 13 Velvet Bordeaux",
+        "price": 522.44
+      },
+      {
+        "shade": "Infaillable Automatic Jel Göz Kalemi - Zümrüt Yeşili",
+        "price": 372.96
+      },
+      {
+        "shade": "L'Oréal Paris Infaillible Göz Kalemi - 12 Bronzed Espresso",
+        "price": 522.44
+      },
+      {
+        "shade": "Infaillable Automatic Jel Göz Kalemi - Mavi",
+        "price": 408.9
+      },
+      {
+        "shade": "Mat Siyah",
+        "price": 579
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner Taupe Grey",
+        "price": 489.99
+      },
+      {
+        "shade": "İnfaillible Yeşil Stylo Eyeliner 24 Saat Kalıcılık Su Geçirmez Özellikli- Kaki-313",
+        "price": 519.99
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner 312 Flawless Grey",
+        "price": 499.99
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-320 Nude Obbession",
+        "price": 479.99
+      },
+      {
+        "shade": "Infaillable Automatic Superliner Stylo Waterroof Gel Eyeliner-314 Rebel Blue",
+        "price": 477.5
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:10:08.716Z"
+  },
+  "811": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:09.908Z"
+  },
+  "812": {
+    "shades": [
+      {
+        "shade": "Brown Sugar Kahverengi",
+        "price": 475
+      },
+      {
+        "shade": "Green With Envy",
+        "price": 229.84
+      },
+      {
+        "shade": "Under The Sea",
+        "price": 229.84
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:10:11.025Z"
+  },
+  "813": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:12.331Z"
+  },
+  "814": {
+    "shades": [
+      {
+        "shade": "54'lü Mat-sedefli Far Paleti",
+        "price": 186.19
+      },
+      {
+        "shade": "MUJGAN Siyah 54lü Mat Sedefli Far Paleti",
+        "price": 150.19
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:10:13.538Z"
+  },
+  "815": {
+    "shades": [
+      {
+        "shade": "Flormar Mono Yüksek Pigmentli & Doğal Işıltılı Kompakt Göz Farı",
+        "price": 199.79
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:10:15.060Z"
+  },
+  "816": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:16.140Z"
+  },
+  "817": {
+    "shades": [
+      {
+        "shade": "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (301 Winter Salt)",
+        "price": 298.05
+      },
+      {
+        "shade": "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (304 New Planet)",
+        "price": 298.05
+      },
+      {
+        "shade": "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (303 Rose Space)",
+        "price": 298.05
+      },
+      {
+        "shade": "(ORANGE PEKOE)",
+        "price": 395.92
+      },
+      {
+        "shade": "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (302 Summer Fizz)",
+        "price": 298.05
+      },
+      {
+        "shade": "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (307 Telepathy)",
+        "price": 298.05
+      },
+      {
+        "shade": "Kalıcı, Topaklanma Yapmayan, Simli Tekli Krem Far Modern Shadow Glitter (305 Bridal Peach)",
+        "price": 298.05
+      },
+      {
+        "shade": "Kalıcı, Topaklanma Yapmayan, Simli Tekli Far Modern Shadow Glitter (308 Twinverse)",
+        "price": 298.05
+      }
+    ],
+    "count": 8,
+    "fetchedAt": "2026-03-23T17:10:17.238Z"
+  },
+  "818": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:18.553Z"
+  },
+  "819": {
+    "shades": [
+      {
+        "shade": "004 FOLLOW YOUR HEART",
+        "price": 456.29
+      },
+      {
+        "shade": "005 NUDE DUDE",
+        "price": 456.29
+      },
+      {
+        "shade": "006 FELT CUTE",
+        "price": 456.29
+      },
+      {
+        "shade": "001 FALLEN ANGEL",
+        "price": 456.29
+      },
+      {
+        "shade": "007 GRAND GALAXY",
+        "price": 456.29
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:10:19.973Z"
+  },
+  "820": {
+    "shades": [
+      {
+        "shade": "567 Flawless",
+        "price": 227.5
+      },
+      {
+        "shade": "383 Mystical",
+        "price": 210
+      },
+      {
+        "shade": "151 Essential",
+        "price": 239
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:10:21.221Z"
+  },
+  "821": {
+    "shades": [
+      {
+        "shade": "No 3",
+        "price": 152.5
+      },
+      {
+        "shade": "No:05 | Yüksek Pigment, Koyu Krem",
+        "price": 152.5
+      },
+      {
+        "shade": "Mat Beyaz (GÖZ FARI) No:02",
+        "price": 199.9
+      },
+      {
+        "shade": "No:01",
+        "price": 289
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:10:22.287Z"
+  },
+  "822": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:23.360Z"
+  },
+  "823": {
+    "shades": [
+      {
+        "shade": "MUJGAN 40'lı Sedefli- Mat Far Paleti",
+        "price": 133.23
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:10:24.427Z"
+  },
+  "824": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:25.935Z"
+  },
+  "825": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:27.109Z"
+  },
+  "826": {
+    "shades": [
+      {
+        "shade": "23 Dried Rose Pembe",
+        "price": 351.4
+      },
+      {
+        "shade": "24 Smell Of Coffee Nude",
+        "price": 299.9
+      },
+      {
+        "shade": "13 Secret Kiss Işıltılı",
+        "price": 299.9
+      },
+      {
+        "shade": "04 Dark Caramel Mor",
+        "price": 299.9
+      },
+      {
+        "shade": "10 Love Whisper Bordo",
+        "price": 351.4
+      },
+      {
+        "shade": "08 Party Mood Kırmızı",
+        "price": 289
+      },
+      {
+        "shade": "07 Mellow Thought Pembe",
+        "price": 299.9
+      },
+      {
+        "shade": "12 Magic Touch Işıltılı",
+        "price": 299.9
+      },
+      {
+        "shade": "03 Just Nude Nude",
+        "price": 299.9
+      },
+      {
+        "shade": "06 It's Fantastic Pembe",
+        "price": 300
+      },
+      {
+        "shade": "11 Only You Işıltılı",
+        "price": 299.9
+      },
+      {
+        "shade": "09 Heartbreaker Kırmızı",
+        "price": 249
+      },
+      {
+        "shade": "05 Mystic Aura Kahverengi",
+        "price": 249.9
+      },
+      {
+        "shade": "01 Nude Style Nude",
+        "price": 299.9
+      }
+    ],
+    "count": 14,
+    "fetchedAt": "2026-03-23T17:10:28.301Z"
+  },
+  "827": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:29.459Z"
+  },
+  "828": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:30.986Z"
+  },
+  "829": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:32.301Z"
+  },
+  "830": {
+    "shades": [
+      {
+        "shade": "Nemli Bitiş Ve Işıltılı Görünüm Sunan Göz Farı M Dewy Glossy Eyes (WHİTE BEACH)",
+        "price": 395.92
+      },
+      {
+        "shade": "(304 New Planet)",
+        "price": 298.05
+      },
+      {
+        "shade": "(303 Rose Space)",
+        "price": 298.05
+      },
+      {
+        "shade": "(302 Summer Fizz)",
+        "price": 298.05
+      },
+      {
+        "shade": "Nemli Bitiş Ve Işıltılı Görünüm Sunan Göz Farı M Dewy Glossy Eyes (ORANGE PEKOE)",
+        "price": 395.92
+      },
+      {
+        "shade": "(307 Telepathy)",
+        "price": 298.05
+      },
+      {
+        "shade": "Krem Far Modern Shadow Glitter (305 Bridal Peach)",
+        "price": 298.05
+      },
+      {
+        "shade": "(308 Twinverse)",
+        "price": 298.05
+      }
+    ],
+    "count": 8,
+    "fetchedAt": "2026-03-23T17:10:33.429Z"
+  },
+  "831": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:34.704Z"
+  },
+  "832": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:35.991Z"
+  },
+  "833": {
+    "shades": [
+      {
+        "shade": "Ultimate Shadow Palette - Paradise Shock Göz Farı Paleti",
+        "price": 1461.99
+      },
+      {
+        "shade": "Ultimate Shadow Palette - Vintage Jean Baby Göz Farı Paleti",
+        "price": 2500
+      },
+      {
+        "shade": "Utopia Ultimate Far Paleti 800897207779",
+        "price": 3429.99
+      },
+      {
+        "shade": "Ultımate Shadow Palette - Phoenıx",
+        "price": 3429.02
+      },
+      {
+        "shade": "Palette Brights 800897017651",
+        "price": 3429.99
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:10:37.264Z"
+  },
+  "834": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:38.280Z"
+  },
+  "835": {
+    "shades": [
+      {
+        "shade": "004 Follow Your Heart 8682536048460",
+        "price": 449.99
+      },
+      {
+        "shade": "002 Ready The Party 8682536048446",
+        "price": 449.99
+      },
+      {
+        "shade": "006 Felt Cute 8682536048484",
+        "price": 590
+      },
+      {
+        "shade": "001 Fallen Angel 8682536048439",
+        "price": 594.3
+      },
+      {
+        "shade": "005 Nude Dude 8682536048477",
+        "price": 536.75
+      },
+      {
+        "shade": "007 Grand Galaxy 8682536048491",
+        "price": 536.75
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:10:39.656Z"
+  },
+  "836": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:40.899Z"
+  },
+  "837": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:42.044Z"
+  },
+  "838": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:43.964Z"
+  },
+  "839": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:45.118Z"
+  },
+  "840": {
+    "shades": [
+      {
+        "shade": "Mikro Sim Glitter - Goldshadow",
+        "price": 159.99
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:10:46.130Z"
+  },
+  "841": {
+    "shades": [
+      {
+        "shade": "333 Glamorous Galaxy 15,6 G",
+        "price": 949.9
+      },
+      {
+        "shade": "999 All Seasons 15,6 G",
+        "price": 949.9
+      },
+      {
+        "shade": "12 li Far Paleti - Eyeshadow Palette 111 Tropical Bouquet 15,6 g",
+        "price": 949.9
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:10:47.257Z"
+  },
+  "842": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:48.336Z"
+  },
+  "843": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:49.481Z"
+  },
+  "844": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:50.744Z"
+  },
+  "845": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:52.477Z"
+  },
+  "846": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:53.615Z"
+  },
+  "847": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:55.340Z"
+  },
+  "848": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:56.639Z"
+  },
+  "849": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:10:57.706Z"
+  },
+  "850": {
+    "shades": [
+      {
+        "shade": "Eyeliner Yüksek Pigmentli Uzun Süre Kalıcı Mat Jel Eyeliner - Yoğun Gel Liner 01 Black",
+        "price": 1695
+      },
+      {
+        "shade": "Eyeliner Yüksek Pigmentli Uzun Süre Kalıcı Mat Jel Eyeliner - Yoğun Gel Liner 02 Deep Mohang",
+        "price": 1837
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:10:58.930Z"
+  },
+  "851": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:00.029Z"
+  },
+  "852": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:01.264Z"
+  },
+  "853": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:03.942Z"
+  },
+  "854": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:05.134Z"
+  },
+  "855": {
+    "shades": [
+      {
+        "shade": "Epic Ink Liner Eyeliner - Midnight Rise",
+        "price": 749.9
+      },
+      {
+        "shade": "Epic Ink Liner Eyeliner - Vintage Baby",
+        "price": 453.53
+      },
+      {
+        "shade": "Epic Ink Liner - Marshmallow",
+        "price": 679.99
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:11:06.350Z"
+  },
+  "856": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:07.961Z"
+  },
+  "857": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:09.098Z"
+  },
+  "858": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:10.373Z"
+  },
+  "859": {
+    "shades": [
+      {
+        "shade": "Siyah Göz Kalemi Inkliner Eyeliner Black",
+        "price": 399.9
+      },
+      {
+        "shade": "Gri Göz Kalemi Inkliner Eyeliner Orion Gray",
+        "price": 399.9
+      },
+      {
+        "shade": "Yeşil Göz Kalemi Inkliner Eyeliner Sacramento",
+        "price": 399.9
+      },
+      {
+        "shade": "Lacivert Göz Kalemi Inkliner Eyeliner Cobalt Blue",
+        "price": 399.9
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:11:11.403Z"
+  },
+  "860": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:12.519Z"
+  },
+  "861": {
+    "shades": [
+      {
+        "shade": "Cosmetics Elegant Matte Dipliner Waterproof Suya Dayanıklı - 04 Ocean Green - Yeşil",
+        "price": 349.9
+      },
+      {
+        "shade": "Cosmetics Elegant Matte Dipliner Waterproof Suya Dayanıklı - 03 Navy Blue - Mavi",
+        "price": 349.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:11:14.219Z"
+  },
+  "862": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:15.256Z"
+  },
+  "863": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:16.526Z"
+  },
+  "864": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:17.750Z"
+  },
+  "865": {
+    "shades": [
+      {
+        "shade": "8690131734015",
+        "price": 189.99
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:11:18.854Z"
+  },
+  "866": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:20.216Z"
+  },
+  "867": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:21.518Z"
+  },
+  "868": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:22.606Z"
+  },
+  "869": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:23.919Z"
+  },
+  "870": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:25.210Z"
+  },
+  "871": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:26.252Z"
+  },
+  "872": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:27.410Z"
+  },
+  "873": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:28.607Z"
+  },
+  "874": {
+    "shades": [
+      {
+        "shade": "Maybelline Hyper Precise All Day Eyeliner -700 Siyah",
+        "price": 632.44
+      },
+      {
+        "shade": "710 Forest Brown kahverengi",
+        "price": 632.44
+      },
+      {
+        "shade": "Master Precise Curvitude Liquid Siyah Eyeliner-Carbon Film Formül Kavisli Uç-30154636",
+        "price": 649.99
+      },
+      {
+        "shade": "720 Parrot",
+        "price": 579.9
+      },
+      {
+        "shade": "Likit Liner 730 Jungle Green",
+        "price": 749.9
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:11:30.115Z"
+  },
+  "875": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:31.239Z"
+  },
+  "876": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:32.422Z"
+  },
+  "877": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:33.672Z"
+  },
+  "878": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:34.809Z"
+  },
+  "879": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:35.979Z"
+  },
+  "880": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:37.189Z"
+  },
+  "881": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:38.324Z"
+  },
+  "882": {
+    "shades": [
+      {
+        "shade": "Suya Dayanıklı Siyah Dipliner 8691190198831",
+        "price": 785
+      },
+      {
+        "shade": "Dıplıner Black",
+        "price": 587.99
+      },
+      {
+        "shade": "Suya Dayanıklı Siyah Dipliner 8691190198831 Eyeliner",
+        "price": 348.7
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:11:39.652Z"
+  },
+  "883": {
+    "shades": [
+      {
+        "shade": "90",
+        "price": 1150
+      },
+      {
+        "shade": "Suya Dayanıklı Mat Eyeliner - Eyeliner Gel Matte It Be 68 5907587149687",
+        "price": 1150
+      },
+      {
+        "shade": "95",
+        "price": 1150
+      },
+      {
+        "shade": "69",
+        "price": 1150
+      },
+      {
+        "shade": "75",
+        "price": 1150
+      },
+      {
+        "shade": "99",
+        "price": 1150
+      },
+      {
+        "shade": "61 5.5 g 5901905005495",
+        "price": 1150
+      },
+      {
+        "shade": "67",
+        "price": 1150
+      },
+      {
+        "shade": "Suya Dayanıklı Jel Eyeliner - Eyeliner Gel Italian Kiss 65 5907587149656",
+        "price": 1150
+      },
+      {
+        "shade": "96",
+        "price": 1150
+      },
+      {
+        "shade": "86",
+        "price": 1150
+      },
+      {
+        "shade": "87",
+        "price": 1150
+      },
+      {
+        "shade": "89",
+        "price": 1150
+      },
+      {
+        "shade": "79",
+        "price": 1150
+      },
+      {
+        "shade": "76",
+        "price": 1150
+      },
+      {
+        "shade": "66",
+        "price": 1150
+      },
+      {
+        "shade": "84",
+        "price": 1150
+      },
+      {
+        "shade": "62 5.5 g 5901905005501",
+        "price": 1150
+      },
+      {
+        "shade": "92",
+        "price": 1150
+      },
+      {
+        "shade": "94",
+        "price": 1150
+      },
+      {
+        "shade": "78",
+        "price": 1150
+      },
+      {
+        "shade": "74",
+        "price": 1150
+      }
+    ],
+    "count": 22,
+    "fetchedAt": "2026-03-23T17:11:40.771Z"
+  },
+  "884": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:41.924Z"
+  },
+  "885": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:43.122Z"
+  },
+  "886": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:44.174Z"
+  },
+  "887": {
+    "shades": [
+      {
+        "shade": "Skualen Vitamin E",
+        "price": 277.31
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:11:45.294Z"
+  },
+  "888": {
+    "shades": [
+      {
+        "shade": "Dusty Rose Nemlendirici Makyaj | Gülkurusu | Hyaluronik Asit Peptit",
+        "price": 233.6
+      },
+      {
+        "shade": "Baby Pink Nemlendirici Makyaj | Pastel Pembe Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Rich Berry | Nemlendirici Makyaj | Bordo | Hyaluronik Asit Peptit",
+        "price": 259.9
+      },
+      {
+        "shade": "Warm Peach | Nemlendirici Makyaj | Şeftali | Hyaluronik Asit Peptit",
+        "price": 259.9
+      },
+      {
+        "shade": "Chilli Red | Nemlendirici Makyaj | Kiremit | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Deep Red | Nemlendirici Makyaj | Kırmızı | Hyaluronik Asit Peptit",
+        "price": 259.9
+      },
+      {
+        "shade": "Radiant Pink | Nemlendirici Makyaj | Pembe | Hyaluronik Asit Peptit",
+        "price": 246.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:11:46.374Z"
+  },
+  "889": {
+    "shades": [
+      {
+        "shade": "L’Oréal Paris Lumi Blush Likit Allık - 625 Glowy Gold Pink",
+        "price": 549.94
+      },
+      {
+        "shade": "L’Oréal Paris Lumi Blush Likit Allık - 635 Glowy Worth It Medium",
+        "price": 550.05
+      },
+      {
+        "shade": "L’Oréal Paris Lumi Blush Likit Allık - 627 Glowy Warm Peach",
+        "price": 549.94
+      },
+      {
+        "shade": "640 Glowy Rouge Paris",
+        "price": 549.94
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:11:47.531Z"
+  },
+  "890": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:48.816Z"
+  },
+  "891": {
+    "shades": [
+      {
+        "shade": "Flormar Baked Blush-on Yüksek Pigmentli & Doğal Işıltılı Fırınlanmış Allık",
+        "price": 495
+      },
+      {
+        "shade": "Mat Bitişli Fırınlanmış Allık",
+        "price": 449.99
+      },
+      {
+        "shade": "Işıltılı Fırınlanmış Allık - Baked Blush-On - 055 Dual Gold - 8682536051514",
+        "price": 449.99
+      },
+      {
+        "shade": "Işıltılı Fırınlanmış Allık - Baked Blush-On - 056 Peachy Pink - 8682536051521",
+        "price": 499.99
+      },
+      {
+        "shade": "Yüksek Pigmentli & Mat Bitişli Kremsi Kompakt Allık 003 Rissing Of The Sun",
+        "price": 488
+      },
+      {
+        "shade": "Işıltılı Fırınlanmış Allık - Baked Blush-On - 054 Flormar Pink - 8682536051507",
+        "price": 999.99
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:11:49.969Z"
+  },
+  "892": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:51.139Z"
+  },
+  "893": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:52.299Z"
+  },
+  "894": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:11:53.466Z"
+  },
+  "895": {
+    "shades": [
+      {
+        "shade": "Soft Mocha | Nemlendirici Makyaj | Nude | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Dusty Rose Nemlendirici Makyaj | Gülkurusu | Hyaluronik Asit Peptit",
+        "price": 233.6
+      },
+      {
+        "shade": "Rich Berry | Nemlendirici Makyaj | Bordo | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Warm Peach | Nemlendirici Makyaj | Şeftali | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Chilli Red | Nemlendirici Makyaj | Kiremit | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Deep Red | Nemlendirici Makyaj | Kırmızı | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Radiant Pink | Nemlendirici Makyaj | Pembe | Hyaluronik Asit Peptit",
+        "price": 246.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:11:54.664Z"
+  },
+  "896": {
+    "shades": [
+      {
+        "shade": "Soft Mocha | Nemlendirici Makyaj | Nude | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Dusty Rose Nemlendirici Makyaj | Gülkurusu | Hyaluronik Asit Peptit",
+        "price": 233.6
+      },
+      {
+        "shade": "Baby Pink Nemlendirici Makyaj | Pastel Pembe Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Warm Peach | Nemlendirici Makyaj | Şeftali | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Chilli Red | Nemlendirici Makyaj | Kiremit | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Deep Red | Nemlendirici Makyaj | Kırmızı | Hyaluronik Asit Peptit",
+        "price": 246.9
+      },
+      {
+        "shade": "Radiant Pink | Nemlendirici Makyaj | Pembe | Hyaluronik Asit Peptit",
+        "price": 246.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:11:55.716Z"
+  },
+  "897": {
+    "shades": [
+      {
+        "shade": "Liliy Şeftali",
+        "price": 322.4
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:11:56.815Z"
+  },
+  "898": {
+    "shades": [
+      {
+        "shade": "No02",
+        "price": 149
+      },
+      {
+        "shade": "(mat) No06",
+        "price": 131
+      },
+      {
+        "shade": "(mat) No05",
+        "price": 119.99
+      },
+      {
+        "shade": "No01",
+        "price": 181
+      },
+      {
+        "shade": "(mat) No04",
+        "price": 143
+      },
+      {
+        "shade": "No:1",
+        "price": 140
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:11:58.182Z"
+  },
+  "899": {
+    "shades": [
+      {
+        "shade": "PEACH | Kalıcı Yüksek Pigmentli | Peach",
+        "price": 399.9
+      },
+      {
+        "shade": "LILAC | Kalıcı Yüksek Pigmentli Nemlendirici | Lilac",
+        "price": 399.9
+      },
+      {
+        "shade": "COLD BRONZE | Kalıcı Yüksek Pigmentli | Cold Bronze",
+        "price": 399.9
+      },
+      {
+        "shade": "RED | Kalıcı, Yüksek Pigmentli | Sweet Red",
+        "price": 399.9
+      },
+      {
+        "shade": "COLD PINK | Kalıcı Yüksek Pigmentli | Cold Pink",
+        "price": 399.9
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:11:59.279Z"
+  },
+  "900": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:00.477Z"
+  },
+  "901": {
+    "shades": [
+      {
+        "shade": "Cosmetics Bouncy Blush Yumuşak Kremsi Allık - 04 Sunkiss",
+        "price": 299.9
+      },
+      {
+        "shade": "Cosmetics Bouncy Blush Yumuşak Kremsi Allık - 03 Coral Bliss",
+        "price": 299.9
+      },
+      {
+        "shade": "Cosmetics Bouncy Blush Yumuşak Kremsi Allık - 01 Paradise",
+        "price": 349
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:02.317Z"
+  },
+  "902": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:03.605Z"
+  },
+  "903": {
+    "shades": [
+      {
+        "shade": "08 Enchanted Mauve",
+        "price": 487.78
+      },
+      {
+        "shade": "05 Coral Illusion",
+        "price": 499.9
+      },
+      {
+        "shade": "03 Divine Crimson",
+        "price": 499.9
+      },
+      {
+        "shade": "04 Pink Daydream",
+        "price": 499.9
+      },
+      {
+        "shade": "07 Moonlit Rose",
+        "price": 499.9
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:12:04.780Z"
+  },
+  "904": {
+    "shades": [
+      {
+        "shade": "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 06 Hot Rose",
+        "price": 399.9
+      },
+      {
+        "shade": "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 04 Deeply Bronze",
+        "price": 399.9
+      },
+      {
+        "shade": "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 01 Pleasure",
+        "price": 399.9
+      },
+      {
+        "shade": "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 02 Vintage Pink",
+        "price": 399.9
+      },
+      {
+        "shade": "Cosmetics Baked Blusher Işıltılı Fırınlanmış Toz Allık - 05 Mocha Taste",
+        "price": 598.4
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:12:06.132Z"
+  },
+  "905": {
+    "shades": [
+      {
+        "shade": "41 Dazzling",
+        "price": 225
+      },
+      {
+        "shade": "47 Peachy",
+        "price": 245.52
+      },
+      {
+        "shade": "46 Harmony",
+        "price": 234.9
+      },
+      {
+        "shade": "43 Scarlett",
+        "price": 204.92
+      },
+      {
+        "shade": "44 Blossom",
+        "price": 174.9
+      },
+      {
+        "shade": "50 Brownie",
+        "price": 140.2
+      },
+      {
+        "shade": "45 Sunlit",
+        "price": 200
+      },
+      {
+        "shade": "49 Heavenly",
+        "price": 259.38
+      },
+      {
+        "shade": "48 Romance",
+        "price": 237.6
+      }
+    ],
+    "count": 9,
+    "fetchedAt": "2026-03-23T17:12:07.443Z"
+  },
+  "906": {
+    "shades": [
+      {
+        "shade": "09 Feelin Butta",
+        "price": 867.9
+      },
+      {
+        "shade": "08 Getting Butta",
+        "price": 877.9
+      },
+      {
+        "shade": "01 My Butta Half",
+        "price": 867.9
+      },
+      {
+        "shade": "Pudra Allık 02 Butta Together",
+        "price": 999.9
+      },
+      {
+        "shade": "07 Butta With Me",
+        "price": 867.9
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:12:08.747Z"
+  },
+  "907": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:09.814Z"
+  },
+  "908": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:11.021Z"
+  },
+  "909": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:12.126Z"
+  },
+  "910": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:13.158Z"
+  },
+  "911": {
+    "shades": [
+      {
+        "shade": "08 Drippin' In Rose",
+        "price": 679.99
+      },
+      {
+        "shade": "07 Bubblegum Burst",
+        "price": 784.9
+      },
+      {
+        "shade": "09 Blush Rush",
+        "price": 679.99
+      },
+      {
+        "shade": "02 Hydra Honey",
+        "price": 679.99
+      },
+      {
+        "shade": "15 Water 'Bout Wine?",
+        "price": 679.99
+      },
+      {
+        "shade": "03 Splash N Spice",
+        "price": 679.99
+      },
+      {
+        "shade": "13 Cranberry Splash",
+        "price": 799.9
+      },
+      {
+        "shade": "10 Berry Thirsty",
+        "price": 679.99
+      }
+    ],
+    "count": 8,
+    "fetchedAt": "2026-03-23T17:12:14.261Z"
+  },
+  "912": {
+    "shades": [
+      {
+        "shade": "06 Rose Haze 3614274254372",
+        "price": 2680
+      },
+      {
+        "shade": "93 Restless Rose 3614274254341",
+        "price": 2680
+      },
+      {
+        "shade": "37 Peachy Nude 3614274254334",
+        "price": 2680
+      },
+      {
+        "shade": "42 Babydoll Pink 3614274254396",
+        "price": 2680
+      },
+      {
+        "shade": "57 Coral Clash 3614274254297",
+        "price": 2680
+      },
+      {
+        "shade": "54 Berry Bang 3614274254303",
+        "price": 2680
+      },
+      {
+        "shade": "83 3614274502176",
+        "price": 2680
+      },
+      {
+        "shade": "87 Pink Voltage 3614274254365",
+        "price": 2680
+      },
+      {
+        "shade": "66 Fuchsia Fizz 3614274727586",
+        "price": 2720
+      },
+      {
+        "shade": "10 Stardust Love 3614274727609",
+        "price": 2720
+      },
+      {
+        "shade": "69 Lavender Lust 3614274254327",
+        "price": 2720
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:12:15.310Z"
+  },
+  "913": {
+    "shades": [
+      {
+        "shade": "NO:3",
+        "price": 100
+      },
+      {
+        "shade": "NO:4",
+        "price": 100
+      },
+      {
+        "shade": "NO:2",
+        "price": 100
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:16.436Z"
+  },
+  "914": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:17.589Z"
+  },
+  "915": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:18.782Z"
+  },
+  "916": {
+    "shades": [
+      {
+        "shade": "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (Lavender Perfume)",
+        "price": 291.92
+      },
+      {
+        "shade": "Blusher (Ballet Shoes)",
+        "price": 291.92
+      },
+      {
+        "shade": "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (Mamas Camel Coat)",
+        "price": 291.92
+      },
+      {
+        "shade": "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (PİCNİC BLANKET)",
+        "price": 291.92
+      },
+      {
+        "shade": "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (CARROT BUTTER CREAM)",
+        "price": 291.92
+      },
+      {
+        "shade": "Blusher (My Candy Shop)",
+        "price": 291.92
+      },
+      {
+        "shade": "Yumuşak Dokulu Kolay Sürülebilen Allık Cotton Blusher (Mandarine Ade)",
+        "price": 291.92
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:12:20.310Z"
+  },
+  "917": {
+    "shades": [
+      {
+        "shade": "LR01 Cherry Liar",
+        "price": 524.92
+      },
+      {
+        "shade": "LR07 Just Peachy",
+        "price": 524.92
+      },
+      {
+        "shade": "LR03 Apricot Hope",
+        "price": 524.92
+      },
+      {
+        "shade": "LR05 Milky Rose",
+        "price": 524.92
+      },
+      {
+        "shade": "LRO4 Rosy Truth",
+        "price": 524.92
+      },
+      {
+        "shade": "LR06 Muted Plum",
+        "price": 524.92
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:12:21.558Z"
+  },
+  "918": {
+    "shades": [
+      {
+        "shade": "4 Dragon Fruit Drip",
+        "price": 475.99
+      },
+      {
+        "shade": "6 Bouncin' Berry",
+        "price": 275.74
+      },
+      {
+        "shade": "3 Guava Gush",
+        "price": 475.99
+      },
+      {
+        "shade": "2 Fig Fizz",
+        "price": 475.99
+      },
+      {
+        "shade": "1 Papaya Plump",
+        "price": 475.99
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:12:22.618Z"
+  },
+  "919": {
+    "shades": [
+      {
+        "shade": "Nude Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+        "price": 1587.64
+      },
+      {
+        "shade": "Peach Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+        "price": 1587.64
+      },
+      {
+        "shade": "Cola Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+        "price": 2436.29
+      },
+      {
+        "shade": "Melon Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+        "price": 1671.2
+      },
+      {
+        "shade": "Pink Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+        "price": 2089
+      },
+      {
+        "shade": "Pansy Pop 3.5g | Uzun Süre Kalıcı, Doğal ve İpeksi Formül",
+        "price": 1939.51
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:12:23.914Z"
+  },
+  "920": {
+    "shades": [
+      {
+        "shade": "03 Warm Apricot",
+        "price": 549.9
+      },
+      {
+        "shade": "05 Burnt Terracotta",
+        "price": 549.9
+      },
+      {
+        "shade": "04 Pinkish Terracotta",
+        "price": 549.9
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:25.871Z"
+  },
+  "921": {
+    "shades": [
+      {
+        "shade": "Lıquıd Blush 52",
+        "price": 280.17
+      },
+      {
+        "shade": "Likit Allık No 57",
+        "price": 207
+      },
+      {
+        "shade": "Pastel Show Your Joy Lıquıd Blush No:53",
+        "price": 252.35
+      },
+      {
+        "shade": "Pastel Show Your Joy Liquid Blush NO:54",
+        "price": 222.27
+      },
+      {
+        "shade": "Likit Allık 58",
+        "price": 221.76
+      },
+      {
+        "shade": "Lıquıd Blush 51",
+        "price": 140.76
+      },
+      {
+        "shade": "Likit Allık 56",
+        "price": 214.83
+      },
+      {
+        "shade": "Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 57",
+        "price": 443.99
+      },
+      {
+        "shade": "Pastel Show By Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 55",
+        "price": 390
+      },
+      {
+        "shade": "Pastel Show By Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 52",
+        "price": 399
+      },
+      {
+        "shade": "Mix & Match Glow Liquid Highlighter 72 & Joy Liquid Blush 53",
+        "price": 435
+      },
+      {
+        "shade": "Likit Allık - Show By Liquid Blush 51",
+        "price": 183.77
+      }
+    ],
+    "count": 12,
+    "fetchedAt": "2026-03-23T17:12:27.189Z"
+  },
+  "922": {
+    "shades": [
+      {
+        "shade": "POP 3 86844",
+        "price": 479.99
+      },
+      {
+        "shade": "Freckle 868",
+        "price": 479.99
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:12:28.271Z"
+  },
+  "923": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:29.363Z"
+  },
+  "924": {
+    "shades": [
+      {
+        "shade": "(05 Cool Apple)",
+        "price": 512.92
+      },
+      {
+        "shade": "(10 Pale Lavender)",
+        "price": 539.92
+      },
+      {
+        "shade": "(09 Pale Peach)",
+        "price": 539.92
+      },
+      {
+        "shade": "(03FriendshipMauve)",
+        "price": 1599
+      },
+      {
+        "shade": "(07 Fluffy Pink)",
+        "price": 1599
+      },
+      {
+        "shade": "PERIPERA Syrupy Tok Cheek (08 SyrupGrapefruit)",
+        "price": 1499
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:12:30.485Z"
+  },
+  "925": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:32.037Z"
+  },
+  "926": {
+    "shades": [
+      {
+        "shade": "BERRY POP – 3’ü 1 arada Göz, Yanak, Dudak",
+        "price": 549
+      },
+      {
+        "shade": "CORAL CRUSH – 3’ü 1 arada Göz, Yanak, Dudak",
+        "price": 549
+      },
+      {
+        "shade": "CHEEKY SUN – 3’ü 1 arada Göz, Yanak, Dudak",
+        "price": 549
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:33.355Z"
+  },
+  "927": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:34.831Z"
+  },
+  "928": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:36.283Z"
+  },
+  "929": {
+    "shades": [
+      {
+        "shade": "Glotion All-In-One Doğal Işıltı 901 - Fair Glow 40 ml",
+        "price": 649.95
+      },
+      {
+        "shade": "Glotion All-ın-one Doğal Işıltı 903 - Medium Glow 40 ml",
+        "price": 714.94
+      },
+      {
+        "shade": "904 Deep Glow",
+        "price": 714.94
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:37.757Z"
+  },
+  "930": {
+    "shades": [
+      {
+        "shade": "L'oréal Paris Glotion All-In-One Doğal Işıltı 902 - Light Glow",
+        "price": 569.99
+      },
+      {
+        "shade": "ın one Doğal Işıltı 903 Medium Glow 40 ml",
+        "price": 714.94
+      },
+      {
+        "shade": "L'Oréal Paris Glotion All-In-One Doğal Işıltı 904 - Deep Glow",
+        "price": 714.94
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:39.134Z"
+  },
+  "931": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:40.268Z"
+  },
+  "932": {
+    "shades": [
+      {
+        "shade": "Pearl 01",
+        "price": 475
+      },
+      {
+        "shade": "Sunstone 02",
+        "price": 449.95
+      },
+      {
+        "shade": "Carnelian 03",
+        "price": 449.95
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:41.356Z"
+  },
+  "933": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:42.555Z"
+  },
+  "934": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:43.702Z"
+  },
+  "935": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:45.030Z"
+  },
+  "936": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:46.165Z"
+  },
+  "937": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:47.593Z"
+  },
+  "938": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:48.867Z"
+  },
+  "939": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:50.197Z"
+  },
+  "940": {
+    "shades": [
+      {
+        "shade": "620 Glassy Pink Ballet",
+        "price": 626.95
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:12:51.333Z"
+  },
+  "941": {
+    "shades": [
+      {
+        "shade": "Lemon Meringue",
+        "price": 611.99
+      },
+      {
+        "shade": "Blueberry Muffin",
+        "price": 611.99
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:12:52.453Z"
+  },
+  "942": {
+    "shades": [
+      {
+        "shade": "201 Işıltılı Likit Aydınlatıcı",
+        "price": 275.86
+      },
+      {
+        "shade": "202 Işıltılı Likit Aydınlatıcı",
+        "price": 276.53
+      },
+      {
+        "shade": "204 Işıltılı Likit Aydınlatıcı",
+        "price": 296.99
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:12:53.607Z"
+  },
+  "943": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:56.372Z"
+  },
+  "944": {
+    "shades": [
+      {
+        "shade": "Sirius İnci",
+        "price": 345.52
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:12:57.400Z"
+  },
+  "945": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:58.532Z"
+  },
+  "946": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:12:59.644Z"
+  },
+  "947": {
+    "shades": [
+      {
+        "shade": "Cosmetics Baked Highlighter Işıltılı Fırınlanmış Toz Aydınlatıcı - 02 Sunkiss",
+        "price": 429.9
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:13:01.095Z"
+  },
+  "948": {
+    "shades": [
+      {
+        "shade": "15 U Butta Werk",
+        "price": 747.99
+      },
+      {
+        "shade": "10 Glaze It Butta",
+        "price": 879.9
+      },
+      {
+        "shade": "45 Butta In Black",
+        "price": 747.99
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:13:02.296Z"
+  },
+  "949": {
+    "shades": [
+      {
+        "shade": "Highlighter (#8 White)",
+        "price": 473.54
+      },
+      {
+        "shade": "Highlighter (#5 Mermaid)",
+        "price": 473.54
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:13:03.421Z"
+  },
+  "950": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:04.665Z"
+  },
+  "951": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:05.915Z"
+  },
+  "952": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:07.123Z"
+  },
+  "953": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:08.445Z"
+  },
+  "954": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:09.571Z"
+  },
+  "955": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:10.797Z"
+  },
+  "956": {
+    "shades": [
+      {
+        "shade": "m.ake up maruderm Islak Bitişli Likit Aydınlatıcı – Liquid Highlighter Pale Gold",
+        "price": 600
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:13:12.106Z"
+  },
+  "957": {
+    "shades": [
+      {
+        "shade": "wonderway Highlighter - Göz Kalemi Ile",
+        "price": 245.1
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:13:13.417Z"
+  },
+  "958": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:14.713Z"
+  },
+  "959": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:16.246Z"
+  },
+  "960": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:17.484Z"
+  },
+  "961": {
+    "shades": [
+      {
+        "shade": "Highlihter Palette",
+        "price": 849
+      },
+      {
+        "shade": "Stronbıng Hıghlıghter Palette Aydınlatıcı",
+        "price": 928
+      },
+      {
+        "shade": "Aydınlatıcı Paleti  Strobing Highlighter Palette 8691190965914",
+        "price": 742
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:13:19.288Z"
+  },
+  "962": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:20.417Z"
+  },
+  "963": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:21.597Z"
+  },
+  "964": {
+    "shades": [
+      {
+        "shade": "Sarı Işıltılı Likit Aydınlatıcı - Liquid Highlighter 102 - Yüz & Vücut İçin - 30 ml",
+        "price": 895
+      },
+      {
+        "shade": "Kahverengi Işıltılı Likit Aydınlatıcı - Liquid Highlighter - 103 Yüz & Vücut İçin - 45 ml",
+        "price": 899.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:13:22.758Z"
+  },
+  "965": {
+    "shades": [
+      {
+        "shade": "Daylight Cream Highlighter - Krem Aydınlatıcı 14 Milkyway",
+        "price": 311.85
+      },
+      {
+        "shade": "Profashion Daylight Highlighter No:13",
+        "price": 208
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:13:24.144Z"
+  },
+  "966": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:25.281Z"
+  },
+  "967": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:26.351Z"
+  },
+  "968": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:27.764Z"
+  },
+  "969": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:29.196Z"
+  },
+  "970": {
+    "shades": [
+      {
+        "shade": "İkili Aydınlatıcı Pudra Bronz 7165",
+        "price": 1437.44
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:13:30.290Z"
+  },
+  "971": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:31.789Z"
+  },
+  "972": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:32.959Z"
+  },
+  "973": {
+    "shades": [
+      {
+        "shade": "Moonrise | Kontür Nötr Kahve | Yüz Şekillendirici Nemlendirici Makyaj",
+        "price": 256.4
+      },
+      {
+        "shade": "Eclipse | Kontür Nötr Koyu Kahve | Yüz Şekillendirici Nemlendirici Makyaj",
+        "price": 269.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:13:34.059Z"
+  },
+  "974": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:35.208Z"
+  },
+  "975": {
+    "shades": [
+      {
+        "shade": "(ORTA TON) Stick Contour 002 Medıum 8690604554867",
+        "price": 449.99
+      },
+      {
+        "shade": "8690604554874",
+        "price": 549.99
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:13:36.804Z"
+  },
+  "976": {
+    "shades": [
+      {
+        "shade": "New Well Kontür - Prof. Contour Stick - Çift Taraflı 8680923304953",
+        "price": 249
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:13:38.121Z"
+  },
+  "977": {
+    "shades": [
+      {
+        "shade": "002 Hot Chclate 8682536093828",
+        "price": 319.49
+      },
+      {
+        "shade": "003 Deep 8682536093842",
+        "price": 319.49
+      },
+      {
+        "shade": "8682536093804",
+        "price": 949
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:13:39.272Z"
+  },
+  "978": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:40.362Z"
+  },
+  "979": {
+    "shades": [
+      {
+        "shade": "stıck kontür wınk",
+        "price": 418.95
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:13:41.486Z"
+  },
+  "980": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:42.597Z"
+  },
+  "981": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:43.761Z"
+  },
+  "982": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:44.822Z"
+  },
+  "983": {
+    "shades": [
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 04 Soft Peach",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 05 Desert Rose",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 01 Pinky Beach",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 03 Coral",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 14 Dreamy Coral",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 13 Deep Pink",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 10 Pink Paradise",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 02 Pink In Summer",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 11 Sunset",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 12 Rosy Glow",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 09 Dusty Pink",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 08 Bronze Show",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Blusher Toz Allık - 07 Star",
+        "price": 329.9
+      }
+    ],
+    "count": 13,
+    "fetchedAt": "2026-03-23T17:13:46.950Z"
+  },
+  "984": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:48.388Z"
+  },
+  "985": {
+    "shades": [
+      {
+        "shade": "02 All Buttad Up",
+        "price": 747.99
+      },
+      {
+        "shade": "04 Butta Buscuit",
+        "price": 747.99
+      },
+      {
+        "shade": "05 Butta Off",
+        "price": 747.99
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:13:49.623Z"
+  },
+  "986": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:50.915Z"
+  },
+  "987": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:52.009Z"
+  },
+  "988": {
+    "shades": [
+      {
+        "shade": "01 Fair 3614274212051",
+        "price": 3220
+      },
+      {
+        "shade": "C.E. Skin Transforming Bronzer 04 Medium 3614274110104",
+        "price": 3910
+      },
+      {
+        "shade": "C.E. Skin Transforming Bronzer 05 Tan 3614274110111",
+        "price": 3220
+      },
+      {
+        "shade": "C.E. Skin Transforming Bronzer 02 Light 3614274110081",
+        "price": 3220
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:13:53.071Z"
+  },
+  "989": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:54.306Z"
+  },
+  "990": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:55.679Z"
+  },
+  "991": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:56.924Z"
+  },
+  "992": {
+    "shades": [
+      {
+        "shade": "55",
+        "price": 549.94
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:13:58.042Z"
+  },
+  "993": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:13:59.282Z"
+  },
+  "994": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:00.439Z"
+  },
+  "995": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:01.997Z"
+  },
+  "996": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:03.053Z"
+  },
+  "997": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:04.137Z"
+  },
+  "998": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:05.262Z"
+  },
+  "999": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:06.404Z"
+  },
+  "1000": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:07.766Z"
+  },
+  "1001": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:08.887Z"
+  },
+  "1002": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:10.154Z"
+  },
+  "1003": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:11.430Z"
+  },
+  "1004": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:12.575Z"
+  },
+  "1005": {
+    "shades": [
+      {
+        "shade": "(SOĞUK ALT TON) Stay Perfect Concealer 001 Fair 8682536085441",
+        "price": 427.49
+      },
+      {
+        "shade": "(SOĞUK ALT TON) Stay Perfect Concealer 003 Soft Beige 8682536085489",
+        "price": 588.88
+      },
+      {
+        "shade": "(SOĞUK ALT TON) Stay Perfect Concealer 006 Medium Beige 8682536085540",
+        "price": 427.49
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 012SALMONCOVER - 8682536111591",
+        "price": 427.49
+      },
+      {
+        "shade": "(SOĞUK ALT TON) Stay Perfect Concealer 007 Light Beige 8682536085564",
+        "price": 480
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 013MANGOFILTER - 8682536111614",
+        "price": 427.49
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 011MATCHAVEIL - 8682536111577",
+        "price": 427.49
+      },
+      {
+        "shade": "(SOĞUK ALT TON) Stay Perfect Concealer 004 Ivory 8682536085502",
+        "price": 735
+      },
+      {
+        "shade": "(SOĞUK ALT TON) Stay Perfect Concealer 005 Beige 8682536085526",
+        "price": 800
+      },
+      {
+        "shade": "(SARI ALT TON) Stay Perfect Concealer 010 Toffee 8682536085625",
+        "price": 555
+      },
+      {
+        "shade": "009 Tan 8682536085601",
+        "price": 570.12
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı",
+        "price": 830
+      }
+    ],
+    "count": 12,
+    "fetchedAt": "2026-03-23T17:14:13.959Z"
+  },
+  "1006": {
+    "shades": [
+      {
+        "shade": "01 Fair Concealer",
+        "price": 919
+      },
+      {
+        "shade": "03 Vanilla Concealer",
+        "price": 999.9
+      },
+      {
+        "shade": "2.5 Medium Vanilla Concealer",
+        "price": 999.9
+      },
+      {
+        "shade": "04 Beige Concealer",
+        "price": 999
+      },
+      {
+        "shade": "05 Golden Concealer",
+        "price": 856.79
+      },
+      {
+        "shade": "5.7 Light Tan Concealer",
+        "price": 999.99
+      },
+      {
+        "shade": "07 Medium Concealer",
+        "price": 949.9
+      },
+      {
+        "shade": "06 Tan Concealer",
+        "price": 856.79
+      },
+      {
+        "shade": "08 Sand Concealer",
+        "price": 856.79
+      }
+    ],
+    "count": 9,
+    "fetchedAt": "2026-03-23T17:14:15.022Z"
+  },
+  "1007": {
+    "shades": [
+      {
+        "shade": "Cosmetics Mineral Concealer Spf 15 Yoğun Kapatıcı Metal Başlıklı Göz Altı Kapatıcısı - 201 Açık",
+        "price": 429.9
+      },
+      {
+        "shade": "Cosmetics Mineral Concealer Spf 15 Yoğun Kapatıcı Metal Başlıklı Göz Altı Kapatıcısı - 203 Orta Koyu",
+        "price": 429.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:14:16.574Z"
+  },
+  "1008": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:17.688Z"
+  },
+  "1009": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:18.877Z"
+  },
+  "1010": {
+    "shades": [
+      {
+        "shade": "02 Light Concealer",
+        "price": 856.79
+      },
+      {
+        "shade": "03 Vanilla Concealer",
+        "price": 999.9
+      },
+      {
+        "shade": "2.5 Medium Vanilla Concealer",
+        "price": 999.9
+      },
+      {
+        "shade": "04 Beige Concealer",
+        "price": 999
+      },
+      {
+        "shade": "05 Golden Concealer",
+        "price": 856.79
+      },
+      {
+        "shade": "06 Tan Concealer",
+        "price": 856.79
+      },
+      {
+        "shade": "07 Medium Concealer",
+        "price": 949.9
+      },
+      {
+        "shade": "5.7 Light Tan Concealer",
+        "price": 999.99
+      },
+      {
+        "shade": "08 Sand Concealer",
+        "price": 856.79
+      }
+    ],
+    "count": 9,
+    "fetchedAt": "2026-03-23T17:14:20.004Z"
+  },
+  "1011": {
+    "shades": [
+      {
+        "shade": "Close It Likit Kapatıcı Pale Almond 132",
+        "price": 222
+      },
+      {
+        "shade": "Close It Likit Kapatıcı - 650 Pink Sand (Pembe Alt Tonlu)",
+        "price": 125
+      },
+      {
+        "shade": "134 Sand Kategori: Kapatıcı",
+        "price": 219.9
+      },
+      {
+        "shade": "Close It Likit Kapatıcı 135",
+        "price": 218.9
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:14:21.303Z"
+  },
+  "1012": {
+    "shades": [
+      {
+        "shade": "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 30 Natural Ivory",
+        "price": 379.9
+      },
+      {
+        "shade": "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 40 Soft Ivory",
+        "price": 379.9
+      },
+      {
+        "shade": "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 50 Medium Beige",
+        "price": 379.9
+      },
+      {
+        "shade": "Cosmetics New Era Skin Protecting Concealer Nemli Bitişli Göz Altı Kapatıcısı - 60 Deep Beige",
+        "price": 379.9
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:14:22.712Z"
+  },
+  "1013": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:24.222Z"
+  },
+  "1014": {
+    "shades": [
+      {
+        "shade": "Cosmetics Conceal & Protect Concealer Likit Göz Altı Kapatıcısı - 05 Soft Ivory",
+        "price": 249.9
+      },
+      {
+        "shade": "Cosmetics Conceal & Protect Concealer Likit Göz Altı Kapatıcısı - 04 Porcelain",
+        "price": 249.9
+      },
+      {
+        "shade": "Cosmetics Conceal & Protect Concealer Likit Göz Altı Kapatıcısı - 03 Soft Sand",
+        "price": 249.9
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:14:25.530Z"
+  },
+  "1015": {
+    "shades": [
+      {
+        "shade": "(AÇIKORTA TON)",
+        "price": 114.62
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:14:26.613Z"
+  },
+  "1016": {
+    "shades": [
+      {
+        "shade": "Concealer – MEDIUM",
+        "price": 399
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:14:27.688Z"
+  },
+  "1017": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:29.011Z"
+  },
+  "1018": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:30.342Z"
+  },
+  "1019": {
+    "shades": [
+      {
+        "shade": "1n 11 ml",
+        "price": 824.95
+      },
+      {
+        "shade": "2r 11 ml",
+        "price": 739.99
+      },
+      {
+        "shade": "3r 11 ml",
+        "price": 824.95
+      },
+      {
+        "shade": "4d Light Medium 11 ml",
+        "price": 719
+      },
+      {
+        "shade": "1r 11 ml",
+        "price": 979
+      },
+      {
+        "shade": "4n 11 ml",
+        "price": 824.95
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:14:31.645Z"
+  },
+  "1020": {
+    "shades": [
+      {
+        "shade": "Medium",
+        "price": 381.6
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:14:32.706Z"
+  },
+  "1021": {
+    "shades": [
+      {
+        "shade": "23(Sand)",
+        "price": 618.27
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:14:33.936Z"
+  },
+  "1022": {
+    "shades": [
+      {
+        "shade": "(SICAK ALT TON) Stay Perfect Concealer 002 Light 8682536085465",
+        "price": 455
+      },
+      {
+        "shade": "003 Soft Beige 8682536085489",
+        "price": 588.88
+      },
+      {
+        "shade": "006 Medium Beige 8682536085540",
+        "price": 427.49
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 012SALMONCOVER - 8682536111591",
+        "price": 427.49
+      },
+      {
+        "shade": "007 Light Beige 8682536085564",
+        "price": 480
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 013MANGOFILTER - 8682536111614",
+        "price": 427.49
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı - 011MATCHAVEIL - 8682536111577",
+        "price": 427.49
+      },
+      {
+        "shade": "004 Ivory 8682536085502",
+        "price": 735
+      },
+      {
+        "shade": "005 Beige 8682536085526",
+        "price": 800
+      },
+      {
+        "shade": "Stay Perfect Yüksek Pigmentli & Yarı Mat Bitişli Likit Kapatıcı",
+        "price": 830
+      },
+      {
+        "shade": "(SARI ALT TON) Stay Perfect Concealer 010 Toffee 8682536085625",
+        "price": 555
+      },
+      {
+        "shade": "(SICAK ALT TON) Stay Perfect Concealer 009 Tan 8682536085601",
+        "price": 570.12
+      }
+    ],
+    "count": 12,
+    "fetchedAt": "2026-03-23T17:14:35.139Z"
+  },
+  "1023": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:37.037Z"
+  },
+  "1024": {
+    "shades": [
+      {
+        "shade": "305n Concealer 3614273988520",
+        "price": 1750
+      },
+      {
+        "shade": "105w Concealer 3614273988452",
+        "price": 2500
+      },
+      {
+        "shade": "230w Concealer 3614273988506",
+        "price": 2500
+      },
+      {
+        "shade": "400w Concealer 3614273988575",
+        "price": 1750
+      },
+      {
+        "shade": "450w Concealer 3614273988636",
+        "price": 1750
+      },
+      {
+        "shade": "330n Concealer 3614273988551",
+        "price": 2125
+      },
+      {
+        "shade": "325c Concealer 3614273988544",
+        "price": 1750
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:14:38.077Z"
+  },
+  "1025": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:39.325Z"
+  },
+  "1026": {
+    "shades": [
+      {
+        "shade": "15",
+        "price": 549.95
+      },
+      {
+        "shade": "25",
+        "price": 604.94
+      },
+      {
+        "shade": "20",
+        "price": 604.94
+      },
+      {
+        "shade": "30",
+        "price": 604.94
+      },
+      {
+        "shade": "35",
+        "price": 604.94
+      }
+    ],
+    "count": 5,
+    "fetchedAt": "2026-03-23T17:14:40.513Z"
+  },
+  "1027": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:41.845Z"
+  },
+  "1028": {
+    "shades": [
+      {
+        "shade": "Medium 822",
+        "price": 122
+      },
+      {
+        "shade": "Golden Amber 623",
+        "price": 244
+      },
+      {
+        "shade": "Light Sand 622",
+        "price": 244
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:14:42.899Z"
+  },
+  "1029": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:44.195Z"
+  },
+  "1030": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:45.274Z"
+  },
+  "1031": {
+    "shades": [
+      {
+        "shade": "01 Açık",
+        "price": 429.9
+      },
+      {
+        "shade": "03 Orta Koyu",
+        "price": 439.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:14:46.375Z"
+  },
+  "1032": {
+    "shades": [
+      {
+        "shade": "01",
+        "price": 149.41
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:14:47.715Z"
+  },
+  "1033": {
+    "shades": [
+      {
+        "shade": "00 Light",
+        "price": 429.9
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:14:48.869Z"
+  },
+  "1034": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:50.236Z"
+  },
+  "1035": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:51.362Z"
+  },
+  "1036": {
+    "shades": [
+      {
+        "shade": "2N Light/Medium (Neutral) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "1c Light (cool) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "2W Light/Medium (Warm) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "2C Light/Medium (Cool) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "1w Light (WARM) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "3N Medium (Neutral) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "4N Medium Deep (Neutral) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "2.5C Light/Medium (Cool Pink)",
+        "price": 1984.75
+      },
+      {
+        "shade": "3.5C Medium (Cool Rosy) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "3c Medium (COOL) 12ml",
+        "price": 1984.75
+      },
+      {
+        "shade": "3W Medium (Warm) 12ml",
+        "price": 1984.75
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:14:52.587Z"
+  },
+  "1037": {
+    "shades": [
+      {
+        "shade": "62 Ivory",
+        "price": 352
+      },
+      {
+        "shade": "63 Göz Kremi Göz Altı Kapatıcısı Milkshake",
+        "price": 368.28
+      },
+      {
+        "shade": "64 Medium Light",
+        "price": 375
+      },
+      {
+        "shade": "65 Honeybun",
+        "price": 327.74
+      },
+      {
+        "shade": "66 Deep Medium",
+        "price": 349
+      },
+      {
+        "shade": "Göz Kremi Nemlendirici Saten Kapatıcı - Göz Kremi Göz Altı Kapatıcı 66 Deep Medium4,3 ml",
+        "price": 335
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:14:53.957Z"
+  },
+  "1038": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:55.088Z"
+  },
+  "1039": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:56.112Z"
+  },
+  "1040": {
+    "shades": [
+      {
+        "shade": "1n Light (NEUTRAL) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "1c Light (cool) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "3N Medium (Neutral) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "1w Light (WARM) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "2C Light/Medium (Cool) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "2W Light/Medium (Warm) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "2.5C Light/Medium (Cool Pink)",
+        "price": 1868
+      },
+      {
+        "shade": "4N Medium Deep (Neutral) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "3.5C Medium (Cool Rosy) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "3W Medium (Warm) 12ml",
+        "price": 1868
+      },
+      {
+        "shade": "3c Medium (COOL) 12ml",
+        "price": 1868
+      }
+    ],
+    "count": 11,
+    "fetchedAt": "2026-03-23T17:14:57.710Z"
+  },
+  "1041": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:14:58.798Z"
+  },
+  "1042": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:00.212Z"
+  },
+  "1043": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:01.254Z"
+  },
+  "1044": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:03.046Z"
+  },
+  "1045": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:04.531Z"
+  },
+  "1046": {
+    "shades": [
+      {
+        "shade": "Light Tinted Moisturizer SPF 50 Renk Ton Eşitleyici Aydınlatıcı Krem 00 Açık Ton",
+        "price": 445
+      },
+      {
+        "shade": "Glowing Skin Tinted Moisturizer 50 SPF Işıltılı Aydınlatıcı Krem",
+        "price": 450
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:15:05.878Z"
+  },
+  "1047": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:07.254Z"
+  },
+  "1048": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:08.396Z"
+  },
+  "1049": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:09.830Z"
+  },
+  "1050": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:11.410Z"
+  },
+  "1051": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:12.587Z"
+  },
+  "1052": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:13.725Z"
+  },
+  "1053": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:14.846Z"
+  },
+  "1054": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:16.165Z"
+  },
+  "1055": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:17.183Z"
+  },
+  "1056": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:18.738Z"
+  },
+  "1057": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:19.872Z"
+  },
+  "1058": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:21.034Z"
+  },
+  "1059": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:22.181Z"
+  },
+  "1060": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:23.279Z"
+  },
+  "1061": {
+    "shades": [
+      {
+        "shade": "Farmasi Işıltılı Makyaj Bazı - Vfx Pro Camera Ready Strobe Cream 25 Ml 8690131112851",
+        "price": 449.99
+      },
+      {
+        "shade": "Farmasi Işıltılı Makyaj Bazı - Vfx Pro Camera Ready Strobe Cream 25 Ml",
+        "price": 449.99
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:15:24.349Z"
+  },
+  "1062": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:25.502Z"
+  },
+  "1063": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:26.644Z"
+  },
+  "1064": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:27.918Z"
+  },
+  "1065": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:29.129Z"
+  },
+  "1066": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:30.248Z"
+  },
+  "1067": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:31.351Z"
+  },
+  "1068": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:32.407Z"
+  },
+  "1069": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:33.801Z"
+  },
+  "1070": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:34.976Z"
+  },
+  "1071": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:36.300Z"
+  },
+  "1072": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:37.481Z"
+  },
+  "1073": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:38.583Z"
+  },
+  "1074": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:40.450Z"
+  },
+  "1075": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:41.616Z"
+  },
+  "1076": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:42.688Z"
+  },
+  "1077": {
+    "shades": [
+      {
+        "shade": "Toz Pudra Translucent Yarı Saydam 32 gr",
+        "price": 680
+      },
+      {
+        "shade": "Baking Toz Pudra -Fırınlanmış Sarı Toz Pudra-32 Gr",
+        "price": 554.99
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:15:44.070Z"
+  },
+  "1078": {
+    "shades": [
+      {
+        "shade": "Kahverengi Saç & Sakal Toz Kapatıcı Dolgunlaştırıcı Pudra – Doğal Topik Etki 10gr",
+        "price": 960
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:15:45.099Z"
+  },
+  "1079": {
+    "shades": [
+      {
+        "shade": "Flormar Set'n Go Nemlendirici & Parlama Karşıtı Sabitleyici Kompakt Pudra",
+        "price": 749.99
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:15:46.176Z"
+  },
+  "1080": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:47.873Z"
+  },
+  "1081": {
+    "shades": [
+      {
+        "shade": "Cosmetics Banana Setting Powder Mat Bitişli Makyaj Sabitleyici Toz Pudra",
+        "price": 449.9
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:15:49.611Z"
+  },
+  "1082": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:50.784Z"
+  },
+  "1083": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:52.113Z"
+  },
+  "1084": {
+    "shades": [
+      {
+        "shade": "01 Sugar Serve",
+        "price": 577.99
+      },
+      {
+        "shade": "03 Peach Posse",
+        "price": 577.99
+      },
+      {
+        "shade": "05 Banana Brat",
+        "price": 577.99
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:15:53.257Z"
+  },
+  "1085": {
+    "shades": [
+      {
+        "shade": "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 02 Natural Beige",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 03 Medium Beige",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 04 Sand",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 06 Dark Honey",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Powder Mat Bitişli Toz Pudra - 05 Honey Beige",
+        "price": 329.9
+      },
+      {
+        "shade": "Cosmetics Luminous Silk Compact Powder 07 Apricot Mat Bitişli Toz Yüz Pudrası Beige",
+        "price": 541.4
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:15:54.710Z"
+  },
+  "1086": {
+    "shades": [
+      {
+        "shade": "02",
+        "price": 132
+      },
+      {
+        "shade": "03",
+        "price": 149.9
+      },
+      {
+        "shade": "04",
+        "price": 149.9
+      },
+      {
+        "shade": "08",
+        "price": 200
+      },
+      {
+        "shade": "05",
+        "price": 200
+      },
+      {
+        "shade": "06",
+        "price": 200
+      }
+    ],
+    "count": 6,
+    "fetchedAt": "2026-03-23T17:15:56.463Z"
+  },
+  "1087": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:57.756Z"
+  },
+  "1088": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:15:59.346Z"
+  },
+  "1089": {
+    "shades": [
+      {
+        "shade": "Sand",
+        "price": 219.78
+      },
+      {
+        "shade": "Neutral Sand",
+        "price": 121.5
+      },
+      {
+        "shade": "Neutral Honey",
+        "price": 121.5
+      },
+      {
+        "shade": "Beige 434",
+        "price": 239.12
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:16:00.497Z"
+  },
+  "1090": {
+    "shades": [
+      {
+        "shade": "Pudra - Compact Powder 01 Pudra",
+        "price": 299.9
+      },
+      {
+        "shade": "Pudra - Compact Powder 03 Pudra",
+        "price": 299.9
+      },
+      {
+        "shade": "Pudra - Compact Powder 5,5 Pudra",
+        "price": 275
+      },
+      {
+        "shade": "Pudra - Compact Powder 6,5 Pudra",
+        "price": 280
+      },
+      {
+        "shade": "Pudra - Compact Powder 04 Pudra",
+        "price": 299.9
+      },
+      {
+        "shade": "Pudra - Compact Powder 07 Pudra",
+        "price": 275
+      },
+      {
+        "shade": "Pudra - Compact Powder 02 Pudra",
+        "price": 299.9
+      }
+    ],
+    "count": 7,
+    "fetchedAt": "2026-03-23T17:16:01.729Z"
+  },
+  "1091": {
+    "shades": [
+      {
+        "shade": "Shimmery Pink Açık Pembe Işıltılı Sabitleyici Toz Pudra 12 GR.",
+        "price": 320.8
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:02.873Z"
+  },
+  "1092": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:03.996Z"
+  },
+  "1093": {
+    "shades": [
+      {
+        "shade": "Pastel Sabitleyici Pudra - Profashion Final Touch Fixing Powder No 00",
+        "price": 316.8
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:05.323Z"
+  },
+  "1094": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:06.458Z"
+  },
+  "1095": {
+    "shades": [
+      {
+        "shade": "Renk:01 Çok Açık Beyaz",
+        "price": 749.9
+      },
+      {
+        "shade": "Renk:04 Açık Buğday Ten",
+        "price": 749.9
+      },
+      {
+        "shade": "Renk:02 Açık Beyaz Ten",
+        "price": 749.9
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:16:07.825Z"
+  },
+  "1096": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:09.399Z"
+  },
+  "1097": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:10.471Z"
+  },
+  "1098": {
+    "shades": [
+      {
+        "shade": "Transparan Toz Pudra High Definition Finishing Powder Translucent 8 g",
+        "price": 2000
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:11.698Z"
+  },
+  "1099": {
+    "shades": [
+      {
+        "shade": "Medium",
+        "price": 349.6
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:12.772Z"
+  },
+  "1100": {
+    "shades": [
+      {
+        "shade": "Yarı Mat Bitişli Fırınlanmış Kompakt Pudra",
+        "price": 517.49
+      },
+      {
+        "shade": "Yoğun Pigmentli Fırınlanmış Mat Pudra  - Baked Powder - 034 Honey Beige - 8682536053617",
+        "price": 517.49
+      },
+      {
+        "shade": "Flormar Yüksek Pigmentli & Doğal Işıltılı Fırınlanmış Kompakt Pudra",
+        "price": 517.49
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:16:13.857Z"
+  },
+  "1101": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:15.329Z"
+  },
+  "1102": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:16.756Z"
+  },
+  "1103": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:18.070Z"
+  },
+  "1104": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:19.118Z"
+  },
+  "1105": {
+    "shades": [
+      {
+        "shade": "Donuk Cilt Görünümünü Gidererek Makyajı Sabitleyen Ultra Hafif Pudra Airy Pot Pressed Powder (PİNK)",
+        "price": 548.17
+      },
+      {
+        "shade": "Kızarık Görünümü Azaltarak Makyajı Sabitleyen Ultra Hafif Pudra Airy Pot Pressed Powder (Mint)",
+        "price": 644.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:16:20.281Z"
+  },
+  "1106": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:21.423Z"
+  },
+  "1107": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:22.750Z"
+  },
+  "1108": {
+    "shades": [
+      {
+        "shade": "Emily Long-lasting Lip Pencil 203 Dudak Kalemi",
+        "price": 100.56
+      },
+      {
+        "shade": "Emily Dudak Kalemi No:203",
+        "price": 105.2
+      },
+      {
+        "shade": "Emily Long Lasting Lip Pencil Dudak Kalemi 203 8691190522032",
+        "price": 119
+      },
+      {
+        "shade": "Emily Long Lasting Lip Pencil - 203",
+        "price": 109.1
+      }
+    ],
+    "count": 4,
+    "fetchedAt": "2026-03-23T17:16:24.082Z"
+  },
+  "1109": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:25.938Z"
+  },
+  "1110": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:27.088Z"
+  },
+  "1111": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:29.275Z"
+  },
+  "1112": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:30.615Z"
+  },
+  "1113": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:31.998Z"
+  },
+  "1114": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:33.490Z"
+  },
+  "1115": {
+    "shades": [
+      {
+        "shade": "Kolay Keskin Uygulama",
+        "price": 299.9
+      },
+      {
+        "shade": "Uzun Süre Kalıcı, Suya Dayanıklı Dudak Kalemi, Transfer Yapmaz, Dolgun Görünüm 6'lı Set Kutulu",
+        "price": 2249.9
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:16:34.516Z"
+  },
+  "1116": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:36.153Z"
+  },
+  "1117": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:37.529Z"
+  },
+  "1118": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:38.588Z"
+  },
+  "1119": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:39.739Z"
+  },
+  "1120": {
+    "shades": [
+      {
+        "shade": "07 Big Lift",
+        "price": 467.44
+      },
+      {
+        "shade": "06 Line Leader",
+        "price": 570
+      },
+      {
+        "shade": "04 Out of Line",
+        "price": 467.44
+      },
+      {
+        "shade": "011 Upstate",
+        "price": 467.44
+      },
+      {
+        "shade": "Kırmızı Dudak Kalemi 10 Main Character",
+        "price": 467.44
+      },
+      {
+        "shade": "013 Maybe It's",
+        "price": 467.44
+      },
+      {
+        "shade": "012 Crop Top",
+        "price": 467.44
+      },
+      {
+        "shade": "Pembe Tonlu Dudak Kalemi 09 Peaking",
+        "price": 467.44
+      }
+    ],
+    "count": 8,
+    "fetchedAt": "2026-03-23T17:16:40.868Z"
+  },
+  "1121": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:41.939Z"
+  },
+  "1122": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:43.049Z"
+  },
+  "1123": {
+    "shades": [
+      {
+        "shade": "Long Lasting Lip Liner Dudak Kalemi 205",
+        "price": 229
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:44.195Z"
+  },
+  "1124": {
+    "shades": [
+      {
+        "shade": "MUJGAN Rose 12'li Ultra Yağlı Dudak Kalemi",
+        "price": 300
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:45.511Z"
+  },
+  "1125": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:46.553Z"
+  },
+  "1126": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:47.603Z"
+  },
+  "1127": {
+    "shades": [
+      {
+        "shade": "04 Berry Rose Nude",
+        "price": 299.9
+      },
+      {
+        "shade": "05 Roselle Pembe",
+        "price": 299.9
+      },
+      {
+        "shade": "03 Soft Bloom Nude",
+        "price": 299.9
+      },
+      {
+        "shade": "01 Muted Peach Nude",
+        "price": 299.9
+      },
+      {
+        "shade": "10 Chocolate Brown Kahverengi",
+        "price": 299.9
+      },
+      {
+        "shade": "08 Scarlet Red Kırmızı",
+        "price": 299.9
+      },
+      {
+        "shade": "07 Cherry Silk Kırmızı",
+        "price": 295
+      },
+      {
+        "shade": "09 Espresso Dream Kahverengi",
+        "price": 299.9
+      },
+      {
+        "shade": "06 Pink Pembe",
+        "price": 299
+      }
+    ],
+    "count": 9,
+    "fetchedAt": "2026-03-23T17:16:49.085Z"
+  },
+  "1128": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:50.172Z"
+  },
+  "1129": {
+    "shades": [
+      {
+        "shade": "211 Long-lastıng Dudak Kalemi",
+        "price": 119.9
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:51.636Z"
+  },
+  "1130": {
+    "shades": [
+      {
+        "shade": "KIKO Dudak Kalemi - New Creamy Colour Comfort Lip Liner 05 Pinkish Brown",
+        "price": 1410
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:52.846Z"
+  },
+  "1131": {
+    "shades": [
+      {
+        "shade": "Kalemi",
+        "price": 247.49
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:53.916Z"
+  },
+  "1132": {
+    "shades": [
+      {
+        "shade": "52 Caramel Nude",
+        "price": 399.9
+      },
+      {
+        "shade": "55 Cinnamon",
+        "price": 399.9
+      },
+      {
+        "shade": "51 Pinky Beige",
+        "price": 399.9
+      },
+      {
+        "shade": "67 Crimson Pink",
+        "price": 399.9
+      },
+      {
+        "shade": "54 Spicy Terracotta",
+        "price": 399.9
+      },
+      {
+        "shade": "65 Rusty Rose",
+        "price": 399.9
+      },
+      {
+        "shade": "66 Antique Pink",
+        "price": 399.9
+      },
+      {
+        "shade": "60 Maroon",
+        "price": 399.9
+      },
+      {
+        "shade": "63 Reddish Brown",
+        "price": 890
+      },
+      {
+        "shade": "62 Chesnut Red",
+        "price": 399.9
+      },
+      {
+        "shade": "56 Wild Red",
+        "price": 399.9
+      },
+      {
+        "shade": "68 Dusty Carmine",
+        "price": 399.9
+      },
+      {
+        "shade": "59 Plum",
+        "price": 399.9
+      },
+      {
+        "shade": "61 Deep Puce",
+        "price": 399.9
+      },
+      {
+        "shade": "57 Raspberry",
+        "price": 399.9
+      },
+      {
+        "shade": "58 Cherry",
+        "price": 399.9
+      }
+    ],
+    "count": 16,
+    "fetchedAt": "2026-03-23T17:16:55.032Z"
+  },
+  "1133": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:56.220Z"
+  },
+  "1134": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:57.259Z"
+  },
+  "1135": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:16:58.380Z"
+  },
+  "1136": {
+    "shades": [
+      {
+        "shade": "Suya Dayanıklı Dudak Kalemi - Waterproff Dudak Kalemi 101",
+        "price": 169
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:16:59.525Z"
+  },
+  "1137": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:01.035Z"
+  },
+  "1138": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:02.529Z"
+  },
+  "1139": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:03.745Z"
+  },
+  "1140": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:04.771Z"
+  },
+  "1141": {
+    "shades": [
+      {
+        "shade": "09 Warm Brown",
+        "price": 399.9
+      },
+      {
+        "shade": "07 Spicy Rose",
+        "price": 399.9
+      },
+      {
+        "shade": "02 Dirty Nude",
+        "price": 399.9
+      },
+      {
+        "shade": "17 Ruby Red",
+        "price": 399.9
+      },
+      {
+        "shade": "16 Red Carpet",
+        "price": 399.9
+      },
+      {
+        "shade": "10 Star Pink",
+        "price": 399.9
+      },
+      {
+        "shade": "08 Terracotta Nude",
+        "price": 399.9
+      },
+      {
+        "shade": "03 Sheer Coral",
+        "price": 399.9
+      }
+    ],
+    "count": 8,
+    "fetchedAt": "2026-03-23T17:17:05.840Z"
+  },
+  "1142": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:06.999Z"
+  },
+  "1143": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:08.163Z"
+  },
+  "1144": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:09.284Z"
+  },
+  "1145": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:10.925Z"
+  },
+  "1146": {
+    "shades": [
+      {
+        "shade": "Stıck Contour Hot",
+        "price": 399
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:17:12.112Z"
+  },
+  "1147": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:13.552Z"
+  },
+  "1148": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:14.803Z"
+  },
+  "1149": {
+    "shades": [
+      {
+        "shade": "(KOYU TON) Stick Contour 003 Medıum Deep 8690604554874",
+        "price": 449.99
+      }
+    ],
+    "count": 1,
+    "fetchedAt": "2026-03-23T17:17:15.980Z"
+  },
+  "1150": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:17.090Z"
+  },
+  "1151": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:18.479Z"
+  },
+  "1152": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:19.557Z"
+  },
+  "1153": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:20.572Z"
+  },
+  "1154": {
+    "shades": [
+      {
+        "shade": "& Aydınlatıcı Stick Universal Light",
+        "price": 985.99
+      },
+      {
+        "shade": "& Aydınlatıcı Stick Light Medium",
+        "price": 985.99
+      }
+    ],
+    "count": 2,
+    "fetchedAt": "2026-03-23T17:17:21.724Z"
+  },
+  "1155": {
+    "shades": [
+      {
+        "shade": "L'Oreal Paris L'Oréal Paris Infaillible Face Sculpter Stick Kontür - Fair",
+        "price": 320
+      },
+      {
+        "shade": "Light",
+        "price": 522.44
+      },
+      {
+        "shade": "Medium",
+        "price": 522.44
+      }
+    ],
+    "count": 3,
+    "fetchedAt": "2026-03-23T17:17:23.078Z"
+  },
+  "1156": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:24.257Z"
+  },
+  "1157": {
+    "shades": [],
+    "count": 0,
+    "fetchedAt": "2026-03-23T17:17:25.708Z"
+  }
+}

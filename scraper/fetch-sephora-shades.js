@@ -81,7 +81,7 @@ async function extractShadesFromPage(page) {
 
 async function main() {
   const sepProducts = products.filter(p => p.source === 'sephora' && p.productUrl);
-  const toProcess = sepProducts.filter(p => !checkpoint[p.id]);
+  const toProcess = sepProducts.filter(p => !checkpoint[p.productUrl]);
 
   console.log('\n🛍️  Sephora Ton Verisi Çekici');
   console.log('📦 Toplam Sephora ürünü: ' + sepProducts.length);
@@ -134,7 +134,7 @@ async function main() {
       // Deduplicate
       const unique = [...new Set(shades)].filter(s => s.length > 0);
 
-      checkpoint[p.id] = {
+      checkpoint[p.productUrl] = {
         shades: unique,
         count: unique.length,
         fetchedAt: new Date().toISOString()
@@ -162,7 +162,7 @@ async function main() {
       errors++;
       consecutiveErrors++;
       console.log(' ✗ ' + e.message.substring(0, 60));
-      checkpoint[p.id] = { shades: [], count: 0, error: e.message.substring(0, 100), fetchedAt: new Date().toISOString() };
+      checkpoint[p.productUrl] = { shades: [], count: 0, error: e.message.substring(0, 100), fetchedAt: new Date().toISOString() };
 
       if (consecutiveErrors > 15) {
         console.log('\n⚠️  15 ardışık hata — blok olabilir. 30 saniye bekleniyor...');
@@ -184,7 +184,8 @@ function applyShades() {
 
   let updated = 0;
   for (const p of products) {
-    const cp = checkpoint[p.id];
+    if (p.source !== 'sephora') continue; // Sadece Sephora ürünlerine uygula
+    const cp = checkpoint[p.productUrl] || checkpoint[p.id]; // Geriye dönük id desteği (opsiyonel)
     if (!cp || !cp.shades || cp.shades.length <= 1) continue;
 
     const existing = p.shadeOptions || [];

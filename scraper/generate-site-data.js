@@ -9,6 +9,17 @@ const path = require('path');
 
 const OUTPUT = path.join(__dirname, '..', 'products-data.js');
 
+// ── Bilinen Muadiller (Dupes) ──
+const KNOWN_DUPES = [
+  { highEnd: { brand: 'CHARLOTTE TILBURY', keyword: 'flawless filter' }, dupe: { brand: 'E.L.F.', keyword: 'halo glow' } },
+  { highEnd: { brand: 'DIOR', keyword: 'lip glow oil' }, dupe: { brand: 'NYX', keyword: 'fat oil' } },
+  { highEnd: { brand: 'ESTEE LAUDER', keyword: 'double wear' }, dupe: { brand: 'MAYBELLINE', keyword: 'super stay' } },
+  { highEnd: { brand: 'NARS', keyword: 'radiant creamy' }, dupe: { brand: 'MAYBELLINE', keyword: 'fit me' } },
+  { highEnd: { brand: 'FENTY BEAUTY', keyword: 'gloss bomb' }, dupe: { brand: 'MAYBELLINE', keyword: 'lifter gloss' } },
+  { highEnd: { brand: 'CLINIQUE', keyword: 'black honey' }, dupe: { brand: 'E.L.F.', keyword: 'black cherry' } },
+  { highEnd: { brand: 'TARTE', keyword: 'shape tape' }, dupe: { brand: 'LOREAL PARIS', keyword: 'infallible' } }
+];
+
 // ── Satıcı dosyaları ──
 const SOURCES = [
   { file: 'sephora-products.json',      site: 'Sephora'      },
@@ -551,7 +562,8 @@ function coreProductName(name, brand) {
     .replace(/\b\d{2,3}\s+(light|dark|medium|soft|warm|cool|nude|beige|ivory|rose|golden|natural|honey|pure|sand|caramel|vanilla|cream|porcelain|tan|mocha|cocoa|toffee|amber|chestnut|mahogany|espresso|bronze|coral|pink|red|berry|plum|mauve|peach|apricot|cinnamon|sienna|almond|bisque|buff|linen|ecru|champagne|fawn|hazel|khaki|olive|sage|taupe|umber|wheat|bisque|burgundy|siyah|kahve|pembe|krem|bej|bal)\b.*/gi, '')
     .replace(/\b(0[0-9]{1,2}|[1-9][0-9]{1,2})\s+[A-Z][a-z]+/g, '')  // "130 Light" pattern
     .replace(/\bno[:\s]*\d+/gi, '')              // "No:25" → sil
-    .replace(/\b\d+\s*(ml|gr|g|oz|adet|piece)\b/gi, '') // "30 ml", "1 adet" → sil
+    .replace(/\b\d+\s*(ml|gr|g|oz|adet|piece)s?\b/gi, '') // "30 ml", "1 adet" → sil
+    .replace(/\b\d+(ml|gr|g|oz|adet|piece)s?\b/gi, '') // "30ml" (boşluksuz) → sil
     .replace(/\badet\b/gi, '')                    // tek "adet" kelimesi de sil
     .replace(/\b\d{6,}/g, '')                     // Barkod numaraları (6+ digit) → sil
     // Genişletilmiş renk/ton isimleri (Türkçe + İngilizce + özel ton isimleri)
@@ -696,7 +708,9 @@ function extractShadeCode(name, brand) {
     clean = clean.replace(new RegExp(brand.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '');
   }
   // SPF, ml, gr gibi kelimeleri sil
-  clean = clean.replace(/\bspf\s*\d+/gi, '').replace(/\b\d+\s*(ml|gr|g|oz)\b/gi, '');
+  clean = clean.replace(/\bspf\s*\d+/gi, '')
+               .replace(/\b\d+\s*(ml|gr|g|oz)s?\b/gi, '')
+               .replace(/\b\d+(ml|gr|g|oz)s?\b/gi, '');
 
   var codes = [];
   // Örüntüler: "1N", "120", "N120", "1.5N", "W3", "01", "3W", "125C" vb.
@@ -713,17 +727,21 @@ function extractShadeCode(name, brand) {
   return codes;
 }
 
-// ── Varyant Bilgisi Cikar (Ton Kodu + Renk/Sade Kelimeler) ──
+// ── Varyant Bilgisi Cikar (Ton Kodu + Renk/Sade Kelimeler + Hacim) ──
 function extractVariantInfo(name) {
   var clean = (name || '').toLowerCase();
   var codes = [];
+  var sizes = [];
 
-  // ── Ölçü/Hacim bilgisi (en kritik — 15ml ≠ 30ml, aynı gruba koyma) ──
-  var sizeMatch = clean.match(/\b(\d+(?:[.,]\d+)?)\s*(ml|gr|g\b|oz|lt|cl)\b/gi);
-  if (sizeMatch) {
-    sizeMatch.forEach(function(s) {
+  // ── Ölçü/Hacim bilgisi ──
+  var sizeMatch1 = clean.match(/\b(\d+(?:[.,]\d+)?)\s*(ml|gr|g|oz|lt|cl)s?\b/gi) || [];
+  var sizeMatch2 = clean.match(/\b(\d+(?:[.,]\d+)?)(ml|gr|g|oz|lt|cl)s?\b/gi) || [];
+  var allSizes = sizeMatch1.concat(sizeMatch2);
+  
+  if (allSizes.length > 0) {
+    allSizes.forEach(function(s) {
       var norm = s.replace(/\s+/g, '').toLowerCase();
-      codes.push('SIZE_' + norm.toUpperCase());
+      sizes.push(norm.toUpperCase());
     });
   }
 
@@ -737,7 +755,10 @@ function extractVariantInfo(name) {
   words.forEach(function(w) {
     if (colorWords.indexOf(w) !== -1) codes.push(w.toUpperCase());
   });
-  return Array.from(new Set(codes)).sort().join('-');
+  return { 
+    shade: Array.from(new Set(codes)).sort().join('-'),
+    size: Array.from(new Set(sizes)).sort().join('-')
+  };
 }
 
 // ── Bigram çıkar (2-kelimelik diziler) ──
@@ -1010,7 +1031,7 @@ allRaw = allRaw.filter(function(p) {
   // 5. Review sayısı gerçek dışı yüksek (SEO aggregation sayfası işareti)
   if (p.reviews > 50000) return false;
   // 6. "Set", "Hediye Set" gibi çoklu ürün paketleri
-  if (/hediye set/i.test(name)) return false;
+  if (/(hediye seti|hediye set|avantaj paketi|avantajlı paket|deneme boy|kofre|coffret|promosyon|kutu boy|çanta boy|özel kutu)/i.test(name)) return false;
   // 7. Çoklu ürün setleri ve combo paketler
   if (/\b\d['']?l[iıuü]\s*(set|paket)\b/i.test(name)) return false;
   if (/\b\d['']?l[iıuü]\s*maskara\b/i.test(name)) return false; // "2'li Maskara" = set
@@ -1025,7 +1046,7 @@ allRaw = allRaw.filter(function(p) {
   // 9. Otomobil parçaları — "far" kelimesi araba farı olarak çekilmiş
   if (/\b(ford|volkswagen|vw|renault|toyota|honda|bmw|mercedes|audi|opel|fiat|hyundai|kia|peugeot|citroen|seat|skoda|volvo|passat|focus|corolla|civic|golf|polo|mais)\b/i.test(name)) return false;
   // 10. Elektronik/otomotiv/spor ürünleri — makyaj sitesine ait olmayan ürünler
-  if (/\b(led far|xenon|oto |otomobil|araç|araba|bisiklet|koşu bandı|çadır|spor alet|dambıl|halter|kondisyon)\b/i.test(name)) return false;
+  if (/\b(led far|xenon|oto\s|otomobil|araç|araba|motor|motosiklet|ampul|silecek|bisiklet|koşu bandı|çadır|spor aleti|dambıl|halter|kondisyon|çanta|cüzdan|valiz|şemsiye|tarak|törpü|cımbız|yastık|yorgan|battaniye|havlu|bornoz|aksesuar)\b/i.test(name)) return false;
   // 11. Giyim/iç giyim ürünleri — Hepsiburada'dan hatalı çekilmiş
   if (/\b(termal|fanila|korse|atlet|tayt|boxer|külot|çorap|pantolon|gömlek|tişört|t-shirt|sweatshirt|mont|ceket|palto|elbise|etek|şort)\b/i.test(name)) return false;
   // 12. "& xyz Hediye/Set" combo paketleri (Maskara & Krem Hediye gibi)
@@ -1047,7 +1068,7 @@ allRaw.forEach(function(p) {
   var core = coreProductName(p.name, p.brand);
   var cat = p.category;
   var variantInfo = extractVariantInfo(p.name);
-  var groupKey = brand + '|' + cat + '|' + core + '|' + variantInfo;
+  var groupKey = brand + '|' + cat + '|' + core + '|' + variantInfo.shade + '|' + variantInfo.size;
   if (!siteGroups[p._site][groupKey]) siteGroups[p._site][groupKey] = [];
   siteGroups[p._site][groupKey].push(p);
 });
@@ -1165,7 +1186,7 @@ Object.keys(barcodeIndex).forEach(function(barcode) {
   // Aynı barkod ama farklı boyut = veri hatası
   var sizeKeys = sites.map(function(site) {
     var vi = extractVariantInfo(bySite[site].p.name);
-    var sizes = (vi || '').split('-').filter(function(s) { return s.startsWith('SIZE_'); });
+    var sizes = (vi.size || '').split('-').filter(Boolean);
     return sizes.length > 0 ? sizes.join(',') : '';
   }).filter(function(s) { return s !== ''; });
   if (sizeKeys.length >= 2) {
@@ -1326,8 +1347,8 @@ Object.keys(brandGroups).forEach(function(brandKey) {
         // ── BOYUT/ML KONTROLÜ (KRİTİK) ──
         // Farklı boyutlar (15ml vs 30ml vs 40ml) kesinlikle eşleşmemeli
         var candSize = extractVariantInfo(candP.name);
-        var baseSizes = (baseSize || '').split('-').filter(function(s) { return s.startsWith('SIZE_'); });
-        var candSizes = (candSize || '').split('-').filter(function(s) { return s.startsWith('SIZE_'); });
+        var baseSizes = (baseSize.size || '').split('-').filter(Boolean);
+        var candSizes = (candSize.size || '').split('-').filter(Boolean);
         if (baseSizes.length > 0 && candSizes.length > 0) {
           // Her iki ürünün de boyut bilgisi varsa, eşleşmeli
           var sizeMatch = baseSizes.some(function(bs) { return candSizes.indexOf(bs) !== -1; });
@@ -1490,7 +1511,8 @@ merged.forEach(function(m) {
   var key = normalizeBrand(m.brand) + '|' + m.category + '|' + coreProductName(m.name, m.brand);
   if (!masterGroups[key]) masterGroups[key] = { base: m, variants: [] };
   masterGroups[key].variants.push({
-    shade: vInfo || 'Standart',
+    shade: vInfo.shade || 'Standart',
+    size: vInfo.size || '',
     name: cleanName(m.name, m.brand),
     prices: m.prices,
     imageUrl: Array.isArray(m.imageUrl) ? (m.imageUrl[0] || '') : (m.imageUrl || '')
@@ -1501,6 +1523,25 @@ var masterMerged = [];
 Object.keys(masterGroups).forEach(function(key) {
   var mg = masterGroups[key];
   var mBase = mg.base;
+
+  // ── 'Standart' Fiyat Dağıtımı ──
+  // Sephora gibi siteler ton bilgisini başlığa yazmadığı için 'Standart' olarak gelir.
+  // Eğer bu üründe özel tonlar (130, 140 vb.) varsa, Standart'taki satıcıları onlara da kopyalayalım.
+  var standartVariant = mg.variants.find(function(v) { return v.shade === 'Standart' && !v.size; });
+  if (standartVariant && mg.variants.length > 1) {
+    mg.variants.forEach(function(v) {
+      if (v !== standartVariant) {
+        // Standart varianttaki her fiyatı bu spesifik varyanta ekle (eğer o site halihazırda yoksa)
+        standartVariant.prices.forEach(function(sp) {
+          var exists = v.prices.find(function(vp) { return vp.site === sp.site; });
+          if (!exists) {
+            v.prices.push(Object.assign({}, sp));
+          }
+        });
+      }
+    });
+  }
+
   mg.variants.sort(function(a, b) { 
     if (!a.prices || a.prices.length === 0) return 1;
     if (!b.prices || b.prices.length === 0) return -1;
@@ -1553,14 +1594,14 @@ var products = merged.map(function(p, i) {
     category: p.category,
     categoryLabel: p.categoryLabel,
     skinType: skinDefaults[p.category] || ['normal'],
-    variants: (p._variants || []).map(function(v) { return { shade: v.shade, name: v.name, imageUrl: v.imageUrl, prices: (v.prices || []).map(function(pr) { return { site: pr.site, price: pr.price, url: pr.url, variantCount: pr.variantCount }; }) }; }),
+    variants: (p._variants || []).map(function(v) { return { shade: v.shade, size: v.size, name: v.name, imageUrl: v.imageUrl, prices: (v.prices || []).map(function(pr) { return { site: pr.site, price: pr.price, url: pr.url, variantCount: pr.variantCount }; }) }; }),
     prices: cleanPrices,
     rating: +parseFloat(rating).toFixed(1),
     reviews: Math.round(reviews),
     imageUrl: bestImage,
     productUrl: p.productUrl,
     desc: p.desc || '',
-    trending: rating >= 4.7,
+    trending: (rating >= 4.6 && reviews >= 100) || (rating >= 4.4 && reviews >= 500) || (rating >= 4.8 && reviews >= 30),
     vegan: p.vegan || false,
     crueltyFree: p.crueltyFree || false,
     spf: false,
@@ -1572,6 +1613,20 @@ var products = merged.map(function(p, i) {
     priceCount: p.prices.length,
     lastUpdated: new Date().toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: '2-digit' }).replace(/\//g, '.'),
   };
+});
+
+// ── Muadil Eşleştirme (Dupe Matching) ──
+KNOWN_DUPES.forEach(function(d) {
+  var highEnds = products.filter(p => p.brand.toUpperCase() === d.highEnd.brand && p.name.toLowerCase().includes(d.highEnd.keyword));
+  var dupes = products.filter(p => p.brand.toUpperCase() === d.dupe.brand && p.name.toLowerCase().includes(d.dupe.keyword));
+  
+  highEnds.forEach(he => {
+    dupes.forEach(dp => {
+      // Sadece ID sakla, frontend de ID ile bulsun
+      if (!he.dupeFor.includes(dp.id)) he.dupeFor.push(dp.id);
+      if (!dp.dupeOf.includes(he.id)) dp.dupeOf.push(he.id);
+    });
+  });
 });
 
 // ── Dosyaya yaz ──

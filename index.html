@@ -445,72 +445,113 @@
 
     /* ── SKIN TONE TEST ── */
     .skin-test-modal { max-width: 560px; }
-    .skin-test-body { padding: 2rem; overflow: hidden; }
+    .skin-test-body { padding: 2rem; overflow: hidden; position: relative; min-height: 280px; }
     .skin-test-step { display: none; }
-    .skin-test-step.active { display: block; animation: stSlideIn 0.38s cubic-bezier(0.16, 1, 0.3, 1) both; }
-    .skin-test-step.leaving { animation: stSlideOut 0.25s cubic-bezier(0.4, 0, 1, 1) both; }
-    @keyframes stSlideIn  { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: translateX(0); } }
-    @keyframes stSlideOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-28px); } }
+    .skin-test-step.active { display: block; animation: stSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .skin-test-step.leaving { animation: stSlideOut 0.3s cubic-bezier(0.4, 0, 1, 1) both; }
+    @keyframes stSlideIn  { from { opacity: 0; transform: translateY(24px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes stSlideOut { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(-18px) scale(0.97); } }
+    @keyframes stPulse    { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+    @keyframes stFadeUp   { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes stGlow     { 0%,100% { box-shadow: 0 0 0 0 rgba(201,169,110,0); } 50% { box-shadow: 0 0 20px 4px rgba(201,169,110,0.15); } }
+    @keyframes stReveal   { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+    @keyframes stSwatchAppear { from { opacity:0; transform: scale(0.5) rotate(-15deg); } to { opacity:1; transform: scale(1) rotate(0); } }
+    @keyframes stChipIn   { from { opacity:0; transform: translateY(8px) scale(0.9); } to { opacity:1; transform: translateY(0) scale(1); } }
     .skin-test-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .skin-test-emoji { font-size: 28px; }
+    .skin-test-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, rgba(201,169,110,0.08), rgba(201,169,110,0.02)); border: 0.5px solid rgba(201,169,110,0.2); animation: stPulse 2.5s ease-in-out infinite; }
     .skin-test-counter { font-size: 10px; letter-spacing: 2px; color: var(--text3); text-transform: uppercase; }
     .skin-test-progress { display: flex; gap: 4px; margin-bottom: 1.5rem; }
-    .skin-test-dot { flex: 1; height: 3px; background: var(--border); border-radius: 2px; transition: background 0.4s; }
+    .skin-test-dot { flex: 1; height: 3px; background: var(--border); border-radius: 2px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; }
     .skin-test-dot.done { background: var(--gold); }
-    .skin-test-dot.current { background: var(--text); }
-    .skin-test-question { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); margin-bottom: 1.4rem; line-height: 1.4; }
+    .skin-test-dot.current { background: var(--text); animation: stGlow 2s ease-in-out infinite; }
+    .skin-test-dot.done::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: stReveal 0.6s ease both; }
+    .skin-test-subtitle { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; opacity: 0.7; }
+    .skin-test-question { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--text); margin-bottom: 1.4rem; line-height: 1.35; }
     .skin-test-options { display: flex; flex-direction: column; gap: 8px; }
     .skin-test-opt {
-      font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.8px; padding: 13px 16px;
+      font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.8px; padding: 14px 18px;
       border: 0.5px solid var(--border2); background: transparent; color: var(--text2);
-      border-radius: 2px; cursor: pointer; transition: all 0.22s; text-align: left;
+      border-radius: 4px; cursor: pointer; transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1); text-align: left;
       display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      opacity: 0; animation: stFadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+      position: relative; overflow: hidden;
     }
-    .skin-test-opt:hover { background: var(--bg2); color: var(--text); border-color: var(--border2); transform: translateX(4px); }
-    .skin-test-opt.selected { background: var(--text); color: var(--bg3); border-color: var(--text); }
-    .skin-test-opt-hint { font-size: 9px; letter-spacing: 1.5px; color: var(--text3); opacity: 0.7; white-space: nowrap; }
-    .skin-test-opt:hover .skin-test-opt-hint { color: rgba(255,255,255,0.5); }
+    .skin-test-opt::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,169,110,0.04), transparent); opacity: 0; transition: opacity 0.3s; }
+    .skin-test-opt:hover::before { opacity: 1; }
+    .skin-test-opt:hover { background: var(--bg2); color: var(--text); border-color: rgba(201,169,110,0.3); transform: translateX(6px) scale(1.01); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .skin-test-opt:active { transform: translateX(6px) scale(0.98); }
+    .skin-test-opt.selected { background: var(--text); color: var(--bg3); border-color: var(--text); transform: scale(0.97); }
+    .skin-test-opt-hint { font-size: 9px; letter-spacing: 1.5px; color: var(--text3); opacity: 0.7; white-space: nowrap; transition: color 0.2s; }
+    .skin-test-opt:hover .skin-test-opt-hint { color: var(--gold); opacity: 1; }
     .skin-test-opt.selected .skin-test-opt-hint { color: rgba(255,255,255,0.5); }
-    /* ── Result page ── */
-    .skin-test-result { padding: 0.5rem 0; animation: stSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
-    .skin-tone-swatch-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0.5rem 0 1.2rem; }
-    .skin-tone-swatch {
-      width: 72px; height: 72px; border-radius: 50%;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.18); transition: transform 0.3s;
+    /* ── Age input ── */
+    .skin-test-age-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 1rem 0; }
+    .skin-test-age-input {
+      font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300;
+      width: 120px; text-align: center; border: none; border-bottom: 2px solid var(--border);
+      background: transparent; color: var(--text); outline: none; transition: border-color 0.3s;
+      padding-bottom: 4px; caret-color: var(--gold);
     }
-    .skin-tone-swatch:hover { transform: scale(1.08); }
-    .skin-test-result-tone { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text); margin: 0; }
+    .skin-test-age-input:focus { border-color: var(--gold); }
+    .skin-test-age-input::placeholder { color: var(--border2); }
+    .skin-test-age-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+    .skin-test-age-btn {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      padding: 12px 36px; background: var(--text); color: var(--bg3); border: none; border-radius: 2px;
+      cursor: pointer; transition: all 0.25s; opacity: 0.3; pointer-events: none;
+    }
+    .skin-test-age-btn.ready { opacity: 1; pointer-events: auto; }
+    .skin-test-age-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    /* ── Result page ── */
+    .skin-test-result { padding: 0.5rem 0; animation: stSlideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .skin-tone-swatch-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 0.5rem 0 1.2rem; }
+    .skin-tone-swatch {
+      width: 80px; height: 80px; border-radius: 50%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2); animation: stSwatchAppear 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .skin-tone-swatch:hover { transform: scale(1.12) rotate(5deg); }
+    .skin-test-result-tone { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text); margin: 0; animation: stFadeUp 0.5s 0.3s both; }
     .skin-test-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin: 0.8rem 0 1.2rem; }
     .skin-test-chip {
       font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px;
       border-radius: 20px; border: 0.5px solid var(--border2); color: var(--text2);
-      background: var(--bg2);
+      background: var(--bg2); animation: stChipIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
     }
+    .skin-test-chip:nth-child(1) { animation-delay: 0.4s; }
+    .skin-test-chip:nth-child(2) { animation-delay: 0.5s; }
+    .skin-test-chip:nth-child(3) { animation-delay: 0.6s; }
+    .skin-test-chip:nth-child(4) { animation-delay: 0.7s; }
     .skin-test-chip.undertone-cool   { color: #6fa0d4; border-color: rgba(111,160,212,0.4); background: rgba(111,160,212,0.08); }
     .skin-test-chip.undertone-warm   { color: var(--gold); border-color: rgba(201,169,110,0.4); background: rgba(201,169,110,0.08); }
     .skin-test-chip.undertone-neutral{ color: #a8a49f; border-color: var(--border2); }
     .skin-test-chip.concern-akne     { color: #e67e00; border-color: rgba(230,126,0,0.3); background: rgba(230,126,0,0.06); }
     .skin-test-chip.concern-antiaging{ color: #c59bd4; border-color: rgba(197,155,212,0.3); background: rgba(197,155,212,0.06); }
     .skin-test-chip.concern-hassas   { color: #e06ba0; border-color: rgba(224,107,160,0.3); background: rgba(224,107,160,0.06); }
-    .skin-test-result-desc { font-size: 12px; color: var(--text2); line-height: 1.7; margin-bottom: 0; text-align: center; }
-    .skin-test-routine { margin-top: 1.5rem; }
+    .skin-test-chip.age-chip         { color: #7eb89a; border-color: rgba(126,184,154,0.4); background: rgba(126,184,154,0.08); }
+    .skin-test-result-desc { font-size: 12px; color: var(--text2); line-height: 1.7; margin-bottom: 0; text-align: center; animation: stFadeUp 0.5s 0.5s both; }
+    .skin-test-routine { margin-top: 1.5rem; animation: stFadeUp 0.5s 0.6s both; }
     .skin-test-routine-title { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
     .skin-test-routine-list { display: flex; flex-direction: column; gap: 7px; }
     .skin-test-routine-item {
       display: flex; align-items: center; gap: 12px; padding: 10px 13px;
-      border: 0.5px solid var(--border2); border-radius: 2px; background: var(--bg2);
+      border: 0.5px solid var(--border2); border-radius: 4px; background: var(--bg2);
+      opacity: 0; animation: stFadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
+    .skin-test-routine-item:hover { transform: translateX(4px); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
     .skin-test-routine-icon { font-size: 18px; flex-shrink: 0; }
     .skin-test-routine-cat { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
     .skin-test-routine-tip { font-size: 11px; color: var(--text2); margin-top: 2px; line-height: 1.4; }
-    .skin-test-prod-section { margin-top: 1.5rem; }
+    .skin-test-prod-section { margin-top: 1.5rem; animation: stFadeUp 0.5s 0.8s both; }
     .skin-test-prod-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px; }
     .skin-test-prod-card {
-      padding: 12px 10px; border: 0.5px solid var(--border2); border-radius: 2px;
-      cursor: pointer; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      padding: 12px 10px; border: 0.5px solid var(--border2); border-radius: 4px;
+      cursor: pointer; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       background: var(--bg2); display: flex; flex-direction: column; gap: 4px;
+      opacity: 0; animation: stFadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
-    .skin-test-prod-card:hover { background: var(--bg3); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+    .skin-test-prod-card:hover { background: var(--bg3); transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
     .skin-test-prod-emoji { font-size: 18px; }
     .skin-test-prod-brand { font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
     .skin-test-prod-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--text); line-height: 1.2; }
@@ -2646,7 +2687,32 @@ function _appendBatch(grid) {
   }
 }
 
+const SEO_CAT_NAMES = {
+  'all': 'Makyaj Ürünleri', 'fondoten': 'Fondöten', 'maskara': 'Maskara', 'ruj': 'Ruj', 'far': 'Göz Farı', 'far-paleti': 'Far Paleti', 'eyeliner': 'Eyeliner', 'goz-kalemi': 'Göz Kalemi', 'allik': 'Allık', 'aydinlatici': 'Aydınlatıcı', 'bronzer': 'Bronzer', 'kontur': 'Kontür', 'kapatici': 'Kapatıcı', 'primer': 'Primer', 'pudra': 'Pudra', 'dudak-parlatici': 'Dudak Parlatıcı', 'dudak-kalemi': 'Dudak Kalemi', 'nemlendirici': 'Nemlendirici', 'goz-kremi': 'Göz Kremi', 'vucut-losyonu': 'Vücut Bakımı', 'parfum': 'Parfüm', 'kas': 'Kaş Makyajı'
+};
+
+function updateSEO() {
+  let title = 'Beauté — Makyaj Karşılaştırma';
+  let desc = "Beauté — Türkiye'nin en kapsamlı makyaj karşılaştırma platformu. En iyi fiyatları bulun.";
+  
+  let catName = SEO_CAT_NAMES[activeCategory] || 'Ürünler';
+  if (activeCategory && activeCategory !== 'all') {
+    title = `${catName} Fiyatları ve Karşılaştırması — Beauté`;
+    desc = `En iyi ${catName} markalarını karşılaştırın, en uygun fiyatları bulun. Beauté ile makyaj alışverişinizi akıllıca yapın.`;
+  }
+  
+  if (activeBrand) {
+    title = `${activeBrand} ${catName !== 'Makyaj Ürünleri' ? catName : ''} Fiyatları — Beauté`.replace('  ', ' ');
+    desc = `${activeBrand} markasının en sevilen ürünlerini inceleyin ve fiyatlarını karşılaştırın.`;
+  }
+  
+  document.title = title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', desc);
+}
+
 function render() {
+  updateSEO();
   _currentFiltered = getFiltered();
   document.getElementById('countLabel').textContent = _currentFiltered.length + ' ürün';
 
@@ -2738,7 +2804,7 @@ function getDupeOriginals(product) {
 }
 
 // ── PRICE ALERT ──────────────────────────────────────────────────────────────
-function setPriceAlert(productId) {
+async function setPriceAlert(productId) {
   const input = document.getElementById('alertEmail_' + productId);
   if (!input) return;
   const email = input.value.trim();
@@ -2746,18 +2812,33 @@ function setPriceAlert(productId) {
     showToast('Geçerli bir e-posta girin');
     return;
   }
-  priceAlerts[productId] = email;
-  saveAlerts();
-  showToast('Fiyat alarmı kuruldu ✓');
-  // Update the alert section in the modal
-  const section = document.getElementById('alertSection_' + productId);
-  if (section) {
-    section.innerHTML = `
-      <div class="price-alert-title">Fiyat Alarmı</div>
-      <div class="price-alert-set">✓ Alarm kuruldu — ${email} adresine bildirilecek
-        <button onclick="removePriceAlert(${productId})" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:10px;text-decoration:underline;margin-left:8px">Kaldır</button>
-      </div>
-    `;
+  
+  showToast('Alarm kaydediliyor...');
+  try {
+    const res = await fetch('/api/price-alert', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ productId, email })
+    });
+    if (!res.ok) throw new Error('API Hatası');
+    
+    priceAlerts[productId] = email;
+    saveAlerts();
+    showToast('Fiyat alarmı kuruldu ✓');
+    
+    // Update the alert section in the modal
+    const section = document.getElementById('alertSection_' + productId);
+    if (section) {
+      section.innerHTML = `
+        <div class="price-alert-title">Fiyat Alarmı</div>
+        <div class="price-alert-set">✓ Alarm kuruldu — ${email} adresine bildirilecek
+          <button onclick="removePriceAlert(${productId})" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:10px;text-decoration:underline;margin-left:8px">Kaldır</button>
+        </div>
+      `;
+    }
+  } catch (err) {
+    console.error(err);
+    showToast('Alarm kaydedilemedi, tekrar deneyin.');
   }
 }
 
@@ -2813,8 +2894,9 @@ function openDetail(id) {
   const basePrices = (p.variants && p.variants.length > 0) ? p.variants[0].prices : p.prices;
   const sorted = [...basePrices].sort((a,b) => a.price - b.price);
   const best = sorted.length > 0 ? sorted[0].price : 0;
-  const vShade = (p.variants && p.variants.length > 0 && p.variants[0].shade !== 'Standart') ? p.variants[0].shade : '';
-  document.getElementById('detailSub').innerHTML = p.brand + ' · ' + p.category + (vShade ? ' · <strong>' + vShade + '</strong>' : '');
+  const v1 = p.variants && p.variants.length > 0 ? p.variants[0] : null;
+  const vName1 = v1 ? ((v1.shade && v1.shade !== 'Standart' ? v1.shade : '') + (v1.size ? (v1.shade && v1.shade !== 'Standart' ? ' - ' : '') + v1.size : '')) : '';
+  document.getElementById('detailSub').innerHTML = p.brand + ' · ' + p.category + (vName1 ? ' · <strong>' + vName1 + '</strong>' : '');
 
 
   // Dupes
@@ -2845,26 +2927,46 @@ function openDetail(id) {
       <p class="detail-desc">"${p.desc}"</p>
 
       ${(() => {
-        const variantList = p.variants && p.variants.length > 1 ? p.variants : null;
+        if (!p.variants) p.variants = [];
         const shadeList = p.shadeOptions && p.shadeOptions.length > 1 ? p.shadeOptions : null;
-        if (variantList) {
-          return '<div class="detail-section-title">Renk / Ton Seçenekleri (' + variantList.length + ')</div>' +
+        
+        // Sephora vb. sitelerden gelen ekstra renk seçeneklerini tıklanabilir varyanta dönüştür:
+        if (shadeList) {
+          const basePriceObj = p.prices.find(pr => pr.site.toLowerCase() === 'sephora') || p.prices[0];
+          shadeList.forEach(s => {
+            const exists = p.variants.find(v => v.shade === s || v.name === s || (v.shade !== 'Standart' && s.includes(v.shade)));
+            if (!exists && basePriceObj) {
+              p.variants.push({
+                shade: s,
+                size: '',
+                name: p.name + ' - ' + s,
+                imageUrl: p.imageUrl,
+                prices: [ Object.assign({}, basePriceObj) ]
+              });
+            }
+          });
+        }
+
+        const variantList = p.variants;
+        if (variantList && variantList.length > 1) {
+          return '<div class="detail-section-title">Varyant Seçenekleri (Ton/Boyut) (' + variantList.length + ')</div>' +
             '<div class="shades-list" id="variantsList">' +
             variantList.map((v,i) => {
               const vMin = v.prices && v.prices.length ? Math.min(...v.prices.map(pr=>pr.price)) : 0;
               const imgSrc = v.imageUrl || p.imageUrl || '';
-              return '<button class="shade-chip' + (i===0?' active':'') + '" onclick="changeVariant(' + p.id + ',' + i + ',this)" title="' + (v.name||v.shade||'') + '">' +
-                (imgSrc ? '<img class="shade-chip-img" src="' + imgSrc + '" alt="' + (v.shade||'') + '" onerror="this.style.display=\'none\'">' : '') +
-                '<span class="shade-chip-info"><span class="shade-chip-name">' + (v.shade || 'Varyant ' + (i+1)) + '</span>' +
+              const vName = (v.shade && v.shade !== 'Standart' ? v.shade : '') + (v.size ? (v.shade && v.shade !== 'Standart' ? ' - ' : '') + v.size : '');
+              let fName = vName || v.name || 'Standart';
+              fName = fName.replace(/"/g, '&quot;'); // Escape quotes for HTML attributes
+              return '<button class="shade-chip' + (i===0?' active':'') + '" onclick="changeVariant(' + p.id + ',' + i + ',this)" title="' + fName + '">' +
+                (imgSrc ? '<img class="shade-chip-img" src="' + imgSrc + '" alt="' + fName + '" onerror="this.style.display=\'none\'">' : '') +
+                '<span class="shade-chip-info"><span class="shade-chip-name">' + fName + '</span>' +
                 (vMin > 0 ? '<span class="shade-chip-price">' + vMin.toLocaleString('tr-TR') + ' TL</span>' : '') +
                 '</span></button>';
             }).join('') +
-            (shadeList ? shadeList.filter(s => !variantList.find(v => v.shade === s)).map(s =>
-              '<span class="shade-chip no-data" title="Bu ton için fiyat verisi mevcut değil"><span class="shade-chip-info"><span class="shade-chip-name">' + s + '</span></span></span>'
-            ).join('') : '') +
             '</div>';
         } else if (shadeList) {
-          return '<div class="detail-section-title">Renk / Ton Seçenekleri (' + shadeList.length + ')</div>' +
+          // (Bu duruma artık pek girilmeyecek çünkü shadeList varsa variantList otomatik doluyor)
+          return '<div class="detail-section-title">Varyant Seçenekleri (Ton/Boyut) (' + shadeList.length + ')</div>' +
             '<div class="shades-list">' +
             shadeList.map(s =>
               '<span class="shade-chip no-data"><span class="shade-chip-info"><span class="shade-chip-name">' + s + '</span></span></span>'
@@ -3080,7 +3182,8 @@ function changeVariant(productId, variantIndex, btnElem) {
   
   const subtitle = document.getElementById('detailSub');
   if (subtitle) {
-    subtitle.innerHTML = p.brand + ' · ' + p.category + (v.shade && v.shade !== 'Standart' ? ' · <strong>' + v.shade + '</strong>' : '');
+    const vName = (v.shade && v.shade !== 'Standart' ? v.shade : '') + (v.size ? (v.shade && v.shade !== 'Standart' ? ' - ' : '') + v.size : '');
+    subtitle.innerHTML = p.brand + ' · ' + p.category + (vName ? ' · <strong>' + vName + '</strong>' : '');
   }
 }
 
@@ -3528,63 +3631,75 @@ var ST_ICONS = {
 };
 const skinTestQuestions = [
   {
+    id: 'age', icon: ST_ICONS.skin, type: 'age',
+    subtitle: 'Sizi tanıyalım',
+    question: "Kaç yaşındasınız?",
+    desc: "Yaşınıza özel bakım önerileri ve ürün tavsiyeleri sunacağız.",
+  },
+  {
     id: 'sun', icon: ST_ICONS.sun,
-    question: "Güneşte uzun süre kaldığınızda cildiniz nasıl tepki verir?",
+    subtitle: 'Cilt tonu analizi',
+    question: "Yaz güneşinde korumasız bir saat geçirseniz cildiniz nasıl tepki verir?",
     options: [
-      { text: "Hemen yanarım, bronzlaşamam",              hint: "Çok açık ten",   value: "fair"   },
-      { text: "Önce yanarım, sonra hafif bronzlaşırım",   hint: "Açık ten",       value: "light"  },
-      { text: "Nadiren yanarım, kolayca bronzlaşırım",    hint: "Orta ten",       value: "medium" },
-      { text: "Hiç yanmam, her zaman bronzlaşırım",       hint: "Koyu ten",       value: "dark"   },
+      { text: "Kızarır ve yanar, bronzlaşma şansım yok",           hint: "Çok açık ten",  value: "fair"   },
+      { text: "Önce kızarır, birkaç gün sonra hafif bronzlaşır",   hint: "Açık ten",      value: "light"  },
+      { text: "Nadiren yanarım, güzel bir bronzluk kazanırım",     hint: "Orta ten",      value: "medium" },
+      { text: "Asla yanmam, doğal bronz tenime güneş katıyor",     hint: "Koyu ten",      value: "dark"   },
     ]
   },
   {
     id: 'vein', icon: ST_ICONS.vein,
-    question: "Bileğinizin iç kısmındaki damarlarınız hangi renkte görünür?",
+    subtitle: 'Alt ton keşfi',
+    question: "Bileğinizin iç yüzüne bakın — damarlarınız hangi renk ailesiyle uyumlu?",
     options: [
-      { text: "Mavi veya mor tonlarında",   hint: "Soğuk alt ton", value: "cool"    },
-      { text: "Yeşil tonlarında",            hint: "Sıcak alt ton", value: "warm"    },
-      { text: "Hem mavi hem yeşil karışık",  hint: "Nötr alt ton",  value: "neutral" },
+      { text: "Mavi ve mor tonları ağırlıkta",          hint: "Soğuk alt ton", value: "cool"    },
+      { text: "Yeşil ve zeytin tonları hakim",           hint: "Sıcak alt ton", value: "warm"    },
+      { text: "İkisinin karışımı, net ayırt edemiyorum", hint: "Nötr alt ton",  value: "neutral" },
     ]
   },
   {
     id: 'jewelry', icon: ST_ICONS.jewelry,
-    question: "Hangi tür takılar cildinizde daha çok yakışır?",
+    subtitle: 'Alt ton doğrulaması',
+    question: "Ayna karşısında gümüş ve altın takıyı yan yana deneseniz hangisi cildinizi daha çok aydınlatır?",
     options: [
-      { text: "Gümüş ve platin takılar",     hint: "Soğuk alt ton", value: "cool"    },
-      { text: "Altın ve rose gold takılar",   hint: "Sıcak alt ton", value: "warm"    },
-      { text: "İkisi de eşit derecede güzel", hint: "Nötr alt ton",  value: "neutral" },
+      { text: "Gümüş ve platin — ciltime hayat veriyor",           hint: "Soğuk alt ton", value: "cool"    },
+      { text: "Altın ve rose gold — tenimle bütünleşiyor",         hint: "Sıcak alt ton", value: "warm"    },
+      { text: "Fark etmiyor, her ikisi de yakışıyor",              hint: "Nötr alt ton",  value: "neutral" },
     ]
   },
   {
     id: 'skin_type', icon: ST_ICONS.skin,
-    question: "Sabah yüzünüzü yıkadıktan 3-4 saat sonra cildiniz nasıl hissettiriyor?",
+    subtitle: 'Cilt tipi tespiti',
+    question: "Öğleden sonra aynaya baktığınızda — cildiniz size ne söylüyor?",
     options: [
-      { text: "Özellikle alın ve burun bölgesi yağlanıyor",     hint: "Yağlı cilt",  value: "yagli"  },
-      { text: "Gergin ve kurumuş hissediyorum",                  hint: "Kuru cilt",   value: "kuru"   },
-      { text: "Bazı bölgeler yağlı, bazıları kuru",              hint: "Karma cilt",  value: "karma"  },
-      { text: "Dengeli, ne yağlı ne kuru",                       hint: "Normal cilt", value: "normal" },
+      { text: "T bölgem parlıyor, gözeneklerim belirginleşiyor",   hint: "Yağlı cilt",  value: "yagli"  },
+      { text: "Gergin hissediyorum, yer yer pul pul dökülüyor",    hint: "Kuru cilt",   value: "kuru"   },
+      { text: "Alın yağlı ama yanaklar kurumuş — ikisi de var",    hint: "Karma cilt",  value: "karma"  },
+      { text: "Ne şikayet ne sorun — oldukça dengeli",             hint: "Normal cilt", value: "normal" },
     ]
   },
   {
     id: 'concern', icon: ST_ICONS.concern,
-    question: "Cildinizle ilgili sizi en çok rahatsız eden durum hangisi?",
+    subtitle: 'Kişisel endişe',
+    question: "Cildinizde sizi en çok rahatsız eden şey ne? Dürüst olun, aramızda kalsın.",
     options: [
-      { text: "Sivilce, akne izleri ve siyah noktalar",   hint: "Akne kontrolü",  value: "akne"      },
-      { text: "İnce çizgiler ve kırışıklıklar",            hint: "Anti-aging",     value: "antiaging" },
-      { text: "Güneş lekeleri ve ton eşitsizliği",         hint: "Aydınlatma",     value: "leke"      },
-      { text: "Kızarıklık, tahriş ve hassasiyet",          hint: "Hassas bakım",   value: "hassas"    },
-      { text: "Belirgin ve açık gözenekler",                hint: "Gözenek bakımı", value: "gozener"   },
-      { text: "Genel olarak memnunum",                      hint: "Koruyucu bakım", value: "genel"     },
+      { text: "Sivilceler ve akne izleri peşimi bırakmıyor",       hint: "Akne kontrolü",  value: "akne"      },
+      { text: "İnce çizgiler belirmeye başladı, zamanla yarışıyorum", hint: "Anti-aging",  value: "antiaging" },
+      { text: "Lekeler ve ton eşitsizliği — pürüzsüz bir ten istiyorum", hint: "Aydınlatma", value: "leke"   },
+      { text: "Hassas cildim her şeye tepki veriyor",               hint: "Hassas bakım",  value: "hassas"    },
+      { text: "Gözeneklerim çok açık, fondöten bile kapatmıyor",    hint: "Gözenek bakımı", value: "gozener"  },
+      { text: "Aslında oldukça memnunum, sadece korumak istiyorum", hint: "Koruyucu bakım", value: "genel"    },
     ]
   },
   {
     id: 'routine', icon: ST_ICONS.routine,
-    question: "Günlük cilt bakım rutininiz nasıl?",
+    subtitle: 'Günlük ritüeliniz',
+    question: "Her sabah aynanın karşısında makyaj rutininiz ne kadar sürüyor?",
     options: [
-      { text: "Sadece yüzümü yıkıyorum, ek ürün kullanmıyorum",  hint: "Minimal",     value: "minimal" },
-      { text: "Temizleyici ve nemlendirici kullanıyorum",          hint: "Temel",       value: "temel"   },
-      { text: "Serum, krem ve güneş koruyucu kullanıyorum",        hint: "Orta düzey",  value: "orta"    },
-      { text: "Detaylı çok adımlı bir rutinim var",                hint: "Kapsamlı",    value: "kapsamli"},
+      { text: "5 dakika — hızlıca nemlendirici ve çıkıyorum",        hint: "Minimal",     value: "minimal" },
+      { text: "10-15 dakika — temizlik, nemlendirici, hafif makyaj",  hint: "Temel",       value: "temel"   },
+      { text: "20-30 dakika — serum, krem, güneş koruyucu, makyaj",  hint: "Orta düzey",  value: "orta"    },
+      { text: "30+ dakika — çok adımlı, detaylı bakım ritüelim var", hint: "Kapsamlı",    value: "kapsamli"},
     ]
   },
 ];
@@ -3687,6 +3802,36 @@ function renderSkinTest() {
   if (skinTestStep >= total) { showSkinTestResult(); return; }
 
   const q = skinTestQuestions[skinTestStep];
+
+  // Yaş sorusu özel render
+  if (q.type === 'age') {
+    body.innerHTML = `
+      <div class="skin-test-progress">
+        ${Array.from({length: total}, (_, i) =>
+          '<div class="skin-test-dot ' + (i < skinTestStep ? 'done' : i === skinTestStep ? 'current' : '') + '"></div>'
+        ).join('')}
+      </div>
+      <div class="skin-test-step active">
+        <div class="skin-test-header">
+          <span class="skin-test-icon">${q.icon || ''}</span>
+          <span class="skin-test-counter">${skinTestStep + 1} / ${total}</span>
+        </div>
+        ${q.subtitle ? '<div class="skin-test-subtitle">' + q.subtitle + '</div>' : ''}
+        <div class="skin-test-question">${q.question}</div>
+        <div class="skin-test-age-wrap">
+          <input type="number" class="skin-test-age-input" id="skinTestAgeInput"
+            min="13" max="80" placeholder="—" autofocus
+            oninput="document.getElementById('skinTestAgeBtn').classList.toggle('ready', this.value >= 13 && this.value <= 80)"
+            onkeydown="if(event.key==='Enter' && this.value>=13 && this.value<=80) submitSkinTestAge()">
+          <div class="skin-test-age-label">${q.desc || ''}</div>
+          <button class="skin-test-age-btn" id="skinTestAgeBtn" onclick="submitSkinTestAge()">Devam Et</button>
+        </div>
+      </div>
+    `;
+    setTimeout(() => { const inp = document.getElementById('skinTestAgeInput'); if(inp) inp.focus(); }, 350);
+    return;
+  }
+
   body.innerHTML = `
     <div class="skin-test-progress">
       ${Array.from({length: total}, (_, i) =>
@@ -3695,13 +3840,14 @@ function renderSkinTest() {
     </div>
     <div class="skin-test-step active">
       <div class="skin-test-header">
-        <span class="skin-test-emoji">${q.icon || ''}</span>
+        <span class="skin-test-icon">${q.icon || ''}</span>
         <span class="skin-test-counter">${skinTestStep + 1} / ${total}</span>
       </div>
+      ${q.subtitle ? '<div class="skin-test-subtitle">' + q.subtitle + '</div>' : ''}
       <div class="skin-test-question">${q.question}</div>
       <div class="skin-test-options">
         ${q.options.map((opt, i) =>
-          `<button class="skin-test-opt" onclick="answerSkinTest(${i})">
+          `<button class="skin-test-opt" style="animation-delay:${i * 60 + 100}ms" onclick="answerSkinTest(${i})">
             <span>${opt.text}</span>
             ${opt.hint ? '<span class="skin-test-opt-hint">' + opt.hint + '</span>' : ''}
           </button>`
@@ -3709,6 +3855,22 @@ function renderSkinTest() {
       </div>
     </div>
   `;
+}
+
+function submitSkinTestAge() {
+  const inp = document.getElementById('skinTestAgeInput');
+  const age = parseInt(inp?.value);
+  if (!age || age < 13 || age > 80) return;
+  skinTestAnswers.push(age);
+  skinTestStep++;
+  const stepEl = document.querySelector('.skin-test-step.active');
+  if (stepEl) {
+    stepEl.classList.remove('active');
+    stepEl.classList.add('leaving');
+    setTimeout(() => renderSkinTest(), 280);
+  } else {
+    renderSkinTest();
+  }
 }
 
 function answerSkinTest(optIndex) {
@@ -3742,20 +3904,52 @@ var ST_RES_ICONS = {
 function showSkinTestResult() {
   const body      = document.getElementById('skinTestBody');
   const total     = skinTestQuestions.length;
-  const depth     = skinTestAnswers[0] || 'medium';
-  const tones     = [skinTestAnswers[1], skinTestAnswers[2]];
+
+  // Yaş artık 0. cevap (sayısal)
+  const userAge   = typeof skinTestAnswers[0] === 'number' ? skinTestAnswers[0] : 25;
+  const depth     = skinTestAnswers[1] || 'medium';
+  const tones     = [skinTestAnswers[2], skinTestAnswers[3]];
   const warmCount = tones.filter(t => t === 'warm').length;
   const coolCount = tones.filter(t => t === 'cool').length;
   const undertone = warmCount > coolCount ? 'warm' : coolCount > warmCount ? 'cool' : 'neutral';
-  const skinType  = skinTestAnswers[3] || 'normal';
-  const concern   = skinTestAnswers[4] || 'genel';
-  const routine   = skinTestAnswers[5] || 'temel';
+  const skinType  = skinTestAnswers[4] || 'normal';
+  const concern   = skinTestAnswers[5] || 'genel';
+  const routine   = skinTestAnswers[6] || 'temel';
 
   const toneKey   = depth + '-' + undertone;
   const swatchColor = SKIN_TONE_COLORS[toneKey]  || '#C09070';
   const toneName    = SKIN_TONE_NAMES[toneKey]   || 'Medium · Nötr';
   const toneDesc    = SKIN_TONE_DESC[toneKey]    || '';
   const shadeHints  = SHADE_HINTS[toneKey]       || [];
+
+  // Yaş aralığı belirleme
+  var ageGroup, ageLabel;
+  if (userAge < 18)      { ageGroup = 'teen';   ageLabel = 'Genç Cilt (13-17)'; }
+  else if (userAge < 25) { ageGroup = 'young';  ageLabel = 'Genç Yetişkin (18-24)'; }
+  else if (userAge < 35) { ageGroup = 'adult';  ageLabel = 'Yetişkin (25-34)'; }
+  else if (userAge < 45) { ageGroup = 'mature'; ageLabel = 'Olgun (35-44)'; }
+  else                   { ageGroup = 'senior'; ageLabel = 'Olgun+ (45+)'; }
+
+  // Yaşa özel bakım önerileri
+  var ageAdvice = {
+    teen:   'Cildiniz henüz gelişme aşamasında. Hafif, non-comedogenic ürünlerle başlayın. SPF alışkanlığını şimdiden edinin — ileride kendinize teşekkür edeceksiniz.',
+    young:  'Cildiniz en enerjik döneminde. Temel bakım rutini, iyi bir nemlendirici ve SPF 30+ yeterli. Ağır anti-aging ürünlerden kaçının, cildiniz henüz buna ihtiyaç duymuyor.',
+    adult:  'Kolajen üretimi yavaşlamaya başlıyor. Retinol, C vitamini ve hyaluronik asit içerikli ürünlerle erken önlem alın. Göz çevresi bakımını ihmal etmeyin.',
+    mature: 'Cilt yenilenmesi yavaşlıyor. Peptit, retinol ve niacinamide içerikli anti-aging ürünler bu dönemde çok etkili. Zengin dokulu kremler tercih edin.',
+    senior: 'Olgun cildin ihtiyaçları farklı: Yoğun nemlendirme, sıkılaştırma ve güneş koruması öncelikleriniz. Ceramide ve kollajen destekleyici ürünlere yönelin.',
+  };
+
+  // Yaşa göre kategori önceliği
+  var agePriorityCategories = {
+    teen:   ['nemlendirici', 'primer', 'maskara', 'dudak-parlatici'],
+    young:  ['fondoten', 'maskara', 'primer', 'allik'],
+    adult:  ['fondoten', 'primer', 'aydinlatici', 'kapatici'],
+    mature: ['fondoten', 'primer', 'kapatici', 'pudra'],
+    senior: ['fondoten', 'nemlendirici', 'kapatici', 'pudra'],
+  };
+
+  // Yaşa göre bütçe aralığı (genç = uygun, olgun = premium)
+  var agePriceMax = { teen: 500, young: 800, adult: 2000, mature: 4000, senior: 5000 };
 
   // Undertone chip class
   const undertoneClass = 'undertone-' + undertone;
@@ -3764,14 +3958,27 @@ function showSkinTestResult() {
   // Routine level label
   const routineLabels = {minimal:'Minimal Bakım', temel:'Temel Bakım', orta:'Orta Düzey Bakım', kapsamli:'Kapsamlı Bakım'};
 
-  // Cilt tipine göre ürün önerileri (fondöten hariç - herkes kullanmıyor)
+  // Yaş + cilt tipine göre ürün önerileri
+  var priorityCats = agePriorityCategories[ageGroup] || ['fondoten','primer','maskara'];
+  var maxPrice = agePriceMax[ageGroup] || 2000;
+
+  const matchByAge = [];
+  priorityCats.forEach(function(cat) {
+    var matched = products.filter(function(p) {
+      return p.category === cat && minPrice(p) <= maxPrice;
+    }).sort(function(a,b) { return b.rating - a.rating; }).slice(0, 2);
+    matchByAge.push.apply(matchByAge, matched);
+  });
+
+  // Cilt tipine göre ek öneriler
   const matchNemlendirici = products.filter(p => p.category === 'nemlendirici' &&
-    p.skinType && p.skinType.some(s => s === skinType || s === 'normal')
+    p.skinType && p.skinType.some(s => s === skinType || s === 'normal') &&
+    minPrice(p) <= maxPrice
   ).sort((a,b) => b.rating - a.rating).slice(0, 4);
 
   // Concern'e göre öneriler
   var concernCat = {akne:'primer', antiaging:'goz-kremi', leke:'aydinlatici', hassas:'nemlendirici', gozener:'primer', genel:'nemlendirici'};
-  const matchConcern = products.filter(p => p.category === (concernCat[concern]||'nemlendirici'))
+  const matchConcern = products.filter(p => p.category === (concernCat[concern]||'nemlendirici') && minPrice(p) <= maxPrice)
     .sort((a,b) => b.rating - a.rating).slice(0, 2);
 
   // Rutin
