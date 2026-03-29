@@ -154,6 +154,21 @@ function normalizeCategoryLabel(label) {
   return categoryLabelMap[label] || label;
 }
 
+// ── Kategori slug → label haritası (correctCategoryByName sonrası label güncellemesi için) ──
+var categorySlugToLabel = {
+  'fondoten': 'Fondöten', 'maskara': 'Maskara', 'ruj': 'Ruj', 'far': 'Göz Farı',
+  'far-paleti': 'Far Paleti', 'eyeliner': 'Eyeliner', 'goz-kalemi': 'Göz Kalemi',
+  'allik': 'Allık', 'aydinlatici': 'Aydınlatıcı', 'bronzer': 'Bronzer', 'kontur': 'Kontür',
+  'kapatici': 'Kapatıcı', 'primer': 'Primer', 'pudra': 'Pudra',
+  'dudak-parlatici': 'Dudak Parlatıcı', 'dudak-kalemi': 'Dudak Kalemi',
+  'kas': 'Kaş Makyajı', 'dipliner': 'Dipliner', 'kas-kalemi': 'Kaş Kalemi',
+  'kas-fari': 'Kaş Farı', 'kas-sabitleyici': 'Kaş Sabitleyici',
+  'bb-cc-krem': 'BB & CC Krem', 'makyaj-sabitleyici': 'Makyaj Sabitleyici',
+  'makyaj-seti': 'Makyaj Seti', 'vucut-simi': 'Vücut Simi',
+  'nemlendirici': 'Nemlendirici', 'vucut-losyonu': 'Vücut Bakımı',
+  'parfum': 'Parfüm', 'goz-kremi': 'Göz Kremi',
+};
+
 // ── Kategori name normalizasyonu (eşleştirme için) ──
 var categoryNameMap = {
   'fondoten': 'fondoten',
@@ -1023,6 +1038,8 @@ for (var s = 0; s < SOURCES.length; s++) {
       // Kategori düzeltmesi: ürün adına bakarak yanlış kategorileri düzelt
       var correctedCat = normalizeCategoryName(p.category);
       correctedCat = correctCategoryByName(p.name, correctedCat);
+      // categoryLabel'ı düzeltilmiş kategoriye göre güncelle
+      var correctedLabel = categorySlugToLabel[correctedCat] || normalizeCategoryLabel(p.categoryLabel);
       // Trendyol ürünleri için barkod ekle (trendyol-barcodes.json'dan)
       var barcode = p.barcode || '';
       if (src.site === 'Trendyol' && p.id && trendyolBarcodes[p.id]) {
@@ -1033,7 +1050,7 @@ for (var s = 0; s < SOURCES.length; s++) {
         name: name,
         _site: src.site,
         category: correctedCat,
-        categoryLabel: normalizeCategoryLabel(p.categoryLabel),
+        categoryLabel: correctedLabel,
         barcode: barcode,
       });
     });
@@ -1090,8 +1107,8 @@ allRaw = allRaw.filter(function(p) {
   if (p.price > 10000) return false;
   // 9. Otomobil parçaları — "far" kelimesi araba farı olarak çekilmiş
   if (/\b(ford|volkswagen|vw|renault|toyota|honda|bmw|mercedes|audi|opel|fiat|hyundai|kia|peugeot|citroen|seat|skoda|volvo|passat|focus|corolla|civic|golf|polo|mais)\b/i.test(name)) return false;
-  // 10. Elektronik/otomotiv/spor ürünleri — makyaj sitesine ait olmayan ürünler
-  if (/\b(led far|xenon|oto\s|otomobil|araç|araba|motor|motosiklet|ampul|silecek|bisiklet|koşu bandı|çadır|spor aleti|dambıl|halter|kondisyon|çanta|cüzdan|valiz|şemsiye|tarak|törpü|cımbız|yastık|yorgan|battaniye|havlu|bornoz|aksesuar)\b/i.test(name)) return false;
+  // 10. Elektronik/otomotiv/spor/mutfak/ev ürünleri — makyaj sitesine ait olmayan ürünler
+  if (/\b(led far|xenon|oto\s|otomobil|araç|araba|motor|motosiklet|ampul|silecek|bisiklet|koşu bandı|çadır|spor aleti|dambıl|halter|kondisyon|çanta|cüzdan|valiz|şemsiye|tarak|törpü|cımbız|yastık|yorgan|battaniye|havlu|bornoz|aksesuar|ocak|fırın|çamaşır|bulaşık|süpürge|aspiratör|klima|televizyon|telefon kart|laptop|tablet|kulaklık|hoparlör|şarj|kablo|pil |halı|perde|tencere|tava|tabak|bardak|çatal|kaşık|bıçak|elektrikli|kontör|ps4|ps5|xbox|playstation|nintendo|oyun kulaklık|penis|anal|vibrat)\b/i.test(name)) return false;
   // 11. Giyim/iç giyim ürünleri — Hepsiburada'dan hatalı çekilmiş
   if (/\b(termal|fanila|korse|atlet|tayt|boxer|külot|çorap|pantolon|gömlek|tişört|t-shirt|sweatshirt|mont|ceket|palto|elbise|etek|şort)\b/i.test(name)) return false;
   // 12. "& xyz Hediye/Set" combo paketleri (Maskara & Krem Hediye gibi)
