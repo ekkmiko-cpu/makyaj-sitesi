@@ -29,11 +29,20 @@ const CATEGORIES = [
   { name: 'ruj',             q: 'ruj',                        label: 'Ruj' },
   { name: 'dudak-parlatici', q: 'dudak parlatıcı lip gloss',  label: 'Dudak Parlatıcı' },
   { name: 'dudak-kalemi',    q: 'dudak kalemi',               label: 'Dudak Kalemi' },
+  // ── Yeni kategoriler (Akakce uyumu) ─────────────────────────────────────────
+  { name: 'dipliner',           q: 'dipliner',                      label: 'Dipliner' },
+  { name: 'kas-kalemi',         q: 'kaş kalemi makyaj',             label: 'Kas Kalemi' },
+  { name: 'kas-fari',           q: 'kaş farı',                      label: 'Kas Fari' },
+  { name: 'kas-sabitleyici',    q: 'kaş sabitleyici jeli',          label: 'Kas Sabitleyici' },
+  { name: 'bb-cc-krem',         q: 'bb krem cc krem makyaj',        label: 'BB CC Krem' },
+  { name: 'makyaj-sabitleyici', q: 'makyaj sabitleyici sprey',      label: 'Makyaj Sabitleyici' },
+  { name: 'makyaj-seti',        q: 'makyaj seti',                   label: 'Makyaj Seti' },
+  { name: 'vucut-simi',         q: 'vücut simi',                    label: 'Vucut Simi' },
 ];
 
 const OUTPUT_FILE = path.join(__dirname, 'pttavm-products.json');
 const DELAY_MS = 2000;
-const MAX_PAGES = 3;
+const MAX_PAGES = 8;
 const START_ID = 45000;
 // -----------------------------------------------------------------------------
 
