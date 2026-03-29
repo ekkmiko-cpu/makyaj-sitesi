@@ -43,7 +43,7 @@
     "category": "fondoten",
     "categoryLabel": "Fondöten",
     "price": 4590,
-    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/S/SHISEIDO/703929/328031-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
+    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/S/SHISEIDO/703928/328030-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
     "productUrl": "https://www.sephora.com.tr/p/revitalessence-skin-glow---fondoten-P10053441.html",
     "rating": 0,
     "reviews": 0,
@@ -97,7 +97,7 @@
     "category": "fondoten",
     "categoryLabel": "Fondöten",
     "price": 3699,
-    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/C/CHARLOTTE_TILBURY/774913/380046-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
+    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/C/CHARLOTTE_TILBURY/774922/380055-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
     "productUrl": "https://www.sephora.com.tr/p/airbrush-kusursuz-fondoten-%E2%80%93-hafif-tam-kapaticilik-P1000209495.html",
     "rating": 0,
     "reviews": 0,
@@ -385,7 +385,7 @@
     "category": "fondoten",
     "categoryLabel": "Fondöten",
     "price": 3700,
-    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/L/LANCO/421709/3855-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
+    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/L/LANCO/421708/3856-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
     "productUrl": "https://www.sephora.com.tr/p/teint-miracle-fondoten-P3227009.html",
     "rating": 0,
     "reviews": 0,
@@ -1087,7 +1087,7 @@
     "category": "kapatici",
     "categoryLabel": "Kapatıcı",
     "price": 2290,
-    "imageUrl": "https://media.sephora.eu/content/dam/digital/massivpimupload/N/NARS/387260/33718-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
+    "imageUrl": "https://media.sephora.eu/content/dam/digital/massivpimupload/N/NARS/387259/33721-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
     "productUrl": "https://www.sephora.com.tr/p/soft-matte-complete-concealer---ginger-P2865006.html",
     "rating": 0,
     "reviews": 0,
@@ -1159,7 +1159,7 @@
     "category": "kapatici",
     "categoryLabel": "Kapatıcı",
     "price": 1999,
-    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/T/TARTE/535920/230194-media_swatch-1.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
+    "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/T/TARTE/535918/230192-media_swatch-1.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
     "productUrl": "https://www.sephora.com.tr/p/shape-tape-ultra-creamy---yari-mat-bitisli-nemlendirici-24-saat-kalici-kapatici-P10014456.html",
     "rating": 0,
     "reviews": 0,
@@ -1167,7 +1167,7 @@
     "desc": "Tam kapatıcılık, uzun süre kalıcı nemlendirici kapatıcı Tarte’ın ikonik shape tape™ kapatıcısı",
     "vegan": false,
     "crueltyFree": false,
-    "size": "16N fair-light neutral (10 ml)"
+    "size": "12N fair neutral (10 ml)"
   },
   {
     "id": 165,
@@ -2456,7 +2456,7 @@
     "categoryLabel": "Primer",
     "price": 4229,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/S/SGOOP/759696/364349-media_swatch.jpg?scaleWidth=585&scaleHeight=585&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/glowscreen---gunes-kremi-spf-30-pa----jumbo-boy-P10061965.html",
+    "productUrl": "https://www.sephora.com.tr/p/glowscreen---gunes-kremi-spf-30-pa----jumbo-boy-759696.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora",
@@ -4714,7 +4714,7 @@
     "categoryLabel": "Bronzer",
     "price": 1099,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/S/SEPHORA_COLLECTION/774097/373281-media_swatch-0.jpeg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/bronzer-stick---uzun-sure-kalici-mat-bitisli--cubuk-krem-bronzlastirici-P1000213364.html",
+    "productUrl": "https://www.sephora.com.tr/p/bronzer-stick---uzun-sure-kalici-mat-bitisli--cubuk-krem-bronzlastirici-774097.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -5680,7 +5680,7 @@
     "categoryLabel": "Maskara",
     "price": 3600,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/L/LANCO/512845/199070-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/cils-booster-lash-serum-512845.html",
+    "productUrl": "https://www.sephora.com.tr/p/cils-booster-lash-serum-P10010546.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -6072,7 +6072,7 @@
     "categoryLabel": "Maskara",
     "price": 2750,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/L/LANCO/772472/371079-media_swatch.jpeg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/hypnose-drama-aninda-dolgunluk-ve-hacim-etkili---waterproof-maskara-772472.html",
+    "productUrl": "https://www.sephora.com.tr/p/hypnose-drama-aninda-dolgunluk-ve-hacim-etkili---waterproof-maskara-P1000208053.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -6198,7 +6198,7 @@
     "categoryLabel": "Maskara",
     "price": 2450,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/L/LANCO/391302/5104-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/monsieur-big-maskara-P2953039.html",
+    "productUrl": "https://www.sephora.com.tr/p/monsieur-big-maskara-391302.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -6212,7 +6212,7 @@
     "categoryLabel": "Maskara",
     "price": 2400,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/L/LAUDE/482662/139730-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/sumptuous-rebel-length-lift-maskara-P3874093.html",
+    "productUrl": "https://www.sephora.com.tr/p/sumptuous-rebel-length-lift-maskara-482662.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -6240,7 +6240,7 @@
     "categoryLabel": "Maskara",
     "price": 1886,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/G/GIVENCHY/480966/115233-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/volume-disturbia-maskara-P3720038.html",
+    "productUrl": "https://www.sephora.com.tr/p/volume-disturbia-maskara-480966.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -6268,7 +6268,7 @@
     "categoryLabel": "Maskara",
     "price": 2049,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/T/TARTE/745531/357692-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/lights--camera--lashes%E2%84%A2-platinum-mascara---maskara-P10061299.html",
+    "productUrl": "https://www.sephora.com.tr/p/lights--camera--lashes%E2%84%A2-platinum-mascara---maskara-745531.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -7989,7 +7989,7 @@
     "category": "eyeliner",
     "categoryLabel": "Eyeliner",
     "price": 2190,
-    "imageUrl": "https://media.sephora.eu/content/dam/digital/massivpimupload/S/SHISEIDO/444528/41473-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
+    "imageUrl": "https://media.sephora.eu/content/dam/digital/massivpimupload/S/SHISEIDO/444532/41231-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
     "productUrl": "https://www.sephora.com.tr/p/microliner-ink-eyeliner-02-P3473044.html",
     "rating": 0,
     "reviews": 0,
@@ -8564,7 +8564,7 @@
     "categoryLabel": "Göz Kalemi",
     "price": 719,
     "imageUrl": "https://media.sephora.eu/content/dam/digital/pim/published/S/SEPHORA_COLLECTION/514290/210939-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/colorful-P10017667.html",
+    "productUrl": "https://www.sephora.com.tr/p/colorful-514290.html",
     "rating": 0,
     "reviews": 0,
     "source": "sephora"
@@ -11834,20 +11834,6 @@
   {
     "id": 888,
     "emoji": "🌿",
-    "name": "Phyto-Sourcils Fix Kaş Jeli",
-    "brand": "SISLEY",
-    "category": "kas-sabitleyici",
-    "categoryLabel": "Kaş Sabitleyici",
-    "price": 3375,
-    "imageUrl": "https://media.sephora.eu/content/dam/digital/massivpimupload/S/SISLEY/409855/85439-media_swatch.jpg?scaleWidth=240&scaleHeight=240&scaleMode=fit",
-    "productUrl": "https://www.sephora.com.tr/p/phyto-sourcils-fix-n2-dark-P3083009.html",
-    "rating": 0,
-    "reviews": 0,
-    "source": "sephora"
-  },
-  {
-    "id": 889,
-    "emoji": "🌿",
     "name": "KUSH Brow Lamination Gel Kaş Jeli",
     "brand": "MILK MAKEUP",
     "category": "kas-sabitleyici",
@@ -11860,7 +11846,7 @@
     "source": "sephora"
   },
   {
-    "id": 890,
+    "id": 889,
     "emoji": "💧",
     "name": "Sports BB Compact SPF 50 BB Krem",
     "brand": "SHISEIDO",
@@ -11874,7 +11860,7 @@
     "source": "sephora"
   },
   {
-    "id": 891,
+    "id": 890,
     "emoji": "💧",
     "name": "CC Krem Renkli Düzeltici Bakım Sağlıklı Işıltı ve Parlaklık",
     "brand": "ERBORIAN",
@@ -11888,7 +11874,7 @@
     "source": "sephora"
   },
   {
-    "id": 892,
+    "id": 891,
     "emoji": "💧",
     "name": "CC Red Correct Kızarıklık Dengeleyici CC Krem",
     "brand": "ERBORIAN",
@@ -11902,7 +11888,7 @@
     "source": "sephora"
   },
   {
-    "id": 893,
+    "id": 892,
     "emoji": "💧",
     "name": "CC Red Correct Renkli Düzeltici Bakım Kızarıklık Karşıtı ve Yatıştırıcı",
     "brand": "ERBORIAN",
@@ -11916,7 +11902,7 @@
     "source": "sephora"
   },
   {
-    "id": 894,
+    "id": 893,
     "emoji": "💧",
     "name": "Ginseng BB Crème Baby Skin\" Effect BB Krem",
     "brand": "ERBORIAN",
@@ -11930,7 +11916,7 @@
     "source": "sephora"
   },
   {
-    "id": 895,
+    "id": 894,
     "emoji": "💧",
     "name": "Premium Beauty Balm Cilt bakımı ve makyaj bir arada",
     "brand": "DR.JART+",
@@ -11944,7 +11930,7 @@
     "source": "sephora"
   },
   {
-    "id": 896,
+    "id": 895,
     "emoji": "💧",
     "name": "Super BB With Ginseng Seyehat Boyu BB Krem",
     "brand": "ERBORIAN",
@@ -11958,7 +11944,7 @@
     "source": "sephora"
   },
   {
-    "id": 897,
+    "id": 896,
     "emoji": "💧",
     "name": "Ginseng BB Crème BB Krem",
     "brand": "ERBORIAN",
@@ -11972,7 +11958,7 @@
     "source": "sephora"
   },
   {
-    "id": 898,
+    "id": 897,
     "emoji": "💧",
     "name": "Moisture Surge™ Sheertint Hydrator SPF 25 Renkli Nemlendirici",
     "brand": "CLINIQUE",
@@ -11986,7 +11972,7 @@
     "source": "sephora"
   },
   {
-    "id": 899,
+    "id": 898,
     "emoji": "💧",
     "name": "BB Blur Tinted Moisturizer Renkli Nemlendirici Krem",
     "brand": "TARTE",
@@ -12000,7 +11986,7 @@
     "source": "sephora"
   },
   {
-    "id": 900,
+    "id": 899,
     "emoji": "💧",
     "name": "GinZing Güneş korumalı Renkli Nemlendirici",
     "brand": "ORIGINS",
@@ -12014,7 +12000,7 @@
     "source": "sephora"
   },
   {
-    "id": 901,
+    "id": 900,
     "emoji": "💧",
     "name": "CC Water Clair Renk Eşitleyici Jel",
     "brand": "ERBORIAN",
@@ -12028,7 +12014,7 @@
     "source": "sephora"
   },
   {
-    "id": 902,
+    "id": 901,
     "emoji": "💧",
     "name": "BB Burst Nemlendirici Renkli Jel Krem",
     "brand": "KOSAS",
@@ -12042,7 +12028,7 @@
     "source": "sephora"
   },
   {
-    "id": 903,
+    "id": 902,
     "emoji": "💧",
     "name": "CC Water Clair Jel Cilt Tonu Eşitleyici",
     "brand": "ERBORIAN",
@@ -12056,7 +12042,7 @@
     "source": "sephora"
   },
   {
-    "id": 904,
+    "id": 903,
     "emoji": "💧",
     "name": "Super BB With Ginseng BB Krem",
     "brand": "ERBORIAN",
@@ -12070,7 +12056,7 @@
     "source": "sephora"
   },
   {
-    "id": 905,
+    "id": 904,
     "emoji": "💧",
     "name": "Revitalizing Supreme Global Anti-Aging CC Creme SPF10",
     "brand": "ESTÉE LAUDER",
@@ -12084,7 +12070,7 @@
     "source": "sephora"
   },
   {
-    "id": 906,
+    "id": 905,
     "emoji": "💧",
     "name": "Milky Boost Cream Renkli Nemlendirici",
     "brand": "CLARINS",
@@ -12098,7 +12084,7 @@
     "source": "sephora"
   },
   {
-    "id": 907,
+    "id": 906,
     "emoji": "💧",
     "name": "Soleil Bronzer BB Güneş Kremi SPF 50",
     "brand": "LANCÔME",
