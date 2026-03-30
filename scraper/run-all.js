@@ -29,7 +29,7 @@ const results = {};
 const startTime = Date.now();
 
 console.log('═══════════════════════════════════════════');
-console.log('  🚀 BEAUTÉ — Çoklu Satıcı Scraper');
+console.log('  🚀 KOZMELOVE — Çoklu Satıcı Scraper');
 console.log('═══════════════════════════════════════════\n');
 
 for (const scraper of SCRAPERS) {

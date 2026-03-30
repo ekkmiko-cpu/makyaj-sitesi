@@ -13,7 +13,7 @@
 const https = require('https');
 const http = require('http');
 
-const USER_AGENT = 'BeauteBot/1.0';
+const USER_AGENT = 'KozmeloveBot/1.0';
 
 /**
  * Bir sitenin robots.txt dosyasını indirir ve kuralları parse eder.
@@ -70,7 +70,7 @@ function isPathAllowed(rules, urlPath) {
 }
 
 /**
- * robots.txt metnini parse eder. Önce BeauteBot, sonra * kurallarını arar.
+ * robots.txt metnini parse eder. Önce KozmeloveBot, sonra * kurallarını arar.
  */
 function parseRobotsTxt(text) {
   const lines = text.split('\n').map(l => l.trim());
@@ -112,8 +112,8 @@ function parseRobotsTxt(text) {
     sections.push({ agents: currentAgents, rules: currentRules });
   }
 
-  // Önce BeauteBot'a özel kuralları ara, yoksa * kurallarını kullan
-  let targetSection = sections.find(s => s.agents.includes('beautebot') || s.agents.includes('beautebot/1.0'));
+  // Önce KozmeloveBot'a özel kuralları ara, yoksa * kurallarını kullan
+  let targetSection = sections.find(s => s.agents.includes('kozmelovebot') || s.agents.includes('kozmelovebot/1.0'));
   if (!targetSection) {
     targetSection = sections.find(s => s.agents.includes('*'));
   }

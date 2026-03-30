@@ -1732,7 +1732,7 @@ KNOWN_DUPES.forEach(function(d) {
 var siteCount = Object.keys(sourceCounts).filter(function(k) { return sourceCounts[k] > 0; }).length;
 var multiPriceCount = products.filter(function(p) { return p.prices.length > 1; }).length;
 
-var header = '// Beaute urun verisi — ' + products.length + ' urun, ' + siteCount + ' satici\n';
+var header = '// Kozmelove urun verisi — ' + products.length + ' urun, ' + siteCount + ' satici\n';
 header += '// Otomatik uretildi: ' + new Date().toLocaleDateString('tr-TR') + '\n';
 header += '// Coklu fiyat: ' + multiPriceCount + ' urunde birden fazla satici\n';
 var js = header + 'const products = ' + JSON.stringify(products, null, 2) + ';\n';
