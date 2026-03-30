@@ -39,7 +39,7 @@ const CATEGORIES = [
   { name: 'vucut-simi',         url: '/sr?q=vucut+simi',                        label: 'Vucut Simi' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'trendyol-products.json');
-const MAX_PAGES = 12;      // sayfa basina 24 urun → 12 sayfa × 24 kat = ~6900 urun
+const MAX_PAGES = 20;      // sayfa basina 24 urun → 20 sayfa × 24 kat = ~11500 urun
 const DELAY_MS  = 1200;    // sayfa arasi bekleme (ms)
 // -----------------------------------------------------------------------------
 

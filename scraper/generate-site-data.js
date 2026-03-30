@@ -911,7 +911,8 @@ var knownBrands = [
   // Çok kelimeli önce (greedy)
   'Maybelline New York', 'NYX Professional Makeup', 'Make Up For Ever',
   'L\'Oréal Paris', 'L\'Oreal Paris', 'L\'Oréal', 'L\'Oreal',
-  'Anastasia Beverly Hills', 'Charlotte Tilbury', 'Yves Saint Laurent',
+  'Anastasia Beverly Hills', 'Anastasıa Beverly Hills',
+  'Charlotte Tilbury', 'Yves Saint Laurent',
   'Yves Rocher', 'The Purest Solutions', 'Fenty Beauty',
   'Huda Beauty', 'Rare Beauty', 'Dolce & Gabbana', 'Urban Decay',
   'Too Faced', 'Bobbi Brown', 'NARS Cosmetics',
@@ -926,6 +927,29 @@ var knownBrands = [
   'Vivienne Sabo', 'Golden Rose',
   'ColourPop', 'Colourpop',
   'Pixi by Petra',
+  'Alix Avien', 'ALIX AVIEN',
+  'New Well', 'NEW WELL',
+  'Jane Iredale', 'JANE IREDALE',
+  'Bade Natural', 'BADE NATURAL',
+  'Max Factor', 'MAX FACTOR',
+  'Physicians Formula',
+  'Diego Dalla Palma',
+  'TCA Studio Make-Up', 'TCA STUDIO MAKE-UP', 'TCA Studio',
+  'Pretty Beauty', 'PRETTY BEAUTY',
+  'Sweet Kiss', 'SWEET KISS',
+  'Naj Oleari', 'NAJ OLEARI',
+  'Pop Beauty', 'POP BEAUTY',
+  'Estée Lauder', 'Estee Lauder', 'ESTÉE LAUDER',
+  'Deborah Milano', 'DEBORAH MILANO',
+  'Dilara Zeybek',
+  'Cream Co.', 'CREAM CO.',
+  'Merit Flush',
+  'Lionesse Silver',
+  'Nivea Sun', 'NIVEA SUN',
+  'Laura Mercier',
+  'Smashbox Cosmetics',
+  'Becca Cosmetics',
+  'Pat McGrath',
   // Tek kelimeli
   'Maybelline', 'Flormar', 'Essence', 'Catrice', 'NOTE', 'Pastel',
   'NYX', 'MAC', 'Clinique', 'Benefit', 'NARS', 'Dior',
@@ -942,6 +966,13 @@ var knownBrands = [
   'Vivienne Sabo', 'Colorgram', 'Jowe', 'Wonderskin',
   'Bioaqua', 'Veraclara', 'Focallure', 'Beaulis',
   'Homm Life', 'Muson', 'LR Zeitgard',
+  'Oriflame', 'Nivea', 'NIVEA', 'Deborah',
+  'Smashbox', 'Becca', 'Stila', 'Bourjois',
+  'Neutrogena', 'Bioderma', 'Vichy', 'Garnier',
+  'La Roche-Posay', 'The Ordinary', 'Wella', 'Dove',
+  'Monteil', 'Lionesse', 'Merit', 'Peripera',
+  'Handaiyan', 'Sheglam', 'SHEGLAM', 'O.TWO.O',
+  'Lumene', 'LUMENE', 'MOV', 'Extreme',
   // Ürün serisi → marka mapping (Hepsiburada'da marka eksik olduğunda)
   'Infaillible', // L'Oréal ürün serisi — extractBrandFromName'de yakalanamaz, aşağıda özel mapping var
 ].sort(function(a, b) { return b.length - a.length; }); // En uzun önce (greedy match)
@@ -978,14 +1009,20 @@ function extractBrandFromProductLine(name) {
   return '';
 }
 
+// Unicode apostrof ve tırnak normalizasyonu (U+2019 ' → ', U+2018 ' → ', U+201C " → ", U+201D " → ")
+function normalizeApostrophes(str) {
+  return str.replace(/[\u2018\u2019\u02BC\u02BB]/g, "'").replace(/[\u201C\u201D]/g, '"');
+}
+
 function extractBrandFromName(name) {
   if (!name) return { brand: '', cleanName: name };
-  var nameLower = name.toLowerCase();
+  var normalizedName = normalizeApostrophes(name);
+  var nameLower = normalizedName.toLowerCase();
   for (var i = 0; i < knownBrands.length; i++) {
     var b = knownBrands[i];
-    var bLower = b.toLowerCase();
+    var bLower = normalizeApostrophes(b).toLowerCase();
     if (nameLower.startsWith(bLower + ' ') || nameLower.startsWith(bLower + ',') || nameLower.includes(bLower)) {
-      var cleanName = name.replace(new RegExp(b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), '').trim();
+      var cleanName = normalizedName.replace(new RegExp(normalizeApostrophes(b).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), '').trim();
       cleanName = cleanName.replace(/^[-–,\s]+/, '').trim();
       return { brand: b, cleanName: cleanName };
     }

@@ -42,7 +42,7 @@ const CATEGORIES = [
 
 const OUTPUT_FILE = path.join(__dirname, 'amazon-products.json');
 const DELAY_MS = 2000;
-const MAX_PAGES = 8;
+const MAX_PAGES = 12;
 const START_ID = 30000;
 // -----------------------------------------------------------------------------
 
