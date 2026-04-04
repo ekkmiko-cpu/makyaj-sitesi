@@ -1,2 +1,6 @@
 .vercel
 scraper/node_modules/
+node_modules/
+index.backup.html
+products-data.backup.js
+.claude/serve.sh
