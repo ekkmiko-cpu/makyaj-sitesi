@@ -35,6 +35,7 @@
       --text2: #6b6660;
       --text3: #a8a49f;
       --gold: #C9A96E;
+      --gold-light: #e0c78a;
       --gold-soft: rgba(201, 169, 110, 0.15);
       --border: rgba(26, 24, 20, 0.1);
     }
@@ -51,6 +52,15 @@
       align-items: center;
       justify-content: center;
       overflow-x: hidden;
+      cursor: default;
+    }
+
+    /* ── SPARKLE CANVAS ── */
+    #sparkleCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
     }
 
     /* ── PAGE LOAD REVEAL ── */
@@ -71,10 +81,13 @@
       100% { background-position: 200% center; }
     }
 
-    /* ── FLOAT ANIMATION ── */
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+    /* ── 3D FLOAT ── */
+    @keyframes float3d {
+      0%   { transform: perspective(600px) translateY(0)   rotateX(0deg)   rotateY(0deg)   scale(1); }
+      25%  { transform: perspective(600px) translateY(-6px) rotateX(5deg)   rotateY(-8deg)  scale(1.03); }
+      50%  { transform: perspective(600px) translateY(-12px) rotateX(0deg)  rotateY(0deg)   scale(1.06); }
+      75%  { transform: perspective(600px) translateY(-6px) rotateX(-5deg)  rotateY(8deg)   scale(1.03); }
+      100% { transform: perspective(600px) translateY(0)   rotateX(0deg)   rotateY(0deg)   scale(1); }
     }
 
     /* ── FADE IN UP ── */
@@ -83,10 +96,22 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── PULSE GLOW ── */
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.1); }
-      50% { box-shadow: 0 0 40px rgba(201, 169, 110, 0.25); }
+    /* ── GLOW PULSE ── */
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 8px 32px rgba(201, 169, 110, 0.15), 0 0 0 rgba(201, 169, 110, 0); }
+      50% { box-shadow: 0 12px 48px rgba(201, 169, 110, 0.3), 0 0 20px rgba(201, 169, 110, 0.1); }
+    }
+
+    /* ── ICON SHINE ── */
+    @keyframes iconShine {
+      0% { background-position: -150% center; }
+      100% { background-position: 250% center; }
+    }
+
+    /* ── ROTATE SUBTLE ── */
+    @keyframes rotateStar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     /* ── MAIN CONTAINER ── */
@@ -104,24 +129,42 @@
       font-weight: 400;
       letter-spacing: 5px;
       text-transform: uppercase;
-      color: var(--text);
+      color: transparent;
       text-decoration: none;
       display: inline-block;
       margin-bottom: 48px;
       animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+      transition: transform 0.3s ease, text-shadow 0.3s;
+      background: linear-gradient(180deg, #2a2520 0%, #1a1814 40%, #3d3530 60%, #1a1814 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      filter: drop-shadow(0 1px 1px rgba(255,255,255,0.15));
+    }
+    .logo:hover {
+      transform: scale(1.04);
+      filter: drop-shadow(0 1px 2px rgba(255,255,255,0.25));
     }
     .logo em {
       font-style: italic;
       font-weight: 300;
+      background: linear-gradient(180deg, #d4b87a 0%, #C9A96E 30%, #e8d5a8 55%, #C9A96E 75%, #b8954f 100%);
+      background-size: 100% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+      filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.3));
     }
 
     /* ── DIVIDER ── */
     .divider {
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
       margin: 0 auto 40px;
       animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+      border-radius: 1px;
+      box-shadow: 0 0 12px rgba(201, 169, 110, 0.3);
     }
 
     /* ── HEADING ── */
@@ -132,63 +175,142 @@
       line-height: 1.3;
       margin-bottom: 20px;
       animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1s both;
+      color: transparent;
+      background: linear-gradient(180deg, #2a2520 0%, #1a1814 40%, #3d3530 55%, #1a1814 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      filter: drop-shadow(0 1px 1px rgba(255,255,255,0.1));
     }
     .heading em {
       font-style: italic;
       font-weight: 300;
-      background: linear-gradient(135deg, var(--gold), #e0c78a, var(--gold));
-      background-size: 200% auto;
+      background: linear-gradient(135deg, #d4b87a, #e8d5a8, #C9A96E, #d4b87a);
+      background-size: 300% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       animation: shimmer 3s linear infinite;
+      filter: drop-shadow(0 0 10px rgba(201, 169, 110, 0.35));
     }
 
     /* ── SUBTITLE ── */
     .subtitle {
       font-size: 16px;
-      color: var(--text2);
+      color: transparent;
       font-weight: 300;
       letter-spacing: 0.3px;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
       animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.2s both;
+      background: linear-gradient(180deg, #7d776f 0%, #6b6660 45%, #8a847c 60%, #6b6660 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     /* ── FEATURES ── */
     .features {
       display: flex;
-      gap: 32px;
+      gap: 48px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 56px;
+      margin-bottom: 64px;
       animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
     }
     .feature {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
-      min-width: 140px;
+      gap: 14px;
+      min-width: 150px;
+      cursor: default;
     }
+
+    /* ── 3D ICON CARDS ── */
     .feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--gold-soft);
+      width: 80px;
+      height: 80px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(201,169,110,0.08));
+      border: 1px solid rgba(201, 169, 110, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
-      animation: float 4s ease-in-out infinite;
+      font-size: 32px;
+      position: relative;
+      animation: float3d 5s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+      box-shadow: 0 8px 32px rgba(201, 169, 110, 0.1), 0 2px 8px rgba(0,0,0,0.04);
+      transform-style: preserve-3d;
+      overflow: hidden;
     }
-    .feature:nth-child(2) .feature-icon { animation-delay: 0.5s; }
-    .feature:nth-child(3) .feature-icon { animation-delay: 1s; }
+    .feature:nth-child(2) .feature-icon { animation-delay: 0.8s; border-radius: 50%; }
+    .feature:nth-child(3) .feature-icon { animation-delay: 1.6s; border-radius: 20px; }
+
+    /* ── ICON SHINE OVERLAY ── */
+    .feature-icon::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.6) 50%, transparent 60%);
+      background-size: 300% 100%;
+      animation: iconShine 4s ease-in-out infinite;
+      border-radius: inherit;
+    }
+    .feature:nth-child(2) .feature-icon::before { animation-delay: 1s; }
+    .feature:nth-child(3) .feature-icon::before { animation-delay: 2s; }
+
+    /* ── ICON GLOW RING ── */
+    .feature-icon::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: inherit;
+      border: 2px solid transparent;
+      background: linear-gradient(135deg, var(--gold), transparent, var(--gold)) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .feature:hover .feature-icon {
+      transform: perspective(600px) translateY(-8px) rotateX(8deg) scale(1.1);
+      box-shadow: 0 16px 48px rgba(201, 169, 110, 0.3), 0 4px 16px rgba(0,0,0,0.06);
+      border-color: var(--gold);
+      animation-play-state: paused;
+    }
+    .feature:hover .feature-icon::after { opacity: 1; }
+
+    /* ── ORBITING PARTICLE ── */
+    .icon-orbit {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: rotateStar 6s linear infinite;
+      transform-origin: 40px 40px;
+      box-shadow: 0 0 8px rgba(201, 169, 110, 0.5);
+    }
+    .feature:nth-child(2) .icon-orbit { animation-duration: 8s; animation-direction: reverse; }
+    .feature:nth-child(3) .icon-orbit { animation-duration: 7s; }
+
     .feature-label {
       font-size: 13px;
-      color: var(--text2);
+      color: transparent;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       font-weight: 400;
+      transition: all 0.3s;
+      background: linear-gradient(180deg, #7d776f 0%, #6b6660 50%, #7d776f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .feature:hover .feature-label {
+      background: linear-gradient(180deg, #d4b87a, #C9A96E, #d4b87a);
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     /* ── EMAIL FORM ── */
@@ -197,10 +319,15 @@
     }
     .notify-label {
       font-size: 13px;
-      color: var(--text3);
+      color: transparent;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 16px;
+      background: linear-gradient(135deg, #b8b0a6, #a8a49f, #c4beb6, #a8a49f);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
     }
     .notify-form {
       display: flex;
@@ -211,11 +338,13 @@
       border-radius: 50px;
       overflow: hidden;
       transition: border-color 0.3s, box-shadow 0.3s;
-      animation: pulseGlow 4s ease-in-out infinite;
+      animation: glowPulse 4s ease-in-out infinite;
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(10px);
     }
     .notify-form:focus-within {
       border-color: var(--gold);
-      box-shadow: 0 0 30px rgba(201, 169, 110, 0.15);
+      box-shadow: 0 0 40px rgba(201, 169, 110, 0.2);
     }
     .notify-input {
       flex: 1;
@@ -226,6 +355,7 @@
       font-size: 14px;
       color: var(--text);
       outline: none;
+      cursor: default;
     }
     .notify-input::placeholder {
       color: var(--text3);
@@ -241,11 +371,11 @@
       font-weight: 500;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      cursor: pointer;
+      cursor: default;
       transition: background 0.3s, transform 0.1s;
       white-space: nowrap;
     }
-    .notify-btn:hover { background: var(--gold); }
+    .notify-btn:hover { background: var(--gold); cursor: pointer; }
     .notify-btn:active { transform: scale(0.97); }
 
     .notify-success {
@@ -276,32 +406,47 @@
     }
     .footer a:hover { color: var(--gold); }
 
-    /* ── DECORATIVE DOTS ── */
+    /* ── DECORATIVE BLOBS ── */
     .dot {
       position: fixed;
       border-radius: 50%;
-      background: var(--gold);
+      background: radial-gradient(circle, var(--gold), transparent 70%);
       opacity: 0.06;
       pointer-events: none;
+      filter: blur(40px);
     }
-    .dot-1 { width: 300px; height: 300px; top: -100px; right: -80px; }
-    .dot-2 { width: 200px; height: 200px; bottom: -60px; left: -40px; }
-    .dot-3 { width: 120px; height: 120px; top: 40%; left: -30px; }
+    .dot-1 { width: 400px; height: 400px; top: -120px; right: -100px; animation: float3d 12s ease-in-out infinite; }
+    .dot-2 { width: 280px; height: 280px; bottom: -80px; left: -60px; animation: float3d 15s ease-in-out infinite reverse; }
+    .dot-3 { width: 160px; height: 160px; top: 35%; left: -40px; animation: float3d 10s ease-in-out infinite 2s; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 480px) {
-      .features { gap: 20px; }
+      #sparkleCanvas { display: none; }
+      .features { gap: 24px; }
       .feature { min-width: 100px; }
+      .feature-icon { width: 64px; height: 64px; font-size: 26px; border-radius: 18px; }
       .notify-form { flex-direction: column; border-radius: 16px; }
       .notify-input { text-align: center; }
       .notify-btn { border-radius: 0 0 16px 16px; }
       .footer { position: static; margin-top: 60px; }
     }
+
+    /* ── PREFERS REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      #sparkleCanvas { display: none; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Decorative background dots -->
+  <!-- Sparkle trail canvas -->
+  <canvas id="sparkleCanvas"></canvas>
+
+  <!-- Decorative background blobs -->
   <div class="dot dot-1"></div>
   <div class="dot dot-2"></div>
   <div class="dot dot-3"></div>
@@ -322,15 +467,24 @@
 
     <div class="features">
       <div class="feature">
-        <div class="feature-icon">&#128132;</div>
+        <div class="feature-icon">
+          <span class="icon-orbit"></span>
+          &#128132;
+        </div>
         <span class="feature-label">Fiyat Karşılaştır</span>
       </div>
       <div class="feature">
-        <div class="feature-icon">&#9889;</div>
+        <div class="feature-icon">
+          <span class="icon-orbit"></span>
+          &#9889;
+        </div>
         <span class="feature-label">En İyi Fırsatlar</span>
       </div>
       <div class="feature">
-        <div class="feature-icon">&#128139;</div>
+        <div class="feature-icon">
+          <span class="icon-orbit"></span>
+          &#128139;
+        </div>
         <span class="feature-label">Muadil Bul</span>
       </div>
     </div>
@@ -350,12 +504,138 @@
   </footer>
 
   <script>
+    // ══════════════════════════════════════
+    // SPARKLE TRAIL — Cursor Stardust
+    // ══════════════════════════════════════
+    (function() {
+      var canvas = document.getElementById('sparkleCanvas');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      var particles = [];
+      var mouse = { x: -100, y: -100 };
+      var frame = 0;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      document.addEventListener('mousemove', function(e) {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        // Spawn sparkle particles
+        for (var i = 0; i < 2; i++) {
+          particles.push({
+            x: e.clientX + (Math.random() - 0.5) * 8,
+            y: e.clientY + (Math.random() - 0.5) * 8,
+            vx: (Math.random() - 0.5) * 1.5,
+            vy: Math.random() * 1.5 + 0.5,
+            life: 1,
+            decay: Math.random() * 0.02 + 0.015,
+            size: Math.random() * 3 + 1,
+            rotation: Math.random() * Math.PI * 2,
+            rotSpeed: (Math.random() - 0.5) * 0.15,
+            type: Math.random() > 0.6 ? 'star' : 'circle',
+            gold: Math.random() > 0.4
+          });
+        }
+      });
+
+      function drawStar(cx, cy, size, rotation) {
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(rotation);
+        ctx.beginPath();
+        for (var i = 0; i < 4; i++) {
+          var angle = (i / 4) * Math.PI * 2;
+          ctx.moveTo(0, 0);
+          ctx.lineTo(Math.cos(angle) * size, Math.sin(angle) * size);
+        }
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      function loop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        frame++;
+
+        // Update & draw particles
+        for (var i = particles.length - 1; i >= 0; i--) {
+          var p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.02; // gravity
+          p.life -= p.decay;
+          p.rotation += p.rotSpeed;
+
+          if (p.life <= 0) {
+            particles.splice(i, 1);
+            continue;
+          }
+
+          var alpha = p.life * 0.8;
+          if (p.gold) {
+            ctx.fillStyle = 'rgba(201, 169, 110, ' + alpha + ')';
+            ctx.strokeStyle = 'rgba(201, 169, 110, ' + alpha + ')';
+          } else {
+            ctx.fillStyle = 'rgba(224, 199, 138, ' + alpha + ')';
+            ctx.strokeStyle = 'rgba(224, 199, 138, ' + alpha + ')';
+          }
+
+          if (p.type === 'star') {
+            ctx.lineWidth = 0.8;
+            drawStar(p.x, p.y, p.size * p.life, p.rotation);
+          } else {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          // Glow
+          ctx.shadowColor = 'rgba(201, 169, 110, ' + (alpha * 0.5) + ')';
+          ctx.shadowBlur = 6;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        }
+
+        // Cap particles
+        if (particles.length > 200) {
+          particles.splice(0, particles.length - 200);
+        }
+
+        requestAnimationFrame(loop);
+      }
+      loop();
+    })();
+
+    // ══════════════════════════════════════
+    // 3D TILT — Icon Cards
+    // ══════════════════════════════════════
+    (function() {
+      var icons = document.querySelectorAll('.feature-icon');
+      icons.forEach(function(icon) {
+        icon.addEventListener('mousemove', function(e) {
+          var rect = icon.getBoundingClientRect();
+          var x = (e.clientX - rect.left) / rect.width - 0.5;
+          var y = (e.clientY - rect.top) / rect.height - 0.5;
+          icon.style.transform = 'perspective(600px) rotateY(' + (x * 25) + 'deg) rotateX(' + (-y * 25) + 'deg) scale(1.1) translateY(-8px)';
+        });
+        icon.addEventListener('mouseleave', function() {
+          icon.style.transform = '';
+        });
+      });
+    })();
+
+    // ══════════════════════════════════════
+    // NOTIFY FORM
+    // ══════════════════════════════════════
     function handleNotify(e) {
       e.preventDefault();
       var form = e.target;
       var input = form.querySelector('.notify-input');
       var msg = document.getElementById('notifySuccess');
-      // Store email locally (replace with real backend later)
       var emails = JSON.parse(localStorage.getItem('kozmelove-waitlist') || '[]');
       emails.push({ email: input.value, date: new Date().toISOString() });
       localStorage.setItem('kozmelove-waitlist', JSON.stringify(emails));
