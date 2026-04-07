@@ -284,7 +284,7 @@
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       animation: ringRotate 6s linear infinite;
-      opacity: 0.5;
+      opacity: 0.8;
       transition: opacity 0.4s ease;
     }
     .orb-wrapper:nth-child(2) .orb-ring { animation-duration: 8s; animation-direction: reverse; }
@@ -298,12 +298,12 @@
       position: absolute;
       inset: 0;
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95) 0%, rgba(250,249,247,0.8) 30%, rgba(240,235,228,0.7) 60%, rgba(230,224,216,0.9) 100%);
+      background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.98) 0%, rgba(252,250,248,0.9) 25%, rgba(240,235,228,0.75) 60%, rgba(228,222,214,0.92) 100%);
       box-shadow:
-        0 15px 50px rgba(201, 169, 110, 0.12),
-        0 5px 20px rgba(0,0,0,0.05),
-        inset 0 -10px 30px rgba(201, 169, 110, 0.08),
-        inset 0 5px 15px rgba(255,255,255,0.8);
+        0 20px 70px rgba(201, 169, 110, 0.28),
+        0 8px 30px rgba(0,0,0,0.08),
+        inset 0 -10px 30px rgba(201, 169, 110, 0.14),
+        inset 0 5px 15px rgba(255,255,255,0.9);
       overflow: hidden;
       transition: box-shadow 0.5s ease, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     }
@@ -394,21 +394,17 @@
 
     .orb-wrapper:hover .orbit-dot { opacity: 1; }
 
-    /* ── HOVER GLOW ── */
+    /* ── HOVER GLOW — sadece hafif scale ── */
     .orb-wrapper:hover .orb-core {
-      box-shadow:
-        0 20px 70px rgba(201, 169, 110, 0.3),
-        0 8px 30px rgba(0,0,0,0.08),
-        inset 0 -10px 30px rgba(201, 169, 110, 0.15),
-        inset 0 5px 15px rgba(255,255,255,0.9);
-      transform: scale(1.08);
+      transform: scale(1.05);
     }
 
     /* ── ORB LABEL ── */
     .orb-label {
       font-size: 12px;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
+      white-space: nowrap;
       font-weight: 500;
       color: transparent;
       background: linear-gradient(180deg, #8a847c 0%, #6b6660 50%, #8a847c 100%);
