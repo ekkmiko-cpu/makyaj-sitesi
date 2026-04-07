@@ -55,14 +55,6 @@
       cursor: default;
     }
 
-    /* ── SPARKLE CANVAS ── */
-    #sparkleCanvas {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9998;
-    }
-
     /* ── PAGE LOAD REVEAL ── */
     body::before {
       content: '';
@@ -206,111 +198,283 @@
       background-clip: text;
     }
 
-    /* ── FEATURES ── */
-    .features {
-      display: flex;
-      gap: 48px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 64px;
+    /* ── FEATURES COSMOS ── */
+    .features-cosmos {
+      position: relative;
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto 64px;
       animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
     }
-    .feature {
+    .orbs-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 80px;
+    }
+
+    /* ── SVG CONNECTIONS ── */
+    .features-connections {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .connection-line {
+      stroke: var(--gold);
+      stroke-width: 1;
+      stroke-dasharray: 6 8;
+      opacity: 0.2;
+      animation: dashFlow 20s linear infinite;
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -200; }
+    }
+    .connection-pulse {
+      r: 3;
+      fill: var(--gold);
+      opacity: 0;
+    }
+
+    /* ── ORB CONTAINER ── */
+    .orb-wrapper {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
-      min-width: 150px;
+      gap: 20px;
+      z-index: 2;
       cursor: default;
+      flex: 0 0 160px;
+    }
+    /* Staggered vertical offset for visual interest */
+    .orb-wrapper:nth-child(1) { margin-top: 20px; }
+    .orb-wrapper:nth-child(2) { margin-top: 0; }
+    .orb-wrapper:nth-child(3) { margin-top: 20px; }
+
+    /* ── ORB ENTRANCE ── */
+    @keyframes orbMaterialize {
+      0%   { opacity: 0; transform: scale(0) rotate(-180deg); filter: blur(20px); }
+      60%  { opacity: 1; transform: scale(1.15) rotate(10deg); filter: blur(0); }
+      80%  { transform: scale(0.95) rotate(-5deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0); }
     }
 
-    /* ── 3D ICON CARDS ── */
-    .feature-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 24px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(201,169,110,0.08));
-      border: 1px solid rgba(201, 169, 110, 0.2);
+    /* ── THE ORB ── */
+    .orb {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: orbMaterialize 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    .orb-wrapper:nth-child(1) .orb { animation-delay: 1.5s; }
+    .orb-wrapper:nth-child(2) .orb { animation-delay: 1.7s; }
+    .orb-wrapper:nth-child(3) .orb { animation-delay: 1.9s; }
+
+    /* ── ORB RING — animated spinning border ── */
+    .orb-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      padding: 3px;
+      background: conic-gradient(from var(--ring-start, 0deg), transparent 0%, var(--gold) 25%, transparent 50%, var(--gold-light) 75%, transparent 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: ringRotate 6s linear infinite;
+      opacity: 0.5;
+      transition: opacity 0.4s ease;
+    }
+    .orb-wrapper:nth-child(2) .orb-ring { animation-duration: 8s; animation-direction: reverse; }
+    .orb-wrapper:nth-child(3) .orb-ring { animation-duration: 10s; }
+    @keyframes ringRotate { to { transform: rotate(360deg); } }
+
+    .orb-wrapper:hover .orb-ring { opacity: 1; }
+
+    /* ── ORB CORE — glass sphere ── */
+    .orb-core {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95) 0%, rgba(250,249,247,0.8) 30%, rgba(240,235,228,0.7) 60%, rgba(230,224,216,0.9) 100%);
+      box-shadow:
+        0 15px 50px rgba(201, 169, 110, 0.12),
+        0 5px 20px rgba(0,0,0,0.05),
+        inset 0 -10px 30px rgba(201, 169, 110, 0.08),
+        inset 0 5px 15px rgba(255,255,255,0.8);
+      overflow: hidden;
+      transition: box-shadow 0.5s ease, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    /* ── ORB GLASS HIGHLIGHT ── */
+    .orb-core::before {
+      content: '';
+      position: absolute;
+      top: 8%;
+      left: 15%;
+      width: 45%;
+      height: 35%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(-15deg);
+      z-index: 3;
+    }
+
+    /* ── ORB MORPHING BLOB ── */
+    .orb-core::after {
+      content: '';
+      position: absolute;
+      inset: 15%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,169,110,0.1) 0%, transparent 70%);
+      animation: blobMorph 8s ease-in-out infinite;
+      z-index: 1;
+    }
+    @keyframes blobMorph {
+      0%, 100% { border-radius: 50%; transform: scale(1) rotate(0deg); }
+      25%  { border-radius: 40% 60% 55% 45%; transform: scale(1.1) rotate(45deg); }
+      50%  { border-radius: 55% 45% 40% 60%; transform: scale(0.95) rotate(90deg); }
+      75%  { border-radius: 45% 55% 60% 40%; transform: scale(1.08) rotate(135deg); }
+    }
+    .orb-wrapper:nth-child(2) .orb-core::after { animation-delay: -3s; animation-duration: 10s; }
+    .orb-wrapper:nth-child(3) .orb-core::after { animation-delay: -6s; animation-duration: 12s; }
+
+    /* ── ORB EMOJI ── */
+    .orb-emoji {
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 32px;
-      position: relative;
-      animation: float3d 5s ease-in-out infinite;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
-      box-shadow: 0 8px 32px rgba(201, 169, 110, 0.1), 0 2px 8px rgba(0,0,0,0.04);
-      transform-style: preserve-3d;
-      overflow: hidden;
+      font-size: 48px;
+      z-index: 4;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.12));
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), filter 0.5s;
+      animation: emojiFloat 6s ease-in-out infinite;
     }
-    .feature:nth-child(2) .feature-icon { animation-delay: 0.8s; border-radius: 50%; }
-    .feature:nth-child(3) .feature-icon { animation-delay: 1.6s; border-radius: 20px; }
+    @keyframes emojiFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-8px) scale(1.05); }
+    }
+    .orb-wrapper:nth-child(2) .orb-emoji { animation-delay: -2s; }
+    .orb-wrapper:nth-child(3) .orb-emoji { animation-delay: -4s; }
 
-    /* ── ICON SHINE OVERLAY ── */
-    .feature-icon::before {
-      content: '';
+    .orb-wrapper:hover .orb-emoji {
+      transform: translateY(-12px) scale(1.2) !important;
+      filter: drop-shadow(0 8px 20px rgba(201, 169, 110, 0.4));
+    }
+
+    /* ── ORBIT PARTICLES ── */
+    .orbit-ring {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.6) 50%, transparent 60%);
-      background-size: 300% 100%;
-      animation: iconShine 4s ease-in-out infinite;
-      border-radius: inherit;
-    }
-    .feature:nth-child(2) .feature-icon::before { animation-delay: 1s; }
-    .feature:nth-child(3) .feature-icon::before { animation-delay: 2s; }
-
-    /* ── ICON GLOW RING ── */
-    .feature-icon::after {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      border-radius: inherit;
-      border: 2px solid transparent;
-      background: linear-gradient(135deg, var(--gold), transparent, var(--gold)) border-box;
-      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .feature:hover .feature-icon {
-      transform: perspective(600px) translateY(-8px) rotateX(8deg) scale(1.1);
-      box-shadow: 0 16px 48px rgba(201, 169, 110, 0.3), 0 4px 16px rgba(0,0,0,0.06);
-      border-color: var(--gold);
-      animation-play-state: paused;
-    }
-    .feature:hover .feature-icon::after { opacity: 1; }
-
-    /* ── ORBITING PARTICLE ── */
-    .icon-orbit {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: var(--gold);
+      inset: -14px;
       border-radius: 50%;
-      opacity: 0.5;
-      animation: rotateStar 6s linear infinite;
-      transform-origin: 40px 40px;
-      box-shadow: 0 0 8px rgba(201, 169, 110, 0.5);
+      animation: orbitSpin 12s linear infinite;
+      pointer-events: none;
     }
-    .feature:nth-child(2) .icon-orbit { animation-duration: 8s; animation-direction: reverse; }
-    .feature:nth-child(3) .icon-orbit { animation-duration: 7s; }
+    .orb-wrapper:nth-child(2) .orbit-ring { animation-duration: 15s; animation-direction: reverse; }
+    .orb-wrapper:nth-child(3) .orbit-ring { animation-duration: 18s; }
+    @keyframes orbitSpin { to { transform: rotate(360deg); } }
 
-    .feature-label {
-      font-size: 13px;
-      color: transparent;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      font-weight: 400;
-      transition: all 0.3s;
-      background: linear-gradient(180deg, #7d776f 0%, #6b6660 50%, #7d776f 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
+    .orbit-dot {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px rgba(201, 169, 110, 0.6);
+      opacity: 0.6;
+      transition: opacity 0.3s;
     }
-    .feature:hover .feature-label {
-      background: linear-gradient(180deg, #d4b87a, #C9A96E, #d4b87a);
+    .orbit-dot:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+    .orbit-dot:nth-child(2) { bottom: 0; left: 50%; transform: translateX(-50%); width: 3px; height: 3px; opacity: 0.4; }
+    .orbit-dot:nth-child(3) { top: 50%; left: 0; transform: translateY(-50%); width: 2px; height: 2px; opacity: 0.3; }
+
+    .orb-wrapper:hover .orbit-dot { opacity: 1; }
+
+    /* ── HOVER GLOW ── */
+    .orb-wrapper:hover .orb-core {
+      box-shadow:
+        0 20px 70px rgba(201, 169, 110, 0.3),
+        0 8px 30px rgba(0,0,0,0.08),
+        inset 0 -10px 30px rgba(201, 169, 110, 0.15),
+        inset 0 5px 15px rgba(255,255,255,0.9);
+      transform: scale(1.08);
+    }
+
+    /* ── ORB LABEL ── */
+    .orb-label {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: transparent;
+      background: linear-gradient(180deg, #8a847c 0%, #6b6660 50%, #8a847c 100%);
       -webkit-background-clip: text;
       background-clip: text;
+      position: relative;
+      overflow: hidden;
+      padding: 4px 0;
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: labelReveal 0.6s ease forwards;
+    }
+    .orb-wrapper:nth-child(1) .orb-label { animation-delay: 2.2s; }
+    .orb-wrapper:nth-child(2) .orb-label { animation-delay: 2.4s; }
+    .orb-wrapper:nth-child(3) .orb-label { animation-delay: 2.6s; }
+    @keyframes labelReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Label shimmer sweep */
+    .orb-label::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(201,169,110,0.3), transparent);
+      animation: labelSweep 4s ease-in-out infinite;
+    }
+    @keyframes labelSweep {
+      0%, 100% { left: -100%; }
+      50% { left: 140%; }
+    }
+
+    .orb-wrapper:hover .orb-label {
+      background: linear-gradient(180deg, #d4b87a, #e8d5a8, #C9A96E);
+      -webkit-background-clip: text;
+      background-clip: text;
+      letter-spacing: 4px;
+    }
+
+    /* ── HOVER BURST PARTICLES (canvas-driven in JS) ── */
+    .burst-canvas {
+      position: absolute;
+      inset: -40px;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .features-cosmos {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        padding: 20px 0;
+      }
+      .orb-wrapper { position: static !important; transform: none !important; }
+      .orb-wrapper:nth-child(2) { transform: none !important; }
+      .features-connections { display: none; }
+      .orb { width: 120px; height: 120px; }
+      .orb-emoji { font-size: 40px; }
     }
 
     /* ── EMAIL FORM ── */
@@ -421,10 +585,6 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 480px) {
-      #sparkleCanvas { display: none; }
-      .features { gap: 24px; }
-      .feature { min-width: 100px; }
-      .feature-icon { width: 64px; height: 64px; font-size: 26px; border-radius: 18px; }
       .notify-form { flex-direction: column; border-radius: 16px; }
       .notify-input { text-align: center; }
       .notify-btn { border-radius: 0 0 16px 16px; }
@@ -437,14 +597,10 @@
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
-      #sparkleCanvas { display: none; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Sparkle trail canvas -->
-  <canvas id="sparkleCanvas"></canvas>
 
   <!-- Decorative background blobs -->
   <div class="dot dot-1"></div>
@@ -465,28 +621,82 @@
       <br>Fiyat, kalite ve marka — hepsi bir arada.
     </p>
 
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">
-          <span class="icon-orbit"></span>
-          &#128132;
+    <div class="features-cosmos" id="featuresCosmos">
+      <!-- SVG connection lines between orbs -->
+      <svg class="features-connections" id="featuresConnections" viewBox="0 0 750 280" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#C9A96E" stop-opacity="0.4"/>
+            <stop offset="50%" stop-color="#e0c78a" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#C9A96E" stop-opacity="0.4"/>
+          </linearGradient>
+        </defs>
+        <path class="connection-line" d="M 155,100 C 250,40 310,40 375,70" fill="none" stroke="url(#lineGrad1)"/>
+        <path class="connection-line" d="M 375,70 C 440,40 500,40 595,100" fill="none" stroke="url(#lineGrad1)" style="animation-delay: -7s;"/>
+        <path class="connection-line" d="M 155,100 C 300,180 450,180 595,100" fill="none" stroke="url(#lineGrad1)" style="animation-delay: -14s; opacity: 0.12;"/>
+        <!-- Flowing pulse dots along paths -->
+        <circle class="connection-pulse" cx="0" cy="0">
+          <animateMotion dur="4s" repeatCount="indefinite" path="M 155,100 C 250,40 310,40 375,70"/>
+          <animate attributeName="opacity" values="0;0.8;0" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle class="connection-pulse" cx="0" cy="0">
+          <animateMotion dur="5s" repeatCount="indefinite" path="M 375,70 C 440,40 500,40 595,100"/>
+          <animate attributeName="opacity" values="0;0.8;0" dur="5s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+
+      <div class="orbs-row">
+      <!-- Orb 1 — Fiyat Karşılaştır -->
+      <div class="orb-wrapper">
+        <div class="orb">
+          <div class="orb-ring"></div>
+          <div class="orb-core">
+            <span class="orb-emoji">💄</span>
+          </div>
+          <div class="orbit-ring">
+            <span class="orbit-dot"></span>
+            <span class="orbit-dot"></span>
+            <span class="orbit-dot"></span>
+          </div>
+          <canvas class="burst-canvas" width="260" height="260"></canvas>
         </div>
-        <span class="feature-label">Fiyat Karşılaştır</span>
+        <span class="orb-label">Fiyat Karşılaştır</span>
       </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <span class="icon-orbit"></span>
-          &#9889;
+
+      <!-- Orb 2 — En İyi Fırsatlar -->
+      <div class="orb-wrapper">
+        <div class="orb">
+          <div class="orb-ring"></div>
+          <div class="orb-core">
+            <span class="orb-emoji">⚡</span>
+          </div>
+          <div class="orbit-ring">
+            <span class="orbit-dot"></span>
+            <span class="orbit-dot"></span>
+            <span class="orbit-dot"></span>
+          </div>
+          <canvas class="burst-canvas" width="260" height="260"></canvas>
         </div>
-        <span class="feature-label">En İyi Fırsatlar</span>
+        <span class="orb-label">En İyi Fırsatlar</span>
       </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <span class="icon-orbit"></span>
-          &#128139;
+
+      <!-- Orb 3 — Muadil Bul -->
+      <div class="orb-wrapper">
+        <div class="orb">
+          <div class="orb-ring"></div>
+          <div class="orb-core">
+            <span class="orb-emoji">💋</span>
+          </div>
+          <div class="orbit-ring">
+            <span class="orbit-dot"></span>
+            <span class="orbit-dot"></span>
+            <span class="orbit-dot"></span>
+          </div>
+          <canvas class="burst-canvas" width="260" height="260"></canvas>
         </div>
-        <span class="feature-label">Muadil Bul</span>
+        <span class="orb-label">Muadil Bul</span>
       </div>
+      </div><!-- .orbs-row -->
     </div>
 
     <div class="notify-section">
@@ -505,127 +715,130 @@
 
   <script>
     // ══════════════════════════════════════
-    // SPARKLE TRAIL — Cursor Stardust
+    // MAGNETIC ORBS — Mouse Attraction System
     // ══════════════════════════════════════
     (function() {
-      var canvas = document.getElementById('sparkleCanvas');
-      if (!canvas) return;
-      var ctx = canvas.getContext('2d');
-      var particles = [];
-      var mouse = { x: -100, y: -100 };
-      var frame = 0;
+      var cosmos = document.getElementById('featuresCosmos');
+      if (!cosmos) return;
+      var wrappers = cosmos.querySelectorAll('.orb-wrapper');
+      var mouseX = 0, mouseY = 0;
+      var cosmosRect = null;
 
-      function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resize();
-      window.addEventListener('resize', resize);
+      // Burst particle system for each orb
+      wrappers.forEach(function(wrapper) {
+        var canvas = wrapper.querySelector('.burst-canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var burstParticles = [];
+        var isHovering = false;
 
-      document.addEventListener('mousemove', function(e) {
-        mouse.x = e.clientX;
-        mouse.y = e.clientY;
-        // Spawn sparkle particles
-        for (var i = 0; i < 2; i++) {
-          particles.push({
-            x: e.clientX + (Math.random() - 0.5) * 8,
-            y: e.clientY + (Math.random() - 0.5) * 8,
-            vx: (Math.random() - 0.5) * 1.5,
-            vy: Math.random() * 1.5 + 0.5,
-            life: 1,
-            decay: Math.random() * 0.02 + 0.015,
-            size: Math.random() * 3 + 1,
-            rotation: Math.random() * Math.PI * 2,
-            rotSpeed: (Math.random() - 0.5) * 0.15,
-            type: Math.random() > 0.6 ? 'star' : 'circle',
-            gold: Math.random() > 0.4
-          });
-        }
-      });
-
-      function drawStar(cx, cy, size, rotation) {
-        ctx.save();
-        ctx.translate(cx, cy);
-        ctx.rotate(rotation);
-        ctx.beginPath();
-        for (var i = 0; i < 4; i++) {
-          var angle = (i / 4) * Math.PI * 2;
-          ctx.moveTo(0, 0);
-          ctx.lineTo(Math.cos(angle) * size, Math.sin(angle) * size);
-        }
-        ctx.stroke();
-        ctx.restore();
-      }
-
-      function loop() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        frame++;
-
-        // Update & draw particles
-        for (var i = particles.length - 1; i >= 0; i--) {
-          var p = particles[i];
-          p.x += p.vx;
-          p.y += p.vy;
-          p.vy += 0.02; // gravity
-          p.life -= p.decay;
-          p.rotation += p.rotSpeed;
-
-          if (p.life <= 0) {
-            particles.splice(i, 1);
-            continue;
+        function spawnBurst() {
+          var cx = canvas.width / 2;
+          var cy = canvas.height / 2;
+          for (var i = 0; i < 18; i++) {
+            var angle = (Math.PI * 2 / 18) * i + (Math.random() - 0.5) * 0.5;
+            var speed = Math.random() * 3 + 1.5;
+            burstParticles.push({
+              x: cx, y: cy,
+              vx: Math.cos(angle) * speed,
+              vy: Math.sin(angle) * speed,
+              life: 1,
+              decay: Math.random() * 0.015 + 0.01,
+              size: Math.random() * 3 + 1,
+              gold: Math.random() > 0.3
+            });
           }
+        }
 
-          var alpha = p.life * 0.8;
-          if (p.gold) {
-            ctx.fillStyle = 'rgba(201, 169, 110, ' + alpha + ')';
-            ctx.strokeStyle = 'rgba(201, 169, 110, ' + alpha + ')';
-          } else {
-            ctx.fillStyle = 'rgba(224, 199, 138, ' + alpha + ')';
-            ctx.strokeStyle = 'rgba(224, 199, 138, ' + alpha + ')';
+        function animBurst() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          if (isHovering && Math.random() > 0.7) {
+            var cx = canvas.width / 2;
+            var cy = canvas.height / 2;
+            var angle = Math.random() * Math.PI * 2;
+            var dist = 50 + Math.random() * 20;
+            burstParticles.push({
+              x: cx + Math.cos(angle) * dist,
+              y: cy + Math.sin(angle) * dist,
+              vx: Math.cos(angle) * 0.5,
+              vy: Math.sin(angle) * 0.5 - 0.8,
+              life: 1,
+              decay: 0.02,
+              size: Math.random() * 2 + 1,
+              gold: true
+            });
           }
-
-          if (p.type === 'star') {
-            ctx.lineWidth = 0.8;
-            drawStar(p.x, p.y, p.size * p.life, p.rotation);
-          } else {
+          for (var i = burstParticles.length - 1; i >= 0; i--) {
+            var p = burstParticles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += 0.03;
+            p.vx *= 0.99;
+            p.life -= p.decay;
+            if (p.life <= 0) { burstParticles.splice(i, 1); continue; }
+            var alpha = p.life * 0.7;
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+            ctx.fillStyle = p.gold
+              ? 'rgba(201, 169, 110, ' + alpha + ')'
+              : 'rgba(255, 255, 255, ' + alpha + ')';
             ctx.fill();
+            ctx.shadowColor = 'rgba(201, 169, 110, ' + (alpha * 0.4) + ')';
+            ctx.shadowBlur = 6;
           }
-
-          // Glow
-          ctx.shadowColor = 'rgba(201, 169, 110, ' + (alpha * 0.5) + ')';
-          ctx.shadowBlur = 6;
-          ctx.fill();
           ctx.shadowBlur = 0;
+          requestAnimationFrame(animBurst);
         }
+        animBurst();
 
-        // Cap particles
-        if (particles.length > 200) {
-          particles.splice(0, particles.length - 200);
-        }
-
-        requestAnimationFrame(loop);
-      }
-      loop();
-    })();
-
-    // ══════════════════════════════════════
-    // 3D TILT — Icon Cards
-    // ══════════════════════════════════════
-    (function() {
-      var icons = document.querySelectorAll('.feature-icon');
-      icons.forEach(function(icon) {
-        icon.addEventListener('mousemove', function(e) {
-          var rect = icon.getBoundingClientRect();
-          var x = (e.clientX - rect.left) / rect.width - 0.5;
-          var y = (e.clientY - rect.top) / rect.height - 0.5;
-          icon.style.transform = 'perspective(600px) rotateY(' + (x * 25) + 'deg) rotateX(' + (-y * 25) + 'deg) scale(1.1) translateY(-8px)';
+        wrapper.addEventListener('mouseenter', function() {
+          isHovering = true;
+          spawnBurst();
         });
-        icon.addEventListener('mouseleave', function() {
-          icon.style.transform = '';
+        wrapper.addEventListener('mouseleave', function() {
+          isHovering = false;
         });
       });
+
+      // Magnetic pull — orbs subtly move toward cursor
+      document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      // Store each wrapper's magnetic offset
+      var magneticOffsets = [];
+      wrappers.forEach(function() { magneticOffsets.push({ x: 0, y: 0 }); });
+
+      function magneticLoop() {
+        cosmosRect = cosmos.getBoundingClientRect();
+        wrappers.forEach(function(wrapper, idx) {
+          var orb = wrapper.querySelector('.orb');
+          if (!orb) return;
+          var rect = wrapper.getBoundingClientRect();
+          var cx = rect.left + rect.width / 2;
+          var cy = rect.top + rect.height / 2;
+          var dx = mouseX - cx;
+          var dy = mouseY - cy;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          var maxDist = 350;
+          var target = { x: 0, y: 0 };
+          if (dist < maxDist && dist > 0) {
+            var strength = (1 - dist / maxDist) * 15;
+            target.x = (dx / dist) * strength;
+            target.y = (dy / dist) * strength;
+          }
+          // Smooth lerp
+          magneticOffsets[idx].x += (target.x - magneticOffsets[idx].x) * 0.08;
+          magneticOffsets[idx].y += (target.y - magneticOffsets[idx].y) * 0.08;
+          orb.style.transform = 'translate(' + magneticOffsets[idx].x.toFixed(1) + 'px, ' + magneticOffsets[idx].y.toFixed(1) + 'px)';
+        });
+        requestAnimationFrame(magneticLoop);
+      }
+      // Only run magnetic on desktop
+      if (window.innerWidth > 600) {
+        magneticLoop();
+      }
     })();
 
     // ══════════════════════════════════════
