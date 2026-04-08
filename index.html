@@ -621,14 +621,34 @@
     .dot-3 { width: 160px; height: 160px; top: 35%; left: -40px; animation: float3d 10s ease-in-out infinite 2s; }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 480px) {
-      body { justify-content: flex-start; padding-top: 40px; padding-bottom: 80px; }
+    @media (max-width: 600px) {
+      body { justify-content: flex-start; padding-top: 30px; padding-bottom: 160px; }
       .coming-soon { padding: 20px 20px; }
       .subtitle { font-size: 14px; }
-      .notify-form { flex-direction: column; border-radius: 16px; max-width: 100%; }
-      .notify-input { text-align: center; }
-      .notify-btn { border-radius: 0 0 16px 16px; }
-      .footer { position: static; margin-top: 40px; }
+      .notify-section {
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 0 20px;
+        background: linear-gradient(to top, var(--bg) 60%, transparent);
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+      .notify-form { max-width: 100%; border-radius: 16px; flex-direction: row; }
+      .notify-input { text-align: left; padding: 12px 16px; font-size: 13px; }
+      .notify-btn { padding: 12px 20px; font-size: 12px; white-space: nowrap; }
+      .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 12px;
+        background: var(--bg);
+        font-size: 11px;
+        z-index: 100;
+      }
       .dot-1, .dot-2, .dot-3 { display: none; }
     }
 
@@ -888,12 +908,14 @@
     })();
 
     // ══════════════════════════════════════
-    // MOBILE SLIDER DOTS
+    // MOBILE SLIDER DOTS + SCROLL RESET
     // ══════════════════════════════════════
     (function() {
       var row = document.querySelector('.orbs-row');
       var dots = document.querySelectorAll('.slider-dot');
       if (!row || !dots.length) return;
+      // Force first slide on load
+      row.scrollLeft = 0;
       row.addEventListener('scroll', function() {
         var idx = Math.round(row.scrollLeft / row.offsetWidth);
         dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
