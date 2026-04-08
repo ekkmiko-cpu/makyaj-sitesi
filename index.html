@@ -28,6 +28,7 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { overflow-x: hidden; }
 
     :root {
       --bg: #faf9f7;
@@ -192,6 +193,8 @@
       font-weight: 300;
       letter-spacing: 0.3px;
       margin-bottom: 56px;
+      word-break: keep-all;
+      overflow-wrap: break-word;
       animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.2s both;
       background: linear-gradient(180deg, #7d776f 0%, #6b6660 45%, #8a847c 60%, #6b6660 100%);
       -webkit-background-clip: text;
@@ -456,21 +459,59 @@
       z-index: 5;
     }
 
-    /* ── RESPONSIVE ── */
+    /* ── RESPONSIVE MOBILE — SLIDER ── */
     @media (max-width: 600px) {
       .features-cosmos {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 48px;
-        padding: 20px 0;
+        overflow: visible;
+        margin-bottom: 40px;
       }
-      .orb-wrapper { position: static !important; transform: none !important; }
-      .orb-wrapper:nth-child(2) { transform: none !important; }
+      .orbs-row {
+        flex-wrap: nowrap;
+        gap: 0;
+        padding: 20px 0 30px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+      }
+      .orbs-row::-webkit-scrollbar { display: none; }
+      .orb-wrapper {
+        flex: 0 0 100vw !important;
+        scroll-snap-align: center;
+        margin-top: 0 !important;
+        padding: 0 20px;
+      }
       .features-connections { display: none; }
-      .orb { width: 120px; height: 120px; }
-      .orb-emoji { font-size: 40px; }
+      .orb { width: 130px; height: 130px; }
+      .orb-emoji { font-size: 44px; }
+
+      /* Dot indicators */
+      .slider-dots {
+        display: flex !important;
+      }
+    }
+
+    /* Dot indicators — hidden on desktop */
+    .slider-dots {
+      display: none;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
+    .slider-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .slider-dot.active {
+      background: var(--gold);
+      transform: scale(1.4);
     }
 
     /* ── EMAIL FORM ── */
@@ -581,10 +622,14 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 480px) {
-      .notify-form { flex-direction: column; border-radius: 16px; }
+      body { justify-content: flex-start; padding-top: 40px; padding-bottom: 80px; }
+      .coming-soon { padding: 20px 20px; }
+      .subtitle { font-size: 14px; }
+      .notify-form { flex-direction: column; border-radius: 16px; max-width: 100%; }
       .notify-input { text-align: center; }
       .notify-btn { border-radius: 0 0 16px 16px; }
-      .footer { position: static; margin-top: 60px; }
+      .footer { position: static; margin-top: 40px; }
+      .dot-1, .dot-2, .dot-3 { display: none; }
     }
 
     /* ── PREFERS REDUCED MOTION ── */
@@ -693,6 +738,11 @@
         <span class="orb-label">Muadil Bul</span>
       </div>
       </div><!-- .orbs-row -->
+      <div class="slider-dots" id="sliderDots">
+        <span class="slider-dot active"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+      </div>
     </div>
 
     <div class="notify-section">
@@ -835,6 +885,19 @@
       if (window.innerWidth > 600) {
         magneticLoop();
       }
+    })();
+
+    // ══════════════════════════════════════
+    // MOBILE SLIDER DOTS
+    // ══════════════════════════════════════
+    (function() {
+      var row = document.querySelector('.orbs-row');
+      var dots = document.querySelectorAll('.slider-dot');
+      if (!row || !dots.length) return;
+      row.addEventListener('scroll', function() {
+        var idx = Math.round(row.scrollLeft / row.offsetWidth);
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+      }, { passive: true });
     })();
 
     // ══════════════════════════════════════
