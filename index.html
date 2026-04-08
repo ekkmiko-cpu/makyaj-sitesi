@@ -461,9 +461,17 @@
 
     /* ── RESPONSIVE MOBILE — SLIDER ── */
     @media (max-width: 600px) {
+      body {
+        justify-content: flex-start;
+        padding: 30px 0 20px;
+      }
+      .coming-soon { padding: 20px 20px; }
+      .subtitle { font-size: 14px; margin-bottom: 30px; }
+
+      /* Slider */
       .features-cosmos {
         overflow: visible;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
       }
@@ -471,7 +479,7 @@
         display: flex;
         flex-wrap: nowrap;
         gap: 0;
-        padding: 30px 0 40px;
+        padding: 10px 0 16px;
         overflow-x: scroll;
         scroll-snap-type: x proximity;
         -webkit-overflow-scrolling: touch;
@@ -483,28 +491,34 @@
       }
       .orbs-row::-webkit-scrollbar { display: none; }
       .orb-wrapper {
-        flex: 0 0 85vw !important;
+        flex: 0 0 70vw !important;
         scroll-snap-align: center;
         margin-top: 0 !important;
-        padding: 20px 10px 10px;
+        padding: 10px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        gap: 12px;
       }
-      /* Left/right padding so first/last slide can center */
-      .orb-wrapper:first-child { margin-left: 7.5vw; }
-      .orb-wrapper:last-child { margin-right: 7.5vw; }
+      .orb-wrapper:first-child { margin-left: 15vw; }
+      .orb-wrapper:last-child { margin-right: 15vw; }
       .features-connections { display: none; }
-      .orb { width: 120px; height: 120px; }
-      .orb-emoji { font-size: 42px; }
+      .orb { width: 100px; height: 100px; }
+      .orb-emoji { font-size: 38px; }
       .orbit-ring { display: none; }
       .burst-canvas { display: none; }
+      .orb-label { font-size: 11px; letter-spacing: 2px; }
+      .slider-dots { display: flex !important; }
 
-      /* Dot indicators */
-      .slider-dots {
-        display: flex !important;
-      }
+      /* Notify — normal flow, not fixed */
+      .notify-section { margin-top: 10px; }
+      .notify-form { max-width: 100%; border-radius: 50px; }
+      .notify-input { padding: 12px 18px; font-size: 13px; }
+      .notify-btn { padding: 12px 20px; font-size: 12px; }
+
+      /* Footer — static */
+      .footer { position: static; margin-top: 30px; padding: 16px; font-size: 11px; }
+      .dot-1, .dot-2, .dot-3 { display: none; }
     }
 
     /* Dot indicators — hidden on desktop */
@@ -633,37 +647,7 @@
     .dot-2 { width: 280px; height: 280px; bottom: -80px; left: -60px; animation: float3d 15s ease-in-out infinite reverse; }
     .dot-3 { width: 160px; height: 160px; top: 35%; left: -40px; animation: float3d 10s ease-in-out infinite 2s; }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      body { justify-content: flex-start; padding-top: 30px; padding-bottom: 160px; }
-      .coming-soon { padding: 20px 20px; }
-      .subtitle { font-size: 14px; }
-      .notify-section {
-        position: fixed;
-        bottom: 50px;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        padding: 0 20px;
-        background: linear-gradient(to top, var(--bg) 60%, transparent);
-        padding-top: 20px;
-        padding-bottom: 10px;
-      }
-      .notify-form { max-width: 100%; border-radius: 16px; flex-direction: row; }
-      .notify-input { text-align: left; padding: 12px 16px; font-size: 13px; }
-      .notify-btn { padding: 12px 20px; font-size: 12px; white-space: nowrap; }
-      .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 12px;
-        background: var(--bg);
-        font-size: 11px;
-        z-index: 100;
-      }
-      .dot-1, .dot-2, .dot-3 { display: none; }
-    }
+    /* (mobile styles merged into slider block above) */
 
     /* ── PREFERS REDUCED MOTION ── */
     @media (prefers-reduced-motion: reduce) {
