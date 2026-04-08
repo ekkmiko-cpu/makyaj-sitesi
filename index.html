@@ -463,30 +463,43 @@
     @media (max-width: 600px) {
       .features-cosmos {
         overflow: visible;
-        margin-bottom: 40px;
-      }
-      .orbs-row {
-        flex-wrap: nowrap;
-        gap: 0;
-        padding: 20px 0 30px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        margin-bottom: 20px;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
       }
+      .orbs-row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0;
+        padding: 30px 0 40px;
+        overflow-x: scroll;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        width: 100%;
+        margin-left: 0;
+        touch-action: pan-x;
+      }
       .orbs-row::-webkit-scrollbar { display: none; }
       .orb-wrapper {
-        flex: 0 0 100vw !important;
+        flex: 0 0 85vw !important;
         scroll-snap-align: center;
         margin-top: 0 !important;
-        padding: 0 20px;
+        padding: 20px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
       }
+      /* Left/right padding so first/last slide can center */
+      .orb-wrapper:first-child { margin-left: 7.5vw; }
+      .orb-wrapper:last-child { margin-right: 7.5vw; }
       .features-connections { display: none; }
-      .orb { width: 130px; height: 130px; }
-      .orb-emoji { font-size: 44px; }
+      .orb { width: 120px; height: 120px; }
+      .orb-emoji { font-size: 42px; }
+      .orbit-ring { display: none; }
+      .burst-canvas { display: none; }
 
       /* Dot indicators */
       .slider-dots {
@@ -914,10 +927,12 @@
       var row = document.querySelector('.orbs-row');
       var dots = document.querySelectorAll('.slider-dot');
       if (!row || !dots.length) return;
-      // Force first slide on load
-      row.scrollLeft = 0;
+      // Force first slide after layout settles
+      setTimeout(function() { row.scrollTo({ left: 0, behavior: 'instant' }); }, 100);
+      setTimeout(function() { row.scrollTo({ left: 0, behavior: 'instant' }); }, 500);
       row.addEventListener('scroll', function() {
-        var idx = Math.round(row.scrollLeft / row.offsetWidth);
+        var wrapperW = row.querySelector('.orb-wrapper') ? row.querySelector('.orb-wrapper').offsetWidth : row.offsetWidth;
+        var idx = Math.round(row.scrollLeft / wrapperW);
         dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
       }, { passive: true });
     })();
