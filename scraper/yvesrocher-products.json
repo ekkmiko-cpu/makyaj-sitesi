@@ -114,17 +114,17 @@
   {
     "id": 50007,
     "emoji": "🌸",
-    "code": "89289",
-    "name": "Allık",
+    "code": "06862",
+    "name": "Parlaklık Veren İkili Aydınlatıcı Pudra",
     "brand": "Yves Rocher",
     "category": "allik",
     "categoryLabel": "Allık",
-    "price": 919.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/89289-01-062025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/makyaj/ten-makyaji/allik/allik/p/89289",
-    "barcode": "3660005892894",
-    "rating": 4.6,
-    "reviews": 174,
+    "price": 999.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/06862-01-062025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/makyaj/ten-makyaji/allik/parlaklik-veren-ikili-aydinlatici-pudra/p/06862",
+    "barcode": "3660005933092",
+    "rating": 4.8,
+    "reviews": 127,
     "source": "yvesrocher"
   },
   {
@@ -146,17 +146,17 @@
   {
     "id": 50009,
     "emoji": "🌸",
-    "code": "06862",
-    "name": "Parlaklık Veren İkili Aydınlatıcı Pudra",
+    "code": "89289",
+    "name": "Allık",
     "brand": "Yves Rocher",
     "category": "allik",
     "categoryLabel": "Allık",
-    "price": 999.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/06862-01-062025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/makyaj/ten-makyaji/allik/parlaklik-veren-ikili-aydinlatici-pudra/p/06862",
-    "barcode": "3660005933092",
-    "rating": 4.8,
-    "reviews": 127,
+    "price": 919.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/89289-01-062025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/makyaj/ten-makyaji/allik/allik/p/89289",
+    "barcode": "3660005892894",
+    "rating": 4.6,
+    "reviews": 174,
     "source": "yvesrocher"
   },
   {
@@ -274,22 +274,6 @@
   {
     "id": 50017,
     "emoji": "💄",
-    "code": "83036",
-    "name": "8 Saat Etkili Yoğun Renkli Mat Ruj",
-    "brand": "Yves Rocher",
-    "category": "ruj",
-    "categoryLabel": "Ruj",
-    "price": 854.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/83036-01-30122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/makyaj/dudak-makyaji/ruj/8-saat-etkili-yogun-renkli-mat-ruj/p/83036",
-    "barcode": "3660005830360",
-    "rating": 4.6,
-    "reviews": 169,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50018,
-    "emoji": "💄",
     "code": "17848",
     "name": "Ultra Yoğun Renkli Kalıcı Likit Ruj - Mat",
     "brand": "Yves Rocher",
@@ -304,7 +288,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50019,
+    "id": 50018,
     "emoji": "💄",
     "code": "80321",
     "name": "Ultra Nemlendirici Yoğun Renkli Saten Ruj",
@@ -320,7 +304,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50020,
+    "id": 50019,
     "emoji": "💄",
     "code": "64757",
     "name": "Ultra Besleyici Işıltı Veren Glow Ruj",
@@ -333,6 +317,22 @@
     "barcode": "3660005647579",
     "rating": 4.6,
     "reviews": 151,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50020,
+    "emoji": "💄",
+    "code": "83036",
+    "name": "8 Saat Etkili Yoğun Renkli Mat Ruj",
+    "brand": "Yves Rocher",
+    "category": "ruj",
+    "categoryLabel": "Ruj",
+    "price": 854.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/83036-01-30122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/makyaj/dudak-makyaji/ruj/8-saat-etkili-yogun-renkli-mat-ruj/p/83036",
+    "barcode": "3660005830360",
+    "rating": 4.6,
+    "reviews": 169,
     "source": "yvesrocher"
   },
   {
@@ -594,38 +594,6 @@
   {
     "id": 50037,
     "emoji": "🖌️",
-    "code": "53764",
-    "name": "Kaş Sabitleyici Maskara",
-    "brand": "Yves Rocher",
-    "category": "kas",
-    "categoryLabel": "Kaş Makyajı",
-    "price": 779.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/53764-image01v2.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/makyaj/goz-makyaji/kas-kalemi-ve-maskarasi/p/53764",
-    "barcode": "3660005537641",
-    "rating": 4.1,
-    "reviews": 33,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50038,
-    "emoji": "🖌️",
-    "code": "54575",
-    "name": "Kaş Sabitleyici Maskara",
-    "brand": "Yves Rocher",
-    "category": "kas",
-    "categoryLabel": "Kaş Makyajı",
-    "price": 779.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/54575-image01v2.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/makyaj/goz-makyaji/kas-kalemi-ve-maskarasi/p/54575",
-    "barcode": "3660005545752",
-    "rating": 4.1,
-    "reviews": 33,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50039,
-    "emoji": "🖌️",
     "code": "54038",
     "name": "Kaş Sabitleyici Maskara",
     "brand": "Yves Rocher",
@@ -640,7 +608,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50040,
+    "id": 50038,
     "emoji": "🖌️",
     "code": "89238",
     "name": "Asansörlü Kaş Kalemi",
@@ -656,7 +624,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50041,
+    "id": 50039,
     "emoji": "🖌️",
     "code": "94457",
     "name": "Kaş Kalemi",
@@ -672,87 +640,39 @@
     "source": "yvesrocher"
   },
   {
+    "id": 50040,
+    "emoji": "🖌️",
+    "code": "53764",
+    "name": "Kaş Sabitleyici Maskara",
+    "brand": "Yves Rocher",
+    "category": "kas",
+    "categoryLabel": "Kaş Makyajı",
+    "price": 779.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/53764-image01v2.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/makyaj/goz-makyaji/kas-kalemi-ve-maskarasi/p/53764",
+    "barcode": "3660005537641",
+    "rating": 4.1,
+    "reviews": 33,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50041,
+    "emoji": "🖌️",
+    "code": "54575",
+    "name": "Kaş Sabitleyici Maskara",
+    "brand": "Yves Rocher",
+    "category": "kas",
+    "categoryLabel": "Kaş Makyajı",
+    "price": 779.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/54575-image01v2.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/makyaj/goz-makyaji/kas-kalemi-ve-maskarasi/p/54575",
+    "barcode": "3660005545752",
+    "rating": 4.1,
+    "reviews": 33,
+    "source": "yvesrocher"
+  },
+  {
     "id": 50042,
-    "emoji": "💧",
-    "code": "43497",
-    "name": "Tonik - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 679.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/43497-01-20012026.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/micellar-su-ve-tonik/tonik-leke-ve-kirisik-karsiti-bitkisel-kompleks-bakim-bright-botanical/p/43497",
-    "barcode": "3660005434971",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50043,
-    "emoji": "🧴",
-    "code": "08198",
-    "name": "Monoi Nemlendirici Besleyici Vücut Yağı-Tüm Ciltler-Monoi de Tahiti-Vegan",
-    "brand": "Yves Rocher",
-    "category": "vucut-losyonu",
-    "categoryLabel": "Vücut Bakımı",
-    "price": 1099.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/08198-image01.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-peelingleri-ve-yaglari/monoi-nemlendirici-besleyici-vucut-yagi-tum-ciltler-monoi-de-tahiti-vegan/p/08198",
-    "barcode": "3660005076362",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50044,
-    "emoji": "💧",
-    "code": "56064",
-    "name": "Yoğun Krem - Çok Kuru Cilt / Hydra Vegetal",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 999.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/56064-01-31102025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/yogun-krem-cok-kuru-cilt-hydra-vegetal/p/56064",
-    "barcode": "3660005560649",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50045,
-    "emoji": "🧴",
-    "code": "40437",
-    "name": "Vücut Losyonu - Nemlendirici Besleyici Ferahlatıcı Zeytin Turunç -Vegan",
-    "brand": "Yves Rocher",
-    "category": "vucut-losyonu",
-    "categoryLabel": "Vücut Bakımı",
-    "price": 639.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/40437-01-102025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-sutleri-ve-losyonlari/vucut-losyonu-nemlendirici-besleyici-ferahlatici-zeytin-turunc-vegan/p/40437",
-    "barcode": "3660005404370",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50046,
-    "emoji": "🧴",
-    "code": "57960",
-    "name": "Saç ve Vücut Yağı - Nemlendirici Besleyici Oryantal Argan Gül - Vegan",
-    "brand": "Yves Rocher",
-    "category": "vucut-losyonu",
-    "categoryLabel": "Vücut Bakımı",
-    "price": 739.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/57960-image01.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-peelingleri-ve-yaglari/sac-ve-vucut-yagi-nemlendirici-besleyici-oryantal-argan-gul-vegan/p/57960",
-    "barcode": "3660005579603",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50047,
     "emoji": "🌸",
     "code": "36454",
     "name": "Hoggar EDT-Erkek Parfüm",
@@ -768,7 +688,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50048,
+    "id": 50043,
     "emoji": "🌸",
     "code": "39665",
     "name": "Mine Çiçeği EF-La Collection",
@@ -784,39 +704,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50049,
-    "emoji": "🌸",
-    "code": "36642",
-    "name": "Hoggar- EDT 50 ml",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 1595,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/36642-01-12122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/hoggar-edt-50-ml/p/36642",
-    "barcode": "3660005366425",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50050,
-    "emoji": "🌸",
-    "code": "30626",
-    "name": "Mon Evidence EDP- Kadın Parfüm- Comme Une Evidence",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 2175,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/30626-01-30122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-parfum-edp/mon-evidence-edp-kadin-parfum-comme-une-evidence/p/30626",
-    "barcode": "3660005306261",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50051,
+    "id": 50044,
     "emoji": "🌸",
     "code": "30804",
     "name": "Comme une Evidence Intense EDP- Comme Une Evidence- Kadın Parfüm",
@@ -832,231 +720,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50052,
-    "emoji": "🌸",
-    "code": "17918",
-    "name": "Granit Bleu EDT-Erkek Parfüm",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 1595,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/17918-01-12122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/granit-bleu-edt-erkek-parfum/p/17918",
-    "barcode": "3660005179186",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50053,
-    "emoji": "🌸",
-    "code": "17322",
-    "name": "Granit Bleu EDT-Erkek Parfüm",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 2595,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/17322-01-12122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/granit-bleu-edt-erkek-parfum/p/17322",
-    "barcode": "3660005173221",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50054,
-    "emoji": "🌸",
-    "code": "08195",
-    "name": "Bois de Sauge EDT- Erkek Parfüm",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 1595,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/10968-01-12122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/bois-de-sauge-edt-erkek-parfum/p/08195",
-    "barcode": "3660005081953",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50055,
-    "emoji": "🌸",
-    "code": "77108",
-    "name": "Naturelle EDT -Vegan",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 2095,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/77108-01-20012026.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-toilette-edt/naturelle-edt-vegan/p/77108",
-    "barcode": "3660005771083",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50056,
-    "emoji": "🌸",
-    "code": "25295",
-    "name": "Moment de Bonheur EDT-Vegan",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 1595,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/25295-01-20012026.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-toilette-edt/moment-de-bonheur-edt-vegan/p/25295",
-    "barcode": "3660005252957",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50057,
-    "emoji": "🌸",
-    "code": "39306",
-    "name": "Ambre Noir EDT-Erkek Parfüm- Vegan",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 2595,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/39306-01-12122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/ambre-noir-edt-erkek-parfum-vegan/p/39306",
-    "barcode": "3660005393063",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50058,
-    "emoji": "🧴",
-    "code": "56423",
-    "name": "Monoi Işıltı Veren Nemlendirici Besleyici Parıltılı Saç ve Vücut Yağı-Monoi de Tahiti-Vegan",
-    "brand": "Yves Rocher",
-    "category": "vucut-losyonu",
-    "categoryLabel": "Vücut Bakımı",
-    "price": 1227.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/56423-01-30122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-peelingleri-ve-yaglari/monoi-isilti-veren-nemlendirici-besleyici-pariltili-sac-ve-vucut-yagi-monoi-de-tahiti-vegan/p/56423",
-    "barcode": "3660005564234",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50059,
-    "emoji": "🌸",
-    "code": "50112",
-    "name": "Tendre Jasmin EDP- Secret d'Essence- Kadın Parfüm-Vegan",
-    "brand": "Yves Rocher",
-    "category": "parfum",
-    "categoryLabel": "Parfüm",
-    "price": 2175,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/50112-01-20012026.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-parfum-edp/tendre-jasmin-edp-secret-d-essence-kadin-parfum-vegan/p/50112",
-    "barcode": "3660005761008",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50060,
-    "emoji": "🧴",
-    "code": "31623",
-    "name": "Monoi Nemlendirici Besleyici El Kremi-Tüm Ciltler - Monoi de Tahiti- Vegan",
-    "brand": "Yves Rocher",
-    "category": "vucut-losyonu",
-    "categoryLabel": "Vücut Bakımı",
-    "price": 299.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/31623-01-30122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/nemlendirici-el-kremleri/monoi-nemlendirici-besleyici-el-kremi-tum-ciltler-monoi-de-tahiti-vegan/p/31623",
-    "barcode": "3660005316239",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50061,
-    "emoji": "💧",
-    "code": "47377",
-    "name": "Uyku Maskesi - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 749.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/47377-01-20012026.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/yuz-maskesi-ve-peeling/uyku-maskesi-leke-ve-kirisik-karsiti-bitkisel-kompleks-bakim-bright-botanical/p/47377",
-    "barcode": "3660005473772",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50062,
-    "emoji": "💧",
-    "code": "26329",
-    "name": "Serum - Besleyici Yaşlanma Karşıtı Değerli Yağ Bakımı / Riche Crème",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 1595,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/26329-01-05122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/cilt-bakim-serumu/serum-besleyici-yaslanma-karsiti-degerli-yag-bakimi-riche-creme/p/26329",
-    "barcode": "3660005263298",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50063,
-    "emoji": "💧",
-    "code": "43278",
-    "name": "Gündüz Kremi-Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 2095,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/43278-01-31102025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/gunduz-kremi-sikilastirici-dolgunlastirici-bitkisel-kolajen-ve-hyaluronik-bakim-lift-pro-collagene/p/43278",
-    "barcode": "3660005432786",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50064,
-    "emoji": "💧",
-    "code": "54083",
-    "name": "Bakuchiol (Bitkisel Retinol) Serum- Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 1895,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/54083-image01.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/cilt-bakim-serumu/bakuchiol-bitkisel-retinol-serum-sikilastirici-dolgunlastirici-bitkisel-kolajen-ve-hyaluronik-bakim-lift-pro-collagene/p/54083",
-    "barcode": "3660005540832",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50065,
-    "emoji": "💧",
-    "code": "48846",
-    "name": "Gece Kremi-Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 2195,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/48846-01-31102025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gece-kremi/gece-kremi-sikilastirici-dolgunlastirici-bitkisel-kolajen-ve-hyaluronik-bakim-lift-pro-collagene/p/48846",
-    "barcode": "3660005488462",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50066,
+    "id": 50045,
     "emoji": "🌸",
     "code": "30313",
     "name": "Comme une Evidence EDP- Comme Une Evidence- Kadın Parfüm",
@@ -1072,7 +736,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50067,
+    "id": 50046,
     "emoji": "🌸",
     "code": "30137",
     "name": "L'evidence EDP- Comme Une Evidence- Kadın Parfüm-Vegan",
@@ -1088,23 +752,55 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50068,
-    "emoji": "💧",
-    "code": "93167",
-    "name": "Yoğun Nem Bakımı - Normal ve Kuru Cilt / Hydra Vegetal",
+    "id": 50047,
+    "emoji": "🌸",
+    "code": "17918",
+    "name": "Granit Bleu EDT-Erkek Parfüm",
     "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 1379.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/93167-01-31102025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/yogun-nem-bakimi-normal-ve-kuru-cilt-hydra-vegetal/p/93167",
-    "barcode": "3660005931678",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 1595,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/17918-01-12122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/granit-bleu-edt-erkek-parfum/p/17918",
+    "barcode": "3660005179186",
     "rating": 0,
     "reviews": 0,
     "source": "yvesrocher"
   },
   {
-    "id": 50069,
+    "id": 50048,
+    "emoji": "🌸",
+    "code": "17322",
+    "name": "Granit Bleu EDT-Erkek Parfüm",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 2595,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/17322-01-12122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/granit-bleu-edt-erkek-parfum/p/17322",
+    "barcode": "3660005173221",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50049,
+    "emoji": "🌸",
+    "code": "08195",
+    "name": "Bois de Sauge EDT- Erkek Parfüm",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 1595,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/10968-01-12122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/bois-de-sauge-edt-erkek-parfum/p/08195",
+    "barcode": "3660005081953",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50050,
     "emoji": "💧",
     "code": "41019",
     "name": "Dolgunlaştırıcı Serum-Sıkılaştırıcı, Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
@@ -1120,7 +816,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50070,
+    "id": 50051,
     "emoji": "💧",
     "code": "08023",
     "name": "Yüz Yıkama/Makyaj Temizleme Yağı-Hassas Dahil Tüm Cilt /Pure Algue Sensitive Botanik Kompleks",
@@ -1136,7 +832,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50071,
+    "id": 50052,
     "emoji": "💧",
     "code": "19422",
     "name": "Siyah Nokta Karşıtı Peeling Etki Yüz Yıkama Jeli-Sivilce Eğilimli / Pure Menthe Botanik Kompleks",
@@ -1152,7 +848,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50072,
+    "id": 50053,
     "emoji": "💧",
     "code": "22047",
     "name": "Makyaj Temizleme Micellar Suyu-Normal ve Kuru Cilt -Pure Algue Nemlendirici Botanik Kompleks",
@@ -1168,7 +864,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50073,
+    "id": 50054,
     "emoji": "💧",
     "code": "07960",
     "name": "Yüz Peelingi-Karma,Yağlı, Sivilce Eğilimli Cilt-Pure Menthe Arındırıcı Botanik Kompleks",
@@ -1184,7 +880,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50074,
+    "id": 50055,
     "emoji": "💧",
     "code": "07996",
     "name": "Yüz&Makyaj Temizleme Micellar Sütü-Hassas Dahil Tüm Cilt-Pure Algue Sensitive Botanik Kompleks",
@@ -1200,7 +896,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50075,
+    "id": 50056,
     "emoji": "💧",
     "code": "19800",
     "name": "Yüz&Makyaj Temizleme Micellar Sütü-Hassas Dahil Tüm Cilt-Pure Algue Sensitive Botanik Kompleks",
@@ -1216,7 +912,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50076,
+    "id": 50057,
     "emoji": "💧",
     "code": "19062",
     "name": "Yüz Yıkama Köpüğü-Hassas Cilt-Pure Algue Sensitive Yatıştırıcı Botanik Kompleks",
@@ -1232,7 +928,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50077,
+    "id": 50058,
     "emoji": "💧",
     "code": "19468",
     "name": "Yüz Yıkama Jeli-Karma,Yağlı,Sivilce Eğilimli Cilt-Pure Menthe Arındırıcı Botanik Kompleks",
@@ -1248,7 +944,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50078,
+    "id": 50059,
     "emoji": "💧",
     "code": "19077",
     "name": "Yüz Yıkama/Makyaj Temizleme Jeli-Normal ve Kuru Cilt-Pure Algue Nemlendirici  Botanik Kompleks",
@@ -1264,7 +960,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50079,
+    "id": 50060,
     "emoji": "💧",
     "code": "19591",
     "name": "Makyaj Temizleme Sütü-Hassas Cilt-Pure Algue Sensitive Yatıştırıcı Botanik Kompleks",
@@ -1280,7 +976,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50080,
+    "id": 50061,
     "emoji": "💧",
     "code": "44167",
     "name": "Leke Karşıtı, Aydınlatıcı, Ton Eşitleyen Krem Dokulu Peeling - Bright Botanical",
@@ -1296,7 +992,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50081,
+    "id": 50062,
     "emoji": "💧",
     "code": "44851",
     "name": "Yüz Yıkama Köpüğü - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
@@ -1312,7 +1008,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50082,
+    "id": 50063,
     "emoji": "💧",
     "code": "47928",
     "name": "Cilt Serumu - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
@@ -1328,7 +1024,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50083,
+    "id": 50064,
     "emoji": "💧",
     "code": "47757",
     "name": "30 SPF Emülsiyon Krem - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
@@ -1344,7 +1040,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50084,
+    "id": 50065,
     "emoji": "🧴",
     "code": "90415",
     "name": "El Kremi- Nemlendirici Besleyici Ferahlatıcı Zeytin Turunç -  Vegan",
@@ -1360,7 +1056,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50085,
+    "id": 50066,
     "emoji": "🧴",
     "code": "71822",
     "name": "El Kremi- Nemlendirici Besleyici Tropikal Hindistan Cevizi-  Vegan",
@@ -1376,7 +1072,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50086,
+    "id": 50067,
     "emoji": "🧴",
     "code": "81165",
     "name": "El Kremi- Nemlendirici Besleyici Serinletici Okyanus Esintisi -  Vegan",
@@ -1392,7 +1088,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50087,
+    "id": 50068,
     "emoji": "🧴",
     "code": "72115",
     "name": "El Kremi- Nemlendirici Besleyici Canlandırıcı Mango Kişniş-  Vegan",
@@ -1408,7 +1104,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50088,
+    "id": 50069,
     "emoji": "🧴",
     "code": "71574",
     "name": "El Kremi- Nemlendirici Besleyici Egzotik Vanilya- Vegan",
@@ -1424,7 +1120,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50089,
+    "id": 50070,
     "emoji": "🧴",
     "code": "72426",
     "name": "El Kremi- Nemlendirici Besleyici Oryantal Argan Gül - Vegan",
@@ -1440,7 +1136,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50090,
+    "id": 50071,
     "emoji": "💧",
     "code": "57732",
     "name": "Cilt Serumu - Normal ve Kuru Cilt / Hydra Vegetal",
@@ -1456,7 +1152,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50091,
+    "id": 50072,
     "emoji": "🧴",
     "code": "34836",
     "name": "El Kremi- Nemlendirici Besleyici Rahatlatıcı Yulaf & Karabuğday -Vegan",
@@ -1472,7 +1168,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50092,
+    "id": 50073,
     "emoji": "🧴",
     "code": "07064",
     "name": "Vücut Yağı - Onarıcı ve Besleyici / Reparation",
@@ -1488,7 +1184,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50093,
+    "id": 50074,
     "emoji": "🌸",
     "code": "37905",
     "name": "Saç ve Vücut Şampuanı-Hoggar- Erkek",
@@ -1504,7 +1200,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50094,
+    "id": 50075,
     "emoji": "🧴",
     "code": "79482",
     "name": "30 SPF El Kremi - Besleyici Yaşlanma Karşıtı Değerli Yağ Bakımı / Riche Crème",
@@ -1520,7 +1216,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50095,
+    "id": 50076,
     "emoji": "🧴",
     "code": "24204",
     "name": "Nemlendirici  Vücut Losyonu-Tüm Ciltler- Monoi de Tahiti-Vegan",
@@ -1536,7 +1232,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50096,
+    "id": 50077,
     "emoji": "🧴",
     "code": "06780",
     "name": "Vücut Losyonu - Nemlendirici Besleyici Tazeleyici Mine Çiçeği Papatya -Vegan",
@@ -1552,7 +1248,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50097,
+    "id": 50078,
     "emoji": "💧",
     "code": "79136",
     "name": "Katı Yüz Temizleyici - Tüm Ciltler",
@@ -1568,7 +1264,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50098,
+    "id": 50079,
     "emoji": "🧴",
     "code": "90791",
     "name": "Vücut Losyonu - Besleyici / Famille Bio",
@@ -1584,7 +1280,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50099,
+    "id": 50080,
     "emoji": "💧",
     "code": "26522",
     "name": "Arındırıcı Siyah Nokta Karşıtı Kömür Maske-Süksinik Asit-Sebo Active Clear Botanik Kompleks",
@@ -1600,7 +1296,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50100,
+    "id": 50081,
     "emoji": "💧",
     "code": "28579",
     "name": "Karma/Yağlı Cilt Nemlendirici Krem-Çinko&Salisilik Asit-Sebo Active Clear Botanik Kompleks",
@@ -1608,7 +1304,7 @@
     "category": "nemlendirici",
     "categoryLabel": "Nemlendirici",
     "price": 999.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/28579-01-31102025.jpg",
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/28579-01-16042026.jpg",
     "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/karma-yagli-cilt-nemlendirici-krem-cinkoetsalisilik-asit-sebo-active-clear-botanik-kompleks/p/28579",
     "barcode": "3660005285795",
     "rating": 0,
@@ -1616,7 +1312,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50101,
+    "id": 50082,
     "emoji": "💧",
     "code": "43510",
     "name": "Arındırıcı Gözenek Sıkılaştırıcı Tonik-Süksinik Asit&Çinko-Sebo Active Clear Botanik Kompleks",
@@ -1624,7 +1320,7 @@
     "category": "nemlendirici",
     "categoryLabel": "Nemlendirici",
     "price": 599.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/43510-01-31102025.jpg",
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/43510-01-16042026.jpg",
     "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/micellar-su-ve-tonik/arindirici-gozenek-sikilastirici-tonik-suksinik-asitetcinko-sebo-active-clear-botanik-kompleks/p/43510",
     "barcode": "3660005435107",
     "rating": 0,
@@ -1632,7 +1328,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50102,
+    "id": 50083,
     "emoji": "💧",
     "code": "36070",
     "name": "Hassas Cilt Yatıştırıcı Krem-Bisabolol&Allantoin&Aloe Vera-Sebo Active Clear Botanik Kompleks",
@@ -1648,7 +1344,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50103,
+    "id": 50084,
     "emoji": "💧",
     "code": "30481",
     "name": "Akne/Sivilce Karşıtı Krem-Süksinik Asit&Allantoin&Aloe Vera-Sebo Active Clear Botanik Kompleks",
@@ -1664,7 +1360,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50104,
+    "id": 50085,
     "emoji": "💧",
     "code": "97906",
     "name": "Gündüz Kremi-Kuru Cilt-E Vitamini-Yaşlanma Karşıtı Bitki  Kök Hücre Bakım /Anti Age Global",
@@ -1680,7 +1376,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50105,
+    "id": 50086,
     "emoji": "💧",
     "code": "98513",
     "name": "Gece Kremi-Shea&E Vitamini- Yaşlanma Karşıtı Bitki Kök Hücre Bakımı Anti Age Global",
@@ -1696,7 +1392,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50106,
+    "id": 50087,
     "emoji": "💧",
     "code": "96869",
     "name": "Konsantre Serum-Hyaluronik Asit-Yaşlanma ve Leke Karşıtı Bitki Kök Hücre Bakımı Anti Age Global",
@@ -1712,23 +1408,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50107,
-    "emoji": "👁️",
-    "code": "54889",
-    "name": "Canlandırıcı Göz Serumu - Tüm Ciltler / Pur Bleuet",
-    "brand": "Yves Rocher",
-    "category": "goz-kremi",
-    "categoryLabel": "Göz Kremi",
-    "price": 999.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/55889-01-30122025.jpg",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/goz-kremi/canlandirici-goz-serumu-tum-ciltler-pur-bleuet/p/54889",
-    "barcode": "3660005548890",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50108,
+    "id": 50088,
     "emoji": "👁️",
     "code": "00284",
     "name": "Jel Dokulu Göz Kremi - Normal ve Kuru Cilt / Hydra Vegetal",
@@ -1744,7 +1424,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50109,
+    "id": 50089,
     "emoji": "🌸",
     "code": "30142",
     "name": "L'evidence EDP- Comme Une Evidence- Kadın Parfüm-Vegan",
@@ -1760,7 +1440,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50110,
+    "id": 50090,
     "emoji": "🌸",
     "code": "30466",
     "name": "Comme une Evidence EDP- Comme Une Evidence- Kadın Parfüm",
@@ -1776,7 +1456,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50111,
+    "id": 50091,
     "emoji": "👁️",
     "code": "52003",
     "name": "Göz Kremi-Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
@@ -1792,7 +1472,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50112,
+    "id": 50092,
     "emoji": "💧",
     "code": "15603",
     "name": "Arındırıcı Yağ Dengeleyici Serum-Süksinik Asit&Çinko-Sebo Active Clear Botanik Kompleks",
@@ -1808,7 +1488,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50113,
+    "id": 50093,
     "emoji": "💧",
     "code": "20105",
     "name": "Makyaj Temizleme Micellar Suyu-Normal ve Kuru Cilt -Pure Algue Nemlendirici Botanik Kompleks",
@@ -1824,7 +1504,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50114,
+    "id": 50094,
     "emoji": "💧",
     "code": "19045",
     "name": "Antioksidan Yüz Yıkama Jeli-Normal ve Kuru Cilt -Pure Algue Nemlendirici Botanik Kompleks",
@@ -1840,7 +1520,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50115,
+    "id": 50095,
     "emoji": "👁️",
     "code": "86713",
     "name": "Göz Kremi- Aydınlatıcı Etkili -Işıltı Veren Antioksidan Botanik Kompleks Bakım Glow Energie",
@@ -1856,7 +1536,23 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50116,
+    "id": 50096,
+    "emoji": "💧",
+    "code": "19140",
+    "name": "Yüz Yıkama Jeli-Karma,Yağlı,Sivilce Eğilimli Cilt-Pure Menthe Arındırıcı Botanik Kompleks",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 599.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/19140-01-102025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/yuz-temizleme-jeli-ve-yagi/yuz-yikama-jeli-karma-yagli-sivilce-egilimli-cilt-pure-menthe-arindirici-botanik-kompleks/p/19140",
+    "barcode": "3660005191409",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50097,
     "emoji": "💧",
     "code": "23009",
     "name": "Micellar Makyaj Temizleme Suyu-Karma,Yağlı,Sivilce Eğilimli Cilt-Pure Menthe Botanik Kompleks",
@@ -1872,7 +1568,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50117,
+    "id": 50098,
     "emoji": "💧",
     "code": "19354",
     "name": "Antioksidan Yüz Peelingi-Normal ve Kuru Cilt -Pure Algue Nemlendirici Botanik Kompleks",
@@ -1888,7 +1584,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50118,
+    "id": 50099,
     "emoji": "💧",
     "code": "74904",
     "name": "6 Etki 1 Arada Kusursuzlaştırıcı BB Krem",
@@ -1904,7 +1600,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50119,
+    "id": 50100,
     "emoji": "🧴",
     "code": "57384",
     "name": "Saç ve Vücut Yağı - Nemlendirici Besleyici Tropikal Hindistan Cevizi - Vegan",
@@ -1920,7 +1616,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50120,
+    "id": 50101,
     "emoji": "💧",
     "code": "91326",
     "name": "Peeling Maske - %5 AHA - Işıltı Veren Antioksidan Botanik Kompleks Bakım Glow Energie",
@@ -1936,7 +1632,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50121,
+    "id": 50102,
     "emoji": "💧",
     "code": "89450",
     "name": "Gece Bakım Yağı - Melatonin Etkili - Işıltı Veren Antioksidan Botanik Kompleks Bakım Glow Energie",
@@ -1952,7 +1648,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50122,
+    "id": 50103,
     "emoji": "💧",
     "code": "97068",
     "name": "Gündüz Kremi-Hyaluronik Asit & Pantenol-Yaşlanma Karşıtı Bitki Kök Hücre Bakım Anti Age Global 50ml",
@@ -1968,7 +1664,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50123,
+    "id": 50104,
     "emoji": "💧",
     "code": "99206",
     "name": "Gece Serumu-Niasinamid&Hyaluronik Asit-Yaşlanma Karşıtı Bitki Kök Hücre Bakımı Anti Age Global",
@@ -1984,7 +1680,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50124,
+    "id": 50105,
     "emoji": "👁️",
     "code": "01990",
     "name": "Göz Kremi-Kafein&E Vitamini-Yaşlanma Karşıtı Bitki Kök Hücre Bakım Anti Age Global",
@@ -2000,7 +1696,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50125,
+    "id": 50106,
     "emoji": "💧",
     "code": "95940",
     "name": "AHA Etkili Losyon-Yaşlanma Karşıtı Bitki Kök Hücre Bakımı Anti Age Global",
@@ -2016,7 +1712,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50126,
+    "id": 50107,
     "emoji": "💧",
     "code": "63392",
     "name": "Gündüz Serumu-C Vitamini&Meyankökü-Yaşlanma Karşıtı Bitki Kök Hücre Bakımı Anti Age Global",
@@ -2032,7 +1728,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50127,
+    "id": 50108,
     "emoji": "💧",
     "code": "57776",
     "name": "Nem Maskesi - Normal ve Kuru Ciltler- Hydra Water Plump Nemlendirici Botanik Kompleks",
@@ -2048,7 +1744,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50128,
+    "id": 50109,
     "emoji": "🌸",
     "code": "62965",
     "name": "Ferah EF-Eaux Fraiches-Vegan",
@@ -2064,7 +1760,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50129,
+    "id": 50110,
     "emoji": "🌸",
     "code": "62923",
     "name": "Enerjik EF- Eaux Fraiches-Vegan",
@@ -2080,7 +1776,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50130,
+    "id": 50111,
     "emoji": "🌸",
     "code": "62954",
     "name": "Pudralı EF- Eaux Fraiches-Vegan",
@@ -2096,7 +1792,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50131,
+    "id": 50112,
     "emoji": "👁️",
     "code": "26499",
     "name": "Göz Kremi - Besleyici Yaşlanma Karşıtı Değerli Yağ Bakımı / Riche Creme",
@@ -2112,7 +1808,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50132,
+    "id": 50113,
     "emoji": "💧",
     "code": "26273",
     "name": "Gündüz Kremi - Besleyici Yaşlanma Karşıtı Değerli Yağ Bakımı / Riche Creme",
@@ -2128,7 +1824,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50133,
+    "id": 50114,
     "emoji": "💧",
     "code": "26454",
     "name": "Konsantre Krem - Besleyici Yaşlanma Karşıtı Değerli Yağ Bakımı / Riche Creme",
@@ -2144,7 +1840,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50134,
+    "id": 50115,
     "emoji": "🌸",
     "code": "84347",
     "name": "Parfümlü Vücut Losyonu-Comme Une Evidence-Kadın Parfüm-Vegan",
@@ -2160,7 +1856,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50135,
+    "id": 50116,
     "emoji": "🧴",
     "code": "05473",
     "name": "Vücut Kremi - Kuru Ciltler - Onarıcı Besleyici Yoğun Dokulu / Reparation",
@@ -2176,7 +1872,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50136,
+    "id": 50117,
     "emoji": "🧴",
     "code": "13375",
     "name": "El ve Tırnak Bakım Kremi - Nemlendirici ve Besleyici",
@@ -2192,7 +1888,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50137,
+    "id": 50118,
     "emoji": "🧴",
     "code": "19280",
     "name": "Ayak Bakım Kremi - Onarıcı ve Yumuşatıcı",
@@ -2208,7 +1904,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50138,
+    "id": 50119,
     "emoji": "🧴",
     "code": "15216",
     "name": "El Bakım Kremi - Onarıcı Yoğun Dokulu",
@@ -2224,7 +1920,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50139,
+    "id": 50120,
     "emoji": "🧴",
     "code": "03556",
     "name": "Vücut Losyonu - Onarıcı ve Nemlendirici / Reparation",
@@ -2232,7 +1928,7 @@
     "category": "vucut-losyonu",
     "categoryLabel": "Vücut Bakımı",
     "price": 869.9,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/",
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/03556-01-23102025.jpg",
     "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-sutleri-ve-losyonlari/vucut-losyonu-onarici-ve-nemlendirici-reparation/p/03556",
     "barcode": "3660005035567",
     "rating": 0,
@@ -2240,7 +1936,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50140,
+    "id": 50121,
     "emoji": "🧴",
     "code": "07935",
     "name": "El Kremi- Nemlendirici Besleyici Tazeleyici Mine Çiçeği Papatya-  Vegan",
@@ -2256,7 +1952,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50141,
+    "id": 50122,
     "emoji": "💧",
     "code": "19178",
     "name": "Antioksidan Yüz Yıkama Jeli-Normal ve Kuru Cilt -Pure Algue Nemlendirici Botanik Kompleks",
@@ -2272,7 +1968,23 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50142,
+    "id": 50123,
+    "emoji": "💧",
+    "code": "84141",
+    "name": "Gündüz Kremi - C Vitamini - Işıltı Veren Antioksidan Botanik Kompleks Bakım Glow Energie",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 1895,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/gunduz-kremi-c-vitamini-isilti-veren-antioksidan-botanik-kompleks-bakim-glow-energie/p/84141",
+    "barcode": "3660005841410",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50124,
     "emoji": "💧",
     "code": "81791",
     "name": "Gündüz Serumu - C Vitamini - Işıltı Veren Antioksidan Botanik Kompleks Bakım Glow Energie",
@@ -2288,7 +2000,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50143,
+    "id": 50125,
     "emoji": "💧",
     "code": "45846",
     "name": "Konsantre Krem-Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
@@ -2304,7 +2016,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50144,
+    "id": 50126,
     "emoji": "💧",
     "code": "22963",
     "name": "BB Krem 50 SPF - Ton Eşitleyici Renkli Nemlendirici Güneş Kremi - Hydra Water Plump Nemlendirici Botanik Kompleks - Açık Orta",
@@ -2320,7 +2032,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50145,
+    "id": 50127,
     "emoji": "💧",
     "code": "26792",
     "name": "BB Krem 50 SPF - Ton Eşitleyici Renkli Nemlendirici Güneş Kremi - Hydra Water Plump Nemlendirici Botanik Kompleks- Açık",
@@ -2336,7 +2048,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50146,
+    "id": 50128,
     "emoji": "💧",
     "code": "27053",
     "name": "BB Krem 50 SPF - Ton Eşitleyici Renkli Nemlendirici Güneş Kremi - Hydra Water Plump Nemlendirici Botanik Kompleks - Orta",
@@ -2352,7 +2064,23 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50147,
+    "id": 50129,
+    "emoji": "💧",
+    "code": "38184",
+    "name": "Jel Krem - Normal ve Kuru Ciltler - Hydra Water Plump Nemlendirici Botanik Kompleks",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 999.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/38184-01-16042026.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/jel-krem-normal-ve-kuru-ciltler-hydra-water-plump-nemlendirici-botanik-kompleks/p/38184",
+    "barcode": "3660005381848",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50130,
     "emoji": "🌸",
     "code": "77312",
     "name": "Monoi EDT - Kadın Parfüm - Egzotik,Sıcak ve Çekici - Monoi de Tahiti-Vegan",
@@ -2368,7 +2096,23 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50148,
+    "id": 50131,
+    "emoji": "🧴",
+    "code": "44138",
+    "name": "Nemlendirici Arındırıcı Vücut Peelingi - Kayısı- Gommage Vegetal",
+    "brand": "Yves Rocher",
+    "category": "vucut-losyonu",
+    "categoryLabel": "Vücut Bakımı",
+    "price": 499.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/44138-01-16042026.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-peelingleri-ve-yaglari/nemlendirici-arindirici-vucut-peelingi-kayisi-gommage-vegetal/p/44138",
+    "barcode": "3660005441382",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50132,
     "emoji": "💧",
     "code": "47597",
     "name": "Gündüz/Gece Kremi - Leke ve Kırışık Karşıtı Bitkisi Kompleks Bakım / Bright Botanical",
@@ -2384,7 +2128,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50149,
+    "id": 50133,
     "emoji": "👁️",
     "code": "47492",
     "name": "Göz Kremi - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
@@ -2400,7 +2144,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50150,
+    "id": 50134,
     "emoji": "🧴",
     "code": "67697",
     "name": "Saç ve Vücut Spreyi- Serinletici Okyanus Esintisi- Vegan",
@@ -2416,7 +2160,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50151,
+    "id": 50135,
     "emoji": "🧴",
     "code": "59713",
     "name": "Saç ve Vücut Spreyi- Canlandırıcı Mango & Kişniş - Vegan",
@@ -2432,7 +2176,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50152,
+    "id": 50136,
     "emoji": "🧴",
     "code": "58550",
     "name": "Saç ve Vücut Spreyi- Tropikal Hindistan Cevizi - Vegan",
@@ -2448,7 +2192,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50153,
+    "id": 50137,
     "emoji": "🧴",
     "code": "59185",
     "name": "Saç ve Vücut Spreyi- Egzotik Vanilya- Vegan",
@@ -2464,7 +2208,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50154,
+    "id": 50138,
     "emoji": "🧴",
     "code": "66276",
     "name": "Vücut Losyonu - Nemlendirici ve Besleyici Serinletici Okyanus Esintisi -Vegan",
@@ -2480,7 +2224,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50155,
+    "id": 50139,
     "emoji": "🧴",
     "code": "40413",
     "name": "Vücut Losyonu - Nemlendirici ve Besleyici Tropikal Hindistan Cevizi -Vegan",
@@ -2496,7 +2240,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50156,
+    "id": 50140,
     "emoji": "🧴",
     "code": "40426",
     "name": "Vücut Losyonu - Nemlendirici Besleyici Canlandırıcı Mango Kişniş -Vegan",
@@ -2512,7 +2256,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50157,
+    "id": 50141,
     "emoji": "🧴",
     "code": "33615",
     "name": "Vücut Losyonu - Nemlendirici  Besleyici Rahatlatıcı Yulaf & Karabuğday -Vegan",
@@ -2528,7 +2272,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50158,
+    "id": 50142,
     "emoji": "🧴",
     "code": "40428",
     "name": "Vücut Losyonu - Nemlendirici Besleyici Oryantal Argan Gül- Vegan",
@@ -2544,7 +2288,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50159,
+    "id": 50143,
     "emoji": "🧴",
     "code": "40419",
     "name": "Vücut Losyonu - Nemlendirici Besleyici Egzotik Vanilya",
@@ -2560,7 +2304,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50160,
+    "id": 50144,
     "emoji": "🌸",
     "code": "83564",
     "name": "Parfümlü Duş Jeli- Comme Une Evidence-Kadın Parfüm- Vegan",
@@ -2576,7 +2320,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50161,
+    "id": 50145,
     "emoji": "💧",
     "code": "26393",
     "name": "Gece Kremi - Besleyici Yaşlanma Karşıtı Değerli Yağ Bakımı / Riche Creme",
@@ -2592,7 +2336,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50162,
+    "id": 50146,
     "emoji": "🧴",
     "code": "21116",
     "name": "Ayak ve Topuk Peelingi - Yumuşatıcı Yenileyici",
@@ -2608,7 +2352,7 @@
     "source": "yvesrocher"
   },
   {
-    "id": 50163,
+    "id": 50147,
     "emoji": "🧴",
     "code": "08221",
     "name": "Saç ve Vücut Spreyi- Tazeleyici Mine Çiçeği Papatya- Vegan",
@@ -2624,7 +2368,295 @@
     "source": "yvesrocher"
   },
   {
+    "id": 50148,
+    "emoji": "🌸",
+    "code": "77108",
+    "name": "Naturelle EDT -Vegan",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 2095,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/77108-01-20012026.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-toilette-edt/naturelle-edt-vegan/p/77108",
+    "barcode": "3660005771083",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50149,
+    "emoji": "🌸",
+    "code": "25295",
+    "name": "Moment de Bonheur EDT-Vegan",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 1595,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/25295-01-20012026.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-toilette-edt/moment-de-bonheur-edt-vegan/p/25295",
+    "barcode": "3660005252957",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50150,
+    "emoji": "🌸",
+    "code": "39306",
+    "name": "Ambre Noir EDT-Erkek Parfüm- Vegan",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 2595,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/39306-01-12122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/ambre-noir-edt-erkek-parfum-vegan/p/39306",
+    "barcode": "3660005393063",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50151,
+    "emoji": "🧴",
+    "code": "56423",
+    "name": "Monoi Işıltı Veren Nemlendirici Besleyici Parıltılı Saç ve Vücut Yağı-Monoi de Tahiti-Vegan",
+    "brand": "Yves Rocher",
+    "category": "vucut-losyonu",
+    "categoryLabel": "Vücut Bakımı",
+    "price": 1227.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/56423-01-30122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-peelingleri-ve-yaglari/monoi-isilti-veren-nemlendirici-besleyici-pariltili-sac-ve-vucut-yagi-monoi-de-tahiti-vegan/p/56423",
+    "barcode": "3660005564234",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50152,
+    "emoji": "🌸",
+    "code": "50112",
+    "name": "Tendre Jasmin EDP- Secret d'Essence- Kadın Parfüm-Vegan",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 2175,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/50112-01-20012026.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-parfum-edp/tendre-jasmin-edp-secret-d-essence-kadin-parfum-vegan/p/50112",
+    "barcode": "3660005761008",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50153,
+    "emoji": "💧",
+    "code": "43497",
+    "name": "Tonik - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 679.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/43497-01-20012026.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/micellar-su-ve-tonik/tonik-leke-ve-kirisik-karsiti-bitkisel-kompleks-bakim-bright-botanical/p/43497",
+    "barcode": "3660005434971",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50154,
+    "emoji": "🧴",
+    "code": "31623",
+    "name": "Monoi Nemlendirici Besleyici El Kremi-Tüm Ciltler - Monoi de Tahiti- Vegan",
+    "brand": "Yves Rocher",
+    "category": "vucut-losyonu",
+    "categoryLabel": "Vücut Bakımı",
+    "price": 299.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/31623-01-30122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/nemlendirici-el-kremleri/monoi-nemlendirici-besleyici-el-kremi-tum-ciltler-monoi-de-tahiti-vegan/p/31623",
+    "barcode": "3660005316239",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50155,
+    "emoji": "🧴",
+    "code": "08198",
+    "name": "Monoi Nemlendirici Besleyici Vücut Yağı-Tüm Ciltler-Monoi de Tahiti-Vegan",
+    "brand": "Yves Rocher",
+    "category": "vucut-losyonu",
+    "categoryLabel": "Vücut Bakımı",
+    "price": 1099.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/08198-image01.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-peelingleri-ve-yaglari/monoi-nemlendirici-besleyici-vucut-yagi-tum-ciltler-monoi-de-tahiti-vegan/p/08198",
+    "barcode": "3660005076362",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50156,
+    "emoji": "💧",
+    "code": "56064",
+    "name": "Yoğun Krem - Çok Kuru Cilt / Hydra Vegetal",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 999.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/56064-01-31102025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/yogun-krem-cok-kuru-cilt-hydra-vegetal/p/56064",
+    "barcode": "3660005560649",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50157,
+    "emoji": "🧴",
+    "code": "57960",
+    "name": "Saç ve Vücut Yağı - Nemlendirici Besleyici Oryantal Argan Gül - Vegan",
+    "brand": "Yves Rocher",
+    "category": "vucut-losyonu",
+    "categoryLabel": "Vücut Bakımı",
+    "price": 739.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/57960-image01.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-peelingleri-ve-yaglari/sac-ve-vucut-yagi-nemlendirici-besleyici-oryantal-argan-gul-vegan/p/57960",
+    "barcode": "3660005579603",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50158,
+    "emoji": "💧",
+    "code": "47377",
+    "name": "Uyku Maskesi - Leke ve Kırışık Karşıtı Bitkisel Kompleks Bakım / Bright Botanical",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 749.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/47377-01-20012026.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/yuz-maskesi-ve-peeling/uyku-maskesi-leke-ve-kirisik-karsiti-bitkisel-kompleks-bakim-bright-botanical/p/47377",
+    "barcode": "3660005473772",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50159,
+    "emoji": "🧴",
+    "code": "40437",
+    "name": "Vücut Losyonu - Nemlendirici Besleyici Ferahlatıcı Zeytin Turunç -Vegan",
+    "brand": "Yves Rocher",
+    "category": "vucut-losyonu",
+    "categoryLabel": "Vücut Bakımı",
+    "price": 639.9,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/40437-01-102025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/vucut-et-banyo/vucut-bakimi/vucut-sutleri-ve-losyonlari/vucut-losyonu-nemlendirici-besleyici-ferahlatici-zeytin-turunc-vegan/p/40437",
+    "barcode": "3660005404370",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50160,
+    "emoji": "💧",
+    "code": "26329",
+    "name": "Serum - Besleyici Yaşlanma Karşıtı Değerli Yağ Bakımı / Riche Crème",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 1595,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/26329-01-05122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/cilt-bakim-serumu/serum-besleyici-yaslanma-karsiti-degerli-yag-bakimi-riche-creme/p/26329",
+    "barcode": "3660005263298",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50161,
+    "emoji": "💧",
+    "code": "43278",
+    "name": "Gündüz Kremi-Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 2095,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/43278-01-31102025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/gunduz-kremi-sikilastirici-dolgunlastirici-bitkisel-kolajen-ve-hyaluronik-bakim-lift-pro-collagene/p/43278",
+    "barcode": "3660005432786",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50162,
+    "emoji": "💧",
+    "code": "54083",
+    "name": "Bakuchiol (Bitkisel Retinol) Serum- Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 1895,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/54083-image01.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/cilt-bakim-serumu/bakuchiol-bitkisel-retinol-serum-sikilastirici-dolgunlastirici-bitkisel-kolajen-ve-hyaluronik-bakim-lift-pro-collagene/p/54083",
+    "barcode": "3660005540832",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50163,
+    "emoji": "💧",
+    "code": "48846",
+    "name": "Gece Kremi-Sıkılaştırıcı,Dolgunlaştırıcı Bitkisel Kolajen ve Hyaluronik Bakım/ Lift Pro Collagene",
+    "brand": "Yves Rocher",
+    "category": "nemlendirici",
+    "categoryLabel": "Nemlendirici",
+    "price": 2195,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/48846-01-31102025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gece-kremi/gece-kremi-sikilastirici-dolgunlastirici-bitkisel-kolajen-ve-hyaluronik-bakim-lift-pro-collagene/p/48846",
+    "barcode": "3660005488462",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
     "id": 50164,
+    "emoji": "🌸",
+    "code": "36642",
+    "name": "Hoggar- EDT 50 ml",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 1595,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/36642-01-12122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/erkek-parfum/eau-de-toilette-edt/hoggar-edt-50-ml/p/36642",
+    "barcode": "3660005366425",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50165,
+    "emoji": "🌸",
+    "code": "30626",
+    "name": "Mon Evidence EDP- Kadın Parfüm- Comme Une Evidence",
+    "brand": "Yves Rocher",
+    "category": "parfum",
+    "categoryLabel": "Parfüm",
+    "price": 2175,
+    "imageUrl": "https://medias.yvesrocher.com.tr/medias/30626-01-30122025.jpg",
+    "productUrl": "https://www.yvesrocher.com.tr/parfum/kadin-parfum/eau-de-parfum-edp/mon-evidence-edp-kadin-parfum-comme-une-evidence/p/30626",
+    "barcode": "3660005306261",
+    "rating": 0,
+    "reviews": 0,
+    "source": "yvesrocher"
+  },
+  {
+    "id": 50166,
     "emoji": "💧",
     "code": "03650",
     "name": "Leke Karşıtı 50+SPF Yüz Güneş Kremi - E Vitamini - Işıltı Veren Antioksidan Kompleks Glow Energie",
@@ -2635,22 +2667,6 @@
     "imageUrl": "https://medias.yvesrocher.com.tr/medias/",
     "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/gunes-koruyucu-krem-ve-losyon/leke-karsiti-50-spf-yuz-gunes-kremi-e-vitamini-isilti-veren-antioksidan-kompleks-glow-energie/p/03650",
     "barcode": "3660005036502",
-    "rating": 0,
-    "reviews": 0,
-    "source": "yvesrocher"
-  },
-  {
-    "id": 50165,
-    "emoji": "💧",
-    "code": "84141",
-    "name": "Gündüz Kremi - C Vitamini - Işıltı Veren Antioksidan Botanik Kompleks Bakım Glow Energie",
-    "brand": "Yves Rocher",
-    "category": "nemlendirici",
-    "categoryLabel": "Nemlendirici",
-    "price": 1895,
-    "imageUrl": "https://medias.yvesrocher.com.tr/medias/",
-    "productUrl": "https://www.yvesrocher.com.tr/cilt-bakimi/urun-tipine-gore/nemlendirici-gunduz-kremi/gunduz-kremi-c-vitamini-isilti-veren-antioksidan-botanik-kompleks-bakim-glow-energie/p/84141",
-    "barcode": "3660005841410",
     "rating": 0,
     "reviews": 0,
     "source": "yvesrocher"
