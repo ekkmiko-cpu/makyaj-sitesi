@@ -132,6 +132,7 @@ async function extractProducts(page, catName, catLabel) {
 
 async function scrapeCategory(page, category) {
   var allProducts = [];
+  var seenUrls = new Set();
   console.log('\n--- Kategori: ' + category.label + ' ---');
 
   for (var pg = 1; pg <= MAX_PAGES; pg++) {
@@ -160,10 +161,17 @@ async function scrapeCategory(page, category) {
       await sleep(2000);
 
       var products = await extractProducts(page, category.name, category.label);
-      console.log('  -> ' + products.length + ' urun bulundu');
+      var newCount = 0;
+      products.forEach(function(p) {
+        var key = (p.productUrl || '').replace(/\?.*$/, '');
+        if (key && !seenUrls.has(key)) { seenUrls.add(key); newCount++; }
+      });
+      console.log('  -> ' + products.length + ' urun (' + newCount + ' yeni)');
 
       if (products.length === 0) break;
       allProducts = allProducts.concat(products);
+      if (pg > 1 && newCount === 0) break;
+      if (pg > 1 && products.length > 0 && (newCount / products.length) < 0.2) break;
     } catch (err) {
       console.log('  HATA: ' + err.message);
       break;
@@ -185,8 +193,8 @@ async function scrapeCategory(page, category) {
   var effectiveDelay = crawlDelay ? Math.max(DELAY_MS, crawlDelay * 1000) : DELAY_MS;
 
   var browser = await chromium.launch({
-    headless: false,
-    args: ['--disable-blink-features=AutomationControlled']
+    headless: true,
+    args: ['--disable-blink-features=AutomationControlled', '--no-sandbox', '--disable-dev-shm-usage']
   });
 
   var context = await browser.newContext({

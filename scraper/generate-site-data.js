@@ -22,17 +22,18 @@ const KNOWN_DUPES = [
 
 // ── Satıcı dosyaları ──
 const SOURCES = [
-  { file: 'sephora-products.json',      site: 'Sephora'      },
   { file: 'trendyol-products.json',     site: 'Trendyol'     },
   { file: 'gratis-products.json',       site: 'Gratis'       },
-  { file: 'watsons-products.json',      site: 'Watsons'      },
   { file: 'rossmann-products.json',     site: 'Rossmann'     },
   { file: 'yvesrocher-products.json',   site: 'YvesRocher'   },
   { file: 'hepsiburada-products.json',  site: 'Hepsiburada'  },
-  { file: 'amazon-products.json',      site: 'Amazon'       },
-  { file: 'idefix-products.json',      site: 'Idefix'       },
-  { file: 'pazarama-products.json',    site: 'Pazarama'     },
-  { file: 'pttavm-products.json',      site: 'PttAvm'       },
+  { file: 'amazon-products.json',       site: 'Amazon'       },
+  { file: 'idefix-products.json',       site: 'Idefix'       },
+  { file: 'pazarama-products.json',     site: 'Pazarama'     },
+  { file: 'pttavm-products.json',       site: 'PttAvm'       },
+  // ── Akamai IP engeli (residential proxy gerekli) ────────────────────────────
+  // { file: 'sephora-products.json',   site: 'Sephora'     }, // tum domain 403
+  // { file: 'watsons-products.json',   site: 'Watsons'     }, // tum domain 403
 ];
 
 // ── Trendyol barkodlarını yükle (trendyol-barcode-enricher.js tarafından üretilir) ──

@@ -12,32 +12,33 @@ const { preflightCheck } = require('./robots-checker');
 
 // -- AYARLAR ------------------------------------------------------------------
 const BASE_URL = 'https://www.pazarama.com';
+// Kategori URL'leri Pazarama sitemap'inden alindi (robots.txt'de `/arama` engelli ama /kategori-k-kxxxxx yollari serbest)
 const CATEGORIES = [
-  { name: 'fondoten',        q: 'fondöten',                   label: 'Fondöten' },
-  { name: 'kapatici',        q: 'kapatıcı makyaj',            label: 'Kapatıcı' },
-  { name: 'primer',          q: 'primer makyaj bazı',         label: 'Primer' },
-  { name: 'allik',           q: 'allık',                      label: 'Allık' },
-  { name: 'pudra',           q: 'pudra makyaj',               label: 'Pudra' },
-  { name: 'aydinlatici',     q: 'highlighter aydınlatıcı',    label: 'Aydınlatıcı' },
-  { name: 'bronzer',         q: 'bronzer',                    label: 'Bronzer' },
-  { name: 'kontur',          q: 'kontür makyaj',              label: 'Kontür' },
-  { name: 'maskara',         q: 'maskara',                    label: 'Maskara' },
-  { name: 'far',             q: 'göz farı',                   label: 'Göz Farı' },
-  { name: 'far-paleti',      q: 'far paleti',                 label: 'Far Paleti' },
-  { name: 'eyeliner',        q: 'eyeliner',                   label: 'Eyeliner' },
-  { name: 'goz-kalemi',      q: 'göz kalemi',                 label: 'Göz Kalemi' },
-  { name: 'ruj',             q: 'ruj',                        label: 'Ruj' },
-  { name: 'dudak-parlatici', q: 'dudak parlatıcı lip gloss',  label: 'Dudak Parlatıcı' },
-  { name: 'dudak-kalemi',    q: 'dudak kalemi',               label: 'Dudak Kalemi' },
-  // ── Yeni kategoriler (Akakce uyumu) ─────────────────────────────────────────
-  { name: 'dipliner',           q: 'dipliner',                      label: 'Dipliner' },
-  { name: 'kas-kalemi',         q: 'kaş kalemi makyaj',             label: 'Kas Kalemi' },
-  { name: 'kas-fari',           q: 'kaş farı',                      label: 'Kas Fari' },
-  { name: 'kas-sabitleyici',    q: 'kaş sabitleyici jeli',          label: 'Kas Sabitleyici' },
-  { name: 'bb-cc-krem',         q: 'bb krem cc krem makyaj',        label: 'BB CC Krem' },
-  { name: 'makyaj-sabitleyici', q: 'makyaj sabitleyici sprey',      label: 'Makyaj Sabitleyici' },
-  { name: 'makyaj-seti',        q: 'makyaj seti',                   label: 'Makyaj Seti' },
-  { name: 'vucut-simi',         q: 'vücut simi',                    label: 'Vucut Simi' },
+  { name: 'fondoten',           path: '/fondoten-k-k07206',                    label: 'Fondöten' },
+  { name: 'kapatici',           path: '/kapatici-concealer-k-k07207',          label: 'Kapatıcı' },
+  { name: 'primer',             path: '/makyaj-bazi-k-k07209',                 label: 'Primer' },
+  { name: 'allik',              path: '/allik-k-k07202',                       label: 'Allık' },
+  { name: 'pudra',              path: '/pudra-k-k07211',                       label: 'Pudra' },
+  { name: 'aydinlatici',        path: '/aydinlatici-highlighter-k-k07203',     label: 'Aydınlatıcı' },
+  { name: 'bronzer',            path: '/bronzer-k-k07205',                     label: 'Bronzer' },
+  { name: 'kontur',             path: '/kontur-k-k07208',                      label: 'Kontür' },
+  { name: 'maskara',            path: '/rimel-maskara-k-k07176',               label: 'Maskara' },
+  { name: 'far',                path: '/far-k-k07169',                         label: 'Göz Farı' },
+  { name: 'far-bazi',           path: '/far-bazi-k-k07170',                    label: 'Far Bazı' },
+  { name: 'eyeliner',           path: '/eyeliner-k-k07168',                    label: 'Eyeliner' },
+  { name: 'goz-kalemi',         path: '/goz-kalemi-k-k07171',                  label: 'Göz Kalemi' },
+  { name: 'ruj',                path: '/ruj-k-k07166',                         label: 'Ruj' },
+  { name: 'dudak-parlatici',    path: '/dudak-parlatici-k-k07165',             label: 'Dudak Parlatıcı' },
+  { name: 'dudak-kalemi',       path: '/dudak-kalemi-k-k07164',                label: 'Dudak Kalemi' },
+  // ── Akakce uyumu ────────────────────────────────────────────────────────────
+  { name: 'kas-kalemi',         path: '/kas-kalemi-k-k07175',                  label: 'Kas Kalemi' },
+  { name: 'kas-fari',           path: '/kas-fari-k-k07174',                    label: 'Kas Fari' },
+  { name: 'kas-boyasi',         path: '/kas-boyasi-k-k07173',                  label: 'Kas Boyasi' },
+  { name: 'bb-cc-krem',         path: '/bb-cc-krem-k-k07204',                  label: 'BB CC Krem' },
+  { name: 'makyaj-sabitleyici', path: '/makyaj-sabitleyici-sprey-k-k07210',    label: 'Makyaj Sabitleyici' },
+  { name: 'makyaj-seti',        path: '/makyaj-setleri-k-k07187',              label: 'Makyaj Seti' },
+  { name: 'takma-kirpik',       path: '/takma-kirpik-k-k07177',                label: 'Takma Kirpik' },
+  { name: 'kirpik-kivirici',    path: '/kirpik-kivirici-k-k07181',             label: 'Kirpik Kivirici' },
 ];
 
 const OUTPUT_FILE = path.join(__dirname, 'pazarama-products.json');
@@ -155,10 +156,11 @@ async function extractProducts(page, catName, catLabel) {
 
 async function scrapeCategory(page, category) {
   var allProducts = [];
+  var seenUrls = new Set();
   console.log('\n--- Kategori: ' + category.label + ' ---');
 
   for (var pg = 1; pg <= MAX_PAGES; pg++) {
-    var url = BASE_URL + '/arama?q=' + encodeURIComponent(category.q) + '&sayfa=' + pg;
+    var url = BASE_URL + category.path + (pg > 1 ? '?sayfa=' + pg : '');
     console.log('  Sayfa ' + pg + ': ' + url);
 
     try {
@@ -183,10 +185,19 @@ async function scrapeCategory(page, category) {
       await sleep(1000);
 
       var products = await extractProducts(page, category.name, category.label);
-      console.log('  -> ' + products.length + ' urun bulundu');
+      // Dinamik erken çıkış: bu sayfada GERÇEKTEN yeni urun var mi?
+      var newCount = 0;
+      products.forEach(function(p) {
+        var key = (p.productUrl || '').replace(/\?.*$/, '');
+        if (key && !seenUrls.has(key)) { seenUrls.add(key); newCount++; }
+      });
+      console.log('  -> ' + products.length + ' urun (' + newCount + ' yeni)');
 
       if (products.length === 0) break;
       allProducts = allProducts.concat(products);
+      // ≥%80 overlap veya 0 yeni -> sayfa tükenmis kabul et
+      if (pg > 1 && newCount === 0) break;
+      if (pg > 1 && products.length > 0 && (newCount / products.length) < 0.2) break;
     } catch (err) {
       console.log('  HATA: ' + err.message);
       break;
@@ -209,17 +220,18 @@ var knownBrands = [
 (async () => {
   console.log('Pazarama Kozmetik Scraper baslatiliyor...');
 
-  // robots.txt kontrolü
-  var { blockedPaths, crawlDelay } = await preflightCheck(BASE_URL, ['/arama']);
-  if (blockedPaths.includes('/arama')) {
-    console.log('❌ Arama yolu robots.txt tarafından engellenmiş. Çıkılıyor.');
+  // robots.txt kontrolü — kategori yollari robots.txt'de engelli degil
+  var samplePaths = CATEGORIES.slice(0, 3).map(function(c) { return c.path; });
+  var { blockedPaths, crawlDelay } = await preflightCheck(BASE_URL, samplePaths);
+  if (blockedPaths.length > 0) {
+    console.log('❌ Kategori yollari robots.txt tarafindan engellenmis: ' + blockedPaths.join(', '));
     return;
   }
   var effectiveDelay = crawlDelay ? Math.max(DELAY_MS, crawlDelay * 1000) : DELAY_MS;
 
   var browser = await chromium.launch({
-    headless: false,
-    args: ['--disable-blink-features=AutomationControlled']
+    headless: true,
+    args: ['--disable-blink-features=AutomationControlled', '--no-sandbox', '--disable-dev-shm-usage']
   });
 
   var context = await browser.newContext({

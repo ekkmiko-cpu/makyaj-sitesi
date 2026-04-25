@@ -12,25 +12,34 @@ const path = require('path');
 // -- AYARLAR -----------------------------------------------------------------
 const BASE_URL = 'https://www.gratis.com';
 const CATEGORIES = [
-  { name: 'fondoten',         url: '/makyaj/fondoten-c-50102',              label: 'Fondoten' },
-  { name: 'maskara',          url: '/makyaj/maskara-c-50103',               label: 'Maskara' },
-  { name: 'ruj',              url: '/makyaj/ruj-c-50101',                   label: 'Ruj' },
-  { name: 'far',              url: '/makyaj/goz-fari-c-50102',              label: 'Goz Fari' },
-  { name: 'far-paleti',       url: '/makyaj/far-paleti-c-50102',            label: 'Far Paleti' },
-  { name: 'eyeliner',         url: '/makyaj/eyeliner-c-50102',              label: 'Eyeliner' },
-  { name: 'goz-kalemi',       url: '/makyaj/goz-kalemi-c-50102',            label: 'Goz Kalemi' },
-  { name: 'allik',            url: '/makyaj/allik-c-50103',                 label: 'Allik' },
-  { name: 'aydinlatici',      url: '/makyaj/aydinlatici-c-50103',           label: 'Aydinlatici' },
-  { name: 'bronzer',          url: '/makyaj/bronzer-c-50103',               label: 'Bronzer' },
-  { name: 'kapatici',         url: '/makyaj/kapatici-c-50103',              label: 'Kapatici' },
-  { name: 'primer',           url: '/makyaj/makyaj-bazi-c-50103',           label: 'Primer' },
-  { name: 'pudra',            url: '/makyaj/pudra-c-50103',                 label: 'Pudra' },
-  { name: 'dudak-parlatici',  url: '/makyaj/dudak-parlaticisi-c-50101',     label: 'Dudak Parlatici' },
-  { name: 'dudak-kalemi',     url: '/makyaj/dudak-kalemi-c-50101',          label: 'Dudak Kalemi' },
+  { name: 'fondoten',           url: '/makyaj/fondoten-c-5010304',               label: 'Fondoten' },
+  { name: 'maskara',            url: '/makyaj/maskara-c-5010201',                label: 'Maskara' },
+  { name: 'ruj',                url: '/makyaj/ruj-c-5010101',                    label: 'Ruj' },
+  { name: 'far',                url: '/makyaj/far-c-5010204',                    label: 'Goz Fari' },
+  { name: 'eyeliner',           url: '/makyaj/eyeliner-c-5010202',               label: 'Eyeliner' },
+  { name: 'goz-kalemi',         url: '/makyaj/goz-kalemi-c-5010203',             label: 'Goz Kalemi' },
+  { name: 'allik',              url: '/makyaj/allik-c-5010302',                  label: 'Allik' },
+  { name: 'aydinlatici',        url: '/makyaj/aydinlatici-c-5010301',            label: 'Aydinlatici' },
+  { name: 'bronzer',            url: '/makyaj/bronzer-c-5010303',                label: 'Bronzer' },
+  { name: 'kapatici',           url: '/makyaj/kapatici-c-5010306',               label: 'Kapatici' },
+  { name: 'primer',             url: '/makyaj/makyaj-bazi-c-5010309',            label: 'Primer' },
+  { name: 'pudra',              url: '/makyaj/pudra-c-5010308',                  label: 'Pudra' },
+  { name: 'kontur',             url: '/makyaj/kontur-c-5010307',                 label: 'Kontur' },
+  { name: 'dudak-parlatici',    url: '/makyaj/dudak-parlaticisi-c-5010105',      label: 'Dudak Parlatici' },
+  { name: 'dudak-kalemi',       url: '/makyaj/dudak-kalemi-c-5010104',           label: 'Dudak Kalemi' },
+  { name: 'likit-ruj',          url: '/makyaj/likit-ruj-c-5010102',              label: 'Likit Ruj' },
+  { name: 'kalem-ruj',          url: '/makyaj/kalem-ruj-c-5010103',              label: 'Kalem Ruj' },
+  // ── Akakce uyumu ────────────────────────────────────────────────────────────
+  { name: 'bb-cc-krem',         url: '/makyaj/bb-cc-kremler-c-5010305',          label: 'BB CC Krem' },
+  { name: 'makyaj-sabitleyici', url: '/makyaj/makyaj-sabitleyici-c-5010310',     label: 'Makyaj Sabitleyici' },
+  { name: 'kas-kalemi',         url: '/makyaj/kas-kalemi-c-501020501',           label: 'Kas Kalemi' },
+  { name: 'kas-fari',           url: '/makyaj/kas-fari-c-501020502',             label: 'Kas Fari' },
+  { name: 'kas-maskarasi',      url: '/makyaj/kas-maskarasi-c-501020503',        label: 'Kas Maskarasi' },
+  { name: 'kas-sabitleyici',    url: '/makyaj/kas-sabitleyici-c-501020504',      label: 'Kas Sabitleyici' },
 ];
 const OUTPUT_FILE = path.join(__dirname, 'gratis-products.json');
 const DELAY_MS = 1500;
-const MAX_PAGES = 1;
+const MAX_PAGES = 10;
 const ID_START = 10000;
 // ----------------------------------------------------------------------------
 

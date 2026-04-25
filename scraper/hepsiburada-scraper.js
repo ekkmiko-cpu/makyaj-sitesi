@@ -171,6 +171,7 @@ function extractBrandFromName(name) {
 async function scrapeCategory(page, category) {
   console.log('\n[' + category.label + '] taraniyor (' + category.q + ')...');
   var allProducts = [];
+  var seenUrls = new Set();
 
   for (var pageNum = 1; pageNum <= MAX_PAGES; pageNum++) {
     var url = BASE_URL + '/ara?q=' + encodeURIComponent(category.q) + '&sayfa=' + pageNum;
@@ -191,7 +192,12 @@ async function scrapeCategory(page, category) {
       await sleep(400);
 
       var products = await extractProducts(page, category.name, category.label);
-      console.log('  -> Sayfa ' + pageNum + ': ' + products.length + ' urun');
+      var newCount = 0;
+      products.forEach(function(p) {
+        var key = (p.productUrl || '').replace(/\?.*$/, '');
+        if (key && !seenUrls.has(key)) { seenUrls.add(key); newCount++; }
+      });
+      console.log('  -> Sayfa ' + pageNum + ': ' + products.length + ' urun (' + newCount + ' yeni)');
 
       if (products.length === 0) {
         console.log('  -> Urun yok, kategori tamamlandi.');
@@ -199,6 +205,9 @@ async function scrapeCategory(page, category) {
       }
 
       allProducts.push(...products);
+      // Dinamik erken cikis: bu sayfa onceki sayfalarla ≥%80 ortusuyorsa dur
+      if (pageNum > 1 && newCount === 0) { console.log('  -> Yeni urun yok, durduruluyor.'); break; }
+      if (pageNum > 1 && products.length > 0 && (newCount / products.length) < 0.2) { console.log('  -> Sayfa cogunlukla dublike, durduruluyor.'); break; }
       await sleep(DELAY_MS);
     } catch(err) {
       console.log('  HATA: ' + err.message.substring(0, 100));
@@ -267,9 +276,18 @@ async function enrichWithBarcode(page, product) {
 async function main() {
   console.log('=== Hepsiburada TR Scraper ===\n');
 
+  // NOT: Hepsiburada Akamai bot koruması default Chromium'u headless'da yakalıyor.
+  // Çözüm: real Chrome (channel: 'chrome') + Sec-Ch-Ua client hints + güçlü stealth.
+  // Bu kombinasyonla headless: true 200 OK döner.
   var browser = await chromium.launch({
-    headless: false,
-    args: ['--disable-blink-features=AutomationControlled']
+    headless: true,
+    channel: 'chrome',
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--no-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+    ]
   });
 
   var context = await browser.newContext({
@@ -278,13 +296,19 @@ async function main() {
     locale: 'tr-TR',
     extraHTTPHeaders: {
       'Accept-Language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+      'Sec-Ch-Ua': '"Google Chrome";v="124", "Chromium";v="124", "Not-A.Brand";v="99"',
+      'Sec-Ch-Ua-Mobile': '?0',
+      'Sec-Ch-Ua-Platform': '"macOS"',
+      'Upgrade-Insecure-Requests': '1',
     }
   });
 
   await context.addInitScript(() => {
-    Object.defineProperty(navigator, 'webdriver', { get: () => false });
-    window.chrome = { runtime: {} };
+    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
     Object.defineProperty(navigator, 'languages', { get: () => ['tr-TR', 'tr', 'en-US', 'en'] });
+    Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+    window.chrome = { runtime: {}, app: {}, csi: () => {}, loadTimes: () => {} };
   });
 
   var page = await context.newPage();

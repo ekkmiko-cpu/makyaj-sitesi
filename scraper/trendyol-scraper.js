@@ -15,7 +15,7 @@ const CATEGORIES = [
   { name: 'fondoten',         url: '/fondoten-x-c1053',                         label: 'Fondoten' },
   { name: 'maskara',          url: '/maskara-x-c1114',                          label: 'Maskara' },
   { name: 'ruj',              url: '/ruj-x-c1156',                              label: 'Ruj' },
-  { name: 'far',              url: '/goz-fari-x-c1060',                         label: 'Goz Fari' },
+  { name: 'far',              url: '/sr?q=göz+farı',                            label: 'Goz Fari' },
   { name: 'far-paleti',       url: '/far-paleti-y-s5667',                       label: 'Far Paleti' },
   { name: 'eyeliner',         url: '/eyeliner-x-c1050',                         label: 'Eyeliner' },
   { name: 'goz-kalemi',       url: '/goz-kalemi-x-c1060',                      label: 'Goz Kalemi' },
