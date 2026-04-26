@@ -58,41 +58,43 @@ async function extractPageProducts(page, catName, catLabel) {
         const brand = (card.querySelector('.product-brand')?.textContent || '').trim();
         if (!name && !brand) continue;
 
-        // Fiyat: yalnızca onaylı price selector'ları + "X,YZ TL" pattern
-        // ESKİ BUG: [class*="price"] discount-percentage / installment-text
-        // gibi yan elementlere takılıp 10 TL gibi yanlış değerler döndürüyordu
+        // Fiyat: yalnızca onaylı Trendyol price selector'ları.
+        // ESKİ BUG: [class*="price"] selector'ı discount-percentage,
+        // installment-text gibi yan elementlere takılıp 10 TL gibi yanlış
+        // değerler üretiyordu. Yeni mantık: SADECE Trendyol'un kesin price
+        // container'ları + "X,YZ TL" formatına uyan ilk eşleşme.
         let price = 0;
         const parseTL = (txt) => {
           if (!txt) return 0;
-          // "1.299,90 TL" → 1299.90 ; "299,90 TL" → 299.90
-          // Birden çok fiyat varsa (orijinal+indirimli) sonuncuyu (genelde indirimli) al
-          const matches = txt.match(/(\d{1,3}(?:\.\d{3})*|\d+),\d{2}(?=\s*(?:TL|₺|$))/g);
-          if (!matches || !matches.length) return 0;
-          const last = matches[matches.length - 1];
-          return parseFloat(last.replace(/\./g, '').replace(',', '.')) || 0;
+          // Trendyol formatı: "1.299,90 TL". Birden çok fiyat olursa
+          // (orijinal + indirimli) DOM hiyerarşisi indirimliyi öne koyar;
+          // ancak biz container'ı belirlediğimiz için tek fiyat olur.
+          const m = txt.match(/(\d{1,3}(?:\.\d{3})*|\d+),\d{2}(?=\s*(?:TL|₺|$))/);
+          if (!m) return 0;
+          return parseFloat(m[0].replace(/\./g, '').replace(',', '.')) || 0;
         };
 
-        // 1) Trendyol'un onaylı price container'larından "TL" içeren metni topla
+        // Trendyol'un onaylı price container'larını sırayla dene.
+        // Her container yalnızca fiyat içerir; taksit/yüzde/etiket içermez.
         const priceContainers = [
-          '.prc-box-dscntd', '.prc-box-orgnl',
-          '.product-price-container', '.price-item',
-          '.price-discounted', '.price-original',
-          '.price-value',
+          '.prc-box-dscntd',          // indirimli fiyat
+          '.prc-box-sllng',           // satış fiyatı (indirim yoksa)
+          '.prc-box-orgnl',           // orijinal fiyat
+          '.product-price-container', // 2024 yapısı
+          '.price-item.discounted',
+          '.price-item.original',
+          '.price-value',             // fallback (eski yapı)
         ];
         for (const sel of priceContainers) {
           const el = card.querySelector(sel);
-          if (el && /TL|₺/.test(el.textContent)) {
-            price = parseTL(el.textContent);
-            if (price > 0) break;
-          }
+          if (!el) continue;
+          // Container metninde "TL" veya "₺" yoksa fiyat değil — atla
+          if (!/TL|₺/.test(el.textContent)) continue;
+          const v = parseTL(el.textContent);
+          if (v > 0) { price = v; break; }
         }
 
-        // 2) Hâlâ bulamadıysak kartın bütün metninden "X,YZ TL" pattern'ini ara
-        if (price <= 0) price = parseTL(card.textContent);
-
-        // 3) Sanity check: 25 TL altı kozmetikte gerçekçi değil (taksit/badge/yüzde)
-        //    → ürünü atla, sahte fiyatla site'a girmesin
-        if (price < 25) continue;
+        if (price <= 0) continue; // fiyat çıkarılamadıysa kayıt yazma
 
         const imageUrl  = card.querySelector('img.image, img[src*="cdn.dsmcdn"]')?.src || '';
         const productUrl = card.href
