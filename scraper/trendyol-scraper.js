@@ -58,14 +58,41 @@ async function extractPageProducts(page, catName, catLabel) {
         const brand = (card.querySelector('.product-brand')?.textContent || '').trim();
         if (!name && !brand) continue;
 
-        // Fiyat: önce indirimli, sonra normal
+        // Fiyat: yalnızca onaylı price selector'ları + "X,YZ TL" pattern
+        // ESKİ BUG: [class*="price"] discount-percentage / installment-text
+        // gibi yan elementlere takılıp 10 TL gibi yanlış değerler döndürüyordu
         let price = 0;
-        const priceEl = card.querySelector('.price-value') ||
-                        card.querySelector('.discounted-price .price-value') ||
-                        card.querySelector('[class*="price"]');
-        if (priceEl) {
-          price = parseFloat(priceEl.textContent.replace(/[^\d,]/g, '').replace(',', '.')) || 0;
+        const parseTL = (txt) => {
+          if (!txt) return 0;
+          // "1.299,90 TL" → 1299.90 ; "299,90 TL" → 299.90
+          // Birden çok fiyat varsa (orijinal+indirimli) sonuncuyu (genelde indirimli) al
+          const matches = txt.match(/(\d{1,3}(?:\.\d{3})*|\d+),\d{2}(?=\s*(?:TL|₺|$))/g);
+          if (!matches || !matches.length) return 0;
+          const last = matches[matches.length - 1];
+          return parseFloat(last.replace(/\./g, '').replace(',', '.')) || 0;
+        };
+
+        // 1) Trendyol'un onaylı price container'larından "TL" içeren metni topla
+        const priceContainers = [
+          '.prc-box-dscntd', '.prc-box-orgnl',
+          '.product-price-container', '.price-item',
+          '.price-discounted', '.price-original',
+          '.price-value',
+        ];
+        for (const sel of priceContainers) {
+          const el = card.querySelector(sel);
+          if (el && /TL|₺/.test(el.textContent)) {
+            price = parseTL(el.textContent);
+            if (price > 0) break;
+          }
         }
+
+        // 2) Hâlâ bulamadıysak kartın bütün metninden "X,YZ TL" pattern'ini ara
+        if (price <= 0) price = parseTL(card.textContent);
+
+        // 3) Sanity check: 25 TL altı kozmetikte gerçekçi değil (taksit/badge/yüzde)
+        //    → ürünü atla, sahte fiyatla site'a girmesin
+        if (price < 25) continue;
 
         const imageUrl  = card.querySelector('img.image, img[src*="cdn.dsmcdn"]')?.src || '';
         const productUrl = card.href
