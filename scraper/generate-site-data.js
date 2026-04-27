@@ -1683,8 +1683,9 @@ var products = merged.map(function(p, i) {
   if (!bestImage) bestImage = Array.isArray(p.imageUrl) ? (p.imageUrl[0] || '') : (p.imageUrl || '');
 
   // prices array'den imageUrl'yi temizle (final data'da gereksiz)
+  // Fiyatı 2 ondalıkla normalize et (PttAvm JSON-LD'den 558.781872 gibi değerler gelebiliyor)
   var cleanPrices = p.prices.map(function(pr) {
-    return { site: pr.site, price: pr.price, url: pr.url, variantCount: pr.variantCount };
+    return { site: pr.site, price: Math.round((pr.price || 0) * 100) / 100, url: pr.url, variantCount: pr.variantCount };
   });
 
   return {

@@ -76,7 +76,7 @@ async function extractProducts(page, catName, catLabel) {
             var priceNum = 0;
             if (product.offers) {
               var offer = Array.isArray(product.offers) ? product.offers[0] : product.offers;
-              priceNum = parseFloat(offer.price || offer.lowPrice || 0) || 0;
+              priceNum = Math.round((parseFloat(offer.price || offer.lowPrice || 0) || 0) * 100) / 100;
             }
 
             var key = productUrl.replace(/\?.*$/, '');
