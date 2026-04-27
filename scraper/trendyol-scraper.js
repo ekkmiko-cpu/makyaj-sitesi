@@ -15,7 +15,7 @@ const CATEGORIES = [
   { name: 'fondoten',         url: '/fondoten-x-c1053',                         label: 'Fondoten' },
   { name: 'maskara',          url: '/maskara-x-c1114',                          label: 'Maskara' },
   { name: 'ruj',              url: '/ruj-x-c1156',                              label: 'Ruj' },
-  { name: 'far',              url: '/sr?q=göz+farı',                            label: 'Goz Fari' },
+  { name: 'far',              url: '/goz-fari-x-c1060',                         label: 'Goz Fari' },
   { name: 'far-paleti',       url: '/far-paleti-y-s5667',                       label: 'Far Paleti' },
   { name: 'eyeliner',         url: '/eyeliner-x-c1050',                         label: 'Eyeliner' },
   { name: 'goz-kalemi',       url: '/goz-kalemi-x-c1060',                      label: 'Goz Kalemi' },
@@ -46,10 +46,18 @@ const DELAY_MS  = 1200;    // sayfa arasi bekleme (ms)
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 /**
- * Tek sayfadan urunleri cikar — a.product-card selector (Trendyol 2024+ yapisi)
+ * Tek sayfadan urunleri cikar — a.product-card selector (Trendyol 2025 yapisi)
  */
 async function extractPageProducts(page, catName, catLabel) {
   return page.evaluate(({ catName, catLabel, baseUrl }) => {
+    // "474,99 TL" | "833 TL" | "2.856 TL" formatlarını parse eder
+    const parseTRY = (txt) => {
+      if (!txt || !/TL|₺/.test(txt)) return 0;
+      const m = txt.match(/\d[\d.]*(?:,\d+)?(?=\s*(?:TL|₺))/);
+      if (!m) return 0;
+      return parseFloat(m[0].replace(/\./g, '').replace(',', '.')) || 0;
+    };
+
     const cards = [...document.querySelectorAll('a.product-card')];
     const results = [];
     for (const card of cards) {
@@ -58,43 +66,27 @@ async function extractPageProducts(page, catName, catLabel) {
         const brand = (card.querySelector('.product-brand')?.textContent || '').trim();
         if (!name && !brand) continue;
 
-        // Fiyat: yalnızca onaylı Trendyol price selector'ları.
-        // ESKİ BUG: [class*="price"] selector'ı discount-percentage,
-        // installment-text gibi yan elementlere takılıp 10 TL gibi yanlış
-        // değerler üretiyordu. Yeni mantık: SADECE Trendyol'un kesin price
-        // container'ları + "X,YZ TL" formatına uyan ilk eşleşme.
+        // Trendyol 2025 DOM'unda 3 farklı fiyat yapısı mevcut:
+        //  1. .discounted-price .price-value  → sepette/ty+ kampanya (span içinde "474,99 TL")
+        //  2. .sale-price                     → yüzde indirimli ("-17%662,50 TL", sale-price span)
+        //  3. .single-price                   → indirimsiz, fiyat div içinde direkt ("799,99 TL")
+        // NOT: .strikethrough-price da .price-value içerebilir — o yüzden önce
+        //      .discounted-price .price-value sorgulanıyor, bare .price-value son çare.
         let price = 0;
-        const parseTL = (txt) => {
-          if (!txt) return 0;
-          // Trendyol formatı: "1.299,90 TL". Birden çok fiyat olursa
-          // (orijinal + indirimli) DOM hiyerarşisi indirimliyi öne koyar;
-          // ancak biz container'ı belirlediğimiz için tek fiyat olur.
-          const m = txt.match(/(\d{1,3}(?:\.\d{3})*|\d+),\d{2}(?=\s*(?:TL|₺|$))/);
-          if (!m) return 0;
-          return parseFloat(m[0].replace(/\./g, '').replace(',', '.')) || 0;
-        };
-
-        // Trendyol'un onaylı price container'larını sırayla dene.
-        // Her container yalnızca fiyat içerir; taksit/yüzde/etiket içermez.
-        const priceContainers = [
-          '.prc-box-dscntd',          // indirimli fiyat
-          '.prc-box-sllng',           // satış fiyatı (indirim yoksa)
-          '.prc-box-orgnl',           // orijinal fiyat
-          '.product-price-container', // 2024 yapısı
-          '.price-item.discounted',
-          '.price-item.original',
-          '.price-value',             // fallback (eski yapı)
+        const priceSelectors = [
+          '.discounted-price .price-value',  // sepette/ty+ indirimli
+          '.sale-price',                     // yüzde indirimli
+          '.single-price',                   // indirimsiz
+          '.price-value',                    // son çare
         ];
-        for (const sel of priceContainers) {
+        for (const sel of priceSelectors) {
           const el = card.querySelector(sel);
           if (!el) continue;
-          // Container metninde "TL" veya "₺" yoksa fiyat değil — atla
-          if (!/TL|₺/.test(el.textContent)) continue;
-          const v = parseTL(el.textContent);
+          const v = parseTRY(el.textContent);
           if (v > 0) { price = v; break; }
         }
 
-        if (price <= 0) continue; // fiyat çıkarılamadıysa kayıt yazma
+        if (price <= 0) continue; // fiyat cikarilamazsa kayit yazma
 
         const imageUrl  = card.querySelector('img.image, img[src*="cdn.dsmcdn"]')?.src || '';
         const productUrl = card.href

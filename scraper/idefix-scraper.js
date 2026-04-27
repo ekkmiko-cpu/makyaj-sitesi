@@ -95,14 +95,18 @@ async function extractProducts(page, catName, catLabel) {
         }
       });
 
-      // Fiyat: karttaki text-neutral-1000 span
-      var priceEl = card.querySelector('[class*="text-neutral-1000"]');
-      var priceText = priceEl ? priceEl.textContent.trim() : '';
+      // Fiyat: Idefix her zaman "X,YY" formatinda gosterir (TL etiketi ayri).
+      // [class*="text-neutral-1000"] rating/badge elementlerine de takiliyor;
+      // bu yuzden tum eslesmeler taranir, Turk fiyat formati (X,YY) zorunludur.
       var priceNum = 0;
-      if (priceText) {
-        var cleaned = priceText.replace(/[^\d.,]/g, '');
-        cleaned = cleaned.replace(/\./g, '').replace(',', '.');
-        priceNum = parseFloat(cleaned) || 0;
+      var priceEls = card.querySelectorAll('[class*="text-neutral-1000"]');
+      for (var pi = 0; pi < priceEls.length; pi++) {
+        var pt = priceEls[pi].textContent.trim();
+        // Turk fiyat formati: rakamlar + (ihtiyari nokta ayiraci) + virgul + 2 hane
+        if (/^[\d.]+,\d{2}$/.test(pt)) {
+          priceNum = parseFloat(pt.replace(/\./g, '').replace(',', '.')) || 0;
+          if (priceNum > 0) break;
+        }
       }
 
       // Gorsel
